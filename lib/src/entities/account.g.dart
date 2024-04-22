@@ -44,6 +44,9 @@ _$AccountImpl _$$AccountImplFromJson(Map<String, dynamic> json) =>
       source: json['source'] == null
           ? null
           : AccountSource.fromJson(json['source'] as Map<String, dynamic>),
+      role: json['role'] == null
+          ? null
+          : Role.fromJson(json['role'] as Map<String, dynamic>),
       muteExpiresAt: json['mute_expires_at'] == null
           ? null
           : DateTime.parse(json['mute_expires_at'] as String),
@@ -77,6 +80,7 @@ Map<String, dynamic> _$$AccountImplToJson(_$AccountImpl instance) =>
       'followers_count': instance.followersCount,
       'following_count': instance.followingCount,
       'source': instance.source,
+      'role': instance.role,
       'mute_expires_at': instance.muteExpiresAt?.toIso8601String(),
     };
 
@@ -106,6 +110,7 @@ _$AccountSourceImpl _$$AccountSourceImplFromJson(Map<String, dynamic> json) =>
       sensitive: json['sensitive'] as bool,
       language: json['language'] as String,
       followRequestsCount: json['follow_requests_count'] as int,
+      role: Role.fromJson(json['role'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$AccountSourceImplToJson(_$AccountSourceImpl instance) =>
@@ -116,6 +121,7 @@ Map<String, dynamic> _$$AccountSourceImplToJson(_$AccountSourceImpl instance) =>
       'sensitive': instance.sensitive,
       'language': instance.language,
       'follow_requests_count': instance.followRequestsCount,
+      'role': instance.role,
     };
 
 const _$StatusVisibilityEnumMap = {

@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../enums/status_visibility.dart';
 import 'custom_emoji.dart';
+import 'role.dart';
 
 part 'account.freezed.dart';
 part 'account.g.dart';
@@ -95,9 +96,8 @@ class Account with _$Account {
     /// methods that verify credentials and update credentials.
     @JsonKey(name: 'source') final AccountSource? source,
 
-    // TODO(E): Add Role
     /// The role assigned to the currently authorized user.
-    // @JsonKey(name: 'role') final Role? role,
+    @JsonKey(name: 'role') final Role? role,
 
     /// When a timed mute will expire, if applicable.
     @JsonKey(name: 'mute_expires_at') final DateTime? muteExpiresAt,
@@ -146,9 +146,8 @@ class AccountSource with _$AccountSource {
     @JsonKey(name: 'follow_requests_count')
     required final int followRequestsCount,
 
-    // TODO(E): Add Role
     /// The role assigned to the currently authorized user.
-    // @JsonKey(name: 'role') final Role role,
+    @JsonKey(name: 'role') required final Role role,
   }) = _AccountSource;
 
   factory AccountSource.fromJson(final Map<String, dynamic> json) =>

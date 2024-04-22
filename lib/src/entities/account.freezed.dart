@@ -130,10 +130,12 @@ mixin _$Account {
   /// An extra attribute that contains source values to be used with API
   /// methods that verify credentials and update credentials.
   @JsonKey(name: 'source')
-  AccountSource? get source =>
-      throw _privateConstructorUsedError; // TODO(E): Add Role
+  AccountSource? get source => throw _privateConstructorUsedError;
+
   /// The role assigned to the currently authorized user.
-// @JsonKey(name: 'role') final Role? role,
+  @JsonKey(name: 'role')
+  Role? get role => throw _privateConstructorUsedError;
+
   /// When a timed mute will expire, if applicable.
   @JsonKey(name: 'mute_expires_at')
   DateTime? get muteExpiresAt => throw _privateConstructorUsedError;
@@ -175,10 +177,12 @@ abstract class $AccountCopyWith<$Res> {
       @JsonKey(name: 'followers_count') int followersCount,
       @JsonKey(name: 'following_count') int followingCount,
       @JsonKey(name: 'source') AccountSource? source,
+      @JsonKey(name: 'role') Role? role,
       @JsonKey(name: 'mute_expires_at') DateTime? muteExpiresAt});
 
   $AccountCopyWith<$Res>? get moved;
   $AccountSourceCopyWith<$Res>? get source;
+  $RoleCopyWith<$Res>? get role;
 }
 
 /// @nodoc
@@ -220,6 +224,7 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
     Object? followersCount = null,
     Object? followingCount = null,
     Object? source = freezed,
+    Object? role = freezed,
     Object? muteExpiresAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -327,6 +332,10 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as AccountSource?,
+      role: freezed == role
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as Role?,
       muteExpiresAt: freezed == muteExpiresAt
           ? _value.muteExpiresAt
           : muteExpiresAt // ignore: cast_nullable_to_non_nullable
@@ -355,6 +364,18 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
 
     return $AccountSourceCopyWith<$Res>(_value.source!, (value) {
       return _then(_value.copyWith(source: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $RoleCopyWith<$Res>? get role {
+    if (_value.role == null) {
+      return null;
+    }
+
+    return $RoleCopyWith<$Res>(_value.role!, (value) {
+      return _then(_value.copyWith(role: value) as $Val);
     });
   }
 }
@@ -393,12 +414,15 @@ abstract class _$$AccountImplCopyWith<$Res> implements $AccountCopyWith<$Res> {
       @JsonKey(name: 'followers_count') int followersCount,
       @JsonKey(name: 'following_count') int followingCount,
       @JsonKey(name: 'source') AccountSource? source,
+      @JsonKey(name: 'role') Role? role,
       @JsonKey(name: 'mute_expires_at') DateTime? muteExpiresAt});
 
   @override
   $AccountCopyWith<$Res>? get moved;
   @override
   $AccountSourceCopyWith<$Res>? get source;
+  @override
+  $RoleCopyWith<$Res>? get role;
 }
 
 /// @nodoc
@@ -438,6 +462,7 @@ class __$$AccountImplCopyWithImpl<$Res>
     Object? followersCount = null,
     Object? followingCount = null,
     Object? source = freezed,
+    Object? role = freezed,
     Object? muteExpiresAt = freezed,
   }) {
     return _then(_$AccountImpl(
@@ -545,6 +570,10 @@ class __$$AccountImplCopyWithImpl<$Res>
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as AccountSource?,
+      role: freezed == role
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as Role?,
       muteExpiresAt: freezed == muteExpiresAt
           ? _value.muteExpiresAt
           : muteExpiresAt // ignore: cast_nullable_to_non_nullable
@@ -583,6 +612,7 @@ class _$AccountImpl implements _Account {
       @JsonKey(name: 'followers_count') required this.followersCount,
       @JsonKey(name: 'following_count') required this.followingCount,
       @JsonKey(name: 'source') this.source,
+      @JsonKey(name: 'role') this.role,
       @JsonKey(name: 'mute_expires_at') this.muteExpiresAt})
       : _fields = fields,
         _emojis = emojis;
@@ -741,9 +771,12 @@ class _$AccountImpl implements _Account {
   @override
   @JsonKey(name: 'source')
   final AccountSource? source;
-// TODO(E): Add Role
+
   /// The role assigned to the currently authorized user.
-// @JsonKey(name: 'role') final Role? role,
+  @override
+  @JsonKey(name: 'role')
+  final Role? role;
+
   /// When a timed mute will expire, if applicable.
   @override
   @JsonKey(name: 'mute_expires_at')
@@ -751,7 +784,7 @@ class _$AccountImpl implements _Account {
 
   @override
   String toString() {
-    return 'Account(id: $id, username: $username, acct: $acct, url: $url, displayName: $displayName, note: $note, avatar: $avatar, avatarStatic: $avatarStatic, header: $header, headerStatic: $headerStatic, locked: $locked, fields: $fields, emojis: $emojis, bot: $bot, group: $group, discoverable: $discoverable, noindex: $noindex, moved: $moved, suspended: $suspended, limited: $limited, createdAt: $createdAt, lastStatusAt: $lastStatusAt, statusesCount: $statusesCount, followersCount: $followersCount, followingCount: $followingCount, source: $source, muteExpiresAt: $muteExpiresAt)';
+    return 'Account(id: $id, username: $username, acct: $acct, url: $url, displayName: $displayName, note: $note, avatar: $avatar, avatarStatic: $avatarStatic, header: $header, headerStatic: $headerStatic, locked: $locked, fields: $fields, emojis: $emojis, bot: $bot, group: $group, discoverable: $discoverable, noindex: $noindex, moved: $moved, suspended: $suspended, limited: $limited, createdAt: $createdAt, lastStatusAt: $lastStatusAt, statusesCount: $statusesCount, followersCount: $followersCount, followingCount: $followingCount, source: $source, role: $role, muteExpiresAt: $muteExpiresAt)';
   }
 
   @override
@@ -796,6 +829,7 @@ class _$AccountImpl implements _Account {
             (identical(other.followingCount, followingCount) ||
                 other.followingCount == followingCount) &&
             (identical(other.source, source) || other.source == source) &&
+            (identical(other.role, role) || other.role == role) &&
             (identical(other.muteExpiresAt, muteExpiresAt) ||
                 other.muteExpiresAt == muteExpiresAt));
   }
@@ -830,6 +864,7 @@ class _$AccountImpl implements _Account {
         followersCount,
         followingCount,
         source,
+        role,
         muteExpiresAt
       ]);
 
@@ -875,6 +910,7 @@ abstract class _Account implements Account {
           @JsonKey(name: 'followers_count') required final int followersCount,
           @JsonKey(name: 'following_count') required final int followingCount,
           @JsonKey(name: 'source') final AccountSource? source,
+          @JsonKey(name: 'role') final Role? role,
           @JsonKey(name: 'mute_expires_at') final DateTime? muteExpiresAt}) =
       _$AccountImpl;
 
@@ -1018,9 +1054,13 @@ abstract class _Account implements Account {
   /// methods that verify credentials and update credentials.
   @JsonKey(name: 'source')
   AccountSource? get source;
-  @override // TODO(E): Add Role
+  @override
+
   /// The role assigned to the currently authorized user.
-// @JsonKey(name: 'role') final Role? role,
+  @JsonKey(name: 'role')
+  Role? get role;
+  @override
+
   /// When a timed mute will expire, if applicable.
   @JsonKey(name: 'mute_expires_at')
   DateTime? get muteExpiresAt;
@@ -1267,6 +1307,10 @@ mixin _$AccountSource {
   @JsonKey(name: 'follow_requests_count')
   int get followRequestsCount => throw _privateConstructorUsedError;
 
+  /// The role assigned to the currently authorized user.
+  @JsonKey(name: 'role')
+  Role get role => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $AccountSourceCopyWith<AccountSource> get copyWith =>
@@ -1285,7 +1329,10 @@ abstract class $AccountSourceCopyWith<$Res> {
       @JsonKey(name: 'privacy') StatusVisibility privacy,
       @JsonKey(name: 'sensitive') bool sensitive,
       @JsonKey(name: 'language') String language,
-      @JsonKey(name: 'follow_requests_count') int followRequestsCount});
+      @JsonKey(name: 'follow_requests_count') int followRequestsCount,
+      @JsonKey(name: 'role') Role role});
+
+  $RoleCopyWith<$Res> get role;
 }
 
 /// @nodoc
@@ -1307,6 +1354,7 @@ class _$AccountSourceCopyWithImpl<$Res, $Val extends AccountSource>
     Object? sensitive = null,
     Object? language = null,
     Object? followRequestsCount = null,
+    Object? role = null,
   }) {
     return _then(_value.copyWith(
       note: null == note
@@ -1333,7 +1381,19 @@ class _$AccountSourceCopyWithImpl<$Res, $Val extends AccountSource>
           ? _value.followRequestsCount
           : followRequestsCount // ignore: cast_nullable_to_non_nullable
               as int,
+      role: null == role
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as Role,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $RoleCopyWith<$Res> get role {
+    return $RoleCopyWith<$Res>(_value.role, (value) {
+      return _then(_value.copyWith(role: value) as $Val);
+    });
   }
 }
 
@@ -1351,7 +1411,11 @@ abstract class _$$AccountSourceImplCopyWith<$Res>
       @JsonKey(name: 'privacy') StatusVisibility privacy,
       @JsonKey(name: 'sensitive') bool sensitive,
       @JsonKey(name: 'language') String language,
-      @JsonKey(name: 'follow_requests_count') int followRequestsCount});
+      @JsonKey(name: 'follow_requests_count') int followRequestsCount,
+      @JsonKey(name: 'role') Role role});
+
+  @override
+  $RoleCopyWith<$Res> get role;
 }
 
 /// @nodoc
@@ -1371,6 +1435,7 @@ class __$$AccountSourceImplCopyWithImpl<$Res>
     Object? sensitive = null,
     Object? language = null,
     Object? followRequestsCount = null,
+    Object? role = null,
   }) {
     return _then(_$AccountSourceImpl(
       note: null == note
@@ -1397,6 +1462,10 @@ class __$$AccountSourceImplCopyWithImpl<$Res>
           ? _value.followRequestsCount
           : followRequestsCount // ignore: cast_nullable_to_non_nullable
               as int,
+      role: null == role
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as Role,
     ));
   }
 }
@@ -1410,8 +1479,8 @@ class _$AccountSourceImpl implements _AccountSource {
       @JsonKey(name: 'privacy') required this.privacy,
       @JsonKey(name: 'sensitive') required this.sensitive,
       @JsonKey(name: 'language') required this.language,
-      @JsonKey(name: 'follow_requests_count')
-      required this.followRequestsCount})
+      @JsonKey(name: 'follow_requests_count') required this.followRequestsCount,
+      @JsonKey(name: 'role') required this.role})
       : _fields = fields;
 
   factory _$AccountSourceImpl.fromJson(Map<String, dynamic> json) =>
@@ -1454,9 +1523,14 @@ class _$AccountSourceImpl implements _AccountSource {
   @JsonKey(name: 'follow_requests_count')
   final int followRequestsCount;
 
+  /// The role assigned to the currently authorized user.
+  @override
+  @JsonKey(name: 'role')
+  final Role role;
+
   @override
   String toString() {
-    return 'AccountSource(note: $note, fields: $fields, privacy: $privacy, sensitive: $sensitive, language: $language, followRequestsCount: $followRequestsCount)';
+    return 'AccountSource(note: $note, fields: $fields, privacy: $privacy, sensitive: $sensitive, language: $language, followRequestsCount: $followRequestsCount, role: $role)';
   }
 
   @override
@@ -1472,7 +1546,8 @@ class _$AccountSourceImpl implements _AccountSource {
             (identical(other.language, language) ||
                 other.language == language) &&
             (identical(other.followRequestsCount, followRequestsCount) ||
-                other.followRequestsCount == followRequestsCount));
+                other.followRequestsCount == followRequestsCount) &&
+            (identical(other.role, role) || other.role == role));
   }
 
   @JsonKey(ignore: true)
@@ -1484,7 +1559,8 @@ class _$AccountSourceImpl implements _AccountSource {
       privacy,
       sensitive,
       language,
-      followRequestsCount);
+      followRequestsCount,
+      role);
 
   @JsonKey(ignore: true)
   @override
@@ -1508,7 +1584,8 @@ abstract class _AccountSource implements AccountSource {
       @JsonKey(name: 'sensitive') required final bool sensitive,
       @JsonKey(name: 'language') required final String language,
       @JsonKey(name: 'follow_requests_count')
-      required final int followRequestsCount}) = _$AccountSourceImpl;
+      required final int followRequestsCount,
+      @JsonKey(name: 'role') required final Role role}) = _$AccountSourceImpl;
 
   factory _AccountSource.fromJson(Map<String, dynamic> json) =
       _$AccountSourceImpl.fromJson;
@@ -1543,6 +1620,11 @@ abstract class _AccountSource implements AccountSource {
   /// The number of pending follow requests.
   @JsonKey(name: 'follow_requests_count')
   int get followRequestsCount;
+  @override
+
+  /// The role assigned to the currently authorized user.
+  @JsonKey(name: 'role')
+  Role get role;
   @override
   @JsonKey(ignore: true)
   _$$AccountSourceImplCopyWith<_$AccountSourceImpl> get copyWith =>
