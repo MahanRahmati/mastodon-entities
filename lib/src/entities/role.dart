@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'role.freezed.dart';
 part 'role.g.dart';
 
+/// Represents a custom user role that grants permissions.
 @freezed
 class Role with _$Role {
   const factory Role({

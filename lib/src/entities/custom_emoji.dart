@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'custom_emoji.freezed.dart';
 part 'custom_emoji.g.dart';
 
+/// Represents a custom emoji.
 @freezed
 class CustomEmoji with _$CustomEmoji {
   const factory CustomEmoji({

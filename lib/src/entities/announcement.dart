@@ -7,6 +7,7 @@ import 'status.dart';
 part 'announcement.freezed.dart';
 part 'announcement.g.dart';
 
+/// Represents an announcement set by an administrator.
 @freezed
 class Announcement with _$Announcement {
   const factory Announcement({

@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'status.freezed.dart';
 part 'status.g.dart';
 
+/// Represents a status posted by an account.
 @freezed
 class Status with _$Status {
   const factory Status({

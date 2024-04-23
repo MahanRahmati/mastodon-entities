@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'rule.freezed.dart';
 part 'rule.g.dart';
 
+/// Represents a rule that server users should follow.
 @freezed
 class Rule with _$Rule {
   const factory Rule({

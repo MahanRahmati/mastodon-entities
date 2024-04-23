@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'featured_tag.freezed.dart';
 part 'featured_tag.g.dart';
 
+/// Represents a hashtag that is featured on a profile.
 @freezed
 class FeaturedTag with _$FeaturedTag {
   const factory FeaturedTag({

@@ -6,6 +6,7 @@ import 'status.dart';
 part 'conversation.freezed.dart';
 part 'conversation.g.dart';
 
+/// Represents a conversation with "direct message" visibility.
 @freezed
 class Conversation with _$Conversation {
   const factory Conversation({

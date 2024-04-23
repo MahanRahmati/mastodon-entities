@@ -5,6 +5,7 @@ import 'account.dart';
 part 'familiar_followers.freezed.dart';
 part 'familiar_followers.g.dart';
 
+/// Represents a subset of your follows who also follow some other user.
 @freezed
 class FamiliarFollowers with _$FamiliarFollowers {
   const factory FamiliarFollowers({

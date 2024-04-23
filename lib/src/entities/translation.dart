@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'translation.freezed.dart';
 part 'translation.g.dart';
 
+/// Represents the result of machine translating some status content
 @freezed
 class Translation with _$Translation {
   const factory Translation({

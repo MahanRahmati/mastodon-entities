@@ -7,6 +7,7 @@ import 'tag.dart';
 part 'search.freezed.dart';
 part 'search.g.dart';
 
+/// Represents the results of a search.
 @freezed
 class Search with _$Search {
   const factory Search({

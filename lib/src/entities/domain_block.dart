@@ -5,6 +5,7 @@ import '../enums/domain_block_severity.dart';
 part 'domain_block.freezed.dart';
 part 'domain_block.g.dart';
 
+/// Represents a domain that is blocked by the instance.
 @freezed
 class DomainBlock with _$DomainBlock {
   const factory DomainBlock({

@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'reaction.freezed.dart';
 part 'reaction.g.dart';
 
+/// Represents an emoji reaction to an Announcement.
 @freezed
 class Reaction with _$Reaction {
   const factory Reaction({

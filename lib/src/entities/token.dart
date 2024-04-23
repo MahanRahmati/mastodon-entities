@@ -3,6 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'token.freezed.dart';
 part 'token.g.dart';
 
+/// Represents an OAuth token used for authenticating with the API and
+/// performing actions.
 @freezed
 class Token with _$Token {
   const factory Token({

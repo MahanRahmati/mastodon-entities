@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'tag.freezed.dart';
 part 'tag.g.dart';
 
+/// Represents a hashtag used within the content of a status.
 @freezed
 class Tag with _$Tag {
   const factory Tag({

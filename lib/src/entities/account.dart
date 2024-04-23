@@ -7,6 +7,7 @@ import 'role.dart';
 part 'account.freezed.dart';
 part 'account.g.dart';
 
+/// Represents a user of Mastodon and their associated profile.
 @freezed
 class Account with _$Account {
   const factory Account({
