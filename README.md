@@ -37,5 +37,4 @@
 [ ] Status.md
 [ ] StatusEdit.md
 [ ] StatusSource.md
-[ ] Suggestion.md
 [ ] WebPushSubscription.md
