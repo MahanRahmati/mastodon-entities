@@ -33,7 +33,6 @@
 [ ] Report.md
 [ ] Rule.md
 [ ] ScheduledStatus.md
-[ ] Search.md
 [ ] Status.md
 [ ] StatusEdit.md
 [ ] StatusSource.md
