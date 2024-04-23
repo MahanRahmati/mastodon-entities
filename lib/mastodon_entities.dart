@@ -4,6 +4,7 @@ export 'src/entities/application.dart';
 export 'src/entities/conversation.dart';
 export 'src/entities/custom_emoji.dart';
 export 'src/entities/domain_block.dart';
+export 'src/entities/familiar_followers.dart';
 export 'src/entities/reaction.dart';
 export 'src/entities/role.dart';
 export 'src/entities/status_context.dart';

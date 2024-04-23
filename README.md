@@ -14,7 +14,6 @@
 [ ] EncryptedMessage.md
 [ ] Error.md
 [ ] ExtendedDescription.md
-[ ] FamiliarFollowers.md
 [ ] FeaturedTag.md
 [ ] Filter.md
 [ ] FilterKeyword.md
