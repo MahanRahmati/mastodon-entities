@@ -30,7 +30,6 @@
 [ ] Reaction.md
 [ ] Relationship.md
 [ ] RelationshipSeveranceEvent.md
-[ ] Report.md
 [ ] ScheduledStatus.md
 [ ] Status.md
 [ ] StatusEdit.md
