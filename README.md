@@ -38,5 +38,4 @@
 [ ] StatusEdit.md
 [ ] StatusSource.md
 [ ] Suggestion.md
-[ ] Tag.md
 [ ] WebPushSubscription.md
