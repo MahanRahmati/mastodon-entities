@@ -4,6 +4,17 @@ part 'status.freezed.dart';
 part 'status.g.dart';
 
 @freezed
+class Status with _$Status {
+  const factory Status({
+    /// ID of the status in the database.
+    @JsonKey(name: 'id') required final String id,
+  }) = _Status;
+
+  factory Status.fromJson(final Map<String, dynamic> json) =>
+      _$StatusFromJson(json);
+}
+
+@freezed
 class StatusTag with _$StatusTag {
   const factory StatusTag({
     /// The value of the hashtag after the # sign.

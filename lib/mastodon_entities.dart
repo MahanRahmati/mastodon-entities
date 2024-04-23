@@ -4,4 +4,5 @@ export 'src/entities/application.dart';
 export 'src/entities/custom_emoji.dart';
 export 'src/entities/reaction.dart';
 export 'src/entities/role.dart';
+export 'src/entities/status_context.dart';
 export 'src/enums/status_visibility.dart';
