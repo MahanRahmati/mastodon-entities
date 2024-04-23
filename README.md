@@ -39,6 +39,5 @@
 [ ] StatusSource.md
 [ ] Suggestion.md
 [ ] Tag.md
-[ ] Token.md
 [ ] Translation.md
 [ ] WebPushSubscription.md

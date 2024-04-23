@@ -9,5 +9,6 @@ export 'src/entities/featured_tag.dart';
 export 'src/entities/reaction.dart';
 export 'src/entities/role.dart';
 export 'src/entities/status_context.dart';
+export 'src/entities/token.dart';
 export 'src/enums/domain_block_severity.dart';
 export 'src/enums/status_visibility.dart';
