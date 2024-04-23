@@ -31,7 +31,6 @@
 [ ] Relationship.md
 [ ] RelationshipSeveranceEvent.md
 [ ] Report.md
-[ ] Rule.md
 [ ] ScheduledStatus.md
 [ ] Status.md
 [ ] StatusEdit.md

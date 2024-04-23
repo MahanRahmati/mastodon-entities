@@ -8,6 +8,7 @@ export 'src/entities/familiar_followers.dart';
 export 'src/entities/featured_tag.dart';
 export 'src/entities/reaction.dart';
 export 'src/entities/role.dart';
+export 'src/entities/rule.dart';
 export 'src/entities/search.dart';
 export 'src/entities/status_context.dart';
 export 'src/entities/suggestion.dart';
