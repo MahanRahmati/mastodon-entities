@@ -11,7 +11,6 @@
 [ ] Admin_IpBlock.md
 [ ] Admin_Measure.md
 [ ] Admin_Report.md
-[ ] DomainBlock.md
 [ ] EncryptedMessage.md
 [ ] Error.md
 [ ] ExtendedDescription.md
