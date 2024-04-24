@@ -25,7 +25,6 @@
 [ ] MediaAttachment.md
 [ ] Notification.md
 [ ] PreviewCard.md
-[ ] Reaction.md
 [ ] ScheduledStatus.md
 [ ] Status.md
 [ ] StatusEdit.md
