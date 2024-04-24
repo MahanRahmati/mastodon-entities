@@ -1,13 +1,11 @@
 # TODO:
 
-[ ] Admin_Account.md
 [ ] Admin_CanonicalEmailBlock.md
 [ ] Admin_Cohort.md
 [ ] Admin_Dimension.md
 [ ] Admin_DomainAllow.md
 [ ] Admin_DomainBlock.md
 [ ] Admin_EmailDomainBlock.md
-[ ] Admin_Ip.md
 [ ] Admin_IpBlock.md
 [ ] Admin_Measure.md
 [ ] Admin_Report.md

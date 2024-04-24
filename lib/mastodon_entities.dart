@@ -1,4 +1,6 @@
 export 'src/entities/account.dart';
+export 'src/entities/admin_account.dart';
+export 'src/entities/admin_ip.dart';
 export 'src/entities/announcement.dart';
 export 'src/entities/application.dart';
 export 'src/entities/conversation.dart';
