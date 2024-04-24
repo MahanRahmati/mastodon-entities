@@ -1,6 +1,5 @@
 # TODO:
 
-[ ] Admin_CanonicalEmailBlock.md
 [ ] Admin_Cohort.md
 [ ] Admin_Dimension.md
 [ ] Admin_DomainAllow.md
