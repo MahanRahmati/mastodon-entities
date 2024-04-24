@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '/src/enums/preferences_reading_expand_media.dart';
-import '/src/enums/status_visibility.dart';
+import '../enums/preferences_reading_expand_media.dart';
+import '../enums/status_visibility.dart';
 
 part 'preferences.freezed.dart';
 part 'preferences.g.dart';
