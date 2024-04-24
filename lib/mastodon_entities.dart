@@ -6,6 +6,7 @@ export 'src/entities/custom_emoji.dart';
 export 'src/entities/domain_block.dart';
 export 'src/entities/familiar_followers.dart';
 export 'src/entities/featured_tag.dart';
+export 'src/entities/poll.dart';
 export 'src/entities/preferences.dart';
 export 'src/entities/reaction.dart';
 export 'src/entities/relationship.dart';

@@ -24,7 +24,6 @@
 [ ] Marker.md
 [ ] MediaAttachment.md
 [ ] Notification.md
-[ ] Poll.md
 [ ] PreviewCard.md
 [ ] Reaction.md
 [ ] ScheduledStatus.md
