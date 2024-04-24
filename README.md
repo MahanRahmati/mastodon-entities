@@ -13,7 +13,6 @@
 [ ] Admin_Report.md
 [ ] EncryptedMessage.md
 [ ] Error.md
-[ ] ExtendedDescription.md
 [ ] Filter.md
 [ ] FilterKeyword.md
 [ ] FilterResult.md
