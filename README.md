@@ -1,6 +1,5 @@
 # TODO:
 
-[ ] Admin_Cohort.md
 [ ] Admin_Dimension.md
 [ ] Admin_DomainAllow.md
 [ ] Admin_DomainBlock.md

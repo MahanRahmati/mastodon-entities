@@ -1,6 +1,7 @@
 export 'src/entities/account.dart';
 export 'src/entities/admin_account.dart';
 export 'src/entities/admin_canonical_email_block.dart';
+export 'src/entities/admin_cohort.dart';
 export 'src/entities/admin_ip.dart';
 export 'src/entities/announcement.dart';
 export 'src/entities/application.dart';
@@ -24,6 +25,7 @@ export 'src/entities/suggestion.dart';
 export 'src/entities/tag.dart';
 export 'src/entities/token.dart';
 export 'src/entities/translation.dart';
+export 'src/enums/admin_cohort_frequency.dart';
 export 'src/enums/domain_block_severity.dart';
 export 'src/enums/preferences_reading_expand_media.dart';
 export 'src/enums/relationship_severance_event_type.dart';
