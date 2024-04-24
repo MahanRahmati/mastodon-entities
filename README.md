@@ -28,7 +28,6 @@
 [ ] Preferences.md
 [ ] PreviewCard.md
 [ ] Reaction.md
-[ ] Relationship.md
 [ ] ScheduledStatus.md
 [ ] Status.md
 [ ] StatusEdit.md

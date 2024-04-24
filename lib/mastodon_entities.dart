@@ -7,6 +7,7 @@ export 'src/entities/domain_block.dart';
 export 'src/entities/familiar_followers.dart';
 export 'src/entities/featured_tag.dart';
 export 'src/entities/reaction.dart';
+export 'src/entities/relationship.dart';
 export 'src/entities/relationship_severance_event.dart';
 export 'src/entities/report.dart';
 export 'src/entities/role.dart';
