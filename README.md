@@ -29,7 +29,6 @@
 [ ] PreviewCard.md
 [ ] Reaction.md
 [ ] Relationship.md
-[ ] RelationshipSeveranceEvent.md
 [ ] ScheduledStatus.md
 [ ] Status.md
 [ ] StatusEdit.md
