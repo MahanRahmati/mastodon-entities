@@ -1,6 +1,5 @@
 # TODO:
 
-[ ] Admin_Dimension.md
 [ ] Admin_DomainAllow.md
 [ ] Admin_DomainBlock.md
 [ ] Admin_EmailDomainBlock.md
