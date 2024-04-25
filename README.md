@@ -1,6 +1,5 @@
 # TODO:
 
-[ ] Admin_Report.md
 [ ] EncryptedMessage.md
 [ ] Error.md
 [ ] Filter.md

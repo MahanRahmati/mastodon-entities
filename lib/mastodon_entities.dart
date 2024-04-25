@@ -9,6 +9,7 @@ export 'src/entities/admin_email_domain_block.dart';
 export 'src/entities/admin_ip.dart';
 export 'src/entities/admin_ip_block.dart';
 export 'src/entities/admin_measure.dart';
+export 'src/entities/admin_report.dart';
 export 'src/entities/announcement.dart';
 export 'src/entities/application.dart';
 export 'src/entities/conversation.dart';
