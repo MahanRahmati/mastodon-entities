@@ -1,6 +1,5 @@
 # TODO:
 
-[ ] Admin_EmailDomainBlock.md
 [ ] Admin_IpBlock.md
 [ ] Admin_Measure.md
 [ ] Admin_Report.md

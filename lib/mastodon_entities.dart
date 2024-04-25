@@ -5,6 +5,7 @@ export 'src/entities/admin_cohort.dart';
 export 'src/entities/admin_dimension.dart';
 export 'src/entities/admin_domain_allow.dart';
 export 'src/entities/admin_domain_block.dart';
+export 'src/entities/admin_email_domain_block.dart';
 export 'src/entities/admin_ip.dart';
 export 'src/entities/announcement.dart';
 export 'src/entities/application.dart';
