@@ -21,6 +21,7 @@ export 'src/entities/familiar_followers.dart';
 export 'src/entities/featured_tag.dart';
 export 'src/entities/filter.dart';
 export 'src/entities/filter_keyword.dart';
+export 'src/entities/filter_result.dart';
 export 'src/entities/filter_status.dart';
 export 'src/entities/mastodon_error.dart';
 export 'src/entities/poll.dart';

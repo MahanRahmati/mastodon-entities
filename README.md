@@ -1,6 +1,5 @@
 # TODO:
 
-[ ] FilterResult.md
 [ ] IdentityProof.md
 [ ] Instance.md
 [ ] List.md
