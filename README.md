@@ -1,6 +1,5 @@
 # TODO:
 
-[ ] IdentityProof.md
 [ ] Instance.md
 [ ] List.md
 [ ] Marker.md
