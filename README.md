@@ -1,9 +1,6 @@
 # TODO:
 
-[ ] Filter.md
-[ ] FilterKeyword.md
 [ ] FilterResult.md
-[ ] FilterStatus.md
 [ ] IdentityProof.md
 [ ] Instance.md
 [ ] List.md
