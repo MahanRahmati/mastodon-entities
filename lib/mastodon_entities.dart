@@ -19,6 +19,7 @@ export 'src/entities/encrypted_message.dart';
 export 'src/entities/extended_description.dart';
 export 'src/entities/familiar_followers.dart';
 export 'src/entities/featured_tag.dart';
+export 'src/entities/mastodon_error.dart';
 export 'src/entities/poll.dart';
 export 'src/entities/preferences.dart';
 export 'src/entities/reaction.dart';
