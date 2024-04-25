@@ -1,7 +1,5 @@
 # TODO:
 
-[ ] Admin_IpBlock.md
-[ ] Admin_Measure.md
 [ ] Admin_Report.md
 [ ] EncryptedMessage.md
 [ ] Error.md
