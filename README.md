@@ -4,7 +4,6 @@ List --> UserList
 
 # TODO:
 
-[ ] Notification.md
 [ ] PreviewCard.md
 [ ] ScheduledStatus.md
 [ ] Status.md
