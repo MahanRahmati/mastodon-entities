@@ -1,6 +1,5 @@
 # TODO:
 
-[ ] List.md
 [ ] Marker.md
 [ ] MediaAttachment.md
 [ ] Notification.md
