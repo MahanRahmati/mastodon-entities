@@ -1,6 +1,9 @@
+Context --> StatusContext
+Error --> MastodonError
+List --> UserList
+
 # TODO:
 
-[ ] Marker.md
 [ ] MediaAttachment.md
 [ ] Notification.md
 [ ] PreviewCard.md
