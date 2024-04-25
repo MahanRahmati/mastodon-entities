@@ -31,7 +31,7 @@ _$CohortDataImpl _$$CohortDataImplFromJson(Map<String, dynamic> json) =>
     _$CohortDataImpl(
       date: DateTime.parse(json['date'] as String),
       rate: (json['rate'] as num).toDouble(),
-      value: json['value'] as int,
+      value: (json['value'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$CohortDataImplToJson(_$CohortDataImpl instance) =>

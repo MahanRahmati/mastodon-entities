@@ -13,8 +13,8 @@ _$PollImpl _$$PollImplFromJson(Map<String, dynamic> json) => _$PollImpl(
           : DateTime.parse(json['expires_at'] as String),
       expired: json['expired'] as bool,
       multiple: json['multiple'] as bool,
-      votesCount: json['votes_count'] as int,
-      votersCount: json['voters_count'] as int?,
+      votesCount: (json['votes_count'] as num).toInt(),
+      votersCount: (json['voters_count'] as num?)?.toInt(),
       options: (json['options'] as List<dynamic>?)
           ?.map((e) => PollOption.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -22,8 +22,9 @@ _$PollImpl _$$PollImplFromJson(Map<String, dynamic> json) => _$PollImpl(
           .map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
           .toList(),
       voted: json['voted'] as bool?,
-      ownVotes:
-          (json['own_votes'] as List<dynamic>?)?.map((e) => e as int).toList(),
+      ownVotes: (json['own_votes'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
     );
 
 Map<String, dynamic> _$$PollImplToJson(_$PollImpl instance) =>
@@ -43,7 +44,7 @@ Map<String, dynamic> _$$PollImplToJson(_$PollImpl instance) =>
 _$PollOptionImpl _$$PollOptionImplFromJson(Map<String, dynamic> json) =>
     _$PollOptionImpl(
       title: json['title'] as String,
-      votesCount: json['votes_count'] as int?,
+      votesCount: (json['votes_count'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$PollOptionImplToJson(_$PollOptionImpl instance) =>

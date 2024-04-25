@@ -11,7 +11,7 @@ _$FeaturedTagImpl _$$FeaturedTagImplFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
       name: json['name'] as String,
       url: json['url'] as String,
-      statusesCount: json['statuses_count'] as int,
+      statusesCount: (json['statuses_count'] as num).toInt(),
       lastStatusAt: DateTime.parse(json['last_status_at'] as String),
     );
 

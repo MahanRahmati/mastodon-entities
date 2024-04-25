@@ -38,9 +38,9 @@ _$AccountImpl _$$AccountImplFromJson(Map<String, dynamic> json) =>
       lastStatusAt: json['last_status_at'] == null
           ? null
           : DateTime.parse(json['last_status_at'] as String),
-      statusesCount: json['statuses_count'] as int,
-      followersCount: json['followers_count'] as int,
-      followingCount: json['following_count'] as int,
+      statusesCount: (json['statuses_count'] as num).toInt(),
+      followersCount: (json['followers_count'] as num).toInt(),
+      followingCount: (json['following_count'] as num).toInt(),
       source: json['source'] == null
           ? null
           : AccountSource.fromJson(json['source'] as Map<String, dynamic>),
@@ -109,7 +109,7 @@ _$AccountSourceImpl _$$AccountSourceImplFromJson(Map<String, dynamic> json) =>
       privacy: $enumDecode(_$StatusVisibilityEnumMap, json['privacy']),
       sensitive: json['sensitive'] as bool,
       language: json['language'] as String,
-      followRequestsCount: json['follow_requests_count'] as int,
+      followRequestsCount: (json['follow_requests_count'] as num).toInt(),
       role: Role.fromJson(json['role'] as Map<String, dynamic>),
     );
 

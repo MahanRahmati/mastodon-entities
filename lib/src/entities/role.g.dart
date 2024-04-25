@@ -7,10 +7,10 @@ part of 'role.dart';
 // **************************************************************************
 
 _$RoleImpl _$$RoleImplFromJson(Map<String, dynamic> json) => _$RoleImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       color: json['color'] as String,
-      permissions: json['permissions'] as int,
+      permissions: (json['permissions'] as num).toInt(),
       highlighted: json['highlighted'] as bool,
     );
 

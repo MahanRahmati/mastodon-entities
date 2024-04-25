@@ -10,7 +10,7 @@ _$TokenImpl _$$TokenImplFromJson(Map<String, dynamic> json) => _$TokenImpl(
       accessToken: json['access_token'] as String,
       tokenType: json['token_type'] as String,
       scope: json['scope'] as String,
-      createdAt: json['created_at'] as int,
+      createdAt: (json['created_at'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$TokenImplToJson(_$TokenImpl instance) =>

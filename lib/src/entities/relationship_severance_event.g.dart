@@ -13,7 +13,7 @@ _$RelationshipSeveranceEventImpl _$$RelationshipSeveranceEventImplFromJson(
       type: $enumDecode(_$RelationshipSeveranceEventTypeEnumMap, json['type']),
       purged: json['purged'] as bool,
       targetName: json['target_name'] as String,
-      relationshipsCount: json['relationships_count'] as int?,
+      relationshipsCount: (json['relationships_count'] as num?)?.toInt(),
       createdAt: DateTime.parse(json['created_at'] as String),
     );
 
