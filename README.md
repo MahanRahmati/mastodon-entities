@@ -1,6 +1,5 @@
 # TODO:
 
-[ ] Instance.md
 [ ] List.md
 [ ] Marker.md
 [ ] MediaAttachment.md

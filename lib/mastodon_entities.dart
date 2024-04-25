@@ -23,6 +23,7 @@ export 'src/entities/filter.dart';
 export 'src/entities/filter_keyword.dart';
 export 'src/entities/filter_result.dart';
 export 'src/entities/filter_status.dart';
+export 'src/entities/instance.dart';
 export 'src/entities/mastodon_error.dart';
 export 'src/entities/poll.dart';
 export 'src/entities/preferences.dart';
