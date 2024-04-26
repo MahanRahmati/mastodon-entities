@@ -8,7 +8,12 @@
 
 ## Introduction
 
-A Dart package containing Mastodon entities.
+This package provides classes for working with Mastodon API entities in Dart.
+
+## Features
+
+- Handles all entity types defined in Mastodon API docs.
+- Provides serialization and deserialization methods for working with entities.
 
 ## Installation
 
