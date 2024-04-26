@@ -1,3 +1,8 @@
+/// A library that provides classes for working with Mastodon API entities.
+///
+/// To use, import `package:mastodon_entities/mastodon_entities.dart`.
+library mastodon_entities;
+
 export 'src/entities/account.dart';
 export 'src/entities/admin_account.dart';
 export 'src/entities/admin_canonical_email_block.dart';
