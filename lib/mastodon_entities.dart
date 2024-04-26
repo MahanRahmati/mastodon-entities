@@ -44,6 +44,7 @@ export 'src/entities/tag.dart';
 export 'src/entities/token.dart';
 export 'src/entities/translation.dart';
 export 'src/entities/user_list.dart';
+export 'src/entities/web_push_subscription.dart';
 export 'src/enums/admin_cohort_frequency.dart';
 export 'src/enums/admin_domain_block_severity.dart';
 export 'src/enums/admin_ip_block_severity.dart';

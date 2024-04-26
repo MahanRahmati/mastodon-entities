@@ -8,4 +8,3 @@ List --> UserList
 [ ] Status.md
 [ ] StatusEdit.md
 [ ] StatusSource.md
-[ ] WebPushSubscription.md
