@@ -37,6 +37,7 @@ export 'src/entities/relationship_severance_event.dart';
 export 'src/entities/report.dart';
 export 'src/entities/role.dart';
 export 'src/entities/rule.dart';
+export 'src/entities/scheduled_status.dart';
 export 'src/entities/search.dart';
 export 'src/entities/status.dart';
 export 'src/entities/status_context.dart';
