@@ -42,6 +42,7 @@ export 'src/entities/search.dart';
 export 'src/entities/status.dart';
 export 'src/entities/status_context.dart';
 export 'src/entities/status_edit.dart';
+export 'src/entities/status_source.dart';
 export 'src/entities/suggestion.dart';
 export 'src/entities/tag.dart';
 export 'src/entities/token.dart';
