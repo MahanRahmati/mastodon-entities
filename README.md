@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://pub.dartlang.org/packages/mastodon_entities"><img src="https://img.shields.io/pub/v/mastodon_entities.svg" alt="pub.dev"></a>
   <a href="https://github.com/MahanRahmati/"><img src="https://img.shields.io/badge/Maintainer-MahanRahmati-informational"></a>
-  <a href="https://github.com/MahanRahmati/mastodon_entities/actions/workflows/pana_analysis.yml"><img src="https://github.com/MahanRahmati/mastodon_entities/actions/workflows/pana_analysis.yml/badge.svg"></a>
-  <a href="https://github.com/MahanRahmati/mastodon_entities/actions/workflows/dart_analysis.yml"><img src="https://github.com/MahanRahmati/mastodon_entities/actions/workflows/flutter_analysis.yml/badge.svg"></a>
-  <img src="https://img.shields.io/github/license/MahanRahmati/mastodon_entities">
+  <a href="https://github.com/MahanRahmati/mastodon-entities/actions/workflows/pana_analysis.yml"><img src="https://github.com/MahanRahmati/mastodon-entities/actions/workflows/pana_analysis.yml/badge.svg"></a>
+  <a href="https://github.com/MahanRahmati/mastodon-entities/actions/workflows/dart_analysis.yml"><img src="https://github.com/MahanRahmati/mastodon-entities/actions/workflows/flutter_analysis.yml/badge.svg"></a>
+  <img src="https://img.shields.io/github/license/MahanRahmati/mastodon-entities">
 </p>
 
 ## Introduction
