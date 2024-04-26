@@ -38,6 +38,7 @@ export 'src/entities/report.dart';
 export 'src/entities/role.dart';
 export 'src/entities/rule.dart';
 export 'src/entities/search.dart';
+export 'src/entities/status.dart';
 export 'src/entities/status_context.dart';
 export 'src/entities/suggestion.dart';
 export 'src/entities/tag.dart';
