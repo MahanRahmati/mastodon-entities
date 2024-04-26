@@ -21,7 +21,7 @@ Add Mastodon Entities as a dependency in your pubspec.yaml:
 
 ```yaml
 dependencies:
-  mastodon_entities: ^1.0.0
+  mastodon_entities: ^1.0.1
 ```
 
 Then, run dart pub get to install the package.
