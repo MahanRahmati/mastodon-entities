@@ -1,3 +1,7 @@
+## 1.1.0
+
+- Make everything nullable
+
 ## 1.0.2
 
 - Add indexable to Account.
