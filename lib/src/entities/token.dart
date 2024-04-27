@@ -9,16 +9,16 @@ part 'token.g.dart';
 class Token with _$Token {
   const factory Token({
     /// An OAuth token to be used for authorization.
-    @JsonKey(name: 'access_token') required final String accessToken,
+    @JsonKey(name: 'access_token') final String? accessToken,
 
     /// The OAuth token type. Mastodon uses Bearer tokens.
-    @JsonKey(name: 'token_type') required final String tokenType,
+    @JsonKey(name: 'token_type') final String? tokenType,
 
     /// The OAuth scopes granted by this token, space-separated.
-    @JsonKey(name: 'scope') required final String scope,
+    @JsonKey(name: 'scope') final String? scope,
 
     /// When the token was generated.
-    @JsonKey(name: 'created_at') required final int createdAt,
+    @JsonKey(name: 'created_at') final int? createdAt,
   }) = _Token;
 
   factory Token.fromJson(final Map<String, dynamic> json) =>

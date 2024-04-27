@@ -8,25 +8,25 @@ part 'translation.g.dart';
 class Translation with _$Translation {
   const factory Translation({
     /// HTML-encoded translated content of the status.
-    @JsonKey(name: 'content') required final String content,
+    @JsonKey(name: 'content') final String? content,
 
     /// The translated spoiler warning of the status.
-    @JsonKey(name: 'spoiler_text') required final String spoilerText,
+    @JsonKey(name: 'spoiler_text') final String? spoilerText,
 
     /// The translated poll of the status.
     @JsonKey(name: 'poll') final TranslationPoll? poll,
 
     /// The translated media descriptions of the status.
     @JsonKey(name: 'media_attachments')
-    required final List<TranslationAttachment> mediaAttachments,
+    final List<TranslationAttachment>? mediaAttachments,
 
     /// The language of the source text, as auto-detected by the machine
     /// translation provider.
     @JsonKey(name: 'detected_source_language')
-    required final String detectedSourceLanguage,
+    final String? detectedSourceLanguage,
 
     /// The service that provided the machine translation.
-    @JsonKey(name: 'provider') required final String provider,
+    @JsonKey(name: 'provider') final String? provider,
   }) = _Translation;
 
   factory Translation.fromJson(final Map<String, dynamic> json) =>
@@ -37,11 +37,10 @@ class Translation with _$Translation {
 class TranslationPoll with _$TranslationPoll {
   const factory TranslationPoll({
     /// The ID of the poll.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The translated poll options.
-    @JsonKey(name: 'options')
-    required final List<TranslationPollOption> options,
+    @JsonKey(name: 'options') final List<TranslationPollOption>? options,
   }) = _TranslationPoll;
 
   factory TranslationPoll.fromJson(final Map<String, dynamic> json) =>
@@ -52,7 +51,7 @@ class TranslationPoll with _$TranslationPoll {
 class TranslationPollOption with _$TranslationPollOption {
   const factory TranslationPollOption({
     /// The translated title of the poll option.
-    @JsonKey(name: 'title') required final String title,
+    @JsonKey(name: 'title') final String? title,
   }) = _TranslationPollOption;
 
   factory TranslationPollOption.fromJson(final Map<String, dynamic> json) =>
@@ -63,10 +62,10 @@ class TranslationPollOption with _$TranslationPollOption {
 class TranslationAttachment with _$TranslationAttachment {
   const factory TranslationAttachment({
     /// The id of the attachment.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The translated description of the attachment.
-    @JsonKey(name: 'description') required final String description,
+    @JsonKey(name: 'description') final String? description,
   }) = _TranslationAttachment;
 
   factory TranslationAttachment.fromJson(final Map<String, dynamic> json) =>

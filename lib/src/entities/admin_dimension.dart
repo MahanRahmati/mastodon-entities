@@ -8,10 +8,10 @@ part 'admin_dimension.g.dart';
 class AdminDimension with _$AdminDimension {
   const factory AdminDimension({
     /// The unique keystring for the requested dimension.
-    @JsonKey(name: 'key') required final String key,
+    @JsonKey(name: 'key') final String? key,
 
     /// The data available for the requested dimension.
-    @JsonKey(name: 'data') required final List<AdminDimensionData> data,
+    @JsonKey(name: 'data') final List<AdminDimensionData>? data,
   }) = _AdminDimension;
 
   factory AdminDimension.fromJson(final Map<String, dynamic> json) =>
@@ -22,13 +22,13 @@ class AdminDimension with _$AdminDimension {
 class AdminDimensionData with _$AdminDimensionData {
   const factory AdminDimensionData({
     /// The unique keystring for this data item.
-    @JsonKey(name: 'key') required final String key,
+    @JsonKey(name: 'key') final String? key,
 
     /// A human-readable key for this data item.
-    @JsonKey(name: 'human_key') required final String humanKey,
+    @JsonKey(name: 'human_key') final String? humanKey,
 
     /// The value for this data item.
-    @JsonKey(name: 'value') required final String value,
+    @JsonKey(name: 'value') final String? value,
 
     /// The units associated with this data item's value, if applicable.
     @JsonKey(name: 'unit') final String? unit,

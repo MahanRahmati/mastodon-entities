@@ -22,7 +22,7 @@ MastodonError _$MastodonErrorFromJson(Map<String, dynamic> json) {
 mixin _$MastodonError {
   /// The error message.
   @JsonKey(name: 'error')
-  String get error => throw _privateConstructorUsedError;
+  String? get error => throw _privateConstructorUsedError;
 
   /// A longer description of the error, mainly provided with the OAuth API.
   @JsonKey(name: 'error_description')
@@ -41,7 +41,7 @@ abstract class $MastodonErrorCopyWith<$Res> {
       _$MastodonErrorCopyWithImpl<$Res, MastodonError>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'error') String error,
+      {@JsonKey(name: 'error') String? error,
       @JsonKey(name: 'error_description') String? errorDescription});
 }
 
@@ -58,14 +58,14 @@ class _$MastodonErrorCopyWithImpl<$Res, $Val extends MastodonError>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = null,
+    Object? error = freezed,
     Object? errorDescription = freezed,
   }) {
     return _then(_value.copyWith(
-      error: null == error
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       errorDescription: freezed == errorDescription
           ? _value.errorDescription
           : errorDescription // ignore: cast_nullable_to_non_nullable
@@ -83,7 +83,7 @@ abstract class _$$MastodonErrorImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'error') String error,
+      {@JsonKey(name: 'error') String? error,
       @JsonKey(name: 'error_description') String? errorDescription});
 }
 
@@ -98,14 +98,14 @@ class __$$MastodonErrorImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = null,
+    Object? error = freezed,
     Object? errorDescription = freezed,
   }) {
     return _then(_$MastodonErrorImpl(
-      error: null == error
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       errorDescription: freezed == errorDescription
           ? _value.errorDescription
           : errorDescription // ignore: cast_nullable_to_non_nullable
@@ -118,7 +118,7 @@ class __$$MastodonErrorImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MastodonErrorImpl implements _MastodonError {
   const _$MastodonErrorImpl(
-      {@JsonKey(name: 'error') required this.error,
+      {@JsonKey(name: 'error') this.error,
       @JsonKey(name: 'error_description') this.errorDescription});
 
   factory _$MastodonErrorImpl.fromJson(Map<String, dynamic> json) =>
@@ -127,7 +127,7 @@ class _$MastodonErrorImpl implements _MastodonError {
   /// The error message.
   @override
   @JsonKey(name: 'error')
-  final String error;
+  final String? error;
 
   /// A longer description of the error, mainly provided with the OAuth API.
   @override
@@ -169,7 +169,7 @@ class _$MastodonErrorImpl implements _MastodonError {
 
 abstract class _MastodonError implements MastodonError {
   const factory _MastodonError(
-          {@JsonKey(name: 'error') required final String error,
+          {@JsonKey(name: 'error') final String? error,
           @JsonKey(name: 'error_description') final String? errorDescription}) =
       _$MastodonErrorImpl;
 
@@ -180,7 +180,7 @@ abstract class _MastodonError implements MastodonError {
 
   /// The error message.
   @JsonKey(name: 'error')
-  String get error;
+  String? get error;
   @override
 
   /// A longer description of the error, mainly provided with the OAuth API.

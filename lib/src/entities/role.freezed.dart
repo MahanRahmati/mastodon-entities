@@ -22,25 +22,25 @@ Role _$RoleFromJson(Map<String, dynamic> json) {
 mixin _$Role {
   /// The ID of the Role in the database.
   @JsonKey(name: 'id')
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
 
   /// The name of the role.
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   /// The hex code assigned to this role. If no hex code is assigned, the
   /// string will be empty.
   @JsonKey(name: 'color')
-  String get color => throw _privateConstructorUsedError;
+  String? get color => throw _privateConstructorUsedError;
 
   /// A bitmask that represents the sum of all permissions granted to the
   /// role.
   @JsonKey(name: 'permissions')
-  int get permissions => throw _privateConstructorUsedError;
+  int? get permissions => throw _privateConstructorUsedError;
 
   /// Whether the role is publicly visible as a badge on user profiles.
   @JsonKey(name: 'highlighted')
-  bool get highlighted => throw _privateConstructorUsedError;
+  bool? get highlighted => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -53,11 +53,11 @@ abstract class $RoleCopyWith<$Res> {
       _$RoleCopyWithImpl<$Res, Role>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'color') String color,
-      @JsonKey(name: 'permissions') int permissions,
-      @JsonKey(name: 'highlighted') bool highlighted});
+      {@JsonKey(name: 'id') int? id,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'color') String? color,
+      @JsonKey(name: 'permissions') int? permissions,
+      @JsonKey(name: 'highlighted') bool? highlighted});
 }
 
 /// @nodoc
@@ -73,33 +73,33 @@ class _$RoleCopyWithImpl<$Res, $Val extends Role>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? color = null,
-    Object? permissions = null,
-    Object? highlighted = null,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? color = freezed,
+    Object? permissions = freezed,
+    Object? highlighted = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
+              as int?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      color: null == color
+              as String?,
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as String,
-      permissions: null == permissions
+              as String?,
+      permissions: freezed == permissions
           ? _value.permissions
           : permissions // ignore: cast_nullable_to_non_nullable
-              as int,
-      highlighted: null == highlighted
+              as int?,
+      highlighted: freezed == highlighted
           ? _value.highlighted
           : highlighted // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -112,11 +112,11 @@ abstract class _$$RoleImplCopyWith<$Res> implements $RoleCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'color') String color,
-      @JsonKey(name: 'permissions') int permissions,
-      @JsonKey(name: 'highlighted') bool highlighted});
+      {@JsonKey(name: 'id') int? id,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'color') String? color,
+      @JsonKey(name: 'permissions') int? permissions,
+      @JsonKey(name: 'highlighted') bool? highlighted});
 }
 
 /// @nodoc
@@ -129,33 +129,33 @@ class __$$RoleImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? color = null,
-    Object? permissions = null,
-    Object? highlighted = null,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? color = freezed,
+    Object? permissions = freezed,
+    Object? highlighted = freezed,
   }) {
     return _then(_$RoleImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
+              as int?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      color: null == color
+              as String?,
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as String,
-      permissions: null == permissions
+              as String?,
+      permissions: freezed == permissions
           ? _value.permissions
           : permissions // ignore: cast_nullable_to_non_nullable
-              as int,
-      highlighted: null == highlighted
+              as int?,
+      highlighted: freezed == highlighted
           ? _value.highlighted
           : highlighted // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -164,11 +164,11 @@ class __$$RoleImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RoleImpl implements _Role {
   const _$RoleImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'color') required this.color,
-      @JsonKey(name: 'permissions') required this.permissions,
-      @JsonKey(name: 'highlighted') required this.highlighted});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'name') this.name,
+      @JsonKey(name: 'color') this.color,
+      @JsonKey(name: 'permissions') this.permissions,
+      @JsonKey(name: 'highlighted') this.highlighted});
 
   factory _$RoleImpl.fromJson(Map<String, dynamic> json) =>
       _$$RoleImplFromJson(json);
@@ -176,29 +176,29 @@ class _$RoleImpl implements _Role {
   /// The ID of the Role in the database.
   @override
   @JsonKey(name: 'id')
-  final int id;
+  final int? id;
 
   /// The name of the role.
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
 
   /// The hex code assigned to this role. If no hex code is assigned, the
   /// string will be empty.
   @override
   @JsonKey(name: 'color')
-  final String color;
+  final String? color;
 
   /// A bitmask that represents the sum of all permissions granted to the
   /// role.
   @override
   @JsonKey(name: 'permissions')
-  final int permissions;
+  final int? permissions;
 
   /// Whether the role is publicly visible as a badge on user profiles.
   @override
   @JsonKey(name: 'highlighted')
-  final bool highlighted;
+  final bool? highlighted;
 
   @override
   String toString() {
@@ -240,12 +240,11 @@ class _$RoleImpl implements _Role {
 
 abstract class _Role implements Role {
   const factory _Role(
-          {@JsonKey(name: 'id') required final int id,
-          @JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'color') required final String color,
-          @JsonKey(name: 'permissions') required final int permissions,
-          @JsonKey(name: 'highlighted') required final bool highlighted}) =
-      _$RoleImpl;
+      {@JsonKey(name: 'id') final int? id,
+      @JsonKey(name: 'name') final String? name,
+      @JsonKey(name: 'color') final String? color,
+      @JsonKey(name: 'permissions') final int? permissions,
+      @JsonKey(name: 'highlighted') final bool? highlighted}) = _$RoleImpl;
 
   factory _Role.fromJson(Map<String, dynamic> json) = _$RoleImpl.fromJson;
 
@@ -253,29 +252,29 @@ abstract class _Role implements Role {
 
   /// The ID of the Role in the database.
   @JsonKey(name: 'id')
-  int get id;
+  int? get id;
   @override
 
   /// The name of the role.
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
 
   /// The hex code assigned to this role. If no hex code is assigned, the
   /// string will be empty.
   @JsonKey(name: 'color')
-  String get color;
+  String? get color;
   @override
 
   /// A bitmask that represents the sum of all permissions granted to the
   /// role.
   @JsonKey(name: 'permissions')
-  int get permissions;
+  int? get permissions;
   @override
 
   /// Whether the role is publicly visible as a badge on user profiles.
   @JsonKey(name: 'highlighted')
-  bool get highlighted;
+  bool? get highlighted;
   @override
   @JsonKey(ignore: true)
   _$$RoleImplCopyWith<_$RoleImpl> get copyWith =>

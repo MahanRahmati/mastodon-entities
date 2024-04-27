@@ -8,22 +8,23 @@ part of 'relationship.dart';
 
 _$RelationshipImpl _$$RelationshipImplFromJson(Map<String, dynamic> json) =>
     _$RelationshipImpl(
-      id: json['id'] as String,
-      following: json['following'] as bool,
-      showingReblogs: json['showing_reblogs'] as bool,
-      notifying: json['notifying'] as bool,
-      languages:
-          (json['languages'] as List<dynamic>).map((e) => e as String).toList(),
-      followedBy: json['followed_by'] as bool,
-      blocking: json['blocking'] as bool,
-      blockedBy: json['blocked_by'] as bool,
-      muting: json['muting'] as bool,
-      mutingNotifications: json['muting_notifications'] as bool,
-      requested: json['requested'] as bool,
-      requestedBy: json['requested_by'] as bool,
-      domainBlocking: json['domain_blocking'] as bool,
-      endorsed: json['endorsed'] as bool,
-      note: json['note'] as String,
+      id: json['id'] as String?,
+      following: json['following'] as bool?,
+      showingReblogs: json['showing_reblogs'] as bool?,
+      notifying: json['notifying'] as bool?,
+      languages: (json['languages'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      followedBy: json['followed_by'] as bool?,
+      blocking: json['blocking'] as bool?,
+      blockedBy: json['blocked_by'] as bool?,
+      muting: json['muting'] as bool?,
+      mutingNotifications: json['muting_notifications'] as bool?,
+      requested: json['requested'] as bool?,
+      requestedBy: json['requested_by'] as bool?,
+      domainBlocking: json['domain_blocking'] as bool?,
+      endorsed: json['endorsed'] as bool?,
+      note: json['note'] as String?,
     );
 
 Map<String, dynamic> _$$RelationshipImplToJson(_$RelationshipImpl instance) =>

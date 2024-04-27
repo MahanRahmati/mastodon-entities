@@ -8,19 +8,19 @@ part of 'preview_card.dart';
 
 _$PreviewCardImpl _$$PreviewCardImplFromJson(Map<String, dynamic> json) =>
     _$PreviewCardImpl(
-      url: json['url'] as String,
-      title: json['title'] as String,
-      description: json['description'] as String,
-      type: $enumDecode(_$PreviewCardTypeEnumMap, json['type']),
-      authorName: json['author_name'] as String,
-      authorUrl: json['author_url'] as String,
-      providerName: json['provider_name'] as String,
-      providerUrl: json['provider_url'] as String,
-      html: json['html'] as String,
-      width: (json['width'] as num).toInt(),
-      height: (json['height'] as num).toInt(),
+      url: json['url'] as String?,
+      title: json['title'] as String?,
+      description: json['description'] as String?,
+      type: $enumDecodeNullable(_$PreviewCardTypeEnumMap, json['type']),
+      authorName: json['author_name'] as String?,
+      authorUrl: json['author_url'] as String?,
+      providerName: json['provider_name'] as String?,
+      providerUrl: json['provider_url'] as String?,
+      html: json['html'] as String?,
+      width: (json['width'] as num?)?.toInt(),
+      height: (json['height'] as num?)?.toInt(),
       image: json['image'] as String?,
-      embedUrl: json['embed_url'] as String,
+      embedUrl: json['embed_url'] as String?,
       blurhash: json['blurhash'] as String?,
     );
 
@@ -29,7 +29,7 @@ Map<String, dynamic> _$$PreviewCardImplToJson(_$PreviewCardImpl instance) =>
       'url': instance.url,
       'title': instance.title,
       'description': instance.description,
-      'type': _$PreviewCardTypeEnumMap[instance.type]!,
+      'type': _$PreviewCardTypeEnumMap[instance.type],
       'author_name': instance.authorName,
       'author_url': instance.authorUrl,
       'provider_name': instance.providerName,
@@ -51,22 +51,22 @@ const _$PreviewCardTypeEnumMap = {
 
 _$TrendsLinkImpl _$$TrendsLinkImplFromJson(Map<String, dynamic> json) =>
     _$TrendsLinkImpl(
-      url: json['url'] as String,
-      title: json['title'] as String,
-      description: json['description'] as String,
-      type: $enumDecode(_$PreviewCardTypeEnumMap, json['type']),
-      authorName: json['author_name'] as String,
-      authorUrl: json['author_url'] as String,
-      providerName: json['provider_name'] as String,
-      providerUrl: json['provider_url'] as String,
-      html: json['html'] as String,
-      width: (json['width'] as num).toInt(),
-      height: (json['height'] as num).toInt(),
+      url: json['url'] as String?,
+      title: json['title'] as String?,
+      description: json['description'] as String?,
+      type: $enumDecodeNullable(_$PreviewCardTypeEnumMap, json['type']),
+      authorName: json['author_name'] as String?,
+      authorUrl: json['author_url'] as String?,
+      providerName: json['provider_name'] as String?,
+      providerUrl: json['provider_url'] as String?,
+      html: json['html'] as String?,
+      width: (json['width'] as num?)?.toInt(),
+      height: (json['height'] as num?)?.toInt(),
       image: json['image'] as String?,
-      embedUrl: json['embed_url'] as String,
+      embedUrl: json['embed_url'] as String?,
       blurhash: json['blurhash'] as String?,
-      history: (json['history'] as List<dynamic>)
-          .map((e) => TrendsLinkHistory.fromJson(e as Map<String, dynamic>))
+      history: (json['history'] as List<dynamic>?)
+          ?.map((e) => TrendsLinkHistory.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -75,7 +75,7 @@ Map<String, dynamic> _$$TrendsLinkImplToJson(_$TrendsLinkImpl instance) =>
       'url': instance.url,
       'title': instance.title,
       'description': instance.description,
-      'type': _$PreviewCardTypeEnumMap[instance.type]!,
+      'type': _$PreviewCardTypeEnumMap[instance.type],
       'author_name': instance.authorName,
       'author_url': instance.authorUrl,
       'provider_name': instance.providerName,
@@ -92,9 +92,9 @@ Map<String, dynamic> _$$TrendsLinkImplToJson(_$TrendsLinkImpl instance) =>
 _$TrendsLinkHistoryImpl _$$TrendsLinkHistoryImplFromJson(
         Map<String, dynamic> json) =>
     _$TrendsLinkHistoryImpl(
-      day: json['day'] as String,
-      uses: json['uses'] as String,
-      accounts: json['accounts'] as String,
+      day: json['day'] as String?,
+      uses: json['uses'] as String?,
+      accounts: json['accounts'] as String?,
     );
 
 Map<String, dynamic> _$$TrendsLinkHistoryImplToJson(

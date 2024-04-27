@@ -8,9 +8,9 @@ part of 'admin_dimension.dart';
 
 _$AdminDimensionImpl _$$AdminDimensionImplFromJson(Map<String, dynamic> json) =>
     _$AdminDimensionImpl(
-      key: json['key'] as String,
-      data: (json['data'] as List<dynamic>)
-          .map((e) => AdminDimensionData.fromJson(e as Map<String, dynamic>))
+      key: json['key'] as String?,
+      data: (json['data'] as List<dynamic>?)
+          ?.map((e) => AdminDimensionData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -24,9 +24,9 @@ Map<String, dynamic> _$$AdminDimensionImplToJson(
 _$AdminDimensionDataImpl _$$AdminDimensionDataImplFromJson(
         Map<String, dynamic> json) =>
     _$AdminDimensionDataImpl(
-      key: json['key'] as String,
-      humanKey: json['human_key'] as String,
-      value: json['value'] as String,
+      key: json['key'] as String?,
+      humanKey: json['human_key'] as String?,
+      value: json['value'] as String?,
       unit: json['unit'] as String?,
       humanValue: json['human_value'] as String?,
     );

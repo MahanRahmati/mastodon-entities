@@ -8,11 +8,14 @@ part of 'admin_ip_block.dart';
 
 _$AdminIpBlockImpl _$$AdminIpBlockImplFromJson(Map<String, dynamic> json) =>
     _$AdminIpBlockImpl(
-      id: json['id'] as String,
-      ip: json['ip'] as String,
-      severity: $enumDecode(_$AdminIpBlockSeverityEnumMap, json['severity']),
-      comment: json['comment'] as String,
-      createdAt: DateTime.parse(json['created_at'] as String),
+      id: json['id'] as String?,
+      ip: json['ip'] as String?,
+      severity:
+          $enumDecodeNullable(_$AdminIpBlockSeverityEnumMap, json['severity']),
+      comment: json['comment'] as String?,
+      createdAt: json['created_at'] == null
+          ? null
+          : DateTime.parse(json['created_at'] as String),
       expiresAt: json['expires_at'] == null
           ? null
           : DateTime.parse(json['expires_at'] as String),
@@ -22,9 +25,9 @@ Map<String, dynamic> _$$AdminIpBlockImplToJson(_$AdminIpBlockImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'ip': instance.ip,
-      'severity': _$AdminIpBlockSeverityEnumMap[instance.severity]!,
+      'severity': _$AdminIpBlockSeverityEnumMap[instance.severity],
       'comment': instance.comment,
-      'created_at': instance.createdAt.toIso8601String(),
+      'created_at': instance.createdAt?.toIso8601String(),
       'expires_at': instance.expiresAt?.toIso8601String(),
     };
 

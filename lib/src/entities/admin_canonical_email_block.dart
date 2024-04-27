@@ -8,11 +8,10 @@ part 'admin_canonical_email_block.g.dart';
 class AdminCanonicalEmailBlock with _$AdminCanonicalEmailBlock {
   const factory AdminCanonicalEmailBlock({
     /// The ID of the email block in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The SHA256 hash of the canonical email address.
-    @JsonKey(name: 'canonical_email_hash')
-    required final String canonicalEmailHash,
+    @JsonKey(name: 'canonical_email_hash') final String? canonicalEmailHash,
   }) = _AdminCanonicalEmailBlock;
 
   factory AdminCanonicalEmailBlock.fromJson(final Map<String, dynamic> json) =>

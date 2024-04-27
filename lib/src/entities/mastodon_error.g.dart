@@ -8,7 +8,7 @@ part of 'mastodon_error.dart';
 
 _$MastodonErrorImpl _$$MastodonErrorImplFromJson(Map<String, dynamic> json) =>
     _$MastodonErrorImpl(
-      error: json['error'] as String,
+      error: json['error'] as String?,
       errorDescription: json['error_description'] as String?,
     );
 

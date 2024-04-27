@@ -22,11 +22,11 @@ AdminIp _$AdminIpFromJson(Map<String, dynamic> json) {
 mixin _$AdminIp {
   /// The IP address.
   @JsonKey(name: 'ip')
-  String get ip => throw _privateConstructorUsedError;
+  String? get ip => throw _privateConstructorUsedError;
 
   /// The timestamp of when the IP address was last used for this account.
   @JsonKey(name: 'used_at')
-  DateTime get usedAt => throw _privateConstructorUsedError;
+  DateTime? get usedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,8 +39,8 @@ abstract class $AdminIpCopyWith<$Res> {
       _$AdminIpCopyWithImpl<$Res, AdminIp>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'ip') String ip,
-      @JsonKey(name: 'used_at') DateTime usedAt});
+      {@JsonKey(name: 'ip') String? ip,
+      @JsonKey(name: 'used_at') DateTime? usedAt});
 }
 
 /// @nodoc
@@ -56,18 +56,18 @@ class _$AdminIpCopyWithImpl<$Res, $Val extends AdminIp>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ip = null,
-    Object? usedAt = null,
+    Object? ip = freezed,
+    Object? usedAt = freezed,
   }) {
     return _then(_value.copyWith(
-      ip: null == ip
+      ip: freezed == ip
           ? _value.ip
           : ip // ignore: cast_nullable_to_non_nullable
-              as String,
-      usedAt: null == usedAt
+              as String?,
+      usedAt: freezed == usedAt
           ? _value.usedAt
           : usedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -80,8 +80,8 @@ abstract class _$$AdminIpImplCopyWith<$Res> implements $AdminIpCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'ip') String ip,
-      @JsonKey(name: 'used_at') DateTime usedAt});
+      {@JsonKey(name: 'ip') String? ip,
+      @JsonKey(name: 'used_at') DateTime? usedAt});
 }
 
 /// @nodoc
@@ -95,18 +95,18 @@ class __$$AdminIpImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ip = null,
-    Object? usedAt = null,
+    Object? ip = freezed,
+    Object? usedAt = freezed,
   }) {
     return _then(_$AdminIpImpl(
-      ip: null == ip
+      ip: freezed == ip
           ? _value.ip
           : ip // ignore: cast_nullable_to_non_nullable
-              as String,
-      usedAt: null == usedAt
+              as String?,
+      usedAt: freezed == usedAt
           ? _value.usedAt
           : usedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ));
   }
 }
@@ -115,8 +115,7 @@ class __$$AdminIpImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminIpImpl implements _AdminIp {
   const _$AdminIpImpl(
-      {@JsonKey(name: 'ip') required this.ip,
-      @JsonKey(name: 'used_at') required this.usedAt});
+      {@JsonKey(name: 'ip') this.ip, @JsonKey(name: 'used_at') this.usedAt});
 
   factory _$AdminIpImpl.fromJson(Map<String, dynamic> json) =>
       _$$AdminIpImplFromJson(json);
@@ -124,12 +123,12 @@ class _$AdminIpImpl implements _AdminIp {
   /// The IP address.
   @override
   @JsonKey(name: 'ip')
-  final String ip;
+  final String? ip;
 
   /// The timestamp of when the IP address was last used for this account.
   @override
   @JsonKey(name: 'used_at')
-  final DateTime usedAt;
+  final DateTime? usedAt;
 
   @override
   String toString() {
@@ -165,9 +164,8 @@ class _$AdminIpImpl implements _AdminIp {
 
 abstract class _AdminIp implements AdminIp {
   const factory _AdminIp(
-          {@JsonKey(name: 'ip') required final String ip,
-          @JsonKey(name: 'used_at') required final DateTime usedAt}) =
-      _$AdminIpImpl;
+      {@JsonKey(name: 'ip') final String? ip,
+      @JsonKey(name: 'used_at') final DateTime? usedAt}) = _$AdminIpImpl;
 
   factory _AdminIp.fromJson(Map<String, dynamic> json) = _$AdminIpImpl.fromJson;
 
@@ -175,12 +173,12 @@ abstract class _AdminIp implements AdminIp {
 
   /// The IP address.
   @JsonKey(name: 'ip')
-  String get ip;
+  String? get ip;
   @override
 
   /// The timestamp of when the IP address was last used for this account.
   @JsonKey(name: 'used_at')
-  DateTime get usedAt;
+  DateTime? get usedAt;
   @override
   @JsonKey(ignore: true)
   _$$AdminIpImplCopyWith<_$AdminIpImpl> get copyWith =>

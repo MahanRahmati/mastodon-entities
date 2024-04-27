@@ -10,7 +10,7 @@ part 'filter_result.g.dart';
 class FilterResult with _$FilterResult {
   const factory FilterResult({
     /// The filter that was matched.
-    @JsonKey(name: 'filter') required final Filter filter,
+    @JsonKey(name: 'filter') final Filter? filter,
 
     /// The keyword within the filter that was matched.
     @JsonKey(name: 'keyword_matches') final List<String>? keywordMatches,

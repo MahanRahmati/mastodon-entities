@@ -12,19 +12,19 @@ part 'status_edit.g.dart';
 class StatusEdit with _$StatusEdit {
   const factory StatusEdit({
     /// The content of the status at this revision.
-    @JsonKey(name: 'content') required final String content,
+    @JsonKey(name: 'content') final String? content,
 
     /// The content of the subject or content warning at this revision.
-    @JsonKey(name: 'spoiler_text') required final String spoilerText,
+    @JsonKey(name: 'spoiler_text') final String? spoilerText,
 
     /// Whether the status was marked sensitive at this revision.
-    @JsonKey(name: 'sensitive') required final bool sensitive,
+    @JsonKey(name: 'sensitive') final bool? sensitive,
 
     /// The timestamp of when the revision was published.
-    @JsonKey(name: 'created_at') required final DateTime createdAt,
+    @JsonKey(name: 'created_at') final DateTime? createdAt,
 
     /// The account that published this revision.
-    @JsonKey(name: 'account') required final Account account,
+    @JsonKey(name: 'account') final Account? account,
 
     /// The current state of the poll options at this revision. Note that edits
     /// changing the poll options will be collapsed together into one edit,
@@ -33,10 +33,10 @@ class StatusEdit with _$StatusEdit {
 
     /// The current state of the media attachments at this revision.
     @JsonKey(name: 'media_attachments')
-    required final List<MediaAttachment> mediaAttachments,
+    final List<MediaAttachment>? mediaAttachments,
 
     /// Any custom emoji that are used in the current revision.
-    @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
+    @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
   }) = _StatusEdit;
 
   factory StatusEdit.fromJson(final Map<String, dynamic> json) =>
@@ -47,7 +47,7 @@ class StatusEdit with _$StatusEdit {
 class StatusEditPoll with _$StatusEditPoll {
   const factory StatusEditPoll({
     /// The poll options at this revision.
-    @JsonKey(name: 'options') required final List<StatusEditPollOption> options,
+    @JsonKey(name: 'options') final List<StatusEditPollOption>? options,
   }) = _StatusEditPoll;
 
   factory StatusEditPoll.fromJson(final Map<String, dynamic> json) =>
@@ -58,7 +58,7 @@ class StatusEditPoll with _$StatusEditPoll {
 class StatusEditPollOption with _$StatusEditPollOption {
   const factory StatusEditPollOption({
     /// The text for a poll option.
-    @JsonKey(name: 'title') required final String title,
+    @JsonKey(name: 'title') final String? title,
   }) = _StatusEditPollOption;
 
   factory StatusEditPollOption.fromJson(final Map<String, dynamic> json) =>

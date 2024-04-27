@@ -9,16 +9,18 @@ part of 'admin_domain_block.dart';
 _$AdminDomainBlockImpl _$$AdminDomainBlockImplFromJson(
         Map<String, dynamic> json) =>
     _$AdminDomainBlockImpl(
-      id: json['id'] as String,
-      domain: json['domain'] as String,
-      createdAt: DateTime.parse(json['created_at'] as String),
-      severity:
-          $enumDecode(_$AdminDomainBlockSeverityEnumMap, json['severity']),
-      rejectMedia: json['reject_media'] as bool,
-      rejectReports: json['reject_reports'] as bool,
+      id: json['id'] as String?,
+      domain: json['domain'] as String?,
+      createdAt: json['created_at'] == null
+          ? null
+          : DateTime.parse(json['created_at'] as String),
+      severity: $enumDecodeNullable(
+          _$AdminDomainBlockSeverityEnumMap, json['severity']),
+      rejectMedia: json['reject_media'] as bool?,
+      rejectReports: json['reject_reports'] as bool?,
       privateComment: json['private_comment'] as String?,
       publicComment: json['public_comment'] as String?,
-      obfuscate: json['obfuscate'] as bool,
+      obfuscate: json['obfuscate'] as bool?,
     );
 
 Map<String, dynamic> _$$AdminDomainBlockImplToJson(
@@ -26,8 +28,8 @@ Map<String, dynamic> _$$AdminDomainBlockImplToJson(
     <String, dynamic>{
       'id': instance.id,
       'domain': instance.domain,
-      'created_at': instance.createdAt.toIso8601String(),
-      'severity': _$AdminDomainBlockSeverityEnumMap[instance.severity]!,
+      'created_at': instance.createdAt?.toIso8601String(),
+      'severity': _$AdminDomainBlockSeverityEnumMap[instance.severity],
       'reject_media': instance.rejectMedia,
       'reject_reports': instance.rejectReports,
       'private_comment': instance.privateComment,

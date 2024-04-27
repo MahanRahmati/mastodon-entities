@@ -22,11 +22,11 @@ Report _$ReportFromJson(Map<String, dynamic> json) {
 mixin _$Report {
   /// The ID of the report in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// Whether an action was taken yet.
   @JsonKey(name: 'action_taken')
-  bool get actionTaken => throw _privateConstructorUsedError;
+  bool? get actionTaken => throw _privateConstructorUsedError;
 
   /// When an action was taken against the report.
   @JsonKey(name: 'action_taken_at')
@@ -34,19 +34,19 @@ mixin _$Report {
 
   /// The generic reason for the report.
   @JsonKey(name: 'category')
-  ReportCategory get category => throw _privateConstructorUsedError;
+  ReportCategory? get category => throw _privateConstructorUsedError;
 
   /// The reason for the report.
   @JsonKey(name: 'comment')
-  String get comment => throw _privateConstructorUsedError;
+  String? get comment => throw _privateConstructorUsedError;
 
   /// Whether the report was forwarded to a remote domain.
   @JsonKey(name: 'forwarded')
-  bool get forwarded => throw _privateConstructorUsedError;
+  bool? get forwarded => throw _privateConstructorUsedError;
 
   /// When the report was created.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   /// IDs of statuses that have been attached to this report for additional
   /// context.
@@ -59,7 +59,7 @@ mixin _$Report {
 
   /// The account that was reported.
   @JsonKey(name: 'target_account')
-  Account get targetAccount => throw _privateConstructorUsedError;
+  Account? get targetAccount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -72,18 +72,18 @@ abstract class $ReportCopyWith<$Res> {
       _$ReportCopyWithImpl<$Res, Report>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'action_taken') bool actionTaken,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'action_taken') bool? actionTaken,
       @JsonKey(name: 'action_taken_at') DateTime? actionTakenAt,
-      @JsonKey(name: 'category') ReportCategory category,
-      @JsonKey(name: 'comment') String comment,
-      @JsonKey(name: 'forwarded') bool forwarded,
-      @JsonKey(name: 'created_at') DateTime createdAt,
+      @JsonKey(name: 'category') ReportCategory? category,
+      @JsonKey(name: 'comment') String? comment,
+      @JsonKey(name: 'forwarded') bool? forwarded,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'status_ids') List<String>? statusIds,
       @JsonKey(name: 'rule_ids') List<String>? ruleIds,
-      @JsonKey(name: 'target_account') Account targetAccount});
+      @JsonKey(name: 'target_account') Account? targetAccount});
 
-  $AccountCopyWith<$Res> get targetAccount;
+  $AccountCopyWith<$Res>? get targetAccount;
 }
 
 /// @nodoc
@@ -99,46 +99,46 @@ class _$ReportCopyWithImpl<$Res, $Val extends Report>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? actionTaken = null,
+    Object? id = freezed,
+    Object? actionTaken = freezed,
     Object? actionTakenAt = freezed,
-    Object? category = null,
-    Object? comment = null,
-    Object? forwarded = null,
-    Object? createdAt = null,
+    Object? category = freezed,
+    Object? comment = freezed,
+    Object? forwarded = freezed,
+    Object? createdAt = freezed,
     Object? statusIds = freezed,
     Object? ruleIds = freezed,
-    Object? targetAccount = null,
+    Object? targetAccount = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      actionTaken: null == actionTaken
+              as String?,
+      actionTaken: freezed == actionTaken
           ? _value.actionTaken
           : actionTaken // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       actionTakenAt: freezed == actionTakenAt
           ? _value.actionTakenAt
           : actionTakenAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      category: null == category
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as ReportCategory,
-      comment: null == comment
+              as ReportCategory?,
+      comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
-              as String,
-      forwarded: null == forwarded
+              as String?,
+      forwarded: freezed == forwarded
           ? _value.forwarded
           : forwarded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      createdAt: null == createdAt
+              as bool?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       statusIds: freezed == statusIds
           ? _value.statusIds
           : statusIds // ignore: cast_nullable_to_non_nullable
@@ -147,17 +147,21 @@ class _$ReportCopyWithImpl<$Res, $Val extends Report>
           ? _value.ruleIds
           : ruleIds // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      targetAccount: null == targetAccount
+      targetAccount: freezed == targetAccount
           ? _value.targetAccount
           : targetAccount // ignore: cast_nullable_to_non_nullable
-              as Account,
+              as Account?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AccountCopyWith<$Res> get targetAccount {
-    return $AccountCopyWith<$Res>(_value.targetAccount, (value) {
+  $AccountCopyWith<$Res>? get targetAccount {
+    if (_value.targetAccount == null) {
+      return null;
+    }
+
+    return $AccountCopyWith<$Res>(_value.targetAccount!, (value) {
       return _then(_value.copyWith(targetAccount: value) as $Val);
     });
   }
@@ -171,19 +175,19 @@ abstract class _$$ReportImplCopyWith<$Res> implements $ReportCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'action_taken') bool actionTaken,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'action_taken') bool? actionTaken,
       @JsonKey(name: 'action_taken_at') DateTime? actionTakenAt,
-      @JsonKey(name: 'category') ReportCategory category,
-      @JsonKey(name: 'comment') String comment,
-      @JsonKey(name: 'forwarded') bool forwarded,
-      @JsonKey(name: 'created_at') DateTime createdAt,
+      @JsonKey(name: 'category') ReportCategory? category,
+      @JsonKey(name: 'comment') String? comment,
+      @JsonKey(name: 'forwarded') bool? forwarded,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'status_ids') List<String>? statusIds,
       @JsonKey(name: 'rule_ids') List<String>? ruleIds,
-      @JsonKey(name: 'target_account') Account targetAccount});
+      @JsonKey(name: 'target_account') Account? targetAccount});
 
   @override
-  $AccountCopyWith<$Res> get targetAccount;
+  $AccountCopyWith<$Res>? get targetAccount;
 }
 
 /// @nodoc
@@ -197,46 +201,46 @@ class __$$ReportImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? actionTaken = null,
+    Object? id = freezed,
+    Object? actionTaken = freezed,
     Object? actionTakenAt = freezed,
-    Object? category = null,
-    Object? comment = null,
-    Object? forwarded = null,
-    Object? createdAt = null,
+    Object? category = freezed,
+    Object? comment = freezed,
+    Object? forwarded = freezed,
+    Object? createdAt = freezed,
     Object? statusIds = freezed,
     Object? ruleIds = freezed,
-    Object? targetAccount = null,
+    Object? targetAccount = freezed,
   }) {
     return _then(_$ReportImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      actionTaken: null == actionTaken
+              as String?,
+      actionTaken: freezed == actionTaken
           ? _value.actionTaken
           : actionTaken // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       actionTakenAt: freezed == actionTakenAt
           ? _value.actionTakenAt
           : actionTakenAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      category: null == category
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as ReportCategory,
-      comment: null == comment
+              as ReportCategory?,
+      comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
-              as String,
-      forwarded: null == forwarded
+              as String?,
+      forwarded: freezed == forwarded
           ? _value.forwarded
           : forwarded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      createdAt: null == createdAt
+              as bool?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       statusIds: freezed == statusIds
           ? _value._statusIds
           : statusIds // ignore: cast_nullable_to_non_nullable
@@ -245,10 +249,10 @@ class __$$ReportImplCopyWithImpl<$Res>
           ? _value._ruleIds
           : ruleIds // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      targetAccount: null == targetAccount
+      targetAccount: freezed == targetAccount
           ? _value.targetAccount
           : targetAccount // ignore: cast_nullable_to_non_nullable
-              as Account,
+              as Account?,
     ));
   }
 }
@@ -257,16 +261,16 @@ class __$$ReportImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ReportImpl implements _Report {
   const _$ReportImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'action_taken') required this.actionTaken,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'action_taken') this.actionTaken,
       @JsonKey(name: 'action_taken_at') this.actionTakenAt,
-      @JsonKey(name: 'category') required this.category,
-      @JsonKey(name: 'comment') required this.comment,
-      @JsonKey(name: 'forwarded') required this.forwarded,
-      @JsonKey(name: 'created_at') required this.createdAt,
+      @JsonKey(name: 'category') this.category,
+      @JsonKey(name: 'comment') this.comment,
+      @JsonKey(name: 'forwarded') this.forwarded,
+      @JsonKey(name: 'created_at') this.createdAt,
       @JsonKey(name: 'status_ids') final List<String>? statusIds,
       @JsonKey(name: 'rule_ids') final List<String>? ruleIds,
-      @JsonKey(name: 'target_account') required this.targetAccount})
+      @JsonKey(name: 'target_account') this.targetAccount})
       : _statusIds = statusIds,
         _ruleIds = ruleIds;
 
@@ -276,12 +280,12 @@ class _$ReportImpl implements _Report {
   /// The ID of the report in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// Whether an action was taken yet.
   @override
   @JsonKey(name: 'action_taken')
-  final bool actionTaken;
+  final bool? actionTaken;
 
   /// When an action was taken against the report.
   @override
@@ -291,22 +295,22 @@ class _$ReportImpl implements _Report {
   /// The generic reason for the report.
   @override
   @JsonKey(name: 'category')
-  final ReportCategory category;
+  final ReportCategory? category;
 
   /// The reason for the report.
   @override
   @JsonKey(name: 'comment')
-  final String comment;
+  final String? comment;
 
   /// Whether the report was forwarded to a remote domain.
   @override
   @JsonKey(name: 'forwarded')
-  final bool forwarded;
+  final bool? forwarded;
 
   /// When the report was created.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   /// IDs of statuses that have been attached to this report for additional
   /// context.
@@ -341,7 +345,7 @@ class _$ReportImpl implements _Report {
   /// The account that was reported.
   @override
   @JsonKey(name: 'target_account')
-  final Account targetAccount;
+  final Account? targetAccount;
 
   @override
   String toString() {
@@ -403,17 +407,17 @@ class _$ReportImpl implements _Report {
 
 abstract class _Report implements Report {
   const factory _Report(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'action_taken') required final bool actionTaken,
-      @JsonKey(name: 'action_taken_at') final DateTime? actionTakenAt,
-      @JsonKey(name: 'category') required final ReportCategory category,
-      @JsonKey(name: 'comment') required final String comment,
-      @JsonKey(name: 'forwarded') required final bool forwarded,
-      @JsonKey(name: 'created_at') required final DateTime createdAt,
-      @JsonKey(name: 'status_ids') final List<String>? statusIds,
-      @JsonKey(name: 'rule_ids') final List<String>? ruleIds,
-      @JsonKey(name: 'target_account')
-      required final Account targetAccount}) = _$ReportImpl;
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'action_taken') final bool? actionTaken,
+          @JsonKey(name: 'action_taken_at') final DateTime? actionTakenAt,
+          @JsonKey(name: 'category') final ReportCategory? category,
+          @JsonKey(name: 'comment') final String? comment,
+          @JsonKey(name: 'forwarded') final bool? forwarded,
+          @JsonKey(name: 'created_at') final DateTime? createdAt,
+          @JsonKey(name: 'status_ids') final List<String>? statusIds,
+          @JsonKey(name: 'rule_ids') final List<String>? ruleIds,
+          @JsonKey(name: 'target_account') final Account? targetAccount}) =
+      _$ReportImpl;
 
   factory _Report.fromJson(Map<String, dynamic> json) = _$ReportImpl.fromJson;
 
@@ -421,12 +425,12 @@ abstract class _Report implements Report {
 
   /// The ID of the report in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// Whether an action was taken yet.
   @JsonKey(name: 'action_taken')
-  bool get actionTaken;
+  bool? get actionTaken;
   @override
 
   /// When an action was taken against the report.
@@ -436,22 +440,22 @@ abstract class _Report implements Report {
 
   /// The generic reason for the report.
   @JsonKey(name: 'category')
-  ReportCategory get category;
+  ReportCategory? get category;
   @override
 
   /// The reason for the report.
   @JsonKey(name: 'comment')
-  String get comment;
+  String? get comment;
   @override
 
   /// Whether the report was forwarded to a remote domain.
   @JsonKey(name: 'forwarded')
-  bool get forwarded;
+  bool? get forwarded;
   @override
 
   /// When the report was created.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
 
   /// IDs of statuses that have been attached to this report for additional
@@ -467,7 +471,7 @@ abstract class _Report implements Report {
 
   /// The account that was reported.
   @JsonKey(name: 'target_account')
-  Account get targetAccount;
+  Account? get targetAccount;
   @override
   @JsonKey(ignore: true)
   _$$ReportImplCopyWith<_$ReportImpl> get copyWith =>

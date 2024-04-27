@@ -22,15 +22,15 @@ AdminCohort _$AdminCohortFromJson(Map<String, dynamic> json) {
 mixin _$AdminCohort {
   /// The timestamp for the start of the period, at midnight.
   @JsonKey(name: 'period')
-  DateTime get period => throw _privateConstructorUsedError;
+  DateTime? get period => throw _privateConstructorUsedError;
 
   /// The size of the bucket for the returned data.
   @JsonKey(name: 'frequency')
-  AdminCohortFrequency get frequency => throw _privateConstructorUsedError;
+  AdminCohortFrequency? get frequency => throw _privateConstructorUsedError;
 
   /// Retention data for users who registered during the given period.
   @JsonKey(name: 'data')
-  List<CohortData> get data => throw _privateConstructorUsedError;
+  List<CohortData>? get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,9 +45,9 @@ abstract class $AdminCohortCopyWith<$Res> {
       _$AdminCohortCopyWithImpl<$Res, AdminCohort>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'period') DateTime period,
-      @JsonKey(name: 'frequency') AdminCohortFrequency frequency,
-      @JsonKey(name: 'data') List<CohortData> data});
+      {@JsonKey(name: 'period') DateTime? period,
+      @JsonKey(name: 'frequency') AdminCohortFrequency? frequency,
+      @JsonKey(name: 'data') List<CohortData>? data});
 }
 
 /// @nodoc
@@ -63,23 +63,23 @@ class _$AdminCohortCopyWithImpl<$Res, $Val extends AdminCohort>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? period = null,
-    Object? frequency = null,
-    Object? data = null,
+    Object? period = freezed,
+    Object? frequency = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      period: null == period
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      frequency: null == frequency
+              as DateTime?,
+      frequency: freezed == frequency
           ? _value.frequency
           : frequency // ignore: cast_nullable_to_non_nullable
-              as AdminCohortFrequency,
-      data: null == data
+              as AdminCohortFrequency?,
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<CohortData>,
+              as List<CohortData>?,
     ) as $Val);
   }
 }
@@ -93,9 +93,9 @@ abstract class _$$AdminCohortImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'period') DateTime period,
-      @JsonKey(name: 'frequency') AdminCohortFrequency frequency,
-      @JsonKey(name: 'data') List<CohortData> data});
+      {@JsonKey(name: 'period') DateTime? period,
+      @JsonKey(name: 'frequency') AdminCohortFrequency? frequency,
+      @JsonKey(name: 'data') List<CohortData>? data});
 }
 
 /// @nodoc
@@ -109,23 +109,23 @@ class __$$AdminCohortImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? period = null,
-    Object? frequency = null,
-    Object? data = null,
+    Object? period = freezed,
+    Object? frequency = freezed,
+    Object? data = freezed,
   }) {
     return _then(_$AdminCohortImpl(
-      period: null == period
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      frequency: null == frequency
+              as DateTime?,
+      frequency: freezed == frequency
           ? _value.frequency
           : frequency // ignore: cast_nullable_to_non_nullable
-              as AdminCohortFrequency,
-      data: null == data
+              as AdminCohortFrequency?,
+      data: freezed == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<CohortData>,
+              as List<CohortData>?,
     ));
   }
 }
@@ -134,9 +134,9 @@ class __$$AdminCohortImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminCohortImpl implements _AdminCohort {
   const _$AdminCohortImpl(
-      {@JsonKey(name: 'period') required this.period,
-      @JsonKey(name: 'frequency') required this.frequency,
-      @JsonKey(name: 'data') required final List<CohortData> data})
+      {@JsonKey(name: 'period') this.period,
+      @JsonKey(name: 'frequency') this.frequency,
+      @JsonKey(name: 'data') final List<CohortData>? data})
       : _data = data;
 
   factory _$AdminCohortImpl.fromJson(Map<String, dynamic> json) =>
@@ -145,23 +145,25 @@ class _$AdminCohortImpl implements _AdminCohort {
   /// The timestamp for the start of the period, at midnight.
   @override
   @JsonKey(name: 'period')
-  final DateTime period;
+  final DateTime? period;
 
   /// The size of the bucket for the returned data.
   @override
   @JsonKey(name: 'frequency')
-  final AdminCohortFrequency frequency;
+  final AdminCohortFrequency? frequency;
 
   /// Retention data for users who registered during the given period.
-  final List<CohortData> _data;
+  final List<CohortData>? _data;
 
   /// Retention data for users who registered during the given period.
   @override
   @JsonKey(name: 'data')
-  List<CohortData> get data {
+  List<CohortData>? get data {
+    final value = _data;
+    if (value == null) return null;
     if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_data);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -201,10 +203,9 @@ class _$AdminCohortImpl implements _AdminCohort {
 
 abstract class _AdminCohort implements AdminCohort {
   const factory _AdminCohort(
-      {@JsonKey(name: 'period') required final DateTime period,
-      @JsonKey(name: 'frequency') required final AdminCohortFrequency frequency,
-      @JsonKey(name: 'data')
-      required final List<CohortData> data}) = _$AdminCohortImpl;
+      {@JsonKey(name: 'period') final DateTime? period,
+      @JsonKey(name: 'frequency') final AdminCohortFrequency? frequency,
+      @JsonKey(name: 'data') final List<CohortData>? data}) = _$AdminCohortImpl;
 
   factory _AdminCohort.fromJson(Map<String, dynamic> json) =
       _$AdminCohortImpl.fromJson;
@@ -213,17 +214,17 @@ abstract class _AdminCohort implements AdminCohort {
 
   /// The timestamp for the start of the period, at midnight.
   @JsonKey(name: 'period')
-  DateTime get period;
+  DateTime? get period;
   @override
 
   /// The size of the bucket for the returned data.
   @JsonKey(name: 'frequency')
-  AdminCohortFrequency get frequency;
+  AdminCohortFrequency? get frequency;
   @override
 
   /// Retention data for users who registered during the given period.
   @JsonKey(name: 'data')
-  List<CohortData> get data;
+  List<CohortData>? get data;
   @override
   @JsonKey(ignore: true)
   _$$AdminCohortImplCopyWith<_$AdminCohortImpl> get copyWith =>
@@ -238,17 +239,17 @@ CohortData _$CohortDataFromJson(Map<String, dynamic> json) {
 mixin _$CohortData {
   /// The timestamp for the start of the bucket, at midnight.
   @JsonKey(name: 'date')
-  DateTime get date => throw _privateConstructorUsedError;
+  DateTime? get date => throw _privateConstructorUsedError;
 
   /// The percentage rate of users who registered in the specified `period`
   /// and were active for the given `date` bucket.
   @JsonKey(name: 'rate')
-  double get rate => throw _privateConstructorUsedError;
+  double? get rate => throw _privateConstructorUsedError;
 
   /// How many users registered in the specified `period` and were active for
   /// the given `date` bucket.
   @JsonKey(name: 'value')
-  int get value => throw _privateConstructorUsedError;
+  int? get value => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -263,9 +264,9 @@ abstract class $CohortDataCopyWith<$Res> {
       _$CohortDataCopyWithImpl<$Res, CohortData>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'date') DateTime date,
-      @JsonKey(name: 'rate') double rate,
-      @JsonKey(name: 'value') int value});
+      {@JsonKey(name: 'date') DateTime? date,
+      @JsonKey(name: 'rate') double? rate,
+      @JsonKey(name: 'value') int? value});
 }
 
 /// @nodoc
@@ -281,23 +282,23 @@ class _$CohortDataCopyWithImpl<$Res, $Val extends CohortData>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
-    Object? rate = null,
-    Object? value = null,
+    Object? date = freezed,
+    Object? rate = freezed,
+    Object? value = freezed,
   }) {
     return _then(_value.copyWith(
-      date: null == date
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      rate: null == rate
+              as DateTime?,
+      rate: freezed == rate
           ? _value.rate
           : rate // ignore: cast_nullable_to_non_nullable
-              as double,
-      value: null == value
+              as double?,
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -311,9 +312,9 @@ abstract class _$$CohortDataImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'date') DateTime date,
-      @JsonKey(name: 'rate') double rate,
-      @JsonKey(name: 'value') int value});
+      {@JsonKey(name: 'date') DateTime? date,
+      @JsonKey(name: 'rate') double? rate,
+      @JsonKey(name: 'value') int? value});
 }
 
 /// @nodoc
@@ -327,23 +328,23 @@ class __$$CohortDataImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
-    Object? rate = null,
-    Object? value = null,
+    Object? date = freezed,
+    Object? rate = freezed,
+    Object? value = freezed,
   }) {
     return _then(_$CohortDataImpl(
-      date: null == date
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      rate: null == rate
+              as DateTime?,
+      rate: freezed == rate
           ? _value.rate
           : rate // ignore: cast_nullable_to_non_nullable
-              as double,
-      value: null == value
+              as double?,
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -352,9 +353,9 @@ class __$$CohortDataImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CohortDataImpl implements _CohortData {
   const _$CohortDataImpl(
-      {@JsonKey(name: 'date') required this.date,
-      @JsonKey(name: 'rate') required this.rate,
-      @JsonKey(name: 'value') required this.value});
+      {@JsonKey(name: 'date') this.date,
+      @JsonKey(name: 'rate') this.rate,
+      @JsonKey(name: 'value') this.value});
 
   factory _$CohortDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$CohortDataImplFromJson(json);
@@ -362,19 +363,19 @@ class _$CohortDataImpl implements _CohortData {
   /// The timestamp for the start of the bucket, at midnight.
   @override
   @JsonKey(name: 'date')
-  final DateTime date;
+  final DateTime? date;
 
   /// The percentage rate of users who registered in the specified `period`
   /// and were active for the given `date` bucket.
   @override
   @JsonKey(name: 'rate')
-  final double rate;
+  final double? rate;
 
   /// How many users registered in the specified `period` and were active for
   /// the given `date` bucket.
   @override
   @JsonKey(name: 'value')
-  final int value;
+  final int? value;
 
   @override
   String toString() {
@@ -411,9 +412,9 @@ class _$CohortDataImpl implements _CohortData {
 
 abstract class _CohortData implements CohortData {
   const factory _CohortData(
-      {@JsonKey(name: 'date') required final DateTime date,
-      @JsonKey(name: 'rate') required final double rate,
-      @JsonKey(name: 'value') required final int value}) = _$CohortDataImpl;
+      {@JsonKey(name: 'date') final DateTime? date,
+      @JsonKey(name: 'rate') final double? rate,
+      @JsonKey(name: 'value') final int? value}) = _$CohortDataImpl;
 
   factory _CohortData.fromJson(Map<String, dynamic> json) =
       _$CohortDataImpl.fromJson;
@@ -422,19 +423,19 @@ abstract class _CohortData implements CohortData {
 
   /// The timestamp for the start of the bucket, at midnight.
   @JsonKey(name: 'date')
-  DateTime get date;
+  DateTime? get date;
   @override
 
   /// The percentage rate of users who registered in the specified `period`
   /// and were active for the given `date` bucket.
   @JsonKey(name: 'rate')
-  double get rate;
+  double? get rate;
   @override
 
   /// How many users registered in the specified `period` and were active for
   /// the given `date` bucket.
   @JsonKey(name: 'value')
-  int get value;
+  int? get value;
   @override
   @JsonKey(ignore: true)
   _$$CohortDataImplCopyWith<_$CohortDataImpl> get copyWith =>

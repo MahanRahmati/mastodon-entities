@@ -22,52 +22,54 @@ Instance _$InstanceFromJson(Map<String, dynamic> json) {
 mixin _$Instance {
   /// The domain name of the instance.
   @JsonKey(name: 'domain')
-  String get domain => throw _privateConstructorUsedError;
+  String? get domain => throw _privateConstructorUsedError;
 
   /// The title of the website.
   @JsonKey(name: 'title')
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
 
   /// The version of Mastodon installed on the instance.
   @JsonKey(name: 'version')
-  String get version => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
 
   /// The URL for the source code of the software running on this instance,
   /// in keeping with AGPL license requirements.
   @JsonKey(name: 'source_url')
-  String get sourceUrl => throw _privateConstructorUsedError;
+  String? get sourceUrl => throw _privateConstructorUsedError;
 
   /// A short, plain-text description defined by the admin.
   @JsonKey(name: 'description')
-  String get description => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
 
   /// Usage data for this instance.
   @JsonKey(name: 'usage')
-  InstanceUsage get usage => throw _privateConstructorUsedError;
+  InstanceUsage? get usage => throw _privateConstructorUsedError;
 
   /// An image used to represent this instance.
   @JsonKey(name: 'thumbnail')
-  InstanceThumbnail get thumbnail => throw _privateConstructorUsedError;
+  InstanceThumbnail? get thumbnail => throw _privateConstructorUsedError;
 
   /// Primary languages of the website and its staff.
   @JsonKey(name: 'languages')
-  List<String> get languages => throw _privateConstructorUsedError;
+  List<String>? get languages => throw _privateConstructorUsedError;
 
   /// Configured values and limits for this website.
   @JsonKey(name: 'configuration')
-  InstanceConfiguration get configuration => throw _privateConstructorUsedError;
+  InstanceConfiguration? get configuration =>
+      throw _privateConstructorUsedError;
 
   /// Information about registering for this website.
   @JsonKey(name: 'registrations')
-  InstanceRegistrations get registrations => throw _privateConstructorUsedError;
+  InstanceRegistrations? get registrations =>
+      throw _privateConstructorUsedError;
 
   /// Hints related to contacting a representative of the website.
   @JsonKey(name: 'contact')
-  InstanceContact get contact => throw _privateConstructorUsedError;
+  InstanceContact? get contact => throw _privateConstructorUsedError;
 
   /// An itemized list of rules for this website.
   @JsonKey(name: 'rules')
-  List<Rule> get rules => throw _privateConstructorUsedError;
+  List<Rule>? get rules => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -81,24 +83,24 @@ abstract class $InstanceCopyWith<$Res> {
       _$InstanceCopyWithImpl<$Res, Instance>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'domain') String domain,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'version') String version,
-      @JsonKey(name: 'source_url') String sourceUrl,
-      @JsonKey(name: 'description') String description,
-      @JsonKey(name: 'usage') InstanceUsage usage,
-      @JsonKey(name: 'thumbnail') InstanceThumbnail thumbnail,
-      @JsonKey(name: 'languages') List<String> languages,
-      @JsonKey(name: 'configuration') InstanceConfiguration configuration,
-      @JsonKey(name: 'registrations') InstanceRegistrations registrations,
-      @JsonKey(name: 'contact') InstanceContact contact,
-      @JsonKey(name: 'rules') List<Rule> rules});
+      {@JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'version') String? version,
+      @JsonKey(name: 'source_url') String? sourceUrl,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'usage') InstanceUsage? usage,
+      @JsonKey(name: 'thumbnail') InstanceThumbnail? thumbnail,
+      @JsonKey(name: 'languages') List<String>? languages,
+      @JsonKey(name: 'configuration') InstanceConfiguration? configuration,
+      @JsonKey(name: 'registrations') InstanceRegistrations? registrations,
+      @JsonKey(name: 'contact') InstanceContact? contact,
+      @JsonKey(name: 'rules') List<Rule>? rules});
 
-  $InstanceUsageCopyWith<$Res> get usage;
-  $InstanceThumbnailCopyWith<$Res> get thumbnail;
-  $InstanceConfigurationCopyWith<$Res> get configuration;
-  $InstanceRegistrationsCopyWith<$Res> get registrations;
-  $InstanceContactCopyWith<$Res> get contact;
+  $InstanceUsageCopyWith<$Res>? get usage;
+  $InstanceThumbnailCopyWith<$Res>? get thumbnail;
+  $InstanceConfigurationCopyWith<$Res>? get configuration;
+  $InstanceRegistrationsCopyWith<$Res>? get registrations;
+  $InstanceContactCopyWith<$Res>? get contact;
 }
 
 /// @nodoc
@@ -114,107 +116,127 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? domain = null,
-    Object? title = null,
-    Object? version = null,
-    Object? sourceUrl = null,
-    Object? description = null,
-    Object? usage = null,
-    Object? thumbnail = null,
-    Object? languages = null,
-    Object? configuration = null,
-    Object? registrations = null,
-    Object? contact = null,
-    Object? rules = null,
+    Object? domain = freezed,
+    Object? title = freezed,
+    Object? version = freezed,
+    Object? sourceUrl = freezed,
+    Object? description = freezed,
+    Object? usage = freezed,
+    Object? thumbnail = freezed,
+    Object? languages = freezed,
+    Object? configuration = freezed,
+    Object? registrations = freezed,
+    Object? contact = freezed,
+    Object? rules = freezed,
   }) {
     return _then(_value.copyWith(
-      domain: null == domain
+      domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      version: null == version
+              as String?,
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String,
-      sourceUrl: null == sourceUrl
+              as String?,
+      sourceUrl: freezed == sourceUrl
           ? _value.sourceUrl
           : sourceUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      usage: null == usage
+              as String?,
+      usage: freezed == usage
           ? _value.usage
           : usage // ignore: cast_nullable_to_non_nullable
-              as InstanceUsage,
-      thumbnail: null == thumbnail
+              as InstanceUsage?,
+      thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as InstanceThumbnail,
-      languages: null == languages
+              as InstanceThumbnail?,
+      languages: freezed == languages
           ? _value.languages
           : languages // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      configuration: null == configuration
+              as List<String>?,
+      configuration: freezed == configuration
           ? _value.configuration
           : configuration // ignore: cast_nullable_to_non_nullable
-              as InstanceConfiguration,
-      registrations: null == registrations
+              as InstanceConfiguration?,
+      registrations: freezed == registrations
           ? _value.registrations
           : registrations // ignore: cast_nullable_to_non_nullable
-              as InstanceRegistrations,
-      contact: null == contact
+              as InstanceRegistrations?,
+      contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
-              as InstanceContact,
-      rules: null == rules
+              as InstanceContact?,
+      rules: freezed == rules
           ? _value.rules
           : rules // ignore: cast_nullable_to_non_nullable
-              as List<Rule>,
+              as List<Rule>?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceUsageCopyWith<$Res> get usage {
-    return $InstanceUsageCopyWith<$Res>(_value.usage, (value) {
+  $InstanceUsageCopyWith<$Res>? get usage {
+    if (_value.usage == null) {
+      return null;
+    }
+
+    return $InstanceUsageCopyWith<$Res>(_value.usage!, (value) {
       return _then(_value.copyWith(usage: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceThumbnailCopyWith<$Res> get thumbnail {
-    return $InstanceThumbnailCopyWith<$Res>(_value.thumbnail, (value) {
+  $InstanceThumbnailCopyWith<$Res>? get thumbnail {
+    if (_value.thumbnail == null) {
+      return null;
+    }
+
+    return $InstanceThumbnailCopyWith<$Res>(_value.thumbnail!, (value) {
       return _then(_value.copyWith(thumbnail: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceConfigurationCopyWith<$Res> get configuration {
-    return $InstanceConfigurationCopyWith<$Res>(_value.configuration, (value) {
+  $InstanceConfigurationCopyWith<$Res>? get configuration {
+    if (_value.configuration == null) {
+      return null;
+    }
+
+    return $InstanceConfigurationCopyWith<$Res>(_value.configuration!, (value) {
       return _then(_value.copyWith(configuration: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceRegistrationsCopyWith<$Res> get registrations {
-    return $InstanceRegistrationsCopyWith<$Res>(_value.registrations, (value) {
+  $InstanceRegistrationsCopyWith<$Res>? get registrations {
+    if (_value.registrations == null) {
+      return null;
+    }
+
+    return $InstanceRegistrationsCopyWith<$Res>(_value.registrations!, (value) {
       return _then(_value.copyWith(registrations: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceContactCopyWith<$Res> get contact {
-    return $InstanceContactCopyWith<$Res>(_value.contact, (value) {
+  $InstanceContactCopyWith<$Res>? get contact {
+    if (_value.contact == null) {
+      return null;
+    }
+
+    return $InstanceContactCopyWith<$Res>(_value.contact!, (value) {
       return _then(_value.copyWith(contact: value) as $Val);
     });
   }
@@ -229,29 +251,29 @@ abstract class _$$InstanceImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'domain') String domain,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'version') String version,
-      @JsonKey(name: 'source_url') String sourceUrl,
-      @JsonKey(name: 'description') String description,
-      @JsonKey(name: 'usage') InstanceUsage usage,
-      @JsonKey(name: 'thumbnail') InstanceThumbnail thumbnail,
-      @JsonKey(name: 'languages') List<String> languages,
-      @JsonKey(name: 'configuration') InstanceConfiguration configuration,
-      @JsonKey(name: 'registrations') InstanceRegistrations registrations,
-      @JsonKey(name: 'contact') InstanceContact contact,
-      @JsonKey(name: 'rules') List<Rule> rules});
+      {@JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'version') String? version,
+      @JsonKey(name: 'source_url') String? sourceUrl,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'usage') InstanceUsage? usage,
+      @JsonKey(name: 'thumbnail') InstanceThumbnail? thumbnail,
+      @JsonKey(name: 'languages') List<String>? languages,
+      @JsonKey(name: 'configuration') InstanceConfiguration? configuration,
+      @JsonKey(name: 'registrations') InstanceRegistrations? registrations,
+      @JsonKey(name: 'contact') InstanceContact? contact,
+      @JsonKey(name: 'rules') List<Rule>? rules});
 
   @override
-  $InstanceUsageCopyWith<$Res> get usage;
+  $InstanceUsageCopyWith<$Res>? get usage;
   @override
-  $InstanceThumbnailCopyWith<$Res> get thumbnail;
+  $InstanceThumbnailCopyWith<$Res>? get thumbnail;
   @override
-  $InstanceConfigurationCopyWith<$Res> get configuration;
+  $InstanceConfigurationCopyWith<$Res>? get configuration;
   @override
-  $InstanceRegistrationsCopyWith<$Res> get registrations;
+  $InstanceRegistrationsCopyWith<$Res>? get registrations;
   @override
-  $InstanceContactCopyWith<$Res> get contact;
+  $InstanceContactCopyWith<$Res>? get contact;
 }
 
 /// @nodoc
@@ -265,68 +287,68 @@ class __$$InstanceImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? domain = null,
-    Object? title = null,
-    Object? version = null,
-    Object? sourceUrl = null,
-    Object? description = null,
-    Object? usage = null,
-    Object? thumbnail = null,
-    Object? languages = null,
-    Object? configuration = null,
-    Object? registrations = null,
-    Object? contact = null,
-    Object? rules = null,
+    Object? domain = freezed,
+    Object? title = freezed,
+    Object? version = freezed,
+    Object? sourceUrl = freezed,
+    Object? description = freezed,
+    Object? usage = freezed,
+    Object? thumbnail = freezed,
+    Object? languages = freezed,
+    Object? configuration = freezed,
+    Object? registrations = freezed,
+    Object? contact = freezed,
+    Object? rules = freezed,
   }) {
     return _then(_$InstanceImpl(
-      domain: null == domain
+      domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      version: null == version
+              as String?,
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String,
-      sourceUrl: null == sourceUrl
+              as String?,
+      sourceUrl: freezed == sourceUrl
           ? _value.sourceUrl
           : sourceUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      usage: null == usage
+              as String?,
+      usage: freezed == usage
           ? _value.usage
           : usage // ignore: cast_nullable_to_non_nullable
-              as InstanceUsage,
-      thumbnail: null == thumbnail
+              as InstanceUsage?,
+      thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as InstanceThumbnail,
-      languages: null == languages
+              as InstanceThumbnail?,
+      languages: freezed == languages
           ? _value._languages
           : languages // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      configuration: null == configuration
+              as List<String>?,
+      configuration: freezed == configuration
           ? _value.configuration
           : configuration // ignore: cast_nullable_to_non_nullable
-              as InstanceConfiguration,
-      registrations: null == registrations
+              as InstanceConfiguration?,
+      registrations: freezed == registrations
           ? _value.registrations
           : registrations // ignore: cast_nullable_to_non_nullable
-              as InstanceRegistrations,
-      contact: null == contact
+              as InstanceRegistrations?,
+      contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
-              as InstanceContact,
-      rules: null == rules
+              as InstanceContact?,
+      rules: freezed == rules
           ? _value._rules
           : rules // ignore: cast_nullable_to_non_nullable
-              as List<Rule>,
+              as List<Rule>?,
     ));
   }
 }
@@ -335,18 +357,18 @@ class __$$InstanceImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$InstanceImpl implements _Instance {
   const _$InstanceImpl(
-      {@JsonKey(name: 'domain') required this.domain,
-      @JsonKey(name: 'title') required this.title,
-      @JsonKey(name: 'version') required this.version,
-      @JsonKey(name: 'source_url') required this.sourceUrl,
-      @JsonKey(name: 'description') required this.description,
-      @JsonKey(name: 'usage') required this.usage,
-      @JsonKey(name: 'thumbnail') required this.thumbnail,
-      @JsonKey(name: 'languages') required final List<String> languages,
-      @JsonKey(name: 'configuration') required this.configuration,
-      @JsonKey(name: 'registrations') required this.registrations,
-      @JsonKey(name: 'contact') required this.contact,
-      @JsonKey(name: 'rules') required final List<Rule> rules})
+      {@JsonKey(name: 'domain') this.domain,
+      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'version') this.version,
+      @JsonKey(name: 'source_url') this.sourceUrl,
+      @JsonKey(name: 'description') this.description,
+      @JsonKey(name: 'usage') this.usage,
+      @JsonKey(name: 'thumbnail') this.thumbnail,
+      @JsonKey(name: 'languages') final List<String>? languages,
+      @JsonKey(name: 'configuration') this.configuration,
+      @JsonKey(name: 'registrations') this.registrations,
+      @JsonKey(name: 'contact') this.contact,
+      @JsonKey(name: 'rules') final List<Rule>? rules})
       : _languages = languages,
         _rules = rules;
 
@@ -356,76 +378,80 @@ class _$InstanceImpl implements _Instance {
   /// The domain name of the instance.
   @override
   @JsonKey(name: 'domain')
-  final String domain;
+  final String? domain;
 
   /// The title of the website.
   @override
   @JsonKey(name: 'title')
-  final String title;
+  final String? title;
 
   /// The version of Mastodon installed on the instance.
   @override
   @JsonKey(name: 'version')
-  final String version;
+  final String? version;
 
   /// The URL for the source code of the software running on this instance,
   /// in keeping with AGPL license requirements.
   @override
   @JsonKey(name: 'source_url')
-  final String sourceUrl;
+  final String? sourceUrl;
 
   /// A short, plain-text description defined by the admin.
   @override
   @JsonKey(name: 'description')
-  final String description;
+  final String? description;
 
   /// Usage data for this instance.
   @override
   @JsonKey(name: 'usage')
-  final InstanceUsage usage;
+  final InstanceUsage? usage;
 
   /// An image used to represent this instance.
   @override
   @JsonKey(name: 'thumbnail')
-  final InstanceThumbnail thumbnail;
+  final InstanceThumbnail? thumbnail;
 
   /// Primary languages of the website and its staff.
-  final List<String> _languages;
+  final List<String>? _languages;
 
   /// Primary languages of the website and its staff.
   @override
   @JsonKey(name: 'languages')
-  List<String> get languages {
+  List<String>? get languages {
+    final value = _languages;
+    if (value == null) return null;
     if (_languages is EqualUnmodifiableListView) return _languages;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_languages);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Configured values and limits for this website.
   @override
   @JsonKey(name: 'configuration')
-  final InstanceConfiguration configuration;
+  final InstanceConfiguration? configuration;
 
   /// Information about registering for this website.
   @override
   @JsonKey(name: 'registrations')
-  final InstanceRegistrations registrations;
+  final InstanceRegistrations? registrations;
 
   /// Hints related to contacting a representative of the website.
   @override
   @JsonKey(name: 'contact')
-  final InstanceContact contact;
+  final InstanceContact? contact;
 
   /// An itemized list of rules for this website.
-  final List<Rule> _rules;
+  final List<Rule>? _rules;
 
   /// An itemized list of rules for this website.
   @override
   @JsonKey(name: 'rules')
-  List<Rule> get rules {
+  List<Rule>? get rules {
+    final value = _rules;
+    if (value == null) return null;
     if (_rules is EqualUnmodifiableListView) return _rules;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_rules);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -491,21 +517,20 @@ class _$InstanceImpl implements _Instance {
 
 abstract class _Instance implements Instance {
   const factory _Instance(
-      {@JsonKey(name: 'domain') required final String domain,
-      @JsonKey(name: 'title') required final String title,
-      @JsonKey(name: 'version') required final String version,
-      @JsonKey(name: 'source_url') required final String sourceUrl,
-      @JsonKey(name: 'description') required final String description,
-      @JsonKey(name: 'usage') required final InstanceUsage usage,
-      @JsonKey(name: 'thumbnail') required final InstanceThumbnail thumbnail,
-      @JsonKey(name: 'languages') required final List<String> languages,
+      {@JsonKey(name: 'domain') final String? domain,
+      @JsonKey(name: 'title') final String? title,
+      @JsonKey(name: 'version') final String? version,
+      @JsonKey(name: 'source_url') final String? sourceUrl,
+      @JsonKey(name: 'description') final String? description,
+      @JsonKey(name: 'usage') final InstanceUsage? usage,
+      @JsonKey(name: 'thumbnail') final InstanceThumbnail? thumbnail,
+      @JsonKey(name: 'languages') final List<String>? languages,
       @JsonKey(name: 'configuration')
-      required final InstanceConfiguration configuration,
+      final InstanceConfiguration? configuration,
       @JsonKey(name: 'registrations')
-      required final InstanceRegistrations registrations,
-      @JsonKey(name: 'contact') required final InstanceContact contact,
-      @JsonKey(name: 'rules')
-      required final List<Rule> rules}) = _$InstanceImpl;
+      final InstanceRegistrations? registrations,
+      @JsonKey(name: 'contact') final InstanceContact? contact,
+      @JsonKey(name: 'rules') final List<Rule>? rules}) = _$InstanceImpl;
 
   factory _Instance.fromJson(Map<String, dynamic> json) =
       _$InstanceImpl.fromJson;
@@ -514,63 +539,63 @@ abstract class _Instance implements Instance {
 
   /// The domain name of the instance.
   @JsonKey(name: 'domain')
-  String get domain;
+  String? get domain;
   @override
 
   /// The title of the website.
   @JsonKey(name: 'title')
-  String get title;
+  String? get title;
   @override
 
   /// The version of Mastodon installed on the instance.
   @JsonKey(name: 'version')
-  String get version;
+  String? get version;
   @override
 
   /// The URL for the source code of the software running on this instance,
   /// in keeping with AGPL license requirements.
   @JsonKey(name: 'source_url')
-  String get sourceUrl;
+  String? get sourceUrl;
   @override
 
   /// A short, plain-text description defined by the admin.
   @JsonKey(name: 'description')
-  String get description;
+  String? get description;
   @override
 
   /// Usage data for this instance.
   @JsonKey(name: 'usage')
-  InstanceUsage get usage;
+  InstanceUsage? get usage;
   @override
 
   /// An image used to represent this instance.
   @JsonKey(name: 'thumbnail')
-  InstanceThumbnail get thumbnail;
+  InstanceThumbnail? get thumbnail;
   @override
 
   /// Primary languages of the website and its staff.
   @JsonKey(name: 'languages')
-  List<String> get languages;
+  List<String>? get languages;
   @override
 
   /// Configured values and limits for this website.
   @JsonKey(name: 'configuration')
-  InstanceConfiguration get configuration;
+  InstanceConfiguration? get configuration;
   @override
 
   /// Information about registering for this website.
   @JsonKey(name: 'registrations')
-  InstanceRegistrations get registrations;
+  InstanceRegistrations? get registrations;
   @override
 
   /// Hints related to contacting a representative of the website.
   @JsonKey(name: 'contact')
-  InstanceContact get contact;
+  InstanceContact? get contact;
   @override
 
   /// An itemized list of rules for this website.
   @JsonKey(name: 'rules')
-  List<Rule> get rules;
+  List<Rule>? get rules;
   @override
   @JsonKey(ignore: true)
   _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
@@ -585,7 +610,7 @@ InstanceUsage _$InstanceUsageFromJson(Map<String, dynamic> json) {
 mixin _$InstanceUsage {
   /// Usage data related to users on this instance.
   @JsonKey(name: 'users')
-  InstanceUsageUsers get users => throw _privateConstructorUsedError;
+  InstanceUsageUsers? get users => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -599,9 +624,9 @@ abstract class $InstanceUsageCopyWith<$Res> {
           InstanceUsage value, $Res Function(InstanceUsage) then) =
       _$InstanceUsageCopyWithImpl<$Res, InstanceUsage>;
   @useResult
-  $Res call({@JsonKey(name: 'users') InstanceUsageUsers users});
+  $Res call({@JsonKey(name: 'users') InstanceUsageUsers? users});
 
-  $InstanceUsageUsersCopyWith<$Res> get users;
+  $InstanceUsageUsersCopyWith<$Res>? get users;
 }
 
 /// @nodoc
@@ -617,20 +642,24 @@ class _$InstanceUsageCopyWithImpl<$Res, $Val extends InstanceUsage>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? users = null,
+    Object? users = freezed,
   }) {
     return _then(_value.copyWith(
-      users: null == users
+      users: freezed == users
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
-              as InstanceUsageUsers,
+              as InstanceUsageUsers?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceUsageUsersCopyWith<$Res> get users {
-    return $InstanceUsageUsersCopyWith<$Res>(_value.users, (value) {
+  $InstanceUsageUsersCopyWith<$Res>? get users {
+    if (_value.users == null) {
+      return null;
+    }
+
+    return $InstanceUsageUsersCopyWith<$Res>(_value.users!, (value) {
       return _then(_value.copyWith(users: value) as $Val);
     });
   }
@@ -644,10 +673,10 @@ abstract class _$$InstanceUsageImplCopyWith<$Res>
       __$$InstanceUsageImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'users') InstanceUsageUsers users});
+  $Res call({@JsonKey(name: 'users') InstanceUsageUsers? users});
 
   @override
-  $InstanceUsageUsersCopyWith<$Res> get users;
+  $InstanceUsageUsersCopyWith<$Res>? get users;
 }
 
 /// @nodoc
@@ -661,13 +690,13 @@ class __$$InstanceUsageImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? users = null,
+    Object? users = freezed,
   }) {
     return _then(_$InstanceUsageImpl(
-      users: null == users
+      users: freezed == users
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
-              as InstanceUsageUsers,
+              as InstanceUsageUsers?,
     ));
   }
 }
@@ -675,7 +704,7 @@ class __$$InstanceUsageImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$InstanceUsageImpl implements _InstanceUsage {
-  const _$InstanceUsageImpl({@JsonKey(name: 'users') required this.users});
+  const _$InstanceUsageImpl({@JsonKey(name: 'users') this.users});
 
   factory _$InstanceUsageImpl.fromJson(Map<String, dynamic> json) =>
       _$$InstanceUsageImplFromJson(json);
@@ -683,7 +712,7 @@ class _$InstanceUsageImpl implements _InstanceUsage {
   /// Usage data related to users on this instance.
   @override
   @JsonKey(name: 'users')
-  final InstanceUsageUsers users;
+  final InstanceUsageUsers? users;
 
   @override
   String toString() {
@@ -718,7 +747,7 @@ class _$InstanceUsageImpl implements _InstanceUsage {
 
 abstract class _InstanceUsage implements InstanceUsage {
   const factory _InstanceUsage(
-          {@JsonKey(name: 'users') required final InstanceUsageUsers users}) =
+          {@JsonKey(name: 'users') final InstanceUsageUsers? users}) =
       _$InstanceUsageImpl;
 
   factory _InstanceUsage.fromJson(Map<String, dynamic> json) =
@@ -728,7 +757,7 @@ abstract class _InstanceUsage implements InstanceUsage {
 
   /// Usage data related to users on this instance.
   @JsonKey(name: 'users')
-  InstanceUsageUsers get users;
+  InstanceUsageUsers? get users;
   @override
   @JsonKey(ignore: true)
   _$$InstanceUsageImplCopyWith<_$InstanceUsageImpl> get copyWith =>
@@ -743,7 +772,7 @@ InstanceUsageUsers _$InstanceUsageUsersFromJson(Map<String, dynamic> json) {
 mixin _$InstanceUsageUsers {
   /// The number of active users in the past 4 weeks.
   @JsonKey(name: 'active_month')
-  int get activeMonth => throw _privateConstructorUsedError;
+  int? get activeMonth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -757,7 +786,7 @@ abstract class $InstanceUsageUsersCopyWith<$Res> {
           InstanceUsageUsers value, $Res Function(InstanceUsageUsers) then) =
       _$InstanceUsageUsersCopyWithImpl<$Res, InstanceUsageUsers>;
   @useResult
-  $Res call({@JsonKey(name: 'active_month') int activeMonth});
+  $Res call({@JsonKey(name: 'active_month') int? activeMonth});
 }
 
 /// @nodoc
@@ -773,13 +802,13 @@ class _$InstanceUsageUsersCopyWithImpl<$Res, $Val extends InstanceUsageUsers>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? activeMonth = null,
+    Object? activeMonth = freezed,
   }) {
     return _then(_value.copyWith(
-      activeMonth: null == activeMonth
+      activeMonth: freezed == activeMonth
           ? _value.activeMonth
           : activeMonth // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -792,7 +821,7 @@ abstract class _$$InstanceUsageUsersImplCopyWith<$Res>
       __$$InstanceUsageUsersImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'active_month') int activeMonth});
+  $Res call({@JsonKey(name: 'active_month') int? activeMonth});
 }
 
 /// @nodoc
@@ -806,13 +835,13 @@ class __$$InstanceUsageUsersImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? activeMonth = null,
+    Object? activeMonth = freezed,
   }) {
     return _then(_$InstanceUsageUsersImpl(
-      activeMonth: null == activeMonth
+      activeMonth: freezed == activeMonth
           ? _value.activeMonth
           : activeMonth // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -821,7 +850,7 @@ class __$$InstanceUsageUsersImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$InstanceUsageUsersImpl implements _InstanceUsageUsers {
   const _$InstanceUsageUsersImpl(
-      {@JsonKey(name: 'active_month') required this.activeMonth});
+      {@JsonKey(name: 'active_month') this.activeMonth});
 
   factory _$InstanceUsageUsersImpl.fromJson(Map<String, dynamic> json) =>
       _$$InstanceUsageUsersImplFromJson(json);
@@ -829,7 +858,7 @@ class _$InstanceUsageUsersImpl implements _InstanceUsageUsers {
   /// The number of active users in the past 4 weeks.
   @override
   @JsonKey(name: 'active_month')
-  final int activeMonth;
+  final int? activeMonth;
 
   @override
   String toString() {
@@ -866,7 +895,7 @@ class _$InstanceUsageUsersImpl implements _InstanceUsageUsers {
 
 abstract class _InstanceUsageUsers implements InstanceUsageUsers {
   const factory _InstanceUsageUsers(
-          {@JsonKey(name: 'active_month') required final int activeMonth}) =
+          {@JsonKey(name: 'active_month') final int? activeMonth}) =
       _$InstanceUsageUsersImpl;
 
   factory _InstanceUsageUsers.fromJson(Map<String, dynamic> json) =
@@ -876,7 +905,7 @@ abstract class _InstanceUsageUsers implements InstanceUsageUsers {
 
   /// The number of active users in the past 4 weeks.
   @JsonKey(name: 'active_month')
-  int get activeMonth;
+  int? get activeMonth;
   @override
   @JsonKey(ignore: true)
   _$$InstanceUsageUsersImplCopyWith<_$InstanceUsageUsersImpl> get copyWith =>
@@ -891,7 +920,7 @@ InstanceThumbnail _$InstanceThumbnailFromJson(Map<String, dynamic> json) {
 mixin _$InstanceThumbnail {
   /// The URL for the thumbnail image.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
@@ -915,7 +944,7 @@ abstract class $InstanceThumbnailCopyWith<$Res> {
       _$InstanceThumbnailCopyWithImpl<$Res, InstanceThumbnail>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'url') String url,
+      {@JsonKey(name: 'url') String? url,
       @JsonKey(name: 'blurhash') String? blurhash,
       @JsonKey(name: 'versions') InstanceVersions? versions});
 
@@ -935,15 +964,15 @@ class _$InstanceThumbnailCopyWithImpl<$Res, $Val extends InstanceThumbnail>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = null,
+    Object? url = freezed,
     Object? blurhash = freezed,
     Object? versions = freezed,
   }) {
     return _then(_value.copyWith(
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       blurhash: freezed == blurhash
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
@@ -977,7 +1006,7 @@ abstract class _$$InstanceThumbnailImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'url') String url,
+      {@JsonKey(name: 'url') String? url,
       @JsonKey(name: 'blurhash') String? blurhash,
       @JsonKey(name: 'versions') InstanceVersions? versions});
 
@@ -996,15 +1025,15 @@ class __$$InstanceThumbnailImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = null,
+    Object? url = freezed,
     Object? blurhash = freezed,
     Object? versions = freezed,
   }) {
     return _then(_$InstanceThumbnailImpl(
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       blurhash: freezed == blurhash
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
@@ -1021,7 +1050,7 @@ class __$$InstanceThumbnailImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$InstanceThumbnailImpl implements _InstanceThumbnail {
   const _$InstanceThumbnailImpl(
-      {@JsonKey(name: 'url') required this.url,
+      {@JsonKey(name: 'url') this.url,
       @JsonKey(name: 'blurhash') this.blurhash,
       @JsonKey(name: 'versions') this.versions});
 
@@ -1031,7 +1060,7 @@ class _$InstanceThumbnailImpl implements _InstanceThumbnail {
   /// The URL for the thumbnail image.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
@@ -1082,7 +1111,7 @@ class _$InstanceThumbnailImpl implements _InstanceThumbnail {
 
 abstract class _InstanceThumbnail implements InstanceThumbnail {
   const factory _InstanceThumbnail(
-          {@JsonKey(name: 'url') required final String url,
+          {@JsonKey(name: 'url') final String? url,
           @JsonKey(name: 'blurhash') final String? blurhash,
           @JsonKey(name: 'versions') final InstanceVersions? versions}) =
       _$InstanceThumbnailImpl;
@@ -1094,7 +1123,7 @@ abstract class _InstanceThumbnail implements InstanceThumbnail {
 
   /// The URL for the thumbnail image.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
@@ -1295,35 +1324,35 @@ InstanceConfiguration _$InstanceConfigurationFromJson(
 mixin _$InstanceConfiguration {
   /// URLs of interest for clients apps.
   @JsonKey(name: 'urls')
-  InstanceConfigurationUrls get urls => throw _privateConstructorUsedError;
+  InstanceConfigurationUrls? get urls => throw _privateConstructorUsedError;
 
   /// The instances VAPID public key, used for push notifications, the same
   /// as WebPushSubscription.serverkey.
   @JsonKey(name: 'vapid')
-  InstanceConfigurationVapid get vapid => throw _privateConstructorUsedError;
+  InstanceConfigurationVapid? get vapid => throw _privateConstructorUsedError;
 
   /// Limits related to accounts.
   @JsonKey(name: 'accounts')
-  InstanceConfigurationAccounts get accounts =>
+  InstanceConfigurationAccounts? get accounts =>
       throw _privateConstructorUsedError;
 
   /// Limits related to authoring statuses.
   @JsonKey(name: 'statuses')
-  InstanceConfigurationStatuses get statuses =>
+  InstanceConfigurationStatuses? get statuses =>
       throw _privateConstructorUsedError;
 
   /// Hints for which attachments will be accepted.
   @JsonKey(name: 'media_attachments')
-  InstanceConfigurationMediaAttachments get mediaAttachments =>
+  InstanceConfigurationMediaAttachments? get mediaAttachments =>
       throw _privateConstructorUsedError;
 
   /// Limits related to polls.
   @JsonKey(name: 'polls')
-  InstanceConfigurationPolls get polls => throw _privateConstructorUsedError;
+  InstanceConfigurationPolls? get polls => throw _privateConstructorUsedError;
 
   /// Hints related to translation.
   @JsonKey(name: 'translation')
-  InstanceConfigurationTranslation get translation =>
+  InstanceConfigurationTranslation? get translation =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1339,23 +1368,23 @@ abstract class $InstanceConfigurationCopyWith<$Res> {
       _$InstanceConfigurationCopyWithImpl<$Res, InstanceConfiguration>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'urls') InstanceConfigurationUrls urls,
-      @JsonKey(name: 'vapid') InstanceConfigurationVapid vapid,
-      @JsonKey(name: 'accounts') InstanceConfigurationAccounts accounts,
-      @JsonKey(name: 'statuses') InstanceConfigurationStatuses statuses,
+      {@JsonKey(name: 'urls') InstanceConfigurationUrls? urls,
+      @JsonKey(name: 'vapid') InstanceConfigurationVapid? vapid,
+      @JsonKey(name: 'accounts') InstanceConfigurationAccounts? accounts,
+      @JsonKey(name: 'statuses') InstanceConfigurationStatuses? statuses,
       @JsonKey(name: 'media_attachments')
-      InstanceConfigurationMediaAttachments mediaAttachments,
-      @JsonKey(name: 'polls') InstanceConfigurationPolls polls,
+      InstanceConfigurationMediaAttachments? mediaAttachments,
+      @JsonKey(name: 'polls') InstanceConfigurationPolls? polls,
       @JsonKey(name: 'translation')
-      InstanceConfigurationTranslation translation});
+      InstanceConfigurationTranslation? translation});
 
-  $InstanceConfigurationUrlsCopyWith<$Res> get urls;
-  $InstanceConfigurationVapidCopyWith<$Res> get vapid;
-  $InstanceConfigurationAccountsCopyWith<$Res> get accounts;
-  $InstanceConfigurationStatusesCopyWith<$Res> get statuses;
-  $InstanceConfigurationMediaAttachmentsCopyWith<$Res> get mediaAttachments;
-  $InstanceConfigurationPollsCopyWith<$Res> get polls;
-  $InstanceConfigurationTranslationCopyWith<$Res> get translation;
+  $InstanceConfigurationUrlsCopyWith<$Res>? get urls;
+  $InstanceConfigurationVapidCopyWith<$Res>? get vapid;
+  $InstanceConfigurationAccountsCopyWith<$Res>? get accounts;
+  $InstanceConfigurationStatusesCopyWith<$Res>? get statuses;
+  $InstanceConfigurationMediaAttachmentsCopyWith<$Res>? get mediaAttachments;
+  $InstanceConfigurationPollsCopyWith<$Res>? get polls;
+  $InstanceConfigurationTranslationCopyWith<$Res>? get translation;
 }
 
 /// @nodoc
@@ -1372,66 +1401,78 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? urls = null,
-    Object? vapid = null,
-    Object? accounts = null,
-    Object? statuses = null,
-    Object? mediaAttachments = null,
-    Object? polls = null,
-    Object? translation = null,
+    Object? urls = freezed,
+    Object? vapid = freezed,
+    Object? accounts = freezed,
+    Object? statuses = freezed,
+    Object? mediaAttachments = freezed,
+    Object? polls = freezed,
+    Object? translation = freezed,
   }) {
     return _then(_value.copyWith(
-      urls: null == urls
+      urls: freezed == urls
           ? _value.urls
           : urls // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationUrls,
-      vapid: null == vapid
+              as InstanceConfigurationUrls?,
+      vapid: freezed == vapid
           ? _value.vapid
           : vapid // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationVapid,
-      accounts: null == accounts
+              as InstanceConfigurationVapid?,
+      accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationAccounts,
-      statuses: null == statuses
+              as InstanceConfigurationAccounts?,
+      statuses: freezed == statuses
           ? _value.statuses
           : statuses // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationStatuses,
-      mediaAttachments: null == mediaAttachments
+              as InstanceConfigurationStatuses?,
+      mediaAttachments: freezed == mediaAttachments
           ? _value.mediaAttachments
           : mediaAttachments // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationMediaAttachments,
-      polls: null == polls
+              as InstanceConfigurationMediaAttachments?,
+      polls: freezed == polls
           ? _value.polls
           : polls // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationPolls,
-      translation: null == translation
+              as InstanceConfigurationPolls?,
+      translation: freezed == translation
           ? _value.translation
           : translation // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationTranslation,
+              as InstanceConfigurationTranslation?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceConfigurationUrlsCopyWith<$Res> get urls {
-    return $InstanceConfigurationUrlsCopyWith<$Res>(_value.urls, (value) {
+  $InstanceConfigurationUrlsCopyWith<$Res>? get urls {
+    if (_value.urls == null) {
+      return null;
+    }
+
+    return $InstanceConfigurationUrlsCopyWith<$Res>(_value.urls!, (value) {
       return _then(_value.copyWith(urls: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceConfigurationVapidCopyWith<$Res> get vapid {
-    return $InstanceConfigurationVapidCopyWith<$Res>(_value.vapid, (value) {
+  $InstanceConfigurationVapidCopyWith<$Res>? get vapid {
+    if (_value.vapid == null) {
+      return null;
+    }
+
+    return $InstanceConfigurationVapidCopyWith<$Res>(_value.vapid!, (value) {
       return _then(_value.copyWith(vapid: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceConfigurationAccountsCopyWith<$Res> get accounts {
-    return $InstanceConfigurationAccountsCopyWith<$Res>(_value.accounts,
+  $InstanceConfigurationAccountsCopyWith<$Res>? get accounts {
+    if (_value.accounts == null) {
+      return null;
+    }
+
+    return $InstanceConfigurationAccountsCopyWith<$Res>(_value.accounts!,
         (value) {
       return _then(_value.copyWith(accounts: value) as $Val);
     });
@@ -1439,8 +1480,12 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceConfigurationStatusesCopyWith<$Res> get statuses {
-    return $InstanceConfigurationStatusesCopyWith<$Res>(_value.statuses,
+  $InstanceConfigurationStatusesCopyWith<$Res>? get statuses {
+    if (_value.statuses == null) {
+      return null;
+    }
+
+    return $InstanceConfigurationStatusesCopyWith<$Res>(_value.statuses!,
         (value) {
       return _then(_value.copyWith(statuses: value) as $Val);
     });
@@ -1448,25 +1493,37 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceConfigurationMediaAttachmentsCopyWith<$Res> get mediaAttachments {
+  $InstanceConfigurationMediaAttachmentsCopyWith<$Res>? get mediaAttachments {
+    if (_value.mediaAttachments == null) {
+      return null;
+    }
+
     return $InstanceConfigurationMediaAttachmentsCopyWith<$Res>(
-        _value.mediaAttachments, (value) {
+        _value.mediaAttachments!, (value) {
       return _then(_value.copyWith(mediaAttachments: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceConfigurationPollsCopyWith<$Res> get polls {
-    return $InstanceConfigurationPollsCopyWith<$Res>(_value.polls, (value) {
+  $InstanceConfigurationPollsCopyWith<$Res>? get polls {
+    if (_value.polls == null) {
+      return null;
+    }
+
+    return $InstanceConfigurationPollsCopyWith<$Res>(_value.polls!, (value) {
       return _then(_value.copyWith(polls: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InstanceConfigurationTranslationCopyWith<$Res> get translation {
-    return $InstanceConfigurationTranslationCopyWith<$Res>(_value.translation,
+  $InstanceConfigurationTranslationCopyWith<$Res>? get translation {
+    if (_value.translation == null) {
+      return null;
+    }
+
+    return $InstanceConfigurationTranslationCopyWith<$Res>(_value.translation!,
         (value) {
       return _then(_value.copyWith(translation: value) as $Val);
     });
@@ -1483,30 +1540,30 @@ abstract class _$$InstanceConfigurationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'urls') InstanceConfigurationUrls urls,
-      @JsonKey(name: 'vapid') InstanceConfigurationVapid vapid,
-      @JsonKey(name: 'accounts') InstanceConfigurationAccounts accounts,
-      @JsonKey(name: 'statuses') InstanceConfigurationStatuses statuses,
+      {@JsonKey(name: 'urls') InstanceConfigurationUrls? urls,
+      @JsonKey(name: 'vapid') InstanceConfigurationVapid? vapid,
+      @JsonKey(name: 'accounts') InstanceConfigurationAccounts? accounts,
+      @JsonKey(name: 'statuses') InstanceConfigurationStatuses? statuses,
       @JsonKey(name: 'media_attachments')
-      InstanceConfigurationMediaAttachments mediaAttachments,
-      @JsonKey(name: 'polls') InstanceConfigurationPolls polls,
+      InstanceConfigurationMediaAttachments? mediaAttachments,
+      @JsonKey(name: 'polls') InstanceConfigurationPolls? polls,
       @JsonKey(name: 'translation')
-      InstanceConfigurationTranslation translation});
+      InstanceConfigurationTranslation? translation});
 
   @override
-  $InstanceConfigurationUrlsCopyWith<$Res> get urls;
+  $InstanceConfigurationUrlsCopyWith<$Res>? get urls;
   @override
-  $InstanceConfigurationVapidCopyWith<$Res> get vapid;
+  $InstanceConfigurationVapidCopyWith<$Res>? get vapid;
   @override
-  $InstanceConfigurationAccountsCopyWith<$Res> get accounts;
+  $InstanceConfigurationAccountsCopyWith<$Res>? get accounts;
   @override
-  $InstanceConfigurationStatusesCopyWith<$Res> get statuses;
+  $InstanceConfigurationStatusesCopyWith<$Res>? get statuses;
   @override
-  $InstanceConfigurationMediaAttachmentsCopyWith<$Res> get mediaAttachments;
+  $InstanceConfigurationMediaAttachmentsCopyWith<$Res>? get mediaAttachments;
   @override
-  $InstanceConfigurationPollsCopyWith<$Res> get polls;
+  $InstanceConfigurationPollsCopyWith<$Res>? get polls;
   @override
-  $InstanceConfigurationTranslationCopyWith<$Res> get translation;
+  $InstanceConfigurationTranslationCopyWith<$Res>? get translation;
 }
 
 /// @nodoc
@@ -1521,43 +1578,43 @@ class __$$InstanceConfigurationImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? urls = null,
-    Object? vapid = null,
-    Object? accounts = null,
-    Object? statuses = null,
-    Object? mediaAttachments = null,
-    Object? polls = null,
-    Object? translation = null,
+    Object? urls = freezed,
+    Object? vapid = freezed,
+    Object? accounts = freezed,
+    Object? statuses = freezed,
+    Object? mediaAttachments = freezed,
+    Object? polls = freezed,
+    Object? translation = freezed,
   }) {
     return _then(_$InstanceConfigurationImpl(
-      urls: null == urls
+      urls: freezed == urls
           ? _value.urls
           : urls // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationUrls,
-      vapid: null == vapid
+              as InstanceConfigurationUrls?,
+      vapid: freezed == vapid
           ? _value.vapid
           : vapid // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationVapid,
-      accounts: null == accounts
+              as InstanceConfigurationVapid?,
+      accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationAccounts,
-      statuses: null == statuses
+              as InstanceConfigurationAccounts?,
+      statuses: freezed == statuses
           ? _value.statuses
           : statuses // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationStatuses,
-      mediaAttachments: null == mediaAttachments
+              as InstanceConfigurationStatuses?,
+      mediaAttachments: freezed == mediaAttachments
           ? _value.mediaAttachments
           : mediaAttachments // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationMediaAttachments,
-      polls: null == polls
+              as InstanceConfigurationMediaAttachments?,
+      polls: freezed == polls
           ? _value.polls
           : polls // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationPolls,
-      translation: null == translation
+              as InstanceConfigurationPolls?,
+      translation: freezed == translation
           ? _value.translation
           : translation // ignore: cast_nullable_to_non_nullable
-              as InstanceConfigurationTranslation,
+              as InstanceConfigurationTranslation?,
     ));
   }
 }
@@ -1566,13 +1623,13 @@ class __$$InstanceConfigurationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$InstanceConfigurationImpl implements _InstanceConfiguration {
   const _$InstanceConfigurationImpl(
-      {@JsonKey(name: 'urls') required this.urls,
-      @JsonKey(name: 'vapid') required this.vapid,
-      @JsonKey(name: 'accounts') required this.accounts,
-      @JsonKey(name: 'statuses') required this.statuses,
-      @JsonKey(name: 'media_attachments') required this.mediaAttachments,
-      @JsonKey(name: 'polls') required this.polls,
-      @JsonKey(name: 'translation') required this.translation});
+      {@JsonKey(name: 'urls') this.urls,
+      @JsonKey(name: 'vapid') this.vapid,
+      @JsonKey(name: 'accounts') this.accounts,
+      @JsonKey(name: 'statuses') this.statuses,
+      @JsonKey(name: 'media_attachments') this.mediaAttachments,
+      @JsonKey(name: 'polls') this.polls,
+      @JsonKey(name: 'translation') this.translation});
 
   factory _$InstanceConfigurationImpl.fromJson(Map<String, dynamic> json) =>
       _$$InstanceConfigurationImplFromJson(json);
@@ -1580,38 +1637,38 @@ class _$InstanceConfigurationImpl implements _InstanceConfiguration {
   /// URLs of interest for clients apps.
   @override
   @JsonKey(name: 'urls')
-  final InstanceConfigurationUrls urls;
+  final InstanceConfigurationUrls? urls;
 
   /// The instances VAPID public key, used for push notifications, the same
   /// as WebPushSubscription.serverkey.
   @override
   @JsonKey(name: 'vapid')
-  final InstanceConfigurationVapid vapid;
+  final InstanceConfigurationVapid? vapid;
 
   /// Limits related to accounts.
   @override
   @JsonKey(name: 'accounts')
-  final InstanceConfigurationAccounts accounts;
+  final InstanceConfigurationAccounts? accounts;
 
   /// Limits related to authoring statuses.
   @override
   @JsonKey(name: 'statuses')
-  final InstanceConfigurationStatuses statuses;
+  final InstanceConfigurationStatuses? statuses;
 
   /// Hints for which attachments will be accepted.
   @override
   @JsonKey(name: 'media_attachments')
-  final InstanceConfigurationMediaAttachments mediaAttachments;
+  final InstanceConfigurationMediaAttachments? mediaAttachments;
 
   /// Limits related to polls.
   @override
   @JsonKey(name: 'polls')
-  final InstanceConfigurationPolls polls;
+  final InstanceConfigurationPolls? polls;
 
   /// Hints related to translation.
   @override
   @JsonKey(name: 'translation')
-  final InstanceConfigurationTranslation translation;
+  final InstanceConfigurationTranslation? translation;
 
   @override
   String toString() {
@@ -1658,17 +1715,15 @@ class _$InstanceConfigurationImpl implements _InstanceConfiguration {
 
 abstract class _InstanceConfiguration implements InstanceConfiguration {
   const factory _InstanceConfiguration(
-      {@JsonKey(name: 'urls') required final InstanceConfigurationUrls urls,
-      @JsonKey(name: 'vapid') required final InstanceConfigurationVapid vapid,
-      @JsonKey(name: 'accounts')
-      required final InstanceConfigurationAccounts accounts,
-      @JsonKey(name: 'statuses')
-      required final InstanceConfigurationStatuses statuses,
+      {@JsonKey(name: 'urls') final InstanceConfigurationUrls? urls,
+      @JsonKey(name: 'vapid') final InstanceConfigurationVapid? vapid,
+      @JsonKey(name: 'accounts') final InstanceConfigurationAccounts? accounts,
+      @JsonKey(name: 'statuses') final InstanceConfigurationStatuses? statuses,
       @JsonKey(name: 'media_attachments')
-      required final InstanceConfigurationMediaAttachments mediaAttachments,
-      @JsonKey(name: 'polls') required final InstanceConfigurationPolls polls,
+      final InstanceConfigurationMediaAttachments? mediaAttachments,
+      @JsonKey(name: 'polls') final InstanceConfigurationPolls? polls,
       @JsonKey(name: 'translation')
-      required final InstanceConfigurationTranslation
+      final InstanceConfigurationTranslation?
           translation}) = _$InstanceConfigurationImpl;
 
   factory _InstanceConfiguration.fromJson(Map<String, dynamic> json) =
@@ -1678,38 +1733,38 @@ abstract class _InstanceConfiguration implements InstanceConfiguration {
 
   /// URLs of interest for clients apps.
   @JsonKey(name: 'urls')
-  InstanceConfigurationUrls get urls;
+  InstanceConfigurationUrls? get urls;
   @override
 
   /// The instances VAPID public key, used for push notifications, the same
   /// as WebPushSubscription.serverkey.
   @JsonKey(name: 'vapid')
-  InstanceConfigurationVapid get vapid;
+  InstanceConfigurationVapid? get vapid;
   @override
 
   /// Limits related to accounts.
   @JsonKey(name: 'accounts')
-  InstanceConfigurationAccounts get accounts;
+  InstanceConfigurationAccounts? get accounts;
   @override
 
   /// Limits related to authoring statuses.
   @JsonKey(name: 'statuses')
-  InstanceConfigurationStatuses get statuses;
+  InstanceConfigurationStatuses? get statuses;
   @override
 
   /// Hints for which attachments will be accepted.
   @JsonKey(name: 'media_attachments')
-  InstanceConfigurationMediaAttachments get mediaAttachments;
+  InstanceConfigurationMediaAttachments? get mediaAttachments;
   @override
 
   /// Limits related to polls.
   @JsonKey(name: 'polls')
-  InstanceConfigurationPolls get polls;
+  InstanceConfigurationPolls? get polls;
   @override
 
   /// Hints related to translation.
   @JsonKey(name: 'translation')
-  InstanceConfigurationTranslation get translation;
+  InstanceConfigurationTranslation? get translation;
   @override
   @JsonKey(ignore: true)
   _$$InstanceConfigurationImplCopyWith<_$InstanceConfigurationImpl>
@@ -1725,7 +1780,7 @@ InstanceConfigurationUrls _$InstanceConfigurationUrlsFromJson(
 mixin _$InstanceConfigurationUrls {
   /// The Websockets URL for connecting to the streaming API.
   @JsonKey(name: 'streaming')
-  String get streaming => throw _privateConstructorUsedError;
+  String? get streaming => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1739,7 +1794,7 @@ abstract class $InstanceConfigurationUrlsCopyWith<$Res> {
           $Res Function(InstanceConfigurationUrls) then) =
       _$InstanceConfigurationUrlsCopyWithImpl<$Res, InstanceConfigurationUrls>;
   @useResult
-  $Res call({@JsonKey(name: 'streaming') String streaming});
+  $Res call({@JsonKey(name: 'streaming') String? streaming});
 }
 
 /// @nodoc
@@ -1756,13 +1811,13 @@ class _$InstanceConfigurationUrlsCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? streaming = null,
+    Object? streaming = freezed,
   }) {
     return _then(_value.copyWith(
-      streaming: null == streaming
+      streaming: freezed == streaming
           ? _value.streaming
           : streaming // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -1776,7 +1831,7 @@ abstract class _$$InstanceConfigurationUrlsImplCopyWith<$Res>
       __$$InstanceConfigurationUrlsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'streaming') String streaming});
+  $Res call({@JsonKey(name: 'streaming') String? streaming});
 }
 
 /// @nodoc
@@ -1792,13 +1847,13 @@ class __$$InstanceConfigurationUrlsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? streaming = null,
+    Object? streaming = freezed,
   }) {
     return _then(_$InstanceConfigurationUrlsImpl(
-      streaming: null == streaming
+      streaming: freezed == streaming
           ? _value.streaming
           : streaming // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -1807,7 +1862,7 @@ class __$$InstanceConfigurationUrlsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$InstanceConfigurationUrlsImpl implements _InstanceConfigurationUrls {
   const _$InstanceConfigurationUrlsImpl(
-      {@JsonKey(name: 'streaming') required this.streaming});
+      {@JsonKey(name: 'streaming') this.streaming});
 
   factory _$InstanceConfigurationUrlsImpl.fromJson(Map<String, dynamic> json) =>
       _$$InstanceConfigurationUrlsImplFromJson(json);
@@ -1815,7 +1870,7 @@ class _$InstanceConfigurationUrlsImpl implements _InstanceConfigurationUrls {
   /// The Websockets URL for connecting to the streaming API.
   @override
   @JsonKey(name: 'streaming')
-  final String streaming;
+  final String? streaming;
 
   @override
   String toString() {
@@ -1852,7 +1907,7 @@ class _$InstanceConfigurationUrlsImpl implements _InstanceConfigurationUrls {
 
 abstract class _InstanceConfigurationUrls implements InstanceConfigurationUrls {
   const factory _InstanceConfigurationUrls(
-          {@JsonKey(name: 'streaming') required final String streaming}) =
+          {@JsonKey(name: 'streaming') final String? streaming}) =
       _$InstanceConfigurationUrlsImpl;
 
   factory _InstanceConfigurationUrls.fromJson(Map<String, dynamic> json) =
@@ -1862,7 +1917,7 @@ abstract class _InstanceConfigurationUrls implements InstanceConfigurationUrls {
 
   /// The Websockets URL for connecting to the streaming API.
   @JsonKey(name: 'streaming')
-  String get streaming;
+  String? get streaming;
   @override
   @JsonKey(ignore: true)
   _$$InstanceConfigurationUrlsImplCopyWith<_$InstanceConfigurationUrlsImpl>
@@ -1879,7 +1934,7 @@ mixin _$InstanceConfigurationVapid {
   /// The instances VAPID public key, used for push notifications, the same
   /// as WebPushSubscription.serverkey.
   @JsonKey(name: 'public_key')
-  String get publicKey => throw _privateConstructorUsedError;
+  String? get publicKey => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1894,7 +1949,7 @@ abstract class $InstanceConfigurationVapidCopyWith<$Res> {
       _$InstanceConfigurationVapidCopyWithImpl<$Res,
           InstanceConfigurationVapid>;
   @useResult
-  $Res call({@JsonKey(name: 'public_key') String publicKey});
+  $Res call({@JsonKey(name: 'public_key') String? publicKey});
 }
 
 /// @nodoc
@@ -1911,13 +1966,13 @@ class _$InstanceConfigurationVapidCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? publicKey = null,
+    Object? publicKey = freezed,
   }) {
     return _then(_value.copyWith(
-      publicKey: null == publicKey
+      publicKey: freezed == publicKey
           ? _value.publicKey
           : publicKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -1931,7 +1986,7 @@ abstract class _$$InstanceConfigurationVapidImplCopyWith<$Res>
       __$$InstanceConfigurationVapidImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'public_key') String publicKey});
+  $Res call({@JsonKey(name: 'public_key') String? publicKey});
 }
 
 /// @nodoc
@@ -1947,13 +2002,13 @@ class __$$InstanceConfigurationVapidImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? publicKey = null,
+    Object? publicKey = freezed,
   }) {
     return _then(_$InstanceConfigurationVapidImpl(
-      publicKey: null == publicKey
+      publicKey: freezed == publicKey
           ? _value.publicKey
           : publicKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -1962,7 +2017,7 @@ class __$$InstanceConfigurationVapidImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$InstanceConfigurationVapidImpl implements _InstanceConfigurationVapid {
   const _$InstanceConfigurationVapidImpl(
-      {@JsonKey(name: 'public_key') required this.publicKey});
+      {@JsonKey(name: 'public_key') this.publicKey});
 
   factory _$InstanceConfigurationVapidImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -1972,7 +2027,7 @@ class _$InstanceConfigurationVapidImpl implements _InstanceConfigurationVapid {
   /// as WebPushSubscription.serverkey.
   @override
   @JsonKey(name: 'public_key')
-  final String publicKey;
+  final String? publicKey;
 
   @override
   String toString() {
@@ -2010,7 +2065,7 @@ class _$InstanceConfigurationVapidImpl implements _InstanceConfigurationVapid {
 abstract class _InstanceConfigurationVapid
     implements InstanceConfigurationVapid {
   const factory _InstanceConfigurationVapid(
-          {@JsonKey(name: 'public_key') required final String publicKey}) =
+          {@JsonKey(name: 'public_key') final String? publicKey}) =
       _$InstanceConfigurationVapidImpl;
 
   factory _InstanceConfigurationVapid.fromJson(Map<String, dynamic> json) =
@@ -2021,7 +2076,7 @@ abstract class _InstanceConfigurationVapid
   /// The instances VAPID public key, used for push notifications, the same
   /// as WebPushSubscription.serverkey.
   @JsonKey(name: 'public_key')
-  String get publicKey;
+  String? get publicKey;
   @override
   @JsonKey(ignore: true)
   _$$InstanceConfigurationVapidImplCopyWith<_$InstanceConfigurationVapidImpl>
@@ -2037,11 +2092,11 @@ InstanceConfigurationAccounts _$InstanceConfigurationAccountsFromJson(
 mixin _$InstanceConfigurationAccounts {
   /// The maximum number of featured tags allowed for each account.
   @JsonKey(name: 'max_featured_tags')
-  int get maxFeaturedTags => throw _privateConstructorUsedError;
+  int? get maxFeaturedTags => throw _privateConstructorUsedError;
 
   /// The maximum number of pinned statuses for each account.
   @JsonKey(name: 'max_pinned_statuses')
-  int get maxPinnedStatuses => throw _privateConstructorUsedError;
+  int? get maxPinnedStatuses => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2058,8 +2113,8 @@ abstract class $InstanceConfigurationAccountsCopyWith<$Res> {
           InstanceConfigurationAccounts>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'max_featured_tags') int maxFeaturedTags,
-      @JsonKey(name: 'max_pinned_statuses') int maxPinnedStatuses});
+      {@JsonKey(name: 'max_featured_tags') int? maxFeaturedTags,
+      @JsonKey(name: 'max_pinned_statuses') int? maxPinnedStatuses});
 }
 
 /// @nodoc
@@ -2076,18 +2131,18 @@ class _$InstanceConfigurationAccountsCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? maxFeaturedTags = null,
-    Object? maxPinnedStatuses = null,
+    Object? maxFeaturedTags = freezed,
+    Object? maxPinnedStatuses = freezed,
   }) {
     return _then(_value.copyWith(
-      maxFeaturedTags: null == maxFeaturedTags
+      maxFeaturedTags: freezed == maxFeaturedTags
           ? _value.maxFeaturedTags
           : maxFeaturedTags // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxPinnedStatuses: null == maxPinnedStatuses
+              as int?,
+      maxPinnedStatuses: freezed == maxPinnedStatuses
           ? _value.maxPinnedStatuses
           : maxPinnedStatuses // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -2102,8 +2157,8 @@ abstract class _$$InstanceConfigurationAccountsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'max_featured_tags') int maxFeaturedTags,
-      @JsonKey(name: 'max_pinned_statuses') int maxPinnedStatuses});
+      {@JsonKey(name: 'max_featured_tags') int? maxFeaturedTags,
+      @JsonKey(name: 'max_pinned_statuses') int? maxPinnedStatuses});
 }
 
 /// @nodoc
@@ -2119,18 +2174,18 @@ class __$$InstanceConfigurationAccountsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? maxFeaturedTags = null,
-    Object? maxPinnedStatuses = null,
+    Object? maxFeaturedTags = freezed,
+    Object? maxPinnedStatuses = freezed,
   }) {
     return _then(_$InstanceConfigurationAccountsImpl(
-      maxFeaturedTags: null == maxFeaturedTags
+      maxFeaturedTags: freezed == maxFeaturedTags
           ? _value.maxFeaturedTags
           : maxFeaturedTags // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxPinnedStatuses: null == maxPinnedStatuses
+              as int?,
+      maxPinnedStatuses: freezed == maxPinnedStatuses
           ? _value.maxPinnedStatuses
           : maxPinnedStatuses // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -2140,8 +2195,8 @@ class __$$InstanceConfigurationAccountsImplCopyWithImpl<$Res>
 class _$InstanceConfigurationAccountsImpl
     implements _InstanceConfigurationAccounts {
   const _$InstanceConfigurationAccountsImpl(
-      {@JsonKey(name: 'max_featured_tags') required this.maxFeaturedTags,
-      @JsonKey(name: 'max_pinned_statuses') required this.maxPinnedStatuses});
+      {@JsonKey(name: 'max_featured_tags') this.maxFeaturedTags,
+      @JsonKey(name: 'max_pinned_statuses') this.maxPinnedStatuses});
 
   factory _$InstanceConfigurationAccountsImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -2150,12 +2205,12 @@ class _$InstanceConfigurationAccountsImpl
   /// The maximum number of featured tags allowed for each account.
   @override
   @JsonKey(name: 'max_featured_tags')
-  final int maxFeaturedTags;
+  final int? maxFeaturedTags;
 
   /// The maximum number of pinned statuses for each account.
   @override
   @JsonKey(name: 'max_pinned_statuses')
-  final int maxPinnedStatuses;
+  final int? maxPinnedStatuses;
 
   @override
   String toString() {
@@ -2197,10 +2252,9 @@ class _$InstanceConfigurationAccountsImpl
 abstract class _InstanceConfigurationAccounts
     implements InstanceConfigurationAccounts {
   const factory _InstanceConfigurationAccounts(
-      {@JsonKey(name: 'max_featured_tags') required final int maxFeaturedTags,
-      @JsonKey(name: 'max_pinned_statuses')
-      required final int
-          maxPinnedStatuses}) = _$InstanceConfigurationAccountsImpl;
+          {@JsonKey(name: 'max_featured_tags') final int? maxFeaturedTags,
+          @JsonKey(name: 'max_pinned_statuses') final int? maxPinnedStatuses}) =
+      _$InstanceConfigurationAccountsImpl;
 
   factory _InstanceConfigurationAccounts.fromJson(Map<String, dynamic> json) =
       _$InstanceConfigurationAccountsImpl.fromJson;
@@ -2209,12 +2263,12 @@ abstract class _InstanceConfigurationAccounts
 
   /// The maximum number of featured tags allowed for each account.
   @JsonKey(name: 'max_featured_tags')
-  int get maxFeaturedTags;
+  int? get maxFeaturedTags;
   @override
 
   /// The maximum number of pinned statuses for each account.
   @JsonKey(name: 'max_pinned_statuses')
-  int get maxPinnedStatuses;
+  int? get maxPinnedStatuses;
   @override
   @JsonKey(ignore: true)
   _$$InstanceConfigurationAccountsImplCopyWith<
@@ -2231,15 +2285,15 @@ InstanceConfigurationStatuses _$InstanceConfigurationStatusesFromJson(
 mixin _$InstanceConfigurationStatuses {
   /// The maximum number of allowed characters per status.
   @JsonKey(name: 'max_characters')
-  int get maxCharacters => throw _privateConstructorUsedError;
+  int? get maxCharacters => throw _privateConstructorUsedError;
 
   /// The maximum number of media attachments that can be added to a status.
   @JsonKey(name: 'max_media_attachments')
-  int get maxMediaAttachments => throw _privateConstructorUsedError;
+  int? get maxMediaAttachments => throw _privateConstructorUsedError;
 
   /// Each URL in a status will be assumed to be exactly this many characters.
   @JsonKey(name: 'characters_reserved_per_url')
-  int get charactersReservedPerUrl => throw _privateConstructorUsedError;
+  int? get charactersReservedPerUrl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2256,10 +2310,10 @@ abstract class $InstanceConfigurationStatusesCopyWith<$Res> {
           InstanceConfigurationStatuses>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'max_characters') int maxCharacters,
-      @JsonKey(name: 'max_media_attachments') int maxMediaAttachments,
+      {@JsonKey(name: 'max_characters') int? maxCharacters,
+      @JsonKey(name: 'max_media_attachments') int? maxMediaAttachments,
       @JsonKey(name: 'characters_reserved_per_url')
-      int charactersReservedPerUrl});
+      int? charactersReservedPerUrl});
 }
 
 /// @nodoc
@@ -2276,23 +2330,23 @@ class _$InstanceConfigurationStatusesCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? maxCharacters = null,
-    Object? maxMediaAttachments = null,
-    Object? charactersReservedPerUrl = null,
+    Object? maxCharacters = freezed,
+    Object? maxMediaAttachments = freezed,
+    Object? charactersReservedPerUrl = freezed,
   }) {
     return _then(_value.copyWith(
-      maxCharacters: null == maxCharacters
+      maxCharacters: freezed == maxCharacters
           ? _value.maxCharacters
           : maxCharacters // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxMediaAttachments: null == maxMediaAttachments
+              as int?,
+      maxMediaAttachments: freezed == maxMediaAttachments
           ? _value.maxMediaAttachments
           : maxMediaAttachments // ignore: cast_nullable_to_non_nullable
-              as int,
-      charactersReservedPerUrl: null == charactersReservedPerUrl
+              as int?,
+      charactersReservedPerUrl: freezed == charactersReservedPerUrl
           ? _value.charactersReservedPerUrl
           : charactersReservedPerUrl // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -2307,10 +2361,10 @@ abstract class _$$InstanceConfigurationStatusesImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'max_characters') int maxCharacters,
-      @JsonKey(name: 'max_media_attachments') int maxMediaAttachments,
+      {@JsonKey(name: 'max_characters') int? maxCharacters,
+      @JsonKey(name: 'max_media_attachments') int? maxMediaAttachments,
       @JsonKey(name: 'characters_reserved_per_url')
-      int charactersReservedPerUrl});
+      int? charactersReservedPerUrl});
 }
 
 /// @nodoc
@@ -2326,23 +2380,23 @@ class __$$InstanceConfigurationStatusesImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? maxCharacters = null,
-    Object? maxMediaAttachments = null,
-    Object? charactersReservedPerUrl = null,
+    Object? maxCharacters = freezed,
+    Object? maxMediaAttachments = freezed,
+    Object? charactersReservedPerUrl = freezed,
   }) {
     return _then(_$InstanceConfigurationStatusesImpl(
-      maxCharacters: null == maxCharacters
+      maxCharacters: freezed == maxCharacters
           ? _value.maxCharacters
           : maxCharacters // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxMediaAttachments: null == maxMediaAttachments
+              as int?,
+      maxMediaAttachments: freezed == maxMediaAttachments
           ? _value.maxMediaAttachments
           : maxMediaAttachments // ignore: cast_nullable_to_non_nullable
-              as int,
-      charactersReservedPerUrl: null == charactersReservedPerUrl
+              as int?,
+      charactersReservedPerUrl: freezed == charactersReservedPerUrl
           ? _value.charactersReservedPerUrl
           : charactersReservedPerUrl // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -2352,10 +2406,10 @@ class __$$InstanceConfigurationStatusesImplCopyWithImpl<$Res>
 class _$InstanceConfigurationStatusesImpl
     implements _InstanceConfigurationStatuses {
   const _$InstanceConfigurationStatusesImpl(
-      {@JsonKey(name: 'max_characters') required this.maxCharacters,
-      @JsonKey(name: 'max_media_attachments') required this.maxMediaAttachments,
+      {@JsonKey(name: 'max_characters') this.maxCharacters,
+      @JsonKey(name: 'max_media_attachments') this.maxMediaAttachments,
       @JsonKey(name: 'characters_reserved_per_url')
-      required this.charactersReservedPerUrl});
+      this.charactersReservedPerUrl});
 
   factory _$InstanceConfigurationStatusesImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -2364,17 +2418,17 @@ class _$InstanceConfigurationStatusesImpl
   /// The maximum number of allowed characters per status.
   @override
   @JsonKey(name: 'max_characters')
-  final int maxCharacters;
+  final int? maxCharacters;
 
   /// The maximum number of media attachments that can be added to a status.
   @override
   @JsonKey(name: 'max_media_attachments')
-  final int maxMediaAttachments;
+  final int? maxMediaAttachments;
 
   /// Each URL in a status will be assumed to be exactly this many characters.
   @override
   @JsonKey(name: 'characters_reserved_per_url')
-  final int charactersReservedPerUrl;
+  final int? charactersReservedPerUrl;
 
   @override
   String toString() {
@@ -2419,12 +2473,11 @@ class _$InstanceConfigurationStatusesImpl
 abstract class _InstanceConfigurationStatuses
     implements InstanceConfigurationStatuses {
   const factory _InstanceConfigurationStatuses(
-          {@JsonKey(name: 'max_characters') required final int maxCharacters,
-          @JsonKey(name: 'max_media_attachments')
-          required final int maxMediaAttachments,
-          @JsonKey(name: 'characters_reserved_per_url')
-          required final int charactersReservedPerUrl}) =
-      _$InstanceConfigurationStatusesImpl;
+      {@JsonKey(name: 'max_characters') final int? maxCharacters,
+      @JsonKey(name: 'max_media_attachments') final int? maxMediaAttachments,
+      @JsonKey(name: 'characters_reserved_per_url')
+      final int?
+          charactersReservedPerUrl}) = _$InstanceConfigurationStatusesImpl;
 
   factory _InstanceConfigurationStatuses.fromJson(Map<String, dynamic> json) =
       _$InstanceConfigurationStatusesImpl.fromJson;
@@ -2433,17 +2486,17 @@ abstract class _InstanceConfigurationStatuses
 
   /// The maximum number of allowed characters per status.
   @JsonKey(name: 'max_characters')
-  int get maxCharacters;
+  int? get maxCharacters;
   @override
 
   /// The maximum number of media attachments that can be added to a status.
   @JsonKey(name: 'max_media_attachments')
-  int get maxMediaAttachments;
+  int? get maxMediaAttachments;
   @override
 
   /// Each URL in a status will be assumed to be exactly this many characters.
   @JsonKey(name: 'characters_reserved_per_url')
-  int get charactersReservedPerUrl;
+  int? get charactersReservedPerUrl;
   @override
   @JsonKey(ignore: true)
   _$$InstanceConfigurationStatusesImplCopyWith<
@@ -2460,27 +2513,27 @@ InstanceConfigurationMediaAttachments
 mixin _$InstanceConfigurationMediaAttachments {
   /// Contains MIME types that can be uploaded.
   @JsonKey(name: 'supported_mime_types')
-  List<String> get supportedMimeTypes => throw _privateConstructorUsedError;
+  List<String>? get supportedMimeTypes => throw _privateConstructorUsedError;
 
   /// The maximum size of any uploaded image, in bytes.
   @JsonKey(name: 'image_size_limit')
-  int get imageSizeLimit => throw _privateConstructorUsedError;
+  int? get imageSizeLimit => throw _privateConstructorUsedError;
 
   /// The maximum number of pixels (width times height) for image uploads.
   @JsonKey(name: 'image_matrix_limit')
-  int get imageMatrixLimit => throw _privateConstructorUsedError;
+  int? get imageMatrixLimit => throw _privateConstructorUsedError;
 
   /// The maximum size of any uploaded video, in bytes.
   @JsonKey(name: 'video_size_limit')
-  int get videoSizeLimit => throw _privateConstructorUsedError;
+  int? get videoSizeLimit => throw _privateConstructorUsedError;
 
   /// The maximum frame rate for any uploaded video.
   @JsonKey(name: 'video_frame_rate_limit')
-  int get videoFrameRateLimit => throw _privateConstructorUsedError;
+  int? get videoFrameRateLimit => throw _privateConstructorUsedError;
 
   /// The maximum number of pixels (width times height) for video uploads.
   @JsonKey(name: 'video_matrix_limit')
-  int get videoMatrixLimit => throw _privateConstructorUsedError;
+  int? get videoMatrixLimit => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2498,12 +2551,12 @@ abstract class $InstanceConfigurationMediaAttachmentsCopyWith<$Res> {
           InstanceConfigurationMediaAttachments>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'supported_mime_types') List<String> supportedMimeTypes,
-      @JsonKey(name: 'image_size_limit') int imageSizeLimit,
-      @JsonKey(name: 'image_matrix_limit') int imageMatrixLimit,
-      @JsonKey(name: 'video_size_limit') int videoSizeLimit,
-      @JsonKey(name: 'video_frame_rate_limit') int videoFrameRateLimit,
-      @JsonKey(name: 'video_matrix_limit') int videoMatrixLimit});
+      {@JsonKey(name: 'supported_mime_types') List<String>? supportedMimeTypes,
+      @JsonKey(name: 'image_size_limit') int? imageSizeLimit,
+      @JsonKey(name: 'image_matrix_limit') int? imageMatrixLimit,
+      @JsonKey(name: 'video_size_limit') int? videoSizeLimit,
+      @JsonKey(name: 'video_frame_rate_limit') int? videoFrameRateLimit,
+      @JsonKey(name: 'video_matrix_limit') int? videoMatrixLimit});
 }
 
 /// @nodoc
@@ -2520,38 +2573,38 @@ class _$InstanceConfigurationMediaAttachmentsCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? supportedMimeTypes = null,
-    Object? imageSizeLimit = null,
-    Object? imageMatrixLimit = null,
-    Object? videoSizeLimit = null,
-    Object? videoFrameRateLimit = null,
-    Object? videoMatrixLimit = null,
+    Object? supportedMimeTypes = freezed,
+    Object? imageSizeLimit = freezed,
+    Object? imageMatrixLimit = freezed,
+    Object? videoSizeLimit = freezed,
+    Object? videoFrameRateLimit = freezed,
+    Object? videoMatrixLimit = freezed,
   }) {
     return _then(_value.copyWith(
-      supportedMimeTypes: null == supportedMimeTypes
+      supportedMimeTypes: freezed == supportedMimeTypes
           ? _value.supportedMimeTypes
           : supportedMimeTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      imageSizeLimit: null == imageSizeLimit
+              as List<String>?,
+      imageSizeLimit: freezed == imageSizeLimit
           ? _value.imageSizeLimit
           : imageSizeLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      imageMatrixLimit: null == imageMatrixLimit
+              as int?,
+      imageMatrixLimit: freezed == imageMatrixLimit
           ? _value.imageMatrixLimit
           : imageMatrixLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      videoSizeLimit: null == videoSizeLimit
+              as int?,
+      videoSizeLimit: freezed == videoSizeLimit
           ? _value.videoSizeLimit
           : videoSizeLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      videoFrameRateLimit: null == videoFrameRateLimit
+              as int?,
+      videoFrameRateLimit: freezed == videoFrameRateLimit
           ? _value.videoFrameRateLimit
           : videoFrameRateLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      videoMatrixLimit: null == videoMatrixLimit
+              as int?,
+      videoMatrixLimit: freezed == videoMatrixLimit
           ? _value.videoMatrixLimit
           : videoMatrixLimit // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -2566,12 +2619,12 @@ abstract class _$$InstanceConfigurationMediaAttachmentsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'supported_mime_types') List<String> supportedMimeTypes,
-      @JsonKey(name: 'image_size_limit') int imageSizeLimit,
-      @JsonKey(name: 'image_matrix_limit') int imageMatrixLimit,
-      @JsonKey(name: 'video_size_limit') int videoSizeLimit,
-      @JsonKey(name: 'video_frame_rate_limit') int videoFrameRateLimit,
-      @JsonKey(name: 'video_matrix_limit') int videoMatrixLimit});
+      {@JsonKey(name: 'supported_mime_types') List<String>? supportedMimeTypes,
+      @JsonKey(name: 'image_size_limit') int? imageSizeLimit,
+      @JsonKey(name: 'image_matrix_limit') int? imageMatrixLimit,
+      @JsonKey(name: 'video_size_limit') int? videoSizeLimit,
+      @JsonKey(name: 'video_frame_rate_limit') int? videoFrameRateLimit,
+      @JsonKey(name: 'video_matrix_limit') int? videoMatrixLimit});
 }
 
 /// @nodoc
@@ -2587,38 +2640,38 @@ class __$$InstanceConfigurationMediaAttachmentsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? supportedMimeTypes = null,
-    Object? imageSizeLimit = null,
-    Object? imageMatrixLimit = null,
-    Object? videoSizeLimit = null,
-    Object? videoFrameRateLimit = null,
-    Object? videoMatrixLimit = null,
+    Object? supportedMimeTypes = freezed,
+    Object? imageSizeLimit = freezed,
+    Object? imageMatrixLimit = freezed,
+    Object? videoSizeLimit = freezed,
+    Object? videoFrameRateLimit = freezed,
+    Object? videoMatrixLimit = freezed,
   }) {
     return _then(_$InstanceConfigurationMediaAttachmentsImpl(
-      supportedMimeTypes: null == supportedMimeTypes
+      supportedMimeTypes: freezed == supportedMimeTypes
           ? _value._supportedMimeTypes
           : supportedMimeTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      imageSizeLimit: null == imageSizeLimit
+              as List<String>?,
+      imageSizeLimit: freezed == imageSizeLimit
           ? _value.imageSizeLimit
           : imageSizeLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      imageMatrixLimit: null == imageMatrixLimit
+              as int?,
+      imageMatrixLimit: freezed == imageMatrixLimit
           ? _value.imageMatrixLimit
           : imageMatrixLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      videoSizeLimit: null == videoSizeLimit
+              as int?,
+      videoSizeLimit: freezed == videoSizeLimit
           ? _value.videoSizeLimit
           : videoSizeLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      videoFrameRateLimit: null == videoFrameRateLimit
+              as int?,
+      videoFrameRateLimit: freezed == videoFrameRateLimit
           ? _value.videoFrameRateLimit
           : videoFrameRateLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      videoMatrixLimit: null == videoMatrixLimit
+              as int?,
+      videoMatrixLimit: freezed == videoMatrixLimit
           ? _value.videoMatrixLimit
           : videoMatrixLimit // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -2629,13 +2682,12 @@ class _$InstanceConfigurationMediaAttachmentsImpl
     implements _InstanceConfigurationMediaAttachments {
   const _$InstanceConfigurationMediaAttachmentsImpl(
       {@JsonKey(name: 'supported_mime_types')
-      required final List<String> supportedMimeTypes,
-      @JsonKey(name: 'image_size_limit') required this.imageSizeLimit,
-      @JsonKey(name: 'image_matrix_limit') required this.imageMatrixLimit,
-      @JsonKey(name: 'video_size_limit') required this.videoSizeLimit,
-      @JsonKey(name: 'video_frame_rate_limit')
-      required this.videoFrameRateLimit,
-      @JsonKey(name: 'video_matrix_limit') required this.videoMatrixLimit})
+      final List<String>? supportedMimeTypes,
+      @JsonKey(name: 'image_size_limit') this.imageSizeLimit,
+      @JsonKey(name: 'image_matrix_limit') this.imageMatrixLimit,
+      @JsonKey(name: 'video_size_limit') this.videoSizeLimit,
+      @JsonKey(name: 'video_frame_rate_limit') this.videoFrameRateLimit,
+      @JsonKey(name: 'video_matrix_limit') this.videoMatrixLimit})
       : _supportedMimeTypes = supportedMimeTypes;
 
   factory _$InstanceConfigurationMediaAttachmentsImpl.fromJson(
@@ -2643,42 +2695,44 @@ class _$InstanceConfigurationMediaAttachmentsImpl
       _$$InstanceConfigurationMediaAttachmentsImplFromJson(json);
 
   /// Contains MIME types that can be uploaded.
-  final List<String> _supportedMimeTypes;
+  final List<String>? _supportedMimeTypes;
 
   /// Contains MIME types that can be uploaded.
   @override
   @JsonKey(name: 'supported_mime_types')
-  List<String> get supportedMimeTypes {
+  List<String>? get supportedMimeTypes {
+    final value = _supportedMimeTypes;
+    if (value == null) return null;
     if (_supportedMimeTypes is EqualUnmodifiableListView)
       return _supportedMimeTypes;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_supportedMimeTypes);
+    return EqualUnmodifiableListView(value);
   }
 
   /// The maximum size of any uploaded image, in bytes.
   @override
   @JsonKey(name: 'image_size_limit')
-  final int imageSizeLimit;
+  final int? imageSizeLimit;
 
   /// The maximum number of pixels (width times height) for image uploads.
   @override
   @JsonKey(name: 'image_matrix_limit')
-  final int imageMatrixLimit;
+  final int? imageMatrixLimit;
 
   /// The maximum size of any uploaded video, in bytes.
   @override
   @JsonKey(name: 'video_size_limit')
-  final int videoSizeLimit;
+  final int? videoSizeLimit;
 
   /// The maximum frame rate for any uploaded video.
   @override
   @JsonKey(name: 'video_frame_rate_limit')
-  final int videoFrameRateLimit;
+  final int? videoFrameRateLimit;
 
   /// The maximum number of pixels (width times height) for video uploads.
   @override
   @JsonKey(name: 'video_matrix_limit')
-  final int videoMatrixLimit;
+  final int? videoMatrixLimit;
 
   @override
   String toString() {
@@ -2735,14 +2789,13 @@ abstract class _InstanceConfigurationMediaAttachments
     implements InstanceConfigurationMediaAttachments {
   const factory _InstanceConfigurationMediaAttachments(
       {@JsonKey(name: 'supported_mime_types')
-      required final List<String> supportedMimeTypes,
-      @JsonKey(name: 'image_size_limit') required final int imageSizeLimit,
-      @JsonKey(name: 'image_matrix_limit') required final int imageMatrixLimit,
-      @JsonKey(name: 'video_size_limit') required final int videoSizeLimit,
-      @JsonKey(name: 'video_frame_rate_limit')
-      required final int videoFrameRateLimit,
+      final List<String>? supportedMimeTypes,
+      @JsonKey(name: 'image_size_limit') final int? imageSizeLimit,
+      @JsonKey(name: 'image_matrix_limit') final int? imageMatrixLimit,
+      @JsonKey(name: 'video_size_limit') final int? videoSizeLimit,
+      @JsonKey(name: 'video_frame_rate_limit') final int? videoFrameRateLimit,
       @JsonKey(name: 'video_matrix_limit')
-      required final int
+      final int?
           videoMatrixLimit}) = _$InstanceConfigurationMediaAttachmentsImpl;
 
   factory _InstanceConfigurationMediaAttachments.fromJson(
@@ -2753,32 +2806,32 @@ abstract class _InstanceConfigurationMediaAttachments
 
   /// Contains MIME types that can be uploaded.
   @JsonKey(name: 'supported_mime_types')
-  List<String> get supportedMimeTypes;
+  List<String>? get supportedMimeTypes;
   @override
 
   /// The maximum size of any uploaded image, in bytes.
   @JsonKey(name: 'image_size_limit')
-  int get imageSizeLimit;
+  int? get imageSizeLimit;
   @override
 
   /// The maximum number of pixels (width times height) for image uploads.
   @JsonKey(name: 'image_matrix_limit')
-  int get imageMatrixLimit;
+  int? get imageMatrixLimit;
   @override
 
   /// The maximum size of any uploaded video, in bytes.
   @JsonKey(name: 'video_size_limit')
-  int get videoSizeLimit;
+  int? get videoSizeLimit;
   @override
 
   /// The maximum frame rate for any uploaded video.
   @JsonKey(name: 'video_frame_rate_limit')
-  int get videoFrameRateLimit;
+  int? get videoFrameRateLimit;
   @override
 
   /// The maximum number of pixels (width times height) for video uploads.
   @JsonKey(name: 'video_matrix_limit')
-  int get videoMatrixLimit;
+  int? get videoMatrixLimit;
   @override
   @JsonKey(ignore: true)
   _$$InstanceConfigurationMediaAttachmentsImplCopyWith<
@@ -2795,19 +2848,19 @@ InstanceConfigurationPolls _$InstanceConfigurationPollsFromJson(
 mixin _$InstanceConfigurationPolls {
   /// Each poll is allowed to have up to this many options.
   @JsonKey(name: 'max_options')
-  int get maxOptions => throw _privateConstructorUsedError;
+  int? get maxOptions => throw _privateConstructorUsedError;
 
   /// Each poll option is allowed to have this many characters.
   @JsonKey(name: 'max_characters_per_option')
-  int get maxCharactersPerOption => throw _privateConstructorUsedError;
+  int? get maxCharactersPerOption => throw _privateConstructorUsedError;
 
   /// The shortest allowed poll duration, in seconds.
   @JsonKey(name: 'min_expiration')
-  int get minExpiration => throw _privateConstructorUsedError;
+  int? get minExpiration => throw _privateConstructorUsedError;
 
   /// The longest allowed poll duration, in seconds.
   @JsonKey(name: 'max_expiration')
-  int get maxExpiration => throw _privateConstructorUsedError;
+  int? get maxExpiration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2823,10 +2876,10 @@ abstract class $InstanceConfigurationPollsCopyWith<$Res> {
           InstanceConfigurationPolls>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'max_options') int maxOptions,
-      @JsonKey(name: 'max_characters_per_option') int maxCharactersPerOption,
-      @JsonKey(name: 'min_expiration') int minExpiration,
-      @JsonKey(name: 'max_expiration') int maxExpiration});
+      {@JsonKey(name: 'max_options') int? maxOptions,
+      @JsonKey(name: 'max_characters_per_option') int? maxCharactersPerOption,
+      @JsonKey(name: 'min_expiration') int? minExpiration,
+      @JsonKey(name: 'max_expiration') int? maxExpiration});
 }
 
 /// @nodoc
@@ -2843,28 +2896,28 @@ class _$InstanceConfigurationPollsCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? maxOptions = null,
-    Object? maxCharactersPerOption = null,
-    Object? minExpiration = null,
-    Object? maxExpiration = null,
+    Object? maxOptions = freezed,
+    Object? maxCharactersPerOption = freezed,
+    Object? minExpiration = freezed,
+    Object? maxExpiration = freezed,
   }) {
     return _then(_value.copyWith(
-      maxOptions: null == maxOptions
+      maxOptions: freezed == maxOptions
           ? _value.maxOptions
           : maxOptions // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxCharactersPerOption: null == maxCharactersPerOption
+              as int?,
+      maxCharactersPerOption: freezed == maxCharactersPerOption
           ? _value.maxCharactersPerOption
           : maxCharactersPerOption // ignore: cast_nullable_to_non_nullable
-              as int,
-      minExpiration: null == minExpiration
+              as int?,
+      minExpiration: freezed == minExpiration
           ? _value.minExpiration
           : minExpiration // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxExpiration: null == maxExpiration
+              as int?,
+      maxExpiration: freezed == maxExpiration
           ? _value.maxExpiration
           : maxExpiration // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -2879,10 +2932,10 @@ abstract class _$$InstanceConfigurationPollsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'max_options') int maxOptions,
-      @JsonKey(name: 'max_characters_per_option') int maxCharactersPerOption,
-      @JsonKey(name: 'min_expiration') int minExpiration,
-      @JsonKey(name: 'max_expiration') int maxExpiration});
+      {@JsonKey(name: 'max_options') int? maxOptions,
+      @JsonKey(name: 'max_characters_per_option') int? maxCharactersPerOption,
+      @JsonKey(name: 'min_expiration') int? minExpiration,
+      @JsonKey(name: 'max_expiration') int? maxExpiration});
 }
 
 /// @nodoc
@@ -2898,28 +2951,28 @@ class __$$InstanceConfigurationPollsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? maxOptions = null,
-    Object? maxCharactersPerOption = null,
-    Object? minExpiration = null,
-    Object? maxExpiration = null,
+    Object? maxOptions = freezed,
+    Object? maxCharactersPerOption = freezed,
+    Object? minExpiration = freezed,
+    Object? maxExpiration = freezed,
   }) {
     return _then(_$InstanceConfigurationPollsImpl(
-      maxOptions: null == maxOptions
+      maxOptions: freezed == maxOptions
           ? _value.maxOptions
           : maxOptions // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxCharactersPerOption: null == maxCharactersPerOption
+              as int?,
+      maxCharactersPerOption: freezed == maxCharactersPerOption
           ? _value.maxCharactersPerOption
           : maxCharactersPerOption // ignore: cast_nullable_to_non_nullable
-              as int,
-      minExpiration: null == minExpiration
+              as int?,
+      minExpiration: freezed == minExpiration
           ? _value.minExpiration
           : minExpiration // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxExpiration: null == maxExpiration
+              as int?,
+      maxExpiration: freezed == maxExpiration
           ? _value.maxExpiration
           : maxExpiration // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -2928,11 +2981,10 @@ class __$$InstanceConfigurationPollsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$InstanceConfigurationPollsImpl implements _InstanceConfigurationPolls {
   const _$InstanceConfigurationPollsImpl(
-      {@JsonKey(name: 'max_options') required this.maxOptions,
-      @JsonKey(name: 'max_characters_per_option')
-      required this.maxCharactersPerOption,
-      @JsonKey(name: 'min_expiration') required this.minExpiration,
-      @JsonKey(name: 'max_expiration') required this.maxExpiration});
+      {@JsonKey(name: 'max_options') this.maxOptions,
+      @JsonKey(name: 'max_characters_per_option') this.maxCharactersPerOption,
+      @JsonKey(name: 'min_expiration') this.minExpiration,
+      @JsonKey(name: 'max_expiration') this.maxExpiration});
 
   factory _$InstanceConfigurationPollsImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -2941,22 +2993,22 @@ class _$InstanceConfigurationPollsImpl implements _InstanceConfigurationPolls {
   /// Each poll is allowed to have up to this many options.
   @override
   @JsonKey(name: 'max_options')
-  final int maxOptions;
+  final int? maxOptions;
 
   /// Each poll option is allowed to have this many characters.
   @override
   @JsonKey(name: 'max_characters_per_option')
-  final int maxCharactersPerOption;
+  final int? maxCharactersPerOption;
 
   /// The shortest allowed poll duration, in seconds.
   @override
   @JsonKey(name: 'min_expiration')
-  final int minExpiration;
+  final int? minExpiration;
 
   /// The longest allowed poll duration, in seconds.
   @override
   @JsonKey(name: 'max_expiration')
-  final int maxExpiration;
+  final int? maxExpiration;
 
   @override
   String toString() {
@@ -3001,11 +3053,11 @@ class _$InstanceConfigurationPollsImpl implements _InstanceConfigurationPolls {
 abstract class _InstanceConfigurationPolls
     implements InstanceConfigurationPolls {
   const factory _InstanceConfigurationPolls(
-          {@JsonKey(name: 'max_options') required final int maxOptions,
+          {@JsonKey(name: 'max_options') final int? maxOptions,
           @JsonKey(name: 'max_characters_per_option')
-          required final int maxCharactersPerOption,
-          @JsonKey(name: 'min_expiration') required final int minExpiration,
-          @JsonKey(name: 'max_expiration') required final int maxExpiration}) =
+          final int? maxCharactersPerOption,
+          @JsonKey(name: 'min_expiration') final int? minExpiration,
+          @JsonKey(name: 'max_expiration') final int? maxExpiration}) =
       _$InstanceConfigurationPollsImpl;
 
   factory _InstanceConfigurationPolls.fromJson(Map<String, dynamic> json) =
@@ -3015,22 +3067,22 @@ abstract class _InstanceConfigurationPolls
 
   /// Each poll is allowed to have up to this many options.
   @JsonKey(name: 'max_options')
-  int get maxOptions;
+  int? get maxOptions;
   @override
 
   /// Each poll option is allowed to have this many characters.
   @JsonKey(name: 'max_characters_per_option')
-  int get maxCharactersPerOption;
+  int? get maxCharactersPerOption;
   @override
 
   /// The shortest allowed poll duration, in seconds.
   @JsonKey(name: 'min_expiration')
-  int get minExpiration;
+  int? get minExpiration;
   @override
 
   /// The longest allowed poll duration, in seconds.
   @JsonKey(name: 'max_expiration')
-  int get maxExpiration;
+  int? get maxExpiration;
   @override
   @JsonKey(ignore: true)
   _$$InstanceConfigurationPollsImplCopyWith<_$InstanceConfigurationPollsImpl>
@@ -3046,7 +3098,7 @@ InstanceConfigurationTranslation _$InstanceConfigurationTranslationFromJson(
 mixin _$InstanceConfigurationTranslation {
   /// Whether the Translations API is available on this instance.
   @JsonKey(name: 'enabled')
-  bool get enabled => throw _privateConstructorUsedError;
+  bool? get enabled => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3062,7 +3114,7 @@ abstract class $InstanceConfigurationTranslationCopyWith<$Res> {
       _$InstanceConfigurationTranslationCopyWithImpl<$Res,
           InstanceConfigurationTranslation>;
   @useResult
-  $Res call({@JsonKey(name: 'enabled') bool enabled});
+  $Res call({@JsonKey(name: 'enabled') bool? enabled});
 }
 
 /// @nodoc
@@ -3079,13 +3131,13 @@ class _$InstanceConfigurationTranslationCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? enabled = null,
+    Object? enabled = freezed,
   }) {
     return _then(_value.copyWith(
-      enabled: null == enabled
+      enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -3099,7 +3151,7 @@ abstract class _$$InstanceConfigurationTranslationImplCopyWith<$Res>
       __$$InstanceConfigurationTranslationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'enabled') bool enabled});
+  $Res call({@JsonKey(name: 'enabled') bool? enabled});
 }
 
 /// @nodoc
@@ -3115,13 +3167,13 @@ class __$$InstanceConfigurationTranslationImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? enabled = null,
+    Object? enabled = freezed,
   }) {
     return _then(_$InstanceConfigurationTranslationImpl(
-      enabled: null == enabled
+      enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -3131,7 +3183,7 @@ class __$$InstanceConfigurationTranslationImplCopyWithImpl<$Res>
 class _$InstanceConfigurationTranslationImpl
     implements _InstanceConfigurationTranslation {
   const _$InstanceConfigurationTranslationImpl(
-      {@JsonKey(name: 'enabled') required this.enabled});
+      {@JsonKey(name: 'enabled') this.enabled});
 
   factory _$InstanceConfigurationTranslationImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -3140,7 +3192,7 @@ class _$InstanceConfigurationTranslationImpl
   /// Whether the Translations API is available on this instance.
   @override
   @JsonKey(name: 'enabled')
-  final bool enabled;
+  final bool? enabled;
 
   @override
   String toString() {
@@ -3178,7 +3230,7 @@ class _$InstanceConfigurationTranslationImpl
 abstract class _InstanceConfigurationTranslation
     implements InstanceConfigurationTranslation {
   const factory _InstanceConfigurationTranslation(
-          {@JsonKey(name: 'enabled') required final bool enabled}) =
+          {@JsonKey(name: 'enabled') final bool? enabled}) =
       _$InstanceConfigurationTranslationImpl;
 
   factory _InstanceConfigurationTranslation.fromJson(
@@ -3189,7 +3241,7 @@ abstract class _InstanceConfigurationTranslation
 
   /// Whether the Translations API is available on this instance.
   @JsonKey(name: 'enabled')
-  bool get enabled;
+  bool? get enabled;
   @override
   @JsonKey(ignore: true)
   _$$InstanceConfigurationTranslationImplCopyWith<
@@ -3206,11 +3258,11 @@ InstanceRegistrations _$InstanceRegistrationsFromJson(
 mixin _$InstanceRegistrations {
   /// Whether registrations are enabled.
   @JsonKey(name: 'enabled')
-  bool get enabled => throw _privateConstructorUsedError;
+  bool? get enabled => throw _privateConstructorUsedError;
 
   /// Whether registrations require moderator approval.
   @JsonKey(name: 'approval_required')
-  bool get approvalRequired => throw _privateConstructorUsedError;
+  bool? get approvalRequired => throw _privateConstructorUsedError;
 
   /// A custom message to be shown when registrations are closed.
   @JsonKey(name: 'message')
@@ -3229,8 +3281,8 @@ abstract class $InstanceRegistrationsCopyWith<$Res> {
       _$InstanceRegistrationsCopyWithImpl<$Res, InstanceRegistrations>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'enabled') bool enabled,
-      @JsonKey(name: 'approval_required') bool approvalRequired,
+      {@JsonKey(name: 'enabled') bool? enabled,
+      @JsonKey(name: 'approval_required') bool? approvalRequired,
       @JsonKey(name: 'message') String? message});
 }
 
@@ -3248,19 +3300,19 @@ class _$InstanceRegistrationsCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? enabled = null,
-    Object? approvalRequired = null,
+    Object? enabled = freezed,
+    Object? approvalRequired = freezed,
     Object? message = freezed,
   }) {
     return _then(_value.copyWith(
-      enabled: null == enabled
+      enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      approvalRequired: null == approvalRequired
+              as bool?,
+      approvalRequired: freezed == approvalRequired
           ? _value.approvalRequired
           : approvalRequired // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -3279,8 +3331,8 @@ abstract class _$$InstanceRegistrationsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'enabled') bool enabled,
-      @JsonKey(name: 'approval_required') bool approvalRequired,
+      {@JsonKey(name: 'enabled') bool? enabled,
+      @JsonKey(name: 'approval_required') bool? approvalRequired,
       @JsonKey(name: 'message') String? message});
 }
 
@@ -3296,19 +3348,19 @@ class __$$InstanceRegistrationsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? enabled = null,
-    Object? approvalRequired = null,
+    Object? enabled = freezed,
+    Object? approvalRequired = freezed,
     Object? message = freezed,
   }) {
     return _then(_$InstanceRegistrationsImpl(
-      enabled: null == enabled
+      enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      approvalRequired: null == approvalRequired
+              as bool?,
+      approvalRequired: freezed == approvalRequired
           ? _value.approvalRequired
           : approvalRequired // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -3321,8 +3373,8 @@ class __$$InstanceRegistrationsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$InstanceRegistrationsImpl implements _InstanceRegistrations {
   const _$InstanceRegistrationsImpl(
-      {@JsonKey(name: 'enabled') required this.enabled,
-      @JsonKey(name: 'approval_required') required this.approvalRequired,
+      {@JsonKey(name: 'enabled') this.enabled,
+      @JsonKey(name: 'approval_required') this.approvalRequired,
       @JsonKey(name: 'message') this.message});
 
   factory _$InstanceRegistrationsImpl.fromJson(Map<String, dynamic> json) =>
@@ -3331,12 +3383,12 @@ class _$InstanceRegistrationsImpl implements _InstanceRegistrations {
   /// Whether registrations are enabled.
   @override
   @JsonKey(name: 'enabled')
-  final bool enabled;
+  final bool? enabled;
 
   /// Whether registrations require moderator approval.
   @override
   @JsonKey(name: 'approval_required')
-  final bool approvalRequired;
+  final bool? approvalRequired;
 
   /// A custom message to be shown when registrations are closed.
   @override
@@ -3381,10 +3433,10 @@ class _$InstanceRegistrationsImpl implements _InstanceRegistrations {
 
 abstract class _InstanceRegistrations implements InstanceRegistrations {
   const factory _InstanceRegistrations(
-      {@JsonKey(name: 'enabled') required final bool enabled,
-      @JsonKey(name: 'approval_required') required final bool approvalRequired,
-      @JsonKey(name: 'message')
-      final String? message}) = _$InstanceRegistrationsImpl;
+          {@JsonKey(name: 'enabled') final bool? enabled,
+          @JsonKey(name: 'approval_required') final bool? approvalRequired,
+          @JsonKey(name: 'message') final String? message}) =
+      _$InstanceRegistrationsImpl;
 
   factory _InstanceRegistrations.fromJson(Map<String, dynamic> json) =
       _$InstanceRegistrationsImpl.fromJson;
@@ -3393,12 +3445,12 @@ abstract class _InstanceRegistrations implements InstanceRegistrations {
 
   /// Whether registrations are enabled.
   @JsonKey(name: 'enabled')
-  bool get enabled;
+  bool? get enabled;
   @override
 
   /// Whether registrations require moderator approval.
   @JsonKey(name: 'approval_required')
-  bool get approvalRequired;
+  bool? get approvalRequired;
   @override
 
   /// A custom message to be shown when registrations are closed.
@@ -3418,7 +3470,7 @@ InstanceContact _$InstanceContactFromJson(Map<String, dynamic> json) {
 mixin _$InstanceContact {
   /// An email address that can be messaged regarding inquiries or issues.
   @JsonKey(name: 'email')
-  String get email => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
 
   /// An account that can be contacted natively over the network regarding
   /// inquiries or issues.
@@ -3438,7 +3490,7 @@ abstract class $InstanceContactCopyWith<$Res> {
       _$InstanceContactCopyWithImpl<$Res, InstanceContact>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'email') String email,
+      {@JsonKey(name: 'email') String? email,
       @JsonKey(name: 'account') Account? account});
 
   $AccountCopyWith<$Res>? get account;
@@ -3457,14 +3509,14 @@ class _$InstanceContactCopyWithImpl<$Res, $Val extends InstanceContact>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = null,
+    Object? email = freezed,
     Object? account = freezed,
   }) {
     return _then(_value.copyWith(
-      email: null == email
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
@@ -3494,7 +3546,7 @@ abstract class _$$InstanceContactImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'email') String email,
+      {@JsonKey(name: 'email') String? email,
       @JsonKey(name: 'account') Account? account});
 
   @override
@@ -3512,14 +3564,14 @@ class __$$InstanceContactImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = null,
+    Object? email = freezed,
     Object? account = freezed,
   }) {
     return _then(_$InstanceContactImpl(
-      email: null == email
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
@@ -3532,7 +3584,7 @@ class __$$InstanceContactImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$InstanceContactImpl implements _InstanceContact {
   const _$InstanceContactImpl(
-      {@JsonKey(name: 'email') required this.email,
+      {@JsonKey(name: 'email') this.email,
       @JsonKey(name: 'account') this.account});
 
   factory _$InstanceContactImpl.fromJson(Map<String, dynamic> json) =>
@@ -3541,7 +3593,7 @@ class _$InstanceContactImpl implements _InstanceContact {
   /// An email address that can be messaged regarding inquiries or issues.
   @override
   @JsonKey(name: 'email')
-  final String email;
+  final String? email;
 
   /// An account that can be contacted natively over the network regarding
   /// inquiries or issues.
@@ -3584,7 +3636,7 @@ class _$InstanceContactImpl implements _InstanceContact {
 
 abstract class _InstanceContact implements InstanceContact {
   const factory _InstanceContact(
-          {@JsonKey(name: 'email') required final String email,
+          {@JsonKey(name: 'email') final String? email,
           @JsonKey(name: 'account') final Account? account}) =
       _$InstanceContactImpl;
 
@@ -3595,7 +3647,7 @@ abstract class _InstanceContact implements InstanceContact {
 
   /// An email address that can be messaged regarding inquiries or issues.
   @JsonKey(name: 'email')
-  String get email;
+  String? get email;
   @override
 
   /// An account that can be contacted natively over the network regarding

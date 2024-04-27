@@ -23,11 +23,11 @@ mixin _$Reaction {
   /// The emoji used for the reaction. Either a unicode emoji, or a custom
   /// emoji's shortcode.
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   /// The total number of users who have added this reaction.
   @JsonKey(name: 'count')
-  int get count => throw _privateConstructorUsedError;
+  int? get count => throw _privateConstructorUsedError;
 
   /// If there is a currently authorized user: Have you added this reaction?
   @JsonKey(name: 'me')
@@ -54,8 +54,8 @@ abstract class $ReactionCopyWith<$Res> {
       _$ReactionCopyWithImpl<$Res, Reaction>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'count') int count,
+      {@JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'count') int? count,
       @JsonKey(name: 'me') bool? me,
       @JsonKey(name: 'url') String? url,
       @JsonKey(name: 'static_url') String? staticUrl});
@@ -74,21 +74,21 @@ class _$ReactionCopyWithImpl<$Res, $Val extends Reaction>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? count = null,
+    Object? name = freezed,
+    Object? count = freezed,
     Object? me = freezed,
     Object? url = freezed,
     Object? staticUrl = freezed,
   }) {
     return _then(_value.copyWith(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      count: null == count
+              as String?,
+      count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       me: freezed == me
           ? _value.me
           : me // ignore: cast_nullable_to_non_nullable
@@ -114,8 +114,8 @@ abstract class _$$ReactionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'count') int count,
+      {@JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'count') int? count,
       @JsonKey(name: 'me') bool? me,
       @JsonKey(name: 'url') String? url,
       @JsonKey(name: 'static_url') String? staticUrl});
@@ -132,21 +132,21 @@ class __$$ReactionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? count = null,
+    Object? name = freezed,
+    Object? count = freezed,
     Object? me = freezed,
     Object? url = freezed,
     Object? staticUrl = freezed,
   }) {
     return _then(_$ReactionImpl(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      count: null == count
+              as String?,
+      count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       me: freezed == me
           ? _value.me
           : me // ignore: cast_nullable_to_non_nullable
@@ -167,8 +167,8 @@ class __$$ReactionImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ReactionImpl implements _Reaction {
   const _$ReactionImpl(
-      {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'count') required this.count,
+      {@JsonKey(name: 'name') this.name,
+      @JsonKey(name: 'count') this.count,
       @JsonKey(name: 'me') this.me,
       @JsonKey(name: 'url') this.url,
       @JsonKey(name: 'static_url') this.staticUrl});
@@ -180,12 +180,12 @@ class _$ReactionImpl implements _Reaction {
   /// emoji's shortcode.
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
 
   /// The total number of users who have added this reaction.
   @override
   @JsonKey(name: 'count')
-  final int count;
+  final int? count;
 
   /// If there is a currently authorized user: Have you added this reaction?
   @override
@@ -241,8 +241,8 @@ class _$ReactionImpl implements _Reaction {
 
 abstract class _Reaction implements Reaction {
   const factory _Reaction(
-      {@JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'count') required final int count,
+      {@JsonKey(name: 'name') final String? name,
+      @JsonKey(name: 'count') final int? count,
       @JsonKey(name: 'me') final bool? me,
       @JsonKey(name: 'url') final String? url,
       @JsonKey(name: 'static_url') final String? staticUrl}) = _$ReactionImpl;
@@ -255,12 +255,12 @@ abstract class _Reaction implements Reaction {
   /// The emoji used for the reaction. Either a unicode emoji, or a custom
   /// emoji's shortcode.
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
 
   /// The total number of users who have added this reaction.
   @JsonKey(name: 'count')
-  int get count;
+  int? get count;
   @override
 
   /// If there is a currently authorized user: Have you added this reaction?

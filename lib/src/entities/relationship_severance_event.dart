@@ -11,24 +11,24 @@ part 'relationship_severance_event.g.dart';
 class RelationshipSeveranceEvent with _$RelationshipSeveranceEvent {
   const factory RelationshipSeveranceEvent({
     /// The ID of the relationship severance event in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// Type of event.
-    @JsonKey(name: 'type') required final RelationshipSeveranceEventType type,
+    @JsonKey(name: 'type') final RelationshipSeveranceEventType? type,
 
     /// Whether the list of severed relationships is unavailable because the
     /// underlying issue has been purged.
-    @JsonKey(name: 'purged') required final bool purged,
+    @JsonKey(name: 'purged') final bool? purged,
 
     /// Name of the target of the moderation/block event. This is either a
     /// domain name or a user handle, depending on the event type.
-    @JsonKey(name: 'target_name') required final String targetName,
+    @JsonKey(name: 'target_name') final String? targetName,
 
     /// Number of follow relationships (in either direction) that were severed.
     @JsonKey(name: 'relationships_count') final int? relationshipsCount,
 
     /// When the event took place.
-    @JsonKey(name: 'created_at') required final DateTime createdAt,
+    @JsonKey(name: 'created_at') final DateTime? createdAt,
   }) = _RelationshipSeveranceEvent;
 
   factory RelationshipSeveranceEvent.fromJson(

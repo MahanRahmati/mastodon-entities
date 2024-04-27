@@ -9,14 +9,16 @@ part of 'encrypted_message.dart';
 _$EncryptedMessageImpl _$$EncryptedMessageImplFromJson(
         Map<String, dynamic> json) =>
     _$EncryptedMessageImpl(
-      id: json['id'] as String,
-      accountId: json['account_id'] as String,
-      deviceId: json['device_id'] as String,
-      type: $enumDecode(_$EncryptedMessageTypeEnumMap, json['type']),
-      body: json['body'] as String,
-      digest: json['digest'] as String,
-      messageFranking: json['message_franking'] as String,
-      createdAt: DateTime.parse(json['created_at'] as String),
+      id: json['id'] as String?,
+      accountId: json['account_id'] as String?,
+      deviceId: json['device_id'] as String?,
+      type: $enumDecodeNullable(_$EncryptedMessageTypeEnumMap, json['type']),
+      body: json['body'] as String?,
+      digest: json['digest'] as String?,
+      messageFranking: json['message_franking'] as String?,
+      createdAt: json['created_at'] == null
+          ? null
+          : DateTime.parse(json['created_at'] as String),
     );
 
 Map<String, dynamic> _$$EncryptedMessageImplToJson(
@@ -25,11 +27,11 @@ Map<String, dynamic> _$$EncryptedMessageImplToJson(
       'id': instance.id,
       'account_id': instance.accountId,
       'device_id': instance.deviceId,
-      'type': _$EncryptedMessageTypeEnumMap[instance.type]!,
+      'type': _$EncryptedMessageTypeEnumMap[instance.type],
       'body': instance.body,
       'digest': instance.digest,
       'message_franking': instance.messageFranking,
-      'created_at': instance.createdAt.toIso8601String(),
+      'created_at': instance.createdAt?.toIso8601String(),
     };
 
 const _$EncryptedMessageTypeEnumMap = {

@@ -7,19 +7,19 @@ part of 'poll.dart';
 // **************************************************************************
 
 _$PollImpl _$$PollImplFromJson(Map<String, dynamic> json) => _$PollImpl(
-      id: json['id'] as String,
+      id: json['id'] as String?,
       expiresAt: json['expires_at'] == null
           ? null
           : DateTime.parse(json['expires_at'] as String),
-      expired: json['expired'] as bool,
-      multiple: json['multiple'] as bool,
-      votesCount: (json['votes_count'] as num).toInt(),
+      expired: json['expired'] as bool?,
+      multiple: json['multiple'] as bool?,
+      votesCount: (json['votes_count'] as num?)?.toInt(),
       votersCount: (json['voters_count'] as num?)?.toInt(),
       options: (json['options'] as List<dynamic>?)
           ?.map((e) => PollOption.fromJson(e as Map<String, dynamic>))
           .toList(),
-      emojis: (json['emojis'] as List<dynamic>)
-          .map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
+      emojis: (json['emojis'] as List<dynamic>?)
+          ?.map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
           .toList(),
       voted: json['voted'] as bool?,
       ownVotes: (json['own_votes'] as List<dynamic>?)
@@ -43,7 +43,7 @@ Map<String, dynamic> _$$PollImplToJson(_$PollImpl instance) =>
 
 _$PollOptionImpl _$$PollOptionImplFromJson(Map<String, dynamic> json) =>
     _$PollOptionImpl(
-      title: json['title'] as String,
+      title: json['title'] as String?,
       votesCount: (json['votes_count'] as num?)?.toInt(),
     );
 

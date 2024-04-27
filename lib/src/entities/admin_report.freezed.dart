@@ -22,11 +22,11 @@ AdminReport _$AdminReportFromJson(Map<String, dynamic> json) {
 mixin _$AdminReport {
   /// The ID of the report in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   ///  Whether an action was taken to resolve this report.
   @JsonKey(name: 'action_taken')
-  bool get actionTaken => throw _privateConstructorUsedError;
+  bool? get actionTaken => throw _privateConstructorUsedError;
 
   /// When an action was taken, if this report is currently resolved.
   @JsonKey(name: 'action_taken_at')
@@ -34,31 +34,31 @@ mixin _$AdminReport {
 
   /// The category under which the report is classified.
   @JsonKey(name: 'category')
-  ReportCategory get category => throw _privateConstructorUsedError;
+  ReportCategory? get category => throw _privateConstructorUsedError;
 
   /// An optional reason for reporting.
   @JsonKey(name: 'comment')
-  String get comment => throw _privateConstructorUsedError;
+  String? get comment => throw _privateConstructorUsedError;
 
   /// Whether a report was forwarded to a remote instance.
   @JsonKey(name: 'forwarded')
-  bool get forwarded => throw _privateConstructorUsedError;
+  bool? get forwarded => throw _privateConstructorUsedError;
 
   /// The time the report was filed.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   /// The time of last action on this report.
   @JsonKey(name: 'updated_at')
-  DateTime get updatedAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
 
   /// The account which filed the report.
   @JsonKey(name: 'account')
-  AdminAccount get account => throw _privateConstructorUsedError;
+  AdminAccount? get account => throw _privateConstructorUsedError;
 
   /// The account being reported.
   @JsonKey(name: 'target_account')
-  AdminAccount get targetAccount => throw _privateConstructorUsedError;
+  AdminAccount? get targetAccount => throw _privateConstructorUsedError;
 
   /// The account of the moderator assigned to this report.
   @JsonKey(name: 'assigned_account')
@@ -70,11 +70,11 @@ mixin _$AdminReport {
 
   /// Statuses attached to the report, for context.
   @JsonKey(name: 'statuses')
-  List<Status> get statuses => throw _privateConstructorUsedError;
+  List<Status>? get statuses => throw _privateConstructorUsedError;
 
   /// Rules attached to the report, for context.
   @JsonKey(name: 'rules')
-  List<Rule> get rules => throw _privateConstructorUsedError;
+  List<Rule>? get rules => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -89,24 +89,24 @@ abstract class $AdminReportCopyWith<$Res> {
       _$AdminReportCopyWithImpl<$Res, AdminReport>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'action_taken') bool actionTaken,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'action_taken') bool? actionTaken,
       @JsonKey(name: 'action_taken_at') DateTime? actionTakenAt,
-      @JsonKey(name: 'category') ReportCategory category,
-      @JsonKey(name: 'comment') String comment,
-      @JsonKey(name: 'forwarded') bool forwarded,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'updated_at') DateTime updatedAt,
-      @JsonKey(name: 'account') AdminAccount account,
-      @JsonKey(name: 'target_account') AdminAccount targetAccount,
+      @JsonKey(name: 'category') ReportCategory? category,
+      @JsonKey(name: 'comment') String? comment,
+      @JsonKey(name: 'forwarded') bool? forwarded,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'updated_at') DateTime? updatedAt,
+      @JsonKey(name: 'account') AdminAccount? account,
+      @JsonKey(name: 'target_account') AdminAccount? targetAccount,
       @JsonKey(name: 'assigned_account') AdminAccount? assignedAccount,
       @JsonKey(name: 'action_taken_by_account')
       AdminAccount? actionTakenByAccount,
-      @JsonKey(name: 'statuses') List<Status> statuses,
-      @JsonKey(name: 'rules') List<Rule> rules});
+      @JsonKey(name: 'statuses') List<Status>? statuses,
+      @JsonKey(name: 'rules') List<Rule>? rules});
 
-  $AdminAccountCopyWith<$Res> get account;
-  $AdminAccountCopyWith<$Res> get targetAccount;
+  $AdminAccountCopyWith<$Res>? get account;
+  $AdminAccountCopyWith<$Res>? get targetAccount;
   $AdminAccountCopyWith<$Res>? get assignedAccount;
   $AdminAccountCopyWith<$Res>? get actionTakenByAccount;
 }
@@ -124,62 +124,62 @@ class _$AdminReportCopyWithImpl<$Res, $Val extends AdminReport>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? actionTaken = null,
+    Object? id = freezed,
+    Object? actionTaken = freezed,
     Object? actionTakenAt = freezed,
-    Object? category = null,
-    Object? comment = null,
-    Object? forwarded = null,
-    Object? createdAt = null,
-    Object? updatedAt = null,
-    Object? account = null,
-    Object? targetAccount = null,
+    Object? category = freezed,
+    Object? comment = freezed,
+    Object? forwarded = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? account = freezed,
+    Object? targetAccount = freezed,
     Object? assignedAccount = freezed,
     Object? actionTakenByAccount = freezed,
-    Object? statuses = null,
-    Object? rules = null,
+    Object? statuses = freezed,
+    Object? rules = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      actionTaken: null == actionTaken
+              as String?,
+      actionTaken: freezed == actionTaken
           ? _value.actionTaken
           : actionTaken // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       actionTakenAt: freezed == actionTakenAt
           ? _value.actionTakenAt
           : actionTakenAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      category: null == category
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as ReportCategory,
-      comment: null == comment
+              as ReportCategory?,
+      comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
-              as String,
-      forwarded: null == forwarded
+              as String?,
+      forwarded: freezed == forwarded
           ? _value.forwarded
           : forwarded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      createdAt: null == createdAt
+              as bool?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
+              as DateTime?,
+      updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      account: null == account
+              as DateTime?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as AdminAccount,
-      targetAccount: null == targetAccount
+              as AdminAccount?,
+      targetAccount: freezed == targetAccount
           ? _value.targetAccount
           : targetAccount // ignore: cast_nullable_to_non_nullable
-              as AdminAccount,
+              as AdminAccount?,
       assignedAccount: freezed == assignedAccount
           ? _value.assignedAccount
           : assignedAccount // ignore: cast_nullable_to_non_nullable
@@ -188,29 +188,37 @@ class _$AdminReportCopyWithImpl<$Res, $Val extends AdminReport>
           ? _value.actionTakenByAccount
           : actionTakenByAccount // ignore: cast_nullable_to_non_nullable
               as AdminAccount?,
-      statuses: null == statuses
+      statuses: freezed == statuses
           ? _value.statuses
           : statuses // ignore: cast_nullable_to_non_nullable
-              as List<Status>,
-      rules: null == rules
+              as List<Status>?,
+      rules: freezed == rules
           ? _value.rules
           : rules // ignore: cast_nullable_to_non_nullable
-              as List<Rule>,
+              as List<Rule>?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AdminAccountCopyWith<$Res> get account {
-    return $AdminAccountCopyWith<$Res>(_value.account, (value) {
+  $AdminAccountCopyWith<$Res>? get account {
+    if (_value.account == null) {
+      return null;
+    }
+
+    return $AdminAccountCopyWith<$Res>(_value.account!, (value) {
       return _then(_value.copyWith(account: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AdminAccountCopyWith<$Res> get targetAccount {
-    return $AdminAccountCopyWith<$Res>(_value.targetAccount, (value) {
+  $AdminAccountCopyWith<$Res>? get targetAccount {
+    if (_value.targetAccount == null) {
+      return null;
+    }
+
+    return $AdminAccountCopyWith<$Res>(_value.targetAccount!, (value) {
       return _then(_value.copyWith(targetAccount: value) as $Val);
     });
   }
@@ -249,26 +257,26 @@ abstract class _$$AdminReportImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'action_taken') bool actionTaken,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'action_taken') bool? actionTaken,
       @JsonKey(name: 'action_taken_at') DateTime? actionTakenAt,
-      @JsonKey(name: 'category') ReportCategory category,
-      @JsonKey(name: 'comment') String comment,
-      @JsonKey(name: 'forwarded') bool forwarded,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'updated_at') DateTime updatedAt,
-      @JsonKey(name: 'account') AdminAccount account,
-      @JsonKey(name: 'target_account') AdminAccount targetAccount,
+      @JsonKey(name: 'category') ReportCategory? category,
+      @JsonKey(name: 'comment') String? comment,
+      @JsonKey(name: 'forwarded') bool? forwarded,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'updated_at') DateTime? updatedAt,
+      @JsonKey(name: 'account') AdminAccount? account,
+      @JsonKey(name: 'target_account') AdminAccount? targetAccount,
       @JsonKey(name: 'assigned_account') AdminAccount? assignedAccount,
       @JsonKey(name: 'action_taken_by_account')
       AdminAccount? actionTakenByAccount,
-      @JsonKey(name: 'statuses') List<Status> statuses,
-      @JsonKey(name: 'rules') List<Rule> rules});
+      @JsonKey(name: 'statuses') List<Status>? statuses,
+      @JsonKey(name: 'rules') List<Rule>? rules});
 
   @override
-  $AdminAccountCopyWith<$Res> get account;
+  $AdminAccountCopyWith<$Res>? get account;
   @override
-  $AdminAccountCopyWith<$Res> get targetAccount;
+  $AdminAccountCopyWith<$Res>? get targetAccount;
   @override
   $AdminAccountCopyWith<$Res>? get assignedAccount;
   @override
@@ -286,62 +294,62 @@ class __$$AdminReportImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? actionTaken = null,
+    Object? id = freezed,
+    Object? actionTaken = freezed,
     Object? actionTakenAt = freezed,
-    Object? category = null,
-    Object? comment = null,
-    Object? forwarded = null,
-    Object? createdAt = null,
-    Object? updatedAt = null,
-    Object? account = null,
-    Object? targetAccount = null,
+    Object? category = freezed,
+    Object? comment = freezed,
+    Object? forwarded = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? account = freezed,
+    Object? targetAccount = freezed,
     Object? assignedAccount = freezed,
     Object? actionTakenByAccount = freezed,
-    Object? statuses = null,
-    Object? rules = null,
+    Object? statuses = freezed,
+    Object? rules = freezed,
   }) {
     return _then(_$AdminReportImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      actionTaken: null == actionTaken
+              as String?,
+      actionTaken: freezed == actionTaken
           ? _value.actionTaken
           : actionTaken // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       actionTakenAt: freezed == actionTakenAt
           ? _value.actionTakenAt
           : actionTakenAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      category: null == category
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as ReportCategory,
-      comment: null == comment
+              as ReportCategory?,
+      comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
-              as String,
-      forwarded: null == forwarded
+              as String?,
+      forwarded: freezed == forwarded
           ? _value.forwarded
           : forwarded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      createdAt: null == createdAt
+              as bool?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
+              as DateTime?,
+      updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      account: null == account
+              as DateTime?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as AdminAccount,
-      targetAccount: null == targetAccount
+              as AdminAccount?,
+      targetAccount: freezed == targetAccount
           ? _value.targetAccount
           : targetAccount // ignore: cast_nullable_to_non_nullable
-              as AdminAccount,
+              as AdminAccount?,
       assignedAccount: freezed == assignedAccount
           ? _value.assignedAccount
           : assignedAccount // ignore: cast_nullable_to_non_nullable
@@ -350,14 +358,14 @@ class __$$AdminReportImplCopyWithImpl<$Res>
           ? _value.actionTakenByAccount
           : actionTakenByAccount // ignore: cast_nullable_to_non_nullable
               as AdminAccount?,
-      statuses: null == statuses
+      statuses: freezed == statuses
           ? _value._statuses
           : statuses // ignore: cast_nullable_to_non_nullable
-              as List<Status>,
-      rules: null == rules
+              as List<Status>?,
+      rules: freezed == rules
           ? _value._rules
           : rules // ignore: cast_nullable_to_non_nullable
-              as List<Rule>,
+              as List<Rule>?,
     ));
   }
 }
@@ -366,20 +374,20 @@ class __$$AdminReportImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminReportImpl implements _AdminReport {
   const _$AdminReportImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'action_taken') required this.actionTaken,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'action_taken') this.actionTaken,
       @JsonKey(name: 'action_taken_at') this.actionTakenAt,
-      @JsonKey(name: 'category') required this.category,
-      @JsonKey(name: 'comment') required this.comment,
-      @JsonKey(name: 'forwarded') required this.forwarded,
-      @JsonKey(name: 'created_at') required this.createdAt,
-      @JsonKey(name: 'updated_at') required this.updatedAt,
-      @JsonKey(name: 'account') required this.account,
-      @JsonKey(name: 'target_account') required this.targetAccount,
+      @JsonKey(name: 'category') this.category,
+      @JsonKey(name: 'comment') this.comment,
+      @JsonKey(name: 'forwarded') this.forwarded,
+      @JsonKey(name: 'created_at') this.createdAt,
+      @JsonKey(name: 'updated_at') this.updatedAt,
+      @JsonKey(name: 'account') this.account,
+      @JsonKey(name: 'target_account') this.targetAccount,
       @JsonKey(name: 'assigned_account') this.assignedAccount,
       @JsonKey(name: 'action_taken_by_account') this.actionTakenByAccount,
-      @JsonKey(name: 'statuses') required final List<Status> statuses,
-      @JsonKey(name: 'rules') required final List<Rule> rules})
+      @JsonKey(name: 'statuses') final List<Status>? statuses,
+      @JsonKey(name: 'rules') final List<Rule>? rules})
       : _statuses = statuses,
         _rules = rules;
 
@@ -389,12 +397,12 @@ class _$AdminReportImpl implements _AdminReport {
   /// The ID of the report in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   ///  Whether an action was taken to resolve this report.
   @override
   @JsonKey(name: 'action_taken')
-  final bool actionTaken;
+  final bool? actionTaken;
 
   /// When an action was taken, if this report is currently resolved.
   @override
@@ -404,37 +412,37 @@ class _$AdminReportImpl implements _AdminReport {
   /// The category under which the report is classified.
   @override
   @JsonKey(name: 'category')
-  final ReportCategory category;
+  final ReportCategory? category;
 
   /// An optional reason for reporting.
   @override
   @JsonKey(name: 'comment')
-  final String comment;
+  final String? comment;
 
   /// Whether a report was forwarded to a remote instance.
   @override
   @JsonKey(name: 'forwarded')
-  final bool forwarded;
+  final bool? forwarded;
 
   /// The time the report was filed.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   /// The time of last action on this report.
   @override
   @JsonKey(name: 'updated_at')
-  final DateTime updatedAt;
+  final DateTime? updatedAt;
 
   /// The account which filed the report.
   @override
   @JsonKey(name: 'account')
-  final AdminAccount account;
+  final AdminAccount? account;
 
   /// The account being reported.
   @override
   @JsonKey(name: 'target_account')
-  final AdminAccount targetAccount;
+  final AdminAccount? targetAccount;
 
   /// The account of the moderator assigned to this report.
   @override
@@ -447,27 +455,31 @@ class _$AdminReportImpl implements _AdminReport {
   final AdminAccount? actionTakenByAccount;
 
   /// Statuses attached to the report, for context.
-  final List<Status> _statuses;
+  final List<Status>? _statuses;
 
   /// Statuses attached to the report, for context.
   @override
   @JsonKey(name: 'statuses')
-  List<Status> get statuses {
+  List<Status>? get statuses {
+    final value = _statuses;
+    if (value == null) return null;
     if (_statuses is EqualUnmodifiableListView) return _statuses;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_statuses);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Rules attached to the report, for context.
-  final List<Rule> _rules;
+  final List<Rule>? _rules;
 
   /// Rules attached to the report, for context.
   @override
   @JsonKey(name: 'rules')
-  List<Rule> get rules {
+  List<Rule>? get rules {
+    final value = _rules;
+    if (value == null) return null;
     if (_rules is EqualUnmodifiableListView) return _rules;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_rules);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -540,23 +552,21 @@ class _$AdminReportImpl implements _AdminReport {
 
 abstract class _AdminReport implements AdminReport {
   const factory _AdminReport(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'action_taken') required final bool actionTaken,
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'action_taken') final bool? actionTaken,
       @JsonKey(name: 'action_taken_at') final DateTime? actionTakenAt,
-      @JsonKey(name: 'category') required final ReportCategory category,
-      @JsonKey(name: 'comment') required final String comment,
-      @JsonKey(name: 'forwarded') required final bool forwarded,
-      @JsonKey(name: 'created_at') required final DateTime createdAt,
-      @JsonKey(name: 'updated_at') required final DateTime updatedAt,
-      @JsonKey(name: 'account') required final AdminAccount account,
-      @JsonKey(name: 'target_account')
-      required final AdminAccount targetAccount,
+      @JsonKey(name: 'category') final ReportCategory? category,
+      @JsonKey(name: 'comment') final String? comment,
+      @JsonKey(name: 'forwarded') final bool? forwarded,
+      @JsonKey(name: 'created_at') final DateTime? createdAt,
+      @JsonKey(name: 'updated_at') final DateTime? updatedAt,
+      @JsonKey(name: 'account') final AdminAccount? account,
+      @JsonKey(name: 'target_account') final AdminAccount? targetAccount,
       @JsonKey(name: 'assigned_account') final AdminAccount? assignedAccount,
       @JsonKey(name: 'action_taken_by_account')
       final AdminAccount? actionTakenByAccount,
-      @JsonKey(name: 'statuses') required final List<Status> statuses,
-      @JsonKey(name: 'rules')
-      required final List<Rule> rules}) = _$AdminReportImpl;
+      @JsonKey(name: 'statuses') final List<Status>? statuses,
+      @JsonKey(name: 'rules') final List<Rule>? rules}) = _$AdminReportImpl;
 
   factory _AdminReport.fromJson(Map<String, dynamic> json) =
       _$AdminReportImpl.fromJson;
@@ -565,12 +575,12 @@ abstract class _AdminReport implements AdminReport {
 
   /// The ID of the report in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   ///  Whether an action was taken to resolve this report.
   @JsonKey(name: 'action_taken')
-  bool get actionTaken;
+  bool? get actionTaken;
   @override
 
   /// When an action was taken, if this report is currently resolved.
@@ -580,37 +590,37 @@ abstract class _AdminReport implements AdminReport {
 
   /// The category under which the report is classified.
   @JsonKey(name: 'category')
-  ReportCategory get category;
+  ReportCategory? get category;
   @override
 
   /// An optional reason for reporting.
   @JsonKey(name: 'comment')
-  String get comment;
+  String? get comment;
   @override
 
   /// Whether a report was forwarded to a remote instance.
   @JsonKey(name: 'forwarded')
-  bool get forwarded;
+  bool? get forwarded;
   @override
 
   /// The time the report was filed.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
 
   /// The time of last action on this report.
   @JsonKey(name: 'updated_at')
-  DateTime get updatedAt;
+  DateTime? get updatedAt;
   @override
 
   /// The account which filed the report.
   @JsonKey(name: 'account')
-  AdminAccount get account;
+  AdminAccount? get account;
   @override
 
   /// The account being reported.
   @JsonKey(name: 'target_account')
-  AdminAccount get targetAccount;
+  AdminAccount? get targetAccount;
   @override
 
   /// The account of the moderator assigned to this report.
@@ -625,12 +635,12 @@ abstract class _AdminReport implements AdminReport {
 
   /// Statuses attached to the report, for context.
   @JsonKey(name: 'statuses')
-  List<Status> get statuses;
+  List<Status>? get statuses;
   @override
 
   /// Rules attached to the report, for context.
   @JsonKey(name: 'rules')
-  List<Rule> get rules;
+  List<Rule>? get rules;
   @override
   @JsonKey(ignore: true)
   _$$AdminReportImplCopyWith<_$AdminReportImpl> get copyWith =>

@@ -22,15 +22,15 @@ Search _$SearchFromJson(Map<String, dynamic> json) {
 mixin _$Search {
   /// Accounts which match the given query.
   @JsonKey(name: 'accounts')
-  List<Account> get accounts => throw _privateConstructorUsedError;
+  List<Account>? get accounts => throw _privateConstructorUsedError;
 
   /// Statuses which match the given query.
   @JsonKey(name: 'statuses')
-  List<Status> get statuses => throw _privateConstructorUsedError;
+  List<Status>? get statuses => throw _privateConstructorUsedError;
 
   /// Hashtags which match the given query.
   @JsonKey(name: 'hashtags')
-  List<Tag> get hashtags => throw _privateConstructorUsedError;
+  List<Tag>? get hashtags => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,9 +43,9 @@ abstract class $SearchCopyWith<$Res> {
       _$SearchCopyWithImpl<$Res, Search>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'accounts') List<Account> accounts,
-      @JsonKey(name: 'statuses') List<Status> statuses,
-      @JsonKey(name: 'hashtags') List<Tag> hashtags});
+      {@JsonKey(name: 'accounts') List<Account>? accounts,
+      @JsonKey(name: 'statuses') List<Status>? statuses,
+      @JsonKey(name: 'hashtags') List<Tag>? hashtags});
 }
 
 /// @nodoc
@@ -61,23 +61,23 @@ class _$SearchCopyWithImpl<$Res, $Val extends Search>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? accounts = null,
-    Object? statuses = null,
-    Object? hashtags = null,
+    Object? accounts = freezed,
+    Object? statuses = freezed,
+    Object? hashtags = freezed,
   }) {
     return _then(_value.copyWith(
-      accounts: null == accounts
+      accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as List<Account>,
-      statuses: null == statuses
+              as List<Account>?,
+      statuses: freezed == statuses
           ? _value.statuses
           : statuses // ignore: cast_nullable_to_non_nullable
-              as List<Status>,
-      hashtags: null == hashtags
+              as List<Status>?,
+      hashtags: freezed == hashtags
           ? _value.hashtags
           : hashtags // ignore: cast_nullable_to_non_nullable
-              as List<Tag>,
+              as List<Tag>?,
     ) as $Val);
   }
 }
@@ -90,9 +90,9 @@ abstract class _$$SearchImplCopyWith<$Res> implements $SearchCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'accounts') List<Account> accounts,
-      @JsonKey(name: 'statuses') List<Status> statuses,
-      @JsonKey(name: 'hashtags') List<Tag> hashtags});
+      {@JsonKey(name: 'accounts') List<Account>? accounts,
+      @JsonKey(name: 'statuses') List<Status>? statuses,
+      @JsonKey(name: 'hashtags') List<Tag>? hashtags});
 }
 
 /// @nodoc
@@ -106,23 +106,23 @@ class __$$SearchImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? accounts = null,
-    Object? statuses = null,
-    Object? hashtags = null,
+    Object? accounts = freezed,
+    Object? statuses = freezed,
+    Object? hashtags = freezed,
   }) {
     return _then(_$SearchImpl(
-      accounts: null == accounts
+      accounts: freezed == accounts
           ? _value._accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as List<Account>,
-      statuses: null == statuses
+              as List<Account>?,
+      statuses: freezed == statuses
           ? _value._statuses
           : statuses // ignore: cast_nullable_to_non_nullable
-              as List<Status>,
-      hashtags: null == hashtags
+              as List<Status>?,
+      hashtags: freezed == hashtags
           ? _value._hashtags
           : hashtags // ignore: cast_nullable_to_non_nullable
-              as List<Tag>,
+              as List<Tag>?,
     ));
   }
 }
@@ -131,9 +131,9 @@ class __$$SearchImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SearchImpl implements _Search {
   const _$SearchImpl(
-      {@JsonKey(name: 'accounts') required final List<Account> accounts,
-      @JsonKey(name: 'statuses') required final List<Status> statuses,
-      @JsonKey(name: 'hashtags') required final List<Tag> hashtags})
+      {@JsonKey(name: 'accounts') final List<Account>? accounts,
+      @JsonKey(name: 'statuses') final List<Status>? statuses,
+      @JsonKey(name: 'hashtags') final List<Tag>? hashtags})
       : _accounts = accounts,
         _statuses = statuses,
         _hashtags = hashtags;
@@ -142,39 +142,45 @@ class _$SearchImpl implements _Search {
       _$$SearchImplFromJson(json);
 
   /// Accounts which match the given query.
-  final List<Account> _accounts;
+  final List<Account>? _accounts;
 
   /// Accounts which match the given query.
   @override
   @JsonKey(name: 'accounts')
-  List<Account> get accounts {
+  List<Account>? get accounts {
+    final value = _accounts;
+    if (value == null) return null;
     if (_accounts is EqualUnmodifiableListView) return _accounts;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_accounts);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Statuses which match the given query.
-  final List<Status> _statuses;
+  final List<Status>? _statuses;
 
   /// Statuses which match the given query.
   @override
   @JsonKey(name: 'statuses')
-  List<Status> get statuses {
+  List<Status>? get statuses {
+    final value = _statuses;
+    if (value == null) return null;
     if (_statuses is EqualUnmodifiableListView) return _statuses;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_statuses);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Hashtags which match the given query.
-  final List<Tag> _hashtags;
+  final List<Tag>? _hashtags;
 
   /// Hashtags which match the given query.
   @override
   @JsonKey(name: 'hashtags')
-  List<Tag> get hashtags {
+  List<Tag>? get hashtags {
+    final value = _hashtags;
+    if (value == null) return null;
     if (_hashtags is EqualUnmodifiableListView) return _hashtags;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_hashtags);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -216,10 +222,9 @@ class _$SearchImpl implements _Search {
 
 abstract class _Search implements Search {
   const factory _Search(
-          {@JsonKey(name: 'accounts') required final List<Account> accounts,
-          @JsonKey(name: 'statuses') required final List<Status> statuses,
-          @JsonKey(name: 'hashtags') required final List<Tag> hashtags}) =
-      _$SearchImpl;
+      {@JsonKey(name: 'accounts') final List<Account>? accounts,
+      @JsonKey(name: 'statuses') final List<Status>? statuses,
+      @JsonKey(name: 'hashtags') final List<Tag>? hashtags}) = _$SearchImpl;
 
   factory _Search.fromJson(Map<String, dynamic> json) = _$SearchImpl.fromJson;
 
@@ -227,17 +232,17 @@ abstract class _Search implements Search {
 
   /// Accounts which match the given query.
   @JsonKey(name: 'accounts')
-  List<Account> get accounts;
+  List<Account>? get accounts;
   @override
 
   /// Statuses which match the given query.
   @JsonKey(name: 'statuses')
-  List<Status> get statuses;
+  List<Status>? get statuses;
   @override
 
   /// Hashtags which match the given query.
   @JsonKey(name: 'hashtags')
-  List<Tag> get hashtags;
+  List<Tag>? get hashtags;
   @override
   @JsonKey(ignore: true)
   _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>

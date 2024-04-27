@@ -22,11 +22,11 @@ Announcement _$AnnouncementFromJson(Map<String, dynamic> json) {
 mixin _$Announcement {
   /// The ID of the announcement in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The text of the announcement.
   @JsonKey(name: 'content')
-  String get content => throw _privateConstructorUsedError;
+  String? get content => throw _privateConstructorUsedError;
 
   /// When the announcement will start.
   @JsonKey(name: 'starts_at')
@@ -38,20 +38,20 @@ mixin _$Announcement {
 
   /// Whether the announcement is currently active.
   @JsonKey(name: 'published')
-  bool get published => throw _privateConstructorUsedError;
+  bool? get published => throw _privateConstructorUsedError;
 
   /// Whether the announcement should start and end on dates only instead of
   /// datetimes. Will be false if there is no starts_at or ends_at time.
   @JsonKey(name: 'all_day')
-  bool get allDay => throw _privateConstructorUsedError;
+  bool? get allDay => throw _privateConstructorUsedError;
 
   /// When the announcement was published.
   @JsonKey(name: 'published_at')
-  DateTime get publishedAt => throw _privateConstructorUsedError;
+  DateTime? get publishedAt => throw _privateConstructorUsedError;
 
   /// When the announcement was last updated.
   @JsonKey(name: 'updated_at')
-  DateTime get updatedAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
 
   /// Whether the announcement has been read by the current user.
   @JsonKey(name: 'read')
@@ -59,19 +59,19 @@ mixin _$Announcement {
 
   /// Accounts mentioned in the announcement text.
   @JsonKey(name: 'mentions')
-  List<AnnouncementAccount> get mentions => throw _privateConstructorUsedError;
+  List<AnnouncementAccount>? get mentions => throw _privateConstructorUsedError;
 
   /// Statuses linked in the announcement text.
   @JsonKey(name: 'statuses')
-  List<AnnouncementStatus> get statuses => throw _privateConstructorUsedError;
+  List<AnnouncementStatus>? get statuses => throw _privateConstructorUsedError;
 
   /// Tags linked in the announcement text.
   @JsonKey(name: 'tags')
-  List<StatusTag> get tags => throw _privateConstructorUsedError;
+  List<StatusTag>? get tags => throw _privateConstructorUsedError;
 
   /// Custom emoji used in the announcement text.
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis => throw _privateConstructorUsedError;
+  List<CustomEmoji>? get emojis => throw _privateConstructorUsedError;
 
   /// Emoji reactions attached to the announcement.
   @JsonKey(name: 'reactions')
@@ -90,19 +90,19 @@ abstract class $AnnouncementCopyWith<$Res> {
       _$AnnouncementCopyWithImpl<$Res, Announcement>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'content') String content,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'content') String? content,
       @JsonKey(name: 'starts_at') DateTime? startsAt,
       @JsonKey(name: 'ends_at') DateTime? endsAt,
-      @JsonKey(name: 'published') bool published,
-      @JsonKey(name: 'all_day') bool allDay,
-      @JsonKey(name: 'published_at') DateTime publishedAt,
-      @JsonKey(name: 'updated_at') DateTime updatedAt,
+      @JsonKey(name: 'published') bool? published,
+      @JsonKey(name: 'all_day') bool? allDay,
+      @JsonKey(name: 'published_at') DateTime? publishedAt,
+      @JsonKey(name: 'updated_at') DateTime? updatedAt,
       @JsonKey(name: 'read') bool? read,
-      @JsonKey(name: 'mentions') List<AnnouncementAccount> mentions,
-      @JsonKey(name: 'statuses') List<AnnouncementStatus> statuses,
-      @JsonKey(name: 'tags') List<StatusTag> tags,
-      @JsonKey(name: 'emojis') List<CustomEmoji> emojis,
+      @JsonKey(name: 'mentions') List<AnnouncementAccount>? mentions,
+      @JsonKey(name: 'statuses') List<AnnouncementStatus>? statuses,
+      @JsonKey(name: 'tags') List<StatusTag>? tags,
+      @JsonKey(name: 'emojis') List<CustomEmoji>? emojis,
       @JsonKey(name: 'reactions') List<Reaction>? reactions});
 }
 
@@ -119,30 +119,30 @@ class _$AnnouncementCopyWithImpl<$Res, $Val extends Announcement>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? content = null,
+    Object? id = freezed,
+    Object? content = freezed,
     Object? startsAt = freezed,
     Object? endsAt = freezed,
-    Object? published = null,
-    Object? allDay = null,
-    Object? publishedAt = null,
-    Object? updatedAt = null,
+    Object? published = freezed,
+    Object? allDay = freezed,
+    Object? publishedAt = freezed,
+    Object? updatedAt = freezed,
     Object? read = freezed,
-    Object? mentions = null,
-    Object? statuses = null,
-    Object? tags = null,
-    Object? emojis = null,
+    Object? mentions = freezed,
+    Object? statuses = freezed,
+    Object? tags = freezed,
+    Object? emojis = freezed,
     Object? reactions = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      content: null == content
+              as String?,
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       startsAt: freezed == startsAt
           ? _value.startsAt
           : startsAt // ignore: cast_nullable_to_non_nullable
@@ -151,42 +151,42 @@ class _$AnnouncementCopyWithImpl<$Res, $Val extends Announcement>
           ? _value.endsAt
           : endsAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      published: null == published
+      published: freezed == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
-              as bool,
-      allDay: null == allDay
+              as bool?,
+      allDay: freezed == allDay
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
-              as bool,
-      publishedAt: null == publishedAt
+              as bool?,
+      publishedAt: freezed == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
+              as DateTime?,
+      updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       read: freezed == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool?,
-      mentions: null == mentions
+      mentions: freezed == mentions
           ? _value.mentions
           : mentions // ignore: cast_nullable_to_non_nullable
-              as List<AnnouncementAccount>,
-      statuses: null == statuses
+              as List<AnnouncementAccount>?,
+      statuses: freezed == statuses
           ? _value.statuses
           : statuses // ignore: cast_nullable_to_non_nullable
-              as List<AnnouncementStatus>,
-      tags: null == tags
+              as List<AnnouncementStatus>?,
+      tags: freezed == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<StatusTag>,
-      emojis: null == emojis
+              as List<StatusTag>?,
+      emojis: freezed == emojis
           ? _value.emojis
           : emojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmoji>,
+              as List<CustomEmoji>?,
       reactions: freezed == reactions
           ? _value.reactions
           : reactions // ignore: cast_nullable_to_non_nullable
@@ -204,19 +204,19 @@ abstract class _$$AnnouncementImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'content') String content,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'content') String? content,
       @JsonKey(name: 'starts_at') DateTime? startsAt,
       @JsonKey(name: 'ends_at') DateTime? endsAt,
-      @JsonKey(name: 'published') bool published,
-      @JsonKey(name: 'all_day') bool allDay,
-      @JsonKey(name: 'published_at') DateTime publishedAt,
-      @JsonKey(name: 'updated_at') DateTime updatedAt,
+      @JsonKey(name: 'published') bool? published,
+      @JsonKey(name: 'all_day') bool? allDay,
+      @JsonKey(name: 'published_at') DateTime? publishedAt,
+      @JsonKey(name: 'updated_at') DateTime? updatedAt,
       @JsonKey(name: 'read') bool? read,
-      @JsonKey(name: 'mentions') List<AnnouncementAccount> mentions,
-      @JsonKey(name: 'statuses') List<AnnouncementStatus> statuses,
-      @JsonKey(name: 'tags') List<StatusTag> tags,
-      @JsonKey(name: 'emojis') List<CustomEmoji> emojis,
+      @JsonKey(name: 'mentions') List<AnnouncementAccount>? mentions,
+      @JsonKey(name: 'statuses') List<AnnouncementStatus>? statuses,
+      @JsonKey(name: 'tags') List<StatusTag>? tags,
+      @JsonKey(name: 'emojis') List<CustomEmoji>? emojis,
       @JsonKey(name: 'reactions') List<Reaction>? reactions});
 }
 
@@ -231,30 +231,30 @@ class __$$AnnouncementImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? content = null,
+    Object? id = freezed,
+    Object? content = freezed,
     Object? startsAt = freezed,
     Object? endsAt = freezed,
-    Object? published = null,
-    Object? allDay = null,
-    Object? publishedAt = null,
-    Object? updatedAt = null,
+    Object? published = freezed,
+    Object? allDay = freezed,
+    Object? publishedAt = freezed,
+    Object? updatedAt = freezed,
     Object? read = freezed,
-    Object? mentions = null,
-    Object? statuses = null,
-    Object? tags = null,
-    Object? emojis = null,
+    Object? mentions = freezed,
+    Object? statuses = freezed,
+    Object? tags = freezed,
+    Object? emojis = freezed,
     Object? reactions = freezed,
   }) {
     return _then(_$AnnouncementImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      content: null == content
+              as String?,
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       startsAt: freezed == startsAt
           ? _value.startsAt
           : startsAt // ignore: cast_nullable_to_non_nullable
@@ -263,42 +263,42 @@ class __$$AnnouncementImplCopyWithImpl<$Res>
           ? _value.endsAt
           : endsAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      published: null == published
+      published: freezed == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
-              as bool,
-      allDay: null == allDay
+              as bool?,
+      allDay: freezed == allDay
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
-              as bool,
-      publishedAt: null == publishedAt
+              as bool?,
+      publishedAt: freezed == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedAt: null == updatedAt
+              as DateTime?,
+      updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       read: freezed == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool?,
-      mentions: null == mentions
+      mentions: freezed == mentions
           ? _value._mentions
           : mentions // ignore: cast_nullable_to_non_nullable
-              as List<AnnouncementAccount>,
-      statuses: null == statuses
+              as List<AnnouncementAccount>?,
+      statuses: freezed == statuses
           ? _value._statuses
           : statuses // ignore: cast_nullable_to_non_nullable
-              as List<AnnouncementStatus>,
-      tags: null == tags
+              as List<AnnouncementStatus>?,
+      tags: freezed == tags
           ? _value._tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<StatusTag>,
-      emojis: null == emojis
+              as List<StatusTag>?,
+      emojis: freezed == emojis
           ? _value._emojis
           : emojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmoji>,
+              as List<CustomEmoji>?,
       reactions: freezed == reactions
           ? _value._reactions
           : reactions // ignore: cast_nullable_to_non_nullable
@@ -311,21 +311,19 @@ class __$$AnnouncementImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AnnouncementImpl implements _Announcement {
   const _$AnnouncementImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'content') required this.content,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'content') this.content,
       @JsonKey(name: 'starts_at') this.startsAt,
       @JsonKey(name: 'ends_at') this.endsAt,
-      @JsonKey(name: 'published') required this.published,
-      @JsonKey(name: 'all_day') required this.allDay,
-      @JsonKey(name: 'published_at') required this.publishedAt,
-      @JsonKey(name: 'updated_at') required this.updatedAt,
+      @JsonKey(name: 'published') this.published,
+      @JsonKey(name: 'all_day') this.allDay,
+      @JsonKey(name: 'published_at') this.publishedAt,
+      @JsonKey(name: 'updated_at') this.updatedAt,
       @JsonKey(name: 'read') this.read,
-      @JsonKey(name: 'mentions')
-      required final List<AnnouncementAccount> mentions,
-      @JsonKey(name: 'statuses')
-      required final List<AnnouncementStatus> statuses,
-      @JsonKey(name: 'tags') required final List<StatusTag> tags,
-      @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
+      @JsonKey(name: 'mentions') final List<AnnouncementAccount>? mentions,
+      @JsonKey(name: 'statuses') final List<AnnouncementStatus>? statuses,
+      @JsonKey(name: 'tags') final List<StatusTag>? tags,
+      @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
       @JsonKey(name: 'reactions') final List<Reaction>? reactions})
       : _mentions = mentions,
         _statuses = statuses,
@@ -339,12 +337,12 @@ class _$AnnouncementImpl implements _Announcement {
   /// The ID of the announcement in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The text of the announcement.
   @override
   @JsonKey(name: 'content')
-  final String content;
+  final String? content;
 
   /// When the announcement will start.
   @override
@@ -359,23 +357,23 @@ class _$AnnouncementImpl implements _Announcement {
   /// Whether the announcement is currently active.
   @override
   @JsonKey(name: 'published')
-  final bool published;
+  final bool? published;
 
   /// Whether the announcement should start and end on dates only instead of
   /// datetimes. Will be false if there is no starts_at or ends_at time.
   @override
   @JsonKey(name: 'all_day')
-  final bool allDay;
+  final bool? allDay;
 
   /// When the announcement was published.
   @override
   @JsonKey(name: 'published_at')
-  final DateTime publishedAt;
+  final DateTime? publishedAt;
 
   /// When the announcement was last updated.
   @override
   @JsonKey(name: 'updated_at')
-  final DateTime updatedAt;
+  final DateTime? updatedAt;
 
   /// Whether the announcement has been read by the current user.
   @override
@@ -383,51 +381,59 @@ class _$AnnouncementImpl implements _Announcement {
   final bool? read;
 
   /// Accounts mentioned in the announcement text.
-  final List<AnnouncementAccount> _mentions;
+  final List<AnnouncementAccount>? _mentions;
 
   /// Accounts mentioned in the announcement text.
   @override
   @JsonKey(name: 'mentions')
-  List<AnnouncementAccount> get mentions {
+  List<AnnouncementAccount>? get mentions {
+    final value = _mentions;
+    if (value == null) return null;
     if (_mentions is EqualUnmodifiableListView) return _mentions;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_mentions);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Statuses linked in the announcement text.
-  final List<AnnouncementStatus> _statuses;
+  final List<AnnouncementStatus>? _statuses;
 
   /// Statuses linked in the announcement text.
   @override
   @JsonKey(name: 'statuses')
-  List<AnnouncementStatus> get statuses {
+  List<AnnouncementStatus>? get statuses {
+    final value = _statuses;
+    if (value == null) return null;
     if (_statuses is EqualUnmodifiableListView) return _statuses;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_statuses);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Tags linked in the announcement text.
-  final List<StatusTag> _tags;
+  final List<StatusTag>? _tags;
 
   /// Tags linked in the announcement text.
   @override
   @JsonKey(name: 'tags')
-  List<StatusTag> get tags {
+  List<StatusTag>? get tags {
+    final value = _tags;
+    if (value == null) return null;
     if (_tags is EqualUnmodifiableListView) return _tags;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_tags);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Custom emoji used in the announcement text.
-  final List<CustomEmoji> _emojis;
+  final List<CustomEmoji>? _emojis;
 
   /// Custom emoji used in the announcement text.
   @override
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis {
+  List<CustomEmoji>? get emojis {
+    final value = _emojis;
+    if (value == null) return null;
     if (_emojis is EqualUnmodifiableListView) return _emojis;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_emojis);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Emoji reactions attached to the announcement.
@@ -510,21 +516,19 @@ class _$AnnouncementImpl implements _Announcement {
 
 abstract class _Announcement implements Announcement {
   const factory _Announcement(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'content') required final String content,
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'content') final String? content,
           @JsonKey(name: 'starts_at') final DateTime? startsAt,
           @JsonKey(name: 'ends_at') final DateTime? endsAt,
-          @JsonKey(name: 'published') required final bool published,
-          @JsonKey(name: 'all_day') required final bool allDay,
-          @JsonKey(name: 'published_at') required final DateTime publishedAt,
-          @JsonKey(name: 'updated_at') required final DateTime updatedAt,
+          @JsonKey(name: 'published') final bool? published,
+          @JsonKey(name: 'all_day') final bool? allDay,
+          @JsonKey(name: 'published_at') final DateTime? publishedAt,
+          @JsonKey(name: 'updated_at') final DateTime? updatedAt,
           @JsonKey(name: 'read') final bool? read,
-          @JsonKey(name: 'mentions')
-          required final List<AnnouncementAccount> mentions,
-          @JsonKey(name: 'statuses')
-          required final List<AnnouncementStatus> statuses,
-          @JsonKey(name: 'tags') required final List<StatusTag> tags,
-          @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
+          @JsonKey(name: 'mentions') final List<AnnouncementAccount>? mentions,
+          @JsonKey(name: 'statuses') final List<AnnouncementStatus>? statuses,
+          @JsonKey(name: 'tags') final List<StatusTag>? tags,
+          @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
           @JsonKey(name: 'reactions') final List<Reaction>? reactions}) =
       _$AnnouncementImpl;
 
@@ -535,12 +539,12 @@ abstract class _Announcement implements Announcement {
 
   /// The ID of the announcement in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The text of the announcement.
   @JsonKey(name: 'content')
-  String get content;
+  String? get content;
   @override
 
   /// When the announcement will start.
@@ -555,23 +559,23 @@ abstract class _Announcement implements Announcement {
 
   /// Whether the announcement is currently active.
   @JsonKey(name: 'published')
-  bool get published;
+  bool? get published;
   @override
 
   /// Whether the announcement should start and end on dates only instead of
   /// datetimes. Will be false if there is no starts_at or ends_at time.
   @JsonKey(name: 'all_day')
-  bool get allDay;
+  bool? get allDay;
   @override
 
   /// When the announcement was published.
   @JsonKey(name: 'published_at')
-  DateTime get publishedAt;
+  DateTime? get publishedAt;
   @override
 
   /// When the announcement was last updated.
   @JsonKey(name: 'updated_at')
-  DateTime get updatedAt;
+  DateTime? get updatedAt;
   @override
 
   /// Whether the announcement has been read by the current user.
@@ -581,22 +585,22 @@ abstract class _Announcement implements Announcement {
 
   /// Accounts mentioned in the announcement text.
   @JsonKey(name: 'mentions')
-  List<AnnouncementAccount> get mentions;
+  List<AnnouncementAccount>? get mentions;
   @override
 
   /// Statuses linked in the announcement text.
   @JsonKey(name: 'statuses')
-  List<AnnouncementStatus> get statuses;
+  List<AnnouncementStatus>? get statuses;
   @override
 
   /// Tags linked in the announcement text.
   @JsonKey(name: 'tags')
-  List<StatusTag> get tags;
+  List<StatusTag>? get tags;
   @override
 
   /// Custom emoji used in the announcement text.
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis;
+  List<CustomEmoji>? get emojis;
   @override
 
   /// Emoji reactions attached to the announcement.
@@ -616,15 +620,15 @@ AnnouncementAccount _$AnnouncementAccountFromJson(Map<String, dynamic> json) {
 mixin _$AnnouncementAccount {
   /// The account ID of the mentioned user.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The username of the mentioned user.
   @JsonKey(name: 'username')
-  String get username => throw _privateConstructorUsedError;
+  String? get username => throw _privateConstructorUsedError;
 
   /// The location of the mentioned user’s profile.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// The webfinger acct: URI of the mentioned user. Equivalent to `username`
   /// for local users, or `username@domain` for remote users.
@@ -644,9 +648,9 @@ abstract class $AnnouncementAccountCopyWith<$Res> {
       _$AnnouncementAccountCopyWithImpl<$Res, AnnouncementAccount>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'username') String username,
-      @JsonKey(name: 'url') String url,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'username') String? username,
+      @JsonKey(name: 'url') String? url,
       @JsonKey(name: 'acct') String? acct});
 }
 
@@ -663,24 +667,24 @@ class _$AnnouncementAccountCopyWithImpl<$Res, $Val extends AnnouncementAccount>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? username = null,
-    Object? url = null,
+    Object? id = freezed,
+    Object? username = freezed,
+    Object? url = freezed,
     Object? acct = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
+              as String?,
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       acct: freezed == acct
           ? _value.acct
           : acct // ignore: cast_nullable_to_non_nullable
@@ -698,9 +702,9 @@ abstract class _$$AnnouncementAccountImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'username') String username,
-      @JsonKey(name: 'url') String url,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'username') String? username,
+      @JsonKey(name: 'url') String? url,
       @JsonKey(name: 'acct') String? acct});
 }
 
@@ -715,24 +719,24 @@ class __$$AnnouncementAccountImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? username = null,
-    Object? url = null,
+    Object? id = freezed,
+    Object? username = freezed,
+    Object? url = freezed,
     Object? acct = freezed,
   }) {
     return _then(_$AnnouncementAccountImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
+              as String?,
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       acct: freezed == acct
           ? _value.acct
           : acct // ignore: cast_nullable_to_non_nullable
@@ -745,10 +749,10 @@ class __$$AnnouncementAccountImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AnnouncementAccountImpl implements _AnnouncementAccount {
   const _$AnnouncementAccountImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'username') required this.username,
-      @JsonKey(name: 'url') required this.url,
-      @JsonKey(name: 'acct') required this.acct});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'username') this.username,
+      @JsonKey(name: 'url') this.url,
+      @JsonKey(name: 'acct') this.acct});
 
   factory _$AnnouncementAccountImpl.fromJson(Map<String, dynamic> json) =>
       _$$AnnouncementAccountImplFromJson(json);
@@ -756,17 +760,17 @@ class _$AnnouncementAccountImpl implements _AnnouncementAccount {
   /// The account ID of the mentioned user.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The username of the mentioned user.
   @override
   @JsonKey(name: 'username')
-  final String username;
+  final String? username;
 
   /// The location of the mentioned user’s profile.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   /// The webfinger acct: URI of the mentioned user. Equivalent to `username`
   /// for local users, or `username@domain` for remote users.
@@ -812,11 +816,10 @@ class _$AnnouncementAccountImpl implements _AnnouncementAccount {
 
 abstract class _AnnouncementAccount implements AnnouncementAccount {
   const factory _AnnouncementAccount(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'username') required final String username,
-          @JsonKey(name: 'url') required final String url,
-          @JsonKey(name: 'acct') required final String? acct}) =
-      _$AnnouncementAccountImpl;
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'username') final String? username,
+      @JsonKey(name: 'url') final String? url,
+      @JsonKey(name: 'acct') final String? acct}) = _$AnnouncementAccountImpl;
 
   factory _AnnouncementAccount.fromJson(Map<String, dynamic> json) =
       _$AnnouncementAccountImpl.fromJson;
@@ -825,17 +828,17 @@ abstract class _AnnouncementAccount implements AnnouncementAccount {
 
   /// The account ID of the mentioned user.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The username of the mentioned user.
   @JsonKey(name: 'username')
-  String get username;
+  String? get username;
   @override
 
   /// The location of the mentioned user’s profile.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
 
   /// The webfinger acct: URI of the mentioned user. Equivalent to `username`
@@ -856,11 +859,11 @@ AnnouncementStatus _$AnnouncementStatusFromJson(Map<String, dynamic> json) {
 mixin _$AnnouncementStatus {
   /// The ID of an attached Status in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The URL of an attached Status.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -874,7 +877,8 @@ abstract class $AnnouncementStatusCopyWith<$Res> {
           AnnouncementStatus value, $Res Function(AnnouncementStatus) then) =
       _$AnnouncementStatusCopyWithImpl<$Res, AnnouncementStatus>;
   @useResult
-  $Res call({@JsonKey(name: 'id') String id, @JsonKey(name: 'url') String url});
+  $Res call(
+      {@JsonKey(name: 'id') String? id, @JsonKey(name: 'url') String? url});
 }
 
 /// @nodoc
@@ -890,18 +894,18 @@ class _$AnnouncementStatusCopyWithImpl<$Res, $Val extends AnnouncementStatus>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? url = null,
+    Object? id = freezed,
+    Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -914,7 +918,8 @@ abstract class _$$AnnouncementStatusImplCopyWith<$Res>
       __$$AnnouncementStatusImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'id') String id, @JsonKey(name: 'url') String url});
+  $Res call(
+      {@JsonKey(name: 'id') String? id, @JsonKey(name: 'url') String? url});
 }
 
 /// @nodoc
@@ -928,18 +933,18 @@ class __$$AnnouncementStatusImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? url = null,
+    Object? id = freezed,
+    Object? url = freezed,
   }) {
     return _then(_$AnnouncementStatusImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -948,8 +953,7 @@ class __$$AnnouncementStatusImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AnnouncementStatusImpl implements _AnnouncementStatus {
   const _$AnnouncementStatusImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'url') required this.url});
+      {@JsonKey(name: 'id') this.id, @JsonKey(name: 'url') this.url});
 
   factory _$AnnouncementStatusImpl.fromJson(Map<String, dynamic> json) =>
       _$$AnnouncementStatusImplFromJson(json);
@@ -957,12 +961,12 @@ class _$AnnouncementStatusImpl implements _AnnouncementStatus {
   /// The ID of an attached Status in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The URL of an attached Status.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   @override
   String toString() {
@@ -999,9 +1003,8 @@ class _$AnnouncementStatusImpl implements _AnnouncementStatus {
 
 abstract class _AnnouncementStatus implements AnnouncementStatus {
   const factory _AnnouncementStatus(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'url') required final String url}) =
-      _$AnnouncementStatusImpl;
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'url') final String? url}) = _$AnnouncementStatusImpl;
 
   factory _AnnouncementStatus.fromJson(Map<String, dynamic> json) =
       _$AnnouncementStatusImpl.fromJson;
@@ -1010,12 +1013,12 @@ abstract class _AnnouncementStatus implements AnnouncementStatus {
 
   /// The ID of an attached Status in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The URL of an attached Status.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
   @JsonKey(ignore: true)
   _$$AnnouncementStatusImplCopyWith<_$AnnouncementStatusImpl> get copyWith =>

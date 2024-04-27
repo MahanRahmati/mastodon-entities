@@ -14,25 +14,25 @@ part 'filter.g.dart';
 class Filter with _$Filter {
   const factory Filter({
     /// The ID of the Filter in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// A title given by the user to name the filter.
-    @JsonKey(name: 'title') required final String title,
+    @JsonKey(name: 'title') final String? title,
 
     /// The contexts in which the filter should be applied.
-    @JsonKey(name: 'context') required final List<FilterContext> context,
+    @JsonKey(name: 'context') final List<FilterContext>? context,
 
     /// When the filter should no longer be applied.
     @JsonKey(name: 'expires_at') final DateTime? expiresAt,
 
     /// The action to be taken when a status matches this filter.
-    @JsonKey(name: 'filter_action') required final FilterAction filterAction,
+    @JsonKey(name: 'filter_action') final FilterAction? filterAction,
 
     /// The keywords grouped under this filter.
-    @JsonKey(name: 'keywords') required final List<FilterKeyword> keywords,
+    @JsonKey(name: 'keywords') final List<FilterKeyword>? keywords,
 
     /// The statuses grouped under this filter.
-    @JsonKey(name: 'statuses') required final List<FilterStatus> statuses,
+    @JsonKey(name: 'statuses') final List<FilterStatus>? statuses,
   }) = _Filter;
 
   factory Filter.fromJson(final Map<String, dynamic> json) =>

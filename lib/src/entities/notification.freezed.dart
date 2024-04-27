@@ -22,19 +22,19 @@ Notification _$NotificationFromJson(Map<String, dynamic> json) {
 mixin _$Notification {
   /// The id of the notification in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The type of event that resulted in the notification.
   @JsonKey(name: 'type')
-  NotificationType get type => throw _privateConstructorUsedError;
+  NotificationType? get type => throw _privateConstructorUsedError;
 
   /// The timestamp of the notification.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   /// The account that performed the action that generated the notification.
   @JsonKey(name: 'account')
-  Account get account => throw _privateConstructorUsedError;
+  Account? get account => throw _privateConstructorUsedError;
 
   /// Status that was the object of the notification. Attached when `type` of
   /// the notification is `favourite`, `reblog`, `status`, `mention`, `poll`,
@@ -66,16 +66,16 @@ abstract class $NotificationCopyWith<$Res> {
       _$NotificationCopyWithImpl<$Res, Notification>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'type') NotificationType type,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'account') Account account,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'type') NotificationType? type,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'account') Account? account,
       @JsonKey(name: 'status') Status? status,
       @JsonKey(name: 'report') Report? report,
       @JsonKey(name: 'relationship_severance_event')
       RelationshipSeveranceEvent? relationshipSeveranceEvent});
 
-  $AccountCopyWith<$Res> get account;
+  $AccountCopyWith<$Res>? get account;
   $StatusCopyWith<$Res>? get status;
   $ReportCopyWith<$Res>? get report;
   $RelationshipSeveranceEventCopyWith<$Res>? get relationshipSeveranceEvent;
@@ -94,31 +94,31 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? type = null,
-    Object? createdAt = null,
-    Object? account = null,
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? createdAt = freezed,
+    Object? account = freezed,
     Object? status = freezed,
     Object? report = freezed,
     Object? relationshipSeveranceEvent = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as NotificationType,
-      createdAt: null == createdAt
+              as NotificationType?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      account: null == account
+              as DateTime?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as Account,
+              as Account?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -136,8 +136,12 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
 
   @override
   @pragma('vm:prefer-inline')
-  $AccountCopyWith<$Res> get account {
-    return $AccountCopyWith<$Res>(_value.account, (value) {
+  $AccountCopyWith<$Res>? get account {
+    if (_value.account == null) {
+      return null;
+    }
+
+    return $AccountCopyWith<$Res>(_value.account!, (value) {
       return _then(_value.copyWith(account: value) as $Val);
     });
   }
@@ -189,17 +193,17 @@ abstract class _$$NotificationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'type') NotificationType type,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'account') Account account,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'type') NotificationType? type,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'account') Account? account,
       @JsonKey(name: 'status') Status? status,
       @JsonKey(name: 'report') Report? report,
       @JsonKey(name: 'relationship_severance_event')
       RelationshipSeveranceEvent? relationshipSeveranceEvent});
 
   @override
-  $AccountCopyWith<$Res> get account;
+  $AccountCopyWith<$Res>? get account;
   @override
   $StatusCopyWith<$Res>? get status;
   @override
@@ -219,31 +223,31 @@ class __$$NotificationImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? type = null,
-    Object? createdAt = null,
-    Object? account = null,
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? createdAt = freezed,
+    Object? account = freezed,
     Object? status = freezed,
     Object? report = freezed,
     Object? relationshipSeveranceEvent = freezed,
   }) {
     return _then(_$NotificationImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as NotificationType,
-      createdAt: null == createdAt
+              as NotificationType?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      account: null == account
+              as DateTime?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as Account,
+              as Account?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -264,10 +268,10 @@ class __$$NotificationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NotificationImpl implements _Notification {
   const _$NotificationImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'type') required this.type,
-      @JsonKey(name: 'created_at') required this.createdAt,
-      @JsonKey(name: 'account') required this.account,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'created_at') this.createdAt,
+      @JsonKey(name: 'account') this.account,
       @JsonKey(name: 'status') this.status,
       @JsonKey(name: 'report') this.report,
       @JsonKey(name: 'relationship_severance_event')
@@ -279,22 +283,22 @@ class _$NotificationImpl implements _Notification {
   /// The id of the notification in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The type of event that resulted in the notification.
   @override
   @JsonKey(name: 'type')
-  final NotificationType type;
+  final NotificationType? type;
 
   /// The timestamp of the notification.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   /// The account that performed the action that generated the notification.
   @override
   @JsonKey(name: 'account')
-  final Account account;
+  final Account? account;
 
   /// Status that was the object of the notification. Attached when `type` of
   /// the notification is `favourite`, `reblog`, `status`, `mention`, `poll`,
@@ -359,10 +363,10 @@ class _$NotificationImpl implements _Notification {
 
 abstract class _Notification implements Notification {
   const factory _Notification(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'type') required final NotificationType type,
-          @JsonKey(name: 'created_at') required final DateTime createdAt,
-          @JsonKey(name: 'account') required final Account account,
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'type') final NotificationType? type,
+          @JsonKey(name: 'created_at') final DateTime? createdAt,
+          @JsonKey(name: 'account') final Account? account,
           @JsonKey(name: 'status') final Status? status,
           @JsonKey(name: 'report') final Report? report,
           @JsonKey(name: 'relationship_severance_event')
@@ -376,22 +380,22 @@ abstract class _Notification implements Notification {
 
   /// The id of the notification in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The type of event that resulted in the notification.
   @JsonKey(name: 'type')
-  NotificationType get type;
+  NotificationType? get type;
   @override
 
   /// The timestamp of the notification.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
 
   /// The account that performed the action that generated the notification.
   @JsonKey(name: 'account')
-  Account get account;
+  Account? get account;
   @override
 
   /// Status that was the object of the notification. Attached when `type` of

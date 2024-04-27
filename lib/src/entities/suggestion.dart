@@ -12,10 +12,10 @@ part 'suggestion.g.dart';
 class Suggestion with _$Suggestion {
   const factory Suggestion({
     /// The reason this account is being suggested.
-    @JsonKey(name: 'source') required final SuggestionSource source,
+    @JsonKey(name: 'source') final SuggestionSource? source,
 
     /// The account being recommended to follow.
-    @JsonKey(name: 'account') required final Account account,
+    @JsonKey(name: 'account') final Account? account,
   }) = _Suggestion;
 
   factory Suggestion.fromJson(final Map<String, dynamic> json) =>

@@ -8,30 +8,34 @@ part of 'announcement.dart';
 
 _$AnnouncementImpl _$$AnnouncementImplFromJson(Map<String, dynamic> json) =>
     _$AnnouncementImpl(
-      id: json['id'] as String,
-      content: json['content'] as String,
+      id: json['id'] as String?,
+      content: json['content'] as String?,
       startsAt: json['starts_at'] == null
           ? null
           : DateTime.parse(json['starts_at'] as String),
       endsAt: json['ends_at'] == null
           ? null
           : DateTime.parse(json['ends_at'] as String),
-      published: json['published'] as bool,
-      allDay: json['all_day'] as bool,
-      publishedAt: DateTime.parse(json['published_at'] as String),
-      updatedAt: DateTime.parse(json['updated_at'] as String),
+      published: json['published'] as bool?,
+      allDay: json['all_day'] as bool?,
+      publishedAt: json['published_at'] == null
+          ? null
+          : DateTime.parse(json['published_at'] as String),
+      updatedAt: json['updated_at'] == null
+          ? null
+          : DateTime.parse(json['updated_at'] as String),
       read: json['read'] as bool?,
-      mentions: (json['mentions'] as List<dynamic>)
-          .map((e) => AnnouncementAccount.fromJson(e as Map<String, dynamic>))
+      mentions: (json['mentions'] as List<dynamic>?)
+          ?.map((e) => AnnouncementAccount.fromJson(e as Map<String, dynamic>))
           .toList(),
-      statuses: (json['statuses'] as List<dynamic>)
-          .map((e) => AnnouncementStatus.fromJson(e as Map<String, dynamic>))
+      statuses: (json['statuses'] as List<dynamic>?)
+          ?.map((e) => AnnouncementStatus.fromJson(e as Map<String, dynamic>))
           .toList(),
-      tags: (json['tags'] as List<dynamic>)
-          .map((e) => StatusTag.fromJson(e as Map<String, dynamic>))
+      tags: (json['tags'] as List<dynamic>?)
+          ?.map((e) => StatusTag.fromJson(e as Map<String, dynamic>))
           .toList(),
-      emojis: (json['emojis'] as List<dynamic>)
-          .map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
+      emojis: (json['emojis'] as List<dynamic>?)
+          ?.map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
           .toList(),
       reactions: (json['reactions'] as List<dynamic>?)
           ?.map((e) => Reaction.fromJson(e as Map<String, dynamic>))
@@ -46,8 +50,8 @@ Map<String, dynamic> _$$AnnouncementImplToJson(_$AnnouncementImpl instance) =>
       'ends_at': instance.endsAt?.toIso8601String(),
       'published': instance.published,
       'all_day': instance.allDay,
-      'published_at': instance.publishedAt.toIso8601String(),
-      'updated_at': instance.updatedAt.toIso8601String(),
+      'published_at': instance.publishedAt?.toIso8601String(),
+      'updated_at': instance.updatedAt?.toIso8601String(),
       'read': instance.read,
       'mentions': instance.mentions,
       'statuses': instance.statuses,
@@ -59,9 +63,9 @@ Map<String, dynamic> _$$AnnouncementImplToJson(_$AnnouncementImpl instance) =>
 _$AnnouncementAccountImpl _$$AnnouncementAccountImplFromJson(
         Map<String, dynamic> json) =>
     _$AnnouncementAccountImpl(
-      id: json['id'] as String,
-      username: json['username'] as String,
-      url: json['url'] as String,
+      id: json['id'] as String?,
+      username: json['username'] as String?,
+      url: json['url'] as String?,
       acct: json['acct'] as String?,
     );
 
@@ -77,8 +81,8 @@ Map<String, dynamic> _$$AnnouncementAccountImplToJson(
 _$AnnouncementStatusImpl _$$AnnouncementStatusImplFromJson(
         Map<String, dynamic> json) =>
     _$AnnouncementStatusImpl(
-      id: json['id'] as String,
-      url: json['url'] as String,
+      id: json['id'] as String?,
+      url: json['url'] as String?,
     );
 
 Map<String, dynamic> _$$AnnouncementStatusImplToJson(

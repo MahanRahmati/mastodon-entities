@@ -11,43 +11,43 @@ part 'preview_card.g.dart';
 class PreviewCard with _$PreviewCard {
   const factory PreviewCard({
     /// Location of linked resource.
-    @JsonKey(name: 'url') required final String url,
+    @JsonKey(name: 'url') final String? url,
 
     /// Title of linked resource.
-    @JsonKey(name: 'title') required final String title,
+    @JsonKey(name: 'title') final String? title,
 
     /// Description of preview.
-    @JsonKey(name: 'description') required final String description,
+    @JsonKey(name: 'description') final String? description,
 
     /// The type of the preview card.
-    @JsonKey(name: 'type') required final PreviewCardType type,
+    @JsonKey(name: 'type') final PreviewCardType? type,
 
     /// The author of the original resource.
-    @JsonKey(name: 'author_name') required final String authorName,
+    @JsonKey(name: 'author_name') final String? authorName,
 
     /// A link to the author of the original resource.
-    @JsonKey(name: 'author_url') required final String authorUrl,
+    @JsonKey(name: 'author_url') final String? authorUrl,
 
     /// The provider of the original resource.
-    @JsonKey(name: 'provider_name') required final String providerName,
+    @JsonKey(name: 'provider_name') final String? providerName,
 
     /// A link to the provider of the original resource.
-    @JsonKey(name: 'provider_url') required final String providerUrl,
+    @JsonKey(name: 'provider_url') final String? providerUrl,
 
     /// HTML to be used for generating the preview card.
-    @JsonKey(name: 'html') required final String html,
+    @JsonKey(name: 'html') final String? html,
 
     /// Width of preview, in pixels.
-    @JsonKey(name: 'width') required final int width,
+    @JsonKey(name: 'width') final int? width,
 
     /// Height of preview, in pixels.
-    @JsonKey(name: 'height') required final int height,
+    @JsonKey(name: 'height') final int? height,
 
     /// Preview thumbnail.
     @JsonKey(name: 'image') final String? image,
 
     /// Used for photo embeds, instead of custom [html].
-    @JsonKey(name: 'embed_url') required final String embedUrl,
+    @JsonKey(name: 'embed_url') final String? embedUrl,
 
     /// A hash computed by the BlurHash algorithm, for generating colorful
     /// preview thumbnails when media has not been downloaded yet.
@@ -62,50 +62,50 @@ class PreviewCard with _$PreviewCard {
 class TrendsLink with _$TrendsLink {
   const factory TrendsLink({
     /// Location of linked resource.
-    @JsonKey(name: 'url') required final String url,
+    @JsonKey(name: 'url') final String? url,
 
     /// Title of linked resource.
-    @JsonKey(name: 'title') required final String title,
+    @JsonKey(name: 'title') final String? title,
 
     /// Description of preview.
-    @JsonKey(name: 'description') required final String description,
+    @JsonKey(name: 'description') final String? description,
 
     /// The type of the preview card.
-    @JsonKey(name: 'type') required final PreviewCardType type,
+    @JsonKey(name: 'type') final PreviewCardType? type,
 
     /// The author of the original resource.
-    @JsonKey(name: 'author_name') required final String authorName,
+    @JsonKey(name: 'author_name') final String? authorName,
 
     /// A link to the author of the original resource.
-    @JsonKey(name: 'author_url') required final String authorUrl,
+    @JsonKey(name: 'author_url') final String? authorUrl,
 
     /// The provider of the original resource.
-    @JsonKey(name: 'provider_name') required final String providerName,
+    @JsonKey(name: 'provider_name') final String? providerName,
 
     /// A link to the provider of the original resource.
-    @JsonKey(name: 'provider_url') required final String providerUrl,
+    @JsonKey(name: 'provider_url') final String? providerUrl,
 
     /// HTML to be used for generating the preview card.
-    @JsonKey(name: 'html') required final String html,
+    @JsonKey(name: 'html') final String? html,
 
     /// Width of preview, in pixels.
-    @JsonKey(name: 'width') required final int width,
+    @JsonKey(name: 'width') final int? width,
 
     /// Height of preview, in pixels.
-    @JsonKey(name: 'height') required final int height,
+    @JsonKey(name: 'height') final int? height,
 
     /// Preview thumbnail.
     @JsonKey(name: 'image') final String? image,
 
     /// Used for photo embeds, instead of custom [html].
-    @JsonKey(name: 'embed_url') required final String embedUrl,
+    @JsonKey(name: 'embed_url') final String? embedUrl,
 
     /// A hash computed by the BlurHash algorithm, for generating colorful
     /// preview thumbnails when media has not been downloaded yet.
     @JsonKey(name: 'blurhash') final String? blurhash,
 
     /// Usage statistics for given days (typically the past week).
-    @JsonKey(name: 'history') required final List<TrendsLinkHistory> history,
+    @JsonKey(name: 'history') final List<TrendsLinkHistory>? history,
   }) = _TrendsLink;
 
   factory TrendsLink.fromJson(final Map<String, dynamic> json) =>
@@ -116,13 +116,13 @@ class TrendsLink with _$TrendsLink {
 class TrendsLinkHistory with _$TrendsLinkHistory {
   const factory TrendsLinkHistory({
     /// UNIX timestamp on midnight of the given day.
-    @JsonKey(name: 'day') required final String day,
+    @JsonKey(name: 'day') final String? day,
 
     /// The counted accounts using the link within that day.
-    @JsonKey(name: 'uses') required final String uses,
+    @JsonKey(name: 'uses') final String? uses,
 
     /// The counted statuses using the link within that day.
-    @JsonKey(name: 'accounts') required final String accounts,
+    @JsonKey(name: 'accounts') final String? accounts,
   }) = _TrendsLinkHistory;
 
   factory TrendsLinkHistory.fromJson(final Map<String, dynamic> json) =>

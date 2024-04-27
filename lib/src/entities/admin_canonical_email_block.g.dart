@@ -9,8 +9,8 @@ part of 'admin_canonical_email_block.dart';
 _$AdminCanonicalEmailBlockImpl _$$AdminCanonicalEmailBlockImplFromJson(
         Map<String, dynamic> json) =>
     _$AdminCanonicalEmailBlockImpl(
-      id: json['id'] as String,
-      canonicalEmailHash: json['canonical_email_hash'] as String,
+      id: json['id'] as String?,
+      canonicalEmailHash: json['canonical_email_hash'] as String?,
     );
 
 Map<String, dynamic> _$$AdminCanonicalEmailBlockImplToJson(

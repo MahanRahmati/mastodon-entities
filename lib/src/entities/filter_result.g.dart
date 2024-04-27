@@ -8,7 +8,9 @@ part of 'filter_result.dart';
 
 _$FilterResultImpl _$$FilterResultImplFromJson(Map<String, dynamic> json) =>
     _$FilterResultImpl(
-      filter: Filter.fromJson(json['filter'] as Map<String, dynamic>),
+      filter: json['filter'] == null
+          ? null
+          : Filter.fromJson(json['filter'] as Map<String, dynamic>),
       keywordMatches: (json['keyword_matches'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),

@@ -8,10 +8,10 @@ part of 'conversation.dart';
 
 _$ConversationImpl _$$ConversationImplFromJson(Map<String, dynamic> json) =>
     _$ConversationImpl(
-      id: json['id'] as String,
-      unread: json['unread'] as bool,
-      accounts: (json['accounts'] as List<dynamic>)
-          .map((e) => Account.fromJson(e as Map<String, dynamic>))
+      id: json['id'] as String?,
+      unread: json['unread'] as bool?,
+      accounts: (json['accounts'] as List<dynamic>?)
+          ?.map((e) => Account.fromJson(e as Map<String, dynamic>))
           .toList(),
       lastStatus: json['last_status'] == null
           ? null

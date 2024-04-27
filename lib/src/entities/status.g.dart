@@ -7,32 +7,37 @@ part of 'status.dart';
 // **************************************************************************
 
 _$StatusImpl _$$StatusImplFromJson(Map<String, dynamic> json) => _$StatusImpl(
-      id: json['id'] as String,
-      uri: json['uri'] as String,
-      createdAt: DateTime.parse(json['created_at'] as String),
-      account: Account.fromJson(json['account'] as Map<String, dynamic>),
-      content: json['content'] as String,
-      visibility: $enumDecode(_$StatusVisibilityEnumMap, json['visibility']),
-      sensitive: json['sensitive'] as bool,
-      spoilerText: json['spoiler_text'] as String,
-      mediaAttachments: (json['media_attachments'] as List<dynamic>)
-          .map((e) => MediaAttachment.fromJson(e as Map<String, dynamic>))
+      id: json['id'] as String?,
+      uri: json['uri'] as String?,
+      createdAt: json['created_at'] == null
+          ? null
+          : DateTime.parse(json['created_at'] as String),
+      account: json['account'] == null
+          ? null
+          : Account.fromJson(json['account'] as Map<String, dynamic>),
+      content: json['content'] as String?,
+      visibility:
+          $enumDecodeNullable(_$StatusVisibilityEnumMap, json['visibility']),
+      sensitive: json['sensitive'] as bool?,
+      spoilerText: json['spoiler_text'] as String?,
+      mediaAttachments: (json['media_attachments'] as List<dynamic>?)
+          ?.map((e) => MediaAttachment.fromJson(e as Map<String, dynamic>))
           .toList(),
       application: json['application'] == null
           ? null
           : Application.fromJson(json['application'] as Map<String, dynamic>),
-      mentions: (json['mentions'] as List<dynamic>)
-          .map((e) => StatusMention.fromJson(e as Map<String, dynamic>))
+      mentions: (json['mentions'] as List<dynamic>?)
+          ?.map((e) => StatusMention.fromJson(e as Map<String, dynamic>))
           .toList(),
-      tags: (json['tags'] as List<dynamic>)
-          .map((e) => StatusTag.fromJson(e as Map<String, dynamic>))
+      tags: (json['tags'] as List<dynamic>?)
+          ?.map((e) => StatusTag.fromJson(e as Map<String, dynamic>))
           .toList(),
-      emojis: (json['emojis'] as List<dynamic>)
-          .map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
+      emojis: (json['emojis'] as List<dynamic>?)
+          ?.map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
           .toList(),
-      reblogsCount: (json['reblogs_count'] as num).toInt(),
-      favouritesCount: (json['favourites_count'] as num).toInt(),
-      repliesCount: (json['replies_count'] as num).toInt(),
+      reblogsCount: (json['reblogs_count'] as num?)?.toInt(),
+      favouritesCount: (json['favourites_count'] as num?)?.toInt(),
+      repliesCount: (json['replies_count'] as num?)?.toInt(),
       url: json['url'] as String?,
       inReplyToId: json['in_reply_to_id'] as String?,
       inReplyToAccountId: json['in_reply_to_account_id'] as String?,
@@ -64,10 +69,10 @@ Map<String, dynamic> _$$StatusImplToJson(_$StatusImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'uri': instance.uri,
-      'created_at': instance.createdAt.toIso8601String(),
+      'created_at': instance.createdAt?.toIso8601String(),
       'account': instance.account,
       'content': instance.content,
-      'visibility': _$StatusVisibilityEnumMap[instance.visibility]!,
+      'visibility': _$StatusVisibilityEnumMap[instance.visibility],
       'sensitive': instance.sensitive,
       'spoiler_text': instance.spoilerText,
       'media_attachments': instance.mediaAttachments,
@@ -104,10 +109,10 @@ const _$StatusVisibilityEnumMap = {
 
 _$StatusMentionImpl _$$StatusMentionImplFromJson(Map<String, dynamic> json) =>
     _$StatusMentionImpl(
-      id: json['id'] as String,
-      username: json['username'] as String,
-      url: json['url'] as String,
-      acct: json['acct'] as String,
+      id: json['id'] as String?,
+      username: json['username'] as String?,
+      url: json['url'] as String?,
+      acct: json['acct'] as String?,
     );
 
 Map<String, dynamic> _$$StatusMentionImplToJson(_$StatusMentionImpl instance) =>
@@ -120,8 +125,8 @@ Map<String, dynamic> _$$StatusMentionImplToJson(_$StatusMentionImpl instance) =>
 
 _$StatusTagImpl _$$StatusTagImplFromJson(Map<String, dynamic> json) =>
     _$StatusTagImpl(
-      name: json['name'] as String,
-      url: json['url'] as String,
+      name: json['name'] as String?,
+      url: json['url'] as String?,
     );
 
 Map<String, dynamic> _$$StatusTagImplToJson(_$StatusTagImpl instance) =>

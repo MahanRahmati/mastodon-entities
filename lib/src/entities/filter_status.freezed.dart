@@ -22,11 +22,11 @@ FilterStatus _$FilterStatusFromJson(Map<String, dynamic> json) {
 mixin _$FilterStatus {
   /// The ID of the FilterStatus in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The ID of the Status that will be filtered.
   @JsonKey(name: 'status_id')
-  String get statusId => throw _privateConstructorUsedError;
+  String? get statusId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,8 +41,8 @@ abstract class $FilterStatusCopyWith<$Res> {
       _$FilterStatusCopyWithImpl<$Res, FilterStatus>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'status_id') String statusId});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'status_id') String? statusId});
 }
 
 /// @nodoc
@@ -58,18 +58,18 @@ class _$FilterStatusCopyWithImpl<$Res, $Val extends FilterStatus>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? statusId = null,
+    Object? id = freezed,
+    Object? statusId = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      statusId: null == statusId
+              as String?,
+      statusId: freezed == statusId
           ? _value.statusId
           : statusId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -83,8 +83,8 @@ abstract class _$$FilterStatusImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'status_id') String statusId});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'status_id') String? statusId});
 }
 
 /// @nodoc
@@ -98,18 +98,18 @@ class __$$FilterStatusImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? statusId = null,
+    Object? id = freezed,
+    Object? statusId = freezed,
   }) {
     return _then(_$FilterStatusImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      statusId: null == statusId
+              as String?,
+      statusId: freezed == statusId
           ? _value.statusId
           : statusId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -118,8 +118,8 @@ class __$$FilterStatusImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FilterStatusImpl implements _FilterStatus {
   const _$FilterStatusImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'status_id') required this.statusId});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'status_id') this.statusId});
 
   factory _$FilterStatusImpl.fromJson(Map<String, dynamic> json) =>
       _$$FilterStatusImplFromJson(json);
@@ -127,12 +127,12 @@ class _$FilterStatusImpl implements _FilterStatus {
   /// The ID of the FilterStatus in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The ID of the Status that will be filtered.
   @override
   @JsonKey(name: 'status_id')
-  final String statusId;
+  final String? statusId;
 
   @override
   String toString() {
@@ -169,9 +169,8 @@ class _$FilterStatusImpl implements _FilterStatus {
 
 abstract class _FilterStatus implements FilterStatus {
   const factory _FilterStatus(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'status_id') required final String statusId}) =
-      _$FilterStatusImpl;
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'status_id') final String? statusId}) = _$FilterStatusImpl;
 
   factory _FilterStatus.fromJson(Map<String, dynamic> json) =
       _$FilterStatusImpl.fromJson;
@@ -180,12 +179,12 @@ abstract class _FilterStatus implements FilterStatus {
 
   /// The ID of the FilterStatus in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The ID of the Status that will be filtered.
   @JsonKey(name: 'status_id')
-  String get statusId;
+  String? get statusId;
   @override
   @JsonKey(ignore: true)
   _$$FilterStatusImplCopyWith<_$FilterStatusImpl> get copyWith =>

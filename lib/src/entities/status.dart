@@ -17,54 +17,54 @@ part 'status.g.dart';
 class Status with _$Status {
   const factory Status({
     /// ID of the status in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// URI of the status used for federation.
-    @JsonKey(name: 'uri') required final String uri,
+    @JsonKey(name: 'uri') final String? uri,
 
     /// The date when this status was created.
-    @JsonKey(name: 'created_at') required final DateTime createdAt,
+    @JsonKey(name: 'created_at') final DateTime? createdAt,
 
     /// The account that authored this status.
-    @JsonKey(name: 'account') required final Account account,
+    @JsonKey(name: 'account') final Account? account,
 
     /// HTML-encoded status content.
-    @JsonKey(name: 'content') required final String content,
+    @JsonKey(name: 'content') final String? content,
 
     /// Visibility of this status.
-    @JsonKey(name: 'visibility') required final StatusVisibility visibility,
+    @JsonKey(name: 'visibility') final StatusVisibility? visibility,
 
     /// Is this status marked as sensitive content?
-    @JsonKey(name: 'sensitive') required final bool sensitive,
+    @JsonKey(name: 'sensitive') final bool? sensitive,
 
     /// Subject or summary line, below which status content is collapsed until
     /// expanded.
-    @JsonKey(name: 'spoiler_text') required final String spoilerText,
+    @JsonKey(name: 'spoiler_text') final String? spoilerText,
 
     /// Media that is attached to this status.
     @JsonKey(name: 'media_attachments')
-    required final List<MediaAttachment> mediaAttachments,
+    final List<MediaAttachment>? mediaAttachments,
 
     /// The application used to post this status.
     @JsonKey(name: 'application') final Application? application,
 
     /// Mentions of users within the status content.
-    @JsonKey(name: 'mentions') required final List<StatusMention> mentions,
+    @JsonKey(name: 'mentions') final List<StatusMention>? mentions,
 
     /// Hashtags used within the status content.
-    @JsonKey(name: 'tags') required final List<StatusTag> tags,
+    @JsonKey(name: 'tags') final List<StatusTag>? tags,
 
     /// Custom emoji to be used when rendering status content.
-    @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
+    @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
 
     /// How many boosts this status has received.
-    @JsonKey(name: 'reblogs_count') required final int reblogsCount,
+    @JsonKey(name: 'reblogs_count') final int? reblogsCount,
 
     /// How many favourites this status has received.
-    @JsonKey(name: 'favourites_count') required final int favouritesCount,
+    @JsonKey(name: 'favourites_count') final int? favouritesCount,
 
     /// How many replies this status has received.
-    @JsonKey(name: 'replies_count') required final int repliesCount,
+    @JsonKey(name: 'replies_count') final int? repliesCount,
 
     /// A link to the status's HTML representation.
     @JsonKey(name: 'url') final String? url,
@@ -129,17 +129,17 @@ class Status with _$Status {
 class StatusMention with _$StatusMention {
   const factory StatusMention({
     /// The account ID of the mentioned user.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The username of the mentioned user.
-    @JsonKey(name: 'username') required final String username,
+    @JsonKey(name: 'username') final String? username,
 
     /// The location of the mentioned user’s profile.
-    @JsonKey(name: 'url') required final String url,
+    @JsonKey(name: 'url') final String? url,
 
     /// The webfinger acct: URI of the mentioned user. Equivalent to [username]
     /// for local users, or username@domain for remote users.
-    @JsonKey(name: 'acct') required final String acct,
+    @JsonKey(name: 'acct') final String? acct,
   }) = _StatusMention;
 
   factory StatusMention.fromJson(final Map<String, dynamic> json) =>
@@ -150,10 +150,10 @@ class StatusMention with _$StatusMention {
 class StatusTag with _$StatusTag {
   const factory StatusTag({
     /// The value of the hashtag after the # sign.
-    @JsonKey(name: 'name') required final String name,
+    @JsonKey(name: 'name') final String? name,
 
     /// A link to the hashtag on the instance.
-    @JsonKey(name: 'url') required final String url,
+    @JsonKey(name: 'url') final String? url,
   }) = _StatusTag;
 
   factory StatusTag.fromJson(final Map<String, dynamic> json) =>

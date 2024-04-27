@@ -22,15 +22,15 @@ StatusSource _$StatusSourceFromJson(Map<String, dynamic> json) {
 mixin _$StatusSource {
   /// ID of the status in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The plain text used to compose the status.
   @JsonKey(name: 'text')
-  String get text => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
 
   /// The plain text used to compose the status's subject or content warning.
   @JsonKey(name: 'spoiler_text')
-  String get spoilerText => throw _privateConstructorUsedError;
+  String? get spoilerText => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,9 +45,9 @@ abstract class $StatusSourceCopyWith<$Res> {
       _$StatusSourceCopyWithImpl<$Res, StatusSource>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'text') String text,
-      @JsonKey(name: 'spoiler_text') String spoilerText});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'text') String? text,
+      @JsonKey(name: 'spoiler_text') String? spoilerText});
 }
 
 /// @nodoc
@@ -63,23 +63,23 @@ class _$StatusSourceCopyWithImpl<$Res, $Val extends StatusSource>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? text = null,
-    Object? spoilerText = null,
+    Object? id = freezed,
+    Object? text = freezed,
+    Object? spoilerText = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      text: null == text
+              as String?,
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      spoilerText: null == spoilerText
+              as String?,
+      spoilerText: freezed == spoilerText
           ? _value.spoilerText
           : spoilerText // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -93,9 +93,9 @@ abstract class _$$StatusSourceImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'text') String text,
-      @JsonKey(name: 'spoiler_text') String spoilerText});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'text') String? text,
+      @JsonKey(name: 'spoiler_text') String? spoilerText});
 }
 
 /// @nodoc
@@ -109,23 +109,23 @@ class __$$StatusSourceImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? text = null,
-    Object? spoilerText = null,
+    Object? id = freezed,
+    Object? text = freezed,
+    Object? spoilerText = freezed,
   }) {
     return _then(_$StatusSourceImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      text: null == text
+              as String?,
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      spoilerText: null == spoilerText
+              as String?,
+      spoilerText: freezed == spoilerText
           ? _value.spoilerText
           : spoilerText // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -134,9 +134,9 @@ class __$$StatusSourceImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StatusSourceImpl implements _StatusSource {
   const _$StatusSourceImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'text') required this.text,
-      @JsonKey(name: 'spoiler_text') required this.spoilerText});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'text') this.text,
+      @JsonKey(name: 'spoiler_text') this.spoilerText});
 
   factory _$StatusSourceImpl.fromJson(Map<String, dynamic> json) =>
       _$$StatusSourceImplFromJson(json);
@@ -144,17 +144,17 @@ class _$StatusSourceImpl implements _StatusSource {
   /// ID of the status in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The plain text used to compose the status.
   @override
   @JsonKey(name: 'text')
-  final String text;
+  final String? text;
 
   /// The plain text used to compose the status's subject or content warning.
   @override
   @JsonKey(name: 'spoiler_text')
-  final String spoilerText;
+  final String? spoilerText;
 
   @override
   String toString() {
@@ -192,9 +192,9 @@ class _$StatusSourceImpl implements _StatusSource {
 
 abstract class _StatusSource implements StatusSource {
   const factory _StatusSource(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'text') required final String text,
-          @JsonKey(name: 'spoiler_text') required final String spoilerText}) =
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'text') final String? text,
+          @JsonKey(name: 'spoiler_text') final String? spoilerText}) =
       _$StatusSourceImpl;
 
   factory _StatusSource.fromJson(Map<String, dynamic> json) =
@@ -204,17 +204,17 @@ abstract class _StatusSource implements StatusSource {
 
   /// ID of the status in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The plain text used to compose the status.
   @JsonKey(name: 'text')
-  String get text;
+  String? get text;
   @override
 
   /// The plain text used to compose the status's subject or content warning.
   @JsonKey(name: 'spoiler_text')
-  String get spoilerText;
+  String? get spoilerText;
   @override
   @JsonKey(ignore: true)
   _$$StatusSourceImplCopyWith<_$StatusSourceImpl> get copyWith =>

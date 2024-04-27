@@ -9,10 +9,10 @@ part 'extended_description.g.dart';
 class ExtendedDescription with _$ExtendedDescription {
   const factory ExtendedDescription({
     /// A timestamp of when the extended description was last updated.
-    @JsonKey(name: 'updated_at') required final DateTime updatedAt,
+    @JsonKey(name: 'updated_at') final DateTime? updatedAt,
 
     /// The rendered HTML content of the extended description.
-    @JsonKey(name: 'content') required final String content,
+    @JsonKey(name: 'content') final String? content,
   }) = _ExtendedDescription;
 
   factory ExtendedDescription.fromJson(final Map<String, dynamic> json) =>

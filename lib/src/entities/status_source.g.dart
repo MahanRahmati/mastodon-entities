@@ -8,9 +8,9 @@ part of 'status_source.dart';
 
 _$StatusSourceImpl _$$StatusSourceImplFromJson(Map<String, dynamic> json) =>
     _$StatusSourceImpl(
-      id: json['id'] as String,
-      text: json['text'] as String,
-      spoilerText: json['spoiler_text'] as String,
+      id: json['id'] as String?,
+      text: json['text'] as String?,
+      spoilerText: json['spoiler_text'] as String?,
     );
 
 Map<String, dynamic> _$$StatusSourceImplToJson(_$StatusSourceImpl instance) =>

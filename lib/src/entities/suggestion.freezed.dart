@@ -22,11 +22,11 @@ Suggestion _$SuggestionFromJson(Map<String, dynamic> json) {
 mixin _$Suggestion {
   /// The reason this account is being suggested.
   @JsonKey(name: 'source')
-  SuggestionSource get source => throw _privateConstructorUsedError;
+  SuggestionSource? get source => throw _privateConstructorUsedError;
 
   /// The account being recommended to follow.
   @JsonKey(name: 'account')
-  Account get account => throw _privateConstructorUsedError;
+  Account? get account => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,10 +41,10 @@ abstract class $SuggestionCopyWith<$Res> {
       _$SuggestionCopyWithImpl<$Res, Suggestion>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'source') SuggestionSource source,
-      @JsonKey(name: 'account') Account account});
+      {@JsonKey(name: 'source') SuggestionSource? source,
+      @JsonKey(name: 'account') Account? account});
 
-  $AccountCopyWith<$Res> get account;
+  $AccountCopyWith<$Res>? get account;
 }
 
 /// @nodoc
@@ -60,25 +60,29 @@ class _$SuggestionCopyWithImpl<$Res, $Val extends Suggestion>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? source = null,
-    Object? account = null,
+    Object? source = freezed,
+    Object? account = freezed,
   }) {
     return _then(_value.copyWith(
-      source: null == source
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as SuggestionSource,
-      account: null == account
+              as SuggestionSource?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as Account,
+              as Account?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AccountCopyWith<$Res> get account {
-    return $AccountCopyWith<$Res>(_value.account, (value) {
+  $AccountCopyWith<$Res>? get account {
+    if (_value.account == null) {
+      return null;
+    }
+
+    return $AccountCopyWith<$Res>(_value.account!, (value) {
       return _then(_value.copyWith(account: value) as $Val);
     });
   }
@@ -93,11 +97,11 @@ abstract class _$$SuggestionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'source') SuggestionSource source,
-      @JsonKey(name: 'account') Account account});
+      {@JsonKey(name: 'source') SuggestionSource? source,
+      @JsonKey(name: 'account') Account? account});
 
   @override
-  $AccountCopyWith<$Res> get account;
+  $AccountCopyWith<$Res>? get account;
 }
 
 /// @nodoc
@@ -111,18 +115,18 @@ class __$$SuggestionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? source = null,
-    Object? account = null,
+    Object? source = freezed,
+    Object? account = freezed,
   }) {
     return _then(_$SuggestionImpl(
-      source: null == source
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as SuggestionSource,
-      account: null == account
+              as SuggestionSource?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as Account,
+              as Account?,
     ));
   }
 }
@@ -131,8 +135,8 @@ class __$$SuggestionImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SuggestionImpl implements _Suggestion {
   const _$SuggestionImpl(
-      {@JsonKey(name: 'source') required this.source,
-      @JsonKey(name: 'account') required this.account});
+      {@JsonKey(name: 'source') this.source,
+      @JsonKey(name: 'account') this.account});
 
   factory _$SuggestionImpl.fromJson(Map<String, dynamic> json) =>
       _$$SuggestionImplFromJson(json);
@@ -140,12 +144,12 @@ class _$SuggestionImpl implements _Suggestion {
   /// The reason this account is being suggested.
   @override
   @JsonKey(name: 'source')
-  final SuggestionSource source;
+  final SuggestionSource? source;
 
   /// The account being recommended to follow.
   @override
   @JsonKey(name: 'account')
-  final Account account;
+  final Account? account;
 
   @override
   String toString() {
@@ -181,9 +185,8 @@ class _$SuggestionImpl implements _Suggestion {
 
 abstract class _Suggestion implements Suggestion {
   const factory _Suggestion(
-          {@JsonKey(name: 'source') required final SuggestionSource source,
-          @JsonKey(name: 'account') required final Account account}) =
-      _$SuggestionImpl;
+      {@JsonKey(name: 'source') final SuggestionSource? source,
+      @JsonKey(name: 'account') final Account? account}) = _$SuggestionImpl;
 
   factory _Suggestion.fromJson(Map<String, dynamic> json) =
       _$SuggestionImpl.fromJson;
@@ -192,12 +195,12 @@ abstract class _Suggestion implements Suggestion {
 
   /// The reason this account is being suggested.
   @JsonKey(name: 'source')
-  SuggestionSource get source;
+  SuggestionSource? get source;
   @override
 
   /// The account being recommended to follow.
   @JsonKey(name: 'account')
-  Account get account;
+  Account? get account;
   @override
   @JsonKey(ignore: true)
   _$$SuggestionImplCopyWith<_$SuggestionImpl> get copyWith =>

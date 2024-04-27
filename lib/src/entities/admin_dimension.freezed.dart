@@ -22,11 +22,11 @@ AdminDimension _$AdminDimensionFromJson(Map<String, dynamic> json) {
 mixin _$AdminDimension {
   /// The unique keystring for the requested dimension.
   @JsonKey(name: 'key')
-  String get key => throw _privateConstructorUsedError;
+  String? get key => throw _privateConstructorUsedError;
 
   /// The data available for the requested dimension.
   @JsonKey(name: 'data')
-  List<AdminDimensionData> get data => throw _privateConstructorUsedError;
+  List<AdminDimensionData>? get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,8 +41,8 @@ abstract class $AdminDimensionCopyWith<$Res> {
       _$AdminDimensionCopyWithImpl<$Res, AdminDimension>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'key') String key,
-      @JsonKey(name: 'data') List<AdminDimensionData> data});
+      {@JsonKey(name: 'key') String? key,
+      @JsonKey(name: 'data') List<AdminDimensionData>? data});
 }
 
 /// @nodoc
@@ -58,18 +58,18 @@ class _$AdminDimensionCopyWithImpl<$Res, $Val extends AdminDimension>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? key = null,
-    Object? data = null,
+    Object? key = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      key: null == key
+      key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
+              as String?,
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<AdminDimensionData>,
+              as List<AdminDimensionData>?,
     ) as $Val);
   }
 }
@@ -83,8 +83,8 @@ abstract class _$$AdminDimensionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'key') String key,
-      @JsonKey(name: 'data') List<AdminDimensionData> data});
+      {@JsonKey(name: 'key') String? key,
+      @JsonKey(name: 'data') List<AdminDimensionData>? data});
 }
 
 /// @nodoc
@@ -98,18 +98,18 @@ class __$$AdminDimensionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? key = null,
-    Object? data = null,
+    Object? key = freezed,
+    Object? data = freezed,
   }) {
     return _then(_$AdminDimensionImpl(
-      key: null == key
+      key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
+              as String?,
+      data: freezed == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<AdminDimensionData>,
+              as List<AdminDimensionData>?,
     ));
   }
 }
@@ -118,8 +118,8 @@ class __$$AdminDimensionImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminDimensionImpl implements _AdminDimension {
   const _$AdminDimensionImpl(
-      {@JsonKey(name: 'key') required this.key,
-      @JsonKey(name: 'data') required final List<AdminDimensionData> data})
+      {@JsonKey(name: 'key') this.key,
+      @JsonKey(name: 'data') final List<AdminDimensionData>? data})
       : _data = data;
 
   factory _$AdminDimensionImpl.fromJson(Map<String, dynamic> json) =>
@@ -128,18 +128,20 @@ class _$AdminDimensionImpl implements _AdminDimension {
   /// The unique keystring for the requested dimension.
   @override
   @JsonKey(name: 'key')
-  final String key;
+  final String? key;
 
   /// The data available for the requested dimension.
-  final List<AdminDimensionData> _data;
+  final List<AdminDimensionData>? _data;
 
   /// The data available for the requested dimension.
   @override
   @JsonKey(name: 'data')
-  List<AdminDimensionData> get data {
+  List<AdminDimensionData>? get data {
+    final value = _data;
+    if (value == null) return null;
     if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_data);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -178,9 +180,9 @@ class _$AdminDimensionImpl implements _AdminDimension {
 
 abstract class _AdminDimension implements AdminDimension {
   const factory _AdminDimension(
-      {@JsonKey(name: 'key') required final String key,
-      @JsonKey(name: 'data')
-      required final List<AdminDimensionData> data}) = _$AdminDimensionImpl;
+          {@JsonKey(name: 'key') final String? key,
+          @JsonKey(name: 'data') final List<AdminDimensionData>? data}) =
+      _$AdminDimensionImpl;
 
   factory _AdminDimension.fromJson(Map<String, dynamic> json) =
       _$AdminDimensionImpl.fromJson;
@@ -189,12 +191,12 @@ abstract class _AdminDimension implements AdminDimension {
 
   /// The unique keystring for the requested dimension.
   @JsonKey(name: 'key')
-  String get key;
+  String? get key;
   @override
 
   /// The data available for the requested dimension.
   @JsonKey(name: 'data')
-  List<AdminDimensionData> get data;
+  List<AdminDimensionData>? get data;
   @override
   @JsonKey(ignore: true)
   _$$AdminDimensionImplCopyWith<_$AdminDimensionImpl> get copyWith =>
@@ -209,15 +211,15 @@ AdminDimensionData _$AdminDimensionDataFromJson(Map<String, dynamic> json) {
 mixin _$AdminDimensionData {
   /// The unique keystring for this data item.
   @JsonKey(name: 'key')
-  String get key => throw _privateConstructorUsedError;
+  String? get key => throw _privateConstructorUsedError;
 
   /// A human-readable key for this data item.
   @JsonKey(name: 'human_key')
-  String get humanKey => throw _privateConstructorUsedError;
+  String? get humanKey => throw _privateConstructorUsedError;
 
   /// The value for this data item.
   @JsonKey(name: 'value')
-  String get value => throw _privateConstructorUsedError;
+  String? get value => throw _privateConstructorUsedError;
 
   /// The units associated with this data item's value, if applicable.
   @JsonKey(name: 'unit')
@@ -240,9 +242,9 @@ abstract class $AdminDimensionDataCopyWith<$Res> {
       _$AdminDimensionDataCopyWithImpl<$Res, AdminDimensionData>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'key') String key,
-      @JsonKey(name: 'human_key') String humanKey,
-      @JsonKey(name: 'value') String value,
+      {@JsonKey(name: 'key') String? key,
+      @JsonKey(name: 'human_key') String? humanKey,
+      @JsonKey(name: 'value') String? value,
       @JsonKey(name: 'unit') String? unit,
       @JsonKey(name: 'human_value') String? humanValue});
 }
@@ -260,25 +262,25 @@ class _$AdminDimensionDataCopyWithImpl<$Res, $Val extends AdminDimensionData>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? key = null,
-    Object? humanKey = null,
-    Object? value = null,
+    Object? key = freezed,
+    Object? humanKey = freezed,
+    Object? value = freezed,
     Object? unit = freezed,
     Object? humanValue = freezed,
   }) {
     return _then(_value.copyWith(
-      key: null == key
+      key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as String,
-      humanKey: null == humanKey
+              as String?,
+      humanKey: freezed == humanKey
           ? _value.humanKey
           : humanKey // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: null == value
+              as String?,
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       unit: freezed == unit
           ? _value.unit
           : unit // ignore: cast_nullable_to_non_nullable
@@ -300,9 +302,9 @@ abstract class _$$AdminDimensionDataImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'key') String key,
-      @JsonKey(name: 'human_key') String humanKey,
-      @JsonKey(name: 'value') String value,
+      {@JsonKey(name: 'key') String? key,
+      @JsonKey(name: 'human_key') String? humanKey,
+      @JsonKey(name: 'value') String? value,
       @JsonKey(name: 'unit') String? unit,
       @JsonKey(name: 'human_value') String? humanValue});
 }
@@ -318,25 +320,25 @@ class __$$AdminDimensionDataImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? key = null,
-    Object? humanKey = null,
-    Object? value = null,
+    Object? key = freezed,
+    Object? humanKey = freezed,
+    Object? value = freezed,
     Object? unit = freezed,
     Object? humanValue = freezed,
   }) {
     return _then(_$AdminDimensionDataImpl(
-      key: null == key
+      key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as String,
-      humanKey: null == humanKey
+              as String?,
+      humanKey: freezed == humanKey
           ? _value.humanKey
           : humanKey // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: null == value
+              as String?,
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       unit: freezed == unit
           ? _value.unit
           : unit // ignore: cast_nullable_to_non_nullable
@@ -353,9 +355,9 @@ class __$$AdminDimensionDataImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminDimensionDataImpl implements _AdminDimensionData {
   const _$AdminDimensionDataImpl(
-      {@JsonKey(name: 'key') required this.key,
-      @JsonKey(name: 'human_key') required this.humanKey,
-      @JsonKey(name: 'value') required this.value,
+      {@JsonKey(name: 'key') this.key,
+      @JsonKey(name: 'human_key') this.humanKey,
+      @JsonKey(name: 'value') this.value,
       @JsonKey(name: 'unit') this.unit,
       @JsonKey(name: 'human_value') this.humanValue});
 
@@ -365,17 +367,17 @@ class _$AdminDimensionDataImpl implements _AdminDimensionData {
   /// The unique keystring for this data item.
   @override
   @JsonKey(name: 'key')
-  final String key;
+  final String? key;
 
   /// A human-readable key for this data item.
   @override
   @JsonKey(name: 'human_key')
-  final String humanKey;
+  final String? humanKey;
 
   /// The value for this data item.
   @override
   @JsonKey(name: 'value')
-  final String value;
+  final String? value;
 
   /// The units associated with this data item's value, if applicable.
   @override
@@ -428,9 +430,9 @@ class _$AdminDimensionDataImpl implements _AdminDimensionData {
 
 abstract class _AdminDimensionData implements AdminDimensionData {
   const factory _AdminDimensionData(
-          {@JsonKey(name: 'key') required final String key,
-          @JsonKey(name: 'human_key') required final String humanKey,
-          @JsonKey(name: 'value') required final String value,
+          {@JsonKey(name: 'key') final String? key,
+          @JsonKey(name: 'human_key') final String? humanKey,
+          @JsonKey(name: 'value') final String? value,
           @JsonKey(name: 'unit') final String? unit,
           @JsonKey(name: 'human_value') final String? humanValue}) =
       _$AdminDimensionDataImpl;
@@ -442,17 +444,17 @@ abstract class _AdminDimensionData implements AdminDimensionData {
 
   /// The unique keystring for this data item.
   @JsonKey(name: 'key')
-  String get key;
+  String? get key;
   @override
 
   /// A human-readable key for this data item.
   @JsonKey(name: 'human_key')
-  String get humanKey;
+  String? get humanKey;
   @override
 
   /// The value for this data item.
   @JsonKey(name: 'value')
-  String get value;
+  String? get value;
   @override
 
   /// The units associated with this data item's value, if applicable.

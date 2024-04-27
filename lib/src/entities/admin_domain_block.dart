@@ -10,31 +10,31 @@ part 'admin_domain_block.g.dart';
 class AdminDomainBlock with _$AdminDomainBlock {
   const factory AdminDomainBlock({
     /// The ID of the DomainBlock in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The domain that is not allowed to federate.
-    @JsonKey(name: 'domain') required final String domain,
+    @JsonKey(name: 'domain') final String? domain,
 
     /// When the domain was blocked from federating.
-    @JsonKey(name: 'created_at') required final DateTime createdAt,
+    @JsonKey(name: 'created_at') final DateTime? createdAt,
 
     /// The policy to be applied by this domain block.
-    @JsonKey(name: 'severity') required final AdminDomainBlockSeverity severity,
+    @JsonKey(name: 'severity') final AdminDomainBlockSeverity? severity,
 
     /// Whether to reject media attachments from this domain.
-    @JsonKey(name: 'reject_media') required final bool rejectMedia,
+    @JsonKey(name: 'reject_media') final bool? rejectMedia,
 
     /// Whether to reject reports from this domain.
-    @JsonKey(name: 'reject_reports') required final bool rejectReports,
+    @JsonKey(name: 'reject_reports') final bool? rejectReports,
 
-    ///
+    // TODO(E): Add description.
     @JsonKey(name: 'private_comment') final String? privateComment,
 
-    ///
+    // TODO(E): Add description.
     @JsonKey(name: 'public_comment') final String? publicComment,
 
     /// Whether to obfuscate public displays of this domain block.
-    @JsonKey(name: 'obfuscate') required final bool obfuscate,
+    @JsonKey(name: 'obfuscate') final bool? obfuscate,
   }) = _AdminDomainBlock;
 
   factory AdminDomainBlock.fromJson(final Map<String, dynamic> json) =>

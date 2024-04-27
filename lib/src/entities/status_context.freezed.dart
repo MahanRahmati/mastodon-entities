@@ -22,11 +22,11 @@ StatusContext _$StatusContextFromJson(Map<String, dynamic> json) {
 mixin _$StatusContext {
   /// Parents in the thread.
   @JsonKey(name: 'ancestors')
-  List<Status> get ancestors => throw _privateConstructorUsedError;
+  List<Status>? get ancestors => throw _privateConstructorUsedError;
 
   /// Children in the thread.
   @JsonKey(name: 'descendants')
-  List<Status> get descendants => throw _privateConstructorUsedError;
+  List<Status>? get descendants => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,8 +41,8 @@ abstract class $StatusContextCopyWith<$Res> {
       _$StatusContextCopyWithImpl<$Res, StatusContext>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'ancestors') List<Status> ancestors,
-      @JsonKey(name: 'descendants') List<Status> descendants});
+      {@JsonKey(name: 'ancestors') List<Status>? ancestors,
+      @JsonKey(name: 'descendants') List<Status>? descendants});
 }
 
 /// @nodoc
@@ -58,18 +58,18 @@ class _$StatusContextCopyWithImpl<$Res, $Val extends StatusContext>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ancestors = null,
-    Object? descendants = null,
+    Object? ancestors = freezed,
+    Object? descendants = freezed,
   }) {
     return _then(_value.copyWith(
-      ancestors: null == ancestors
+      ancestors: freezed == ancestors
           ? _value.ancestors
           : ancestors // ignore: cast_nullable_to_non_nullable
-              as List<Status>,
-      descendants: null == descendants
+              as List<Status>?,
+      descendants: freezed == descendants
           ? _value.descendants
           : descendants // ignore: cast_nullable_to_non_nullable
-              as List<Status>,
+              as List<Status>?,
     ) as $Val);
   }
 }
@@ -83,8 +83,8 @@ abstract class _$$StatusContextImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'ancestors') List<Status> ancestors,
-      @JsonKey(name: 'descendants') List<Status> descendants});
+      {@JsonKey(name: 'ancestors') List<Status>? ancestors,
+      @JsonKey(name: 'descendants') List<Status>? descendants});
 }
 
 /// @nodoc
@@ -98,18 +98,18 @@ class __$$StatusContextImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ancestors = null,
-    Object? descendants = null,
+    Object? ancestors = freezed,
+    Object? descendants = freezed,
   }) {
     return _then(_$StatusContextImpl(
-      ancestors: null == ancestors
+      ancestors: freezed == ancestors
           ? _value._ancestors
           : ancestors // ignore: cast_nullable_to_non_nullable
-              as List<Status>,
-      descendants: null == descendants
+              as List<Status>?,
+      descendants: freezed == descendants
           ? _value._descendants
           : descendants // ignore: cast_nullable_to_non_nullable
-              as List<Status>,
+              as List<Status>?,
     ));
   }
 }
@@ -118,8 +118,8 @@ class __$$StatusContextImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StatusContextImpl implements _StatusContext {
   const _$StatusContextImpl(
-      {@JsonKey(name: 'ancestors') required final List<Status> ancestors,
-      @JsonKey(name: 'descendants') required final List<Status> descendants})
+      {@JsonKey(name: 'ancestors') final List<Status>? ancestors,
+      @JsonKey(name: 'descendants') final List<Status>? descendants})
       : _ancestors = ancestors,
         _descendants = descendants;
 
@@ -127,27 +127,31 @@ class _$StatusContextImpl implements _StatusContext {
       _$$StatusContextImplFromJson(json);
 
   /// Parents in the thread.
-  final List<Status> _ancestors;
+  final List<Status>? _ancestors;
 
   /// Parents in the thread.
   @override
   @JsonKey(name: 'ancestors')
-  List<Status> get ancestors {
+  List<Status>? get ancestors {
+    final value = _ancestors;
+    if (value == null) return null;
     if (_ancestors is EqualUnmodifiableListView) return _ancestors;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_ancestors);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Children in the thread.
-  final List<Status> _descendants;
+  final List<Status>? _descendants;
 
   /// Children in the thread.
   @override
   @JsonKey(name: 'descendants')
-  List<Status> get descendants {
+  List<Status>? get descendants {
+    final value = _descendants;
+    if (value == null) return null;
     if (_descendants is EqualUnmodifiableListView) return _descendants;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_descendants);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -189,9 +193,9 @@ class _$StatusContextImpl implements _StatusContext {
 
 abstract class _StatusContext implements StatusContext {
   const factory _StatusContext(
-      {@JsonKey(name: 'ancestors') required final List<Status> ancestors,
-      @JsonKey(name: 'descendants')
-      required final List<Status> descendants}) = _$StatusContextImpl;
+          {@JsonKey(name: 'ancestors') final List<Status>? ancestors,
+          @JsonKey(name: 'descendants') final List<Status>? descendants}) =
+      _$StatusContextImpl;
 
   factory _StatusContext.fromJson(Map<String, dynamic> json) =
       _$StatusContextImpl.fromJson;
@@ -200,12 +204,12 @@ abstract class _StatusContext implements StatusContext {
 
   /// Parents in the thread.
   @JsonKey(name: 'ancestors')
-  List<Status> get ancestors;
+  List<Status>? get ancestors;
   @override
 
   /// Children in the thread.
   @JsonKey(name: 'descendants')
-  List<Status> get descendants;
+  List<Status>? get descendants;
   @override
   @JsonKey(ignore: true)
   _$$StatusContextImplCopyWith<_$StatusContextImpl> get copyWith =>

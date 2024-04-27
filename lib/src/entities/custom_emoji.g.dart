@@ -8,11 +8,11 @@ part of 'custom_emoji.dart';
 
 _$CustomEmojiImpl _$$CustomEmojiImplFromJson(Map<String, dynamic> json) =>
     _$CustomEmojiImpl(
-      shortcode: json['shortcode'] as String,
-      url: json['url'] as String,
-      staticUrl: json['static_url'] as String,
-      visibleInPicker: json['visible_in_picker'] as bool,
-      category: json['category'] as String,
+      shortcode: json['shortcode'] as String?,
+      url: json['url'] as String?,
+      staticUrl: json['static_url'] as String?,
+      visibleInPicker: json['visible_in_picker'] as bool?,
+      category: json['category'] as String?,
     );
 
 Map<String, dynamic> _$$CustomEmojiImplToJson(_$CustomEmojiImpl instance) =>

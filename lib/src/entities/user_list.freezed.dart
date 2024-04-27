@@ -22,15 +22,15 @@ UserList _$UserListFromJson(Map<String, dynamic> json) {
 mixin _$UserList {
   /// The internal database ID of the list.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The user-defined title of the list.
   @JsonKey(name: 'title')
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
 
   /// Which replies should be shown in the list.
   @JsonKey(name: 'replies_policy')
-  RepliesPolicy get repliesPolicy => throw _privateConstructorUsedError;
+  RepliesPolicy? get repliesPolicy => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,9 +44,9 @@ abstract class $UserListCopyWith<$Res> {
       _$UserListCopyWithImpl<$Res, UserList>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'replies_policy') RepliesPolicy repliesPolicy});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'replies_policy') RepliesPolicy? repliesPolicy});
 }
 
 /// @nodoc
@@ -62,23 +62,23 @@ class _$UserListCopyWithImpl<$Res, $Val extends UserList>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? title = null,
-    Object? repliesPolicy = null,
+    Object? id = freezed,
+    Object? title = freezed,
+    Object? repliesPolicy = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      repliesPolicy: null == repliesPolicy
+              as String?,
+      repliesPolicy: freezed == repliesPolicy
           ? _value.repliesPolicy
           : repliesPolicy // ignore: cast_nullable_to_non_nullable
-              as RepliesPolicy,
+              as RepliesPolicy?,
     ) as $Val);
   }
 }
@@ -92,9 +92,9 @@ abstract class _$$UserListImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'replies_policy') RepliesPolicy repliesPolicy});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'replies_policy') RepliesPolicy? repliesPolicy});
 }
 
 /// @nodoc
@@ -108,23 +108,23 @@ class __$$UserListImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? title = null,
-    Object? repliesPolicy = null,
+    Object? id = freezed,
+    Object? title = freezed,
+    Object? repliesPolicy = freezed,
   }) {
     return _then(_$UserListImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      repliesPolicy: null == repliesPolicy
+              as String?,
+      repliesPolicy: freezed == repliesPolicy
           ? _value.repliesPolicy
           : repliesPolicy // ignore: cast_nullable_to_non_nullable
-              as RepliesPolicy,
+              as RepliesPolicy?,
     ));
   }
 }
@@ -133,9 +133,9 @@ class __$$UserListImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UserListImpl implements _UserList {
   const _$UserListImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'title') required this.title,
-      @JsonKey(name: 'replies_policy') required this.repliesPolicy});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'replies_policy') this.repliesPolicy});
 
   factory _$UserListImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserListImplFromJson(json);
@@ -143,17 +143,17 @@ class _$UserListImpl implements _UserList {
   /// The internal database ID of the list.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The user-defined title of the list.
   @override
   @JsonKey(name: 'title')
-  final String title;
+  final String? title;
 
   /// Which replies should be shown in the list.
   @override
   @JsonKey(name: 'replies_policy')
-  final RepliesPolicy repliesPolicy;
+  final RepliesPolicy? repliesPolicy;
 
   @override
   String toString() {
@@ -191,10 +191,10 @@ class _$UserListImpl implements _UserList {
 
 abstract class _UserList implements UserList {
   const factory _UserList(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'title') required final String title,
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'title') final String? title,
       @JsonKey(name: 'replies_policy')
-      required final RepliesPolicy repliesPolicy}) = _$UserListImpl;
+      final RepliesPolicy? repliesPolicy}) = _$UserListImpl;
 
   factory _UserList.fromJson(Map<String, dynamic> json) =
       _$UserListImpl.fromJson;
@@ -203,17 +203,17 @@ abstract class _UserList implements UserList {
 
   /// The internal database ID of the list.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The user-defined title of the list.
   @JsonKey(name: 'title')
-  String get title;
+  String? get title;
   @override
 
   /// Which replies should be shown in the list.
   @JsonKey(name: 'replies_policy')
-  RepliesPolicy get repliesPolicy;
+  RepliesPolicy? get repliesPolicy;
   @override
   @JsonKey(ignore: true)
   _$$UserListImplCopyWith<_$UserListImpl> get copyWith =>

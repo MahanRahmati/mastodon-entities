@@ -12,25 +12,25 @@ part 'report.g.dart';
 class Report with _$Report {
   const factory Report({
     /// The ID of the report in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// Whether an action was taken yet.
-    @JsonKey(name: 'action_taken') required final bool actionTaken,
+    @JsonKey(name: 'action_taken') final bool? actionTaken,
 
     /// When an action was taken against the report.
     @JsonKey(name: 'action_taken_at') final DateTime? actionTakenAt,
 
     /// The generic reason for the report.
-    @JsonKey(name: 'category') required final ReportCategory category,
+    @JsonKey(name: 'category') final ReportCategory? category,
 
     /// The reason for the report.
-    @JsonKey(name: 'comment') required final String comment,
+    @JsonKey(name: 'comment') final String? comment,
 
     /// Whether the report was forwarded to a remote domain.
-    @JsonKey(name: 'forwarded') required final bool forwarded,
+    @JsonKey(name: 'forwarded') final bool? forwarded,
 
     /// When the report was created.
-    @JsonKey(name: 'created_at') required final DateTime createdAt,
+    @JsonKey(name: 'created_at') final DateTime? createdAt,
 
     /// IDs of statuses that have been attached to this report for additional
     /// context.
@@ -40,7 +40,7 @@ class Report with _$Report {
     @JsonKey(name: 'rule_ids') final List<String>? ruleIds,
 
     /// The account that was reported.
-    @JsonKey(name: 'target_account') required final Account targetAccount,
+    @JsonKey(name: 'target_account') final Account? targetAccount,
   }) = _Report;
 
   factory Report.fromJson(final Map<String, dynamic> json) =>

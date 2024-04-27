@@ -22,23 +22,23 @@ FeaturedTag _$FeaturedTagFromJson(Map<String, dynamic> json) {
 mixin _$FeaturedTag {
   /// The internal ID of the featured tag in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The name of the hashtag being featured.
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   /// A link to all statuses by a user that contain this hashtag.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// The number of authored statuses containing this hashtag.
   @JsonKey(name: 'statuses_count')
-  int get statusesCount => throw _privateConstructorUsedError;
+  int? get statusesCount => throw _privateConstructorUsedError;
 
   /// The timestamp of the last authored status containing this hashtag.
   @JsonKey(name: 'last_status_at')
-  DateTime get lastStatusAt => throw _privateConstructorUsedError;
+  DateTime? get lastStatusAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -53,11 +53,11 @@ abstract class $FeaturedTagCopyWith<$Res> {
       _$FeaturedTagCopyWithImpl<$Res, FeaturedTag>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'statuses_count') int statusesCount,
-      @JsonKey(name: 'last_status_at') DateTime lastStatusAt});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'statuses_count') int? statusesCount,
+      @JsonKey(name: 'last_status_at') DateTime? lastStatusAt});
 }
 
 /// @nodoc
@@ -73,33 +73,33 @@ class _$FeaturedTagCopyWithImpl<$Res, $Val extends FeaturedTag>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? url = null,
-    Object? statusesCount = null,
-    Object? lastStatusAt = null,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? url = freezed,
+    Object? statusesCount = freezed,
+    Object? lastStatusAt = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
+              as String?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      statusesCount: null == statusesCount
+              as String?,
+      statusesCount: freezed == statusesCount
           ? _value.statusesCount
           : statusesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      lastStatusAt: null == lastStatusAt
+              as int?,
+      lastStatusAt: freezed == lastStatusAt
           ? _value.lastStatusAt
           : lastStatusAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -113,11 +113,11 @@ abstract class _$$FeaturedTagImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'statuses_count') int statusesCount,
-      @JsonKey(name: 'last_status_at') DateTime lastStatusAt});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'statuses_count') int? statusesCount,
+      @JsonKey(name: 'last_status_at') DateTime? lastStatusAt});
 }
 
 /// @nodoc
@@ -131,33 +131,33 @@ class __$$FeaturedTagImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? url = null,
-    Object? statusesCount = null,
-    Object? lastStatusAt = null,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? url = freezed,
+    Object? statusesCount = freezed,
+    Object? lastStatusAt = freezed,
   }) {
     return _then(_$FeaturedTagImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
+              as String?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      statusesCount: null == statusesCount
+              as String?,
+      statusesCount: freezed == statusesCount
           ? _value.statusesCount
           : statusesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      lastStatusAt: null == lastStatusAt
+              as int?,
+      lastStatusAt: freezed == lastStatusAt
           ? _value.lastStatusAt
           : lastStatusAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ));
   }
 }
@@ -166,11 +166,11 @@ class __$$FeaturedTagImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FeaturedTagImpl implements _FeaturedTag {
   const _$FeaturedTagImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'url') required this.url,
-      @JsonKey(name: 'statuses_count') required this.statusesCount,
-      @JsonKey(name: 'last_status_at') required this.lastStatusAt});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'name') this.name,
+      @JsonKey(name: 'url') this.url,
+      @JsonKey(name: 'statuses_count') this.statusesCount,
+      @JsonKey(name: 'last_status_at') this.lastStatusAt});
 
   factory _$FeaturedTagImpl.fromJson(Map<String, dynamic> json) =>
       _$$FeaturedTagImplFromJson(json);
@@ -178,27 +178,27 @@ class _$FeaturedTagImpl implements _FeaturedTag {
   /// The internal ID of the featured tag in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The name of the hashtag being featured.
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
 
   /// A link to all statuses by a user that contain this hashtag.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   /// The number of authored statuses containing this hashtag.
   @override
   @JsonKey(name: 'statuses_count')
-  final int statusesCount;
+  final int? statusesCount;
 
   /// The timestamp of the last authored status containing this hashtag.
   @override
   @JsonKey(name: 'last_status_at')
-  final DateTime lastStatusAt;
+  final DateTime? lastStatusAt;
 
   @override
   String toString() {
@@ -240,12 +240,12 @@ class _$FeaturedTagImpl implements _FeaturedTag {
 
 abstract class _FeaturedTag implements FeaturedTag {
   const factory _FeaturedTag(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'url') required final String url,
-      @JsonKey(name: 'statuses_count') required final int statusesCount,
-      @JsonKey(name: 'last_status_at')
-      required final DateTime lastStatusAt}) = _$FeaturedTagImpl;
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'name') final String? name,
+          @JsonKey(name: 'url') final String? url,
+          @JsonKey(name: 'statuses_count') final int? statusesCount,
+          @JsonKey(name: 'last_status_at') final DateTime? lastStatusAt}) =
+      _$FeaturedTagImpl;
 
   factory _FeaturedTag.fromJson(Map<String, dynamic> json) =
       _$FeaturedTagImpl.fromJson;
@@ -254,27 +254,27 @@ abstract class _FeaturedTag implements FeaturedTag {
 
   /// The internal ID of the featured tag in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The name of the hashtag being featured.
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
 
   /// A link to all statuses by a user that contain this hashtag.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
 
   /// The number of authored statuses containing this hashtag.
   @JsonKey(name: 'statuses_count')
-  int get statusesCount;
+  int? get statusesCount;
   @override
 
   /// The timestamp of the last authored status containing this hashtag.
   @JsonKey(name: 'last_status_at')
-  DateTime get lastStatusAt;
+  DateTime? get lastStatusAt;
   @override
   @JsonKey(ignore: true)
   _$$FeaturedTagImplCopyWith<_$FeaturedTagImpl> get copyWith =>

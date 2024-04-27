@@ -22,19 +22,19 @@ Token _$TokenFromJson(Map<String, dynamic> json) {
 mixin _$Token {
   /// An OAuth token to be used for authorization.
   @JsonKey(name: 'access_token')
-  String get accessToken => throw _privateConstructorUsedError;
+  String? get accessToken => throw _privateConstructorUsedError;
 
   /// The OAuth token type. Mastodon uses Bearer tokens.
   @JsonKey(name: 'token_type')
-  String get tokenType => throw _privateConstructorUsedError;
+  String? get tokenType => throw _privateConstructorUsedError;
 
   /// The OAuth scopes granted by this token, space-separated.
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  String? get scope => throw _privateConstructorUsedError;
 
   /// When the token was generated.
   @JsonKey(name: 'created_at')
-  int get createdAt => throw _privateConstructorUsedError;
+  int? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -47,10 +47,10 @@ abstract class $TokenCopyWith<$Res> {
       _$TokenCopyWithImpl<$Res, Token>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'access_token') String accessToken,
-      @JsonKey(name: 'token_type') String tokenType,
-      @JsonKey(name: 'scope') String scope,
-      @JsonKey(name: 'created_at') int createdAt});
+      {@JsonKey(name: 'access_token') String? accessToken,
+      @JsonKey(name: 'token_type') String? tokenType,
+      @JsonKey(name: 'scope') String? scope,
+      @JsonKey(name: 'created_at') int? createdAt});
 }
 
 /// @nodoc
@@ -66,28 +66,28 @@ class _$TokenCopyWithImpl<$Res, $Val extends Token>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? accessToken = null,
-    Object? tokenType = null,
-    Object? scope = null,
-    Object? createdAt = null,
+    Object? accessToken = freezed,
+    Object? tokenType = freezed,
+    Object? scope = freezed,
+    Object? createdAt = freezed,
   }) {
     return _then(_value.copyWith(
-      accessToken: null == accessToken
+      accessToken: freezed == accessToken
           ? _value.accessToken
           : accessToken // ignore: cast_nullable_to_non_nullable
-              as String,
-      tokenType: null == tokenType
+              as String?,
+      tokenType: freezed == tokenType
           ? _value.tokenType
           : tokenType // ignore: cast_nullable_to_non_nullable
-              as String,
-      scope: null == scope
+              as String?,
+      scope: freezed == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -100,10 +100,10 @@ abstract class _$$TokenImplCopyWith<$Res> implements $TokenCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'access_token') String accessToken,
-      @JsonKey(name: 'token_type') String tokenType,
-      @JsonKey(name: 'scope') String scope,
-      @JsonKey(name: 'created_at') int createdAt});
+      {@JsonKey(name: 'access_token') String? accessToken,
+      @JsonKey(name: 'token_type') String? tokenType,
+      @JsonKey(name: 'scope') String? scope,
+      @JsonKey(name: 'created_at') int? createdAt});
 }
 
 /// @nodoc
@@ -117,28 +117,28 @@ class __$$TokenImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? accessToken = null,
-    Object? tokenType = null,
-    Object? scope = null,
-    Object? createdAt = null,
+    Object? accessToken = freezed,
+    Object? tokenType = freezed,
+    Object? scope = freezed,
+    Object? createdAt = freezed,
   }) {
     return _then(_$TokenImpl(
-      accessToken: null == accessToken
+      accessToken: freezed == accessToken
           ? _value.accessToken
           : accessToken // ignore: cast_nullable_to_non_nullable
-              as String,
-      tokenType: null == tokenType
+              as String?,
+      tokenType: freezed == tokenType
           ? _value.tokenType
           : tokenType // ignore: cast_nullable_to_non_nullable
-              as String,
-      scope: null == scope
+              as String?,
+      scope: freezed == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -147,10 +147,10 @@ class __$$TokenImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TokenImpl implements _Token {
   const _$TokenImpl(
-      {@JsonKey(name: 'access_token') required this.accessToken,
-      @JsonKey(name: 'token_type') required this.tokenType,
-      @JsonKey(name: 'scope') required this.scope,
-      @JsonKey(name: 'created_at') required this.createdAt});
+      {@JsonKey(name: 'access_token') this.accessToken,
+      @JsonKey(name: 'token_type') this.tokenType,
+      @JsonKey(name: 'scope') this.scope,
+      @JsonKey(name: 'created_at') this.createdAt});
 
   factory _$TokenImpl.fromJson(Map<String, dynamic> json) =>
       _$$TokenImplFromJson(json);
@@ -158,22 +158,22 @@ class _$TokenImpl implements _Token {
   /// An OAuth token to be used for authorization.
   @override
   @JsonKey(name: 'access_token')
-  final String accessToken;
+  final String? accessToken;
 
   /// The OAuth token type. Mastodon uses Bearer tokens.
   @override
   @JsonKey(name: 'token_type')
-  final String tokenType;
+  final String? tokenType;
 
   /// The OAuth scopes granted by this token, space-separated.
   @override
   @JsonKey(name: 'scope')
-  final String scope;
+  final String? scope;
 
   /// When the token was generated.
   @override
   @JsonKey(name: 'created_at')
-  final int createdAt;
+  final int? createdAt;
 
   @override
   String toString() {
@@ -215,10 +215,10 @@ class _$TokenImpl implements _Token {
 
 abstract class _Token implements Token {
   const factory _Token(
-      {@JsonKey(name: 'access_token') required final String accessToken,
-      @JsonKey(name: 'token_type') required final String tokenType,
-      @JsonKey(name: 'scope') required final String scope,
-      @JsonKey(name: 'created_at') required final int createdAt}) = _$TokenImpl;
+      {@JsonKey(name: 'access_token') final String? accessToken,
+      @JsonKey(name: 'token_type') final String? tokenType,
+      @JsonKey(name: 'scope') final String? scope,
+      @JsonKey(name: 'created_at') final int? createdAt}) = _$TokenImpl;
 
   factory _Token.fromJson(Map<String, dynamic> json) = _$TokenImpl.fromJson;
 
@@ -226,22 +226,22 @@ abstract class _Token implements Token {
 
   /// An OAuth token to be used for authorization.
   @JsonKey(name: 'access_token')
-  String get accessToken;
+  String? get accessToken;
   @override
 
   /// The OAuth token type. Mastodon uses Bearer tokens.
   @JsonKey(name: 'token_type')
-  String get tokenType;
+  String? get tokenType;
   @override
 
   /// The OAuth scopes granted by this token, space-separated.
   @JsonKey(name: 'scope')
-  String get scope;
+  String? get scope;
   @override
 
   /// When the token was generated.
   @JsonKey(name: 'created_at')
-  int get createdAt;
+  int? get createdAt;
   @override
   @JsonKey(ignore: true)
   _$$TokenImplCopyWith<_$TokenImpl> get copyWith =>

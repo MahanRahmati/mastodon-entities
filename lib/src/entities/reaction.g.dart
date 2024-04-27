@@ -8,8 +8,8 @@ part of 'reaction.dart';
 
 _$ReactionImpl _$$ReactionImplFromJson(Map<String, dynamic> json) =>
     _$ReactionImpl(
-      name: json['name'] as String,
-      count: (json['count'] as num).toInt(),
+      name: json['name'] as String?,
+      count: (json['count'] as num?)?.toInt(),
       me: json['me'] as bool?,
       url: json['url'] as String?,
       staticUrl: json['static_url'] as String?,

@@ -10,10 +10,10 @@ part 'familiar_followers.g.dart';
 class FamiliarFollowers with _$FamiliarFollowers {
   const factory FamiliarFollowers({
     /// The ID of the Account in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// Accounts you follow that also follow this account.
-    @JsonKey(name: 'accounts') required final List<Account> accounts,
+    @JsonKey(name: 'accounts') final List<Account>? accounts,
   }) = _FamiliarFollowers;
 
   factory FamiliarFollowers.fromJson(final Map<String, dynamic> json) =>

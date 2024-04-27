@@ -10,22 +10,22 @@ part 'media_attachment.g.dart';
 class MediaAttachment with _$MediaAttachment {
   const factory MediaAttachment({
     ///  The ID of the attachment in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The type of the attachment.
-    @JsonKey(name: 'type') required final MediaAttachmentType type,
+    @JsonKey(name: 'type') final MediaAttachmentType? type,
 
     /// The location of the original full-size attachment.
-    @JsonKey(name: 'url') required final String url,
+    @JsonKey(name: 'url') final String? url,
 
     /// The location of a scaled-down preview of the attachment.
-    @JsonKey(name: 'preview_url') required final String previewUrl,
+    @JsonKey(name: 'preview_url') final String? previewUrl,
 
     /// The location of the full-size original attachment on the remote website.
     @JsonKey(name: 'remote_url') final String? remoteUrl,
 
     /// Metadata returned by Paperclip.
-    @JsonKey(name: 'meta') required final MediaAttachmentMeta meta,
+    @JsonKey(name: 'meta') final MediaAttachmentMeta? meta,
 
     /// Alternate text that describes what is in the media attachment, to be
     /// used for the visually impaired or when media attachments do not load.
@@ -33,7 +33,7 @@ class MediaAttachment with _$MediaAttachment {
 
     /// A hash computed by the BlurHash algorithm, for generating colorful
     /// preview thumbnails when media has not been downloaded yet.
-    @JsonKey(name: 'blurhash') required final String blurhash,
+    @JsonKey(name: 'blurhash') final String? blurhash,
   }) = _MediaAttachment;
 
   factory MediaAttachment.fromJson(final Map<String, dynamic> json) =>

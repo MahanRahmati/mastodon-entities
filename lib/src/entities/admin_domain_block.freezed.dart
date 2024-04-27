@@ -22,39 +22,37 @@ AdminDomainBlock _$AdminDomainBlockFromJson(Map<String, dynamic> json) {
 mixin _$AdminDomainBlock {
   /// The ID of the DomainBlock in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The domain that is not allowed to federate.
   @JsonKey(name: 'domain')
-  String get domain => throw _privateConstructorUsedError;
+  String? get domain => throw _privateConstructorUsedError;
 
   /// When the domain was blocked from federating.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   /// The policy to be applied by this domain block.
   @JsonKey(name: 'severity')
-  AdminDomainBlockSeverity get severity => throw _privateConstructorUsedError;
+  AdminDomainBlockSeverity? get severity => throw _privateConstructorUsedError;
 
   /// Whether to reject media attachments from this domain.
   @JsonKey(name: 'reject_media')
-  bool get rejectMedia => throw _privateConstructorUsedError;
+  bool? get rejectMedia => throw _privateConstructorUsedError;
 
   /// Whether to reject reports from this domain.
   @JsonKey(name: 'reject_reports')
-  bool get rejectReports => throw _privateConstructorUsedError;
-
-  ///
+  bool? get rejectReports =>
+      throw _privateConstructorUsedError; // TODO(E): Add description.
   @JsonKey(name: 'private_comment')
-  String? get privateComment => throw _privateConstructorUsedError;
-
-  ///
+  String? get privateComment =>
+      throw _privateConstructorUsedError; // TODO(E): Add description.
   @JsonKey(name: 'public_comment')
   String? get publicComment => throw _privateConstructorUsedError;
 
   /// Whether to obfuscate public displays of this domain block.
   @JsonKey(name: 'obfuscate')
-  bool get obfuscate => throw _privateConstructorUsedError;
+  bool? get obfuscate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -69,15 +67,15 @@ abstract class $AdminDomainBlockCopyWith<$Res> {
       _$AdminDomainBlockCopyWithImpl<$Res, AdminDomainBlock>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'domain') String domain,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'severity') AdminDomainBlockSeverity severity,
-      @JsonKey(name: 'reject_media') bool rejectMedia,
-      @JsonKey(name: 'reject_reports') bool rejectReports,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'severity') AdminDomainBlockSeverity? severity,
+      @JsonKey(name: 'reject_media') bool? rejectMedia,
+      @JsonKey(name: 'reject_reports') bool? rejectReports,
       @JsonKey(name: 'private_comment') String? privateComment,
       @JsonKey(name: 'public_comment') String? publicComment,
-      @JsonKey(name: 'obfuscate') bool obfuscate});
+      @JsonKey(name: 'obfuscate') bool? obfuscate});
 }
 
 /// @nodoc
@@ -93,41 +91,41 @@ class _$AdminDomainBlockCopyWithImpl<$Res, $Val extends AdminDomainBlock>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? domain = null,
-    Object? createdAt = null,
-    Object? severity = null,
-    Object? rejectMedia = null,
-    Object? rejectReports = null,
+    Object? id = freezed,
+    Object? domain = freezed,
+    Object? createdAt = freezed,
+    Object? severity = freezed,
+    Object? rejectMedia = freezed,
+    Object? rejectReports = freezed,
     Object? privateComment = freezed,
     Object? publicComment = freezed,
-    Object? obfuscate = null,
+    Object? obfuscate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      domain: null == domain
+              as String?,
+      domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      severity: null == severity
+              as DateTime?,
+      severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as AdminDomainBlockSeverity,
-      rejectMedia: null == rejectMedia
+              as AdminDomainBlockSeverity?,
+      rejectMedia: freezed == rejectMedia
           ? _value.rejectMedia
           : rejectMedia // ignore: cast_nullable_to_non_nullable
-              as bool,
-      rejectReports: null == rejectReports
+              as bool?,
+      rejectReports: freezed == rejectReports
           ? _value.rejectReports
           : rejectReports // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       privateComment: freezed == privateComment
           ? _value.privateComment
           : privateComment // ignore: cast_nullable_to_non_nullable
@@ -136,10 +134,10 @@ class _$AdminDomainBlockCopyWithImpl<$Res, $Val extends AdminDomainBlock>
           ? _value.publicComment
           : publicComment // ignore: cast_nullable_to_non_nullable
               as String?,
-      obfuscate: null == obfuscate
+      obfuscate: freezed == obfuscate
           ? _value.obfuscate
           : obfuscate // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -153,15 +151,15 @@ abstract class _$$AdminDomainBlockImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'domain') String domain,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'severity') AdminDomainBlockSeverity severity,
-      @JsonKey(name: 'reject_media') bool rejectMedia,
-      @JsonKey(name: 'reject_reports') bool rejectReports,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'severity') AdminDomainBlockSeverity? severity,
+      @JsonKey(name: 'reject_media') bool? rejectMedia,
+      @JsonKey(name: 'reject_reports') bool? rejectReports,
       @JsonKey(name: 'private_comment') String? privateComment,
       @JsonKey(name: 'public_comment') String? publicComment,
-      @JsonKey(name: 'obfuscate') bool obfuscate});
+      @JsonKey(name: 'obfuscate') bool? obfuscate});
 }
 
 /// @nodoc
@@ -175,41 +173,41 @@ class __$$AdminDomainBlockImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? domain = null,
-    Object? createdAt = null,
-    Object? severity = null,
-    Object? rejectMedia = null,
-    Object? rejectReports = null,
+    Object? id = freezed,
+    Object? domain = freezed,
+    Object? createdAt = freezed,
+    Object? severity = freezed,
+    Object? rejectMedia = freezed,
+    Object? rejectReports = freezed,
     Object? privateComment = freezed,
     Object? publicComment = freezed,
-    Object? obfuscate = null,
+    Object? obfuscate = freezed,
   }) {
     return _then(_$AdminDomainBlockImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      domain: null == domain
+              as String?,
+      domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      severity: null == severity
+              as DateTime?,
+      severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as AdminDomainBlockSeverity,
-      rejectMedia: null == rejectMedia
+              as AdminDomainBlockSeverity?,
+      rejectMedia: freezed == rejectMedia
           ? _value.rejectMedia
           : rejectMedia // ignore: cast_nullable_to_non_nullable
-              as bool,
-      rejectReports: null == rejectReports
+              as bool?,
+      rejectReports: freezed == rejectReports
           ? _value.rejectReports
           : rejectReports // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       privateComment: freezed == privateComment
           ? _value.privateComment
           : privateComment // ignore: cast_nullable_to_non_nullable
@@ -218,10 +216,10 @@ class __$$AdminDomainBlockImplCopyWithImpl<$Res>
           ? _value.publicComment
           : publicComment // ignore: cast_nullable_to_non_nullable
               as String?,
-      obfuscate: null == obfuscate
+      obfuscate: freezed == obfuscate
           ? _value.obfuscate
           : obfuscate // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -230,15 +228,15 @@ class __$$AdminDomainBlockImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminDomainBlockImpl implements _AdminDomainBlock {
   const _$AdminDomainBlockImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'domain') required this.domain,
-      @JsonKey(name: 'created_at') required this.createdAt,
-      @JsonKey(name: 'severity') required this.severity,
-      @JsonKey(name: 'reject_media') required this.rejectMedia,
-      @JsonKey(name: 'reject_reports') required this.rejectReports,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'domain') this.domain,
+      @JsonKey(name: 'created_at') this.createdAt,
+      @JsonKey(name: 'severity') this.severity,
+      @JsonKey(name: 'reject_media') this.rejectMedia,
+      @JsonKey(name: 'reject_reports') this.rejectReports,
       @JsonKey(name: 'private_comment') this.privateComment,
       @JsonKey(name: 'public_comment') this.publicComment,
-      @JsonKey(name: 'obfuscate') required this.obfuscate});
+      @JsonKey(name: 'obfuscate') this.obfuscate});
 
   factory _$AdminDomainBlockImpl.fromJson(Map<String, dynamic> json) =>
       _$$AdminDomainBlockImplFromJson(json);
@@ -246,39 +244,37 @@ class _$AdminDomainBlockImpl implements _AdminDomainBlock {
   /// The ID of the DomainBlock in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The domain that is not allowed to federate.
   @override
   @JsonKey(name: 'domain')
-  final String domain;
+  final String? domain;
 
   /// When the domain was blocked from federating.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   /// The policy to be applied by this domain block.
   @override
   @JsonKey(name: 'severity')
-  final AdminDomainBlockSeverity severity;
+  final AdminDomainBlockSeverity? severity;
 
   /// Whether to reject media attachments from this domain.
   @override
   @JsonKey(name: 'reject_media')
-  final bool rejectMedia;
+  final bool? rejectMedia;
 
   /// Whether to reject reports from this domain.
   @override
   @JsonKey(name: 'reject_reports')
-  final bool rejectReports;
-
-  ///
+  final bool? rejectReports;
+// TODO(E): Add description.
   @override
   @JsonKey(name: 'private_comment')
   final String? privateComment;
-
-  ///
+// TODO(E): Add description.
   @override
   @JsonKey(name: 'public_comment')
   final String? publicComment;
@@ -286,7 +282,7 @@ class _$AdminDomainBlockImpl implements _AdminDomainBlock {
   /// Whether to obfuscate public displays of this domain block.
   @override
   @JsonKey(name: 'obfuscate')
-  final bool obfuscate;
+  final bool? obfuscate;
 
   @override
   String toString() {
@@ -338,16 +334,15 @@ class _$AdminDomainBlockImpl implements _AdminDomainBlock {
 
 abstract class _AdminDomainBlock implements AdminDomainBlock {
   const factory _AdminDomainBlock(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'domain') required final String domain,
-          @JsonKey(name: 'created_at') required final DateTime createdAt,
-          @JsonKey(name: 'severity')
-          required final AdminDomainBlockSeverity severity,
-          @JsonKey(name: 'reject_media') required final bool rejectMedia,
-          @JsonKey(name: 'reject_reports') required final bool rejectReports,
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'domain') final String? domain,
+          @JsonKey(name: 'created_at') final DateTime? createdAt,
+          @JsonKey(name: 'severity') final AdminDomainBlockSeverity? severity,
+          @JsonKey(name: 'reject_media') final bool? rejectMedia,
+          @JsonKey(name: 'reject_reports') final bool? rejectReports,
           @JsonKey(name: 'private_comment') final String? privateComment,
           @JsonKey(name: 'public_comment') final String? publicComment,
-          @JsonKey(name: 'obfuscate') required final bool obfuscate}) =
+          @JsonKey(name: 'obfuscate') final bool? obfuscate}) =
       _$AdminDomainBlockImpl;
 
   factory _AdminDomainBlock.fromJson(Map<String, dynamic> json) =
@@ -357,47 +352,43 @@ abstract class _AdminDomainBlock implements AdminDomainBlock {
 
   /// The ID of the DomainBlock in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The domain that is not allowed to federate.
   @JsonKey(name: 'domain')
-  String get domain;
+  String? get domain;
   @override
 
   /// When the domain was blocked from federating.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
 
   /// The policy to be applied by this domain block.
   @JsonKey(name: 'severity')
-  AdminDomainBlockSeverity get severity;
+  AdminDomainBlockSeverity? get severity;
   @override
 
   /// Whether to reject media attachments from this domain.
   @JsonKey(name: 'reject_media')
-  bool get rejectMedia;
+  bool? get rejectMedia;
   @override
 
   /// Whether to reject reports from this domain.
   @JsonKey(name: 'reject_reports')
-  bool get rejectReports;
-  @override
-
-  ///
+  bool? get rejectReports;
+  @override // TODO(E): Add description.
   @JsonKey(name: 'private_comment')
   String? get privateComment;
-  @override
-
-  ///
+  @override // TODO(E): Add description.
   @JsonKey(name: 'public_comment')
   String? get publicComment;
   @override
 
   /// Whether to obfuscate public displays of this domain block.
   @JsonKey(name: 'obfuscate')
-  bool get obfuscate;
+  bool? get obfuscate;
   @override
   @JsonKey(ignore: true)
   _$$AdminDomainBlockImplCopyWith<_$AdminDomainBlockImpl> get copyWith =>

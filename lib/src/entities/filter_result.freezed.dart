@@ -22,7 +22,7 @@ FilterResult _$FilterResultFromJson(Map<String, dynamic> json) {
 mixin _$FilterResult {
   /// The filter that was matched.
   @JsonKey(name: 'filter')
-  Filter get filter => throw _privateConstructorUsedError;
+  Filter? get filter => throw _privateConstructorUsedError;
 
   /// The keyword within the filter that was matched.
   @JsonKey(name: 'keyword_matches')
@@ -45,11 +45,11 @@ abstract class $FilterResultCopyWith<$Res> {
       _$FilterResultCopyWithImpl<$Res, FilterResult>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'filter') Filter filter,
+      {@JsonKey(name: 'filter') Filter? filter,
       @JsonKey(name: 'keyword_matches') List<String>? keywordMatches,
       @JsonKey(name: 'status_matches') List<String>? statusMatches});
 
-  $FilterCopyWith<$Res> get filter;
+  $FilterCopyWith<$Res>? get filter;
 }
 
 /// @nodoc
@@ -65,15 +65,15 @@ class _$FilterResultCopyWithImpl<$Res, $Val extends FilterResult>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? filter = null,
+    Object? filter = freezed,
     Object? keywordMatches = freezed,
     Object? statusMatches = freezed,
   }) {
     return _then(_value.copyWith(
-      filter: null == filter
+      filter: freezed == filter
           ? _value.filter
           : filter // ignore: cast_nullable_to_non_nullable
-              as Filter,
+              as Filter?,
       keywordMatches: freezed == keywordMatches
           ? _value.keywordMatches
           : keywordMatches // ignore: cast_nullable_to_non_nullable
@@ -87,8 +87,12 @@ class _$FilterResultCopyWithImpl<$Res, $Val extends FilterResult>
 
   @override
   @pragma('vm:prefer-inline')
-  $FilterCopyWith<$Res> get filter {
-    return $FilterCopyWith<$Res>(_value.filter, (value) {
+  $FilterCopyWith<$Res>? get filter {
+    if (_value.filter == null) {
+      return null;
+    }
+
+    return $FilterCopyWith<$Res>(_value.filter!, (value) {
       return _then(_value.copyWith(filter: value) as $Val);
     });
   }
@@ -103,12 +107,12 @@ abstract class _$$FilterResultImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'filter') Filter filter,
+      {@JsonKey(name: 'filter') Filter? filter,
       @JsonKey(name: 'keyword_matches') List<String>? keywordMatches,
       @JsonKey(name: 'status_matches') List<String>? statusMatches});
 
   @override
-  $FilterCopyWith<$Res> get filter;
+  $FilterCopyWith<$Res>? get filter;
 }
 
 /// @nodoc
@@ -122,15 +126,15 @@ class __$$FilterResultImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? filter = null,
+    Object? filter = freezed,
     Object? keywordMatches = freezed,
     Object? statusMatches = freezed,
   }) {
     return _then(_$FilterResultImpl(
-      filter: null == filter
+      filter: freezed == filter
           ? _value.filter
           : filter // ignore: cast_nullable_to_non_nullable
-              as Filter,
+              as Filter?,
       keywordMatches: freezed == keywordMatches
           ? _value._keywordMatches
           : keywordMatches // ignore: cast_nullable_to_non_nullable
@@ -147,7 +151,7 @@ class __$$FilterResultImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FilterResultImpl implements _FilterResult {
   const _$FilterResultImpl(
-      {@JsonKey(name: 'filter') required this.filter,
+      {@JsonKey(name: 'filter') this.filter,
       @JsonKey(name: 'keyword_matches') final List<String>? keywordMatches,
       @JsonKey(name: 'status_matches') final List<String>? statusMatches})
       : _keywordMatches = keywordMatches,
@@ -159,7 +163,7 @@ class _$FilterResultImpl implements _FilterResult {
   /// The filter that was matched.
   @override
   @JsonKey(name: 'filter')
-  final Filter filter;
+  final Filter? filter;
 
   /// The keyword within the filter that was matched.
   final List<String>? _keywordMatches;
@@ -230,7 +234,7 @@ class _$FilterResultImpl implements _FilterResult {
 
 abstract class _FilterResult implements FilterResult {
   const factory _FilterResult(
-          {@JsonKey(name: 'filter') required final Filter filter,
+          {@JsonKey(name: 'filter') final Filter? filter,
           @JsonKey(name: 'keyword_matches') final List<String>? keywordMatches,
           @JsonKey(name: 'status_matches') final List<String>? statusMatches}) =
       _$FilterResultImpl;
@@ -242,7 +246,7 @@ abstract class _FilterResult implements FilterResult {
 
   /// The filter that was matched.
   @JsonKey(name: 'filter')
-  Filter get filter;
+  Filter? get filter;
   @override
 
   /// The keyword within the filter that was matched.

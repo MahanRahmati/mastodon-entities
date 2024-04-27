@@ -8,11 +8,13 @@ part of 'featured_tag.dart';
 
 _$FeaturedTagImpl _$$FeaturedTagImplFromJson(Map<String, dynamic> json) =>
     _$FeaturedTagImpl(
-      id: json['id'] as String,
-      name: json['name'] as String,
-      url: json['url'] as String,
-      statusesCount: (json['statuses_count'] as num).toInt(),
-      lastStatusAt: DateTime.parse(json['last_status_at'] as String),
+      id: json['id'] as String?,
+      name: json['name'] as String?,
+      url: json['url'] as String?,
+      statusesCount: (json['statuses_count'] as num?)?.toInt(),
+      lastStatusAt: json['last_status_at'] == null
+          ? null
+          : DateTime.parse(json['last_status_at'] as String),
     );
 
 Map<String, dynamic> _$$FeaturedTagImplToJson(_$FeaturedTagImpl instance) =>
@@ -21,5 +23,5 @@ Map<String, dynamic> _$$FeaturedTagImplToJson(_$FeaturedTagImpl instance) =>
       'name': instance.name,
       'url': instance.url,
       'statuses_count': instance.statusesCount,
-      'last_status_at': instance.lastStatusAt.toIso8601String(),
+      'last_status_at': instance.lastStatusAt?.toIso8601String(),
     };

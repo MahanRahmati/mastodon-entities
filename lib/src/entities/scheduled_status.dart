@@ -11,18 +11,18 @@ part 'scheduled_status.g.dart';
 class ScheduledStatus with _$ScheduledStatus {
   const factory ScheduledStatus({
     /// ID of the scheduled status in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The timestamp for when the status will be posted.
-    @JsonKey(name: 'scheduled_at') required final DateTime scheduledAt,
+    @JsonKey(name: 'scheduled_at') final DateTime? scheduledAt,
 
     /// The parameters that were used when scheduling the status, to be used
     /// when the status is posted.
-    @JsonKey(name: 'params') required final ScheduledStatusParams params,
+    @JsonKey(name: 'params') final ScheduledStatusParams? params,
 
     /// Media that will be attached when the status is posted.
     @JsonKey(name: 'media_attachments')
-    required final List<MediaAttachment> mediaAttachments,
+    final List<MediaAttachment>? mediaAttachments,
   }) = _ScheduledStatus;
 
   factory ScheduledStatus.fromJson(final Map<String, dynamic> json) =>
@@ -33,7 +33,7 @@ class ScheduledStatus with _$ScheduledStatus {
 class ScheduledStatusParams with _$ScheduledStatusParams {
   const factory ScheduledStatusParams({
     /// Text to be used as status content.
-    @JsonKey(name: 'text') required final String text,
+    @JsonKey(name: 'text') final String? text,
 
     /// Poll to be attached to the status.
     @JsonKey(name: 'poll') final ScheduledStatusPoll? poll,
@@ -48,7 +48,7 @@ class ScheduledStatusParams with _$ScheduledStatusParams {
     @JsonKey(name: 'spoiler_text') final String? spoilerText,
 
     /// The visibility that the status will have once it is posted.
-    @JsonKey(name: 'visibility') required final StatusVisibility visibility,
+    @JsonKey(name: 'visibility') final StatusVisibility? visibility,
 
     /// ID of the Status that will be replied to.
     @JsonKey(name: 'in_reply_to_id') final int? inReplyToId,
@@ -57,7 +57,7 @@ class ScheduledStatusParams with _$ScheduledStatusParams {
     @JsonKey(name: 'language') final String? language,
 
     /// ID of the Application that posted the status.
-    @JsonKey(name: 'application_id') required final int applicationId,
+    @JsonKey(name: 'application_id') final int? applicationId,
 
     /// When the status will be scheduled. This will be null because the status
     /// is only scheduled once.
@@ -67,7 +67,7 @@ class ScheduledStatusParams with _$ScheduledStatusParams {
     @JsonKey(name: 'idempotency') final String? idempotency,
 
     /// Whether the status should be rate limited
-    @JsonKey(name: 'with_rate_limit') required final bool withRateLimit,
+    @JsonKey(name: 'with_rate_limit') final bool? withRateLimit,
   }) = _ScheduledStatusParams;
 
   factory ScheduledStatusParams.fromJson(final Map<String, dynamic> json) =>
@@ -78,10 +78,10 @@ class ScheduledStatusParams with _$ScheduledStatusParams {
 class ScheduledStatusPoll with _$ScheduledStatusPoll {
   const factory ScheduledStatusPoll({
     /// The poll options to be used.
-    @JsonKey(name: 'options[]') required final List<String> options,
+    @JsonKey(name: 'options[]') final List<String>? options,
 
     /// How many seconds the poll should last before closing.
-    @JsonKey(name: 'expires_in') required final String expiresIn,
+    @JsonKey(name: 'expires_in') final String? expiresIn,
 
     /// Whether the poll allows multiple choices.
     @JsonKey(name: 'multiple') final bool? multiple,

@@ -8,10 +8,14 @@ part of 'notification.dart';
 
 _$NotificationImpl _$$NotificationImplFromJson(Map<String, dynamic> json) =>
     _$NotificationImpl(
-      id: json['id'] as String,
-      type: $enumDecode(_$NotificationTypeEnumMap, json['type']),
-      createdAt: DateTime.parse(json['created_at'] as String),
-      account: Account.fromJson(json['account'] as Map<String, dynamic>),
+      id: json['id'] as String?,
+      type: $enumDecodeNullable(_$NotificationTypeEnumMap, json['type']),
+      createdAt: json['created_at'] == null
+          ? null
+          : DateTime.parse(json['created_at'] as String),
+      account: json['account'] == null
+          ? null
+          : Account.fromJson(json['account'] as Map<String, dynamic>),
       status: json['status'] == null
           ? null
           : Status.fromJson(json['status'] as Map<String, dynamic>),
@@ -27,8 +31,8 @@ _$NotificationImpl _$$NotificationImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$NotificationImplToJson(_$NotificationImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'type': _$NotificationTypeEnumMap[instance.type]!,
-      'created_at': instance.createdAt.toIso8601String(),
+      'type': _$NotificationTypeEnumMap[instance.type],
+      'created_at': instance.createdAt?.toIso8601String(),
       'account': instance.account,
       'status': instance.status,
       'report': instance.report,

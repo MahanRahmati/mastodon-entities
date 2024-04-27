@@ -22,40 +22,40 @@ Status _$StatusFromJson(Map<String, dynamic> json) {
 mixin _$Status {
   /// ID of the status in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// URI of the status used for federation.
   @JsonKey(name: 'uri')
-  String get uri => throw _privateConstructorUsedError;
+  String? get uri => throw _privateConstructorUsedError;
 
   /// The date when this status was created.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   /// The account that authored this status.
   @JsonKey(name: 'account')
-  Account get account => throw _privateConstructorUsedError;
+  Account? get account => throw _privateConstructorUsedError;
 
   /// HTML-encoded status content.
   @JsonKey(name: 'content')
-  String get content => throw _privateConstructorUsedError;
+  String? get content => throw _privateConstructorUsedError;
 
   /// Visibility of this status.
   @JsonKey(name: 'visibility')
-  StatusVisibility get visibility => throw _privateConstructorUsedError;
+  StatusVisibility? get visibility => throw _privateConstructorUsedError;
 
   /// Is this status marked as sensitive content?
   @JsonKey(name: 'sensitive')
-  bool get sensitive => throw _privateConstructorUsedError;
+  bool? get sensitive => throw _privateConstructorUsedError;
 
   /// Subject or summary line, below which status content is collapsed until
   /// expanded.
   @JsonKey(name: 'spoiler_text')
-  String get spoilerText => throw _privateConstructorUsedError;
+  String? get spoilerText => throw _privateConstructorUsedError;
 
   /// Media that is attached to this status.
   @JsonKey(name: 'media_attachments')
-  List<MediaAttachment> get mediaAttachments =>
+  List<MediaAttachment>? get mediaAttachments =>
       throw _privateConstructorUsedError;
 
   /// The application used to post this status.
@@ -64,27 +64,27 @@ mixin _$Status {
 
   /// Mentions of users within the status content.
   @JsonKey(name: 'mentions')
-  List<StatusMention> get mentions => throw _privateConstructorUsedError;
+  List<StatusMention>? get mentions => throw _privateConstructorUsedError;
 
   /// Hashtags used within the status content.
   @JsonKey(name: 'tags')
-  List<StatusTag> get tags => throw _privateConstructorUsedError;
+  List<StatusTag>? get tags => throw _privateConstructorUsedError;
 
   /// Custom emoji to be used when rendering status content.
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis => throw _privateConstructorUsedError;
+  List<CustomEmoji>? get emojis => throw _privateConstructorUsedError;
 
   /// How many boosts this status has received.
   @JsonKey(name: 'reblogs_count')
-  int get reblogsCount => throw _privateConstructorUsedError;
+  int? get reblogsCount => throw _privateConstructorUsedError;
 
   /// How many favourites this status has received.
   @JsonKey(name: 'favourites_count')
-  int get favouritesCount => throw _privateConstructorUsedError;
+  int? get favouritesCount => throw _privateConstructorUsedError;
 
   /// How many replies this status has received.
   @JsonKey(name: 'replies_count')
-  int get repliesCount => throw _privateConstructorUsedError;
+  int? get repliesCount => throw _privateConstructorUsedError;
 
   /// A link to the status's HTML representation.
   @JsonKey(name: 'url')
@@ -166,23 +166,23 @@ abstract class $StatusCopyWith<$Res> {
       _$StatusCopyWithImpl<$Res, Status>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'uri') String uri,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'account') Account account,
-      @JsonKey(name: 'content') String content,
-      @JsonKey(name: 'visibility') StatusVisibility visibility,
-      @JsonKey(name: 'sensitive') bool sensitive,
-      @JsonKey(name: 'spoiler_text') String spoilerText,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'uri') String? uri,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'account') Account? account,
+      @JsonKey(name: 'content') String? content,
+      @JsonKey(name: 'visibility') StatusVisibility? visibility,
+      @JsonKey(name: 'sensitive') bool? sensitive,
+      @JsonKey(name: 'spoiler_text') String? spoilerText,
       @JsonKey(name: 'media_attachments')
-      List<MediaAttachment> mediaAttachments,
+      List<MediaAttachment>? mediaAttachments,
       @JsonKey(name: 'application') Application? application,
-      @JsonKey(name: 'mentions') List<StatusMention> mentions,
-      @JsonKey(name: 'tags') List<StatusTag> tags,
-      @JsonKey(name: 'emojis') List<CustomEmoji> emojis,
-      @JsonKey(name: 'reblogs_count') int reblogsCount,
-      @JsonKey(name: 'favourites_count') int favouritesCount,
-      @JsonKey(name: 'replies_count') int repliesCount,
+      @JsonKey(name: 'mentions') List<StatusMention>? mentions,
+      @JsonKey(name: 'tags') List<StatusTag>? tags,
+      @JsonKey(name: 'emojis') List<CustomEmoji>? emojis,
+      @JsonKey(name: 'reblogs_count') int? reblogsCount,
+      @JsonKey(name: 'favourites_count') int? favouritesCount,
+      @JsonKey(name: 'replies_count') int? repliesCount,
       @JsonKey(name: 'url') String? url,
       @JsonKey(name: 'in_reply_to_id') String? inReplyToId,
       @JsonKey(name: 'in_reply_to_account_id') String? inReplyToAccountId,
@@ -199,7 +199,7 @@ abstract class $StatusCopyWith<$Res> {
       @JsonKey(name: 'pinned') bool? pinned,
       @JsonKey(name: 'filtered') List<FilterResult>? filtered});
 
-  $AccountCopyWith<$Res> get account;
+  $AccountCopyWith<$Res>? get account;
   $ApplicationCopyWith<$Res>? get application;
   $StatusCopyWith<$Res>? get reblog;
   $PollCopyWith<$Res>? get poll;
@@ -219,22 +219,22 @@ class _$StatusCopyWithImpl<$Res, $Val extends Status>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? uri = null,
-    Object? createdAt = null,
-    Object? account = null,
-    Object? content = null,
-    Object? visibility = null,
-    Object? sensitive = null,
-    Object? spoilerText = null,
-    Object? mediaAttachments = null,
+    Object? id = freezed,
+    Object? uri = freezed,
+    Object? createdAt = freezed,
+    Object? account = freezed,
+    Object? content = freezed,
+    Object? visibility = freezed,
+    Object? sensitive = freezed,
+    Object? spoilerText = freezed,
+    Object? mediaAttachments = freezed,
     Object? application = freezed,
-    Object? mentions = null,
-    Object? tags = null,
-    Object? emojis = null,
-    Object? reblogsCount = null,
-    Object? favouritesCount = null,
-    Object? repliesCount = null,
+    Object? mentions = freezed,
+    Object? tags = freezed,
+    Object? emojis = freezed,
+    Object? reblogsCount = freezed,
+    Object? favouritesCount = freezed,
+    Object? repliesCount = freezed,
     Object? url = freezed,
     Object? inReplyToId = freezed,
     Object? inReplyToAccountId = freezed,
@@ -252,70 +252,70 @@ class _$StatusCopyWithImpl<$Res, $Val extends Status>
     Object? filtered = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      uri: null == uri
+              as String?,
+      uri: freezed == uri
           ? _value.uri
           : uri // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      account: null == account
+              as DateTime?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as Account,
-      content: null == content
+              as Account?,
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibility: null == visibility
+              as String?,
+      visibility: freezed == visibility
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as StatusVisibility,
-      sensitive: null == sensitive
+              as StatusVisibility?,
+      sensitive: freezed == sensitive
           ? _value.sensitive
           : sensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      spoilerText: null == spoilerText
+              as bool?,
+      spoilerText: freezed == spoilerText
           ? _value.spoilerText
           : spoilerText // ignore: cast_nullable_to_non_nullable
-              as String,
-      mediaAttachments: null == mediaAttachments
+              as String?,
+      mediaAttachments: freezed == mediaAttachments
           ? _value.mediaAttachments
           : mediaAttachments // ignore: cast_nullable_to_non_nullable
-              as List<MediaAttachment>,
+              as List<MediaAttachment>?,
       application: freezed == application
           ? _value.application
           : application // ignore: cast_nullable_to_non_nullable
               as Application?,
-      mentions: null == mentions
+      mentions: freezed == mentions
           ? _value.mentions
           : mentions // ignore: cast_nullable_to_non_nullable
-              as List<StatusMention>,
-      tags: null == tags
+              as List<StatusMention>?,
+      tags: freezed == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<StatusTag>,
-      emojis: null == emojis
+              as List<StatusTag>?,
+      emojis: freezed == emojis
           ? _value.emojis
           : emojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmoji>,
-      reblogsCount: null == reblogsCount
+              as List<CustomEmoji>?,
+      reblogsCount: freezed == reblogsCount
           ? _value.reblogsCount
           : reblogsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      favouritesCount: null == favouritesCount
+              as int?,
+      favouritesCount: freezed == favouritesCount
           ? _value.favouritesCount
           : favouritesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      repliesCount: null == repliesCount
+              as int?,
+      repliesCount: freezed == repliesCount
           ? _value.repliesCount
           : repliesCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -381,8 +381,12 @@ class _$StatusCopyWithImpl<$Res, $Val extends Status>
 
   @override
   @pragma('vm:prefer-inline')
-  $AccountCopyWith<$Res> get account {
-    return $AccountCopyWith<$Res>(_value.account, (value) {
+  $AccountCopyWith<$Res>? get account {
+    if (_value.account == null) {
+      return null;
+    }
+
+    return $AccountCopyWith<$Res>(_value.account!, (value) {
       return _then(_value.copyWith(account: value) as $Val);
     });
   }
@@ -444,23 +448,23 @@ abstract class _$$StatusImplCopyWith<$Res> implements $StatusCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'uri') String uri,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'account') Account account,
-      @JsonKey(name: 'content') String content,
-      @JsonKey(name: 'visibility') StatusVisibility visibility,
-      @JsonKey(name: 'sensitive') bool sensitive,
-      @JsonKey(name: 'spoiler_text') String spoilerText,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'uri') String? uri,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'account') Account? account,
+      @JsonKey(name: 'content') String? content,
+      @JsonKey(name: 'visibility') StatusVisibility? visibility,
+      @JsonKey(name: 'sensitive') bool? sensitive,
+      @JsonKey(name: 'spoiler_text') String? spoilerText,
       @JsonKey(name: 'media_attachments')
-      List<MediaAttachment> mediaAttachments,
+      List<MediaAttachment>? mediaAttachments,
       @JsonKey(name: 'application') Application? application,
-      @JsonKey(name: 'mentions') List<StatusMention> mentions,
-      @JsonKey(name: 'tags') List<StatusTag> tags,
-      @JsonKey(name: 'emojis') List<CustomEmoji> emojis,
-      @JsonKey(name: 'reblogs_count') int reblogsCount,
-      @JsonKey(name: 'favourites_count') int favouritesCount,
-      @JsonKey(name: 'replies_count') int repliesCount,
+      @JsonKey(name: 'mentions') List<StatusMention>? mentions,
+      @JsonKey(name: 'tags') List<StatusTag>? tags,
+      @JsonKey(name: 'emojis') List<CustomEmoji>? emojis,
+      @JsonKey(name: 'reblogs_count') int? reblogsCount,
+      @JsonKey(name: 'favourites_count') int? favouritesCount,
+      @JsonKey(name: 'replies_count') int? repliesCount,
       @JsonKey(name: 'url') String? url,
       @JsonKey(name: 'in_reply_to_id') String? inReplyToId,
       @JsonKey(name: 'in_reply_to_account_id') String? inReplyToAccountId,
@@ -478,7 +482,7 @@ abstract class _$$StatusImplCopyWith<$Res> implements $StatusCopyWith<$Res> {
       @JsonKey(name: 'filtered') List<FilterResult>? filtered});
 
   @override
-  $AccountCopyWith<$Res> get account;
+  $AccountCopyWith<$Res>? get account;
   @override
   $ApplicationCopyWith<$Res>? get application;
   @override
@@ -500,22 +504,22 @@ class __$$StatusImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? uri = null,
-    Object? createdAt = null,
-    Object? account = null,
-    Object? content = null,
-    Object? visibility = null,
-    Object? sensitive = null,
-    Object? spoilerText = null,
-    Object? mediaAttachments = null,
+    Object? id = freezed,
+    Object? uri = freezed,
+    Object? createdAt = freezed,
+    Object? account = freezed,
+    Object? content = freezed,
+    Object? visibility = freezed,
+    Object? sensitive = freezed,
+    Object? spoilerText = freezed,
+    Object? mediaAttachments = freezed,
     Object? application = freezed,
-    Object? mentions = null,
-    Object? tags = null,
-    Object? emojis = null,
-    Object? reblogsCount = null,
-    Object? favouritesCount = null,
-    Object? repliesCount = null,
+    Object? mentions = freezed,
+    Object? tags = freezed,
+    Object? emojis = freezed,
+    Object? reblogsCount = freezed,
+    Object? favouritesCount = freezed,
+    Object? repliesCount = freezed,
     Object? url = freezed,
     Object? inReplyToId = freezed,
     Object? inReplyToAccountId = freezed,
@@ -533,70 +537,70 @@ class __$$StatusImplCopyWithImpl<$Res>
     Object? filtered = freezed,
   }) {
     return _then(_$StatusImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      uri: null == uri
+              as String?,
+      uri: freezed == uri
           ? _value.uri
           : uri // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      account: null == account
+              as DateTime?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as Account,
-      content: null == content
+              as Account?,
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibility: null == visibility
+              as String?,
+      visibility: freezed == visibility
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as StatusVisibility,
-      sensitive: null == sensitive
+              as StatusVisibility?,
+      sensitive: freezed == sensitive
           ? _value.sensitive
           : sensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      spoilerText: null == spoilerText
+              as bool?,
+      spoilerText: freezed == spoilerText
           ? _value.spoilerText
           : spoilerText // ignore: cast_nullable_to_non_nullable
-              as String,
-      mediaAttachments: null == mediaAttachments
+              as String?,
+      mediaAttachments: freezed == mediaAttachments
           ? _value._mediaAttachments
           : mediaAttachments // ignore: cast_nullable_to_non_nullable
-              as List<MediaAttachment>,
+              as List<MediaAttachment>?,
       application: freezed == application
           ? _value.application
           : application // ignore: cast_nullable_to_non_nullable
               as Application?,
-      mentions: null == mentions
+      mentions: freezed == mentions
           ? _value._mentions
           : mentions // ignore: cast_nullable_to_non_nullable
-              as List<StatusMention>,
-      tags: null == tags
+              as List<StatusMention>?,
+      tags: freezed == tags
           ? _value._tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<StatusTag>,
-      emojis: null == emojis
+              as List<StatusTag>?,
+      emojis: freezed == emojis
           ? _value._emojis
           : emojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmoji>,
-      reblogsCount: null == reblogsCount
+              as List<CustomEmoji>?,
+      reblogsCount: freezed == reblogsCount
           ? _value.reblogsCount
           : reblogsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      favouritesCount: null == favouritesCount
+              as int?,
+      favouritesCount: freezed == favouritesCount
           ? _value.favouritesCount
           : favouritesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      repliesCount: null == repliesCount
+              as int?,
+      repliesCount: freezed == repliesCount
           ? _value.repliesCount
           : repliesCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -665,23 +669,23 @@ class __$$StatusImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StatusImpl implements _Status {
   const _$StatusImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'uri') required this.uri,
-      @JsonKey(name: 'created_at') required this.createdAt,
-      @JsonKey(name: 'account') required this.account,
-      @JsonKey(name: 'content') required this.content,
-      @JsonKey(name: 'visibility') required this.visibility,
-      @JsonKey(name: 'sensitive') required this.sensitive,
-      @JsonKey(name: 'spoiler_text') required this.spoilerText,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'uri') this.uri,
+      @JsonKey(name: 'created_at') this.createdAt,
+      @JsonKey(name: 'account') this.account,
+      @JsonKey(name: 'content') this.content,
+      @JsonKey(name: 'visibility') this.visibility,
+      @JsonKey(name: 'sensitive') this.sensitive,
+      @JsonKey(name: 'spoiler_text') this.spoilerText,
       @JsonKey(name: 'media_attachments')
-      required final List<MediaAttachment> mediaAttachments,
+      final List<MediaAttachment>? mediaAttachments,
       @JsonKey(name: 'application') this.application,
-      @JsonKey(name: 'mentions') required final List<StatusMention> mentions,
-      @JsonKey(name: 'tags') required final List<StatusTag> tags,
-      @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
-      @JsonKey(name: 'reblogs_count') required this.reblogsCount,
-      @JsonKey(name: 'favourites_count') required this.favouritesCount,
-      @JsonKey(name: 'replies_count') required this.repliesCount,
+      @JsonKey(name: 'mentions') final List<StatusMention>? mentions,
+      @JsonKey(name: 'tags') final List<StatusTag>? tags,
+      @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
+      @JsonKey(name: 'reblogs_count') this.reblogsCount,
+      @JsonKey(name: 'favourites_count') this.favouritesCount,
+      @JsonKey(name: 'replies_count') this.repliesCount,
       @JsonKey(name: 'url') this.url,
       @JsonKey(name: 'in_reply_to_id') this.inReplyToId,
       @JsonKey(name: 'in_reply_to_account_id') this.inReplyToAccountId,
@@ -709,55 +713,57 @@ class _$StatusImpl implements _Status {
   /// ID of the status in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// URI of the status used for federation.
   @override
   @JsonKey(name: 'uri')
-  final String uri;
+  final String? uri;
 
   /// The date when this status was created.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   /// The account that authored this status.
   @override
   @JsonKey(name: 'account')
-  final Account account;
+  final Account? account;
 
   /// HTML-encoded status content.
   @override
   @JsonKey(name: 'content')
-  final String content;
+  final String? content;
 
   /// Visibility of this status.
   @override
   @JsonKey(name: 'visibility')
-  final StatusVisibility visibility;
+  final StatusVisibility? visibility;
 
   /// Is this status marked as sensitive content?
   @override
   @JsonKey(name: 'sensitive')
-  final bool sensitive;
+  final bool? sensitive;
 
   /// Subject or summary line, below which status content is collapsed until
   /// expanded.
   @override
   @JsonKey(name: 'spoiler_text')
-  final String spoilerText;
+  final String? spoilerText;
 
   /// Media that is attached to this status.
-  final List<MediaAttachment> _mediaAttachments;
+  final List<MediaAttachment>? _mediaAttachments;
 
   /// Media that is attached to this status.
   @override
   @JsonKey(name: 'media_attachments')
-  List<MediaAttachment> get mediaAttachments {
+  List<MediaAttachment>? get mediaAttachments {
+    final value = _mediaAttachments;
+    if (value == null) return null;
     if (_mediaAttachments is EqualUnmodifiableListView)
       return _mediaAttachments;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_mediaAttachments);
+    return EqualUnmodifiableListView(value);
   }
 
   /// The application used to post this status.
@@ -766,55 +772,61 @@ class _$StatusImpl implements _Status {
   final Application? application;
 
   /// Mentions of users within the status content.
-  final List<StatusMention> _mentions;
+  final List<StatusMention>? _mentions;
 
   /// Mentions of users within the status content.
   @override
   @JsonKey(name: 'mentions')
-  List<StatusMention> get mentions {
+  List<StatusMention>? get mentions {
+    final value = _mentions;
+    if (value == null) return null;
     if (_mentions is EqualUnmodifiableListView) return _mentions;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_mentions);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Hashtags used within the status content.
-  final List<StatusTag> _tags;
+  final List<StatusTag>? _tags;
 
   /// Hashtags used within the status content.
   @override
   @JsonKey(name: 'tags')
-  List<StatusTag> get tags {
+  List<StatusTag>? get tags {
+    final value = _tags;
+    if (value == null) return null;
     if (_tags is EqualUnmodifiableListView) return _tags;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_tags);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Custom emoji to be used when rendering status content.
-  final List<CustomEmoji> _emojis;
+  final List<CustomEmoji>? _emojis;
 
   /// Custom emoji to be used when rendering status content.
   @override
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis {
+  List<CustomEmoji>? get emojis {
+    final value = _emojis;
+    if (value == null) return null;
     if (_emojis is EqualUnmodifiableListView) return _emojis;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_emojis);
+    return EqualUnmodifiableListView(value);
   }
 
   /// How many boosts this status has received.
   @override
   @JsonKey(name: 'reblogs_count')
-  final int reblogsCount;
+  final int? reblogsCount;
 
   /// How many favourites this status has received.
   @override
   @JsonKey(name: 'favourites_count')
-  final int favouritesCount;
+  final int? favouritesCount;
 
   /// How many replies this status has received.
   @override
   @JsonKey(name: 'replies_count')
-  final int repliesCount;
+  final int? repliesCount;
 
   /// A link to the status's HTML representation.
   @override
@@ -1022,23 +1034,23 @@ class _$StatusImpl implements _Status {
 
 abstract class _Status implements Status {
   const factory _Status(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'uri') required final String uri,
-      @JsonKey(name: 'created_at') required final DateTime createdAt,
-      @JsonKey(name: 'account') required final Account account,
-      @JsonKey(name: 'content') required final String content,
-      @JsonKey(name: 'visibility') required final StatusVisibility visibility,
-      @JsonKey(name: 'sensitive') required final bool sensitive,
-      @JsonKey(name: 'spoiler_text') required final String spoilerText,
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'uri') final String? uri,
+      @JsonKey(name: 'created_at') final DateTime? createdAt,
+      @JsonKey(name: 'account') final Account? account,
+      @JsonKey(name: 'content') final String? content,
+      @JsonKey(name: 'visibility') final StatusVisibility? visibility,
+      @JsonKey(name: 'sensitive') final bool? sensitive,
+      @JsonKey(name: 'spoiler_text') final String? spoilerText,
       @JsonKey(name: 'media_attachments')
-      required final List<MediaAttachment> mediaAttachments,
+      final List<MediaAttachment>? mediaAttachments,
       @JsonKey(name: 'application') final Application? application,
-      @JsonKey(name: 'mentions') required final List<StatusMention> mentions,
-      @JsonKey(name: 'tags') required final List<StatusTag> tags,
-      @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
-      @JsonKey(name: 'reblogs_count') required final int reblogsCount,
-      @JsonKey(name: 'favourites_count') required final int favouritesCount,
-      @JsonKey(name: 'replies_count') required final int repliesCount,
+      @JsonKey(name: 'mentions') final List<StatusMention>? mentions,
+      @JsonKey(name: 'tags') final List<StatusTag>? tags,
+      @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
+      @JsonKey(name: 'reblogs_count') final int? reblogsCount,
+      @JsonKey(name: 'favourites_count') final int? favouritesCount,
+      @JsonKey(name: 'replies_count') final int? repliesCount,
       @JsonKey(name: 'url') final String? url,
       @JsonKey(name: 'in_reply_to_id') final String? inReplyToId,
       @JsonKey(name: 'in_reply_to_account_id') final String? inReplyToAccountId,
@@ -1062,48 +1074,48 @@ abstract class _Status implements Status {
 
   /// ID of the status in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// URI of the status used for federation.
   @JsonKey(name: 'uri')
-  String get uri;
+  String? get uri;
   @override
 
   /// The date when this status was created.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
 
   /// The account that authored this status.
   @JsonKey(name: 'account')
-  Account get account;
+  Account? get account;
   @override
 
   /// HTML-encoded status content.
   @JsonKey(name: 'content')
-  String get content;
+  String? get content;
   @override
 
   /// Visibility of this status.
   @JsonKey(name: 'visibility')
-  StatusVisibility get visibility;
+  StatusVisibility? get visibility;
   @override
 
   /// Is this status marked as sensitive content?
   @JsonKey(name: 'sensitive')
-  bool get sensitive;
+  bool? get sensitive;
   @override
 
   /// Subject or summary line, below which status content is collapsed until
   /// expanded.
   @JsonKey(name: 'spoiler_text')
-  String get spoilerText;
+  String? get spoilerText;
   @override
 
   /// Media that is attached to this status.
   @JsonKey(name: 'media_attachments')
-  List<MediaAttachment> get mediaAttachments;
+  List<MediaAttachment>? get mediaAttachments;
   @override
 
   /// The application used to post this status.
@@ -1113,32 +1125,32 @@ abstract class _Status implements Status {
 
   /// Mentions of users within the status content.
   @JsonKey(name: 'mentions')
-  List<StatusMention> get mentions;
+  List<StatusMention>? get mentions;
   @override
 
   /// Hashtags used within the status content.
   @JsonKey(name: 'tags')
-  List<StatusTag> get tags;
+  List<StatusTag>? get tags;
   @override
 
   /// Custom emoji to be used when rendering status content.
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis;
+  List<CustomEmoji>? get emojis;
   @override
 
   /// How many boosts this status has received.
   @JsonKey(name: 'reblogs_count')
-  int get reblogsCount;
+  int? get reblogsCount;
   @override
 
   /// How many favourites this status has received.
   @JsonKey(name: 'favourites_count')
-  int get favouritesCount;
+  int? get favouritesCount;
   @override
 
   /// How many replies this status has received.
   @JsonKey(name: 'replies_count')
-  int get repliesCount;
+  int? get repliesCount;
   @override
 
   /// A link to the status's HTML representation.
@@ -1237,20 +1249,20 @@ StatusMention _$StatusMentionFromJson(Map<String, dynamic> json) {
 mixin _$StatusMention {
   /// The account ID of the mentioned user.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The username of the mentioned user.
   @JsonKey(name: 'username')
-  String get username => throw _privateConstructorUsedError;
+  String? get username => throw _privateConstructorUsedError;
 
   /// The location of the mentioned user’s profile.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// The webfinger acct: URI of the mentioned user. Equivalent to [username]
   /// for local users, or username@domain for remote users.
   @JsonKey(name: 'acct')
-  String get acct => throw _privateConstructorUsedError;
+  String? get acct => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1265,10 +1277,10 @@ abstract class $StatusMentionCopyWith<$Res> {
       _$StatusMentionCopyWithImpl<$Res, StatusMention>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'username') String username,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'acct') String acct});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'username') String? username,
+      @JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'acct') String? acct});
 }
 
 /// @nodoc
@@ -1284,28 +1296,28 @@ class _$StatusMentionCopyWithImpl<$Res, $Val extends StatusMention>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? username = null,
-    Object? url = null,
-    Object? acct = null,
+    Object? id = freezed,
+    Object? username = freezed,
+    Object? url = freezed,
+    Object? acct = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
+              as String?,
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      acct: null == acct
+              as String?,
+      acct: freezed == acct
           ? _value.acct
           : acct // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -1319,10 +1331,10 @@ abstract class _$$StatusMentionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'username') String username,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'acct') String acct});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'username') String? username,
+      @JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'acct') String? acct});
 }
 
 /// @nodoc
@@ -1336,28 +1348,28 @@ class __$$StatusMentionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? username = null,
-    Object? url = null,
-    Object? acct = null,
+    Object? id = freezed,
+    Object? username = freezed,
+    Object? url = freezed,
+    Object? acct = freezed,
   }) {
     return _then(_$StatusMentionImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
+              as String?,
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      acct: null == acct
+              as String?,
+      acct: freezed == acct
           ? _value.acct
           : acct // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -1366,10 +1378,10 @@ class __$$StatusMentionImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StatusMentionImpl implements _StatusMention {
   const _$StatusMentionImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'username') required this.username,
-      @JsonKey(name: 'url') required this.url,
-      @JsonKey(name: 'acct') required this.acct});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'username') this.username,
+      @JsonKey(name: 'url') this.url,
+      @JsonKey(name: 'acct') this.acct});
 
   factory _$StatusMentionImpl.fromJson(Map<String, dynamic> json) =>
       _$$StatusMentionImplFromJson(json);
@@ -1377,23 +1389,23 @@ class _$StatusMentionImpl implements _StatusMention {
   /// The account ID of the mentioned user.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The username of the mentioned user.
   @override
   @JsonKey(name: 'username')
-  final String username;
+  final String? username;
 
   /// The location of the mentioned user’s profile.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   /// The webfinger acct: URI of the mentioned user. Equivalent to [username]
   /// for local users, or username@domain for remote users.
   @override
   @JsonKey(name: 'acct')
-  final String acct;
+  final String? acct;
 
   @override
   String toString() {
@@ -1432,10 +1444,10 @@ class _$StatusMentionImpl implements _StatusMention {
 
 abstract class _StatusMention implements StatusMention {
   const factory _StatusMention(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'username') required final String username,
-      @JsonKey(name: 'url') required final String url,
-      @JsonKey(name: 'acct') required final String acct}) = _$StatusMentionImpl;
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'username') final String? username,
+      @JsonKey(name: 'url') final String? url,
+      @JsonKey(name: 'acct') final String? acct}) = _$StatusMentionImpl;
 
   factory _StatusMention.fromJson(Map<String, dynamic> json) =
       _$StatusMentionImpl.fromJson;
@@ -1444,23 +1456,23 @@ abstract class _StatusMention implements StatusMention {
 
   /// The account ID of the mentioned user.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The username of the mentioned user.
   @JsonKey(name: 'username')
-  String get username;
+  String? get username;
   @override
 
   /// The location of the mentioned user’s profile.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
 
   /// The webfinger acct: URI of the mentioned user. Equivalent to [username]
   /// for local users, or username@domain for remote users.
   @JsonKey(name: 'acct')
-  String get acct;
+  String? get acct;
   @override
   @JsonKey(ignore: true)
   _$$StatusMentionImplCopyWith<_$StatusMentionImpl> get copyWith =>
@@ -1475,11 +1487,11 @@ StatusTag _$StatusTagFromJson(Map<String, dynamic> json) {
 mixin _$StatusTag {
   /// The value of the hashtag after the # sign.
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   /// A link to the hashtag on the instance.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1493,7 +1505,7 @@ abstract class $StatusTagCopyWith<$Res> {
       _$StatusTagCopyWithImpl<$Res, StatusTag>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name, @JsonKey(name: 'url') String url});
+      {@JsonKey(name: 'name') String? name, @JsonKey(name: 'url') String? url});
 }
 
 /// @nodoc
@@ -1509,18 +1521,18 @@ class _$StatusTagCopyWithImpl<$Res, $Val extends StatusTag>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? url = null,
+    Object? name = freezed,
+    Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -1534,7 +1546,7 @@ abstract class _$$StatusTagImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name, @JsonKey(name: 'url') String url});
+      {@JsonKey(name: 'name') String? name, @JsonKey(name: 'url') String? url});
 }
 
 /// @nodoc
@@ -1548,18 +1560,18 @@ class __$$StatusTagImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? url = null,
+    Object? name = freezed,
+    Object? url = freezed,
   }) {
     return _then(_$StatusTagImpl(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -1568,8 +1580,7 @@ class __$$StatusTagImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StatusTagImpl implements _StatusTag {
   const _$StatusTagImpl(
-      {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'url') required this.url});
+      {@JsonKey(name: 'name') this.name, @JsonKey(name: 'url') this.url});
 
   factory _$StatusTagImpl.fromJson(Map<String, dynamic> json) =>
       _$$StatusTagImplFromJson(json);
@@ -1577,12 +1588,12 @@ class _$StatusTagImpl implements _StatusTag {
   /// The value of the hashtag after the # sign.
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
 
   /// A link to the hashtag on the instance.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   @override
   String toString() {
@@ -1618,8 +1629,8 @@ class _$StatusTagImpl implements _StatusTag {
 
 abstract class _StatusTag implements StatusTag {
   const factory _StatusTag(
-      {@JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'url') required final String url}) = _$StatusTagImpl;
+      {@JsonKey(name: 'name') final String? name,
+      @JsonKey(name: 'url') final String? url}) = _$StatusTagImpl;
 
   factory _StatusTag.fromJson(Map<String, dynamic> json) =
       _$StatusTagImpl.fromJson;
@@ -1628,12 +1639,12 @@ abstract class _StatusTag implements StatusTag {
 
   /// The value of the hashtag after the # sign.
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
 
   /// A link to the hashtag on the instance.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
   @JsonKey(ignore: true)
   _$$StatusTagImplCopyWith<_$StatusTagImpl> get copyWith =>

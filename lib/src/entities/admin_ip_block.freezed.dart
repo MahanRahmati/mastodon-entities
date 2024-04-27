@@ -22,23 +22,23 @@ AdminIpBlock _$AdminIpBlockFromJson(Map<String, dynamic> json) {
 mixin _$AdminIpBlock {
   /// The ID of the DomainBlock in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The IP address range that is not allowed to federate.
   @JsonKey(name: 'ip')
-  String get ip => throw _privateConstructorUsedError;
+  String? get ip => throw _privateConstructorUsedError;
 
   /// The associated policy with this IP block.
   @JsonKey(name: 'severity')
-  AdminIpBlockSeverity get severity => throw _privateConstructorUsedError;
+  AdminIpBlockSeverity? get severity => throw _privateConstructorUsedError;
 
   /// The recorded reason for this IP block.
   @JsonKey(name: 'comment')
-  String get comment => throw _privateConstructorUsedError;
+  String? get comment => throw _privateConstructorUsedError;
 
   /// When the IP block was created.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   /// When the IP block will expire.
   @JsonKey(name: 'expires_at')
@@ -57,11 +57,11 @@ abstract class $AdminIpBlockCopyWith<$Res> {
       _$AdminIpBlockCopyWithImpl<$Res, AdminIpBlock>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'ip') String ip,
-      @JsonKey(name: 'severity') AdminIpBlockSeverity severity,
-      @JsonKey(name: 'comment') String comment,
-      @JsonKey(name: 'created_at') DateTime createdAt,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'ip') String? ip,
+      @JsonKey(name: 'severity') AdminIpBlockSeverity? severity,
+      @JsonKey(name: 'comment') String? comment,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'expires_at') DateTime? expiresAt});
 }
 
@@ -78,34 +78,34 @@ class _$AdminIpBlockCopyWithImpl<$Res, $Val extends AdminIpBlock>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? ip = null,
-    Object? severity = null,
-    Object? comment = null,
-    Object? createdAt = null,
+    Object? id = freezed,
+    Object? ip = freezed,
+    Object? severity = freezed,
+    Object? comment = freezed,
+    Object? createdAt = freezed,
     Object? expiresAt = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      ip: null == ip
+              as String?,
+      ip: freezed == ip
           ? _value.ip
           : ip // ignore: cast_nullable_to_non_nullable
-              as String,
-      severity: null == severity
+              as String?,
+      severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as AdminIpBlockSeverity,
-      comment: null == comment
+              as AdminIpBlockSeverity?,
+      comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       expiresAt: freezed == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
@@ -123,11 +123,11 @@ abstract class _$$AdminIpBlockImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'ip') String ip,
-      @JsonKey(name: 'severity') AdminIpBlockSeverity severity,
-      @JsonKey(name: 'comment') String comment,
-      @JsonKey(name: 'created_at') DateTime createdAt,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'ip') String? ip,
+      @JsonKey(name: 'severity') AdminIpBlockSeverity? severity,
+      @JsonKey(name: 'comment') String? comment,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'expires_at') DateTime? expiresAt});
 }
 
@@ -142,34 +142,34 @@ class __$$AdminIpBlockImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? ip = null,
-    Object? severity = null,
-    Object? comment = null,
-    Object? createdAt = null,
+    Object? id = freezed,
+    Object? ip = freezed,
+    Object? severity = freezed,
+    Object? comment = freezed,
+    Object? createdAt = freezed,
     Object? expiresAt = freezed,
   }) {
     return _then(_$AdminIpBlockImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      ip: null == ip
+              as String?,
+      ip: freezed == ip
           ? _value.ip
           : ip // ignore: cast_nullable_to_non_nullable
-              as String,
-      severity: null == severity
+              as String?,
+      severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as AdminIpBlockSeverity,
-      comment: null == comment
+              as AdminIpBlockSeverity?,
+      comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       expiresAt: freezed == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
@@ -182,11 +182,11 @@ class __$$AdminIpBlockImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminIpBlockImpl implements _AdminIpBlock {
   const _$AdminIpBlockImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'ip') required this.ip,
-      @JsonKey(name: 'severity') required this.severity,
-      @JsonKey(name: 'comment') required this.comment,
-      @JsonKey(name: 'created_at') required this.createdAt,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'ip') this.ip,
+      @JsonKey(name: 'severity') this.severity,
+      @JsonKey(name: 'comment') this.comment,
+      @JsonKey(name: 'created_at') this.createdAt,
       @JsonKey(name: 'expires_at') this.expiresAt});
 
   factory _$AdminIpBlockImpl.fromJson(Map<String, dynamic> json) =>
@@ -195,27 +195,27 @@ class _$AdminIpBlockImpl implements _AdminIpBlock {
   /// The ID of the DomainBlock in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The IP address range that is not allowed to federate.
   @override
   @JsonKey(name: 'ip')
-  final String ip;
+  final String? ip;
 
   /// The associated policy with this IP block.
   @override
   @JsonKey(name: 'severity')
-  final AdminIpBlockSeverity severity;
+  final AdminIpBlockSeverity? severity;
 
   /// The recorded reason for this IP block.
   @override
   @JsonKey(name: 'comment')
-  final String comment;
+  final String? comment;
 
   /// When the IP block was created.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   /// When the IP block will expire.
   @override
@@ -264,13 +264,13 @@ class _$AdminIpBlockImpl implements _AdminIpBlock {
 
 abstract class _AdminIpBlock implements AdminIpBlock {
   const factory _AdminIpBlock(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'ip') required final String ip,
-      @JsonKey(name: 'severity') required final AdminIpBlockSeverity severity,
-      @JsonKey(name: 'comment') required final String comment,
-      @JsonKey(name: 'created_at') required final DateTime createdAt,
-      @JsonKey(name: 'expires_at')
-      final DateTime? expiresAt}) = _$AdminIpBlockImpl;
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'ip') final String? ip,
+          @JsonKey(name: 'severity') final AdminIpBlockSeverity? severity,
+          @JsonKey(name: 'comment') final String? comment,
+          @JsonKey(name: 'created_at') final DateTime? createdAt,
+          @JsonKey(name: 'expires_at') final DateTime? expiresAt}) =
+      _$AdminIpBlockImpl;
 
   factory _AdminIpBlock.fromJson(Map<String, dynamic> json) =
       _$AdminIpBlockImpl.fromJson;
@@ -279,27 +279,27 @@ abstract class _AdminIpBlock implements AdminIpBlock {
 
   /// The ID of the DomainBlock in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The IP address range that is not allowed to federate.
   @JsonKey(name: 'ip')
-  String get ip;
+  String? get ip;
   @override
 
   /// The associated policy with this IP block.
   @JsonKey(name: 'severity')
-  AdminIpBlockSeverity get severity;
+  AdminIpBlockSeverity? get severity;
   @override
 
   /// The recorded reason for this IP block.
   @JsonKey(name: 'comment')
-  String get comment;
+  String? get comment;
   @override
 
   /// When the IP block was created.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
 
   /// When the IP block will expire.

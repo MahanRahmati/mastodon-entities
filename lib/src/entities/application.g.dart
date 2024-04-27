@@ -8,7 +8,7 @@ part of 'application.dart';
 
 _$ApplicationImpl _$$ApplicationImplFromJson(Map<String, dynamic> json) =>
     _$ApplicationImpl(
-      name: json['name'] as String,
+      name: json['name'] as String?,
       website: json['website'] as String?,
       clientId: json['client_id'] as String?,
       clientSecret: json['client_secret'] as String?,

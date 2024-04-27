@@ -7,14 +7,14 @@ part of 'search.dart';
 // **************************************************************************
 
 _$SearchImpl _$$SearchImplFromJson(Map<String, dynamic> json) => _$SearchImpl(
-      accounts: (json['accounts'] as List<dynamic>)
-          .map((e) => Account.fromJson(e as Map<String, dynamic>))
+      accounts: (json['accounts'] as List<dynamic>?)
+          ?.map((e) => Account.fromJson(e as Map<String, dynamic>))
           .toList(),
-      statuses: (json['statuses'] as List<dynamic>)
-          .map((e) => Status.fromJson(e as Map<String, dynamic>))
+      statuses: (json['statuses'] as List<dynamic>?)
+          ?.map((e) => Status.fromJson(e as Map<String, dynamic>))
           .toList(),
-      hashtags: (json['hashtags'] as List<dynamic>)
-          .map((e) => Tag.fromJson(e as Map<String, dynamic>))
+      hashtags: (json['hashtags'] as List<dynamic>?)
+          ?.map((e) => Tag.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

@@ -8,25 +8,25 @@ part of 'account.dart';
 
 _$AccountImpl _$$AccountImplFromJson(Map<String, dynamic> json) =>
     _$AccountImpl(
-      id: json['id'] as String,
-      username: json['username'] as String,
-      acct: json['acct'] as String,
-      url: json['url'] as String,
-      displayName: json['display_name'] as String,
-      note: json['note'] as String,
-      avatar: json['avatar'] as String,
-      avatarStatic: json['avatar_static'] as String,
-      header: json['header'] as String,
-      headerStatic: json['header_static'] as String,
-      locked: json['locked'] as bool,
-      fields: (json['fields'] as List<dynamic>)
-          .map((e) => AccountField.fromJson(e as Map<String, dynamic>))
+      id: json['id'] as String?,
+      username: json['username'] as String?,
+      acct: json['acct'] as String?,
+      url: json['url'] as String?,
+      displayName: json['display_name'] as String?,
+      note: json['note'] as String?,
+      avatar: json['avatar'] as String?,
+      avatarStatic: json['avatar_static'] as String?,
+      header: json['header'] as String?,
+      headerStatic: json['header_static'] as String?,
+      locked: json['locked'] as bool?,
+      fields: (json['fields'] as List<dynamic>?)
+          ?.map((e) => AccountField.fromJson(e as Map<String, dynamic>))
           .toList(),
-      emojis: (json['emojis'] as List<dynamic>)
-          .map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
+      emojis: (json['emojis'] as List<dynamic>?)
+          ?.map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
           .toList(),
-      bot: json['bot'] as bool,
-      group: json['group'] as bool,
+      bot: json['bot'] as bool?,
+      group: json['group'] as bool?,
       discoverable: json['discoverable'] as bool?,
       noindex: json['noindex'] as bool?,
       moved: json['moved'] == null
@@ -34,13 +34,15 @@ _$AccountImpl _$$AccountImplFromJson(Map<String, dynamic> json) =>
           : Account.fromJson(json['moved'] as Map<String, dynamic>),
       suspended: json['suspended'] as bool?,
       limited: json['limited'] as bool?,
-      createdAt: DateTime.parse(json['created_at'] as String),
+      createdAt: json['created_at'] == null
+          ? null
+          : DateTime.parse(json['created_at'] as String),
       lastStatusAt: json['last_status_at'] == null
           ? null
           : DateTime.parse(json['last_status_at'] as String),
-      statusesCount: (json['statuses_count'] as num).toInt(),
-      followersCount: (json['followers_count'] as num).toInt(),
-      followingCount: (json['following_count'] as num).toInt(),
+      statusesCount: (json['statuses_count'] as num?)?.toInt(),
+      followersCount: (json['followers_count'] as num?)?.toInt(),
+      followingCount: (json['following_count'] as num?)?.toInt(),
       source: json['source'] == null
           ? null
           : AccountSource.fromJson(json['source'] as Map<String, dynamic>),
@@ -74,7 +76,7 @@ Map<String, dynamic> _$$AccountImplToJson(_$AccountImpl instance) =>
       'moved': instance.moved,
       'suspended': instance.suspended,
       'limited': instance.limited,
-      'created_at': instance.createdAt.toIso8601String(),
+      'created_at': instance.createdAt?.toIso8601String(),
       'last_status_at': instance.lastStatusAt?.toIso8601String(),
       'statuses_count': instance.statusesCount,
       'followers_count': instance.followersCount,
@@ -86,8 +88,8 @@ Map<String, dynamic> _$$AccountImplToJson(_$AccountImpl instance) =>
 
 _$AccountFieldImpl _$$AccountFieldImplFromJson(Map<String, dynamic> json) =>
     _$AccountFieldImpl(
-      name: json['name'] as String,
-      value: json['value'] as String,
+      name: json['name'] as String?,
+      value: json['value'] as String?,
       verifiedAt: json['verified_at'] == null
           ? null
           : DateTime.parse(json['verified_at'] as String),
@@ -102,23 +104,25 @@ Map<String, dynamic> _$$AccountFieldImplToJson(_$AccountFieldImpl instance) =>
 
 _$AccountSourceImpl _$$AccountSourceImplFromJson(Map<String, dynamic> json) =>
     _$AccountSourceImpl(
-      note: json['note'] as String,
-      fields: (json['fields'] as List<dynamic>)
-          .map((e) => AccountField.fromJson(e as Map<String, dynamic>))
+      note: json['note'] as String?,
+      fields: (json['fields'] as List<dynamic>?)
+          ?.map((e) => AccountField.fromJson(e as Map<String, dynamic>))
           .toList(),
-      privacy: $enumDecode(_$StatusVisibilityEnumMap, json['privacy']),
-      sensitive: json['sensitive'] as bool,
-      language: json['language'] as String,
-      followRequestsCount: (json['follow_requests_count'] as num).toInt(),
-      role: Role.fromJson(json['role'] as Map<String, dynamic>),
-      indexable: json['indexable'] as bool,
+      privacy: $enumDecodeNullable(_$StatusVisibilityEnumMap, json['privacy']),
+      sensitive: json['sensitive'] as bool?,
+      language: json['language'] as String?,
+      followRequestsCount: (json['follow_requests_count'] as num?)?.toInt(),
+      role: json['role'] == null
+          ? null
+          : Role.fromJson(json['role'] as Map<String, dynamic>),
+      indexable: json['indexable'] as bool?,
     );
 
 Map<String, dynamic> _$$AccountSourceImplToJson(_$AccountSourceImpl instance) =>
     <String, dynamic>{
       'note': instance.note,
       'fields': instance.fields,
-      'privacy': _$StatusVisibilityEnumMap[instance.privacy]!,
+      'privacy': _$StatusVisibilityEnumMap[instance.privacy],
       'sensitive': instance.sensitive,
       'language': instance.language,
       'follow_requests_count': instance.followRequestsCount,

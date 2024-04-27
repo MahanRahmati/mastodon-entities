@@ -9,9 +9,9 @@ part of 'familiar_followers.dart';
 _$FamiliarFollowersImpl _$$FamiliarFollowersImplFromJson(
         Map<String, dynamic> json) =>
     _$FamiliarFollowersImpl(
-      id: json['id'] as String,
-      accounts: (json['accounts'] as List<dynamic>)
-          .map((e) => Account.fromJson(e as Map<String, dynamic>))
+      id: json['id'] as String?,
+      accounts: (json['accounts'] as List<dynamic>?)
+          ?.map((e) => Account.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

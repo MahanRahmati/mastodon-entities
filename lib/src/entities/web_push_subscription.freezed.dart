@@ -22,19 +22,19 @@ WebPushSubscription _$WebPushSubscriptionFromJson(Map<String, dynamic> json) {
 mixin _$WebPushSubscription {
   /// The ID of the Web Push subscription in the database.
   @JsonKey(name: 'id')
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
 
   /// Where push alerts will be sent to.
   @JsonKey(name: 'endpoint')
-  String get endpoint => throw _privateConstructorUsedError;
+  String? get endpoint => throw _privateConstructorUsedError;
 
   /// The streaming server's VAPID key.
   @JsonKey(name: 'server_key')
-  String get serverKey => throw _privateConstructorUsedError;
+  String? get serverKey => throw _privateConstructorUsedError;
 
   /// Which alerts should be delivered to the [endpoint].
   @JsonKey(name: 'alerts')
-  WebPushSubscriptionAlerts get alerts => throw _privateConstructorUsedError;
+  WebPushSubscriptionAlerts? get alerts => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -49,12 +49,12 @@ abstract class $WebPushSubscriptionCopyWith<$Res> {
       _$WebPushSubscriptionCopyWithImpl<$Res, WebPushSubscription>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'endpoint') String endpoint,
-      @JsonKey(name: 'server_key') String serverKey,
-      @JsonKey(name: 'alerts') WebPushSubscriptionAlerts alerts});
+      {@JsonKey(name: 'id') int? id,
+      @JsonKey(name: 'endpoint') String? endpoint,
+      @JsonKey(name: 'server_key') String? serverKey,
+      @JsonKey(name: 'alerts') WebPushSubscriptionAlerts? alerts});
 
-  $WebPushSubscriptionAlertsCopyWith<$Res> get alerts;
+  $WebPushSubscriptionAlertsCopyWith<$Res>? get alerts;
 }
 
 /// @nodoc
@@ -70,35 +70,39 @@ class _$WebPushSubscriptionCopyWithImpl<$Res, $Val extends WebPushSubscription>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? endpoint = null,
-    Object? serverKey = null,
-    Object? alerts = null,
+    Object? id = freezed,
+    Object? endpoint = freezed,
+    Object? serverKey = freezed,
+    Object? alerts = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      endpoint: null == endpoint
+              as int?,
+      endpoint: freezed == endpoint
           ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-      serverKey: null == serverKey
+              as String?,
+      serverKey: freezed == serverKey
           ? _value.serverKey
           : serverKey // ignore: cast_nullable_to_non_nullable
-              as String,
-      alerts: null == alerts
+              as String?,
+      alerts: freezed == alerts
           ? _value.alerts
           : alerts // ignore: cast_nullable_to_non_nullable
-              as WebPushSubscriptionAlerts,
+              as WebPushSubscriptionAlerts?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $WebPushSubscriptionAlertsCopyWith<$Res> get alerts {
-    return $WebPushSubscriptionAlertsCopyWith<$Res>(_value.alerts, (value) {
+  $WebPushSubscriptionAlertsCopyWith<$Res>? get alerts {
+    if (_value.alerts == null) {
+      return null;
+    }
+
+    return $WebPushSubscriptionAlertsCopyWith<$Res>(_value.alerts!, (value) {
       return _then(_value.copyWith(alerts: value) as $Val);
     });
   }
@@ -113,13 +117,13 @@ abstract class _$$WebPushSubscriptionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'endpoint') String endpoint,
-      @JsonKey(name: 'server_key') String serverKey,
-      @JsonKey(name: 'alerts') WebPushSubscriptionAlerts alerts});
+      {@JsonKey(name: 'id') int? id,
+      @JsonKey(name: 'endpoint') String? endpoint,
+      @JsonKey(name: 'server_key') String? serverKey,
+      @JsonKey(name: 'alerts') WebPushSubscriptionAlerts? alerts});
 
   @override
-  $WebPushSubscriptionAlertsCopyWith<$Res> get alerts;
+  $WebPushSubscriptionAlertsCopyWith<$Res>? get alerts;
 }
 
 /// @nodoc
@@ -133,28 +137,28 @@ class __$$WebPushSubscriptionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? endpoint = null,
-    Object? serverKey = null,
-    Object? alerts = null,
+    Object? id = freezed,
+    Object? endpoint = freezed,
+    Object? serverKey = freezed,
+    Object? alerts = freezed,
   }) {
     return _then(_$WebPushSubscriptionImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      endpoint: null == endpoint
+              as int?,
+      endpoint: freezed == endpoint
           ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
-              as String,
-      serverKey: null == serverKey
+              as String?,
+      serverKey: freezed == serverKey
           ? _value.serverKey
           : serverKey // ignore: cast_nullable_to_non_nullable
-              as String,
-      alerts: null == alerts
+              as String?,
+      alerts: freezed == alerts
           ? _value.alerts
           : alerts // ignore: cast_nullable_to_non_nullable
-              as WebPushSubscriptionAlerts,
+              as WebPushSubscriptionAlerts?,
     ));
   }
 }
@@ -163,10 +167,10 @@ class __$$WebPushSubscriptionImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$WebPushSubscriptionImpl implements _WebPushSubscription {
   const _$WebPushSubscriptionImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'endpoint') required this.endpoint,
-      @JsonKey(name: 'server_key') required this.serverKey,
-      @JsonKey(name: 'alerts') required this.alerts});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'endpoint') this.endpoint,
+      @JsonKey(name: 'server_key') this.serverKey,
+      @JsonKey(name: 'alerts') this.alerts});
 
   factory _$WebPushSubscriptionImpl.fromJson(Map<String, dynamic> json) =>
       _$$WebPushSubscriptionImplFromJson(json);
@@ -174,22 +178,22 @@ class _$WebPushSubscriptionImpl implements _WebPushSubscription {
   /// The ID of the Web Push subscription in the database.
   @override
   @JsonKey(name: 'id')
-  final int id;
+  final int? id;
 
   /// Where push alerts will be sent to.
   @override
   @JsonKey(name: 'endpoint')
-  final String endpoint;
+  final String? endpoint;
 
   /// The streaming server's VAPID key.
   @override
   @JsonKey(name: 'server_key')
-  final String serverKey;
+  final String? serverKey;
 
   /// Which alerts should be delivered to the [endpoint].
   @override
   @JsonKey(name: 'alerts')
-  final WebPushSubscriptionAlerts alerts;
+  final WebPushSubscriptionAlerts? alerts;
 
   @override
   String toString() {
@@ -230,11 +234,10 @@ class _$WebPushSubscriptionImpl implements _WebPushSubscription {
 
 abstract class _WebPushSubscription implements WebPushSubscription {
   const factory _WebPushSubscription(
-          {@JsonKey(name: 'id') required final int id,
-          @JsonKey(name: 'endpoint') required final String endpoint,
-          @JsonKey(name: 'server_key') required final String serverKey,
-          @JsonKey(name: 'alerts')
-          required final WebPushSubscriptionAlerts alerts}) =
+          {@JsonKey(name: 'id') final int? id,
+          @JsonKey(name: 'endpoint') final String? endpoint,
+          @JsonKey(name: 'server_key') final String? serverKey,
+          @JsonKey(name: 'alerts') final WebPushSubscriptionAlerts? alerts}) =
       _$WebPushSubscriptionImpl;
 
   factory _WebPushSubscription.fromJson(Map<String, dynamic> json) =
@@ -244,22 +247,22 @@ abstract class _WebPushSubscription implements WebPushSubscription {
 
   /// The ID of the Web Push subscription in the database.
   @JsonKey(name: 'id')
-  int get id;
+  int? get id;
   @override
 
   /// Where push alerts will be sent to.
   @JsonKey(name: 'endpoint')
-  String get endpoint;
+  String? get endpoint;
   @override
 
   /// The streaming server's VAPID key.
   @JsonKey(name: 'server_key')
-  String get serverKey;
+  String? get serverKey;
   @override
 
   /// Which alerts should be delivered to the [endpoint].
   @JsonKey(name: 'alerts')
-  WebPushSubscriptionAlerts get alerts;
+  WebPushSubscriptionAlerts? get alerts;
   @override
   @JsonKey(ignore: true)
   _$$WebPushSubscriptionImplCopyWith<_$WebPushSubscriptionImpl> get copyWith =>
@@ -276,47 +279,47 @@ mixin _$WebPushSubscriptionAlerts {
   /// Receive a push notification when someone else has mentioned you in a
   /// status?
   @JsonKey(name: 'mention')
-  bool get mention => throw _privateConstructorUsedError;
+  bool? get mention => throw _privateConstructorUsedError;
 
   /// Receive a push notification when a subscribed account posts a status?
   @JsonKey(name: 'status')
-  bool get status => throw _privateConstructorUsedError;
+  bool? get status => throw _privateConstructorUsedError;
 
   /// Receive a push notification when a status you created has been boosted
   /// by someone else?
   @JsonKey(name: 'reblog')
-  bool get reblog => throw _privateConstructorUsedError;
+  bool? get reblog => throw _privateConstructorUsedError;
 
   /// Receive a push notification when someone has followed you?
   @JsonKey(name: 'follow')
-  bool get follow => throw _privateConstructorUsedError;
+  bool? get follow => throw _privateConstructorUsedError;
 
   /// Receive a push notification when someone has requested to followed you?
   @JsonKey(name: 'follow_request')
-  bool get followRequest => throw _privateConstructorUsedError;
+  bool? get followRequest => throw _privateConstructorUsedError;
 
   /// Receive a push notification when a status you created has been
   /// favourited by someone else?
   @JsonKey(name: 'favourite')
-  bool get favourite => throw _privateConstructorUsedError;
+  bool? get favourite => throw _privateConstructorUsedError;
 
   /// Receive a push notification when a poll you voted in or created has
   /// ended?
   @JsonKey(name: 'poll')
-  bool get poll => throw _privateConstructorUsedError;
+  bool? get poll => throw _privateConstructorUsedError;
 
   /// Receive a push notification when a status you interacted with has been
   /// edited?
   @JsonKey(name: 'update')
-  bool get update => throw _privateConstructorUsedError;
+  bool? get update => throw _privateConstructorUsedError;
 
   /// Receive a push notification when a new user has signed up?
   @JsonKey(name: 'admin.sign_up')
-  bool get adminSignUp => throw _privateConstructorUsedError;
+  bool? get adminSignUp => throw _privateConstructorUsedError;
 
   /// Receive a push notification when a new report has been filed?
   @JsonKey(name: 'admin.report')
-  bool get adminReport => throw _privateConstructorUsedError;
+  bool? get adminReport => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -331,16 +334,16 @@ abstract class $WebPushSubscriptionAlertsCopyWith<$Res> {
       _$WebPushSubscriptionAlertsCopyWithImpl<$Res, WebPushSubscriptionAlerts>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'mention') bool mention,
-      @JsonKey(name: 'status') bool status,
-      @JsonKey(name: 'reblog') bool reblog,
-      @JsonKey(name: 'follow') bool follow,
-      @JsonKey(name: 'follow_request') bool followRequest,
-      @JsonKey(name: 'favourite') bool favourite,
-      @JsonKey(name: 'poll') bool poll,
-      @JsonKey(name: 'update') bool update,
-      @JsonKey(name: 'admin.sign_up') bool adminSignUp,
-      @JsonKey(name: 'admin.report') bool adminReport});
+      {@JsonKey(name: 'mention') bool? mention,
+      @JsonKey(name: 'status') bool? status,
+      @JsonKey(name: 'reblog') bool? reblog,
+      @JsonKey(name: 'follow') bool? follow,
+      @JsonKey(name: 'follow_request') bool? followRequest,
+      @JsonKey(name: 'favourite') bool? favourite,
+      @JsonKey(name: 'poll') bool? poll,
+      @JsonKey(name: 'update') bool? update,
+      @JsonKey(name: 'admin.sign_up') bool? adminSignUp,
+      @JsonKey(name: 'admin.report') bool? adminReport});
 }
 
 /// @nodoc
@@ -357,58 +360,58 @@ class _$WebPushSubscriptionAlertsCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? mention = null,
-    Object? status = null,
-    Object? reblog = null,
-    Object? follow = null,
-    Object? followRequest = null,
-    Object? favourite = null,
-    Object? poll = null,
-    Object? update = null,
-    Object? adminSignUp = null,
-    Object? adminReport = null,
+    Object? mention = freezed,
+    Object? status = freezed,
+    Object? reblog = freezed,
+    Object? follow = freezed,
+    Object? followRequest = freezed,
+    Object? favourite = freezed,
+    Object? poll = freezed,
+    Object? update = freezed,
+    Object? adminSignUp = freezed,
+    Object? adminReport = freezed,
   }) {
     return _then(_value.copyWith(
-      mention: null == mention
+      mention: freezed == mention
           ? _value.mention
           : mention // ignore: cast_nullable_to_non_nullable
-              as bool,
-      status: null == status
+              as bool?,
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as bool,
-      reblog: null == reblog
+              as bool?,
+      reblog: freezed == reblog
           ? _value.reblog
           : reblog // ignore: cast_nullable_to_non_nullable
-              as bool,
-      follow: null == follow
+              as bool?,
+      follow: freezed == follow
           ? _value.follow
           : follow // ignore: cast_nullable_to_non_nullable
-              as bool,
-      followRequest: null == followRequest
+              as bool?,
+      followRequest: freezed == followRequest
           ? _value.followRequest
           : followRequest // ignore: cast_nullable_to_non_nullable
-              as bool,
-      favourite: null == favourite
+              as bool?,
+      favourite: freezed == favourite
           ? _value.favourite
           : favourite // ignore: cast_nullable_to_non_nullable
-              as bool,
-      poll: null == poll
+              as bool?,
+      poll: freezed == poll
           ? _value.poll
           : poll // ignore: cast_nullable_to_non_nullable
-              as bool,
-      update: null == update
+              as bool?,
+      update: freezed == update
           ? _value.update
           : update // ignore: cast_nullable_to_non_nullable
-              as bool,
-      adminSignUp: null == adminSignUp
+              as bool?,
+      adminSignUp: freezed == adminSignUp
           ? _value.adminSignUp
           : adminSignUp // ignore: cast_nullable_to_non_nullable
-              as bool,
-      adminReport: null == adminReport
+              as bool?,
+      adminReport: freezed == adminReport
           ? _value.adminReport
           : adminReport // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -423,16 +426,16 @@ abstract class _$$WebPushSubscriptionAlertsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'mention') bool mention,
-      @JsonKey(name: 'status') bool status,
-      @JsonKey(name: 'reblog') bool reblog,
-      @JsonKey(name: 'follow') bool follow,
-      @JsonKey(name: 'follow_request') bool followRequest,
-      @JsonKey(name: 'favourite') bool favourite,
-      @JsonKey(name: 'poll') bool poll,
-      @JsonKey(name: 'update') bool update,
-      @JsonKey(name: 'admin.sign_up') bool adminSignUp,
-      @JsonKey(name: 'admin.report') bool adminReport});
+      {@JsonKey(name: 'mention') bool? mention,
+      @JsonKey(name: 'status') bool? status,
+      @JsonKey(name: 'reblog') bool? reblog,
+      @JsonKey(name: 'follow') bool? follow,
+      @JsonKey(name: 'follow_request') bool? followRequest,
+      @JsonKey(name: 'favourite') bool? favourite,
+      @JsonKey(name: 'poll') bool? poll,
+      @JsonKey(name: 'update') bool? update,
+      @JsonKey(name: 'admin.sign_up') bool? adminSignUp,
+      @JsonKey(name: 'admin.report') bool? adminReport});
 }
 
 /// @nodoc
@@ -448,58 +451,58 @@ class __$$WebPushSubscriptionAlertsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? mention = null,
-    Object? status = null,
-    Object? reblog = null,
-    Object? follow = null,
-    Object? followRequest = null,
-    Object? favourite = null,
-    Object? poll = null,
-    Object? update = null,
-    Object? adminSignUp = null,
-    Object? adminReport = null,
+    Object? mention = freezed,
+    Object? status = freezed,
+    Object? reblog = freezed,
+    Object? follow = freezed,
+    Object? followRequest = freezed,
+    Object? favourite = freezed,
+    Object? poll = freezed,
+    Object? update = freezed,
+    Object? adminSignUp = freezed,
+    Object? adminReport = freezed,
   }) {
     return _then(_$WebPushSubscriptionAlertsImpl(
-      mention: null == mention
+      mention: freezed == mention
           ? _value.mention
           : mention // ignore: cast_nullable_to_non_nullable
-              as bool,
-      status: null == status
+              as bool?,
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as bool,
-      reblog: null == reblog
+              as bool?,
+      reblog: freezed == reblog
           ? _value.reblog
           : reblog // ignore: cast_nullable_to_non_nullable
-              as bool,
-      follow: null == follow
+              as bool?,
+      follow: freezed == follow
           ? _value.follow
           : follow // ignore: cast_nullable_to_non_nullable
-              as bool,
-      followRequest: null == followRequest
+              as bool?,
+      followRequest: freezed == followRequest
           ? _value.followRequest
           : followRequest // ignore: cast_nullable_to_non_nullable
-              as bool,
-      favourite: null == favourite
+              as bool?,
+      favourite: freezed == favourite
           ? _value.favourite
           : favourite // ignore: cast_nullable_to_non_nullable
-              as bool,
-      poll: null == poll
+              as bool?,
+      poll: freezed == poll
           ? _value.poll
           : poll // ignore: cast_nullable_to_non_nullable
-              as bool,
-      update: null == update
+              as bool?,
+      update: freezed == update
           ? _value.update
           : update // ignore: cast_nullable_to_non_nullable
-              as bool,
-      adminSignUp: null == adminSignUp
+              as bool?,
+      adminSignUp: freezed == adminSignUp
           ? _value.adminSignUp
           : adminSignUp // ignore: cast_nullable_to_non_nullable
-              as bool,
-      adminReport: null == adminReport
+              as bool?,
+      adminReport: freezed == adminReport
           ? _value.adminReport
           : adminReport // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -508,16 +511,16 @@ class __$$WebPushSubscriptionAlertsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$WebPushSubscriptionAlertsImpl implements _WebPushSubscriptionAlerts {
   const _$WebPushSubscriptionAlertsImpl(
-      {@JsonKey(name: 'mention') required this.mention,
-      @JsonKey(name: 'status') required this.status,
-      @JsonKey(name: 'reblog') required this.reblog,
-      @JsonKey(name: 'follow') required this.follow,
-      @JsonKey(name: 'follow_request') required this.followRequest,
-      @JsonKey(name: 'favourite') required this.favourite,
-      @JsonKey(name: 'poll') required this.poll,
-      @JsonKey(name: 'update') required this.update,
-      @JsonKey(name: 'admin.sign_up') required this.adminSignUp,
-      @JsonKey(name: 'admin.report') required this.adminReport});
+      {@JsonKey(name: 'mention') this.mention,
+      @JsonKey(name: 'status') this.status,
+      @JsonKey(name: 'reblog') this.reblog,
+      @JsonKey(name: 'follow') this.follow,
+      @JsonKey(name: 'follow_request') this.followRequest,
+      @JsonKey(name: 'favourite') this.favourite,
+      @JsonKey(name: 'poll') this.poll,
+      @JsonKey(name: 'update') this.update,
+      @JsonKey(name: 'admin.sign_up') this.adminSignUp,
+      @JsonKey(name: 'admin.report') this.adminReport});
 
   factory _$WebPushSubscriptionAlertsImpl.fromJson(Map<String, dynamic> json) =>
       _$$WebPushSubscriptionAlertsImplFromJson(json);
@@ -526,56 +529,56 @@ class _$WebPushSubscriptionAlertsImpl implements _WebPushSubscriptionAlerts {
   /// status?
   @override
   @JsonKey(name: 'mention')
-  final bool mention;
+  final bool? mention;
 
   /// Receive a push notification when a subscribed account posts a status?
   @override
   @JsonKey(name: 'status')
-  final bool status;
+  final bool? status;
 
   /// Receive a push notification when a status you created has been boosted
   /// by someone else?
   @override
   @JsonKey(name: 'reblog')
-  final bool reblog;
+  final bool? reblog;
 
   /// Receive a push notification when someone has followed you?
   @override
   @JsonKey(name: 'follow')
-  final bool follow;
+  final bool? follow;
 
   /// Receive a push notification when someone has requested to followed you?
   @override
   @JsonKey(name: 'follow_request')
-  final bool followRequest;
+  final bool? followRequest;
 
   /// Receive a push notification when a status you created has been
   /// favourited by someone else?
   @override
   @JsonKey(name: 'favourite')
-  final bool favourite;
+  final bool? favourite;
 
   /// Receive a push notification when a poll you voted in or created has
   /// ended?
   @override
   @JsonKey(name: 'poll')
-  final bool poll;
+  final bool? poll;
 
   /// Receive a push notification when a status you interacted with has been
   /// edited?
   @override
   @JsonKey(name: 'update')
-  final bool update;
+  final bool? update;
 
   /// Receive a push notification when a new user has signed up?
   @override
   @JsonKey(name: 'admin.sign_up')
-  final bool adminSignUp;
+  final bool? adminSignUp;
 
   /// Receive a push notification when a new report has been filed?
   @override
   @JsonKey(name: 'admin.report')
-  final bool adminReport;
+  final bool? adminReport;
 
   @override
   String toString() {
@@ -625,16 +628,16 @@ class _$WebPushSubscriptionAlertsImpl implements _WebPushSubscriptionAlerts {
 
 abstract class _WebPushSubscriptionAlerts implements WebPushSubscriptionAlerts {
   const factory _WebPushSubscriptionAlerts(
-          {@JsonKey(name: 'mention') required final bool mention,
-          @JsonKey(name: 'status') required final bool status,
-          @JsonKey(name: 'reblog') required final bool reblog,
-          @JsonKey(name: 'follow') required final bool follow,
-          @JsonKey(name: 'follow_request') required final bool followRequest,
-          @JsonKey(name: 'favourite') required final bool favourite,
-          @JsonKey(name: 'poll') required final bool poll,
-          @JsonKey(name: 'update') required final bool update,
-          @JsonKey(name: 'admin.sign_up') required final bool adminSignUp,
-          @JsonKey(name: 'admin.report') required final bool adminReport}) =
+          {@JsonKey(name: 'mention') final bool? mention,
+          @JsonKey(name: 'status') final bool? status,
+          @JsonKey(name: 'reblog') final bool? reblog,
+          @JsonKey(name: 'follow') final bool? follow,
+          @JsonKey(name: 'follow_request') final bool? followRequest,
+          @JsonKey(name: 'favourite') final bool? favourite,
+          @JsonKey(name: 'poll') final bool? poll,
+          @JsonKey(name: 'update') final bool? update,
+          @JsonKey(name: 'admin.sign_up') final bool? adminSignUp,
+          @JsonKey(name: 'admin.report') final bool? adminReport}) =
       _$WebPushSubscriptionAlertsImpl;
 
   factory _WebPushSubscriptionAlerts.fromJson(Map<String, dynamic> json) =
@@ -645,56 +648,56 @@ abstract class _WebPushSubscriptionAlerts implements WebPushSubscriptionAlerts {
   /// Receive a push notification when someone else has mentioned you in a
   /// status?
   @JsonKey(name: 'mention')
-  bool get mention;
+  bool? get mention;
   @override
 
   /// Receive a push notification when a subscribed account posts a status?
   @JsonKey(name: 'status')
-  bool get status;
+  bool? get status;
   @override
 
   /// Receive a push notification when a status you created has been boosted
   /// by someone else?
   @JsonKey(name: 'reblog')
-  bool get reblog;
+  bool? get reblog;
   @override
 
   /// Receive a push notification when someone has followed you?
   @JsonKey(name: 'follow')
-  bool get follow;
+  bool? get follow;
   @override
 
   /// Receive a push notification when someone has requested to followed you?
   @JsonKey(name: 'follow_request')
-  bool get followRequest;
+  bool? get followRequest;
   @override
 
   /// Receive a push notification when a status you created has been
   /// favourited by someone else?
   @JsonKey(name: 'favourite')
-  bool get favourite;
+  bool? get favourite;
   @override
 
   /// Receive a push notification when a poll you voted in or created has
   /// ended?
   @JsonKey(name: 'poll')
-  bool get poll;
+  bool? get poll;
   @override
 
   /// Receive a push notification when a status you interacted with has been
   /// edited?
   @JsonKey(name: 'update')
-  bool get update;
+  bool? get update;
   @override
 
   /// Receive a push notification when a new user has signed up?
   @JsonKey(name: 'admin.sign_up')
-  bool get adminSignUp;
+  bool? get adminSignUp;
   @override
 
   /// Receive a push notification when a new report has been filed?
   @JsonKey(name: 'admin.report')
-  bool get adminReport;
+  bool? get adminReport;
   @override
   @JsonKey(ignore: true)
   _$$WebPushSubscriptionAlertsImplCopyWith<_$WebPushSubscriptionAlertsImpl>

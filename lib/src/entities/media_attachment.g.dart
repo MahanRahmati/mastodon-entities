@@ -9,21 +9,23 @@ part of 'media_attachment.dart';
 _$MediaAttachmentImpl _$$MediaAttachmentImplFromJson(
         Map<String, dynamic> json) =>
     _$MediaAttachmentImpl(
-      id: json['id'] as String,
-      type: $enumDecode(_$MediaAttachmentTypeEnumMap, json['type']),
-      url: json['url'] as String,
-      previewUrl: json['preview_url'] as String,
+      id: json['id'] as String?,
+      type: $enumDecodeNullable(_$MediaAttachmentTypeEnumMap, json['type']),
+      url: json['url'] as String?,
+      previewUrl: json['preview_url'] as String?,
       remoteUrl: json['remote_url'] as String?,
-      meta: MediaAttachmentMeta.fromJson(json['meta'] as Map<String, dynamic>),
+      meta: json['meta'] == null
+          ? null
+          : MediaAttachmentMeta.fromJson(json['meta'] as Map<String, dynamic>),
       description: json['description'] as String?,
-      blurhash: json['blurhash'] as String,
+      blurhash: json['blurhash'] as String?,
     );
 
 Map<String, dynamic> _$$MediaAttachmentImplToJson(
         _$MediaAttachmentImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'type': _$MediaAttachmentTypeEnumMap[instance.type]!,
+      'type': _$MediaAttachmentTypeEnumMap[instance.type],
       'url': instance.url,
       'preview_url': instance.previewUrl,
       'remote_url': instance.remoteUrl,

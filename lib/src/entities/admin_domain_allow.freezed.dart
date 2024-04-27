@@ -22,15 +22,15 @@ AdminDomainAllow _$AdminDomainAllowFromJson(Map<String, dynamic> json) {
 mixin _$AdminDomainAllow {
   /// The ID of the DomainAllow in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The domain that is allowed to federate.
   @JsonKey(name: 'domain')
-  String get domain => throw _privateConstructorUsedError;
+  String? get domain => throw _privateConstructorUsedError;
 
   /// When the domain was allowed to federate.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,9 +45,9 @@ abstract class $AdminDomainAllowCopyWith<$Res> {
       _$AdminDomainAllowCopyWithImpl<$Res, AdminDomainAllow>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'domain') String domain,
-      @JsonKey(name: 'created_at') DateTime createdAt});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
 /// @nodoc
@@ -63,23 +63,23 @@ class _$AdminDomainAllowCopyWithImpl<$Res, $Val extends AdminDomainAllow>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? domain = null,
-    Object? createdAt = null,
+    Object? id = freezed,
+    Object? domain = freezed,
+    Object? createdAt = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      domain: null == domain
+              as String?,
+      domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -93,9 +93,9 @@ abstract class _$$AdminDomainAllowImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'domain') String domain,
-      @JsonKey(name: 'created_at') DateTime createdAt});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
 /// @nodoc
@@ -109,23 +109,23 @@ class __$$AdminDomainAllowImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? domain = null,
-    Object? createdAt = null,
+    Object? id = freezed,
+    Object? domain = freezed,
+    Object? createdAt = freezed,
   }) {
     return _then(_$AdminDomainAllowImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      domain: null == domain
+              as String?,
+      domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ));
   }
 }
@@ -134,9 +134,9 @@ class __$$AdminDomainAllowImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminDomainAllowImpl implements _AdminDomainAllow {
   const _$AdminDomainAllowImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'domain') required this.domain,
-      @JsonKey(name: 'created_at') required this.createdAt});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'domain') this.domain,
+      @JsonKey(name: 'created_at') this.createdAt});
 
   factory _$AdminDomainAllowImpl.fromJson(Map<String, dynamic> json) =>
       _$$AdminDomainAllowImplFromJson(json);
@@ -144,17 +144,17 @@ class _$AdminDomainAllowImpl implements _AdminDomainAllow {
   /// The ID of the DomainAllow in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The domain that is allowed to federate.
   @override
   @JsonKey(name: 'domain')
-  final String domain;
+  final String? domain;
 
   /// When the domain was allowed to federate.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   @override
   String toString() {
@@ -193,9 +193,9 @@ class _$AdminDomainAllowImpl implements _AdminDomainAllow {
 
 abstract class _AdminDomainAllow implements AdminDomainAllow {
   const factory _AdminDomainAllow(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'domain') required final String domain,
-          @JsonKey(name: 'created_at') required final DateTime createdAt}) =
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'domain') final String? domain,
+          @JsonKey(name: 'created_at') final DateTime? createdAt}) =
       _$AdminDomainAllowImpl;
 
   factory _AdminDomainAllow.fromJson(Map<String, dynamic> json) =
@@ -205,17 +205,17 @@ abstract class _AdminDomainAllow implements AdminDomainAllow {
 
   /// The ID of the DomainAllow in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The domain that is allowed to federate.
   @JsonKey(name: 'domain')
-  String get domain;
+  String? get domain;
   @override
 
   /// When the domain was allowed to federate.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
   @JsonKey(ignore: true)
   _$$AdminDomainAllowImplCopyWith<_$AdminDomainAllowImpl> get copyWith =>

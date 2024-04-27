@@ -23,19 +23,19 @@ AdminEmailDomainBlock _$AdminEmailDomainBlockFromJson(
 mixin _$AdminEmailDomainBlock {
   /// The ID of the EmailDomainBlock in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The email domain that is not allowed to be used for signups.
   @JsonKey(name: 'domain')
-  String get domain => throw _privateConstructorUsedError;
+  String? get domain => throw _privateConstructorUsedError;
 
   /// When the email domain was disallowed from signups.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   /// Usage statistics for given days (typically the past week).
   @JsonKey(name: 'history')
-  List<AdminEmailDomainBlockHistory> get history =>
+  List<AdminEmailDomainBlockHistory>? get history =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -51,10 +51,10 @@ abstract class $AdminEmailDomainBlockCopyWith<$Res> {
       _$AdminEmailDomainBlockCopyWithImpl<$Res, AdminEmailDomainBlock>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'domain') String domain,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'history') List<AdminEmailDomainBlockHistory> history});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'history') List<AdminEmailDomainBlockHistory>? history});
 }
 
 /// @nodoc
@@ -71,28 +71,28 @@ class _$AdminEmailDomainBlockCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? domain = null,
-    Object? createdAt = null,
-    Object? history = null,
+    Object? id = freezed,
+    Object? domain = freezed,
+    Object? createdAt = freezed,
+    Object? history = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      domain: null == domain
+              as String?,
+      domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      history: null == history
+              as DateTime?,
+      history: freezed == history
           ? _value.history
           : history // ignore: cast_nullable_to_non_nullable
-              as List<AdminEmailDomainBlockHistory>,
+              as List<AdminEmailDomainBlockHistory>?,
     ) as $Val);
   }
 }
@@ -107,10 +107,10 @@ abstract class _$$AdminEmailDomainBlockImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'domain') String domain,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'history') List<AdminEmailDomainBlockHistory> history});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'history') List<AdminEmailDomainBlockHistory>? history});
 }
 
 /// @nodoc
@@ -125,28 +125,28 @@ class __$$AdminEmailDomainBlockImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? domain = null,
-    Object? createdAt = null,
-    Object? history = null,
+    Object? id = freezed,
+    Object? domain = freezed,
+    Object? createdAt = freezed,
+    Object? history = freezed,
   }) {
     return _then(_$AdminEmailDomainBlockImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      domain: null == domain
+              as String?,
+      domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      history: null == history
+              as DateTime?,
+      history: freezed == history
           ? _value._history
           : history // ignore: cast_nullable_to_non_nullable
-              as List<AdminEmailDomainBlockHistory>,
+              as List<AdminEmailDomainBlockHistory>?,
     ));
   }
 }
@@ -155,11 +155,11 @@ class __$$AdminEmailDomainBlockImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminEmailDomainBlockImpl implements _AdminEmailDomainBlock {
   const _$AdminEmailDomainBlockImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'domain') required this.domain,
-      @JsonKey(name: 'created_at') required this.createdAt,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'domain') this.domain,
+      @JsonKey(name: 'created_at') this.createdAt,
       @JsonKey(name: 'history')
-      required final List<AdminEmailDomainBlockHistory> history})
+      final List<AdminEmailDomainBlockHistory>? history})
       : _history = history;
 
   factory _$AdminEmailDomainBlockImpl.fromJson(Map<String, dynamic> json) =>
@@ -168,28 +168,30 @@ class _$AdminEmailDomainBlockImpl implements _AdminEmailDomainBlock {
   /// The ID of the EmailDomainBlock in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The email domain that is not allowed to be used for signups.
   @override
   @JsonKey(name: 'domain')
-  final String domain;
+  final String? domain;
 
   /// When the email domain was disallowed from signups.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   /// Usage statistics for given days (typically the past week).
-  final List<AdminEmailDomainBlockHistory> _history;
+  final List<AdminEmailDomainBlockHistory>? _history;
 
   /// Usage statistics for given days (typically the past week).
   @override
   @JsonKey(name: 'history')
-  List<AdminEmailDomainBlockHistory> get history {
+  List<AdminEmailDomainBlockHistory>? get history {
+    final value = _history;
+    if (value == null) return null;
     if (_history is EqualUnmodifiableListView) return _history;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_history);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -231,11 +233,11 @@ class _$AdminEmailDomainBlockImpl implements _AdminEmailDomainBlock {
 
 abstract class _AdminEmailDomainBlock implements AdminEmailDomainBlock {
   const factory _AdminEmailDomainBlock(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'domain') required final String domain,
-          @JsonKey(name: 'created_at') required final DateTime createdAt,
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'domain') final String? domain,
+          @JsonKey(name: 'created_at') final DateTime? createdAt,
           @JsonKey(name: 'history')
-          required final List<AdminEmailDomainBlockHistory> history}) =
+          final List<AdminEmailDomainBlockHistory>? history}) =
       _$AdminEmailDomainBlockImpl;
 
   factory _AdminEmailDomainBlock.fromJson(Map<String, dynamic> json) =
@@ -245,22 +247,22 @@ abstract class _AdminEmailDomainBlock implements AdminEmailDomainBlock {
 
   /// The ID of the EmailDomainBlock in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The email domain that is not allowed to be used for signups.
   @JsonKey(name: 'domain')
-  String get domain;
+  String? get domain;
   @override
 
   /// When the email domain was disallowed from signups.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
 
   /// Usage statistics for given days (typically the past week).
   @JsonKey(name: 'history')
-  List<AdminEmailDomainBlockHistory> get history;
+  List<AdminEmailDomainBlockHistory>? get history;
   @override
   @JsonKey(ignore: true)
   _$$AdminEmailDomainBlockImplCopyWith<_$AdminEmailDomainBlockImpl>
@@ -276,16 +278,16 @@ AdminEmailDomainBlockHistory _$AdminEmailDomainBlockHistoryFromJson(
 mixin _$AdminEmailDomainBlockHistory {
   /// UNIX timestamp on midnight of the given day.
   @JsonKey(name: 'day')
-  String get day => throw _privateConstructorUsedError;
+  String? get day => throw _privateConstructorUsedError;
 
   /// The counted accounts signup attempts using that email domain within
   /// that day.
   @JsonKey(name: 'accounts')
-  String get accounts => throw _privateConstructorUsedError;
+  String? get accounts => throw _privateConstructorUsedError;
 
   /// The counted IP signup attempts of that email domain within that day.
   @JsonKey(name: 'uses')
-  String get uses => throw _privateConstructorUsedError;
+  String? get uses => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -302,9 +304,9 @@ abstract class $AdminEmailDomainBlockHistoryCopyWith<$Res> {
           AdminEmailDomainBlockHistory>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'day') String day,
-      @JsonKey(name: 'accounts') String accounts,
-      @JsonKey(name: 'uses') String uses});
+      {@JsonKey(name: 'day') String? day,
+      @JsonKey(name: 'accounts') String? accounts,
+      @JsonKey(name: 'uses') String? uses});
 }
 
 /// @nodoc
@@ -321,23 +323,23 @@ class _$AdminEmailDomainBlockHistoryCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? day = null,
-    Object? accounts = null,
-    Object? uses = null,
+    Object? day = freezed,
+    Object? accounts = freezed,
+    Object? uses = freezed,
   }) {
     return _then(_value.copyWith(
-      day: null == day
+      day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as String,
-      accounts: null == accounts
+              as String?,
+      accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as String,
-      uses: null == uses
+              as String?,
+      uses: freezed == uses
           ? _value.uses
           : uses // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -352,9 +354,9 @@ abstract class _$$AdminEmailDomainBlockHistoryImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'day') String day,
-      @JsonKey(name: 'accounts') String accounts,
-      @JsonKey(name: 'uses') String uses});
+      {@JsonKey(name: 'day') String? day,
+      @JsonKey(name: 'accounts') String? accounts,
+      @JsonKey(name: 'uses') String? uses});
 }
 
 /// @nodoc
@@ -370,23 +372,23 @@ class __$$AdminEmailDomainBlockHistoryImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? day = null,
-    Object? accounts = null,
-    Object? uses = null,
+    Object? day = freezed,
+    Object? accounts = freezed,
+    Object? uses = freezed,
   }) {
     return _then(_$AdminEmailDomainBlockHistoryImpl(
-      day: null == day
+      day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as String,
-      accounts: null == accounts
+              as String?,
+      accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as String,
-      uses: null == uses
+              as String?,
+      uses: freezed == uses
           ? _value.uses
           : uses // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -396,9 +398,9 @@ class __$$AdminEmailDomainBlockHistoryImplCopyWithImpl<$Res>
 class _$AdminEmailDomainBlockHistoryImpl
     implements _AdminEmailDomainBlockHistory {
   const _$AdminEmailDomainBlockHistoryImpl(
-      {@JsonKey(name: 'day') required this.day,
-      @JsonKey(name: 'accounts') required this.accounts,
-      @JsonKey(name: 'uses') required this.uses});
+      {@JsonKey(name: 'day') this.day,
+      @JsonKey(name: 'accounts') this.accounts,
+      @JsonKey(name: 'uses') this.uses});
 
   factory _$AdminEmailDomainBlockHistoryImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -407,18 +409,18 @@ class _$AdminEmailDomainBlockHistoryImpl
   /// UNIX timestamp on midnight of the given day.
   @override
   @JsonKey(name: 'day')
-  final String day;
+  final String? day;
 
   /// The counted accounts signup attempts using that email domain within
   /// that day.
   @override
   @JsonKey(name: 'accounts')
-  final String accounts;
+  final String? accounts;
 
   /// The counted IP signup attempts of that email domain within that day.
   @override
   @JsonKey(name: 'uses')
-  final String uses;
+  final String? uses;
 
   @override
   String toString() {
@@ -459,9 +461,9 @@ class _$AdminEmailDomainBlockHistoryImpl
 abstract class _AdminEmailDomainBlockHistory
     implements AdminEmailDomainBlockHistory {
   const factory _AdminEmailDomainBlockHistory(
-          {@JsonKey(name: 'day') required final String day,
-          @JsonKey(name: 'accounts') required final String accounts,
-          @JsonKey(name: 'uses') required final String uses}) =
+          {@JsonKey(name: 'day') final String? day,
+          @JsonKey(name: 'accounts') final String? accounts,
+          @JsonKey(name: 'uses') final String? uses}) =
       _$AdminEmailDomainBlockHistoryImpl;
 
   factory _AdminEmailDomainBlockHistory.fromJson(Map<String, dynamic> json) =
@@ -471,18 +473,18 @@ abstract class _AdminEmailDomainBlockHistory
 
   /// UNIX timestamp on midnight of the given day.
   @JsonKey(name: 'day')
-  String get day;
+  String? get day;
   @override
 
   /// The counted accounts signup attempts using that email domain within
   /// that day.
   @JsonKey(name: 'accounts')
-  String get accounts;
+  String? get accounts;
   @override
 
   /// The counted IP signup attempts of that email domain within that day.
   @JsonKey(name: 'uses')
-  String get uses;
+  String? get uses;
   @override
   @JsonKey(ignore: true)
   _$$AdminEmailDomainBlockHistoryImplCopyWith<

@@ -22,15 +22,15 @@ Filter _$FilterFromJson(Map<String, dynamic> json) {
 mixin _$Filter {
   /// The ID of the Filter in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// A title given by the user to name the filter.
   @JsonKey(name: 'title')
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
 
   /// The contexts in which the filter should be applied.
   @JsonKey(name: 'context')
-  List<FilterContext> get context => throw _privateConstructorUsedError;
+  List<FilterContext>? get context => throw _privateConstructorUsedError;
 
   /// When the filter should no longer be applied.
   @JsonKey(name: 'expires_at')
@@ -38,15 +38,15 @@ mixin _$Filter {
 
   /// The action to be taken when a status matches this filter.
   @JsonKey(name: 'filter_action')
-  FilterAction get filterAction => throw _privateConstructorUsedError;
+  FilterAction? get filterAction => throw _privateConstructorUsedError;
 
   /// The keywords grouped under this filter.
   @JsonKey(name: 'keywords')
-  List<FilterKeyword> get keywords => throw _privateConstructorUsedError;
+  List<FilterKeyword>? get keywords => throw _privateConstructorUsedError;
 
   /// The statuses grouped under this filter.
   @JsonKey(name: 'statuses')
-  List<FilterStatus> get statuses => throw _privateConstructorUsedError;
+  List<FilterStatus>? get statuses => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -59,13 +59,13 @@ abstract class $FilterCopyWith<$Res> {
       _$FilterCopyWithImpl<$Res, Filter>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'context') List<FilterContext> context,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'context') List<FilterContext>? context,
       @JsonKey(name: 'expires_at') DateTime? expiresAt,
-      @JsonKey(name: 'filter_action') FilterAction filterAction,
-      @JsonKey(name: 'keywords') List<FilterKeyword> keywords,
-      @JsonKey(name: 'statuses') List<FilterStatus> statuses});
+      @JsonKey(name: 'filter_action') FilterAction? filterAction,
+      @JsonKey(name: 'keywords') List<FilterKeyword>? keywords,
+      @JsonKey(name: 'statuses') List<FilterStatus>? statuses});
 }
 
 /// @nodoc
@@ -81,43 +81,43 @@ class _$FilterCopyWithImpl<$Res, $Val extends Filter>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? title = null,
-    Object? context = null,
+    Object? id = freezed,
+    Object? title = freezed,
+    Object? context = freezed,
     Object? expiresAt = freezed,
-    Object? filterAction = null,
-    Object? keywords = null,
-    Object? statuses = null,
+    Object? filterAction = freezed,
+    Object? keywords = freezed,
+    Object? statuses = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      context: null == context
+              as String?,
+      context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
-              as List<FilterContext>,
+              as List<FilterContext>?,
       expiresAt: freezed == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      filterAction: null == filterAction
+      filterAction: freezed == filterAction
           ? _value.filterAction
           : filterAction // ignore: cast_nullable_to_non_nullable
-              as FilterAction,
-      keywords: null == keywords
+              as FilterAction?,
+      keywords: freezed == keywords
           ? _value.keywords
           : keywords // ignore: cast_nullable_to_non_nullable
-              as List<FilterKeyword>,
-      statuses: null == statuses
+              as List<FilterKeyword>?,
+      statuses: freezed == statuses
           ? _value.statuses
           : statuses // ignore: cast_nullable_to_non_nullable
-              as List<FilterStatus>,
+              as List<FilterStatus>?,
     ) as $Val);
   }
 }
@@ -130,13 +130,13 @@ abstract class _$$FilterImplCopyWith<$Res> implements $FilterCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'context') List<FilterContext> context,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'context') List<FilterContext>? context,
       @JsonKey(name: 'expires_at') DateTime? expiresAt,
-      @JsonKey(name: 'filter_action') FilterAction filterAction,
-      @JsonKey(name: 'keywords') List<FilterKeyword> keywords,
-      @JsonKey(name: 'statuses') List<FilterStatus> statuses});
+      @JsonKey(name: 'filter_action') FilterAction? filterAction,
+      @JsonKey(name: 'keywords') List<FilterKeyword>? keywords,
+      @JsonKey(name: 'statuses') List<FilterStatus>? statuses});
 }
 
 /// @nodoc
@@ -150,43 +150,43 @@ class __$$FilterImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? title = null,
-    Object? context = null,
+    Object? id = freezed,
+    Object? title = freezed,
+    Object? context = freezed,
     Object? expiresAt = freezed,
-    Object? filterAction = null,
-    Object? keywords = null,
-    Object? statuses = null,
+    Object? filterAction = freezed,
+    Object? keywords = freezed,
+    Object? statuses = freezed,
   }) {
     return _then(_$FilterImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      context: null == context
+              as String?,
+      context: freezed == context
           ? _value._context
           : context // ignore: cast_nullable_to_non_nullable
-              as List<FilterContext>,
+              as List<FilterContext>?,
       expiresAt: freezed == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      filterAction: null == filterAction
+      filterAction: freezed == filterAction
           ? _value.filterAction
           : filterAction // ignore: cast_nullable_to_non_nullable
-              as FilterAction,
-      keywords: null == keywords
+              as FilterAction?,
+      keywords: freezed == keywords
           ? _value._keywords
           : keywords // ignore: cast_nullable_to_non_nullable
-              as List<FilterKeyword>,
-      statuses: null == statuses
+              as List<FilterKeyword>?,
+      statuses: freezed == statuses
           ? _value._statuses
           : statuses // ignore: cast_nullable_to_non_nullable
-              as List<FilterStatus>,
+              as List<FilterStatus>?,
     ));
   }
 }
@@ -195,13 +195,13 @@ class __$$FilterImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FilterImpl implements _Filter {
   const _$FilterImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'title') required this.title,
-      @JsonKey(name: 'context') required final List<FilterContext> context,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'context') final List<FilterContext>? context,
       @JsonKey(name: 'expires_at') this.expiresAt,
-      @JsonKey(name: 'filter_action') required this.filterAction,
-      @JsonKey(name: 'keywords') required final List<FilterKeyword> keywords,
-      @JsonKey(name: 'statuses') required final List<FilterStatus> statuses})
+      @JsonKey(name: 'filter_action') this.filterAction,
+      @JsonKey(name: 'keywords') final List<FilterKeyword>? keywords,
+      @JsonKey(name: 'statuses') final List<FilterStatus>? statuses})
       : _context = context,
         _keywords = keywords,
         _statuses = statuses;
@@ -212,23 +212,25 @@ class _$FilterImpl implements _Filter {
   /// The ID of the Filter in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// A title given by the user to name the filter.
   @override
   @JsonKey(name: 'title')
-  final String title;
+  final String? title;
 
   /// The contexts in which the filter should be applied.
-  final List<FilterContext> _context;
+  final List<FilterContext>? _context;
 
   /// The contexts in which the filter should be applied.
   @override
   @JsonKey(name: 'context')
-  List<FilterContext> get context {
+  List<FilterContext>? get context {
+    final value = _context;
+    if (value == null) return null;
     if (_context is EqualUnmodifiableListView) return _context;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_context);
+    return EqualUnmodifiableListView(value);
   }
 
   /// When the filter should no longer be applied.
@@ -239,30 +241,34 @@ class _$FilterImpl implements _Filter {
   /// The action to be taken when a status matches this filter.
   @override
   @JsonKey(name: 'filter_action')
-  final FilterAction filterAction;
+  final FilterAction? filterAction;
 
   /// The keywords grouped under this filter.
-  final List<FilterKeyword> _keywords;
+  final List<FilterKeyword>? _keywords;
 
   /// The keywords grouped under this filter.
   @override
   @JsonKey(name: 'keywords')
-  List<FilterKeyword> get keywords {
+  List<FilterKeyword>? get keywords {
+    final value = _keywords;
+    if (value == null) return null;
     if (_keywords is EqualUnmodifiableListView) return _keywords;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_keywords);
+    return EqualUnmodifiableListView(value);
   }
 
   /// The statuses grouped under this filter.
-  final List<FilterStatus> _statuses;
+  final List<FilterStatus>? _statuses;
 
   /// The statuses grouped under this filter.
   @override
   @JsonKey(name: 'statuses')
-  List<FilterStatus> get statuses {
+  List<FilterStatus>? get statuses {
+    final value = _statuses;
+    if (value == null) return null;
     if (_statuses is EqualUnmodifiableListView) return _statuses;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_statuses);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -314,14 +320,14 @@ class _$FilterImpl implements _Filter {
 
 abstract class _Filter implements Filter {
   const factory _Filter(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'title') required final String title,
-      @JsonKey(name: 'context') required final List<FilterContext> context,
-      @JsonKey(name: 'expires_at') final DateTime? expiresAt,
-      @JsonKey(name: 'filter_action') required final FilterAction filterAction,
-      @JsonKey(name: 'keywords') required final List<FilterKeyword> keywords,
-      @JsonKey(name: 'statuses')
-      required final List<FilterStatus> statuses}) = _$FilterImpl;
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'context') final List<FilterContext>? context,
+          @JsonKey(name: 'expires_at') final DateTime? expiresAt,
+          @JsonKey(name: 'filter_action') final FilterAction? filterAction,
+          @JsonKey(name: 'keywords') final List<FilterKeyword>? keywords,
+          @JsonKey(name: 'statuses') final List<FilterStatus>? statuses}) =
+      _$FilterImpl;
 
   factory _Filter.fromJson(Map<String, dynamic> json) = _$FilterImpl.fromJson;
 
@@ -329,17 +335,17 @@ abstract class _Filter implements Filter {
 
   /// The ID of the Filter in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// A title given by the user to name the filter.
   @JsonKey(name: 'title')
-  String get title;
+  String? get title;
   @override
 
   /// The contexts in which the filter should be applied.
   @JsonKey(name: 'context')
-  List<FilterContext> get context;
+  List<FilterContext>? get context;
   @override
 
   /// When the filter should no longer be applied.
@@ -349,17 +355,17 @@ abstract class _Filter implements Filter {
 
   /// The action to be taken when a status matches this filter.
   @JsonKey(name: 'filter_action')
-  FilterAction get filterAction;
+  FilterAction? get filterAction;
   @override
 
   /// The keywords grouped under this filter.
   @JsonKey(name: 'keywords')
-  List<FilterKeyword> get keywords;
+  List<FilterKeyword>? get keywords;
   @override
 
   /// The statuses grouped under this filter.
   @JsonKey(name: 'statuses')
-  List<FilterStatus> get statuses;
+  List<FilterStatus>? get statuses;
   @override
   @JsonKey(ignore: true)
   _$$FilterImplCopyWith<_$FilterImpl> get copyWith =>

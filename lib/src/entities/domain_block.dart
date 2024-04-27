@@ -11,13 +11,13 @@ class DomainBlock with _$DomainBlock {
   const factory DomainBlock({
     /// The domain which is blocked. This may be obfuscated or partially
     /// censored.
-    @JsonKey(name: 'domain') required final String domain,
+    @JsonKey(name: 'domain') final String? domain,
 
     /// The SHA256 hash digest of the domain string.
-    @JsonKey(name: 'digest') required final String digest,
+    @JsonKey(name: 'digest') final String? digest,
 
     /// The level to which the domain is blocked.
-    @JsonKey(name: 'severity') required final DomainBlockSeverity severity,
+    @JsonKey(name: 'severity') final DomainBlockSeverity? severity,
 
     /// An optional reason for the domain block.
     @JsonKey(name: 'comment') final String? comment,

@@ -8,8 +8,8 @@ part of 'filter_status.dart';
 
 _$FilterStatusImpl _$$FilterStatusImplFromJson(Map<String, dynamic> json) =>
     _$FilterStatusImpl(
-      id: json['id'] as String,
-      statusId: json['status_id'] as String,
+      id: json['id'] as String?,
+      statusId: json['status_id'] as String?,
     );
 
 Map<String, dynamic> _$$FilterStatusImplToJson(_$FilterStatusImpl instance) =>

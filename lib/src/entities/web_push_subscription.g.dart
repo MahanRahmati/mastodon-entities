@@ -9,11 +9,13 @@ part of 'web_push_subscription.dart';
 _$WebPushSubscriptionImpl _$$WebPushSubscriptionImplFromJson(
         Map<String, dynamic> json) =>
     _$WebPushSubscriptionImpl(
-      id: (json['id'] as num).toInt(),
-      endpoint: json['endpoint'] as String,
-      serverKey: json['server_key'] as String,
-      alerts: WebPushSubscriptionAlerts.fromJson(
-          json['alerts'] as Map<String, dynamic>),
+      id: (json['id'] as num?)?.toInt(),
+      endpoint: json['endpoint'] as String?,
+      serverKey: json['server_key'] as String?,
+      alerts: json['alerts'] == null
+          ? null
+          : WebPushSubscriptionAlerts.fromJson(
+              json['alerts'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$WebPushSubscriptionImplToJson(
@@ -28,16 +30,16 @@ Map<String, dynamic> _$$WebPushSubscriptionImplToJson(
 _$WebPushSubscriptionAlertsImpl _$$WebPushSubscriptionAlertsImplFromJson(
         Map<String, dynamic> json) =>
     _$WebPushSubscriptionAlertsImpl(
-      mention: json['mention'] as bool,
-      status: json['status'] as bool,
-      reblog: json['reblog'] as bool,
-      follow: json['follow'] as bool,
-      followRequest: json['follow_request'] as bool,
-      favourite: json['favourite'] as bool,
-      poll: json['poll'] as bool,
-      update: json['update'] as bool,
-      adminSignUp: json['admin.sign_up'] as bool,
-      adminReport: json['admin.report'] as bool,
+      mention: json['mention'] as bool?,
+      status: json['status'] as bool?,
+      reblog: json['reblog'] as bool?,
+      follow: json['follow'] as bool?,
+      followRequest: json['follow_request'] as bool?,
+      favourite: json['favourite'] as bool?,
+      poll: json['poll'] as bool?,
+      update: json['update'] as bool?,
+      adminSignUp: json['admin.sign_up'] as bool?,
+      adminReport: json['admin.report'] as bool?,
     );
 
 Map<String, dynamic> _$$WebPushSubscriptionAlertsImplToJson(

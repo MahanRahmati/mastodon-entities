@@ -8,10 +8,10 @@ part 'admin_ip.g.dart';
 class AdminIp with _$AdminIp {
   const factory AdminIp({
     /// The IP address.
-    @JsonKey(name: 'ip') required final String ip,
+    @JsonKey(name: 'ip') final String? ip,
 
     /// The timestamp of when the IP address was last used for this account.
-    @JsonKey(name: 'used_at') required final DateTime usedAt,
+    @JsonKey(name: 'used_at') final DateTime? usedAt,
   }) = _AdminIp;
 
   factory AdminIp.fromJson(final Map<String, dynamic> json) =>

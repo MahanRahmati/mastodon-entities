@@ -22,11 +22,11 @@ Rule _$RuleFromJson(Map<String, dynamic> json) {
 mixin _$Rule {
   /// An identifier for the rule.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The rule to be followed.
   @JsonKey(name: 'text')
-  String get text => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,7 +39,7 @@ abstract class $RuleCopyWith<$Res> {
       _$RuleCopyWithImpl<$Res, Rule>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id, @JsonKey(name: 'text') String text});
+      {@JsonKey(name: 'id') String? id, @JsonKey(name: 'text') String? text});
 }
 
 /// @nodoc
@@ -55,18 +55,18 @@ class _$RuleCopyWithImpl<$Res, $Val extends Rule>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? text = null,
+    Object? id = freezed,
+    Object? text = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      text: null == text
+              as String?,
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -79,7 +79,7 @@ abstract class _$$RuleImplCopyWith<$Res> implements $RuleCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id, @JsonKey(name: 'text') String text});
+      {@JsonKey(name: 'id') String? id, @JsonKey(name: 'text') String? text});
 }
 
 /// @nodoc
@@ -92,18 +92,18 @@ class __$$RuleImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? text = null,
+    Object? id = freezed,
+    Object? text = freezed,
   }) {
     return _then(_$RuleImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      text: null == text
+              as String?,
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -112,8 +112,7 @@ class __$$RuleImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RuleImpl implements _Rule {
   const _$RuleImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'text') required this.text});
+      {@JsonKey(name: 'id') this.id, @JsonKey(name: 'text') this.text});
 
   factory _$RuleImpl.fromJson(Map<String, dynamic> json) =>
       _$$RuleImplFromJson(json);
@@ -121,12 +120,12 @@ class _$RuleImpl implements _Rule {
   /// An identifier for the rule.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The rule to be followed.
   @override
   @JsonKey(name: 'text')
-  final String text;
+  final String? text;
 
   @override
   String toString() {
@@ -162,8 +161,8 @@ class _$RuleImpl implements _Rule {
 
 abstract class _Rule implements Rule {
   const factory _Rule(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'text') required final String text}) = _$RuleImpl;
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'text') final String? text}) = _$RuleImpl;
 
   factory _Rule.fromJson(Map<String, dynamic> json) = _$RuleImpl.fromJson;
 
@@ -171,12 +170,12 @@ abstract class _Rule implements Rule {
 
   /// An identifier for the rule.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The rule to be followed.
   @JsonKey(name: 'text')
-  String get text;
+  String? get text;
   @override
   @JsonKey(ignore: true)
   _$$RuleImplCopyWith<_$RuleImpl> get copyWith =>

@@ -8,17 +8,16 @@ part 'admin_email_domain_block.g.dart';
 class AdminEmailDomainBlock with _$AdminEmailDomainBlock {
   const factory AdminEmailDomainBlock({
     /// The ID of the EmailDomainBlock in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The email domain that is not allowed to be used for signups.
-    @JsonKey(name: 'domain') required final String domain,
+    @JsonKey(name: 'domain') final String? domain,
 
     /// When the email domain was disallowed from signups.
-    @JsonKey(name: 'created_at') required final DateTime createdAt,
+    @JsonKey(name: 'created_at') final DateTime? createdAt,
 
     /// Usage statistics for given days (typically the past week).
-    @JsonKey(name: 'history')
-    required final List<AdminEmailDomainBlockHistory> history,
+    @JsonKey(name: 'history') final List<AdminEmailDomainBlockHistory>? history,
   }) = _AdminEmailDomainBlock;
 
   factory AdminEmailDomainBlock.fromJson(final Map<String, dynamic> json) =>
@@ -29,14 +28,14 @@ class AdminEmailDomainBlock with _$AdminEmailDomainBlock {
 class AdminEmailDomainBlockHistory with _$AdminEmailDomainBlockHistory {
   const factory AdminEmailDomainBlockHistory({
     /// UNIX timestamp on midnight of the given day.
-    @JsonKey(name: 'day') required final String day,
+    @JsonKey(name: 'day') final String? day,
 
     /// The counted accounts signup attempts using that email domain within
     /// that day.
-    @JsonKey(name: 'accounts') required final String accounts,
+    @JsonKey(name: 'accounts') final String? accounts,
 
     /// The counted IP signup attempts of that email domain within that day.
-    @JsonKey(name: 'uses') required final String uses,
+    @JsonKey(name: 'uses') final String? uses,
   }) = _AdminEmailDomainBlockHistory;
 
   factory AdminEmailDomainBlockHistory.fromJson(

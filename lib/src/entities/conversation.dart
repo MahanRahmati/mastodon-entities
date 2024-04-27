@@ -11,13 +11,13 @@ part 'conversation.g.dart';
 class Conversation with _$Conversation {
   const factory Conversation({
     /// The ID of the conversation in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// Is the conversation currently marked as unread?
-    @JsonKey(name: 'unread') required final bool unread,
+    @JsonKey(name: 'unread') final bool? unread,
 
     /// Participants in the conversation.
-    @JsonKey(name: 'accounts') required final List<Account> accounts,
+    @JsonKey(name: 'accounts') final List<Account>? accounts,
 
     /// The last status in the conversation.
     @JsonKey(name: 'last_status') final Status? lastStatus,

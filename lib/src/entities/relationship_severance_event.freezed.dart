@@ -23,21 +23,22 @@ RelationshipSeveranceEvent _$RelationshipSeveranceEventFromJson(
 mixin _$RelationshipSeveranceEvent {
   /// The ID of the relationship severance event in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// Type of event.
   @JsonKey(name: 'type')
-  RelationshipSeveranceEventType get type => throw _privateConstructorUsedError;
+  RelationshipSeveranceEventType? get type =>
+      throw _privateConstructorUsedError;
 
   /// Whether the list of severed relationships is unavailable because the
   /// underlying issue has been purged.
   @JsonKey(name: 'purged')
-  bool get purged => throw _privateConstructorUsedError;
+  bool? get purged => throw _privateConstructorUsedError;
 
   /// Name of the target of the moderation/block event. This is either a
   /// domain name or a user handle, depending on the event type.
   @JsonKey(name: 'target_name')
-  String get targetName => throw _privateConstructorUsedError;
+  String? get targetName => throw _privateConstructorUsedError;
 
   /// Number of follow relationships (in either direction) that were severed.
   @JsonKey(name: 'relationships_count')
@@ -45,7 +46,7 @@ mixin _$RelationshipSeveranceEvent {
 
   /// When the event took place.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -61,12 +62,12 @@ abstract class $RelationshipSeveranceEventCopyWith<$Res> {
           RelationshipSeveranceEvent>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'type') RelationshipSeveranceEventType type,
-      @JsonKey(name: 'purged') bool purged,
-      @JsonKey(name: 'target_name') String targetName,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'type') RelationshipSeveranceEventType? type,
+      @JsonKey(name: 'purged') bool? purged,
+      @JsonKey(name: 'target_name') String? targetName,
       @JsonKey(name: 'relationships_count') int? relationshipsCount,
-      @JsonKey(name: 'created_at') DateTime createdAt});
+      @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
 /// @nodoc
@@ -83,38 +84,38 @@ class _$RelationshipSeveranceEventCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? type = null,
-    Object? purged = null,
-    Object? targetName = null,
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? purged = freezed,
+    Object? targetName = freezed,
     Object? relationshipsCount = freezed,
-    Object? createdAt = null,
+    Object? createdAt = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as RelationshipSeveranceEventType,
-      purged: null == purged
+              as RelationshipSeveranceEventType?,
+      purged: freezed == purged
           ? _value.purged
           : purged // ignore: cast_nullable_to_non_nullable
-              as bool,
-      targetName: null == targetName
+              as bool?,
+      targetName: freezed == targetName
           ? _value.targetName
           : targetName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       relationshipsCount: freezed == relationshipsCount
           ? _value.relationshipsCount
           : relationshipsCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      createdAt: null == createdAt
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -129,12 +130,12 @@ abstract class _$$RelationshipSeveranceEventImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'type') RelationshipSeveranceEventType type,
-      @JsonKey(name: 'purged') bool purged,
-      @JsonKey(name: 'target_name') String targetName,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'type') RelationshipSeveranceEventType? type,
+      @JsonKey(name: 'purged') bool? purged,
+      @JsonKey(name: 'target_name') String? targetName,
       @JsonKey(name: 'relationships_count') int? relationshipsCount,
-      @JsonKey(name: 'created_at') DateTime createdAt});
+      @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
 /// @nodoc
@@ -150,38 +151,38 @@ class __$$RelationshipSeveranceEventImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? type = null,
-    Object? purged = null,
-    Object? targetName = null,
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? purged = freezed,
+    Object? targetName = freezed,
     Object? relationshipsCount = freezed,
-    Object? createdAt = null,
+    Object? createdAt = freezed,
   }) {
     return _then(_$RelationshipSeveranceEventImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as RelationshipSeveranceEventType,
-      purged: null == purged
+              as RelationshipSeveranceEventType?,
+      purged: freezed == purged
           ? _value.purged
           : purged // ignore: cast_nullable_to_non_nullable
-              as bool,
-      targetName: null == targetName
+              as bool?,
+      targetName: freezed == targetName
           ? _value.targetName
           : targetName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       relationshipsCount: freezed == relationshipsCount
           ? _value.relationshipsCount
           : relationshipsCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      createdAt: null == createdAt
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ));
   }
 }
@@ -190,12 +191,12 @@ class __$$RelationshipSeveranceEventImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RelationshipSeveranceEventImpl implements _RelationshipSeveranceEvent {
   const _$RelationshipSeveranceEventImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'type') required this.type,
-      @JsonKey(name: 'purged') required this.purged,
-      @JsonKey(name: 'target_name') required this.targetName,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'purged') this.purged,
+      @JsonKey(name: 'target_name') this.targetName,
       @JsonKey(name: 'relationships_count') this.relationshipsCount,
-      @JsonKey(name: 'created_at') required this.createdAt});
+      @JsonKey(name: 'created_at') this.createdAt});
 
   factory _$RelationshipSeveranceEventImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -204,24 +205,24 @@ class _$RelationshipSeveranceEventImpl implements _RelationshipSeveranceEvent {
   /// The ID of the relationship severance event in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// Type of event.
   @override
   @JsonKey(name: 'type')
-  final RelationshipSeveranceEventType type;
+  final RelationshipSeveranceEventType? type;
 
   /// Whether the list of severed relationships is unavailable because the
   /// underlying issue has been purged.
   @override
   @JsonKey(name: 'purged')
-  final bool purged;
+  final bool? purged;
 
   /// Name of the target of the moderation/block event. This is either a
   /// domain name or a user handle, depending on the event type.
   @override
   @JsonKey(name: 'target_name')
-  final String targetName;
+  final String? targetName;
 
   /// Number of follow relationships (in either direction) that were severed.
   @override
@@ -231,7 +232,7 @@ class _$RelationshipSeveranceEventImpl implements _RelationshipSeveranceEvent {
   /// When the event took place.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   @override
   String toString() {
@@ -277,13 +278,13 @@ class _$RelationshipSeveranceEventImpl implements _RelationshipSeveranceEvent {
 abstract class _RelationshipSeveranceEvent
     implements RelationshipSeveranceEvent {
   const factory _RelationshipSeveranceEvent(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'type') required final RelationshipSeveranceEventType type,
-      @JsonKey(name: 'purged') required final bool purged,
-      @JsonKey(name: 'target_name') required final String targetName,
-      @JsonKey(name: 'relationships_count') final int? relationshipsCount,
-      @JsonKey(name: 'created_at')
-      required final DateTime createdAt}) = _$RelationshipSeveranceEventImpl;
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'type') final RelationshipSeveranceEventType? type,
+          @JsonKey(name: 'purged') final bool? purged,
+          @JsonKey(name: 'target_name') final String? targetName,
+          @JsonKey(name: 'relationships_count') final int? relationshipsCount,
+          @JsonKey(name: 'created_at') final DateTime? createdAt}) =
+      _$RelationshipSeveranceEventImpl;
 
   factory _RelationshipSeveranceEvent.fromJson(Map<String, dynamic> json) =
       _$RelationshipSeveranceEventImpl.fromJson;
@@ -292,24 +293,24 @@ abstract class _RelationshipSeveranceEvent
 
   /// The ID of the relationship severance event in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// Type of event.
   @JsonKey(name: 'type')
-  RelationshipSeveranceEventType get type;
+  RelationshipSeveranceEventType? get type;
   @override
 
   /// Whether the list of severed relationships is unavailable because the
   /// underlying issue has been purged.
   @JsonKey(name: 'purged')
-  bool get purged;
+  bool? get purged;
   @override
 
   /// Name of the target of the moderation/block event. This is either a
   /// domain name or a user handle, depending on the event type.
   @JsonKey(name: 'target_name')
-  String get targetName;
+  String? get targetName;
   @override
 
   /// Number of follow relationships (in either direction) that were severed.
@@ -319,7 +320,7 @@ abstract class _RelationshipSeveranceEvent
 
   /// When the event took place.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
   @JsonKey(ignore: true)
   _$$RelationshipSeveranceEventImplCopyWith<_$RelationshipSeveranceEventImpl>

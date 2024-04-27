@@ -8,13 +8,13 @@ part 'admin_domain_allow.g.dart';
 class AdminDomainAllow with _$AdminDomainAllow {
   const factory AdminDomainAllow({
     /// The ID of the DomainAllow in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The domain that is allowed to federate.
-    @JsonKey(name: 'domain') required final String domain,
+    @JsonKey(name: 'domain') final String? domain,
 
     /// When the domain was allowed to federate.
-    @JsonKey(name: 'created_at') required final DateTime createdAt,
+    @JsonKey(name: 'created_at') final DateTime? createdAt,
   }) = _AdminDomainAllow;
 
   factory AdminDomainAllow.fromJson(final Map<String, dynamic> json) =>

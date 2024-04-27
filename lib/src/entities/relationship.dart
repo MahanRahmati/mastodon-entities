@@ -9,50 +9,49 @@ part 'relationship.g.dart';
 class Relationship with _$Relationship {
   const factory Relationship({
     /// The account ID.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// Are you following this user?
-    @JsonKey(name: 'following') required final bool following,
+    @JsonKey(name: 'following') final bool? following,
 
     /// Are you receiving this user’s boosts in your home timeline?
-    @JsonKey(name: 'showing_reblogs') required final bool showingReblogs,
+    @JsonKey(name: 'showing_reblogs') final bool? showingReblogs,
 
     /// Have you enabled notifications for this user?
-    @JsonKey(name: 'notifying') required final bool notifying,
+    @JsonKey(name: 'notifying') final bool? notifying,
 
     /// Which languages are you following from this user?
-    @JsonKey(name: 'languages') required final List<String> languages,
+    @JsonKey(name: 'languages') final List<String>? languages,
 
     /// Are you followed by this user?
-    @JsonKey(name: 'followed_by') required final bool followedBy,
+    @JsonKey(name: 'followed_by') final bool? followedBy,
 
     /// Are you blocking this user?
-    @JsonKey(name: 'blocking') required final bool blocking,
+    @JsonKey(name: 'blocking') final bool? blocking,
 
     /// Is this user blocking you?
-    @JsonKey(name: 'blocked_by') required final bool blockedBy,
+    @JsonKey(name: 'blocked_by') final bool? blockedBy,
 
     /// Are you muting this user?
-    @JsonKey(name: 'muting') required final bool muting,
+    @JsonKey(name: 'muting') final bool? muting,
 
     /// Are you muting notifications from this user?
-    @JsonKey(name: 'muting_notifications')
-    required final bool mutingNotifications,
+    @JsonKey(name: 'muting_notifications') final bool? mutingNotifications,
 
     /// Do you have a pending follow request for this user?
-    @JsonKey(name: 'requested') required final bool requested,
+    @JsonKey(name: 'requested') final bool? requested,
 
     /// Has this user requested to follow you?
-    @JsonKey(name: 'requested_by') required final bool requestedBy,
+    @JsonKey(name: 'requested_by') final bool? requestedBy,
 
     /// Are you blocking this user’s domain?
-    @JsonKey(name: 'domain_blocking') required final bool domainBlocking,
+    @JsonKey(name: 'domain_blocking') final bool? domainBlocking,
 
     /// Are you featuring this user on your profile?
-    @JsonKey(name: 'endorsed') required final bool endorsed,
+    @JsonKey(name: 'endorsed') final bool? endorsed,
 
     /// This user’s profile bio
-    @JsonKey(name: 'note') required final String note,
+    @JsonKey(name: 'note') final String? note,
   }) = _Relationship;
 
   factory Relationship.fromJson(final Map<String, dynamic> json) =>

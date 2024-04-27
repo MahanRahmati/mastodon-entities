@@ -22,11 +22,11 @@ FamiliarFollowers _$FamiliarFollowersFromJson(Map<String, dynamic> json) {
 mixin _$FamiliarFollowers {
   /// The ID of the Account in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// Accounts you follow that also follow this account.
   @JsonKey(name: 'accounts')
-  List<Account> get accounts => throw _privateConstructorUsedError;
+  List<Account>? get accounts => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,8 +41,8 @@ abstract class $FamiliarFollowersCopyWith<$Res> {
       _$FamiliarFollowersCopyWithImpl<$Res, FamiliarFollowers>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'accounts') List<Account> accounts});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'accounts') List<Account>? accounts});
 }
 
 /// @nodoc
@@ -58,18 +58,18 @@ class _$FamiliarFollowersCopyWithImpl<$Res, $Val extends FamiliarFollowers>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? accounts = null,
+    Object? id = freezed,
+    Object? accounts = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      accounts: null == accounts
+              as String?,
+      accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as List<Account>,
+              as List<Account>?,
     ) as $Val);
   }
 }
@@ -83,8 +83,8 @@ abstract class _$$FamiliarFollowersImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'accounts') List<Account> accounts});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'accounts') List<Account>? accounts});
 }
 
 /// @nodoc
@@ -98,18 +98,18 @@ class __$$FamiliarFollowersImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? accounts = null,
+    Object? id = freezed,
+    Object? accounts = freezed,
   }) {
     return _then(_$FamiliarFollowersImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      accounts: null == accounts
+              as String?,
+      accounts: freezed == accounts
           ? _value._accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as List<Account>,
+              as List<Account>?,
     ));
   }
 }
@@ -118,8 +118,8 @@ class __$$FamiliarFollowersImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FamiliarFollowersImpl implements _FamiliarFollowers {
   const _$FamiliarFollowersImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'accounts') required final List<Account> accounts})
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'accounts') final List<Account>? accounts})
       : _accounts = accounts;
 
   factory _$FamiliarFollowersImpl.fromJson(Map<String, dynamic> json) =>
@@ -128,18 +128,20 @@ class _$FamiliarFollowersImpl implements _FamiliarFollowers {
   /// The ID of the Account in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// Accounts you follow that also follow this account.
-  final List<Account> _accounts;
+  final List<Account>? _accounts;
 
   /// Accounts you follow that also follow this account.
   @override
   @JsonKey(name: 'accounts')
-  List<Account> get accounts {
+  List<Account>? get accounts {
+    final value = _accounts;
+    if (value == null) return null;
     if (_accounts is EqualUnmodifiableListView) return _accounts;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_accounts);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -178,8 +180,8 @@ class _$FamiliarFollowersImpl implements _FamiliarFollowers {
 
 abstract class _FamiliarFollowers implements FamiliarFollowers {
   const factory _FamiliarFollowers(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'accounts') required final List<Account> accounts}) =
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'accounts') final List<Account>? accounts}) =
       _$FamiliarFollowersImpl;
 
   factory _FamiliarFollowers.fromJson(Map<String, dynamic> json) =
@@ -189,12 +191,12 @@ abstract class _FamiliarFollowers implements FamiliarFollowers {
 
   /// The ID of the Account in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// Accounts you follow that also follow this account.
   @JsonKey(name: 'accounts')
-  List<Account> get accounts;
+  List<Account>? get accounts;
   @override
   @JsonKey(ignore: true)
   _$$FamiliarFollowersImplCopyWith<_$FamiliarFollowersImpl> get copyWith =>

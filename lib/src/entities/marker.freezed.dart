@@ -22,15 +22,15 @@ Marker _$MarkerFromJson(Map<String, dynamic> json) {
 mixin _$Marker {
   /// The ID of the most recently viewed entity.
   @JsonKey(name: 'last_read_id')
-  String get lastReadId => throw _privateConstructorUsedError;
+  String? get lastReadId => throw _privateConstructorUsedError;
 
   /// An incrementing counter, used for locking to prevent write conflicts.
   @JsonKey(name: 'version')
-  int get version => throw _privateConstructorUsedError;
+  int? get version => throw _privateConstructorUsedError;
 
   /// The timestamp of when the marker was set.
   @JsonKey(name: 'updated_at')
-  DateTime get updatedAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,9 +43,9 @@ abstract class $MarkerCopyWith<$Res> {
       _$MarkerCopyWithImpl<$Res, Marker>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'last_read_id') String lastReadId,
-      @JsonKey(name: 'version') int version,
-      @JsonKey(name: 'updated_at') DateTime updatedAt});
+      {@JsonKey(name: 'last_read_id') String? lastReadId,
+      @JsonKey(name: 'version') int? version,
+      @JsonKey(name: 'updated_at') DateTime? updatedAt});
 }
 
 /// @nodoc
@@ -61,23 +61,23 @@ class _$MarkerCopyWithImpl<$Res, $Val extends Marker>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? lastReadId = null,
-    Object? version = null,
-    Object? updatedAt = null,
+    Object? lastReadId = freezed,
+    Object? version = freezed,
+    Object? updatedAt = freezed,
   }) {
     return _then(_value.copyWith(
-      lastReadId: null == lastReadId
+      lastReadId: freezed == lastReadId
           ? _value.lastReadId
           : lastReadId // ignore: cast_nullable_to_non_nullable
-              as String,
-      version: null == version
+              as String?,
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as int,
-      updatedAt: null == updatedAt
+              as int?,
+      updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -90,9 +90,9 @@ abstract class _$$MarkerImplCopyWith<$Res> implements $MarkerCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'last_read_id') String lastReadId,
-      @JsonKey(name: 'version') int version,
-      @JsonKey(name: 'updated_at') DateTime updatedAt});
+      {@JsonKey(name: 'last_read_id') String? lastReadId,
+      @JsonKey(name: 'version') int? version,
+      @JsonKey(name: 'updated_at') DateTime? updatedAt});
 }
 
 /// @nodoc
@@ -106,23 +106,23 @@ class __$$MarkerImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? lastReadId = null,
-    Object? version = null,
-    Object? updatedAt = null,
+    Object? lastReadId = freezed,
+    Object? version = freezed,
+    Object? updatedAt = freezed,
   }) {
     return _then(_$MarkerImpl(
-      lastReadId: null == lastReadId
+      lastReadId: freezed == lastReadId
           ? _value.lastReadId
           : lastReadId // ignore: cast_nullable_to_non_nullable
-              as String,
-      version: null == version
+              as String?,
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as int,
-      updatedAt: null == updatedAt
+              as int?,
+      updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ));
   }
 }
@@ -131,9 +131,9 @@ class __$$MarkerImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MarkerImpl implements _Marker {
   const _$MarkerImpl(
-      {@JsonKey(name: 'last_read_id') required this.lastReadId,
-      @JsonKey(name: 'version') required this.version,
-      @JsonKey(name: 'updated_at') required this.updatedAt});
+      {@JsonKey(name: 'last_read_id') this.lastReadId,
+      @JsonKey(name: 'version') this.version,
+      @JsonKey(name: 'updated_at') this.updatedAt});
 
   factory _$MarkerImpl.fromJson(Map<String, dynamic> json) =>
       _$$MarkerImplFromJson(json);
@@ -141,17 +141,17 @@ class _$MarkerImpl implements _Marker {
   /// The ID of the most recently viewed entity.
   @override
   @JsonKey(name: 'last_read_id')
-  final String lastReadId;
+  final String? lastReadId;
 
   /// An incrementing counter, used for locking to prevent write conflicts.
   @override
   @JsonKey(name: 'version')
-  final int version;
+  final int? version;
 
   /// The timestamp of when the marker was set.
   @override
   @JsonKey(name: 'updated_at')
-  final DateTime updatedAt;
+  final DateTime? updatedAt;
 
   @override
   String toString() {
@@ -190,10 +190,9 @@ class _$MarkerImpl implements _Marker {
 
 abstract class _Marker implements Marker {
   const factory _Marker(
-          {@JsonKey(name: 'last_read_id') required final String lastReadId,
-          @JsonKey(name: 'version') required final int version,
-          @JsonKey(name: 'updated_at') required final DateTime updatedAt}) =
-      _$MarkerImpl;
+      {@JsonKey(name: 'last_read_id') final String? lastReadId,
+      @JsonKey(name: 'version') final int? version,
+      @JsonKey(name: 'updated_at') final DateTime? updatedAt}) = _$MarkerImpl;
 
   factory _Marker.fromJson(Map<String, dynamic> json) = _$MarkerImpl.fromJson;
 
@@ -201,17 +200,17 @@ abstract class _Marker implements Marker {
 
   /// The ID of the most recently viewed entity.
   @JsonKey(name: 'last_read_id')
-  String get lastReadId;
+  String? get lastReadId;
   @override
 
   /// An incrementing counter, used for locking to prevent write conflicts.
   @JsonKey(name: 'version')
-  int get version;
+  int? get version;
   @override
 
   /// The timestamp of when the marker was set.
   @JsonKey(name: 'updated_at')
-  DateTime get updatedAt;
+  DateTime? get updatedAt;
   @override
   @JsonKey(ignore: true)
   _$$MarkerImplCopyWith<_$MarkerImpl> get copyWith =>

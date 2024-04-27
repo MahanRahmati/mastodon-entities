@@ -8,10 +8,10 @@ part 'rule.g.dart';
 class Rule with _$Rule {
   const factory Rule({
     /// An identifier for the rule.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The rule to be followed.
-    @JsonKey(name: 'text') required final String text,
+    @JsonKey(name: 'text') final String? text,
   }) = _Rule;
 
   factory Rule.fromJson(final Map<String, dynamic> json) =>

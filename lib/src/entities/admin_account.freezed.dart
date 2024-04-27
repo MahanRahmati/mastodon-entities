@@ -22,11 +22,11 @@ AdminAccount _$AdminAccountFromJson(Map<String, dynamic> json) {
 mixin _$AdminAccount {
   /// The ID of the account in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The username of the account.
   @JsonKey(name: 'username')
-  String get username => throw _privateConstructorUsedError;
+  String? get username => throw _privateConstructorUsedError;
 
   /// The domain of the account, if it is remote.
   @JsonKey(name: 'domain')
@@ -34,11 +34,11 @@ mixin _$AdminAccount {
 
   /// When the account was first discovered.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   /// The email address associated with the account.
   @JsonKey(name: 'email')
-  String get email => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
 
   /// The IP address last used to login to this account.
   @JsonKey(name: 'ip')
@@ -46,11 +46,11 @@ mixin _$AdminAccount {
 
   /// All known IP addresses associated with this account.
   @JsonKey(name: 'ips')
-  List<AdminIp> get ips => throw _privateConstructorUsedError;
+  List<AdminIp>? get ips => throw _privateConstructorUsedError;
 
   /// The locale of the account.
   @JsonKey(name: 'locale')
-  String get locale => throw _privateConstructorUsedError;
+  String? get locale => throw _privateConstructorUsedError;
 
   /// The reason given when requesting an invite (for instances that require
   /// manual approval of registrations)
@@ -59,31 +59,31 @@ mixin _$AdminAccount {
 
   /// The current role of the account.
   @JsonKey(name: 'role')
-  Role get role => throw _privateConstructorUsedError;
+  Role? get role => throw _privateConstructorUsedError;
 
   /// Whether the account has confirmed their email address.
   @JsonKey(name: 'confirmed')
-  bool get confirmed => throw _privateConstructorUsedError;
+  bool? get confirmed => throw _privateConstructorUsedError;
 
   /// Whether the account is currently approved.
   @JsonKey(name: 'approved')
-  bool get approved => throw _privateConstructorUsedError;
+  bool? get approved => throw _privateConstructorUsedError;
 
   /// Whether the account is currently disabled.
   @JsonKey(name: 'disabled')
-  bool get disabled => throw _privateConstructorUsedError;
+  bool? get disabled => throw _privateConstructorUsedError;
 
   /// Whether the account is currently silenced.
   @JsonKey(name: 'silenced')
-  bool get silenced => throw _privateConstructorUsedError;
+  bool? get silenced => throw _privateConstructorUsedError;
 
   /// Whether the account is currently suspended.
   @JsonKey(name: 'suspended')
-  bool get suspended => throw _privateConstructorUsedError;
+  bool? get suspended => throw _privateConstructorUsedError;
 
   /// User-level information about the account.
   @JsonKey(name: 'account')
-  Account get account => throw _privateConstructorUsedError;
+  Account? get account => throw _privateConstructorUsedError;
 
   /// The ID of the Application that created this account, if applicable.
   @JsonKey(name: 'created_by_application_id')
@@ -106,28 +106,28 @@ abstract class $AdminAccountCopyWith<$Res> {
       _$AdminAccountCopyWithImpl<$Res, AdminAccount>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'username') String username,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'username') String? username,
       @JsonKey(name: 'domain') String? domain,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'email') String email,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'email') String? email,
       @JsonKey(name: 'ip') String? ip,
-      @JsonKey(name: 'ips') List<AdminIp> ips,
-      @JsonKey(name: 'locale') String locale,
+      @JsonKey(name: 'ips') List<AdminIp>? ips,
+      @JsonKey(name: 'locale') String? locale,
       @JsonKey(name: 'invite_request') String? inviteRequest,
-      @JsonKey(name: 'role') Role role,
-      @JsonKey(name: 'confirmed') bool confirmed,
-      @JsonKey(name: 'approved') bool approved,
-      @JsonKey(name: 'disabled') bool disabled,
-      @JsonKey(name: 'silenced') bool silenced,
-      @JsonKey(name: 'suspended') bool suspended,
-      @JsonKey(name: 'account') Account account,
+      @JsonKey(name: 'role') Role? role,
+      @JsonKey(name: 'confirmed') bool? confirmed,
+      @JsonKey(name: 'approved') bool? approved,
+      @JsonKey(name: 'disabled') bool? disabled,
+      @JsonKey(name: 'silenced') bool? silenced,
+      @JsonKey(name: 'suspended') bool? suspended,
+      @JsonKey(name: 'account') Account? account,
       @JsonKey(name: 'created_by_application_id')
       String? createdByApplicationId,
       @JsonKey(name: 'invited_by_account_id') String? invitedByAccountId});
 
-  $RoleCopyWith<$Res> get role;
-  $AccountCopyWith<$Res> get account;
+  $RoleCopyWith<$Res>? get role;
+  $AccountCopyWith<$Res>? get account;
 }
 
 /// @nodoc
@@ -143,90 +143,90 @@ class _$AdminAccountCopyWithImpl<$Res, $Val extends AdminAccount>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? username = null,
+    Object? id = freezed,
+    Object? username = freezed,
     Object? domain = freezed,
-    Object? createdAt = null,
-    Object? email = null,
+    Object? createdAt = freezed,
+    Object? email = freezed,
     Object? ip = freezed,
-    Object? ips = null,
-    Object? locale = null,
+    Object? ips = freezed,
+    Object? locale = freezed,
     Object? inviteRequest = freezed,
-    Object? role = null,
-    Object? confirmed = null,
-    Object? approved = null,
-    Object? disabled = null,
-    Object? silenced = null,
-    Object? suspended = null,
-    Object? account = null,
+    Object? role = freezed,
+    Object? confirmed = freezed,
+    Object? approved = freezed,
+    Object? disabled = freezed,
+    Object? silenced = freezed,
+    Object? suspended = freezed,
+    Object? account = freezed,
     Object? createdByApplicationId = freezed,
     Object? invitedByAccountId = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
+              as String?,
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
               as String?,
-      createdAt: null == createdAt
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      email: null == email
+              as DateTime?,
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       ip: freezed == ip
           ? _value.ip
           : ip // ignore: cast_nullable_to_non_nullable
               as String?,
-      ips: null == ips
+      ips: freezed == ips
           ? _value.ips
           : ips // ignore: cast_nullable_to_non_nullable
-              as List<AdminIp>,
-      locale: null == locale
+              as List<AdminIp>?,
+      locale: freezed == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       inviteRequest: freezed == inviteRequest
           ? _value.inviteRequest
           : inviteRequest // ignore: cast_nullable_to_non_nullable
               as String?,
-      role: null == role
+      role: freezed == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as Role,
-      confirmed: null == confirmed
+              as Role?,
+      confirmed: freezed == confirmed
           ? _value.confirmed
           : confirmed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      approved: null == approved
+              as bool?,
+      approved: freezed == approved
           ? _value.approved
           : approved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      disabled: null == disabled
+              as bool?,
+      disabled: freezed == disabled
           ? _value.disabled
           : disabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      silenced: null == silenced
+              as bool?,
+      silenced: freezed == silenced
           ? _value.silenced
           : silenced // ignore: cast_nullable_to_non_nullable
-              as bool,
-      suspended: null == suspended
+              as bool?,
+      suspended: freezed == suspended
           ? _value.suspended
           : suspended // ignore: cast_nullable_to_non_nullable
-              as bool,
-      account: null == account
+              as bool?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as Account,
+              as Account?,
       createdByApplicationId: freezed == createdByApplicationId
           ? _value.createdByApplicationId
           : createdByApplicationId // ignore: cast_nullable_to_non_nullable
@@ -240,16 +240,24 @@ class _$AdminAccountCopyWithImpl<$Res, $Val extends AdminAccount>
 
   @override
   @pragma('vm:prefer-inline')
-  $RoleCopyWith<$Res> get role {
-    return $RoleCopyWith<$Res>(_value.role, (value) {
+  $RoleCopyWith<$Res>? get role {
+    if (_value.role == null) {
+      return null;
+    }
+
+    return $RoleCopyWith<$Res>(_value.role!, (value) {
       return _then(_value.copyWith(role: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AccountCopyWith<$Res> get account {
-    return $AccountCopyWith<$Res>(_value.account, (value) {
+  $AccountCopyWith<$Res>? get account {
+    if (_value.account == null) {
+      return null;
+    }
+
+    return $AccountCopyWith<$Res>(_value.account!, (value) {
       return _then(_value.copyWith(account: value) as $Val);
     });
   }
@@ -264,30 +272,30 @@ abstract class _$$AdminAccountImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'username') String username,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'username') String? username,
       @JsonKey(name: 'domain') String? domain,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'email') String email,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'email') String? email,
       @JsonKey(name: 'ip') String? ip,
-      @JsonKey(name: 'ips') List<AdminIp> ips,
-      @JsonKey(name: 'locale') String locale,
+      @JsonKey(name: 'ips') List<AdminIp>? ips,
+      @JsonKey(name: 'locale') String? locale,
       @JsonKey(name: 'invite_request') String? inviteRequest,
-      @JsonKey(name: 'role') Role role,
-      @JsonKey(name: 'confirmed') bool confirmed,
-      @JsonKey(name: 'approved') bool approved,
-      @JsonKey(name: 'disabled') bool disabled,
-      @JsonKey(name: 'silenced') bool silenced,
-      @JsonKey(name: 'suspended') bool suspended,
-      @JsonKey(name: 'account') Account account,
+      @JsonKey(name: 'role') Role? role,
+      @JsonKey(name: 'confirmed') bool? confirmed,
+      @JsonKey(name: 'approved') bool? approved,
+      @JsonKey(name: 'disabled') bool? disabled,
+      @JsonKey(name: 'silenced') bool? silenced,
+      @JsonKey(name: 'suspended') bool? suspended,
+      @JsonKey(name: 'account') Account? account,
       @JsonKey(name: 'created_by_application_id')
       String? createdByApplicationId,
       @JsonKey(name: 'invited_by_account_id') String? invitedByAccountId});
 
   @override
-  $RoleCopyWith<$Res> get role;
+  $RoleCopyWith<$Res>? get role;
   @override
-  $AccountCopyWith<$Res> get account;
+  $AccountCopyWith<$Res>? get account;
 }
 
 /// @nodoc
@@ -301,90 +309,90 @@ class __$$AdminAccountImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? username = null,
+    Object? id = freezed,
+    Object? username = freezed,
     Object? domain = freezed,
-    Object? createdAt = null,
-    Object? email = null,
+    Object? createdAt = freezed,
+    Object? email = freezed,
     Object? ip = freezed,
-    Object? ips = null,
-    Object? locale = null,
+    Object? ips = freezed,
+    Object? locale = freezed,
     Object? inviteRequest = freezed,
-    Object? role = null,
-    Object? confirmed = null,
-    Object? approved = null,
-    Object? disabled = null,
-    Object? silenced = null,
-    Object? suspended = null,
-    Object? account = null,
+    Object? role = freezed,
+    Object? confirmed = freezed,
+    Object? approved = freezed,
+    Object? disabled = freezed,
+    Object? silenced = freezed,
+    Object? suspended = freezed,
+    Object? account = freezed,
     Object? createdByApplicationId = freezed,
     Object? invitedByAccountId = freezed,
   }) {
     return _then(_$AdminAccountImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
+              as String?,
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
               as String?,
-      createdAt: null == createdAt
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      email: null == email
+              as DateTime?,
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       ip: freezed == ip
           ? _value.ip
           : ip // ignore: cast_nullable_to_non_nullable
               as String?,
-      ips: null == ips
+      ips: freezed == ips
           ? _value._ips
           : ips // ignore: cast_nullable_to_non_nullable
-              as List<AdminIp>,
-      locale: null == locale
+              as List<AdminIp>?,
+      locale: freezed == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       inviteRequest: freezed == inviteRequest
           ? _value.inviteRequest
           : inviteRequest // ignore: cast_nullable_to_non_nullable
               as String?,
-      role: null == role
+      role: freezed == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as Role,
-      confirmed: null == confirmed
+              as Role?,
+      confirmed: freezed == confirmed
           ? _value.confirmed
           : confirmed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      approved: null == approved
+              as bool?,
+      approved: freezed == approved
           ? _value.approved
           : approved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      disabled: null == disabled
+              as bool?,
+      disabled: freezed == disabled
           ? _value.disabled
           : disabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      silenced: null == silenced
+              as bool?,
+      silenced: freezed == silenced
           ? _value.silenced
           : silenced // ignore: cast_nullable_to_non_nullable
-              as bool,
-      suspended: null == suspended
+              as bool?,
+      suspended: freezed == suspended
           ? _value.suspended
           : suspended // ignore: cast_nullable_to_non_nullable
-              as bool,
-      account: null == account
+              as bool?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as Account,
+              as Account?,
       createdByApplicationId: freezed == createdByApplicationId
           ? _value.createdByApplicationId
           : createdByApplicationId // ignore: cast_nullable_to_non_nullable
@@ -401,22 +409,22 @@ class __$$AdminAccountImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminAccountImpl implements _AdminAccount {
   const _$AdminAccountImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'username') required this.username,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'username') this.username,
       @JsonKey(name: 'domain') this.domain,
-      @JsonKey(name: 'created_at') required this.createdAt,
-      @JsonKey(name: 'email') required this.email,
+      @JsonKey(name: 'created_at') this.createdAt,
+      @JsonKey(name: 'email') this.email,
       @JsonKey(name: 'ip') this.ip,
-      @JsonKey(name: 'ips') required final List<AdminIp> ips,
-      @JsonKey(name: 'locale') required this.locale,
+      @JsonKey(name: 'ips') final List<AdminIp>? ips,
+      @JsonKey(name: 'locale') this.locale,
       @JsonKey(name: 'invite_request') this.inviteRequest,
-      @JsonKey(name: 'role') required this.role,
-      @JsonKey(name: 'confirmed') required this.confirmed,
-      @JsonKey(name: 'approved') required this.approved,
-      @JsonKey(name: 'disabled') required this.disabled,
-      @JsonKey(name: 'silenced') required this.silenced,
-      @JsonKey(name: 'suspended') required this.suspended,
-      @JsonKey(name: 'account') required this.account,
+      @JsonKey(name: 'role') this.role,
+      @JsonKey(name: 'confirmed') this.confirmed,
+      @JsonKey(name: 'approved') this.approved,
+      @JsonKey(name: 'disabled') this.disabled,
+      @JsonKey(name: 'silenced') this.silenced,
+      @JsonKey(name: 'suspended') this.suspended,
+      @JsonKey(name: 'account') this.account,
       @JsonKey(name: 'created_by_application_id') this.createdByApplicationId,
       @JsonKey(name: 'invited_by_account_id') this.invitedByAccountId})
       : _ips = ips;
@@ -427,12 +435,12 @@ class _$AdminAccountImpl implements _AdminAccount {
   /// The ID of the account in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The username of the account.
   @override
   @JsonKey(name: 'username')
-  final String username;
+  final String? username;
 
   /// The domain of the account, if it is remote.
   @override
@@ -442,12 +450,12 @@ class _$AdminAccountImpl implements _AdminAccount {
   /// When the account was first discovered.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   /// The email address associated with the account.
   @override
   @JsonKey(name: 'email')
-  final String email;
+  final String? email;
 
   /// The IP address last used to login to this account.
   @override
@@ -455,21 +463,23 @@ class _$AdminAccountImpl implements _AdminAccount {
   final String? ip;
 
   /// All known IP addresses associated with this account.
-  final List<AdminIp> _ips;
+  final List<AdminIp>? _ips;
 
   /// All known IP addresses associated with this account.
   @override
   @JsonKey(name: 'ips')
-  List<AdminIp> get ips {
+  List<AdminIp>? get ips {
+    final value = _ips;
+    if (value == null) return null;
     if (_ips is EqualUnmodifiableListView) return _ips;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_ips);
+    return EqualUnmodifiableListView(value);
   }
 
   /// The locale of the account.
   @override
   @JsonKey(name: 'locale')
-  final String locale;
+  final String? locale;
 
   /// The reason given when requesting an invite (for instances that require
   /// manual approval of registrations)
@@ -480,37 +490,37 @@ class _$AdminAccountImpl implements _AdminAccount {
   /// The current role of the account.
   @override
   @JsonKey(name: 'role')
-  final Role role;
+  final Role? role;
 
   /// Whether the account has confirmed their email address.
   @override
   @JsonKey(name: 'confirmed')
-  final bool confirmed;
+  final bool? confirmed;
 
   /// Whether the account is currently approved.
   @override
   @JsonKey(name: 'approved')
-  final bool approved;
+  final bool? approved;
 
   /// Whether the account is currently disabled.
   @override
   @JsonKey(name: 'disabled')
-  final bool disabled;
+  final bool? disabled;
 
   /// Whether the account is currently silenced.
   @override
   @JsonKey(name: 'silenced')
-  final bool silenced;
+  final bool? silenced;
 
   /// Whether the account is currently suspended.
   @override
   @JsonKey(name: 'suspended')
-  final bool suspended;
+  final bool? suspended;
 
   /// User-level information about the account.
   @override
   @JsonKey(name: 'account')
-  final Account account;
+  final Account? account;
 
   /// The ID of the Application that created this account, if applicable.
   @override
@@ -601,22 +611,22 @@ class _$AdminAccountImpl implements _AdminAccount {
 
 abstract class _AdminAccount implements AdminAccount {
   const factory _AdminAccount(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'username') required final String username,
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'username') final String? username,
       @JsonKey(name: 'domain') final String? domain,
-      @JsonKey(name: 'created_at') required final DateTime createdAt,
-      @JsonKey(name: 'email') required final String email,
+      @JsonKey(name: 'created_at') final DateTime? createdAt,
+      @JsonKey(name: 'email') final String? email,
       @JsonKey(name: 'ip') final String? ip,
-      @JsonKey(name: 'ips') required final List<AdminIp> ips,
-      @JsonKey(name: 'locale') required final String locale,
+      @JsonKey(name: 'ips') final List<AdminIp>? ips,
+      @JsonKey(name: 'locale') final String? locale,
       @JsonKey(name: 'invite_request') final String? inviteRequest,
-      @JsonKey(name: 'role') required final Role role,
-      @JsonKey(name: 'confirmed') required final bool confirmed,
-      @JsonKey(name: 'approved') required final bool approved,
-      @JsonKey(name: 'disabled') required final bool disabled,
-      @JsonKey(name: 'silenced') required final bool silenced,
-      @JsonKey(name: 'suspended') required final bool suspended,
-      @JsonKey(name: 'account') required final Account account,
+      @JsonKey(name: 'role') final Role? role,
+      @JsonKey(name: 'confirmed') final bool? confirmed,
+      @JsonKey(name: 'approved') final bool? approved,
+      @JsonKey(name: 'disabled') final bool? disabled,
+      @JsonKey(name: 'silenced') final bool? silenced,
+      @JsonKey(name: 'suspended') final bool? suspended,
+      @JsonKey(name: 'account') final Account? account,
       @JsonKey(name: 'created_by_application_id')
       final String? createdByApplicationId,
       @JsonKey(name: 'invited_by_account_id')
@@ -629,12 +639,12 @@ abstract class _AdminAccount implements AdminAccount {
 
   /// The ID of the account in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The username of the account.
   @JsonKey(name: 'username')
-  String get username;
+  String? get username;
   @override
 
   /// The domain of the account, if it is remote.
@@ -644,12 +654,12 @@ abstract class _AdminAccount implements AdminAccount {
 
   /// When the account was first discovered.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
 
   /// The email address associated with the account.
   @JsonKey(name: 'email')
-  String get email;
+  String? get email;
   @override
 
   /// The IP address last used to login to this account.
@@ -659,12 +669,12 @@ abstract class _AdminAccount implements AdminAccount {
 
   /// All known IP addresses associated with this account.
   @JsonKey(name: 'ips')
-  List<AdminIp> get ips;
+  List<AdminIp>? get ips;
   @override
 
   /// The locale of the account.
   @JsonKey(name: 'locale')
-  String get locale;
+  String? get locale;
   @override
 
   /// The reason given when requesting an invite (for instances that require
@@ -675,37 +685,37 @@ abstract class _AdminAccount implements AdminAccount {
 
   /// The current role of the account.
   @JsonKey(name: 'role')
-  Role get role;
+  Role? get role;
   @override
 
   /// Whether the account has confirmed their email address.
   @JsonKey(name: 'confirmed')
-  bool get confirmed;
+  bool? get confirmed;
   @override
 
   /// Whether the account is currently approved.
   @JsonKey(name: 'approved')
-  bool get approved;
+  bool? get approved;
   @override
 
   /// Whether the account is currently disabled.
   @JsonKey(name: 'disabled')
-  bool get disabled;
+  bool? get disabled;
   @override
 
   /// Whether the account is currently silenced.
   @JsonKey(name: 'silenced')
-  bool get silenced;
+  bool? get silenced;
   @override
 
   /// Whether the account is currently suspended.
   @JsonKey(name: 'suspended')
-  bool get suspended;
+  bool? get suspended;
   @override
 
   /// User-level information about the account.
   @JsonKey(name: 'account')
-  Account get account;
+  Account? get account;
   @override
 
   /// The ID of the Application that created this account, if applicable.

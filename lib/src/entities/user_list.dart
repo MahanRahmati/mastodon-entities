@@ -10,13 +10,13 @@ part 'user_list.g.dart';
 class UserList with _$UserList {
   const factory UserList({
     /// The internal database ID of the list.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The user-defined title of the list.
-    @JsonKey(name: 'title') required final String title,
+    @JsonKey(name: 'title') final String? title,
 
     /// Which replies should be shown in the list.
-    @JsonKey(name: 'replies_policy') required final RepliesPolicy repliesPolicy,
+    @JsonKey(name: 'replies_policy') final RepliesPolicy? repliesPolicy,
   }) = _UserList;
 
   factory UserList.fromJson(final Map<String, dynamic> json) =>

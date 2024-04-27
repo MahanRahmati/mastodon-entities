@@ -10,19 +10,19 @@ part 'poll.g.dart';
 class Poll with _$Poll {
   const factory Poll({
     /// The ID of the poll in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// When the poll ends.
     @JsonKey(name: 'expires_at') final DateTime? expiresAt,
 
     /// Is the poll currently expired?
-    @JsonKey(name: 'expired') required final bool expired,
+    @JsonKey(name: 'expired') final bool? expired,
 
     /// Does the poll allow multiple-choice answers?
-    @JsonKey(name: 'multiple') required final bool multiple,
+    @JsonKey(name: 'multiple') final bool? multiple,
 
     /// How many votes have been received.
-    @JsonKey(name: 'votes_count') required final int votesCount,
+    @JsonKey(name: 'votes_count') final int? votesCount,
 
     /// How many unique accounts have voted on a multiple-choice poll.
     @JsonKey(name: 'voters_count') final int? votersCount,
@@ -31,7 +31,7 @@ class Poll with _$Poll {
     @JsonKey(name: 'options') final List<PollOption>? options,
 
     /// Custom emoji to be used for rendering poll options.
-    @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
+    @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
 
     /// When called with a user token, has the authorized user voted?
     @JsonKey(name: 'voted') final bool? voted,
@@ -49,7 +49,7 @@ class Poll with _$Poll {
 class PollOption with _$PollOption {
   const factory PollOption({
     /// The text value of the poll option.
-    @JsonKey(name: 'title') required final String title,
+    @JsonKey(name: 'title') final String? title,
 
     /// The total number of received votes for this option.
     @JsonKey(name: 'votes_count') final int? votesCount,

@@ -22,23 +22,23 @@ CustomEmoji _$CustomEmojiFromJson(Map<String, dynamic> json) {
 mixin _$CustomEmoji {
   /// The name of the custom emoji.
   @JsonKey(name: 'shortcode')
-  String get shortcode => throw _privateConstructorUsedError;
+  String? get shortcode => throw _privateConstructorUsedError;
 
   /// A link to the custom emoji.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// A link to a static copy of the custom emoji.
   @JsonKey(name: 'static_url')
-  String get staticUrl => throw _privateConstructorUsedError;
+  String? get staticUrl => throw _privateConstructorUsedError;
 
   /// Whether this Emoji should be visible in the picker or unlisted.
   @JsonKey(name: 'visible_in_picker')
-  bool get visibleInPicker => throw _privateConstructorUsedError;
+  bool? get visibleInPicker => throw _privateConstructorUsedError;
 
   /// Used for sorting custom emoji in the picker.
   @JsonKey(name: 'category')
-  String get category => throw _privateConstructorUsedError;
+  String? get category => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -53,11 +53,11 @@ abstract class $CustomEmojiCopyWith<$Res> {
       _$CustomEmojiCopyWithImpl<$Res, CustomEmoji>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'shortcode') String shortcode,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'static_url') String staticUrl,
-      @JsonKey(name: 'visible_in_picker') bool visibleInPicker,
-      @JsonKey(name: 'category') String category});
+      {@JsonKey(name: 'shortcode') String? shortcode,
+      @JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'static_url') String? staticUrl,
+      @JsonKey(name: 'visible_in_picker') bool? visibleInPicker,
+      @JsonKey(name: 'category') String? category});
 }
 
 /// @nodoc
@@ -73,33 +73,33 @@ class _$CustomEmojiCopyWithImpl<$Res, $Val extends CustomEmoji>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? shortcode = null,
-    Object? url = null,
-    Object? staticUrl = null,
-    Object? visibleInPicker = null,
-    Object? category = null,
+    Object? shortcode = freezed,
+    Object? url = freezed,
+    Object? staticUrl = freezed,
+    Object? visibleInPicker = freezed,
+    Object? category = freezed,
   }) {
     return _then(_value.copyWith(
-      shortcode: null == shortcode
+      shortcode: freezed == shortcode
           ? _value.shortcode
           : shortcode // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      staticUrl: null == staticUrl
+              as String?,
+      staticUrl: freezed == staticUrl
           ? _value.staticUrl
           : staticUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibleInPicker: null == visibleInPicker
+              as String?,
+      visibleInPicker: freezed == visibleInPicker
           ? _value.visibleInPicker
           : visibleInPicker // ignore: cast_nullable_to_non_nullable
-              as bool,
-      category: null == category
+              as bool?,
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -113,11 +113,11 @@ abstract class _$$CustomEmojiImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'shortcode') String shortcode,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'static_url') String staticUrl,
-      @JsonKey(name: 'visible_in_picker') bool visibleInPicker,
-      @JsonKey(name: 'category') String category});
+      {@JsonKey(name: 'shortcode') String? shortcode,
+      @JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'static_url') String? staticUrl,
+      @JsonKey(name: 'visible_in_picker') bool? visibleInPicker,
+      @JsonKey(name: 'category') String? category});
 }
 
 /// @nodoc
@@ -131,33 +131,33 @@ class __$$CustomEmojiImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? shortcode = null,
-    Object? url = null,
-    Object? staticUrl = null,
-    Object? visibleInPicker = null,
-    Object? category = null,
+    Object? shortcode = freezed,
+    Object? url = freezed,
+    Object? staticUrl = freezed,
+    Object? visibleInPicker = freezed,
+    Object? category = freezed,
   }) {
     return _then(_$CustomEmojiImpl(
-      shortcode: null == shortcode
+      shortcode: freezed == shortcode
           ? _value.shortcode
           : shortcode // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      staticUrl: null == staticUrl
+              as String?,
+      staticUrl: freezed == staticUrl
           ? _value.staticUrl
           : staticUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      visibleInPicker: null == visibleInPicker
+              as String?,
+      visibleInPicker: freezed == visibleInPicker
           ? _value.visibleInPicker
           : visibleInPicker // ignore: cast_nullable_to_non_nullable
-              as bool,
-      category: null == category
+              as bool?,
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -166,11 +166,11 @@ class __$$CustomEmojiImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CustomEmojiImpl implements _CustomEmoji {
   const _$CustomEmojiImpl(
-      {@JsonKey(name: 'shortcode') required this.shortcode,
-      @JsonKey(name: 'url') required this.url,
-      @JsonKey(name: 'static_url') required this.staticUrl,
-      @JsonKey(name: 'visible_in_picker') required this.visibleInPicker,
-      @JsonKey(name: 'category') required this.category});
+      {@JsonKey(name: 'shortcode') this.shortcode,
+      @JsonKey(name: 'url') this.url,
+      @JsonKey(name: 'static_url') this.staticUrl,
+      @JsonKey(name: 'visible_in_picker') this.visibleInPicker,
+      @JsonKey(name: 'category') this.category});
 
   factory _$CustomEmojiImpl.fromJson(Map<String, dynamic> json) =>
       _$$CustomEmojiImplFromJson(json);
@@ -178,27 +178,27 @@ class _$CustomEmojiImpl implements _CustomEmoji {
   /// The name of the custom emoji.
   @override
   @JsonKey(name: 'shortcode')
-  final String shortcode;
+  final String? shortcode;
 
   /// A link to the custom emoji.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   /// A link to a static copy of the custom emoji.
   @override
   @JsonKey(name: 'static_url')
-  final String staticUrl;
+  final String? staticUrl;
 
   /// Whether this Emoji should be visible in the picker or unlisted.
   @override
   @JsonKey(name: 'visible_in_picker')
-  final bool visibleInPicker;
+  final bool? visibleInPicker;
 
   /// Used for sorting custom emoji in the picker.
   @override
   @JsonKey(name: 'category')
-  final String category;
+  final String? category;
 
   @override
   String toString() {
@@ -242,12 +242,11 @@ class _$CustomEmojiImpl implements _CustomEmoji {
 
 abstract class _CustomEmoji implements CustomEmoji {
   const factory _CustomEmoji(
-      {@JsonKey(name: 'shortcode') required final String shortcode,
-      @JsonKey(name: 'url') required final String url,
-      @JsonKey(name: 'static_url') required final String staticUrl,
-      @JsonKey(name: 'visible_in_picker') required final bool visibleInPicker,
-      @JsonKey(name: 'category')
-      required final String category}) = _$CustomEmojiImpl;
+      {@JsonKey(name: 'shortcode') final String? shortcode,
+      @JsonKey(name: 'url') final String? url,
+      @JsonKey(name: 'static_url') final String? staticUrl,
+      @JsonKey(name: 'visible_in_picker') final bool? visibleInPicker,
+      @JsonKey(name: 'category') final String? category}) = _$CustomEmojiImpl;
 
   factory _CustomEmoji.fromJson(Map<String, dynamic> json) =
       _$CustomEmojiImpl.fromJson;
@@ -256,27 +255,27 @@ abstract class _CustomEmoji implements CustomEmoji {
 
   /// The name of the custom emoji.
   @JsonKey(name: 'shortcode')
-  String get shortcode;
+  String? get shortcode;
   @override
 
   /// A link to the custom emoji.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
 
   /// A link to a static copy of the custom emoji.
   @JsonKey(name: 'static_url')
-  String get staticUrl;
+  String? get staticUrl;
   @override
 
   /// Whether this Emoji should be visible in the picker or unlisted.
   @JsonKey(name: 'visible_in_picker')
-  bool get visibleInPicker;
+  bool? get visibleInPicker;
   @override
 
   /// Used for sorting custom emoji in the picker.
   @JsonKey(name: 'category')
-  String get category;
+  String? get category;
   @override
   @JsonKey(ignore: true)
   _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith =>

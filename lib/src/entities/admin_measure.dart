@@ -8,13 +8,13 @@ part 'admin_measure.g.dart';
 class AdminMeasure with _$AdminMeasure {
   const factory AdminMeasure({
     /// The unique keystring for the requested measure.
-    @JsonKey(name: 'key') required final String key,
+    @JsonKey(name: 'key') final String? key,
 
     /// The units associated with this data item's value, if applicable.
     @JsonKey(name: 'unit') final String? unit,
 
     /// The numeric total associated with the requested measure.
-    @JsonKey(name: 'total') required final String total,
+    @JsonKey(name: 'total') final String? total,
 
     /// A human-readable formatted value for this data item.
     @JsonKey(name: 'human_value') final String? humanValue,
@@ -26,7 +26,7 @@ class AdminMeasure with _$AdminMeasure {
     @JsonKey(name: 'previous_total') final String? previousTotal,
 
     /// The data available for the requested measure, split into daily buckets.
-    @JsonKey(name: 'data') required final List<AdminMeasureData> data,
+    @JsonKey(name: 'data') final List<AdminMeasureData>? data,
   }) = _AdminMeasure;
 
   factory AdminMeasure.fromJson(final Map<String, dynamic> json) =>
@@ -37,10 +37,10 @@ class AdminMeasure with _$AdminMeasure {
 class AdminMeasureData with _$AdminMeasureData {
   const factory AdminMeasureData({
     /// Midnight on the requested day in the time period.
-    @JsonKey(name: 'date') required final DateTime date,
+    @JsonKey(name: 'date') final DateTime? date,
 
     /// The numeric value for the requested measure.
-    @JsonKey(name: 'value') required final String value,
+    @JsonKey(name: 'value') final String? value,
   }) = _AdminMeasureData;
 
   factory AdminMeasureData.fromJson(final Map<String, dynamic> json) =>

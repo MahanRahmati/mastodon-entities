@@ -22,7 +22,7 @@ Application _$ApplicationFromJson(Map<String, dynamic> json) {
 mixin _$Application {
   /// The name of your application.
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   /// The website associated with your application.
   @JsonKey(name: 'website')
@@ -49,7 +49,7 @@ abstract class $ApplicationCopyWith<$Res> {
       _$ApplicationCopyWithImpl<$Res, Application>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
+      {@JsonKey(name: 'name') String? name,
       @JsonKey(name: 'website') String? website,
       @JsonKey(name: 'client_id') String? clientId,
       @JsonKey(name: 'client_secret') String? clientSecret});
@@ -68,16 +68,16 @@ class _$ApplicationCopyWithImpl<$Res, $Val extends Application>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
+    Object? name = freezed,
     Object? website = freezed,
     Object? clientId = freezed,
     Object? clientSecret = freezed,
   }) {
     return _then(_value.copyWith(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       website: freezed == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
@@ -103,7 +103,7 @@ abstract class _$$ApplicationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
+      {@JsonKey(name: 'name') String? name,
       @JsonKey(name: 'website') String? website,
       @JsonKey(name: 'client_id') String? clientId,
       @JsonKey(name: 'client_secret') String? clientSecret});
@@ -120,16 +120,16 @@ class __$$ApplicationImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
+    Object? name = freezed,
     Object? website = freezed,
     Object? clientId = freezed,
     Object? clientSecret = freezed,
   }) {
     return _then(_$ApplicationImpl(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       website: freezed == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
@@ -150,7 +150,7 @@ class __$$ApplicationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ApplicationImpl implements _Application {
   const _$ApplicationImpl(
-      {@JsonKey(name: 'name') required this.name,
+      {@JsonKey(name: 'name') this.name,
       @JsonKey(name: 'website') this.website,
       @JsonKey(name: 'client_id') this.clientId,
       @JsonKey(name: 'client_secret') this.clientSecret});
@@ -161,7 +161,7 @@ class _$ApplicationImpl implements _Application {
   /// The name of your application.
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
 
   /// The website associated with your application.
   @override
@@ -217,7 +217,7 @@ class _$ApplicationImpl implements _Application {
 
 abstract class _Application implements Application {
   const factory _Application(
-          {@JsonKey(name: 'name') required final String name,
+          {@JsonKey(name: 'name') final String? name,
           @JsonKey(name: 'website') final String? website,
           @JsonKey(name: 'client_id') final String? clientId,
           @JsonKey(name: 'client_secret') final String? clientSecret}) =
@@ -230,7 +230,7 @@ abstract class _Application implements Application {
 
   /// The name of your application.
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
 
   /// The website associated with your application.

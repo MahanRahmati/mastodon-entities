@@ -22,19 +22,19 @@ MediaAttachment _$MediaAttachmentFromJson(Map<String, dynamic> json) {
 mixin _$MediaAttachment {
   ///  The ID of the attachment in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The type of the attachment.
   @JsonKey(name: 'type')
-  MediaAttachmentType get type => throw _privateConstructorUsedError;
+  MediaAttachmentType? get type => throw _privateConstructorUsedError;
 
   /// The location of the original full-size attachment.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// The location of a scaled-down preview of the attachment.
   @JsonKey(name: 'preview_url')
-  String get previewUrl => throw _privateConstructorUsedError;
+  String? get previewUrl => throw _privateConstructorUsedError;
 
   /// The location of the full-size original attachment on the remote website.
   @JsonKey(name: 'remote_url')
@@ -42,7 +42,7 @@ mixin _$MediaAttachment {
 
   /// Metadata returned by Paperclip.
   @JsonKey(name: 'meta')
-  MediaAttachmentMeta get meta => throw _privateConstructorUsedError;
+  MediaAttachmentMeta? get meta => throw _privateConstructorUsedError;
 
   /// Alternate text that describes what is in the media attachment, to be
   /// used for the visually impaired or when media attachments do not load.
@@ -52,7 +52,7 @@ mixin _$MediaAttachment {
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
   @JsonKey(name: 'blurhash')
-  String get blurhash => throw _privateConstructorUsedError;
+  String? get blurhash => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -67,16 +67,16 @@ abstract class $MediaAttachmentCopyWith<$Res> {
       _$MediaAttachmentCopyWithImpl<$Res, MediaAttachment>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'type') MediaAttachmentType type,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'preview_url') String previewUrl,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'type') MediaAttachmentType? type,
+      @JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'preview_url') String? previewUrl,
       @JsonKey(name: 'remote_url') String? remoteUrl,
-      @JsonKey(name: 'meta') MediaAttachmentMeta meta,
+      @JsonKey(name: 'meta') MediaAttachmentMeta? meta,
       @JsonKey(name: 'description') String? description,
-      @JsonKey(name: 'blurhash') String blurhash});
+      @JsonKey(name: 'blurhash') String? blurhash});
 
-  $MediaAttachmentMetaCopyWith<$Res> get meta;
+  $MediaAttachmentMetaCopyWith<$Res>? get meta;
 }
 
 /// @nodoc
@@ -92,55 +92,59 @@ class _$MediaAttachmentCopyWithImpl<$Res, $Val extends MediaAttachment>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? type = null,
-    Object? url = null,
-    Object? previewUrl = null,
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? url = freezed,
+    Object? previewUrl = freezed,
     Object? remoteUrl = freezed,
-    Object? meta = null,
+    Object? meta = freezed,
     Object? description = freezed,
-    Object? blurhash = null,
+    Object? blurhash = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MediaAttachmentType,
-      url: null == url
+              as MediaAttachmentType?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      previewUrl: null == previewUrl
+              as String?,
+      previewUrl: freezed == previewUrl
           ? _value.previewUrl
           : previewUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       remoteUrl: freezed == remoteUrl
           ? _value.remoteUrl
           : remoteUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: null == meta
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as MediaAttachmentMeta,
+              as MediaAttachmentMeta?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      blurhash: null == blurhash
+      blurhash: freezed == blurhash
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $MediaAttachmentMetaCopyWith<$Res> get meta {
-    return $MediaAttachmentMetaCopyWith<$Res>(_value.meta, (value) {
+  $MediaAttachmentMetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $MediaAttachmentMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -155,17 +159,17 @@ abstract class _$$MediaAttachmentImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'type') MediaAttachmentType type,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'preview_url') String previewUrl,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'type') MediaAttachmentType? type,
+      @JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'preview_url') String? previewUrl,
       @JsonKey(name: 'remote_url') String? remoteUrl,
-      @JsonKey(name: 'meta') MediaAttachmentMeta meta,
+      @JsonKey(name: 'meta') MediaAttachmentMeta? meta,
       @JsonKey(name: 'description') String? description,
-      @JsonKey(name: 'blurhash') String blurhash});
+      @JsonKey(name: 'blurhash') String? blurhash});
 
   @override
-  $MediaAttachmentMetaCopyWith<$Res> get meta;
+  $MediaAttachmentMetaCopyWith<$Res>? get meta;
 }
 
 /// @nodoc
@@ -179,48 +183,48 @@ class __$$MediaAttachmentImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? type = null,
-    Object? url = null,
-    Object? previewUrl = null,
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? url = freezed,
+    Object? previewUrl = freezed,
     Object? remoteUrl = freezed,
-    Object? meta = null,
+    Object? meta = freezed,
     Object? description = freezed,
-    Object? blurhash = null,
+    Object? blurhash = freezed,
   }) {
     return _then(_$MediaAttachmentImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MediaAttachmentType,
-      url: null == url
+              as MediaAttachmentType?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      previewUrl: null == previewUrl
+              as String?,
+      previewUrl: freezed == previewUrl
           ? _value.previewUrl
           : previewUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       remoteUrl: freezed == remoteUrl
           ? _value.remoteUrl
           : remoteUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      meta: null == meta
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as MediaAttachmentMeta,
+              as MediaAttachmentMeta?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      blurhash: null == blurhash
+      blurhash: freezed == blurhash
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -229,14 +233,14 @@ class __$$MediaAttachmentImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MediaAttachmentImpl implements _MediaAttachment {
   const _$MediaAttachmentImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'type') required this.type,
-      @JsonKey(name: 'url') required this.url,
-      @JsonKey(name: 'preview_url') required this.previewUrl,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'url') this.url,
+      @JsonKey(name: 'preview_url') this.previewUrl,
       @JsonKey(name: 'remote_url') this.remoteUrl,
-      @JsonKey(name: 'meta') required this.meta,
+      @JsonKey(name: 'meta') this.meta,
       @JsonKey(name: 'description') this.description,
-      @JsonKey(name: 'blurhash') required this.blurhash});
+      @JsonKey(name: 'blurhash') this.blurhash});
 
   factory _$MediaAttachmentImpl.fromJson(Map<String, dynamic> json) =>
       _$$MediaAttachmentImplFromJson(json);
@@ -244,22 +248,22 @@ class _$MediaAttachmentImpl implements _MediaAttachment {
   ///  The ID of the attachment in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The type of the attachment.
   @override
   @JsonKey(name: 'type')
-  final MediaAttachmentType type;
+  final MediaAttachmentType? type;
 
   /// The location of the original full-size attachment.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   /// The location of a scaled-down preview of the attachment.
   @override
   @JsonKey(name: 'preview_url')
-  final String previewUrl;
+  final String? previewUrl;
 
   /// The location of the full-size original attachment on the remote website.
   @override
@@ -269,7 +273,7 @@ class _$MediaAttachmentImpl implements _MediaAttachment {
   /// Metadata returned by Paperclip.
   @override
   @JsonKey(name: 'meta')
-  final MediaAttachmentMeta meta;
+  final MediaAttachmentMeta? meta;
 
   /// Alternate text that describes what is in the media attachment, to be
   /// used for the visually impaired or when media attachments do not load.
@@ -281,7 +285,7 @@ class _$MediaAttachmentImpl implements _MediaAttachment {
   /// preview thumbnails when media has not been downloaded yet.
   @override
   @JsonKey(name: 'blurhash')
-  final String blurhash;
+  final String? blurhash;
 
   @override
   String toString() {
@@ -329,14 +333,14 @@ class _$MediaAttachmentImpl implements _MediaAttachment {
 
 abstract class _MediaAttachment implements MediaAttachment {
   const factory _MediaAttachment(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'type') required final MediaAttachmentType type,
-          @JsonKey(name: 'url') required final String url,
-          @JsonKey(name: 'preview_url') required final String previewUrl,
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'type') final MediaAttachmentType? type,
+          @JsonKey(name: 'url') final String? url,
+          @JsonKey(name: 'preview_url') final String? previewUrl,
           @JsonKey(name: 'remote_url') final String? remoteUrl,
-          @JsonKey(name: 'meta') required final MediaAttachmentMeta meta,
+          @JsonKey(name: 'meta') final MediaAttachmentMeta? meta,
           @JsonKey(name: 'description') final String? description,
-          @JsonKey(name: 'blurhash') required final String blurhash}) =
+          @JsonKey(name: 'blurhash') final String? blurhash}) =
       _$MediaAttachmentImpl;
 
   factory _MediaAttachment.fromJson(Map<String, dynamic> json) =
@@ -346,22 +350,22 @@ abstract class _MediaAttachment implements MediaAttachment {
 
   ///  The ID of the attachment in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The type of the attachment.
   @JsonKey(name: 'type')
-  MediaAttachmentType get type;
+  MediaAttachmentType? get type;
   @override
 
   /// The location of the original full-size attachment.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
 
   /// The location of a scaled-down preview of the attachment.
   @JsonKey(name: 'preview_url')
-  String get previewUrl;
+  String? get previewUrl;
   @override
 
   /// The location of the full-size original attachment on the remote website.
@@ -371,7 +375,7 @@ abstract class _MediaAttachment implements MediaAttachment {
 
   /// Metadata returned by Paperclip.
   @JsonKey(name: 'meta')
-  MediaAttachmentMeta get meta;
+  MediaAttachmentMeta? get meta;
   @override
 
   /// Alternate text that describes what is in the media attachment, to be
@@ -383,7 +387,7 @@ abstract class _MediaAttachment implements MediaAttachment {
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
   @JsonKey(name: 'blurhash')
-  String get blurhash;
+  String? get blurhash;
   @override
   @JsonKey(ignore: true)
   _$$MediaAttachmentImplCopyWith<_$MediaAttachmentImpl> get copyWith =>

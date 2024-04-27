@@ -22,13 +22,13 @@ Preferences _$PreferencesFromJson(Map<String, dynamic> json) {
 mixin _$Preferences {
   /// Default visibility for new posts. Equivalent to Account.source.privacy.
   @JsonKey(name: 'posting:default:visibility')
-  StatusVisibility get postingDefaultVisibility =>
+  StatusVisibility? get postingDefaultVisibility =>
       throw _privateConstructorUsedError;
 
   /// Default sensitivity flag for new posts. Equivalent to
   /// Account.source.sensitive
   @JsonKey(name: 'posting:default:sensitive')
-  bool get postingDefaultSensitive => throw _privateConstructorUsedError;
+  bool? get postingDefaultSensitive => throw _privateConstructorUsedError;
 
   /// Default language for new posts. Equivalent to Account.source.language.
   @JsonKey(name: 'posting:default:language')
@@ -37,12 +37,12 @@ mixin _$Preferences {
   /// Whether media attachments should be automatically displayed or
   /// blurred/hidden.
   @JsonKey(name: 'posting:default:media')
-  PreferencesReadingExpandMedia get readingExpandMedia =>
+  PreferencesReadingExpandMedia? get readingExpandMedia =>
       throw _privateConstructorUsedError;
 
   /// Whether CWs should be expanded by default.
   @JsonKey(name: 'posting:default:spoilers')
-  bool get readingExpandSpoilers => throw _privateConstructorUsedError;
+  bool? get readingExpandSpoilers => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -58,12 +58,12 @@ abstract class $PreferencesCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'posting:default:visibility')
-      StatusVisibility postingDefaultVisibility,
-      @JsonKey(name: 'posting:default:sensitive') bool postingDefaultSensitive,
+      StatusVisibility? postingDefaultVisibility,
+      @JsonKey(name: 'posting:default:sensitive') bool? postingDefaultSensitive,
       @JsonKey(name: 'posting:default:language') String? postingDefaultLanguage,
       @JsonKey(name: 'posting:default:media')
-      PreferencesReadingExpandMedia readingExpandMedia,
-      @JsonKey(name: 'posting:default:spoilers') bool readingExpandSpoilers});
+      PreferencesReadingExpandMedia? readingExpandMedia,
+      @JsonKey(name: 'posting:default:spoilers') bool? readingExpandSpoilers});
 }
 
 /// @nodoc
@@ -79,33 +79,33 @@ class _$PreferencesCopyWithImpl<$Res, $Val extends Preferences>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postingDefaultVisibility = null,
-    Object? postingDefaultSensitive = null,
+    Object? postingDefaultVisibility = freezed,
+    Object? postingDefaultSensitive = freezed,
     Object? postingDefaultLanguage = freezed,
-    Object? readingExpandMedia = null,
-    Object? readingExpandSpoilers = null,
+    Object? readingExpandMedia = freezed,
+    Object? readingExpandSpoilers = freezed,
   }) {
     return _then(_value.copyWith(
-      postingDefaultVisibility: null == postingDefaultVisibility
+      postingDefaultVisibility: freezed == postingDefaultVisibility
           ? _value.postingDefaultVisibility
           : postingDefaultVisibility // ignore: cast_nullable_to_non_nullable
-              as StatusVisibility,
-      postingDefaultSensitive: null == postingDefaultSensitive
+              as StatusVisibility?,
+      postingDefaultSensitive: freezed == postingDefaultSensitive
           ? _value.postingDefaultSensitive
           : postingDefaultSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       postingDefaultLanguage: freezed == postingDefaultLanguage
           ? _value.postingDefaultLanguage
           : postingDefaultLanguage // ignore: cast_nullable_to_non_nullable
               as String?,
-      readingExpandMedia: null == readingExpandMedia
+      readingExpandMedia: freezed == readingExpandMedia
           ? _value.readingExpandMedia
           : readingExpandMedia // ignore: cast_nullable_to_non_nullable
-              as PreferencesReadingExpandMedia,
-      readingExpandSpoilers: null == readingExpandSpoilers
+              as PreferencesReadingExpandMedia?,
+      readingExpandSpoilers: freezed == readingExpandSpoilers
           ? _value.readingExpandSpoilers
           : readingExpandSpoilers // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -120,12 +120,12 @@ abstract class _$$PreferencesImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'posting:default:visibility')
-      StatusVisibility postingDefaultVisibility,
-      @JsonKey(name: 'posting:default:sensitive') bool postingDefaultSensitive,
+      StatusVisibility? postingDefaultVisibility,
+      @JsonKey(name: 'posting:default:sensitive') bool? postingDefaultSensitive,
       @JsonKey(name: 'posting:default:language') String? postingDefaultLanguage,
       @JsonKey(name: 'posting:default:media')
-      PreferencesReadingExpandMedia readingExpandMedia,
-      @JsonKey(name: 'posting:default:spoilers') bool readingExpandSpoilers});
+      PreferencesReadingExpandMedia? readingExpandMedia,
+      @JsonKey(name: 'posting:default:spoilers') bool? readingExpandSpoilers});
 }
 
 /// @nodoc
@@ -139,33 +139,33 @@ class __$$PreferencesImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postingDefaultVisibility = null,
-    Object? postingDefaultSensitive = null,
+    Object? postingDefaultVisibility = freezed,
+    Object? postingDefaultSensitive = freezed,
     Object? postingDefaultLanguage = freezed,
-    Object? readingExpandMedia = null,
-    Object? readingExpandSpoilers = null,
+    Object? readingExpandMedia = freezed,
+    Object? readingExpandSpoilers = freezed,
   }) {
     return _then(_$PreferencesImpl(
-      postingDefaultVisibility: null == postingDefaultVisibility
+      postingDefaultVisibility: freezed == postingDefaultVisibility
           ? _value.postingDefaultVisibility
           : postingDefaultVisibility // ignore: cast_nullable_to_non_nullable
-              as StatusVisibility,
-      postingDefaultSensitive: null == postingDefaultSensitive
+              as StatusVisibility?,
+      postingDefaultSensitive: freezed == postingDefaultSensitive
           ? _value.postingDefaultSensitive
           : postingDefaultSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       postingDefaultLanguage: freezed == postingDefaultLanguage
           ? _value.postingDefaultLanguage
           : postingDefaultLanguage // ignore: cast_nullable_to_non_nullable
               as String?,
-      readingExpandMedia: null == readingExpandMedia
+      readingExpandMedia: freezed == readingExpandMedia
           ? _value.readingExpandMedia
           : readingExpandMedia // ignore: cast_nullable_to_non_nullable
-              as PreferencesReadingExpandMedia,
-      readingExpandSpoilers: null == readingExpandSpoilers
+              as PreferencesReadingExpandMedia?,
+      readingExpandSpoilers: freezed == readingExpandSpoilers
           ? _value.readingExpandSpoilers
           : readingExpandSpoilers // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -175,13 +175,11 @@ class __$$PreferencesImplCopyWithImpl<$Res>
 class _$PreferencesImpl implements _Preferences {
   const _$PreferencesImpl(
       {@JsonKey(name: 'posting:default:visibility')
-      required this.postingDefaultVisibility,
-      @JsonKey(name: 'posting:default:sensitive')
-      required this.postingDefaultSensitive,
+      this.postingDefaultVisibility,
+      @JsonKey(name: 'posting:default:sensitive') this.postingDefaultSensitive,
       @JsonKey(name: 'posting:default:language') this.postingDefaultLanguage,
-      @JsonKey(name: 'posting:default:media') required this.readingExpandMedia,
-      @JsonKey(name: 'posting:default:spoilers')
-      required this.readingExpandSpoilers});
+      @JsonKey(name: 'posting:default:media') this.readingExpandMedia,
+      @JsonKey(name: 'posting:default:spoilers') this.readingExpandSpoilers});
 
   factory _$PreferencesImpl.fromJson(Map<String, dynamic> json) =>
       _$$PreferencesImplFromJson(json);
@@ -189,13 +187,13 @@ class _$PreferencesImpl implements _Preferences {
   /// Default visibility for new posts. Equivalent to Account.source.privacy.
   @override
   @JsonKey(name: 'posting:default:visibility')
-  final StatusVisibility postingDefaultVisibility;
+  final StatusVisibility? postingDefaultVisibility;
 
   /// Default sensitivity flag for new posts. Equivalent to
   /// Account.source.sensitive
   @override
   @JsonKey(name: 'posting:default:sensitive')
-  final bool postingDefaultSensitive;
+  final bool? postingDefaultSensitive;
 
   /// Default language for new posts. Equivalent to Account.source.language.
   @override
@@ -206,12 +204,12 @@ class _$PreferencesImpl implements _Preferences {
   /// blurred/hidden.
   @override
   @JsonKey(name: 'posting:default:media')
-  final PreferencesReadingExpandMedia readingExpandMedia;
+  final PreferencesReadingExpandMedia? readingExpandMedia;
 
   /// Whether CWs should be expanded by default.
   @override
   @JsonKey(name: 'posting:default:spoilers')
-  final bool readingExpandSpoilers;
+  final bool? readingExpandSpoilers;
 
   @override
   String toString() {
@@ -264,15 +262,15 @@ class _$PreferencesImpl implements _Preferences {
 abstract class _Preferences implements Preferences {
   const factory _Preferences(
       {@JsonKey(name: 'posting:default:visibility')
-      required final StatusVisibility postingDefaultVisibility,
+      final StatusVisibility? postingDefaultVisibility,
       @JsonKey(name: 'posting:default:sensitive')
-      required final bool postingDefaultSensitive,
+      final bool? postingDefaultSensitive,
       @JsonKey(name: 'posting:default:language')
       final String? postingDefaultLanguage,
       @JsonKey(name: 'posting:default:media')
-      required final PreferencesReadingExpandMedia readingExpandMedia,
+      final PreferencesReadingExpandMedia? readingExpandMedia,
       @JsonKey(name: 'posting:default:spoilers')
-      required final bool readingExpandSpoilers}) = _$PreferencesImpl;
+      final bool? readingExpandSpoilers}) = _$PreferencesImpl;
 
   factory _Preferences.fromJson(Map<String, dynamic> json) =
       _$PreferencesImpl.fromJson;
@@ -281,13 +279,13 @@ abstract class _Preferences implements Preferences {
 
   /// Default visibility for new posts. Equivalent to Account.source.privacy.
   @JsonKey(name: 'posting:default:visibility')
-  StatusVisibility get postingDefaultVisibility;
+  StatusVisibility? get postingDefaultVisibility;
   @override
 
   /// Default sensitivity flag for new posts. Equivalent to
   /// Account.source.sensitive
   @JsonKey(name: 'posting:default:sensitive')
-  bool get postingDefaultSensitive;
+  bool? get postingDefaultSensitive;
   @override
 
   /// Default language for new posts. Equivalent to Account.source.language.
@@ -298,12 +296,12 @@ abstract class _Preferences implements Preferences {
   /// Whether media attachments should be automatically displayed or
   /// blurred/hidden.
   @JsonKey(name: 'posting:default:media')
-  PreferencesReadingExpandMedia get readingExpandMedia;
+  PreferencesReadingExpandMedia? get readingExpandMedia;
   @override
 
   /// Whether CWs should be expanded by default.
   @JsonKey(name: 'posting:default:spoilers')
-  bool get readingExpandSpoilers;
+  bool? get readingExpandSpoilers;
   @override
   @JsonKey(ignore: true)
   _$$PreferencesImplCopyWith<_$PreferencesImpl> get copyWith =>

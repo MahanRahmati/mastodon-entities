@@ -8,24 +8,34 @@ part of 'instance.dart';
 
 _$InstanceImpl _$$InstanceImplFromJson(Map<String, dynamic> json) =>
     _$InstanceImpl(
-      domain: json['domain'] as String,
-      title: json['title'] as String,
-      version: json['version'] as String,
-      sourceUrl: json['source_url'] as String,
-      description: json['description'] as String,
-      usage: InstanceUsage.fromJson(json['usage'] as Map<String, dynamic>),
-      thumbnail:
-          InstanceThumbnail.fromJson(json['thumbnail'] as Map<String, dynamic>),
-      languages:
-          (json['languages'] as List<dynamic>).map((e) => e as String).toList(),
-      configuration: InstanceConfiguration.fromJson(
-          json['configuration'] as Map<String, dynamic>),
-      registrations: InstanceRegistrations.fromJson(
-          json['registrations'] as Map<String, dynamic>),
-      contact:
-          InstanceContact.fromJson(json['contact'] as Map<String, dynamic>),
-      rules: (json['rules'] as List<dynamic>)
-          .map((e) => Rule.fromJson(e as Map<String, dynamic>))
+      domain: json['domain'] as String?,
+      title: json['title'] as String?,
+      version: json['version'] as String?,
+      sourceUrl: json['source_url'] as String?,
+      description: json['description'] as String?,
+      usage: json['usage'] == null
+          ? null
+          : InstanceUsage.fromJson(json['usage'] as Map<String, dynamic>),
+      thumbnail: json['thumbnail'] == null
+          ? null
+          : InstanceThumbnail.fromJson(
+              json['thumbnail'] as Map<String, dynamic>),
+      languages: (json['languages'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      configuration: json['configuration'] == null
+          ? null
+          : InstanceConfiguration.fromJson(
+              json['configuration'] as Map<String, dynamic>),
+      registrations: json['registrations'] == null
+          ? null
+          : InstanceRegistrations.fromJson(
+              json['registrations'] as Map<String, dynamic>),
+      contact: json['contact'] == null
+          ? null
+          : InstanceContact.fromJson(json['contact'] as Map<String, dynamic>),
+      rules: (json['rules'] as List<dynamic>?)
+          ?.map((e) => Rule.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -47,7 +57,9 @@ Map<String, dynamic> _$$InstanceImplToJson(_$InstanceImpl instance) =>
 
 _$InstanceUsageImpl _$$InstanceUsageImplFromJson(Map<String, dynamic> json) =>
     _$InstanceUsageImpl(
-      users: InstanceUsageUsers.fromJson(json['users'] as Map<String, dynamic>),
+      users: json['users'] == null
+          ? null
+          : InstanceUsageUsers.fromJson(json['users'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$InstanceUsageImplToJson(_$InstanceUsageImpl instance) =>
@@ -58,7 +70,7 @@ Map<String, dynamic> _$$InstanceUsageImplToJson(_$InstanceUsageImpl instance) =>
 _$InstanceUsageUsersImpl _$$InstanceUsageUsersImplFromJson(
         Map<String, dynamic> json) =>
     _$InstanceUsageUsersImpl(
-      activeMonth: (json['active_month'] as num).toInt(),
+      activeMonth: (json['active_month'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$InstanceUsageUsersImplToJson(
@@ -70,7 +82,7 @@ Map<String, dynamic> _$$InstanceUsageUsersImplToJson(
 _$InstanceThumbnailImpl _$$InstanceThumbnailImplFromJson(
         Map<String, dynamic> json) =>
     _$InstanceThumbnailImpl(
-      url: json['url'] as String,
+      url: json['url'] as String?,
       blurhash: json['blurhash'] as String?,
       versions: json['versions'] == null
           ? null
@@ -102,20 +114,34 @@ Map<String, dynamic> _$$InstanceVersionsImplToJson(
 _$InstanceConfigurationImpl _$$InstanceConfigurationImplFromJson(
         Map<String, dynamic> json) =>
     _$InstanceConfigurationImpl(
-      urls: InstanceConfigurationUrls.fromJson(
-          json['urls'] as Map<String, dynamic>),
-      vapid: InstanceConfigurationVapid.fromJson(
-          json['vapid'] as Map<String, dynamic>),
-      accounts: InstanceConfigurationAccounts.fromJson(
-          json['accounts'] as Map<String, dynamic>),
-      statuses: InstanceConfigurationStatuses.fromJson(
-          json['statuses'] as Map<String, dynamic>),
-      mediaAttachments: InstanceConfigurationMediaAttachments.fromJson(
-          json['media_attachments'] as Map<String, dynamic>),
-      polls: InstanceConfigurationPolls.fromJson(
-          json['polls'] as Map<String, dynamic>),
-      translation: InstanceConfigurationTranslation.fromJson(
-          json['translation'] as Map<String, dynamic>),
+      urls: json['urls'] == null
+          ? null
+          : InstanceConfigurationUrls.fromJson(
+              json['urls'] as Map<String, dynamic>),
+      vapid: json['vapid'] == null
+          ? null
+          : InstanceConfigurationVapid.fromJson(
+              json['vapid'] as Map<String, dynamic>),
+      accounts: json['accounts'] == null
+          ? null
+          : InstanceConfigurationAccounts.fromJson(
+              json['accounts'] as Map<String, dynamic>),
+      statuses: json['statuses'] == null
+          ? null
+          : InstanceConfigurationStatuses.fromJson(
+              json['statuses'] as Map<String, dynamic>),
+      mediaAttachments: json['media_attachments'] == null
+          ? null
+          : InstanceConfigurationMediaAttachments.fromJson(
+              json['media_attachments'] as Map<String, dynamic>),
+      polls: json['polls'] == null
+          ? null
+          : InstanceConfigurationPolls.fromJson(
+              json['polls'] as Map<String, dynamic>),
+      translation: json['translation'] == null
+          ? null
+          : InstanceConfigurationTranslation.fromJson(
+              json['translation'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$InstanceConfigurationImplToJson(
@@ -133,7 +159,7 @@ Map<String, dynamic> _$$InstanceConfigurationImplToJson(
 _$InstanceConfigurationUrlsImpl _$$InstanceConfigurationUrlsImplFromJson(
         Map<String, dynamic> json) =>
     _$InstanceConfigurationUrlsImpl(
-      streaming: json['streaming'] as String,
+      streaming: json['streaming'] as String?,
     );
 
 Map<String, dynamic> _$$InstanceConfigurationUrlsImplToJson(
@@ -145,7 +171,7 @@ Map<String, dynamic> _$$InstanceConfigurationUrlsImplToJson(
 _$InstanceConfigurationVapidImpl _$$InstanceConfigurationVapidImplFromJson(
         Map<String, dynamic> json) =>
     _$InstanceConfigurationVapidImpl(
-      publicKey: json['public_key'] as String,
+      publicKey: json['public_key'] as String?,
     );
 
 Map<String, dynamic> _$$InstanceConfigurationVapidImplToJson(
@@ -157,8 +183,8 @@ Map<String, dynamic> _$$InstanceConfigurationVapidImplToJson(
 _$InstanceConfigurationAccountsImpl
     _$$InstanceConfigurationAccountsImplFromJson(Map<String, dynamic> json) =>
         _$InstanceConfigurationAccountsImpl(
-          maxFeaturedTags: (json['max_featured_tags'] as num).toInt(),
-          maxPinnedStatuses: (json['max_pinned_statuses'] as num).toInt(),
+          maxFeaturedTags: (json['max_featured_tags'] as num?)?.toInt(),
+          maxPinnedStatuses: (json['max_pinned_statuses'] as num?)?.toInt(),
         );
 
 Map<String, dynamic> _$$InstanceConfigurationAccountsImplToJson(
@@ -171,10 +197,10 @@ Map<String, dynamic> _$$InstanceConfigurationAccountsImplToJson(
 _$InstanceConfigurationStatusesImpl
     _$$InstanceConfigurationStatusesImplFromJson(Map<String, dynamic> json) =>
         _$InstanceConfigurationStatusesImpl(
-          maxCharacters: (json['max_characters'] as num).toInt(),
-          maxMediaAttachments: (json['max_media_attachments'] as num).toInt(),
+          maxCharacters: (json['max_characters'] as num?)?.toInt(),
+          maxMediaAttachments: (json['max_media_attachments'] as num?)?.toInt(),
           charactersReservedPerUrl:
-              (json['characters_reserved_per_url'] as num).toInt(),
+              (json['characters_reserved_per_url'] as num?)?.toInt(),
         );
 
 Map<String, dynamic> _$$InstanceConfigurationStatusesImplToJson(
@@ -189,14 +215,15 @@ _$InstanceConfigurationMediaAttachmentsImpl
     _$$InstanceConfigurationMediaAttachmentsImplFromJson(
             Map<String, dynamic> json) =>
         _$InstanceConfigurationMediaAttachmentsImpl(
-          supportedMimeTypes: (json['supported_mime_types'] as List<dynamic>)
-              .map((e) => e as String)
+          supportedMimeTypes: (json['supported_mime_types'] as List<dynamic>?)
+              ?.map((e) => e as String)
               .toList(),
-          imageSizeLimit: (json['image_size_limit'] as num).toInt(),
-          imageMatrixLimit: (json['image_matrix_limit'] as num).toInt(),
-          videoSizeLimit: (json['video_size_limit'] as num).toInt(),
-          videoFrameRateLimit: (json['video_frame_rate_limit'] as num).toInt(),
-          videoMatrixLimit: (json['video_matrix_limit'] as num).toInt(),
+          imageSizeLimit: (json['image_size_limit'] as num?)?.toInt(),
+          imageMatrixLimit: (json['image_matrix_limit'] as num?)?.toInt(),
+          videoSizeLimit: (json['video_size_limit'] as num?)?.toInt(),
+          videoFrameRateLimit:
+              (json['video_frame_rate_limit'] as num?)?.toInt(),
+          videoMatrixLimit: (json['video_matrix_limit'] as num?)?.toInt(),
         );
 
 Map<String, dynamic> _$$InstanceConfigurationMediaAttachmentsImplToJson(
@@ -213,11 +240,11 @@ Map<String, dynamic> _$$InstanceConfigurationMediaAttachmentsImplToJson(
 _$InstanceConfigurationPollsImpl _$$InstanceConfigurationPollsImplFromJson(
         Map<String, dynamic> json) =>
     _$InstanceConfigurationPollsImpl(
-      maxOptions: (json['max_options'] as num).toInt(),
+      maxOptions: (json['max_options'] as num?)?.toInt(),
       maxCharactersPerOption:
-          (json['max_characters_per_option'] as num).toInt(),
-      minExpiration: (json['min_expiration'] as num).toInt(),
-      maxExpiration: (json['max_expiration'] as num).toInt(),
+          (json['max_characters_per_option'] as num?)?.toInt(),
+      minExpiration: (json['min_expiration'] as num?)?.toInt(),
+      maxExpiration: (json['max_expiration'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$InstanceConfigurationPollsImplToJson(
@@ -233,7 +260,7 @@ _$InstanceConfigurationTranslationImpl
     _$$InstanceConfigurationTranslationImplFromJson(
             Map<String, dynamic> json) =>
         _$InstanceConfigurationTranslationImpl(
-          enabled: json['enabled'] as bool,
+          enabled: json['enabled'] as bool?,
         );
 
 Map<String, dynamic> _$$InstanceConfigurationTranslationImplToJson(
@@ -245,8 +272,8 @@ Map<String, dynamic> _$$InstanceConfigurationTranslationImplToJson(
 _$InstanceRegistrationsImpl _$$InstanceRegistrationsImplFromJson(
         Map<String, dynamic> json) =>
     _$InstanceRegistrationsImpl(
-      enabled: json['enabled'] as bool,
-      approvalRequired: json['approval_required'] as bool,
+      enabled: json['enabled'] as bool?,
+      approvalRequired: json['approval_required'] as bool?,
       message: json['message'] as String?,
     );
 
@@ -261,7 +288,7 @@ Map<String, dynamic> _$$InstanceRegistrationsImplToJson(
 _$InstanceContactImpl _$$InstanceContactImplFromJson(
         Map<String, dynamic> json) =>
     _$InstanceContactImpl(
-      email: json['email'] as String,
+      email: json['email'] as String?,
       account: json['account'] == null
           ? null
           : Account.fromJson(json['account'] as Map<String, dynamic>),

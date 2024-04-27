@@ -8,23 +8,24 @@ part of 'preferences.dart';
 
 _$PreferencesImpl _$$PreferencesImplFromJson(Map<String, dynamic> json) =>
     _$PreferencesImpl(
-      postingDefaultVisibility: $enumDecode(
+      postingDefaultVisibility: $enumDecodeNullable(
           _$StatusVisibilityEnumMap, json['posting:default:visibility']),
-      postingDefaultSensitive: json['posting:default:sensitive'] as bool,
+      postingDefaultSensitive: json['posting:default:sensitive'] as bool?,
       postingDefaultLanguage: json['posting:default:language'] as String?,
-      readingExpandMedia: $enumDecode(_$PreferencesReadingExpandMediaEnumMap,
+      readingExpandMedia: $enumDecodeNullable(
+          _$PreferencesReadingExpandMediaEnumMap,
           json['posting:default:media']),
-      readingExpandSpoilers: json['posting:default:spoilers'] as bool,
+      readingExpandSpoilers: json['posting:default:spoilers'] as bool?,
     );
 
 Map<String, dynamic> _$$PreferencesImplToJson(_$PreferencesImpl instance) =>
     <String, dynamic>{
       'posting:default:visibility':
-          _$StatusVisibilityEnumMap[instance.postingDefaultVisibility]!,
+          _$StatusVisibilityEnumMap[instance.postingDefaultVisibility],
       'posting:default:sensitive': instance.postingDefaultSensitive,
       'posting:default:language': instance.postingDefaultLanguage,
       'posting:default:media':
-          _$PreferencesReadingExpandMediaEnumMap[instance.readingExpandMedia]!,
+          _$PreferencesReadingExpandMediaEnumMap[instance.readingExpandMedia],
       'posting:default:spoilers': instance.readingExpandSpoilers,
     };
 

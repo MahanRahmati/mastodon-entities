@@ -22,15 +22,15 @@ Conversation _$ConversationFromJson(Map<String, dynamic> json) {
 mixin _$Conversation {
   /// The ID of the conversation in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// Is the conversation currently marked as unread?
   @JsonKey(name: 'unread')
-  bool get unread => throw _privateConstructorUsedError;
+  bool? get unread => throw _privateConstructorUsedError;
 
   /// Participants in the conversation.
   @JsonKey(name: 'accounts')
-  List<Account> get accounts => throw _privateConstructorUsedError;
+  List<Account>? get accounts => throw _privateConstructorUsedError;
 
   /// The last status in the conversation.
   @JsonKey(name: 'last_status')
@@ -49,9 +49,9 @@ abstract class $ConversationCopyWith<$Res> {
       _$ConversationCopyWithImpl<$Res, Conversation>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'unread') bool unread,
-      @JsonKey(name: 'accounts') List<Account> accounts,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'unread') bool? unread,
+      @JsonKey(name: 'accounts') List<Account>? accounts,
       @JsonKey(name: 'last_status') Status? lastStatus});
 
   $StatusCopyWith<$Res>? get lastStatus;
@@ -70,24 +70,24 @@ class _$ConversationCopyWithImpl<$Res, $Val extends Conversation>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? unread = null,
-    Object? accounts = null,
+    Object? id = freezed,
+    Object? unread = freezed,
+    Object? accounts = freezed,
     Object? lastStatus = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      unread: null == unread
+              as String?,
+      unread: freezed == unread
           ? _value.unread
           : unread // ignore: cast_nullable_to_non_nullable
-              as bool,
-      accounts: null == accounts
+              as bool?,
+      accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as List<Account>,
+              as List<Account>?,
       lastStatus: freezed == lastStatus
           ? _value.lastStatus
           : lastStatus // ignore: cast_nullable_to_non_nullable
@@ -117,9 +117,9 @@ abstract class _$$ConversationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'unread') bool unread,
-      @JsonKey(name: 'accounts') List<Account> accounts,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'unread') bool? unread,
+      @JsonKey(name: 'accounts') List<Account>? accounts,
       @JsonKey(name: 'last_status') Status? lastStatus});
 
   @override
@@ -137,24 +137,24 @@ class __$$ConversationImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? unread = null,
-    Object? accounts = null,
+    Object? id = freezed,
+    Object? unread = freezed,
+    Object? accounts = freezed,
     Object? lastStatus = freezed,
   }) {
     return _then(_$ConversationImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      unread: null == unread
+              as String?,
+      unread: freezed == unread
           ? _value.unread
           : unread // ignore: cast_nullable_to_non_nullable
-              as bool,
-      accounts: null == accounts
+              as bool?,
+      accounts: freezed == accounts
           ? _value._accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as List<Account>,
+              as List<Account>?,
       lastStatus: freezed == lastStatus
           ? _value.lastStatus
           : lastStatus // ignore: cast_nullable_to_non_nullable
@@ -167,9 +167,9 @@ class __$$ConversationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ConversationImpl implements _Conversation {
   const _$ConversationImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'unread') required this.unread,
-      @JsonKey(name: 'accounts') required final List<Account> accounts,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'unread') this.unread,
+      @JsonKey(name: 'accounts') final List<Account>? accounts,
       @JsonKey(name: 'last_status') this.lastStatus})
       : _accounts = accounts;
 
@@ -179,23 +179,25 @@ class _$ConversationImpl implements _Conversation {
   /// The ID of the conversation in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// Is the conversation currently marked as unread?
   @override
   @JsonKey(name: 'unread')
-  final bool unread;
+  final bool? unread;
 
   /// Participants in the conversation.
-  final List<Account> _accounts;
+  final List<Account>? _accounts;
 
   /// Participants in the conversation.
   @override
   @JsonKey(name: 'accounts')
-  List<Account> get accounts {
+  List<Account>? get accounts {
+    final value = _accounts;
+    if (value == null) return null;
     if (_accounts is EqualUnmodifiableListView) return _accounts;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_accounts);
+    return EqualUnmodifiableListView(value);
   }
 
   /// The last status in the conversation.
@@ -241,9 +243,9 @@ class _$ConversationImpl implements _Conversation {
 
 abstract class _Conversation implements Conversation {
   const factory _Conversation(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'unread') required final bool unread,
-          @JsonKey(name: 'accounts') required final List<Account> accounts,
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'unread') final bool? unread,
+          @JsonKey(name: 'accounts') final List<Account>? accounts,
           @JsonKey(name: 'last_status') final Status? lastStatus}) =
       _$ConversationImpl;
 
@@ -254,17 +256,17 @@ abstract class _Conversation implements Conversation {
 
   /// The ID of the conversation in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// Is the conversation currently marked as unread?
   @JsonKey(name: 'unread')
-  bool get unread;
+  bool? get unread;
   @override
 
   /// Participants in the conversation.
   @JsonKey(name: 'accounts')
-  List<Account> get accounts;
+  List<Account>? get accounts;
   @override
 
   /// The last status in the conversation.

@@ -8,13 +8,13 @@ part 'marker.g.dart';
 class Marker with _$Marker {
   const factory Marker({
     /// The ID of the most recently viewed entity.
-    @JsonKey(name: 'last_read_id') required final String lastReadId,
+    @JsonKey(name: 'last_read_id') final String? lastReadId,
 
     /// An incrementing counter, used for locking to prevent write conflicts.
-    @JsonKey(name: 'version') required final int version,
+    @JsonKey(name: 'version') final int? version,
 
     /// The timestamp of when the marker was set.
-    @JsonKey(name: 'updated_at') required final DateTime updatedAt,
+    @JsonKey(name: 'updated_at') final DateTime? updatedAt,
   }) = _Marker;
 
   factory Marker.fromJson(final Map<String, dynamic> json) =>

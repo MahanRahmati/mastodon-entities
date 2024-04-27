@@ -22,37 +22,37 @@ EncryptedMessage _$EncryptedMessageFromJson(Map<String, dynamic> json) {
 mixin _$EncryptedMessage {
   /// The ID of the EncryptedMessage in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The ID of the Account that sent this message.
   @JsonKey(name: 'account_id')
-  String get accountId => throw _privateConstructorUsedError;
+  String? get accountId => throw _privateConstructorUsedError;
 
   /// The ID of the Device that sent this message.
   @JsonKey(name: 'device_id')
-  String get deviceId => throw _privateConstructorUsedError;
+  String? get deviceId => throw _privateConstructorUsedError;
 
   /// Whether the message is a pre-key message (used to establish a new
   /// session) or a normally encrypted message (part of an existing session).
   @JsonKey(name: 'type')
-  EncryptedMessageType get type => throw _privateConstructorUsedError;
+  EncryptedMessageType? get type => throw _privateConstructorUsedError;
 
   /// The encrypted message content.
   @JsonKey(name: 'body')
-  String get body => throw _privateConstructorUsedError;
+  String? get body => throw _privateConstructorUsedError;
 
   /// An HMAC SHA-256 digest hash of the message.
   @JsonKey(name: 'digest')
-  String get digest => throw _privateConstructorUsedError;
+  String? get digest => throw _privateConstructorUsedError;
 
   /// A signed value to be used when reporting the message body for its
   /// content.
   @JsonKey(name: 'message_franking')
-  String get messageFranking => throw _privateConstructorUsedError;
+  String? get messageFranking => throw _privateConstructorUsedError;
 
   /// A timestamp for when the message was created.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -67,14 +67,14 @@ abstract class $EncryptedMessageCopyWith<$Res> {
       _$EncryptedMessageCopyWithImpl<$Res, EncryptedMessage>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'account_id') String accountId,
-      @JsonKey(name: 'device_id') String deviceId,
-      @JsonKey(name: 'type') EncryptedMessageType type,
-      @JsonKey(name: 'body') String body,
-      @JsonKey(name: 'digest') String digest,
-      @JsonKey(name: 'message_franking') String messageFranking,
-      @JsonKey(name: 'created_at') DateTime createdAt});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'account_id') String? accountId,
+      @JsonKey(name: 'device_id') String? deviceId,
+      @JsonKey(name: 'type') EncryptedMessageType? type,
+      @JsonKey(name: 'body') String? body,
+      @JsonKey(name: 'digest') String? digest,
+      @JsonKey(name: 'message_franking') String? messageFranking,
+      @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
 /// @nodoc
@@ -90,48 +90,48 @@ class _$EncryptedMessageCopyWithImpl<$Res, $Val extends EncryptedMessage>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? accountId = null,
-    Object? deviceId = null,
-    Object? type = null,
-    Object? body = null,
-    Object? digest = null,
-    Object? messageFranking = null,
-    Object? createdAt = null,
+    Object? id = freezed,
+    Object? accountId = freezed,
+    Object? deviceId = freezed,
+    Object? type = freezed,
+    Object? body = freezed,
+    Object? digest = freezed,
+    Object? messageFranking = freezed,
+    Object? createdAt = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      accountId: null == accountId
+              as String?,
+      accountId: freezed == accountId
           ? _value.accountId
           : accountId // ignore: cast_nullable_to_non_nullable
-              as String,
-      deviceId: null == deviceId
+              as String?,
+      deviceId: freezed == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as EncryptedMessageType,
-      body: null == body
+              as EncryptedMessageType?,
+      body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
-              as String,
-      digest: null == digest
+              as String?,
+      digest: freezed == digest
           ? _value.digest
           : digest // ignore: cast_nullable_to_non_nullable
-              as String,
-      messageFranking: null == messageFranking
+              as String?,
+      messageFranking: freezed == messageFranking
           ? _value.messageFranking
           : messageFranking // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -145,14 +145,14 @@ abstract class _$$EncryptedMessageImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'account_id') String accountId,
-      @JsonKey(name: 'device_id') String deviceId,
-      @JsonKey(name: 'type') EncryptedMessageType type,
-      @JsonKey(name: 'body') String body,
-      @JsonKey(name: 'digest') String digest,
-      @JsonKey(name: 'message_franking') String messageFranking,
-      @JsonKey(name: 'created_at') DateTime createdAt});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'account_id') String? accountId,
+      @JsonKey(name: 'device_id') String? deviceId,
+      @JsonKey(name: 'type') EncryptedMessageType? type,
+      @JsonKey(name: 'body') String? body,
+      @JsonKey(name: 'digest') String? digest,
+      @JsonKey(name: 'message_franking') String? messageFranking,
+      @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
 /// @nodoc
@@ -166,48 +166,48 @@ class __$$EncryptedMessageImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? accountId = null,
-    Object? deviceId = null,
-    Object? type = null,
-    Object? body = null,
-    Object? digest = null,
-    Object? messageFranking = null,
-    Object? createdAt = null,
+    Object? id = freezed,
+    Object? accountId = freezed,
+    Object? deviceId = freezed,
+    Object? type = freezed,
+    Object? body = freezed,
+    Object? digest = freezed,
+    Object? messageFranking = freezed,
+    Object? createdAt = freezed,
   }) {
     return _then(_$EncryptedMessageImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      accountId: null == accountId
+              as String?,
+      accountId: freezed == accountId
           ? _value.accountId
           : accountId // ignore: cast_nullable_to_non_nullable
-              as String,
-      deviceId: null == deviceId
+              as String?,
+      deviceId: freezed == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as EncryptedMessageType,
-      body: null == body
+              as EncryptedMessageType?,
+      body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
-              as String,
-      digest: null == digest
+              as String?,
+      digest: freezed == digest
           ? _value.digest
           : digest // ignore: cast_nullable_to_non_nullable
-              as String,
-      messageFranking: null == messageFranking
+              as String?,
+      messageFranking: freezed == messageFranking
           ? _value.messageFranking
           : messageFranking // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
+              as String?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ));
   }
 }
@@ -216,14 +216,14 @@ class __$$EncryptedMessageImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EncryptedMessageImpl implements _EncryptedMessage {
   const _$EncryptedMessageImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'account_id') required this.accountId,
-      @JsonKey(name: 'device_id') required this.deviceId,
-      @JsonKey(name: 'type') required this.type,
-      @JsonKey(name: 'body') required this.body,
-      @JsonKey(name: 'digest') required this.digest,
-      @JsonKey(name: 'message_franking') required this.messageFranking,
-      @JsonKey(name: 'created_at') required this.createdAt});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'account_id') this.accountId,
+      @JsonKey(name: 'device_id') this.deviceId,
+      @JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'body') this.body,
+      @JsonKey(name: 'digest') this.digest,
+      @JsonKey(name: 'message_franking') this.messageFranking,
+      @JsonKey(name: 'created_at') this.createdAt});
 
   factory _$EncryptedMessageImpl.fromJson(Map<String, dynamic> json) =>
       _$$EncryptedMessageImplFromJson(json);
@@ -231,44 +231,44 @@ class _$EncryptedMessageImpl implements _EncryptedMessage {
   /// The ID of the EncryptedMessage in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The ID of the Account that sent this message.
   @override
   @JsonKey(name: 'account_id')
-  final String accountId;
+  final String? accountId;
 
   /// The ID of the Device that sent this message.
   @override
   @JsonKey(name: 'device_id')
-  final String deviceId;
+  final String? deviceId;
 
   /// Whether the message is a pre-key message (used to establish a new
   /// session) or a normally encrypted message (part of an existing session).
   @override
   @JsonKey(name: 'type')
-  final EncryptedMessageType type;
+  final EncryptedMessageType? type;
 
   /// The encrypted message content.
   @override
   @JsonKey(name: 'body')
-  final String body;
+  final String? body;
 
   /// An HMAC SHA-256 digest hash of the message.
   @override
   @JsonKey(name: 'digest')
-  final String digest;
+  final String? digest;
 
   /// A signed value to be used when reporting the message body for its
   /// content.
   @override
   @JsonKey(name: 'message_franking')
-  final String messageFranking;
+  final String? messageFranking;
 
   /// A timestamp for when the message was created.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   @override
   String toString() {
@@ -316,15 +316,15 @@ class _$EncryptedMessageImpl implements _EncryptedMessage {
 
 abstract class _EncryptedMessage implements EncryptedMessage {
   const factory _EncryptedMessage(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'account_id') required final String accountId,
-      @JsonKey(name: 'device_id') required final String deviceId,
-      @JsonKey(name: 'type') required final EncryptedMessageType type,
-      @JsonKey(name: 'body') required final String body,
-      @JsonKey(name: 'digest') required final String digest,
-      @JsonKey(name: 'message_franking') required final String messageFranking,
-      @JsonKey(name: 'created_at')
-      required final DateTime createdAt}) = _$EncryptedMessageImpl;
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'account_id') final String? accountId,
+          @JsonKey(name: 'device_id') final String? deviceId,
+          @JsonKey(name: 'type') final EncryptedMessageType? type,
+          @JsonKey(name: 'body') final String? body,
+          @JsonKey(name: 'digest') final String? digest,
+          @JsonKey(name: 'message_franking') final String? messageFranking,
+          @JsonKey(name: 'created_at') final DateTime? createdAt}) =
+      _$EncryptedMessageImpl;
 
   factory _EncryptedMessage.fromJson(Map<String, dynamic> json) =
       _$EncryptedMessageImpl.fromJson;
@@ -333,44 +333,44 @@ abstract class _EncryptedMessage implements EncryptedMessage {
 
   /// The ID of the EncryptedMessage in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The ID of the Account that sent this message.
   @JsonKey(name: 'account_id')
-  String get accountId;
+  String? get accountId;
   @override
 
   /// The ID of the Device that sent this message.
   @JsonKey(name: 'device_id')
-  String get deviceId;
+  String? get deviceId;
   @override
 
   /// Whether the message is a pre-key message (used to establish a new
   /// session) or a normally encrypted message (part of an existing session).
   @JsonKey(name: 'type')
-  EncryptedMessageType get type;
+  EncryptedMessageType? get type;
   @override
 
   /// The encrypted message content.
   @JsonKey(name: 'body')
-  String get body;
+  String? get body;
   @override
 
   /// An HMAC SHA-256 digest hash of the message.
   @JsonKey(name: 'digest')
-  String get digest;
+  String? get digest;
   @override
 
   /// A signed value to be used when reporting the message body for its
   /// content.
   @JsonKey(name: 'message_franking')
-  String get messageFranking;
+  String? get messageFranking;
   @override
 
   /// A timestamp for when the message was created.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
   @JsonKey(ignore: true)
   _$$EncryptedMessageImplCopyWith<_$EncryptedMessageImpl> get copyWith =>

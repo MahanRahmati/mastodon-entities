@@ -22,20 +22,20 @@ ScheduledStatus _$ScheduledStatusFromJson(Map<String, dynamic> json) {
 mixin _$ScheduledStatus {
   /// ID of the scheduled status in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The timestamp for when the status will be posted.
   @JsonKey(name: 'scheduled_at')
-  DateTime get scheduledAt => throw _privateConstructorUsedError;
+  DateTime? get scheduledAt => throw _privateConstructorUsedError;
 
   /// The parameters that were used when scheduling the status, to be used
   /// when the status is posted.
   @JsonKey(name: 'params')
-  ScheduledStatusParams get params => throw _privateConstructorUsedError;
+  ScheduledStatusParams? get params => throw _privateConstructorUsedError;
 
   /// Media that will be attached when the status is posted.
   @JsonKey(name: 'media_attachments')
-  List<MediaAttachment> get mediaAttachments =>
+  List<MediaAttachment>? get mediaAttachments =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -51,13 +51,13 @@ abstract class $ScheduledStatusCopyWith<$Res> {
       _$ScheduledStatusCopyWithImpl<$Res, ScheduledStatus>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'scheduled_at') DateTime scheduledAt,
-      @JsonKey(name: 'params') ScheduledStatusParams params,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'scheduled_at') DateTime? scheduledAt,
+      @JsonKey(name: 'params') ScheduledStatusParams? params,
       @JsonKey(name: 'media_attachments')
-      List<MediaAttachment> mediaAttachments});
+      List<MediaAttachment>? mediaAttachments});
 
-  $ScheduledStatusParamsCopyWith<$Res> get params;
+  $ScheduledStatusParamsCopyWith<$Res>? get params;
 }
 
 /// @nodoc
@@ -73,35 +73,39 @@ class _$ScheduledStatusCopyWithImpl<$Res, $Val extends ScheduledStatus>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? scheduledAt = null,
-    Object? params = null,
-    Object? mediaAttachments = null,
+    Object? id = freezed,
+    Object? scheduledAt = freezed,
+    Object? params = freezed,
+    Object? mediaAttachments = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      scheduledAt: null == scheduledAt
+              as String?,
+      scheduledAt: freezed == scheduledAt
           ? _value.scheduledAt
           : scheduledAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      params: null == params
+              as DateTime?,
+      params: freezed == params
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
-              as ScheduledStatusParams,
-      mediaAttachments: null == mediaAttachments
+              as ScheduledStatusParams?,
+      mediaAttachments: freezed == mediaAttachments
           ? _value.mediaAttachments
           : mediaAttachments // ignore: cast_nullable_to_non_nullable
-              as List<MediaAttachment>,
+              as List<MediaAttachment>?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ScheduledStatusParamsCopyWith<$Res> get params {
-    return $ScheduledStatusParamsCopyWith<$Res>(_value.params, (value) {
+  $ScheduledStatusParamsCopyWith<$Res>? get params {
+    if (_value.params == null) {
+      return null;
+    }
+
+    return $ScheduledStatusParamsCopyWith<$Res>(_value.params!, (value) {
       return _then(_value.copyWith(params: value) as $Val);
     });
   }
@@ -116,14 +120,14 @@ abstract class _$$ScheduledStatusImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'scheduled_at') DateTime scheduledAt,
-      @JsonKey(name: 'params') ScheduledStatusParams params,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'scheduled_at') DateTime? scheduledAt,
+      @JsonKey(name: 'params') ScheduledStatusParams? params,
       @JsonKey(name: 'media_attachments')
-      List<MediaAttachment> mediaAttachments});
+      List<MediaAttachment>? mediaAttachments});
 
   @override
-  $ScheduledStatusParamsCopyWith<$Res> get params;
+  $ScheduledStatusParamsCopyWith<$Res>? get params;
 }
 
 /// @nodoc
@@ -137,28 +141,28 @@ class __$$ScheduledStatusImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? scheduledAt = null,
-    Object? params = null,
-    Object? mediaAttachments = null,
+    Object? id = freezed,
+    Object? scheduledAt = freezed,
+    Object? params = freezed,
+    Object? mediaAttachments = freezed,
   }) {
     return _then(_$ScheduledStatusImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      scheduledAt: null == scheduledAt
+              as String?,
+      scheduledAt: freezed == scheduledAt
           ? _value.scheduledAt
           : scheduledAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      params: null == params
+              as DateTime?,
+      params: freezed == params
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
-              as ScheduledStatusParams,
-      mediaAttachments: null == mediaAttachments
+              as ScheduledStatusParams?,
+      mediaAttachments: freezed == mediaAttachments
           ? _value._mediaAttachments
           : mediaAttachments // ignore: cast_nullable_to_non_nullable
-              as List<MediaAttachment>,
+              as List<MediaAttachment>?,
     ));
   }
 }
@@ -167,11 +171,11 @@ class __$$ScheduledStatusImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ScheduledStatusImpl implements _ScheduledStatus {
   const _$ScheduledStatusImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'scheduled_at') required this.scheduledAt,
-      @JsonKey(name: 'params') required this.params,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'scheduled_at') this.scheduledAt,
+      @JsonKey(name: 'params') this.params,
       @JsonKey(name: 'media_attachments')
-      required final List<MediaAttachment> mediaAttachments})
+      final List<MediaAttachment>? mediaAttachments})
       : _mediaAttachments = mediaAttachments;
 
   factory _$ScheduledStatusImpl.fromJson(Map<String, dynamic> json) =>
@@ -180,30 +184,32 @@ class _$ScheduledStatusImpl implements _ScheduledStatus {
   /// ID of the scheduled status in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The timestamp for when the status will be posted.
   @override
   @JsonKey(name: 'scheduled_at')
-  final DateTime scheduledAt;
+  final DateTime? scheduledAt;
 
   /// The parameters that were used when scheduling the status, to be used
   /// when the status is posted.
   @override
   @JsonKey(name: 'params')
-  final ScheduledStatusParams params;
+  final ScheduledStatusParams? params;
 
   /// Media that will be attached when the status is posted.
-  final List<MediaAttachment> _mediaAttachments;
+  final List<MediaAttachment>? _mediaAttachments;
 
   /// Media that will be attached when the status is posted.
   @override
   @JsonKey(name: 'media_attachments')
-  List<MediaAttachment> get mediaAttachments {
+  List<MediaAttachment>? get mediaAttachments {
+    final value = _mediaAttachments;
+    if (value == null) return null;
     if (_mediaAttachments is EqualUnmodifiableListView)
       return _mediaAttachments;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_mediaAttachments);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -246,12 +252,11 @@ class _$ScheduledStatusImpl implements _ScheduledStatus {
 
 abstract class _ScheduledStatus implements ScheduledStatus {
   const factory _ScheduledStatus(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'scheduled_at') required final DateTime scheduledAt,
-          @JsonKey(name: 'params') required final ScheduledStatusParams params,
-          @JsonKey(name: 'media_attachments')
-          required final List<MediaAttachment> mediaAttachments}) =
-      _$ScheduledStatusImpl;
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'scheduled_at') final DateTime? scheduledAt,
+      @JsonKey(name: 'params') final ScheduledStatusParams? params,
+      @JsonKey(name: 'media_attachments')
+      final List<MediaAttachment>? mediaAttachments}) = _$ScheduledStatusImpl;
 
   factory _ScheduledStatus.fromJson(Map<String, dynamic> json) =
       _$ScheduledStatusImpl.fromJson;
@@ -260,23 +265,23 @@ abstract class _ScheduledStatus implements ScheduledStatus {
 
   /// ID of the scheduled status in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The timestamp for when the status will be posted.
   @JsonKey(name: 'scheduled_at')
-  DateTime get scheduledAt;
+  DateTime? get scheduledAt;
   @override
 
   /// The parameters that were used when scheduling the status, to be used
   /// when the status is posted.
   @JsonKey(name: 'params')
-  ScheduledStatusParams get params;
+  ScheduledStatusParams? get params;
   @override
 
   /// Media that will be attached when the status is posted.
   @JsonKey(name: 'media_attachments')
-  List<MediaAttachment> get mediaAttachments;
+  List<MediaAttachment>? get mediaAttachments;
   @override
   @JsonKey(ignore: true)
   _$$ScheduledStatusImplCopyWith<_$ScheduledStatusImpl> get copyWith =>
@@ -292,7 +297,7 @@ ScheduledStatusParams _$ScheduledStatusParamsFromJson(
 mixin _$ScheduledStatusParams {
   /// Text to be used as status content.
   @JsonKey(name: 'text')
-  String get text => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
 
   /// Poll to be attached to the status.
   @JsonKey(name: 'poll')
@@ -312,7 +317,7 @@ mixin _$ScheduledStatusParams {
 
   /// The visibility that the status will have once it is posted.
   @JsonKey(name: 'visibility')
-  StatusVisibility get visibility => throw _privateConstructorUsedError;
+  StatusVisibility? get visibility => throw _privateConstructorUsedError;
 
   /// ID of the Status that will be replied to.
   @JsonKey(name: 'in_reply_to_id')
@@ -324,7 +329,7 @@ mixin _$ScheduledStatusParams {
 
   /// ID of the Application that posted the status.
   @JsonKey(name: 'application_id')
-  int get applicationId => throw _privateConstructorUsedError;
+  int? get applicationId => throw _privateConstructorUsedError;
 
   /// When the status will be scheduled. This will be null because the status
   /// is only scheduled once.
@@ -337,7 +342,7 @@ mixin _$ScheduledStatusParams {
 
   /// Whether the status should be rate limited
   @JsonKey(name: 'with_rate_limit')
-  bool get withRateLimit => throw _privateConstructorUsedError;
+  bool? get withRateLimit => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -352,18 +357,18 @@ abstract class $ScheduledStatusParamsCopyWith<$Res> {
       _$ScheduledStatusParamsCopyWithImpl<$Res, ScheduledStatusParams>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'text') String text,
+      {@JsonKey(name: 'text') String? text,
       @JsonKey(name: 'poll') ScheduledStatusPoll? poll,
       @JsonKey(name: 'media_ids') List<String>? mediaIds,
       @JsonKey(name: 'sensitive') bool? sensitive,
       @JsonKey(name: 'spoiler_text') String? spoilerText,
-      @JsonKey(name: 'visibility') StatusVisibility visibility,
+      @JsonKey(name: 'visibility') StatusVisibility? visibility,
       @JsonKey(name: 'in_reply_to_id') int? inReplyToId,
       @JsonKey(name: 'language') String? language,
-      @JsonKey(name: 'application_id') int applicationId,
+      @JsonKey(name: 'application_id') int? applicationId,
       @JsonKey(name: 'scheduled_at') DateTime? scheduledAt,
       @JsonKey(name: 'idempotency') String? idempotency,
-      @JsonKey(name: 'with_rate_limit') bool withRateLimit});
+      @JsonKey(name: 'with_rate_limit') bool? withRateLimit});
 
   $ScheduledStatusPollCopyWith<$Res>? get poll;
 }
@@ -382,24 +387,24 @@ class _$ScheduledStatusParamsCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? text = null,
+    Object? text = freezed,
     Object? poll = freezed,
     Object? mediaIds = freezed,
     Object? sensitive = freezed,
     Object? spoilerText = freezed,
-    Object? visibility = null,
+    Object? visibility = freezed,
     Object? inReplyToId = freezed,
     Object? language = freezed,
-    Object? applicationId = null,
+    Object? applicationId = freezed,
     Object? scheduledAt = freezed,
     Object? idempotency = freezed,
-    Object? withRateLimit = null,
+    Object? withRateLimit = freezed,
   }) {
     return _then(_value.copyWith(
-      text: null == text
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       poll: freezed == poll
           ? _value.poll
           : poll // ignore: cast_nullable_to_non_nullable
@@ -416,10 +421,10 @@ class _$ScheduledStatusParamsCopyWithImpl<$Res,
           ? _value.spoilerText
           : spoilerText // ignore: cast_nullable_to_non_nullable
               as String?,
-      visibility: null == visibility
+      visibility: freezed == visibility
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as StatusVisibility,
+              as StatusVisibility?,
       inReplyToId: freezed == inReplyToId
           ? _value.inReplyToId
           : inReplyToId // ignore: cast_nullable_to_non_nullable
@@ -428,10 +433,10 @@ class _$ScheduledStatusParamsCopyWithImpl<$Res,
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as String?,
-      applicationId: null == applicationId
+      applicationId: freezed == applicationId
           ? _value.applicationId
           : applicationId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       scheduledAt: freezed == scheduledAt
           ? _value.scheduledAt
           : scheduledAt // ignore: cast_nullable_to_non_nullable
@@ -440,10 +445,10 @@ class _$ScheduledStatusParamsCopyWithImpl<$Res,
           ? _value.idempotency
           : idempotency // ignore: cast_nullable_to_non_nullable
               as String?,
-      withRateLimit: null == withRateLimit
+      withRateLimit: freezed == withRateLimit
           ? _value.withRateLimit
           : withRateLimit // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 
@@ -470,18 +475,18 @@ abstract class _$$ScheduledStatusParamsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'text') String text,
+      {@JsonKey(name: 'text') String? text,
       @JsonKey(name: 'poll') ScheduledStatusPoll? poll,
       @JsonKey(name: 'media_ids') List<String>? mediaIds,
       @JsonKey(name: 'sensitive') bool? sensitive,
       @JsonKey(name: 'spoiler_text') String? spoilerText,
-      @JsonKey(name: 'visibility') StatusVisibility visibility,
+      @JsonKey(name: 'visibility') StatusVisibility? visibility,
       @JsonKey(name: 'in_reply_to_id') int? inReplyToId,
       @JsonKey(name: 'language') String? language,
-      @JsonKey(name: 'application_id') int applicationId,
+      @JsonKey(name: 'application_id') int? applicationId,
       @JsonKey(name: 'scheduled_at') DateTime? scheduledAt,
       @JsonKey(name: 'idempotency') String? idempotency,
-      @JsonKey(name: 'with_rate_limit') bool withRateLimit});
+      @JsonKey(name: 'with_rate_limit') bool? withRateLimit});
 
   @override
   $ScheduledStatusPollCopyWith<$Res>? get poll;
@@ -499,24 +504,24 @@ class __$$ScheduledStatusParamsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? text = null,
+    Object? text = freezed,
     Object? poll = freezed,
     Object? mediaIds = freezed,
     Object? sensitive = freezed,
     Object? spoilerText = freezed,
-    Object? visibility = null,
+    Object? visibility = freezed,
     Object? inReplyToId = freezed,
     Object? language = freezed,
-    Object? applicationId = null,
+    Object? applicationId = freezed,
     Object? scheduledAt = freezed,
     Object? idempotency = freezed,
-    Object? withRateLimit = null,
+    Object? withRateLimit = freezed,
   }) {
     return _then(_$ScheduledStatusParamsImpl(
-      text: null == text
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       poll: freezed == poll
           ? _value.poll
           : poll // ignore: cast_nullable_to_non_nullable
@@ -533,10 +538,10 @@ class __$$ScheduledStatusParamsImplCopyWithImpl<$Res>
           ? _value.spoilerText
           : spoilerText // ignore: cast_nullable_to_non_nullable
               as String?,
-      visibility: null == visibility
+      visibility: freezed == visibility
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as StatusVisibility,
+              as StatusVisibility?,
       inReplyToId: freezed == inReplyToId
           ? _value.inReplyToId
           : inReplyToId // ignore: cast_nullable_to_non_nullable
@@ -545,10 +550,10 @@ class __$$ScheduledStatusParamsImplCopyWithImpl<$Res>
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as String?,
-      applicationId: null == applicationId
+      applicationId: freezed == applicationId
           ? _value.applicationId
           : applicationId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       scheduledAt: freezed == scheduledAt
           ? _value.scheduledAt
           : scheduledAt // ignore: cast_nullable_to_non_nullable
@@ -557,10 +562,10 @@ class __$$ScheduledStatusParamsImplCopyWithImpl<$Res>
           ? _value.idempotency
           : idempotency // ignore: cast_nullable_to_non_nullable
               as String?,
-      withRateLimit: null == withRateLimit
+      withRateLimit: freezed == withRateLimit
           ? _value.withRateLimit
           : withRateLimit // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -569,18 +574,18 @@ class __$$ScheduledStatusParamsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
   const _$ScheduledStatusParamsImpl(
-      {@JsonKey(name: 'text') required this.text,
+      {@JsonKey(name: 'text') this.text,
       @JsonKey(name: 'poll') this.poll,
       @JsonKey(name: 'media_ids') final List<String>? mediaIds,
       @JsonKey(name: 'sensitive') this.sensitive,
       @JsonKey(name: 'spoiler_text') this.spoilerText,
-      @JsonKey(name: 'visibility') required this.visibility,
+      @JsonKey(name: 'visibility') this.visibility,
       @JsonKey(name: 'in_reply_to_id') this.inReplyToId,
       @JsonKey(name: 'language') this.language,
-      @JsonKey(name: 'application_id') required this.applicationId,
+      @JsonKey(name: 'application_id') this.applicationId,
       @JsonKey(name: 'scheduled_at') this.scheduledAt,
       @JsonKey(name: 'idempotency') this.idempotency,
-      @JsonKey(name: 'with_rate_limit') required this.withRateLimit})
+      @JsonKey(name: 'with_rate_limit') this.withRateLimit})
       : _mediaIds = mediaIds;
 
   factory _$ScheduledStatusParamsImpl.fromJson(Map<String, dynamic> json) =>
@@ -589,7 +594,7 @@ class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
   /// Text to be used as status content.
   @override
   @JsonKey(name: 'text')
-  final String text;
+  final String? text;
 
   /// Poll to be attached to the status.
   @override
@@ -623,7 +628,7 @@ class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
   /// The visibility that the status will have once it is posted.
   @override
   @JsonKey(name: 'visibility')
-  final StatusVisibility visibility;
+  final StatusVisibility? visibility;
 
   /// ID of the Status that will be replied to.
   @override
@@ -638,7 +643,7 @@ class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
   /// ID of the Application that posted the status.
   @override
   @JsonKey(name: 'application_id')
-  final int applicationId;
+  final int? applicationId;
 
   /// When the status will be scheduled. This will be null because the status
   /// is only scheduled once.
@@ -654,7 +659,7 @@ class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
   /// Whether the status should be rate limited
   @override
   @JsonKey(name: 'with_rate_limit')
-  final bool withRateLimit;
+  final bool? withRateLimit;
 
   @override
   String toString() {
@@ -723,19 +728,19 @@ class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
 
 abstract class _ScheduledStatusParams implements ScheduledStatusParams {
   const factory _ScheduledStatusParams(
-      {@JsonKey(name: 'text') required final String text,
-      @JsonKey(name: 'poll') final ScheduledStatusPoll? poll,
-      @JsonKey(name: 'media_ids') final List<String>? mediaIds,
-      @JsonKey(name: 'sensitive') final bool? sensitive,
-      @JsonKey(name: 'spoiler_text') final String? spoilerText,
-      @JsonKey(name: 'visibility') required final StatusVisibility visibility,
-      @JsonKey(name: 'in_reply_to_id') final int? inReplyToId,
-      @JsonKey(name: 'language') final String? language,
-      @JsonKey(name: 'application_id') required final int applicationId,
-      @JsonKey(name: 'scheduled_at') final DateTime? scheduledAt,
-      @JsonKey(name: 'idempotency') final String? idempotency,
-      @JsonKey(name: 'with_rate_limit')
-      required final bool withRateLimit}) = _$ScheduledStatusParamsImpl;
+          {@JsonKey(name: 'text') final String? text,
+          @JsonKey(name: 'poll') final ScheduledStatusPoll? poll,
+          @JsonKey(name: 'media_ids') final List<String>? mediaIds,
+          @JsonKey(name: 'sensitive') final bool? sensitive,
+          @JsonKey(name: 'spoiler_text') final String? spoilerText,
+          @JsonKey(name: 'visibility') final StatusVisibility? visibility,
+          @JsonKey(name: 'in_reply_to_id') final int? inReplyToId,
+          @JsonKey(name: 'language') final String? language,
+          @JsonKey(name: 'application_id') final int? applicationId,
+          @JsonKey(name: 'scheduled_at') final DateTime? scheduledAt,
+          @JsonKey(name: 'idempotency') final String? idempotency,
+          @JsonKey(name: 'with_rate_limit') final bool? withRateLimit}) =
+      _$ScheduledStatusParamsImpl;
 
   factory _ScheduledStatusParams.fromJson(Map<String, dynamic> json) =
       _$ScheduledStatusParamsImpl.fromJson;
@@ -744,7 +749,7 @@ abstract class _ScheduledStatusParams implements ScheduledStatusParams {
 
   /// Text to be used as status content.
   @JsonKey(name: 'text')
-  String get text;
+  String? get text;
   @override
 
   /// Poll to be attached to the status.
@@ -769,7 +774,7 @@ abstract class _ScheduledStatusParams implements ScheduledStatusParams {
 
   /// The visibility that the status will have once it is posted.
   @JsonKey(name: 'visibility')
-  StatusVisibility get visibility;
+  StatusVisibility? get visibility;
   @override
 
   /// ID of the Status that will be replied to.
@@ -784,7 +789,7 @@ abstract class _ScheduledStatusParams implements ScheduledStatusParams {
 
   /// ID of the Application that posted the status.
   @JsonKey(name: 'application_id')
-  int get applicationId;
+  int? get applicationId;
   @override
 
   /// When the status will be scheduled. This will be null because the status
@@ -800,7 +805,7 @@ abstract class _ScheduledStatusParams implements ScheduledStatusParams {
 
   /// Whether the status should be rate limited
   @JsonKey(name: 'with_rate_limit')
-  bool get withRateLimit;
+  bool? get withRateLimit;
   @override
   @JsonKey(ignore: true)
   _$$ScheduledStatusParamsImplCopyWith<_$ScheduledStatusParamsImpl>
@@ -815,11 +820,11 @@ ScheduledStatusPoll _$ScheduledStatusPollFromJson(Map<String, dynamic> json) {
 mixin _$ScheduledStatusPoll {
   /// The poll options to be used.
   @JsonKey(name: 'options[]')
-  List<String> get options => throw _privateConstructorUsedError;
+  List<String>? get options => throw _privateConstructorUsedError;
 
   /// How many seconds the poll should last before closing.
   @JsonKey(name: 'expires_in')
-  String get expiresIn => throw _privateConstructorUsedError;
+  String? get expiresIn => throw _privateConstructorUsedError;
 
   /// Whether the poll allows multiple choices.
   @JsonKey(name: 'multiple')
@@ -842,8 +847,8 @@ abstract class $ScheduledStatusPollCopyWith<$Res> {
       _$ScheduledStatusPollCopyWithImpl<$Res, ScheduledStatusPoll>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'options[]') List<String> options,
-      @JsonKey(name: 'expires_in') String expiresIn,
+      {@JsonKey(name: 'options[]') List<String>? options,
+      @JsonKey(name: 'expires_in') String? expiresIn,
       @JsonKey(name: 'multiple') bool? multiple,
       @JsonKey(name: 'hide_totals') bool? hideTotals});
 }
@@ -861,20 +866,20 @@ class _$ScheduledStatusPollCopyWithImpl<$Res, $Val extends ScheduledStatusPoll>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? options = null,
-    Object? expiresIn = null,
+    Object? options = freezed,
+    Object? expiresIn = freezed,
     Object? multiple = freezed,
     Object? hideTotals = freezed,
   }) {
     return _then(_value.copyWith(
-      options: null == options
+      options: freezed == options
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      expiresIn: null == expiresIn
+              as List<String>?,
+      expiresIn: freezed == expiresIn
           ? _value.expiresIn
           : expiresIn // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       multiple: freezed == multiple
           ? _value.multiple
           : multiple // ignore: cast_nullable_to_non_nullable
@@ -896,8 +901,8 @@ abstract class _$$ScheduledStatusPollImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'options[]') List<String> options,
-      @JsonKey(name: 'expires_in') String expiresIn,
+      {@JsonKey(name: 'options[]') List<String>? options,
+      @JsonKey(name: 'expires_in') String? expiresIn,
       @JsonKey(name: 'multiple') bool? multiple,
       @JsonKey(name: 'hide_totals') bool? hideTotals});
 }
@@ -913,20 +918,20 @@ class __$$ScheduledStatusPollImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? options = null,
-    Object? expiresIn = null,
+    Object? options = freezed,
+    Object? expiresIn = freezed,
     Object? multiple = freezed,
     Object? hideTotals = freezed,
   }) {
     return _then(_$ScheduledStatusPollImpl(
-      options: null == options
+      options: freezed == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      expiresIn: null == expiresIn
+              as List<String>?,
+      expiresIn: freezed == expiresIn
           ? _value.expiresIn
           : expiresIn // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       multiple: freezed == multiple
           ? _value.multiple
           : multiple // ignore: cast_nullable_to_non_nullable
@@ -943,8 +948,8 @@ class __$$ScheduledStatusPollImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ScheduledStatusPollImpl implements _ScheduledStatusPoll {
   const _$ScheduledStatusPollImpl(
-      {@JsonKey(name: 'options[]') required final List<String> options,
-      @JsonKey(name: 'expires_in') required this.expiresIn,
+      {@JsonKey(name: 'options[]') final List<String>? options,
+      @JsonKey(name: 'expires_in') this.expiresIn,
       @JsonKey(name: 'multiple') this.multiple,
       @JsonKey(name: 'hide_totals') this.hideTotals})
       : _options = options;
@@ -953,21 +958,23 @@ class _$ScheduledStatusPollImpl implements _ScheduledStatusPoll {
       _$$ScheduledStatusPollImplFromJson(json);
 
   /// The poll options to be used.
-  final List<String> _options;
+  final List<String>? _options;
 
   /// The poll options to be used.
   @override
   @JsonKey(name: 'options[]')
-  List<String> get options {
+  List<String>? get options {
+    final value = _options;
+    if (value == null) return null;
     if (_options is EqualUnmodifiableListView) return _options;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_options);
+    return EqualUnmodifiableListView(value);
   }
 
   /// How many seconds the poll should last before closing.
   @override
   @JsonKey(name: 'expires_in')
-  final String expiresIn;
+  final String? expiresIn;
 
   /// Whether the poll allows multiple choices.
   @override
@@ -1024,8 +1031,8 @@ class _$ScheduledStatusPollImpl implements _ScheduledStatusPoll {
 
 abstract class _ScheduledStatusPoll implements ScheduledStatusPoll {
   const factory _ScheduledStatusPoll(
-          {@JsonKey(name: 'options[]') required final List<String> options,
-          @JsonKey(name: 'expires_in') required final String expiresIn,
+          {@JsonKey(name: 'options[]') final List<String>? options,
+          @JsonKey(name: 'expires_in') final String? expiresIn,
           @JsonKey(name: 'multiple') final bool? multiple,
           @JsonKey(name: 'hide_totals') final bool? hideTotals}) =
       _$ScheduledStatusPollImpl;
@@ -1037,12 +1044,12 @@ abstract class _ScheduledStatusPoll implements ScheduledStatusPoll {
 
   /// The poll options to be used.
   @JsonKey(name: 'options[]')
-  List<String> get options;
+  List<String>? get options;
   @override
 
   /// How many seconds the poll should last before closing.
   @JsonKey(name: 'expires_in')
-  String get expiresIn;
+  String? get expiresIn;
   @override
 
   /// Whether the poll allows multiple choices.

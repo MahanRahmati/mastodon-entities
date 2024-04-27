@@ -22,67 +22,67 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
 mixin _$Account {
   /// The account id.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The username of the account, not including domain.
   @JsonKey(name: 'username')
-  String get username => throw _privateConstructorUsedError;
+  String? get username => throw _privateConstructorUsedError;
 
   /// The Webfinger account URI. Equal to `username` for local users, or
   /// `username@domain` for remote users.
   @JsonKey(name: 'acct')
-  String get acct => throw _privateConstructorUsedError;
+  String? get acct => throw _privateConstructorUsedError;
 
   /// The location of the user's profile page.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// The profile's display name.
   @JsonKey(name: 'display_name')
-  String get displayName => throw _privateConstructorUsedError;
+  String? get displayName => throw _privateConstructorUsedError;
 
   /// The profile's bio or description.
   @JsonKey(name: 'note')
-  String get note => throw _privateConstructorUsedError;
+  String? get note => throw _privateConstructorUsedError;
 
   /// An image icon that is shown next to statuses and in the profile.
   @JsonKey(name: 'avatar')
-  String get avatar => throw _privateConstructorUsedError;
+  String? get avatar => throw _privateConstructorUsedError;
 
   /// A static version of the avatar. Equal to `avatar` if its value is a
   /// static image; different if `avatar` is an animated GIF.
   @JsonKey(name: 'avatar_static')
-  String get avatarStatic => throw _privateConstructorUsedError;
+  String? get avatarStatic => throw _privateConstructorUsedError;
 
   /// An image banner that is shown above the profile and in profile cards.
   @JsonKey(name: 'header')
-  String get header => throw _privateConstructorUsedError;
+  String? get header => throw _privateConstructorUsedError;
 
   /// A static version of the header. Equal to `header` if its value is a
   /// static image; different if `header` is an animated GIF.
   @JsonKey(name: 'header_static')
-  String get headerStatic => throw _privateConstructorUsedError;
+  String? get headerStatic => throw _privateConstructorUsedError;
 
   /// Whether the account manually approves follow requests.
   @JsonKey(name: 'locked')
-  bool get locked => throw _privateConstructorUsedError;
+  bool? get locked => throw _privateConstructorUsedError;
 
   /// Additional metadata attached to a profile as name-value pairs.
   @JsonKey(name: 'fields')
-  List<AccountField> get fields => throw _privateConstructorUsedError;
+  List<AccountField>? get fields => throw _privateConstructorUsedError;
 
   /// Additional metadata attached to a profile as name-value pairs.
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis => throw _privateConstructorUsedError;
+  List<CustomEmoji>? get emojis => throw _privateConstructorUsedError;
 
   /// Indicates that the account may perform automated actions, may not be
   /// monitored, or identifies as a robot.
   @JsonKey(name: 'bot')
-  bool get bot => throw _privateConstructorUsedError;
+  bool? get bot => throw _privateConstructorUsedError;
 
   /// Indicates that the account represents a Group actor.
   @JsonKey(name: 'group')
-  bool get group => throw _privateConstructorUsedError;
+  bool? get group => throw _privateConstructorUsedError;
 
   /// Whether the account has opted into discovery features such as the
   /// profile directory.
@@ -109,7 +109,7 @@ mixin _$Account {
 
   /// When the account was created.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   /// When the most recent status was posted.
   @JsonKey(name: 'last_status_at')
@@ -117,15 +117,15 @@ mixin _$Account {
 
   /// How many statuses are attached to this account.
   @JsonKey(name: 'statuses_count')
-  int get statusesCount => throw _privateConstructorUsedError;
+  int? get statusesCount => throw _privateConstructorUsedError;
 
   /// The reported followers of this profile.
   @JsonKey(name: 'followers_count')
-  int get followersCount => throw _privateConstructorUsedError;
+  int? get followersCount => throw _privateConstructorUsedError;
 
   /// The reported follows of this profile.
   @JsonKey(name: 'following_count')
-  int get followingCount => throw _privateConstructorUsedError;
+  int? get followingCount => throw _privateConstructorUsedError;
 
   /// An extra attribute that contains source values to be used with API
   /// methods that verify credentials and update credentials.
@@ -151,31 +151,31 @@ abstract class $AccountCopyWith<$Res> {
       _$AccountCopyWithImpl<$Res, Account>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'username') String username,
-      @JsonKey(name: 'acct') String acct,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'display_name') String displayName,
-      @JsonKey(name: 'note') String note,
-      @JsonKey(name: 'avatar') String avatar,
-      @JsonKey(name: 'avatar_static') String avatarStatic,
-      @JsonKey(name: 'header') String header,
-      @JsonKey(name: 'header_static') String headerStatic,
-      @JsonKey(name: 'locked') bool locked,
-      @JsonKey(name: 'fields') List<AccountField> fields,
-      @JsonKey(name: 'emojis') List<CustomEmoji> emojis,
-      @JsonKey(name: 'bot') bool bot,
-      @JsonKey(name: 'group') bool group,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'username') String? username,
+      @JsonKey(name: 'acct') String? acct,
+      @JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'display_name') String? displayName,
+      @JsonKey(name: 'note') String? note,
+      @JsonKey(name: 'avatar') String? avatar,
+      @JsonKey(name: 'avatar_static') String? avatarStatic,
+      @JsonKey(name: 'header') String? header,
+      @JsonKey(name: 'header_static') String? headerStatic,
+      @JsonKey(name: 'locked') bool? locked,
+      @JsonKey(name: 'fields') List<AccountField>? fields,
+      @JsonKey(name: 'emojis') List<CustomEmoji>? emojis,
+      @JsonKey(name: 'bot') bool? bot,
+      @JsonKey(name: 'group') bool? group,
       @JsonKey(name: 'discoverable') bool? discoverable,
       @JsonKey(name: 'noindex') bool? noindex,
       @JsonKey(name: 'moved') Account? moved,
       @JsonKey(name: 'suspended') bool? suspended,
       @JsonKey(name: 'limited') bool? limited,
-      @JsonKey(name: 'created_at') DateTime createdAt,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'last_status_at') DateTime? lastStatusAt,
-      @JsonKey(name: 'statuses_count') int statusesCount,
-      @JsonKey(name: 'followers_count') int followersCount,
-      @JsonKey(name: 'following_count') int followingCount,
+      @JsonKey(name: 'statuses_count') int? statusesCount,
+      @JsonKey(name: 'followers_count') int? followersCount,
+      @JsonKey(name: 'following_count') int? followingCount,
       @JsonKey(name: 'source') AccountSource? source,
       @JsonKey(name: 'role') Role? role,
       @JsonKey(name: 'mute_expires_at') DateTime? muteExpiresAt});
@@ -198,96 +198,96 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? username = null,
-    Object? acct = null,
-    Object? url = null,
-    Object? displayName = null,
-    Object? note = null,
-    Object? avatar = null,
-    Object? avatarStatic = null,
-    Object? header = null,
-    Object? headerStatic = null,
-    Object? locked = null,
-    Object? fields = null,
-    Object? emojis = null,
-    Object? bot = null,
-    Object? group = null,
+    Object? id = freezed,
+    Object? username = freezed,
+    Object? acct = freezed,
+    Object? url = freezed,
+    Object? displayName = freezed,
+    Object? note = freezed,
+    Object? avatar = freezed,
+    Object? avatarStatic = freezed,
+    Object? header = freezed,
+    Object? headerStatic = freezed,
+    Object? locked = freezed,
+    Object? fields = freezed,
+    Object? emojis = freezed,
+    Object? bot = freezed,
+    Object? group = freezed,
     Object? discoverable = freezed,
     Object? noindex = freezed,
     Object? moved = freezed,
     Object? suspended = freezed,
     Object? limited = freezed,
-    Object? createdAt = null,
+    Object? createdAt = freezed,
     Object? lastStatusAt = freezed,
-    Object? statusesCount = null,
-    Object? followersCount = null,
-    Object? followingCount = null,
+    Object? statusesCount = freezed,
+    Object? followersCount = freezed,
+    Object? followingCount = freezed,
     Object? source = freezed,
     Object? role = freezed,
     Object? muteExpiresAt = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
+              as String?,
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      acct: null == acct
+              as String?,
+      acct: freezed == acct
           ? _value.acct
           : acct // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayName: null == displayName
+              as String?,
+      displayName: freezed == displayName
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
-              as String,
-      note: null == note
+              as String?,
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
-              as String,
-      avatar: null == avatar
+              as String?,
+      avatar: freezed == avatar
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
-              as String,
-      avatarStatic: null == avatarStatic
+              as String?,
+      avatarStatic: freezed == avatarStatic
           ? _value.avatarStatic
           : avatarStatic // ignore: cast_nullable_to_non_nullable
-              as String,
-      header: null == header
+              as String?,
+      header: freezed == header
           ? _value.header
           : header // ignore: cast_nullable_to_non_nullable
-              as String,
-      headerStatic: null == headerStatic
+              as String?,
+      headerStatic: freezed == headerStatic
           ? _value.headerStatic
           : headerStatic // ignore: cast_nullable_to_non_nullable
-              as String,
-      locked: null == locked
+              as String?,
+      locked: freezed == locked
           ? _value.locked
           : locked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      fields: null == fields
+              as bool?,
+      fields: freezed == fields
           ? _value.fields
           : fields // ignore: cast_nullable_to_non_nullable
-              as List<AccountField>,
-      emojis: null == emojis
+              as List<AccountField>?,
+      emojis: freezed == emojis
           ? _value.emojis
           : emojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmoji>,
-      bot: null == bot
+              as List<CustomEmoji>?,
+      bot: freezed == bot
           ? _value.bot
           : bot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      group: null == group
+              as bool?,
+      group: freezed == group
           ? _value.group
           : group // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       discoverable: freezed == discoverable
           ? _value.discoverable
           : discoverable // ignore: cast_nullable_to_non_nullable
@@ -308,26 +308,26 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
           ? _value.limited
           : limited // ignore: cast_nullable_to_non_nullable
               as bool?,
-      createdAt: null == createdAt
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       lastStatusAt: freezed == lastStatusAt
           ? _value.lastStatusAt
           : lastStatusAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      statusesCount: null == statusesCount
+      statusesCount: freezed == statusesCount
           ? _value.statusesCount
           : statusesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      followersCount: null == followersCount
+              as int?,
+      followersCount: freezed == followersCount
           ? _value.followersCount
           : followersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      followingCount: null == followingCount
+              as int?,
+      followingCount: freezed == followingCount
           ? _value.followingCount
           : followingCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
@@ -388,31 +388,31 @@ abstract class _$$AccountImplCopyWith<$Res> implements $AccountCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'username') String username,
-      @JsonKey(name: 'acct') String acct,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'display_name') String displayName,
-      @JsonKey(name: 'note') String note,
-      @JsonKey(name: 'avatar') String avatar,
-      @JsonKey(name: 'avatar_static') String avatarStatic,
-      @JsonKey(name: 'header') String header,
-      @JsonKey(name: 'header_static') String headerStatic,
-      @JsonKey(name: 'locked') bool locked,
-      @JsonKey(name: 'fields') List<AccountField> fields,
-      @JsonKey(name: 'emojis') List<CustomEmoji> emojis,
-      @JsonKey(name: 'bot') bool bot,
-      @JsonKey(name: 'group') bool group,
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'username') String? username,
+      @JsonKey(name: 'acct') String? acct,
+      @JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'display_name') String? displayName,
+      @JsonKey(name: 'note') String? note,
+      @JsonKey(name: 'avatar') String? avatar,
+      @JsonKey(name: 'avatar_static') String? avatarStatic,
+      @JsonKey(name: 'header') String? header,
+      @JsonKey(name: 'header_static') String? headerStatic,
+      @JsonKey(name: 'locked') bool? locked,
+      @JsonKey(name: 'fields') List<AccountField>? fields,
+      @JsonKey(name: 'emojis') List<CustomEmoji>? emojis,
+      @JsonKey(name: 'bot') bool? bot,
+      @JsonKey(name: 'group') bool? group,
       @JsonKey(name: 'discoverable') bool? discoverable,
       @JsonKey(name: 'noindex') bool? noindex,
       @JsonKey(name: 'moved') Account? moved,
       @JsonKey(name: 'suspended') bool? suspended,
       @JsonKey(name: 'limited') bool? limited,
-      @JsonKey(name: 'created_at') DateTime createdAt,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'last_status_at') DateTime? lastStatusAt,
-      @JsonKey(name: 'statuses_count') int statusesCount,
-      @JsonKey(name: 'followers_count') int followersCount,
-      @JsonKey(name: 'following_count') int followingCount,
+      @JsonKey(name: 'statuses_count') int? statusesCount,
+      @JsonKey(name: 'followers_count') int? followersCount,
+      @JsonKey(name: 'following_count') int? followingCount,
       @JsonKey(name: 'source') AccountSource? source,
       @JsonKey(name: 'role') Role? role,
       @JsonKey(name: 'mute_expires_at') DateTime? muteExpiresAt});
@@ -436,96 +436,96 @@ class __$$AccountImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? username = null,
-    Object? acct = null,
-    Object? url = null,
-    Object? displayName = null,
-    Object? note = null,
-    Object? avatar = null,
-    Object? avatarStatic = null,
-    Object? header = null,
-    Object? headerStatic = null,
-    Object? locked = null,
-    Object? fields = null,
-    Object? emojis = null,
-    Object? bot = null,
-    Object? group = null,
+    Object? id = freezed,
+    Object? username = freezed,
+    Object? acct = freezed,
+    Object? url = freezed,
+    Object? displayName = freezed,
+    Object? note = freezed,
+    Object? avatar = freezed,
+    Object? avatarStatic = freezed,
+    Object? header = freezed,
+    Object? headerStatic = freezed,
+    Object? locked = freezed,
+    Object? fields = freezed,
+    Object? emojis = freezed,
+    Object? bot = freezed,
+    Object? group = freezed,
     Object? discoverable = freezed,
     Object? noindex = freezed,
     Object? moved = freezed,
     Object? suspended = freezed,
     Object? limited = freezed,
-    Object? createdAt = null,
+    Object? createdAt = freezed,
     Object? lastStatusAt = freezed,
-    Object? statusesCount = null,
-    Object? followersCount = null,
-    Object? followingCount = null,
+    Object? statusesCount = freezed,
+    Object? followersCount = freezed,
+    Object? followingCount = freezed,
     Object? source = freezed,
     Object? role = freezed,
     Object? muteExpiresAt = freezed,
   }) {
     return _then(_$AccountImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
+              as String?,
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      acct: null == acct
+              as String?,
+      acct: freezed == acct
           ? _value.acct
           : acct // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayName: null == displayName
+              as String?,
+      displayName: freezed == displayName
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
-              as String,
-      note: null == note
+              as String?,
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
-              as String,
-      avatar: null == avatar
+              as String?,
+      avatar: freezed == avatar
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
-              as String,
-      avatarStatic: null == avatarStatic
+              as String?,
+      avatarStatic: freezed == avatarStatic
           ? _value.avatarStatic
           : avatarStatic // ignore: cast_nullable_to_non_nullable
-              as String,
-      header: null == header
+              as String?,
+      header: freezed == header
           ? _value.header
           : header // ignore: cast_nullable_to_non_nullable
-              as String,
-      headerStatic: null == headerStatic
+              as String?,
+      headerStatic: freezed == headerStatic
           ? _value.headerStatic
           : headerStatic // ignore: cast_nullable_to_non_nullable
-              as String,
-      locked: null == locked
+              as String?,
+      locked: freezed == locked
           ? _value.locked
           : locked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      fields: null == fields
+              as bool?,
+      fields: freezed == fields
           ? _value._fields
           : fields // ignore: cast_nullable_to_non_nullable
-              as List<AccountField>,
-      emojis: null == emojis
+              as List<AccountField>?,
+      emojis: freezed == emojis
           ? _value._emojis
           : emojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmoji>,
-      bot: null == bot
+              as List<CustomEmoji>?,
+      bot: freezed == bot
           ? _value.bot
           : bot // ignore: cast_nullable_to_non_nullable
-              as bool,
-      group: null == group
+              as bool?,
+      group: freezed == group
           ? _value.group
           : group // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       discoverable: freezed == discoverable
           ? _value.discoverable
           : discoverable // ignore: cast_nullable_to_non_nullable
@@ -546,26 +546,26 @@ class __$$AccountImplCopyWithImpl<$Res>
           ? _value.limited
           : limited // ignore: cast_nullable_to_non_nullable
               as bool?,
-      createdAt: null == createdAt
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       lastStatusAt: freezed == lastStatusAt
           ? _value.lastStatusAt
           : lastStatusAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      statusesCount: null == statusesCount
+      statusesCount: freezed == statusesCount
           ? _value.statusesCount
           : statusesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      followersCount: null == followersCount
+              as int?,
+      followersCount: freezed == followersCount
           ? _value.followersCount
           : followersCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      followingCount: null == followingCount
+              as int?,
+      followingCount: freezed == followingCount
           ? _value.followingCount
           : followingCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
@@ -586,31 +586,31 @@ class __$$AccountImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AccountImpl implements _Account {
   const _$AccountImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'username') required this.username,
-      @JsonKey(name: 'acct') required this.acct,
-      @JsonKey(name: 'url') required this.url,
-      @JsonKey(name: 'display_name') required this.displayName,
-      @JsonKey(name: 'note') required this.note,
-      @JsonKey(name: 'avatar') required this.avatar,
-      @JsonKey(name: 'avatar_static') required this.avatarStatic,
-      @JsonKey(name: 'header') required this.header,
-      @JsonKey(name: 'header_static') required this.headerStatic,
-      @JsonKey(name: 'locked') required this.locked,
-      @JsonKey(name: 'fields') required final List<AccountField> fields,
-      @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
-      @JsonKey(name: 'bot') required this.bot,
-      @JsonKey(name: 'group') required this.group,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'username') this.username,
+      @JsonKey(name: 'acct') this.acct,
+      @JsonKey(name: 'url') this.url,
+      @JsonKey(name: 'display_name') this.displayName,
+      @JsonKey(name: 'note') this.note,
+      @JsonKey(name: 'avatar') this.avatar,
+      @JsonKey(name: 'avatar_static') this.avatarStatic,
+      @JsonKey(name: 'header') this.header,
+      @JsonKey(name: 'header_static') this.headerStatic,
+      @JsonKey(name: 'locked') this.locked,
+      @JsonKey(name: 'fields') final List<AccountField>? fields,
+      @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
+      @JsonKey(name: 'bot') this.bot,
+      @JsonKey(name: 'group') this.group,
       @JsonKey(name: 'discoverable') this.discoverable,
       @JsonKey(name: 'noindex') this.noindex,
       @JsonKey(name: 'moved') this.moved,
       @JsonKey(name: 'suspended') this.suspended,
       @JsonKey(name: 'limited') this.limited,
-      @JsonKey(name: 'created_at') required this.createdAt,
+      @JsonKey(name: 'created_at') this.createdAt,
       @JsonKey(name: 'last_status_at') this.lastStatusAt,
-      @JsonKey(name: 'statuses_count') required this.statusesCount,
-      @JsonKey(name: 'followers_count') required this.followersCount,
-      @JsonKey(name: 'following_count') required this.followingCount,
+      @JsonKey(name: 'statuses_count') this.statusesCount,
+      @JsonKey(name: 'followers_count') this.followersCount,
+      @JsonKey(name: 'following_count') this.followingCount,
       @JsonKey(name: 'source') this.source,
       @JsonKey(name: 'role') this.role,
       @JsonKey(name: 'mute_expires_at') this.muteExpiresAt})
@@ -623,95 +623,99 @@ class _$AccountImpl implements _Account {
   /// The account id.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The username of the account, not including domain.
   @override
   @JsonKey(name: 'username')
-  final String username;
+  final String? username;
 
   /// The Webfinger account URI. Equal to `username` for local users, or
   /// `username@domain` for remote users.
   @override
   @JsonKey(name: 'acct')
-  final String acct;
+  final String? acct;
 
   /// The location of the user's profile page.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   /// The profile's display name.
   @override
   @JsonKey(name: 'display_name')
-  final String displayName;
+  final String? displayName;
 
   /// The profile's bio or description.
   @override
   @JsonKey(name: 'note')
-  final String note;
+  final String? note;
 
   /// An image icon that is shown next to statuses and in the profile.
   @override
   @JsonKey(name: 'avatar')
-  final String avatar;
+  final String? avatar;
 
   /// A static version of the avatar. Equal to `avatar` if its value is a
   /// static image; different if `avatar` is an animated GIF.
   @override
   @JsonKey(name: 'avatar_static')
-  final String avatarStatic;
+  final String? avatarStatic;
 
   /// An image banner that is shown above the profile and in profile cards.
   @override
   @JsonKey(name: 'header')
-  final String header;
+  final String? header;
 
   /// A static version of the header. Equal to `header` if its value is a
   /// static image; different if `header` is an animated GIF.
   @override
   @JsonKey(name: 'header_static')
-  final String headerStatic;
+  final String? headerStatic;
 
   /// Whether the account manually approves follow requests.
   @override
   @JsonKey(name: 'locked')
-  final bool locked;
+  final bool? locked;
 
   /// Additional metadata attached to a profile as name-value pairs.
-  final List<AccountField> _fields;
+  final List<AccountField>? _fields;
 
   /// Additional metadata attached to a profile as name-value pairs.
   @override
   @JsonKey(name: 'fields')
-  List<AccountField> get fields {
+  List<AccountField>? get fields {
+    final value = _fields;
+    if (value == null) return null;
     if (_fields is EqualUnmodifiableListView) return _fields;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_fields);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Additional metadata attached to a profile as name-value pairs.
-  final List<CustomEmoji> _emojis;
+  final List<CustomEmoji>? _emojis;
 
   /// Additional metadata attached to a profile as name-value pairs.
   @override
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis {
+  List<CustomEmoji>? get emojis {
+    final value = _emojis;
+    if (value == null) return null;
     if (_emojis is EqualUnmodifiableListView) return _emojis;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_emojis);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Indicates that the account may perform automated actions, may not be
   /// monitored, or identifies as a robot.
   @override
   @JsonKey(name: 'bot')
-  final bool bot;
+  final bool? bot;
 
   /// Indicates that the account represents a Group actor.
   @override
   @JsonKey(name: 'group')
-  final bool group;
+  final bool? group;
 
   /// Whether the account has opted into discovery features such as the
   /// profile directory.
@@ -744,7 +748,7 @@ class _$AccountImpl implements _Account {
   /// When the account was created.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   /// When the most recent status was posted.
   @override
@@ -754,17 +758,17 @@ class _$AccountImpl implements _Account {
   /// How many statuses are attached to this account.
   @override
   @JsonKey(name: 'statuses_count')
-  final int statusesCount;
+  final int? statusesCount;
 
   /// The reported followers of this profile.
   @override
   @JsonKey(name: 'followers_count')
-  final int followersCount;
+  final int? followersCount;
 
   /// The reported follows of this profile.
   @override
   @JsonKey(name: 'following_count')
-  final int followingCount;
+  final int? followingCount;
 
   /// An extra attribute that contains source values to be used with API
   /// methods that verify credentials and update credentials.
@@ -884,31 +888,31 @@ class _$AccountImpl implements _Account {
 
 abstract class _Account implements Account {
   const factory _Account(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'username') required final String username,
-          @JsonKey(name: 'acct') required final String acct,
-          @JsonKey(name: 'url') required final String url,
-          @JsonKey(name: 'display_name') required final String displayName,
-          @JsonKey(name: 'note') required final String note,
-          @JsonKey(name: 'avatar') required final String avatar,
-          @JsonKey(name: 'avatar_static') required final String avatarStatic,
-          @JsonKey(name: 'header') required final String header,
-          @JsonKey(name: 'header_static') required final String headerStatic,
-          @JsonKey(name: 'locked') required final bool locked,
-          @JsonKey(name: 'fields') required final List<AccountField> fields,
-          @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
-          @JsonKey(name: 'bot') required final bool bot,
-          @JsonKey(name: 'group') required final bool group,
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'username') final String? username,
+          @JsonKey(name: 'acct') final String? acct,
+          @JsonKey(name: 'url') final String? url,
+          @JsonKey(name: 'display_name') final String? displayName,
+          @JsonKey(name: 'note') final String? note,
+          @JsonKey(name: 'avatar') final String? avatar,
+          @JsonKey(name: 'avatar_static') final String? avatarStatic,
+          @JsonKey(name: 'header') final String? header,
+          @JsonKey(name: 'header_static') final String? headerStatic,
+          @JsonKey(name: 'locked') final bool? locked,
+          @JsonKey(name: 'fields') final List<AccountField>? fields,
+          @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
+          @JsonKey(name: 'bot') final bool? bot,
+          @JsonKey(name: 'group') final bool? group,
           @JsonKey(name: 'discoverable') final bool? discoverable,
           @JsonKey(name: 'noindex') final bool? noindex,
           @JsonKey(name: 'moved') final Account? moved,
           @JsonKey(name: 'suspended') final bool? suspended,
           @JsonKey(name: 'limited') final bool? limited,
-          @JsonKey(name: 'created_at') required final DateTime createdAt,
+          @JsonKey(name: 'created_at') final DateTime? createdAt,
           @JsonKey(name: 'last_status_at') final DateTime? lastStatusAt,
-          @JsonKey(name: 'statuses_count') required final int statusesCount,
-          @JsonKey(name: 'followers_count') required final int followersCount,
-          @JsonKey(name: 'following_count') required final int followingCount,
+          @JsonKey(name: 'statuses_count') final int? statusesCount,
+          @JsonKey(name: 'followers_count') final int? followersCount,
+          @JsonKey(name: 'following_count') final int? followingCount,
           @JsonKey(name: 'source') final AccountSource? source,
           @JsonKey(name: 'role') final Role? role,
           @JsonKey(name: 'mute_expires_at') final DateTime? muteExpiresAt}) =
@@ -920,81 +924,81 @@ abstract class _Account implements Account {
 
   /// The account id.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The username of the account, not including domain.
   @JsonKey(name: 'username')
-  String get username;
+  String? get username;
   @override
 
   /// The Webfinger account URI. Equal to `username` for local users, or
   /// `username@domain` for remote users.
   @JsonKey(name: 'acct')
-  String get acct;
+  String? get acct;
   @override
 
   /// The location of the user's profile page.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
 
   /// The profile's display name.
   @JsonKey(name: 'display_name')
-  String get displayName;
+  String? get displayName;
   @override
 
   /// The profile's bio or description.
   @JsonKey(name: 'note')
-  String get note;
+  String? get note;
   @override
 
   /// An image icon that is shown next to statuses and in the profile.
   @JsonKey(name: 'avatar')
-  String get avatar;
+  String? get avatar;
   @override
 
   /// A static version of the avatar. Equal to `avatar` if its value is a
   /// static image; different if `avatar` is an animated GIF.
   @JsonKey(name: 'avatar_static')
-  String get avatarStatic;
+  String? get avatarStatic;
   @override
 
   /// An image banner that is shown above the profile and in profile cards.
   @JsonKey(name: 'header')
-  String get header;
+  String? get header;
   @override
 
   /// A static version of the header. Equal to `header` if its value is a
   /// static image; different if `header` is an animated GIF.
   @JsonKey(name: 'header_static')
-  String get headerStatic;
+  String? get headerStatic;
   @override
 
   /// Whether the account manually approves follow requests.
   @JsonKey(name: 'locked')
-  bool get locked;
+  bool? get locked;
   @override
 
   /// Additional metadata attached to a profile as name-value pairs.
   @JsonKey(name: 'fields')
-  List<AccountField> get fields;
+  List<AccountField>? get fields;
   @override
 
   /// Additional metadata attached to a profile as name-value pairs.
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis;
+  List<CustomEmoji>? get emojis;
   @override
 
   /// Indicates that the account may perform automated actions, may not be
   /// monitored, or identifies as a robot.
   @JsonKey(name: 'bot')
-  bool get bot;
+  bool? get bot;
   @override
 
   /// Indicates that the account represents a Group actor.
   @JsonKey(name: 'group')
-  bool get group;
+  bool? get group;
   @override
 
   /// Whether the account has opted into discovery features such as the
@@ -1027,7 +1031,7 @@ abstract class _Account implements Account {
 
   /// When the account was created.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
 
   /// When the most recent status was posted.
@@ -1037,17 +1041,17 @@ abstract class _Account implements Account {
 
   /// How many statuses are attached to this account.
   @JsonKey(name: 'statuses_count')
-  int get statusesCount;
+  int? get statusesCount;
   @override
 
   /// The reported followers of this profile.
   @JsonKey(name: 'followers_count')
-  int get followersCount;
+  int? get followersCount;
   @override
 
   /// The reported follows of this profile.
   @JsonKey(name: 'following_count')
-  int get followingCount;
+  int? get followingCount;
   @override
 
   /// An extra attribute that contains source values to be used with API
@@ -1078,11 +1082,11 @@ AccountField _$AccountFieldFromJson(Map<String, dynamic> json) {
 mixin _$AccountField {
   /// The key of a given field's key-value pair.
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   /// The value associated with the `name` key.
   @JsonKey(name: 'value')
-  String get value => throw _privateConstructorUsedError;
+  String? get value => throw _privateConstructorUsedError;
 
   /// Timestamp of when the server verified a URL value for a rel=“me” link.
   @JsonKey(name: 'verified_at')
@@ -1101,8 +1105,8 @@ abstract class $AccountFieldCopyWith<$Res> {
       _$AccountFieldCopyWithImpl<$Res, AccountField>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'value') String value,
+      {@JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'value') String? value,
       @JsonKey(name: 'verified_at') DateTime? verifiedAt});
 }
 
@@ -1119,19 +1123,19 @@ class _$AccountFieldCopyWithImpl<$Res, $Val extends AccountField>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? value = null,
+    Object? name = freezed,
+    Object? value = freezed,
     Object? verifiedAt = freezed,
   }) {
     return _then(_value.copyWith(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: null == value
+              as String?,
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       verifiedAt: freezed == verifiedAt
           ? _value.verifiedAt
           : verifiedAt // ignore: cast_nullable_to_non_nullable
@@ -1149,8 +1153,8 @@ abstract class _$$AccountFieldImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'value') String value,
+      {@JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'value') String? value,
       @JsonKey(name: 'verified_at') DateTime? verifiedAt});
 }
 
@@ -1165,19 +1169,19 @@ class __$$AccountFieldImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? value = null,
+    Object? name = freezed,
+    Object? value = freezed,
     Object? verifiedAt = freezed,
   }) {
     return _then(_$AccountFieldImpl(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: null == value
+              as String?,
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       verifiedAt: freezed == verifiedAt
           ? _value.verifiedAt
           : verifiedAt // ignore: cast_nullable_to_non_nullable
@@ -1190,8 +1194,8 @@ class __$$AccountFieldImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AccountFieldImpl implements _AccountField {
   const _$AccountFieldImpl(
-      {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'value') required this.value,
+      {@JsonKey(name: 'name') this.name,
+      @JsonKey(name: 'value') this.value,
       @JsonKey(name: 'verified_at') this.verifiedAt});
 
   factory _$AccountFieldImpl.fromJson(Map<String, dynamic> json) =>
@@ -1200,12 +1204,12 @@ class _$AccountFieldImpl implements _AccountField {
   /// The key of a given field's key-value pair.
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
 
   /// The value associated with the `name` key.
   @override
   @JsonKey(name: 'value')
-  final String value;
+  final String? value;
 
   /// Timestamp of when the server verified a URL value for a rel=“me” link.
   @override
@@ -1248,8 +1252,8 @@ class _$AccountFieldImpl implements _AccountField {
 
 abstract class _AccountField implements AccountField {
   const factory _AccountField(
-          {@JsonKey(name: 'name') required final String name,
-          @JsonKey(name: 'value') required final String value,
+          {@JsonKey(name: 'name') final String? name,
+          @JsonKey(name: 'value') final String? value,
           @JsonKey(name: 'verified_at') final DateTime? verifiedAt}) =
       _$AccountFieldImpl;
 
@@ -1260,12 +1264,12 @@ abstract class _AccountField implements AccountField {
 
   /// The key of a given field's key-value pair.
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
 
   /// The value associated with the `name` key.
   @JsonKey(name: 'value')
-  String get value;
+  String? get value;
   @override
 
   /// Timestamp of when the server verified a URL value for a rel=“me” link.
@@ -1285,34 +1289,34 @@ AccountSource _$AccountSourceFromJson(Map<String, dynamic> json) {
 mixin _$AccountSource {
   /// Profile bio, in plain-text instead of in HTML.
   @JsonKey(name: 'note')
-  String get note => throw _privateConstructorUsedError;
+  String? get note => throw _privateConstructorUsedError;
 
   /// Metadata about the account.
   @JsonKey(name: 'fields')
-  List<AccountField> get fields => throw _privateConstructorUsedError;
+  List<AccountField>? get fields => throw _privateConstructorUsedError;
 
   /// The default post privacy to be used for new statuses.
   @JsonKey(name: 'privacy')
-  StatusVisibility get privacy => throw _privateConstructorUsedError;
+  StatusVisibility? get privacy => throw _privateConstructorUsedError;
 
   /// Whether new statuses should be marked sensitive by default.
   @JsonKey(name: 'sensitive')
-  bool get sensitive => throw _privateConstructorUsedError;
+  bool? get sensitive => throw _privateConstructorUsedError;
 
   /// The default posting language for new statuses.
   @JsonKey(name: 'language')
-  String get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// The number of pending follow requests.
   @JsonKey(name: 'follow_requests_count')
-  int get followRequestsCount => throw _privateConstructorUsedError;
+  int? get followRequestsCount => throw _privateConstructorUsedError;
 
   /// The role assigned to the currently authorized user.
   @JsonKey(name: 'role')
-  Role get role =>
+  Role? get role =>
       throw _privateConstructorUsedError; // TODO(E): Add description.
   @JsonKey(name: 'indexable')
-  bool get indexable => throw _privateConstructorUsedError;
+  bool? get indexable => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1327,16 +1331,16 @@ abstract class $AccountSourceCopyWith<$Res> {
       _$AccountSourceCopyWithImpl<$Res, AccountSource>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'note') String note,
-      @JsonKey(name: 'fields') List<AccountField> fields,
-      @JsonKey(name: 'privacy') StatusVisibility privacy,
-      @JsonKey(name: 'sensitive') bool sensitive,
-      @JsonKey(name: 'language') String language,
-      @JsonKey(name: 'follow_requests_count') int followRequestsCount,
-      @JsonKey(name: 'role') Role role,
-      @JsonKey(name: 'indexable') bool indexable});
+      {@JsonKey(name: 'note') String? note,
+      @JsonKey(name: 'fields') List<AccountField>? fields,
+      @JsonKey(name: 'privacy') StatusVisibility? privacy,
+      @JsonKey(name: 'sensitive') bool? sensitive,
+      @JsonKey(name: 'language') String? language,
+      @JsonKey(name: 'follow_requests_count') int? followRequestsCount,
+      @JsonKey(name: 'role') Role? role,
+      @JsonKey(name: 'indexable') bool? indexable});
 
-  $RoleCopyWith<$Res> get role;
+  $RoleCopyWith<$Res>? get role;
 }
 
 /// @nodoc
@@ -1352,55 +1356,59 @@ class _$AccountSourceCopyWithImpl<$Res, $Val extends AccountSource>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? note = null,
-    Object? fields = null,
-    Object? privacy = null,
-    Object? sensitive = null,
-    Object? language = null,
-    Object? followRequestsCount = null,
-    Object? role = null,
-    Object? indexable = null,
+    Object? note = freezed,
+    Object? fields = freezed,
+    Object? privacy = freezed,
+    Object? sensitive = freezed,
+    Object? language = freezed,
+    Object? followRequestsCount = freezed,
+    Object? role = freezed,
+    Object? indexable = freezed,
   }) {
     return _then(_value.copyWith(
-      note: null == note
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
-              as String,
-      fields: null == fields
+              as String?,
+      fields: freezed == fields
           ? _value.fields
           : fields // ignore: cast_nullable_to_non_nullable
-              as List<AccountField>,
-      privacy: null == privacy
+              as List<AccountField>?,
+      privacy: freezed == privacy
           ? _value.privacy
           : privacy // ignore: cast_nullable_to_non_nullable
-              as StatusVisibility,
-      sensitive: null == sensitive
+              as StatusVisibility?,
+      sensitive: freezed == sensitive
           ? _value.sensitive
           : sensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      language: null == language
+              as bool?,
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as String,
-      followRequestsCount: null == followRequestsCount
+              as String?,
+      followRequestsCount: freezed == followRequestsCount
           ? _value.followRequestsCount
           : followRequestsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      role: null == role
+              as int?,
+      role: freezed == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as Role,
-      indexable: null == indexable
+              as Role?,
+      indexable: freezed == indexable
           ? _value.indexable
           : indexable // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $RoleCopyWith<$Res> get role {
-    return $RoleCopyWith<$Res>(_value.role, (value) {
+  $RoleCopyWith<$Res>? get role {
+    if (_value.role == null) {
+      return null;
+    }
+
+    return $RoleCopyWith<$Res>(_value.role!, (value) {
       return _then(_value.copyWith(role: value) as $Val);
     });
   }
@@ -1415,17 +1423,17 @@ abstract class _$$AccountSourceImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'note') String note,
-      @JsonKey(name: 'fields') List<AccountField> fields,
-      @JsonKey(name: 'privacy') StatusVisibility privacy,
-      @JsonKey(name: 'sensitive') bool sensitive,
-      @JsonKey(name: 'language') String language,
-      @JsonKey(name: 'follow_requests_count') int followRequestsCount,
-      @JsonKey(name: 'role') Role role,
-      @JsonKey(name: 'indexable') bool indexable});
+      {@JsonKey(name: 'note') String? note,
+      @JsonKey(name: 'fields') List<AccountField>? fields,
+      @JsonKey(name: 'privacy') StatusVisibility? privacy,
+      @JsonKey(name: 'sensitive') bool? sensitive,
+      @JsonKey(name: 'language') String? language,
+      @JsonKey(name: 'follow_requests_count') int? followRequestsCount,
+      @JsonKey(name: 'role') Role? role,
+      @JsonKey(name: 'indexable') bool? indexable});
 
   @override
-  $RoleCopyWith<$Res> get role;
+  $RoleCopyWith<$Res>? get role;
 }
 
 /// @nodoc
@@ -1439,48 +1447,48 @@ class __$$AccountSourceImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? note = null,
-    Object? fields = null,
-    Object? privacy = null,
-    Object? sensitive = null,
-    Object? language = null,
-    Object? followRequestsCount = null,
-    Object? role = null,
-    Object? indexable = null,
+    Object? note = freezed,
+    Object? fields = freezed,
+    Object? privacy = freezed,
+    Object? sensitive = freezed,
+    Object? language = freezed,
+    Object? followRequestsCount = freezed,
+    Object? role = freezed,
+    Object? indexable = freezed,
   }) {
     return _then(_$AccountSourceImpl(
-      note: null == note
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
-              as String,
-      fields: null == fields
+              as String?,
+      fields: freezed == fields
           ? _value._fields
           : fields // ignore: cast_nullable_to_non_nullable
-              as List<AccountField>,
-      privacy: null == privacy
+              as List<AccountField>?,
+      privacy: freezed == privacy
           ? _value.privacy
           : privacy // ignore: cast_nullable_to_non_nullable
-              as StatusVisibility,
-      sensitive: null == sensitive
+              as StatusVisibility?,
+      sensitive: freezed == sensitive
           ? _value.sensitive
           : sensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      language: null == language
+              as bool?,
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as String,
-      followRequestsCount: null == followRequestsCount
+              as String?,
+      followRequestsCount: freezed == followRequestsCount
           ? _value.followRequestsCount
           : followRequestsCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      role: null == role
+              as int?,
+      role: freezed == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as Role,
-      indexable: null == indexable
+              as Role?,
+      indexable: freezed == indexable
           ? _value.indexable
           : indexable // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -1489,14 +1497,14 @@ class __$$AccountSourceImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AccountSourceImpl implements _AccountSource {
   const _$AccountSourceImpl(
-      {@JsonKey(name: 'note') required this.note,
-      @JsonKey(name: 'fields') required final List<AccountField> fields,
-      @JsonKey(name: 'privacy') required this.privacy,
-      @JsonKey(name: 'sensitive') required this.sensitive,
-      @JsonKey(name: 'language') required this.language,
-      @JsonKey(name: 'follow_requests_count') required this.followRequestsCount,
-      @JsonKey(name: 'role') required this.role,
-      @JsonKey(name: 'indexable') required this.indexable})
+      {@JsonKey(name: 'note') this.note,
+      @JsonKey(name: 'fields') final List<AccountField>? fields,
+      @JsonKey(name: 'privacy') this.privacy,
+      @JsonKey(name: 'sensitive') this.sensitive,
+      @JsonKey(name: 'language') this.language,
+      @JsonKey(name: 'follow_requests_count') this.followRequestsCount,
+      @JsonKey(name: 'role') this.role,
+      @JsonKey(name: 'indexable') this.indexable})
       : _fields = fields;
 
   factory _$AccountSourceImpl.fromJson(Map<String, dynamic> json) =>
@@ -1505,48 +1513,50 @@ class _$AccountSourceImpl implements _AccountSource {
   /// Profile bio, in plain-text instead of in HTML.
   @override
   @JsonKey(name: 'note')
-  final String note;
+  final String? note;
 
   /// Metadata about the account.
-  final List<AccountField> _fields;
+  final List<AccountField>? _fields;
 
   /// Metadata about the account.
   @override
   @JsonKey(name: 'fields')
-  List<AccountField> get fields {
+  List<AccountField>? get fields {
+    final value = _fields;
+    if (value == null) return null;
     if (_fields is EqualUnmodifiableListView) return _fields;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_fields);
+    return EqualUnmodifiableListView(value);
   }
 
   /// The default post privacy to be used for new statuses.
   @override
   @JsonKey(name: 'privacy')
-  final StatusVisibility privacy;
+  final StatusVisibility? privacy;
 
   /// Whether new statuses should be marked sensitive by default.
   @override
   @JsonKey(name: 'sensitive')
-  final bool sensitive;
+  final bool? sensitive;
 
   /// The default posting language for new statuses.
   @override
   @JsonKey(name: 'language')
-  final String language;
+  final String? language;
 
   /// The number of pending follow requests.
   @override
   @JsonKey(name: 'follow_requests_count')
-  final int followRequestsCount;
+  final int? followRequestsCount;
 
   /// The role assigned to the currently authorized user.
   @override
   @JsonKey(name: 'role')
-  final Role role;
+  final Role? role;
 // TODO(E): Add description.
   @override
   @JsonKey(name: 'indexable')
-  final bool indexable;
+  final bool? indexable;
 
   @override
   String toString() {
@@ -1601,16 +1611,14 @@ class _$AccountSourceImpl implements _AccountSource {
 
 abstract class _AccountSource implements AccountSource {
   const factory _AccountSource(
-          {@JsonKey(name: 'note') required final String note,
-          @JsonKey(name: 'fields') required final List<AccountField> fields,
-          @JsonKey(name: 'privacy') required final StatusVisibility privacy,
-          @JsonKey(name: 'sensitive') required final bool sensitive,
-          @JsonKey(name: 'language') required final String language,
-          @JsonKey(name: 'follow_requests_count')
-          required final int followRequestsCount,
-          @JsonKey(name: 'role') required final Role role,
-          @JsonKey(name: 'indexable') required final bool indexable}) =
-      _$AccountSourceImpl;
+      {@JsonKey(name: 'note') final String? note,
+      @JsonKey(name: 'fields') final List<AccountField>? fields,
+      @JsonKey(name: 'privacy') final StatusVisibility? privacy,
+      @JsonKey(name: 'sensitive') final bool? sensitive,
+      @JsonKey(name: 'language') final String? language,
+      @JsonKey(name: 'follow_requests_count') final int? followRequestsCount,
+      @JsonKey(name: 'role') final Role? role,
+      @JsonKey(name: 'indexable') final bool? indexable}) = _$AccountSourceImpl;
 
   factory _AccountSource.fromJson(Map<String, dynamic> json) =
       _$AccountSourceImpl.fromJson;
@@ -1619,40 +1627,40 @@ abstract class _AccountSource implements AccountSource {
 
   /// Profile bio, in plain-text instead of in HTML.
   @JsonKey(name: 'note')
-  String get note;
+  String? get note;
   @override
 
   /// Metadata about the account.
   @JsonKey(name: 'fields')
-  List<AccountField> get fields;
+  List<AccountField>? get fields;
   @override
 
   /// The default post privacy to be used for new statuses.
   @JsonKey(name: 'privacy')
-  StatusVisibility get privacy;
+  StatusVisibility? get privacy;
   @override
 
   /// Whether new statuses should be marked sensitive by default.
   @JsonKey(name: 'sensitive')
-  bool get sensitive;
+  bool? get sensitive;
   @override
 
   /// The default posting language for new statuses.
   @JsonKey(name: 'language')
-  String get language;
+  String? get language;
   @override
 
   /// The number of pending follow requests.
   @JsonKey(name: 'follow_requests_count')
-  int get followRequestsCount;
+  int? get followRequestsCount;
   @override
 
   /// The role assigned to the currently authorized user.
   @JsonKey(name: 'role')
-  Role get role;
+  Role? get role;
   @override // TODO(E): Add description.
   @JsonKey(name: 'indexable')
-  bool get indexable;
+  bool? get indexable;
   @override
   @JsonKey(ignore: true)
   _$$AccountSourceImplCopyWith<_$AccountSourceImpl> get copyWith =>

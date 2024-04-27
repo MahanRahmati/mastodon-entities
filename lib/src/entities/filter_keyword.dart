@@ -9,14 +9,14 @@ part 'filter_keyword.g.dart';
 class FilterKeyword with _$FilterKeyword {
   const factory FilterKeyword({
     /// The ID of the FilterKeyword in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The phrase to be matched against.
-    @JsonKey(name: 'keyword') required final String keyword,
+    @JsonKey(name: 'keyword') final String? keyword,
 
     /// Should the filter consider word boundaries? See implementation
     /// guidelines for filters.
-    @JsonKey(name: 'whole_word') required final bool wholeWord,
+    @JsonKey(name: 'whole_word') final bool? wholeWord,
   }) = _FilterKeyword;
 
   factory FilterKeyword.fromJson(final Map<String, dynamic> json) =>

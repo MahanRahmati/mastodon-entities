@@ -9,7 +9,7 @@ part 'application.g.dart';
 class Application with _$Application {
   const factory Application({
     /// The name of your application.
-    @JsonKey(name: 'name') required final String name,
+    @JsonKey(name: 'name') final String? name,
 
     /// The website associated with your application.
     @JsonKey(name: 'website') final String? website,

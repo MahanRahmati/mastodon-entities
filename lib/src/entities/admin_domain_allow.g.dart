@@ -9,9 +9,11 @@ part of 'admin_domain_allow.dart';
 _$AdminDomainAllowImpl _$$AdminDomainAllowImplFromJson(
         Map<String, dynamic> json) =>
     _$AdminDomainAllowImpl(
-      id: json['id'] as String,
-      domain: json['domain'] as String,
-      createdAt: DateTime.parse(json['created_at'] as String),
+      id: json['id'] as String?,
+      domain: json['domain'] as String?,
+      createdAt: json['created_at'] == null
+          ? null
+          : DateTime.parse(json['created_at'] as String),
     );
 
 Map<String, dynamic> _$$AdminDomainAllowImplToJson(
@@ -19,5 +21,5 @@ Map<String, dynamic> _$$AdminDomainAllowImplToJson(
     <String, dynamic>{
       'id': instance.id,
       'domain': instance.domain,
-      'created_at': instance.createdAt.toIso8601String(),
+      'created_at': instance.createdAt?.toIso8601String(),
     };

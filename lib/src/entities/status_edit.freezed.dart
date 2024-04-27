@@ -22,23 +22,23 @@ StatusEdit _$StatusEditFromJson(Map<String, dynamic> json) {
 mixin _$StatusEdit {
   /// The content of the status at this revision.
   @JsonKey(name: 'content')
-  String get content => throw _privateConstructorUsedError;
+  String? get content => throw _privateConstructorUsedError;
 
   /// The content of the subject or content warning at this revision.
   @JsonKey(name: 'spoiler_text')
-  String get spoilerText => throw _privateConstructorUsedError;
+  String? get spoilerText => throw _privateConstructorUsedError;
 
   /// Whether the status was marked sensitive at this revision.
   @JsonKey(name: 'sensitive')
-  bool get sensitive => throw _privateConstructorUsedError;
+  bool? get sensitive => throw _privateConstructorUsedError;
 
   /// The timestamp of when the revision was published.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   /// The account that published this revision.
   @JsonKey(name: 'account')
-  Account get account => throw _privateConstructorUsedError;
+  Account? get account => throw _privateConstructorUsedError;
 
   /// The current state of the poll options at this revision. Note that edits
   /// changing the poll options will be collapsed together into one edit,
@@ -48,12 +48,12 @@ mixin _$StatusEdit {
 
   /// The current state of the media attachments at this revision.
   @JsonKey(name: 'media_attachments')
-  List<MediaAttachment> get mediaAttachments =>
+  List<MediaAttachment>? get mediaAttachments =>
       throw _privateConstructorUsedError;
 
   /// Any custom emoji that are used in the current revision.
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis => throw _privateConstructorUsedError;
+  List<CustomEmoji>? get emojis => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -68,17 +68,17 @@ abstract class $StatusEditCopyWith<$Res> {
       _$StatusEditCopyWithImpl<$Res, StatusEdit>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'content') String content,
-      @JsonKey(name: 'spoiler_text') String spoilerText,
-      @JsonKey(name: 'sensitive') bool sensitive,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'account') Account account,
+      {@JsonKey(name: 'content') String? content,
+      @JsonKey(name: 'spoiler_text') String? spoilerText,
+      @JsonKey(name: 'sensitive') bool? sensitive,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'account') Account? account,
       @JsonKey(name: 'poll') StatusEditPoll? poll,
       @JsonKey(name: 'media_attachments')
-      List<MediaAttachment> mediaAttachments,
-      @JsonKey(name: 'emojis') List<CustomEmoji> emojis});
+      List<MediaAttachment>? mediaAttachments,
+      @JsonKey(name: 'emojis') List<CustomEmoji>? emojis});
 
-  $AccountCopyWith<$Res> get account;
+  $AccountCopyWith<$Res>? get account;
   $StatusEditPollCopyWith<$Res>? get poll;
 }
 
@@ -95,55 +95,59 @@ class _$StatusEditCopyWithImpl<$Res, $Val extends StatusEdit>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? content = null,
-    Object? spoilerText = null,
-    Object? sensitive = null,
-    Object? createdAt = null,
-    Object? account = null,
+    Object? content = freezed,
+    Object? spoilerText = freezed,
+    Object? sensitive = freezed,
+    Object? createdAt = freezed,
+    Object? account = freezed,
     Object? poll = freezed,
-    Object? mediaAttachments = null,
-    Object? emojis = null,
+    Object? mediaAttachments = freezed,
+    Object? emojis = freezed,
   }) {
     return _then(_value.copyWith(
-      content: null == content
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      spoilerText: null == spoilerText
+              as String?,
+      spoilerText: freezed == spoilerText
           ? _value.spoilerText
           : spoilerText // ignore: cast_nullable_to_non_nullable
-              as String,
-      sensitive: null == sensitive
+              as String?,
+      sensitive: freezed == sensitive
           ? _value.sensitive
           : sensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      createdAt: null == createdAt
+              as bool?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      account: null == account
+              as DateTime?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as Account,
+              as Account?,
       poll: freezed == poll
           ? _value.poll
           : poll // ignore: cast_nullable_to_non_nullable
               as StatusEditPoll?,
-      mediaAttachments: null == mediaAttachments
+      mediaAttachments: freezed == mediaAttachments
           ? _value.mediaAttachments
           : mediaAttachments // ignore: cast_nullable_to_non_nullable
-              as List<MediaAttachment>,
-      emojis: null == emojis
+              as List<MediaAttachment>?,
+      emojis: freezed == emojis
           ? _value.emojis
           : emojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmoji>,
+              as List<CustomEmoji>?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AccountCopyWith<$Res> get account {
-    return $AccountCopyWith<$Res>(_value.account, (value) {
+  $AccountCopyWith<$Res>? get account {
+    if (_value.account == null) {
+      return null;
+    }
+
+    return $AccountCopyWith<$Res>(_value.account!, (value) {
       return _then(_value.copyWith(account: value) as $Val);
     });
   }
@@ -170,18 +174,18 @@ abstract class _$$StatusEditImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'content') String content,
-      @JsonKey(name: 'spoiler_text') String spoilerText,
-      @JsonKey(name: 'sensitive') bool sensitive,
-      @JsonKey(name: 'created_at') DateTime createdAt,
-      @JsonKey(name: 'account') Account account,
+      {@JsonKey(name: 'content') String? content,
+      @JsonKey(name: 'spoiler_text') String? spoilerText,
+      @JsonKey(name: 'sensitive') bool? sensitive,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'account') Account? account,
       @JsonKey(name: 'poll') StatusEditPoll? poll,
       @JsonKey(name: 'media_attachments')
-      List<MediaAttachment> mediaAttachments,
-      @JsonKey(name: 'emojis') List<CustomEmoji> emojis});
+      List<MediaAttachment>? mediaAttachments,
+      @JsonKey(name: 'emojis') List<CustomEmoji>? emojis});
 
   @override
-  $AccountCopyWith<$Res> get account;
+  $AccountCopyWith<$Res>? get account;
   @override
   $StatusEditPollCopyWith<$Res>? get poll;
 }
@@ -197,48 +201,48 @@ class __$$StatusEditImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? content = null,
-    Object? spoilerText = null,
-    Object? sensitive = null,
-    Object? createdAt = null,
-    Object? account = null,
+    Object? content = freezed,
+    Object? spoilerText = freezed,
+    Object? sensitive = freezed,
+    Object? createdAt = freezed,
+    Object? account = freezed,
     Object? poll = freezed,
-    Object? mediaAttachments = null,
-    Object? emojis = null,
+    Object? mediaAttachments = freezed,
+    Object? emojis = freezed,
   }) {
     return _then(_$StatusEditImpl(
-      content: null == content
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      spoilerText: null == spoilerText
+              as String?,
+      spoilerText: freezed == spoilerText
           ? _value.spoilerText
           : spoilerText // ignore: cast_nullable_to_non_nullable
-              as String,
-      sensitive: null == sensitive
+              as String?,
+      sensitive: freezed == sensitive
           ? _value.sensitive
           : sensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      createdAt: null == createdAt
+              as bool?,
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      account: null == account
+              as DateTime?,
+      account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
-              as Account,
+              as Account?,
       poll: freezed == poll
           ? _value.poll
           : poll // ignore: cast_nullable_to_non_nullable
               as StatusEditPoll?,
-      mediaAttachments: null == mediaAttachments
+      mediaAttachments: freezed == mediaAttachments
           ? _value._mediaAttachments
           : mediaAttachments // ignore: cast_nullable_to_non_nullable
-              as List<MediaAttachment>,
-      emojis: null == emojis
+              as List<MediaAttachment>?,
+      emojis: freezed == emojis
           ? _value._emojis
           : emojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmoji>,
+              as List<CustomEmoji>?,
     ));
   }
 }
@@ -247,15 +251,15 @@ class __$$StatusEditImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StatusEditImpl implements _StatusEdit {
   const _$StatusEditImpl(
-      {@JsonKey(name: 'content') required this.content,
-      @JsonKey(name: 'spoiler_text') required this.spoilerText,
-      @JsonKey(name: 'sensitive') required this.sensitive,
-      @JsonKey(name: 'created_at') required this.createdAt,
-      @JsonKey(name: 'account') required this.account,
+      {@JsonKey(name: 'content') this.content,
+      @JsonKey(name: 'spoiler_text') this.spoilerText,
+      @JsonKey(name: 'sensitive') this.sensitive,
+      @JsonKey(name: 'created_at') this.createdAt,
+      @JsonKey(name: 'account') this.account,
       @JsonKey(name: 'poll') this.poll,
       @JsonKey(name: 'media_attachments')
-      required final List<MediaAttachment> mediaAttachments,
-      @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis})
+      final List<MediaAttachment>? mediaAttachments,
+      @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis})
       : _mediaAttachments = mediaAttachments,
         _emojis = emojis;
 
@@ -265,27 +269,27 @@ class _$StatusEditImpl implements _StatusEdit {
   /// The content of the status at this revision.
   @override
   @JsonKey(name: 'content')
-  final String content;
+  final String? content;
 
   /// The content of the subject or content warning at this revision.
   @override
   @JsonKey(name: 'spoiler_text')
-  final String spoilerText;
+  final String? spoilerText;
 
   /// Whether the status was marked sensitive at this revision.
   @override
   @JsonKey(name: 'sensitive')
-  final bool sensitive;
+  final bool? sensitive;
 
   /// The timestamp of when the revision was published.
   @override
   @JsonKey(name: 'created_at')
-  final DateTime createdAt;
+  final DateTime? createdAt;
 
   /// The account that published this revision.
   @override
   @JsonKey(name: 'account')
-  final Account account;
+  final Account? account;
 
   /// The current state of the poll options at this revision. Note that edits
   /// changing the poll options will be collapsed together into one edit,
@@ -295,28 +299,32 @@ class _$StatusEditImpl implements _StatusEdit {
   final StatusEditPoll? poll;
 
   /// The current state of the media attachments at this revision.
-  final List<MediaAttachment> _mediaAttachments;
+  final List<MediaAttachment>? _mediaAttachments;
 
   /// The current state of the media attachments at this revision.
   @override
   @JsonKey(name: 'media_attachments')
-  List<MediaAttachment> get mediaAttachments {
+  List<MediaAttachment>? get mediaAttachments {
+    final value = _mediaAttachments;
+    if (value == null) return null;
     if (_mediaAttachments is EqualUnmodifiableListView)
       return _mediaAttachments;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_mediaAttachments);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Any custom emoji that are used in the current revision.
-  final List<CustomEmoji> _emojis;
+  final List<CustomEmoji>? _emojis;
 
   /// Any custom emoji that are used in the current revision.
   @override
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis {
+  List<CustomEmoji>? get emojis {
+    final value = _emojis;
+    if (value == null) return null;
     if (_emojis is EqualUnmodifiableListView) return _emojis;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_emojis);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -372,15 +380,15 @@ class _$StatusEditImpl implements _StatusEdit {
 
 abstract class _StatusEdit implements StatusEdit {
   const factory _StatusEdit(
-          {@JsonKey(name: 'content') required final String content,
-          @JsonKey(name: 'spoiler_text') required final String spoilerText,
-          @JsonKey(name: 'sensitive') required final bool sensitive,
-          @JsonKey(name: 'created_at') required final DateTime createdAt,
-          @JsonKey(name: 'account') required final Account account,
+          {@JsonKey(name: 'content') final String? content,
+          @JsonKey(name: 'spoiler_text') final String? spoilerText,
+          @JsonKey(name: 'sensitive') final bool? sensitive,
+          @JsonKey(name: 'created_at') final DateTime? createdAt,
+          @JsonKey(name: 'account') final Account? account,
           @JsonKey(name: 'poll') final StatusEditPoll? poll,
           @JsonKey(name: 'media_attachments')
-          required final List<MediaAttachment> mediaAttachments,
-          @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis}) =
+          final List<MediaAttachment>? mediaAttachments,
+          @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis}) =
       _$StatusEditImpl;
 
   factory _StatusEdit.fromJson(Map<String, dynamic> json) =
@@ -390,27 +398,27 @@ abstract class _StatusEdit implements StatusEdit {
 
   /// The content of the status at this revision.
   @JsonKey(name: 'content')
-  String get content;
+  String? get content;
   @override
 
   /// The content of the subject or content warning at this revision.
   @JsonKey(name: 'spoiler_text')
-  String get spoilerText;
+  String? get spoilerText;
   @override
 
   /// Whether the status was marked sensitive at this revision.
   @JsonKey(name: 'sensitive')
-  bool get sensitive;
+  bool? get sensitive;
   @override
 
   /// The timestamp of when the revision was published.
   @JsonKey(name: 'created_at')
-  DateTime get createdAt;
+  DateTime? get createdAt;
   @override
 
   /// The account that published this revision.
   @JsonKey(name: 'account')
-  Account get account;
+  Account? get account;
   @override
 
   /// The current state of the poll options at this revision. Note that edits
@@ -422,12 +430,12 @@ abstract class _StatusEdit implements StatusEdit {
 
   /// The current state of the media attachments at this revision.
   @JsonKey(name: 'media_attachments')
-  List<MediaAttachment> get mediaAttachments;
+  List<MediaAttachment>? get mediaAttachments;
   @override
 
   /// Any custom emoji that are used in the current revision.
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis;
+  List<CustomEmoji>? get emojis;
   @override
   @JsonKey(ignore: true)
   _$$StatusEditImplCopyWith<_$StatusEditImpl> get copyWith =>
@@ -442,7 +450,7 @@ StatusEditPoll _$StatusEditPollFromJson(Map<String, dynamic> json) {
 mixin _$StatusEditPoll {
   /// The poll options at this revision.
   @JsonKey(name: 'options')
-  List<StatusEditPollOption> get options => throw _privateConstructorUsedError;
+  List<StatusEditPollOption>? get options => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -456,7 +464,7 @@ abstract class $StatusEditPollCopyWith<$Res> {
           StatusEditPoll value, $Res Function(StatusEditPoll) then) =
       _$StatusEditPollCopyWithImpl<$Res, StatusEditPoll>;
   @useResult
-  $Res call({@JsonKey(name: 'options') List<StatusEditPollOption> options});
+  $Res call({@JsonKey(name: 'options') List<StatusEditPollOption>? options});
 }
 
 /// @nodoc
@@ -472,13 +480,13 @@ class _$StatusEditPollCopyWithImpl<$Res, $Val extends StatusEditPoll>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? options = null,
+    Object? options = freezed,
   }) {
     return _then(_value.copyWith(
-      options: null == options
+      options: freezed == options
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
-              as List<StatusEditPollOption>,
+              as List<StatusEditPollOption>?,
     ) as $Val);
   }
 }
@@ -491,7 +499,7 @@ abstract class _$$StatusEditPollImplCopyWith<$Res>
       __$$StatusEditPollImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'options') List<StatusEditPollOption> options});
+  $Res call({@JsonKey(name: 'options') List<StatusEditPollOption>? options});
 }
 
 /// @nodoc
@@ -505,13 +513,13 @@ class __$$StatusEditPollImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? options = null,
+    Object? options = freezed,
   }) {
     return _then(_$StatusEditPollImpl(
-      options: null == options
+      options: freezed == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
-              as List<StatusEditPollOption>,
+              as List<StatusEditPollOption>?,
     ));
   }
 }
@@ -520,23 +528,24 @@ class __$$StatusEditPollImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StatusEditPollImpl implements _StatusEditPoll {
   const _$StatusEditPollImpl(
-      {@JsonKey(name: 'options')
-      required final List<StatusEditPollOption> options})
+      {@JsonKey(name: 'options') final List<StatusEditPollOption>? options})
       : _options = options;
 
   factory _$StatusEditPollImpl.fromJson(Map<String, dynamic> json) =>
       _$$StatusEditPollImplFromJson(json);
 
   /// The poll options at this revision.
-  final List<StatusEditPollOption> _options;
+  final List<StatusEditPollOption>? _options;
 
   /// The poll options at this revision.
   @override
   @JsonKey(name: 'options')
-  List<StatusEditPollOption> get options {
+  List<StatusEditPollOption>? get options {
+    final value = _options;
+    if (value == null) return null;
     if (_options is EqualUnmodifiableListView) return _options;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_options);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -574,9 +583,8 @@ class _$StatusEditPollImpl implements _StatusEditPoll {
 
 abstract class _StatusEditPoll implements StatusEditPoll {
   const factory _StatusEditPoll(
-          {@JsonKey(name: 'options')
-          required final List<StatusEditPollOption> options}) =
-      _$StatusEditPollImpl;
+      {@JsonKey(name: 'options')
+      final List<StatusEditPollOption>? options}) = _$StatusEditPollImpl;
 
   factory _StatusEditPoll.fromJson(Map<String, dynamic> json) =
       _$StatusEditPollImpl.fromJson;
@@ -585,7 +593,7 @@ abstract class _StatusEditPoll implements StatusEditPoll {
 
   /// The poll options at this revision.
   @JsonKey(name: 'options')
-  List<StatusEditPollOption> get options;
+  List<StatusEditPollOption>? get options;
   @override
   @JsonKey(ignore: true)
   _$$StatusEditPollImplCopyWith<_$StatusEditPollImpl> get copyWith =>
@@ -600,7 +608,7 @@ StatusEditPollOption _$StatusEditPollOptionFromJson(Map<String, dynamic> json) {
 mixin _$StatusEditPollOption {
   /// The text for a poll option.
   @JsonKey(name: 'title')
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -614,7 +622,7 @@ abstract class $StatusEditPollOptionCopyWith<$Res> {
           $Res Function(StatusEditPollOption) then) =
       _$StatusEditPollOptionCopyWithImpl<$Res, StatusEditPollOption>;
   @useResult
-  $Res call({@JsonKey(name: 'title') String title});
+  $Res call({@JsonKey(name: 'title') String? title});
 }
 
 /// @nodoc
@@ -631,13 +639,13 @@ class _$StatusEditPollOptionCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
+    Object? title = freezed,
   }) {
     return _then(_value.copyWith(
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -650,7 +658,7 @@ abstract class _$$StatusEditPollOptionImplCopyWith<$Res>
       __$$StatusEditPollOptionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'title') String title});
+  $Res call({@JsonKey(name: 'title') String? title});
 }
 
 /// @nodoc
@@ -664,13 +672,13 @@ class __$$StatusEditPollOptionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
+    Object? title = freezed,
   }) {
     return _then(_$StatusEditPollOptionImpl(
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -678,8 +686,7 @@ class __$$StatusEditPollOptionImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$StatusEditPollOptionImpl implements _StatusEditPollOption {
-  const _$StatusEditPollOptionImpl(
-      {@JsonKey(name: 'title') required this.title});
+  const _$StatusEditPollOptionImpl({@JsonKey(name: 'title') this.title});
 
   factory _$StatusEditPollOptionImpl.fromJson(Map<String, dynamic> json) =>
       _$$StatusEditPollOptionImplFromJson(json);
@@ -687,7 +694,7 @@ class _$StatusEditPollOptionImpl implements _StatusEditPollOption {
   /// The text for a poll option.
   @override
   @JsonKey(name: 'title')
-  final String title;
+  final String? title;
 
   @override
   String toString() {
@@ -724,7 +731,7 @@ class _$StatusEditPollOptionImpl implements _StatusEditPollOption {
 
 abstract class _StatusEditPollOption implements StatusEditPollOption {
   const factory _StatusEditPollOption(
-          {@JsonKey(name: 'title') required final String title}) =
+          {@JsonKey(name: 'title') final String? title}) =
       _$StatusEditPollOptionImpl;
 
   factory _StatusEditPollOption.fromJson(Map<String, dynamic> json) =
@@ -734,7 +741,7 @@ abstract class _StatusEditPollOption implements StatusEditPollOption {
 
   /// The text for a poll option.
   @JsonKey(name: 'title')
-  String get title;
+  String? get title;
   @override
   @JsonKey(ignore: true)
   _$$StatusEditPollOptionImplCopyWith<_$StatusEditPollOptionImpl>

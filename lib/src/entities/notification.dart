@@ -14,16 +14,16 @@ part 'notification.g.dart';
 class Notification with _$Notification {
   const factory Notification({
     /// The id of the notification in the database.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The type of event that resulted in the notification.
-    @JsonKey(name: 'type') required final NotificationType type,
+    @JsonKey(name: 'type') final NotificationType? type,
 
     /// The timestamp of the notification.
-    @JsonKey(name: 'created_at') required final DateTime createdAt,
+    @JsonKey(name: 'created_at') final DateTime? createdAt,
 
     /// The account that performed the action that generated the notification.
-    @JsonKey(name: 'account') required final Account account,
+    @JsonKey(name: 'account') final Account? account,
 
     /// Status that was the object of the notification. Attached when `type` of
     /// the notification is `favourite`, `reblog`, `status`, `mention`, `poll`,

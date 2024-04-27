@@ -22,16 +22,16 @@ FilterKeyword _$FilterKeywordFromJson(Map<String, dynamic> json) {
 mixin _$FilterKeyword {
   /// The ID of the FilterKeyword in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The phrase to be matched against.
   @JsonKey(name: 'keyword')
-  String get keyword => throw _privateConstructorUsedError;
+  String? get keyword => throw _privateConstructorUsedError;
 
   /// Should the filter consider word boundaries? See implementation
   /// guidelines for filters.
   @JsonKey(name: 'whole_word')
-  bool get wholeWord => throw _privateConstructorUsedError;
+  bool? get wholeWord => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,9 +46,9 @@ abstract class $FilterKeywordCopyWith<$Res> {
       _$FilterKeywordCopyWithImpl<$Res, FilterKeyword>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'keyword') String keyword,
-      @JsonKey(name: 'whole_word') bool wholeWord});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'keyword') String? keyword,
+      @JsonKey(name: 'whole_word') bool? wholeWord});
 }
 
 /// @nodoc
@@ -64,23 +64,23 @@ class _$FilterKeywordCopyWithImpl<$Res, $Val extends FilterKeyword>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? keyword = null,
-    Object? wholeWord = null,
+    Object? id = freezed,
+    Object? keyword = freezed,
+    Object? wholeWord = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      keyword: null == keyword
+              as String?,
+      keyword: freezed == keyword
           ? _value.keyword
           : keyword // ignore: cast_nullable_to_non_nullable
-              as String,
-      wholeWord: null == wholeWord
+              as String?,
+      wholeWord: freezed == wholeWord
           ? _value.wholeWord
           : wholeWord // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -94,9 +94,9 @@ abstract class _$$FilterKeywordImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'keyword') String keyword,
-      @JsonKey(name: 'whole_word') bool wholeWord});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'keyword') String? keyword,
+      @JsonKey(name: 'whole_word') bool? wholeWord});
 }
 
 /// @nodoc
@@ -110,23 +110,23 @@ class __$$FilterKeywordImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? keyword = null,
-    Object? wholeWord = null,
+    Object? id = freezed,
+    Object? keyword = freezed,
+    Object? wholeWord = freezed,
   }) {
     return _then(_$FilterKeywordImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      keyword: null == keyword
+              as String?,
+      keyword: freezed == keyword
           ? _value.keyword
           : keyword // ignore: cast_nullable_to_non_nullable
-              as String,
-      wholeWord: null == wholeWord
+              as String?,
+      wholeWord: freezed == wholeWord
           ? _value.wholeWord
           : wholeWord // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -135,9 +135,9 @@ class __$$FilterKeywordImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FilterKeywordImpl implements _FilterKeyword {
   const _$FilterKeywordImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'keyword') required this.keyword,
-      @JsonKey(name: 'whole_word') required this.wholeWord});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'keyword') this.keyword,
+      @JsonKey(name: 'whole_word') this.wholeWord});
 
   factory _$FilterKeywordImpl.fromJson(Map<String, dynamic> json) =>
       _$$FilterKeywordImplFromJson(json);
@@ -145,18 +145,18 @@ class _$FilterKeywordImpl implements _FilterKeyword {
   /// The ID of the FilterKeyword in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The phrase to be matched against.
   @override
   @JsonKey(name: 'keyword')
-  final String keyword;
+  final String? keyword;
 
   /// Should the filter consider word boundaries? See implementation
   /// guidelines for filters.
   @override
   @JsonKey(name: 'whole_word')
-  final bool wholeWord;
+  final bool? wholeWord;
 
   @override
   String toString() {
@@ -194,9 +194,9 @@ class _$FilterKeywordImpl implements _FilterKeyword {
 
 abstract class _FilterKeyword implements FilterKeyword {
   const factory _FilterKeyword(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'keyword') required final String keyword,
-          @JsonKey(name: 'whole_word') required final bool wholeWord}) =
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'keyword') final String? keyword,
+          @JsonKey(name: 'whole_word') final bool? wholeWord}) =
       _$FilterKeywordImpl;
 
   factory _FilterKeyword.fromJson(Map<String, dynamic> json) =
@@ -206,18 +206,18 @@ abstract class _FilterKeyword implements FilterKeyword {
 
   /// The ID of the FilterKeyword in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The phrase to be matched against.
   @JsonKey(name: 'keyword')
-  String get keyword;
+  String? get keyword;
   @override
 
   /// Should the filter consider word boundaries? See implementation
   /// guidelines for filters.
   @JsonKey(name: 'whole_word')
-  bool get wholeWord;
+  bool? get wholeWord;
   @override
   @JsonKey(ignore: true)
   _$$FilterKeywordImplCopyWith<_$FilterKeywordImpl> get copyWith =>

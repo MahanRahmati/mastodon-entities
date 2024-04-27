@@ -22,11 +22,11 @@ Tag _$TagFromJson(Map<String, dynamic> json) {
 mixin _$Tag {
   /// The value of the hashtag after the # sign.
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   /// A link to the hashtag on the instance.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// Usage statistics for given days (typically the past week).
   @JsonKey(name: 'history')
@@ -47,8 +47,8 @@ abstract class $TagCopyWith<$Res> {
       _$TagCopyWithImpl<$Res, Tag>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'url') String url,
+      {@JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'url') String? url,
       @JsonKey(name: 'history') List<TagHistory>? history,
       @JsonKey(name: 'following') bool? following});
 }
@@ -65,20 +65,20 @@ class _$TagCopyWithImpl<$Res, $Val extends Tag> implements $TagCopyWith<$Res> {
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? url = null,
+    Object? name = freezed,
+    Object? url = freezed,
     Object? history = freezed,
     Object? following = freezed,
   }) {
     return _then(_value.copyWith(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       history: freezed == history
           ? _value.history
           : history // ignore: cast_nullable_to_non_nullable
@@ -98,8 +98,8 @@ abstract class _$$TagImplCopyWith<$Res> implements $TagCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'name') String name,
-      @JsonKey(name: 'url') String url,
+      {@JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'url') String? url,
       @JsonKey(name: 'history') List<TagHistory>? history,
       @JsonKey(name: 'following') bool? following});
 }
@@ -113,20 +113,20 @@ class __$$TagImplCopyWithImpl<$Res> extends _$TagCopyWithImpl<$Res, _$TagImpl>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? url = null,
+    Object? name = freezed,
+    Object? url = freezed,
     Object? history = freezed,
     Object? following = freezed,
   }) {
     return _then(_$TagImpl(
-      name: null == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
+              as String?,
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       history: freezed == history
           ? _value._history
           : history // ignore: cast_nullable_to_non_nullable
@@ -143,8 +143,8 @@ class __$$TagImplCopyWithImpl<$Res> extends _$TagCopyWithImpl<$Res, _$TagImpl>
 @JsonSerializable()
 class _$TagImpl implements _Tag {
   const _$TagImpl(
-      {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'url') required this.url,
+      {@JsonKey(name: 'name') this.name,
+      @JsonKey(name: 'url') this.url,
       @JsonKey(name: 'history') final List<TagHistory>? history,
       @JsonKey(name: 'following') this.following})
       : _history = history;
@@ -155,12 +155,12 @@ class _$TagImpl implements _Tag {
   /// The value of the hashtag after the # sign.
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
 
   /// A link to the hashtag on the instance.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   /// Usage statistics for given days (typically the past week).
   final List<TagHistory>? _history;
@@ -219,8 +219,8 @@ class _$TagImpl implements _Tag {
 
 abstract class _Tag implements Tag {
   const factory _Tag(
-      {@JsonKey(name: 'name') required final String name,
-      @JsonKey(name: 'url') required final String url,
+      {@JsonKey(name: 'name') final String? name,
+      @JsonKey(name: 'url') final String? url,
       @JsonKey(name: 'history') final List<TagHistory>? history,
       @JsonKey(name: 'following') final bool? following}) = _$TagImpl;
 
@@ -230,12 +230,12 @@ abstract class _Tag implements Tag {
 
   /// The value of the hashtag after the # sign.
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
 
   /// A link to the hashtag on the instance.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
 
   /// Usage statistics for given days (typically the past week).
@@ -260,15 +260,15 @@ TagHistory _$TagHistoryFromJson(Map<String, dynamic> json) {
 mixin _$TagHistory {
   /// UNIX timestamp on midnight of the given day.
   @JsonKey(name: 'day')
-  String get day => throw _privateConstructorUsedError;
+  String? get day => throw _privateConstructorUsedError;
 
   /// The counted usage of the tag within that day.
   @JsonKey(name: 'uses')
-  String get uses => throw _privateConstructorUsedError;
+  String? get uses => throw _privateConstructorUsedError;
 
   /// The total of accounts using the tag within that day.
   @JsonKey(name: 'accounts')
-  String get accounts => throw _privateConstructorUsedError;
+  String? get accounts => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -283,9 +283,9 @@ abstract class $TagHistoryCopyWith<$Res> {
       _$TagHistoryCopyWithImpl<$Res, TagHistory>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'day') String day,
-      @JsonKey(name: 'uses') String uses,
-      @JsonKey(name: 'accounts') String accounts});
+      {@JsonKey(name: 'day') String? day,
+      @JsonKey(name: 'uses') String? uses,
+      @JsonKey(name: 'accounts') String? accounts});
 }
 
 /// @nodoc
@@ -301,23 +301,23 @@ class _$TagHistoryCopyWithImpl<$Res, $Val extends TagHistory>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? day = null,
-    Object? uses = null,
-    Object? accounts = null,
+    Object? day = freezed,
+    Object? uses = freezed,
+    Object? accounts = freezed,
   }) {
     return _then(_value.copyWith(
-      day: null == day
+      day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as String,
-      uses: null == uses
+              as String?,
+      uses: freezed == uses
           ? _value.uses
           : uses // ignore: cast_nullable_to_non_nullable
-              as String,
-      accounts: null == accounts
+              as String?,
+      accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -331,9 +331,9 @@ abstract class _$$TagHistoryImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'day') String day,
-      @JsonKey(name: 'uses') String uses,
-      @JsonKey(name: 'accounts') String accounts});
+      {@JsonKey(name: 'day') String? day,
+      @JsonKey(name: 'uses') String? uses,
+      @JsonKey(name: 'accounts') String? accounts});
 }
 
 /// @nodoc
@@ -347,23 +347,23 @@ class __$$TagHistoryImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? day = null,
-    Object? uses = null,
-    Object? accounts = null,
+    Object? day = freezed,
+    Object? uses = freezed,
+    Object? accounts = freezed,
   }) {
     return _then(_$TagHistoryImpl(
-      day: null == day
+      day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as String,
-      uses: null == uses
+              as String?,
+      uses: freezed == uses
           ? _value.uses
           : uses // ignore: cast_nullable_to_non_nullable
-              as String,
-      accounts: null == accounts
+              as String?,
+      accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -372,9 +372,9 @@ class __$$TagHistoryImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TagHistoryImpl implements _TagHistory {
   const _$TagHistoryImpl(
-      {@JsonKey(name: 'day') required this.day,
-      @JsonKey(name: 'uses') required this.uses,
-      @JsonKey(name: 'accounts') required this.accounts});
+      {@JsonKey(name: 'day') this.day,
+      @JsonKey(name: 'uses') this.uses,
+      @JsonKey(name: 'accounts') this.accounts});
 
   factory _$TagHistoryImpl.fromJson(Map<String, dynamic> json) =>
       _$$TagHistoryImplFromJson(json);
@@ -382,17 +382,17 @@ class _$TagHistoryImpl implements _TagHistory {
   /// UNIX timestamp on midnight of the given day.
   @override
   @JsonKey(name: 'day')
-  final String day;
+  final String? day;
 
   /// The counted usage of the tag within that day.
   @override
   @JsonKey(name: 'uses')
-  final String uses;
+  final String? uses;
 
   /// The total of accounts using the tag within that day.
   @override
   @JsonKey(name: 'accounts')
-  final String accounts;
+  final String? accounts;
 
   @override
   String toString() {
@@ -430,10 +430,9 @@ class _$TagHistoryImpl implements _TagHistory {
 
 abstract class _TagHistory implements TagHistory {
   const factory _TagHistory(
-          {@JsonKey(name: 'day') required final String day,
-          @JsonKey(name: 'uses') required final String uses,
-          @JsonKey(name: 'accounts') required final String accounts}) =
-      _$TagHistoryImpl;
+      {@JsonKey(name: 'day') final String? day,
+      @JsonKey(name: 'uses') final String? uses,
+      @JsonKey(name: 'accounts') final String? accounts}) = _$TagHistoryImpl;
 
   factory _TagHistory.fromJson(Map<String, dynamic> json) =
       _$TagHistoryImpl.fromJson;
@@ -442,17 +441,17 @@ abstract class _TagHistory implements TagHistory {
 
   /// UNIX timestamp on midnight of the given day.
   @JsonKey(name: 'day')
-  String get day;
+  String? get day;
   @override
 
   /// The counted usage of the tag within that day.
   @JsonKey(name: 'uses')
-  String get uses;
+  String? get uses;
   @override
 
   /// The total of accounts using the tag within that day.
   @JsonKey(name: 'accounts')
-  String get accounts;
+  String? get accounts;
   @override
   @JsonKey(ignore: true)
   _$$TagHistoryImplCopyWith<_$TagHistoryImpl> get copyWith =>
@@ -467,20 +466,20 @@ AdminTag _$AdminTagFromJson(Map<String, dynamic> json) {
 mixin _$AdminTag {
   /// The ID of the Tag in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// Whether the hashtag has been approved to trend.
   @JsonKey(name: 'trendable')
-  bool get trendable => throw _privateConstructorUsedError;
+  bool? get trendable => throw _privateConstructorUsedError;
 
   /// Whether the hashtag has not been disabled from auto-linking.
   @JsonKey(name: 'usable')
-  bool get usable => throw _privateConstructorUsedError;
+  bool? get usable => throw _privateConstructorUsedError;
 
   /// Whether the hashtag has not been reviewed yet to approve or deny its
   /// trending.
   @JsonKey(name: 'requires_review')
-  bool get requiresReview => throw _privateConstructorUsedError;
+  bool? get requiresReview => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -494,10 +493,10 @@ abstract class $AdminTagCopyWith<$Res> {
       _$AdminTagCopyWithImpl<$Res, AdminTag>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'trendable') bool trendable,
-      @JsonKey(name: 'usable') bool usable,
-      @JsonKey(name: 'requires_review') bool requiresReview});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'trendable') bool? trendable,
+      @JsonKey(name: 'usable') bool? usable,
+      @JsonKey(name: 'requires_review') bool? requiresReview});
 }
 
 /// @nodoc
@@ -513,28 +512,28 @@ class _$AdminTagCopyWithImpl<$Res, $Val extends AdminTag>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? trendable = null,
-    Object? usable = null,
-    Object? requiresReview = null,
+    Object? id = freezed,
+    Object? trendable = freezed,
+    Object? usable = freezed,
+    Object? requiresReview = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      trendable: null == trendable
+              as String?,
+      trendable: freezed == trendable
           ? _value.trendable
           : trendable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      usable: null == usable
+              as bool?,
+      usable: freezed == usable
           ? _value.usable
           : usable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      requiresReview: null == requiresReview
+              as bool?,
+      requiresReview: freezed == requiresReview
           ? _value.requiresReview
           : requiresReview // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -548,10 +547,10 @@ abstract class _$$AdminTagImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'trendable') bool trendable,
-      @JsonKey(name: 'usable') bool usable,
-      @JsonKey(name: 'requires_review') bool requiresReview});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'trendable') bool? trendable,
+      @JsonKey(name: 'usable') bool? usable,
+      @JsonKey(name: 'requires_review') bool? requiresReview});
 }
 
 /// @nodoc
@@ -565,28 +564,28 @@ class __$$AdminTagImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? trendable = null,
-    Object? usable = null,
-    Object? requiresReview = null,
+    Object? id = freezed,
+    Object? trendable = freezed,
+    Object? usable = freezed,
+    Object? requiresReview = freezed,
   }) {
     return _then(_$AdminTagImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      trendable: null == trendable
+              as String?,
+      trendable: freezed == trendable
           ? _value.trendable
           : trendable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      usable: null == usable
+              as bool?,
+      usable: freezed == usable
           ? _value.usable
           : usable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      requiresReview: null == requiresReview
+              as bool?,
+      requiresReview: freezed == requiresReview
           ? _value.requiresReview
           : requiresReview // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -595,10 +594,10 @@ class __$$AdminTagImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminTagImpl implements _AdminTag {
   const _$AdminTagImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'trendable') required this.trendable,
-      @JsonKey(name: 'usable') required this.usable,
-      @JsonKey(name: 'requires_review') required this.requiresReview});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'trendable') this.trendable,
+      @JsonKey(name: 'usable') this.usable,
+      @JsonKey(name: 'requires_review') this.requiresReview});
 
   factory _$AdminTagImpl.fromJson(Map<String, dynamic> json) =>
       _$$AdminTagImplFromJson(json);
@@ -606,23 +605,23 @@ class _$AdminTagImpl implements _AdminTag {
   /// The ID of the Tag in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// Whether the hashtag has been approved to trend.
   @override
   @JsonKey(name: 'trendable')
-  final bool trendable;
+  final bool? trendable;
 
   /// Whether the hashtag has not been disabled from auto-linking.
   @override
   @JsonKey(name: 'usable')
-  final bool usable;
+  final bool? usable;
 
   /// Whether the hashtag has not been reviewed yet to approve or deny its
   /// trending.
   @override
   @JsonKey(name: 'requires_review')
-  final bool requiresReview;
+  final bool? requiresReview;
 
   @override
   String toString() {
@@ -663,11 +662,11 @@ class _$AdminTagImpl implements _AdminTag {
 
 abstract class _AdminTag implements AdminTag {
   const factory _AdminTag(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'trendable') required final bool trendable,
-      @JsonKey(name: 'usable') required final bool usable,
-      @JsonKey(name: 'requires_review')
-      required final bool requiresReview}) = _$AdminTagImpl;
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'trendable') final bool? trendable,
+          @JsonKey(name: 'usable') final bool? usable,
+          @JsonKey(name: 'requires_review') final bool? requiresReview}) =
+      _$AdminTagImpl;
 
   factory _AdminTag.fromJson(Map<String, dynamic> json) =
       _$AdminTagImpl.fromJson;
@@ -676,23 +675,23 @@ abstract class _AdminTag implements AdminTag {
 
   /// The ID of the Tag in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// Whether the hashtag has been approved to trend.
   @JsonKey(name: 'trendable')
-  bool get trendable;
+  bool? get trendable;
   @override
 
   /// Whether the hashtag has not been disabled from auto-linking.
   @JsonKey(name: 'usable')
-  bool get usable;
+  bool? get usable;
   @override
 
   /// Whether the hashtag has not been reviewed yet to approve or deny its
   /// trending.
   @JsonKey(name: 'requires_review')
-  bool get requiresReview;
+  bool? get requiresReview;
   @override
   @JsonKey(ignore: true)
   _$$AdminTagImplCopyWith<_$AdminTagImpl> get copyWith =>

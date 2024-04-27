@@ -8,17 +8,20 @@ part of 'admin_cohort.dart';
 
 _$AdminCohortImpl _$$AdminCohortImplFromJson(Map<String, dynamic> json) =>
     _$AdminCohortImpl(
-      period: DateTime.parse(json['period'] as String),
-      frequency: $enumDecode(_$AdminCohortFrequencyEnumMap, json['frequency']),
-      data: (json['data'] as List<dynamic>)
-          .map((e) => CohortData.fromJson(e as Map<String, dynamic>))
+      period: json['period'] == null
+          ? null
+          : DateTime.parse(json['period'] as String),
+      frequency:
+          $enumDecodeNullable(_$AdminCohortFrequencyEnumMap, json['frequency']),
+      data: (json['data'] as List<dynamic>?)
+          ?.map((e) => CohortData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$$AdminCohortImplToJson(_$AdminCohortImpl instance) =>
     <String, dynamic>{
-      'period': instance.period.toIso8601String(),
-      'frequency': _$AdminCohortFrequencyEnumMap[instance.frequency]!,
+      'period': instance.period?.toIso8601String(),
+      'frequency': _$AdminCohortFrequencyEnumMap[instance.frequency],
       'data': instance.data,
     };
 
@@ -29,14 +32,15 @@ const _$AdminCohortFrequencyEnumMap = {
 
 _$CohortDataImpl _$$CohortDataImplFromJson(Map<String, dynamic> json) =>
     _$CohortDataImpl(
-      date: DateTime.parse(json['date'] as String),
-      rate: (json['rate'] as num).toDouble(),
-      value: (json['value'] as num).toInt(),
+      date:
+          json['date'] == null ? null : DateTime.parse(json['date'] as String),
+      rate: (json['rate'] as num?)?.toDouble(),
+      value: (json['value'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$CohortDataImplToJson(_$CohortDataImpl instance) =>
     <String, dynamic>{
-      'date': instance.date.toIso8601String(),
+      'date': instance.date?.toIso8601String(),
       'rate': instance.rate,
       'value': instance.value,
     };

@@ -8,11 +8,11 @@ part of 'status_context.dart';
 
 _$StatusContextImpl _$$StatusContextImplFromJson(Map<String, dynamic> json) =>
     _$StatusContextImpl(
-      ancestors: (json['ancestors'] as List<dynamic>)
-          .map((e) => Status.fromJson(e as Map<String, dynamic>))
+      ancestors: (json['ancestors'] as List<dynamic>?)
+          ?.map((e) => Status.fromJson(e as Map<String, dynamic>))
           .toList(),
-      descendants: (json['descendants'] as List<dynamic>)
-          .map((e) => Status.fromJson(e as Map<String, dynamic>))
+      descendants: (json['descendants'] as List<dynamic>?)
+          ?.map((e) => Status.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

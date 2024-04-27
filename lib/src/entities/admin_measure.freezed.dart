@@ -22,7 +22,7 @@ AdminMeasure _$AdminMeasureFromJson(Map<String, dynamic> json) {
 mixin _$AdminMeasure {
   /// The unique keystring for the requested measure.
   @JsonKey(name: 'key')
-  String get key => throw _privateConstructorUsedError;
+  String? get key => throw _privateConstructorUsedError;
 
   /// The units associated with this data item's value, if applicable.
   @JsonKey(name: 'unit')
@@ -30,7 +30,7 @@ mixin _$AdminMeasure {
 
   /// The numeric total associated with the requested measure.
   @JsonKey(name: 'total')
-  String get total => throw _privateConstructorUsedError;
+  String? get total => throw _privateConstructorUsedError;
 
   /// A human-readable formatted value for this data item.
   @JsonKey(name: 'human_value')
@@ -45,7 +45,7 @@ mixin _$AdminMeasure {
 
   /// The data available for the requested measure, split into daily buckets.
   @JsonKey(name: 'data')
-  List<AdminMeasureData> get data => throw _privateConstructorUsedError;
+  List<AdminMeasureData>? get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -60,12 +60,12 @@ abstract class $AdminMeasureCopyWith<$Res> {
       _$AdminMeasureCopyWithImpl<$Res, AdminMeasure>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'key') String key,
+      {@JsonKey(name: 'key') String? key,
       @JsonKey(name: 'unit') String? unit,
-      @JsonKey(name: 'total') String total,
+      @JsonKey(name: 'total') String? total,
       @JsonKey(name: 'human_value') String? humanValue,
       @JsonKey(name: 'previous_total') String? previousTotal,
-      @JsonKey(name: 'data') List<AdminMeasureData> data});
+      @JsonKey(name: 'data') List<AdminMeasureData>? data});
 }
 
 /// @nodoc
@@ -81,26 +81,26 @@ class _$AdminMeasureCopyWithImpl<$Res, $Val extends AdminMeasure>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? key = null,
+    Object? key = freezed,
     Object? unit = freezed,
-    Object? total = null,
+    Object? total = freezed,
     Object? humanValue = freezed,
     Object? previousTotal = freezed,
-    Object? data = null,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      key: null == key
+      key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       unit: freezed == unit
           ? _value.unit
           : unit // ignore: cast_nullable_to_non_nullable
               as String?,
-      total: null == total
+      total: freezed == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       humanValue: freezed == humanValue
           ? _value.humanValue
           : humanValue // ignore: cast_nullable_to_non_nullable
@@ -109,10 +109,10 @@ class _$AdminMeasureCopyWithImpl<$Res, $Val extends AdminMeasure>
           ? _value.previousTotal
           : previousTotal // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: null == data
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<AdminMeasureData>,
+              as List<AdminMeasureData>?,
     ) as $Val);
   }
 }
@@ -126,12 +126,12 @@ abstract class _$$AdminMeasureImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'key') String key,
+      {@JsonKey(name: 'key') String? key,
       @JsonKey(name: 'unit') String? unit,
-      @JsonKey(name: 'total') String total,
+      @JsonKey(name: 'total') String? total,
       @JsonKey(name: 'human_value') String? humanValue,
       @JsonKey(name: 'previous_total') String? previousTotal,
-      @JsonKey(name: 'data') List<AdminMeasureData> data});
+      @JsonKey(name: 'data') List<AdminMeasureData>? data});
 }
 
 /// @nodoc
@@ -145,26 +145,26 @@ class __$$AdminMeasureImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? key = null,
+    Object? key = freezed,
     Object? unit = freezed,
-    Object? total = null,
+    Object? total = freezed,
     Object? humanValue = freezed,
     Object? previousTotal = freezed,
-    Object? data = null,
+    Object? data = freezed,
   }) {
     return _then(_$AdminMeasureImpl(
-      key: null == key
+      key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       unit: freezed == unit
           ? _value.unit
           : unit // ignore: cast_nullable_to_non_nullable
               as String?,
-      total: null == total
+      total: freezed == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       humanValue: freezed == humanValue
           ? _value.humanValue
           : humanValue // ignore: cast_nullable_to_non_nullable
@@ -173,10 +173,10 @@ class __$$AdminMeasureImplCopyWithImpl<$Res>
           ? _value.previousTotal
           : previousTotal // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: null == data
+      data: freezed == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<AdminMeasureData>,
+              as List<AdminMeasureData>?,
     ));
   }
 }
@@ -185,12 +185,12 @@ class __$$AdminMeasureImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminMeasureImpl implements _AdminMeasure {
   const _$AdminMeasureImpl(
-      {@JsonKey(name: 'key') required this.key,
+      {@JsonKey(name: 'key') this.key,
       @JsonKey(name: 'unit') this.unit,
-      @JsonKey(name: 'total') required this.total,
+      @JsonKey(name: 'total') this.total,
       @JsonKey(name: 'human_value') this.humanValue,
       @JsonKey(name: 'previous_total') this.previousTotal,
-      @JsonKey(name: 'data') required final List<AdminMeasureData> data})
+      @JsonKey(name: 'data') final List<AdminMeasureData>? data})
       : _data = data;
 
   factory _$AdminMeasureImpl.fromJson(Map<String, dynamic> json) =>
@@ -199,7 +199,7 @@ class _$AdminMeasureImpl implements _AdminMeasure {
   /// The unique keystring for the requested measure.
   @override
   @JsonKey(name: 'key')
-  final String key;
+  final String? key;
 
   /// The units associated with this data item's value, if applicable.
   @override
@@ -209,7 +209,7 @@ class _$AdminMeasureImpl implements _AdminMeasure {
   /// The numeric total associated with the requested measure.
   @override
   @JsonKey(name: 'total')
-  final String total;
+  final String? total;
 
   /// A human-readable formatted value for this data item.
   @override
@@ -225,15 +225,17 @@ class _$AdminMeasureImpl implements _AdminMeasure {
   final String? previousTotal;
 
   /// The data available for the requested measure, split into daily buckets.
-  final List<AdminMeasureData> _data;
+  final List<AdminMeasureData>? _data;
 
   /// The data available for the requested measure, split into daily buckets.
   @override
   @JsonKey(name: 'data')
-  List<AdminMeasureData> get data {
+  List<AdminMeasureData>? get data {
+    final value = _data;
+    if (value == null) return null;
     if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_data);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -277,12 +279,12 @@ class _$AdminMeasureImpl implements _AdminMeasure {
 
 abstract class _AdminMeasure implements AdminMeasure {
   const factory _AdminMeasure(
-          {@JsonKey(name: 'key') required final String key,
+          {@JsonKey(name: 'key') final String? key,
           @JsonKey(name: 'unit') final String? unit,
-          @JsonKey(name: 'total') required final String total,
+          @JsonKey(name: 'total') final String? total,
           @JsonKey(name: 'human_value') final String? humanValue,
           @JsonKey(name: 'previous_total') final String? previousTotal,
-          @JsonKey(name: 'data') required final List<AdminMeasureData> data}) =
+          @JsonKey(name: 'data') final List<AdminMeasureData>? data}) =
       _$AdminMeasureImpl;
 
   factory _AdminMeasure.fromJson(Map<String, dynamic> json) =
@@ -292,7 +294,7 @@ abstract class _AdminMeasure implements AdminMeasure {
 
   /// The unique keystring for the requested measure.
   @JsonKey(name: 'key')
-  String get key;
+  String? get key;
   @override
 
   /// The units associated with this data item's value, if applicable.
@@ -302,7 +304,7 @@ abstract class _AdminMeasure implements AdminMeasure {
 
   /// The numeric total associated with the requested measure.
   @JsonKey(name: 'total')
-  String get total;
+  String? get total;
   @override
 
   /// A human-readable formatted value for this data item.
@@ -320,7 +322,7 @@ abstract class _AdminMeasure implements AdminMeasure {
 
   /// The data available for the requested measure, split into daily buckets.
   @JsonKey(name: 'data')
-  List<AdminMeasureData> get data;
+  List<AdminMeasureData>? get data;
   @override
   @JsonKey(ignore: true)
   _$$AdminMeasureImplCopyWith<_$AdminMeasureImpl> get copyWith =>
@@ -335,11 +337,11 @@ AdminMeasureData _$AdminMeasureDataFromJson(Map<String, dynamic> json) {
 mixin _$AdminMeasureData {
   /// Midnight on the requested day in the time period.
   @JsonKey(name: 'date')
-  DateTime get date => throw _privateConstructorUsedError;
+  DateTime? get date => throw _privateConstructorUsedError;
 
   /// The numeric value for the requested measure.
   @JsonKey(name: 'value')
-  String get value => throw _privateConstructorUsedError;
+  String? get value => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -354,8 +356,8 @@ abstract class $AdminMeasureDataCopyWith<$Res> {
       _$AdminMeasureDataCopyWithImpl<$Res, AdminMeasureData>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'date') DateTime date,
-      @JsonKey(name: 'value') String value});
+      {@JsonKey(name: 'date') DateTime? date,
+      @JsonKey(name: 'value') String? value});
 }
 
 /// @nodoc
@@ -371,18 +373,18 @@ class _$AdminMeasureDataCopyWithImpl<$Res, $Val extends AdminMeasureData>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
-    Object? value = null,
+    Object? date = freezed,
+    Object? value = freezed,
   }) {
     return _then(_value.copyWith(
-      date: null == date
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      value: null == value
+              as DateTime?,
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -396,8 +398,8 @@ abstract class _$$AdminMeasureDataImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'date') DateTime date,
-      @JsonKey(name: 'value') String value});
+      {@JsonKey(name: 'date') DateTime? date,
+      @JsonKey(name: 'value') String? value});
 }
 
 /// @nodoc
@@ -411,18 +413,18 @@ class __$$AdminMeasureDataImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
-    Object? value = null,
+    Object? date = freezed,
+    Object? value = freezed,
   }) {
     return _then(_$AdminMeasureDataImpl(
-      date: null == date
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      value: null == value
+              as DateTime?,
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -431,8 +433,7 @@ class __$$AdminMeasureDataImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminMeasureDataImpl implements _AdminMeasureData {
   const _$AdminMeasureDataImpl(
-      {@JsonKey(name: 'date') required this.date,
-      @JsonKey(name: 'value') required this.value});
+      {@JsonKey(name: 'date') this.date, @JsonKey(name: 'value') this.value});
 
   factory _$AdminMeasureDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$AdminMeasureDataImplFromJson(json);
@@ -440,12 +441,12 @@ class _$AdminMeasureDataImpl implements _AdminMeasureData {
   /// Midnight on the requested day in the time period.
   @override
   @JsonKey(name: 'date')
-  final DateTime date;
+  final DateTime? date;
 
   /// The numeric value for the requested measure.
   @override
   @JsonKey(name: 'value')
-  final String value;
+  final String? value;
 
   @override
   String toString() {
@@ -482,9 +483,8 @@ class _$AdminMeasureDataImpl implements _AdminMeasureData {
 
 abstract class _AdminMeasureData implements AdminMeasureData {
   const factory _AdminMeasureData(
-          {@JsonKey(name: 'date') required final DateTime date,
-          @JsonKey(name: 'value') required final String value}) =
-      _$AdminMeasureDataImpl;
+      {@JsonKey(name: 'date') final DateTime? date,
+      @JsonKey(name: 'value') final String? value}) = _$AdminMeasureDataImpl;
 
   factory _AdminMeasureData.fromJson(Map<String, dynamic> json) =
       _$AdminMeasureDataImpl.fromJson;
@@ -493,12 +493,12 @@ abstract class _AdminMeasureData implements AdminMeasureData {
 
   /// Midnight on the requested day in the time period.
   @JsonKey(name: 'date')
-  DateTime get date;
+  DateTime? get date;
   @override
 
   /// The numeric value for the requested measure.
   @JsonKey(name: 'value')
-  String get value;
+  String? get value;
   @override
   @JsonKey(ignore: true)
   _$$AdminMeasureDataImplCopyWith<_$AdminMeasureDataImpl> get copyWith =>

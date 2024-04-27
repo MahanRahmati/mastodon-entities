@@ -23,11 +23,11 @@ AdminCanonicalEmailBlock _$AdminCanonicalEmailBlockFromJson(
 mixin _$AdminCanonicalEmailBlock {
   /// The ID of the email block in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The SHA256 hash of the canonical email address.
   @JsonKey(name: 'canonical_email_hash')
-  String get canonicalEmailHash => throw _privateConstructorUsedError;
+  String? get canonicalEmailHash => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,8 +42,8 @@ abstract class $AdminCanonicalEmailBlockCopyWith<$Res> {
       _$AdminCanonicalEmailBlockCopyWithImpl<$Res, AdminCanonicalEmailBlock>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'canonical_email_hash') String canonicalEmailHash});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'canonical_email_hash') String? canonicalEmailHash});
 }
 
 /// @nodoc
@@ -60,18 +60,18 @@ class _$AdminCanonicalEmailBlockCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? canonicalEmailHash = null,
+    Object? id = freezed,
+    Object? canonicalEmailHash = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      canonicalEmailHash: null == canonicalEmailHash
+              as String?,
+      canonicalEmailHash: freezed == canonicalEmailHash
           ? _value.canonicalEmailHash
           : canonicalEmailHash // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -86,8 +86,8 @@ abstract class _$$AdminCanonicalEmailBlockImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'canonical_email_hash') String canonicalEmailHash});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'canonical_email_hash') String? canonicalEmailHash});
 }
 
 /// @nodoc
@@ -103,18 +103,18 @@ class __$$AdminCanonicalEmailBlockImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? canonicalEmailHash = null,
+    Object? id = freezed,
+    Object? canonicalEmailHash = freezed,
   }) {
     return _then(_$AdminCanonicalEmailBlockImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      canonicalEmailHash: null == canonicalEmailHash
+              as String?,
+      canonicalEmailHash: freezed == canonicalEmailHash
           ? _value.canonicalEmailHash
           : canonicalEmailHash // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -123,8 +123,8 @@ class __$$AdminCanonicalEmailBlockImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AdminCanonicalEmailBlockImpl implements _AdminCanonicalEmailBlock {
   const _$AdminCanonicalEmailBlockImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'canonical_email_hash') required this.canonicalEmailHash});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'canonical_email_hash') this.canonicalEmailHash});
 
   factory _$AdminCanonicalEmailBlockImpl.fromJson(Map<String, dynamic> json) =>
       _$$AdminCanonicalEmailBlockImplFromJson(json);
@@ -132,12 +132,12 @@ class _$AdminCanonicalEmailBlockImpl implements _AdminCanonicalEmailBlock {
   /// The ID of the email block in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The SHA256 hash of the canonical email address.
   @override
   @JsonKey(name: 'canonical_email_hash')
-  final String canonicalEmailHash;
+  final String? canonicalEmailHash;
 
   @override
   String toString() {
@@ -175,10 +175,9 @@ class _$AdminCanonicalEmailBlockImpl implements _AdminCanonicalEmailBlock {
 
 abstract class _AdminCanonicalEmailBlock implements AdminCanonicalEmailBlock {
   const factory _AdminCanonicalEmailBlock(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'canonical_email_hash')
-          required final String canonicalEmailHash}) =
-      _$AdminCanonicalEmailBlockImpl;
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'canonical_email_hash')
+      final String? canonicalEmailHash}) = _$AdminCanonicalEmailBlockImpl;
 
   factory _AdminCanonicalEmailBlock.fromJson(Map<String, dynamic> json) =
       _$AdminCanonicalEmailBlockImpl.fromJson;
@@ -187,12 +186,12 @@ abstract class _AdminCanonicalEmailBlock implements AdminCanonicalEmailBlock {
 
   /// The ID of the email block in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The SHA256 hash of the canonical email address.
   @JsonKey(name: 'canonical_email_hash')
-  String get canonicalEmailHash;
+  String? get canonicalEmailHash;
   @override
   @JsonKey(ignore: true)
   _$$AdminCanonicalEmailBlockImplCopyWith<_$AdminCanonicalEmailBlockImpl>

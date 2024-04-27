@@ -12,53 +12,53 @@ part 'account.g.dart';
 class Account with _$Account {
   const factory Account({
     /// The account id.
-    @JsonKey(name: 'id') required final String id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The username of the account, not including domain.
-    @JsonKey(name: 'username') required final String username,
+    @JsonKey(name: 'username') final String? username,
 
     /// The Webfinger account URI. Equal to `username` for local users, or
     /// `username@domain` for remote users.
-    @JsonKey(name: 'acct') required final String acct,
+    @JsonKey(name: 'acct') final String? acct,
 
     /// The location of the user's profile page.
-    @JsonKey(name: 'url') required final String url,
+    @JsonKey(name: 'url') final String? url,
 
     /// The profile's display name.
-    @JsonKey(name: 'display_name') required final String displayName,
+    @JsonKey(name: 'display_name') final String? displayName,
 
     /// The profile's bio or description.
-    @JsonKey(name: 'note') required final String note,
+    @JsonKey(name: 'note') final String? note,
 
     /// An image icon that is shown next to statuses and in the profile.
-    @JsonKey(name: 'avatar') required final String avatar,
+    @JsonKey(name: 'avatar') final String? avatar,
 
     /// A static version of the avatar. Equal to `avatar` if its value is a
     /// static image; different if `avatar` is an animated GIF.
-    @JsonKey(name: 'avatar_static') required final String avatarStatic,
+    @JsonKey(name: 'avatar_static') final String? avatarStatic,
 
     /// An image banner that is shown above the profile and in profile cards.
-    @JsonKey(name: 'header') required final String header,
+    @JsonKey(name: 'header') final String? header,
 
     /// A static version of the header. Equal to `header` if its value is a
     /// static image; different if `header` is an animated GIF.
-    @JsonKey(name: 'header_static') required final String headerStatic,
+    @JsonKey(name: 'header_static') final String? headerStatic,
 
     /// Whether the account manually approves follow requests.
-    @JsonKey(name: 'locked') required final bool locked,
+    @JsonKey(name: 'locked') final bool? locked,
 
     /// Additional metadata attached to a profile as name-value pairs.
-    @JsonKey(name: 'fields') required final List<AccountField> fields,
+    @JsonKey(name: 'fields') final List<AccountField>? fields,
 
     /// Additional metadata attached to a profile as name-value pairs.
-    @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
+    @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
 
     /// Indicates that the account may perform automated actions, may not be
     /// monitored, or identifies as a robot.
-    @JsonKey(name: 'bot') required final bool bot,
+    @JsonKey(name: 'bot') final bool? bot,
 
     /// Indicates that the account represents a Group actor.
-    @JsonKey(name: 'group') required final bool group,
+    @JsonKey(name: 'group') final bool? group,
 
     /// Whether the account has opted into discovery features such as the
     /// profile directory.
@@ -79,19 +79,19 @@ class Account with _$Account {
     @JsonKey(name: 'limited') final bool? limited,
 
     /// When the account was created.
-    @JsonKey(name: 'created_at') required final DateTime createdAt,
+    @JsonKey(name: 'created_at') final DateTime? createdAt,
 
     /// When the most recent status was posted.
     @JsonKey(name: 'last_status_at') final DateTime? lastStatusAt,
 
     /// How many statuses are attached to this account.
-    @JsonKey(name: 'statuses_count') required final int statusesCount,
+    @JsonKey(name: 'statuses_count') final int? statusesCount,
 
     /// The reported followers of this profile.
-    @JsonKey(name: 'followers_count') required final int followersCount,
+    @JsonKey(name: 'followers_count') final int? followersCount,
 
     /// The reported follows of this profile.
-    @JsonKey(name: 'following_count') required final int followingCount,
+    @JsonKey(name: 'following_count') final int? followingCount,
 
     /// An extra attribute that contains source values to be used with API
     /// methods that verify credentials and update credentials.
@@ -112,10 +112,10 @@ class Account with _$Account {
 class AccountField with _$AccountField {
   const factory AccountField({
     /// The key of a given field's key-value pair.
-    @JsonKey(name: 'name') required final String name,
+    @JsonKey(name: 'name') final String? name,
 
     /// The value associated with the `name` key.
-    @JsonKey(name: 'value') required final String value,
+    @JsonKey(name: 'value') final String? value,
 
     /// Timestamp of when the server verified a URL value for a rel=“me” link.
     @JsonKey(name: 'verified_at') final DateTime? verifiedAt,
@@ -129,29 +129,28 @@ class AccountField with _$AccountField {
 class AccountSource with _$AccountSource {
   const factory AccountSource({
     /// Profile bio, in plain-text instead of in HTML.
-    @JsonKey(name: 'note') required final String note,
+    @JsonKey(name: 'note') final String? note,
 
     /// Metadata about the account.
-    @JsonKey(name: 'fields') required final List<AccountField> fields,
+    @JsonKey(name: 'fields') final List<AccountField>? fields,
 
     /// The default post privacy to be used for new statuses.
-    @JsonKey(name: 'privacy') required final StatusVisibility privacy,
+    @JsonKey(name: 'privacy') final StatusVisibility? privacy,
 
     /// Whether new statuses should be marked sensitive by default.
-    @JsonKey(name: 'sensitive') required final bool sensitive,
+    @JsonKey(name: 'sensitive') final bool? sensitive,
 
     /// The default posting language for new statuses.
-    @JsonKey(name: 'language') required final String language,
+    @JsonKey(name: 'language') final String? language,
 
     /// The number of pending follow requests.
-    @JsonKey(name: 'follow_requests_count')
-    required final int followRequestsCount,
+    @JsonKey(name: 'follow_requests_count') final int? followRequestsCount,
 
     /// The role assigned to the currently authorized user.
-    @JsonKey(name: 'role') required final Role role,
+    @JsonKey(name: 'role') final Role? role,
 
     // TODO(E): Add description.
-    @JsonKey(name: 'indexable') required final bool indexable,
+    @JsonKey(name: 'indexable') final bool? indexable,
   }) = _AccountSource;
 
   factory AccountSource.fromJson(final Map<String, dynamic> json) =>

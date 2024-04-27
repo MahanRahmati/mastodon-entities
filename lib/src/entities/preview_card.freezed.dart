@@ -22,47 +22,47 @@ PreviewCard _$PreviewCardFromJson(Map<String, dynamic> json) {
 mixin _$PreviewCard {
   /// Location of linked resource.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// Title of linked resource.
   @JsonKey(name: 'title')
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
 
   /// Description of preview.
   @JsonKey(name: 'description')
-  String get description => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
 
   /// The type of the preview card.
   @JsonKey(name: 'type')
-  PreviewCardType get type => throw _privateConstructorUsedError;
+  PreviewCardType? get type => throw _privateConstructorUsedError;
 
   /// The author of the original resource.
   @JsonKey(name: 'author_name')
-  String get authorName => throw _privateConstructorUsedError;
+  String? get authorName => throw _privateConstructorUsedError;
 
   /// A link to the author of the original resource.
   @JsonKey(name: 'author_url')
-  String get authorUrl => throw _privateConstructorUsedError;
+  String? get authorUrl => throw _privateConstructorUsedError;
 
   /// The provider of the original resource.
   @JsonKey(name: 'provider_name')
-  String get providerName => throw _privateConstructorUsedError;
+  String? get providerName => throw _privateConstructorUsedError;
 
   /// A link to the provider of the original resource.
   @JsonKey(name: 'provider_url')
-  String get providerUrl => throw _privateConstructorUsedError;
+  String? get providerUrl => throw _privateConstructorUsedError;
 
   /// HTML to be used for generating the preview card.
   @JsonKey(name: 'html')
-  String get html => throw _privateConstructorUsedError;
+  String? get html => throw _privateConstructorUsedError;
 
   /// Width of preview, in pixels.
   @JsonKey(name: 'width')
-  int get width => throw _privateConstructorUsedError;
+  int? get width => throw _privateConstructorUsedError;
 
   /// Height of preview, in pixels.
   @JsonKey(name: 'height')
-  int get height => throw _privateConstructorUsedError;
+  int? get height => throw _privateConstructorUsedError;
 
   /// Preview thumbnail.
   @JsonKey(name: 'image')
@@ -70,7 +70,7 @@ mixin _$PreviewCard {
 
   /// Used for photo embeds, instead of custom [html].
   @JsonKey(name: 'embed_url')
-  String get embedUrl => throw _privateConstructorUsedError;
+  String? get embedUrl => throw _privateConstructorUsedError;
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
@@ -90,19 +90,19 @@ abstract class $PreviewCardCopyWith<$Res> {
       _$PreviewCardCopyWithImpl<$Res, PreviewCard>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'url') String url,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'description') String description,
-      @JsonKey(name: 'type') PreviewCardType type,
-      @JsonKey(name: 'author_name') String authorName,
-      @JsonKey(name: 'author_url') String authorUrl,
-      @JsonKey(name: 'provider_name') String providerName,
-      @JsonKey(name: 'provider_url') String providerUrl,
-      @JsonKey(name: 'html') String html,
-      @JsonKey(name: 'width') int width,
-      @JsonKey(name: 'height') int height,
+      {@JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'type') PreviewCardType? type,
+      @JsonKey(name: 'author_name') String? authorName,
+      @JsonKey(name: 'author_url') String? authorUrl,
+      @JsonKey(name: 'provider_name') String? providerName,
+      @JsonKey(name: 'provider_url') String? providerUrl,
+      @JsonKey(name: 'html') String? html,
+      @JsonKey(name: 'width') int? width,
+      @JsonKey(name: 'height') int? height,
       @JsonKey(name: 'image') String? image,
-      @JsonKey(name: 'embed_url') String embedUrl,
+      @JsonKey(name: 'embed_url') String? embedUrl,
       @JsonKey(name: 'blurhash') String? blurhash});
 }
 
@@ -119,74 +119,74 @@ class _$PreviewCardCopyWithImpl<$Res, $Val extends PreviewCard>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = null,
-    Object? title = null,
-    Object? description = null,
-    Object? type = null,
-    Object? authorName = null,
-    Object? authorUrl = null,
-    Object? providerName = null,
-    Object? providerUrl = null,
-    Object? html = null,
-    Object? width = null,
-    Object? height = null,
+    Object? url = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? type = freezed,
+    Object? authorName = freezed,
+    Object? authorUrl = freezed,
+    Object? providerName = freezed,
+    Object? providerUrl = freezed,
+    Object? html = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
     Object? image = freezed,
-    Object? embedUrl = null,
+    Object? embedUrl = freezed,
     Object? blurhash = freezed,
   }) {
     return _then(_value.copyWith(
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PreviewCardType,
-      authorName: null == authorName
+              as PreviewCardType?,
+      authorName: freezed == authorName
           ? _value.authorName
           : authorName // ignore: cast_nullable_to_non_nullable
-              as String,
-      authorUrl: null == authorUrl
+              as String?,
+      authorUrl: freezed == authorUrl
           ? _value.authorUrl
           : authorUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      providerName: null == providerName
+              as String?,
+      providerName: freezed == providerName
           ? _value.providerName
           : providerName // ignore: cast_nullable_to_non_nullable
-              as String,
-      providerUrl: null == providerUrl
+              as String?,
+      providerUrl: freezed == providerUrl
           ? _value.providerUrl
           : providerUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      html: null == html
+              as String?,
+      html: freezed == html
           ? _value.html
           : html // ignore: cast_nullable_to_non_nullable
-              as String,
-      width: null == width
+              as String?,
+      width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as int,
-      height: null == height
+              as int?,
+      height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      embedUrl: null == embedUrl
+      embedUrl: freezed == embedUrl
           ? _value.embedUrl
           : embedUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       blurhash: freezed == blurhash
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
@@ -204,19 +204,19 @@ abstract class _$$PreviewCardImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'url') String url,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'description') String description,
-      @JsonKey(name: 'type') PreviewCardType type,
-      @JsonKey(name: 'author_name') String authorName,
-      @JsonKey(name: 'author_url') String authorUrl,
-      @JsonKey(name: 'provider_name') String providerName,
-      @JsonKey(name: 'provider_url') String providerUrl,
-      @JsonKey(name: 'html') String html,
-      @JsonKey(name: 'width') int width,
-      @JsonKey(name: 'height') int height,
+      {@JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'type') PreviewCardType? type,
+      @JsonKey(name: 'author_name') String? authorName,
+      @JsonKey(name: 'author_url') String? authorUrl,
+      @JsonKey(name: 'provider_name') String? providerName,
+      @JsonKey(name: 'provider_url') String? providerUrl,
+      @JsonKey(name: 'html') String? html,
+      @JsonKey(name: 'width') int? width,
+      @JsonKey(name: 'height') int? height,
       @JsonKey(name: 'image') String? image,
-      @JsonKey(name: 'embed_url') String embedUrl,
+      @JsonKey(name: 'embed_url') String? embedUrl,
       @JsonKey(name: 'blurhash') String? blurhash});
 }
 
@@ -231,74 +231,74 @@ class __$$PreviewCardImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = null,
-    Object? title = null,
-    Object? description = null,
-    Object? type = null,
-    Object? authorName = null,
-    Object? authorUrl = null,
-    Object? providerName = null,
-    Object? providerUrl = null,
-    Object? html = null,
-    Object? width = null,
-    Object? height = null,
+    Object? url = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? type = freezed,
+    Object? authorName = freezed,
+    Object? authorUrl = freezed,
+    Object? providerName = freezed,
+    Object? providerUrl = freezed,
+    Object? html = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
     Object? image = freezed,
-    Object? embedUrl = null,
+    Object? embedUrl = freezed,
     Object? blurhash = freezed,
   }) {
     return _then(_$PreviewCardImpl(
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PreviewCardType,
-      authorName: null == authorName
+              as PreviewCardType?,
+      authorName: freezed == authorName
           ? _value.authorName
           : authorName // ignore: cast_nullable_to_non_nullable
-              as String,
-      authorUrl: null == authorUrl
+              as String?,
+      authorUrl: freezed == authorUrl
           ? _value.authorUrl
           : authorUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      providerName: null == providerName
+              as String?,
+      providerName: freezed == providerName
           ? _value.providerName
           : providerName // ignore: cast_nullable_to_non_nullable
-              as String,
-      providerUrl: null == providerUrl
+              as String?,
+      providerUrl: freezed == providerUrl
           ? _value.providerUrl
           : providerUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      html: null == html
+              as String?,
+      html: freezed == html
           ? _value.html
           : html // ignore: cast_nullable_to_non_nullable
-              as String,
-      width: null == width
+              as String?,
+      width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as int,
-      height: null == height
+              as int?,
+      height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      embedUrl: null == embedUrl
+      embedUrl: freezed == embedUrl
           ? _value.embedUrl
           : embedUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       blurhash: freezed == blurhash
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
@@ -311,19 +311,19 @@ class __$$PreviewCardImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PreviewCardImpl implements _PreviewCard {
   const _$PreviewCardImpl(
-      {@JsonKey(name: 'url') required this.url,
-      @JsonKey(name: 'title') required this.title,
-      @JsonKey(name: 'description') required this.description,
-      @JsonKey(name: 'type') required this.type,
-      @JsonKey(name: 'author_name') required this.authorName,
-      @JsonKey(name: 'author_url') required this.authorUrl,
-      @JsonKey(name: 'provider_name') required this.providerName,
-      @JsonKey(name: 'provider_url') required this.providerUrl,
-      @JsonKey(name: 'html') required this.html,
-      @JsonKey(name: 'width') required this.width,
-      @JsonKey(name: 'height') required this.height,
+      {@JsonKey(name: 'url') this.url,
+      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'description') this.description,
+      @JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'author_name') this.authorName,
+      @JsonKey(name: 'author_url') this.authorUrl,
+      @JsonKey(name: 'provider_name') this.providerName,
+      @JsonKey(name: 'provider_url') this.providerUrl,
+      @JsonKey(name: 'html') this.html,
+      @JsonKey(name: 'width') this.width,
+      @JsonKey(name: 'height') this.height,
       @JsonKey(name: 'image') this.image,
-      @JsonKey(name: 'embed_url') required this.embedUrl,
+      @JsonKey(name: 'embed_url') this.embedUrl,
       @JsonKey(name: 'blurhash') this.blurhash});
 
   factory _$PreviewCardImpl.fromJson(Map<String, dynamic> json) =>
@@ -332,57 +332,57 @@ class _$PreviewCardImpl implements _PreviewCard {
   /// Location of linked resource.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   /// Title of linked resource.
   @override
   @JsonKey(name: 'title')
-  final String title;
+  final String? title;
 
   /// Description of preview.
   @override
   @JsonKey(name: 'description')
-  final String description;
+  final String? description;
 
   /// The type of the preview card.
   @override
   @JsonKey(name: 'type')
-  final PreviewCardType type;
+  final PreviewCardType? type;
 
   /// The author of the original resource.
   @override
   @JsonKey(name: 'author_name')
-  final String authorName;
+  final String? authorName;
 
   /// A link to the author of the original resource.
   @override
   @JsonKey(name: 'author_url')
-  final String authorUrl;
+  final String? authorUrl;
 
   /// The provider of the original resource.
   @override
   @JsonKey(name: 'provider_name')
-  final String providerName;
+  final String? providerName;
 
   /// A link to the provider of the original resource.
   @override
   @JsonKey(name: 'provider_url')
-  final String providerUrl;
+  final String? providerUrl;
 
   /// HTML to be used for generating the preview card.
   @override
   @JsonKey(name: 'html')
-  final String html;
+  final String? html;
 
   /// Width of preview, in pixels.
   @override
   @JsonKey(name: 'width')
-  final int width;
+  final int? width;
 
   /// Height of preview, in pixels.
   @override
   @JsonKey(name: 'height')
-  final int height;
+  final int? height;
 
   /// Preview thumbnail.
   @override
@@ -392,7 +392,7 @@ class _$PreviewCardImpl implements _PreviewCard {
   /// Used for photo embeds, instead of custom [html].
   @override
   @JsonKey(name: 'embed_url')
-  final String embedUrl;
+  final String? embedUrl;
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
@@ -468,19 +468,19 @@ class _$PreviewCardImpl implements _PreviewCard {
 
 abstract class _PreviewCard implements PreviewCard {
   const factory _PreviewCard(
-      {@JsonKey(name: 'url') required final String url,
-      @JsonKey(name: 'title') required final String title,
-      @JsonKey(name: 'description') required final String description,
-      @JsonKey(name: 'type') required final PreviewCardType type,
-      @JsonKey(name: 'author_name') required final String authorName,
-      @JsonKey(name: 'author_url') required final String authorUrl,
-      @JsonKey(name: 'provider_name') required final String providerName,
-      @JsonKey(name: 'provider_url') required final String providerUrl,
-      @JsonKey(name: 'html') required final String html,
-      @JsonKey(name: 'width') required final int width,
-      @JsonKey(name: 'height') required final int height,
+      {@JsonKey(name: 'url') final String? url,
+      @JsonKey(name: 'title') final String? title,
+      @JsonKey(name: 'description') final String? description,
+      @JsonKey(name: 'type') final PreviewCardType? type,
+      @JsonKey(name: 'author_name') final String? authorName,
+      @JsonKey(name: 'author_url') final String? authorUrl,
+      @JsonKey(name: 'provider_name') final String? providerName,
+      @JsonKey(name: 'provider_url') final String? providerUrl,
+      @JsonKey(name: 'html') final String? html,
+      @JsonKey(name: 'width') final int? width,
+      @JsonKey(name: 'height') final int? height,
       @JsonKey(name: 'image') final String? image,
-      @JsonKey(name: 'embed_url') required final String embedUrl,
+      @JsonKey(name: 'embed_url') final String? embedUrl,
       @JsonKey(name: 'blurhash') final String? blurhash}) = _$PreviewCardImpl;
 
   factory _PreviewCard.fromJson(Map<String, dynamic> json) =
@@ -490,57 +490,57 @@ abstract class _PreviewCard implements PreviewCard {
 
   /// Location of linked resource.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
 
   /// Title of linked resource.
   @JsonKey(name: 'title')
-  String get title;
+  String? get title;
   @override
 
   /// Description of preview.
   @JsonKey(name: 'description')
-  String get description;
+  String? get description;
   @override
 
   /// The type of the preview card.
   @JsonKey(name: 'type')
-  PreviewCardType get type;
+  PreviewCardType? get type;
   @override
 
   /// The author of the original resource.
   @JsonKey(name: 'author_name')
-  String get authorName;
+  String? get authorName;
   @override
 
   /// A link to the author of the original resource.
   @JsonKey(name: 'author_url')
-  String get authorUrl;
+  String? get authorUrl;
   @override
 
   /// The provider of the original resource.
   @JsonKey(name: 'provider_name')
-  String get providerName;
+  String? get providerName;
   @override
 
   /// A link to the provider of the original resource.
   @JsonKey(name: 'provider_url')
-  String get providerUrl;
+  String? get providerUrl;
   @override
 
   /// HTML to be used for generating the preview card.
   @JsonKey(name: 'html')
-  String get html;
+  String? get html;
   @override
 
   /// Width of preview, in pixels.
   @JsonKey(name: 'width')
-  int get width;
+  int? get width;
   @override
 
   /// Height of preview, in pixels.
   @JsonKey(name: 'height')
-  int get height;
+  int? get height;
   @override
 
   /// Preview thumbnail.
@@ -550,7 +550,7 @@ abstract class _PreviewCard implements PreviewCard {
 
   /// Used for photo embeds, instead of custom [html].
   @JsonKey(name: 'embed_url')
-  String get embedUrl;
+  String? get embedUrl;
   @override
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
@@ -571,47 +571,47 @@ TrendsLink _$TrendsLinkFromJson(Map<String, dynamic> json) {
 mixin _$TrendsLink {
   /// Location of linked resource.
   @JsonKey(name: 'url')
-  String get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// Title of linked resource.
   @JsonKey(name: 'title')
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
 
   /// Description of preview.
   @JsonKey(name: 'description')
-  String get description => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
 
   /// The type of the preview card.
   @JsonKey(name: 'type')
-  PreviewCardType get type => throw _privateConstructorUsedError;
+  PreviewCardType? get type => throw _privateConstructorUsedError;
 
   /// The author of the original resource.
   @JsonKey(name: 'author_name')
-  String get authorName => throw _privateConstructorUsedError;
+  String? get authorName => throw _privateConstructorUsedError;
 
   /// A link to the author of the original resource.
   @JsonKey(name: 'author_url')
-  String get authorUrl => throw _privateConstructorUsedError;
+  String? get authorUrl => throw _privateConstructorUsedError;
 
   /// The provider of the original resource.
   @JsonKey(name: 'provider_name')
-  String get providerName => throw _privateConstructorUsedError;
+  String? get providerName => throw _privateConstructorUsedError;
 
   /// A link to the provider of the original resource.
   @JsonKey(name: 'provider_url')
-  String get providerUrl => throw _privateConstructorUsedError;
+  String? get providerUrl => throw _privateConstructorUsedError;
 
   /// HTML to be used for generating the preview card.
   @JsonKey(name: 'html')
-  String get html => throw _privateConstructorUsedError;
+  String? get html => throw _privateConstructorUsedError;
 
   /// Width of preview, in pixels.
   @JsonKey(name: 'width')
-  int get width => throw _privateConstructorUsedError;
+  int? get width => throw _privateConstructorUsedError;
 
   /// Height of preview, in pixels.
   @JsonKey(name: 'height')
-  int get height => throw _privateConstructorUsedError;
+  int? get height => throw _privateConstructorUsedError;
 
   /// Preview thumbnail.
   @JsonKey(name: 'image')
@@ -619,7 +619,7 @@ mixin _$TrendsLink {
 
   /// Used for photo embeds, instead of custom [html].
   @JsonKey(name: 'embed_url')
-  String get embedUrl => throw _privateConstructorUsedError;
+  String? get embedUrl => throw _privateConstructorUsedError;
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
@@ -628,7 +628,7 @@ mixin _$TrendsLink {
 
   /// Usage statistics for given days (typically the past week).
   @JsonKey(name: 'history')
-  List<TrendsLinkHistory> get history => throw _privateConstructorUsedError;
+  List<TrendsLinkHistory>? get history => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -643,21 +643,21 @@ abstract class $TrendsLinkCopyWith<$Res> {
       _$TrendsLinkCopyWithImpl<$Res, TrendsLink>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'url') String url,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'description') String description,
-      @JsonKey(name: 'type') PreviewCardType type,
-      @JsonKey(name: 'author_name') String authorName,
-      @JsonKey(name: 'author_url') String authorUrl,
-      @JsonKey(name: 'provider_name') String providerName,
-      @JsonKey(name: 'provider_url') String providerUrl,
-      @JsonKey(name: 'html') String html,
-      @JsonKey(name: 'width') int width,
-      @JsonKey(name: 'height') int height,
+      {@JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'type') PreviewCardType? type,
+      @JsonKey(name: 'author_name') String? authorName,
+      @JsonKey(name: 'author_url') String? authorUrl,
+      @JsonKey(name: 'provider_name') String? providerName,
+      @JsonKey(name: 'provider_url') String? providerUrl,
+      @JsonKey(name: 'html') String? html,
+      @JsonKey(name: 'width') int? width,
+      @JsonKey(name: 'height') int? height,
       @JsonKey(name: 'image') String? image,
-      @JsonKey(name: 'embed_url') String embedUrl,
+      @JsonKey(name: 'embed_url') String? embedUrl,
       @JsonKey(name: 'blurhash') String? blurhash,
-      @JsonKey(name: 'history') List<TrendsLinkHistory> history});
+      @JsonKey(name: 'history') List<TrendsLinkHistory>? history});
 }
 
 /// @nodoc
@@ -673,83 +673,83 @@ class _$TrendsLinkCopyWithImpl<$Res, $Val extends TrendsLink>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = null,
-    Object? title = null,
-    Object? description = null,
-    Object? type = null,
-    Object? authorName = null,
-    Object? authorUrl = null,
-    Object? providerName = null,
-    Object? providerUrl = null,
-    Object? html = null,
-    Object? width = null,
-    Object? height = null,
+    Object? url = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? type = freezed,
+    Object? authorName = freezed,
+    Object? authorUrl = freezed,
+    Object? providerName = freezed,
+    Object? providerUrl = freezed,
+    Object? html = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
     Object? image = freezed,
-    Object? embedUrl = null,
+    Object? embedUrl = freezed,
     Object? blurhash = freezed,
-    Object? history = null,
+    Object? history = freezed,
   }) {
     return _then(_value.copyWith(
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PreviewCardType,
-      authorName: null == authorName
+              as PreviewCardType?,
+      authorName: freezed == authorName
           ? _value.authorName
           : authorName // ignore: cast_nullable_to_non_nullable
-              as String,
-      authorUrl: null == authorUrl
+              as String?,
+      authorUrl: freezed == authorUrl
           ? _value.authorUrl
           : authorUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      providerName: null == providerName
+              as String?,
+      providerName: freezed == providerName
           ? _value.providerName
           : providerName // ignore: cast_nullable_to_non_nullable
-              as String,
-      providerUrl: null == providerUrl
+              as String?,
+      providerUrl: freezed == providerUrl
           ? _value.providerUrl
           : providerUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      html: null == html
+              as String?,
+      html: freezed == html
           ? _value.html
           : html // ignore: cast_nullable_to_non_nullable
-              as String,
-      width: null == width
+              as String?,
+      width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as int,
-      height: null == height
+              as int?,
+      height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      embedUrl: null == embedUrl
+      embedUrl: freezed == embedUrl
           ? _value.embedUrl
           : embedUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       blurhash: freezed == blurhash
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
               as String?,
-      history: null == history
+      history: freezed == history
           ? _value.history
           : history // ignore: cast_nullable_to_non_nullable
-              as List<TrendsLinkHistory>,
+              as List<TrendsLinkHistory>?,
     ) as $Val);
   }
 }
@@ -763,21 +763,21 @@ abstract class _$$TrendsLinkImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'url') String url,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'description') String description,
-      @JsonKey(name: 'type') PreviewCardType type,
-      @JsonKey(name: 'author_name') String authorName,
-      @JsonKey(name: 'author_url') String authorUrl,
-      @JsonKey(name: 'provider_name') String providerName,
-      @JsonKey(name: 'provider_url') String providerUrl,
-      @JsonKey(name: 'html') String html,
-      @JsonKey(name: 'width') int width,
-      @JsonKey(name: 'height') int height,
+      {@JsonKey(name: 'url') String? url,
+      @JsonKey(name: 'title') String? title,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'type') PreviewCardType? type,
+      @JsonKey(name: 'author_name') String? authorName,
+      @JsonKey(name: 'author_url') String? authorUrl,
+      @JsonKey(name: 'provider_name') String? providerName,
+      @JsonKey(name: 'provider_url') String? providerUrl,
+      @JsonKey(name: 'html') String? html,
+      @JsonKey(name: 'width') int? width,
+      @JsonKey(name: 'height') int? height,
       @JsonKey(name: 'image') String? image,
-      @JsonKey(name: 'embed_url') String embedUrl,
+      @JsonKey(name: 'embed_url') String? embedUrl,
       @JsonKey(name: 'blurhash') String? blurhash,
-      @JsonKey(name: 'history') List<TrendsLinkHistory> history});
+      @JsonKey(name: 'history') List<TrendsLinkHistory>? history});
 }
 
 /// @nodoc
@@ -791,83 +791,83 @@ class __$$TrendsLinkImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = null,
-    Object? title = null,
-    Object? description = null,
-    Object? type = null,
-    Object? authorName = null,
-    Object? authorUrl = null,
-    Object? providerName = null,
-    Object? providerUrl = null,
-    Object? html = null,
-    Object? width = null,
-    Object? height = null,
+    Object? url = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? type = freezed,
+    Object? authorName = freezed,
+    Object? authorUrl = freezed,
+    Object? providerName = freezed,
+    Object? providerUrl = freezed,
+    Object? html = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
     Object? image = freezed,
-    Object? embedUrl = null,
+    Object? embedUrl = freezed,
     Object? blurhash = freezed,
-    Object? history = null,
+    Object? history = freezed,
   }) {
     return _then(_$TrendsLinkImpl(
-      url: null == url
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as String?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PreviewCardType,
-      authorName: null == authorName
+              as PreviewCardType?,
+      authorName: freezed == authorName
           ? _value.authorName
           : authorName // ignore: cast_nullable_to_non_nullable
-              as String,
-      authorUrl: null == authorUrl
+              as String?,
+      authorUrl: freezed == authorUrl
           ? _value.authorUrl
           : authorUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      providerName: null == providerName
+              as String?,
+      providerName: freezed == providerName
           ? _value.providerName
           : providerName // ignore: cast_nullable_to_non_nullable
-              as String,
-      providerUrl: null == providerUrl
+              as String?,
+      providerUrl: freezed == providerUrl
           ? _value.providerUrl
           : providerUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      html: null == html
+              as String?,
+      html: freezed == html
           ? _value.html
           : html // ignore: cast_nullable_to_non_nullable
-              as String,
-      width: null == width
+              as String?,
+      width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as int,
-      height: null == height
+              as int?,
+      height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      embedUrl: null == embedUrl
+      embedUrl: freezed == embedUrl
           ? _value.embedUrl
           : embedUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       blurhash: freezed == blurhash
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
               as String?,
-      history: null == history
+      history: freezed == history
           ? _value._history
           : history // ignore: cast_nullable_to_non_nullable
-              as List<TrendsLinkHistory>,
+              as List<TrendsLinkHistory>?,
     ));
   }
 }
@@ -876,21 +876,21 @@ class __$$TrendsLinkImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TrendsLinkImpl implements _TrendsLink {
   const _$TrendsLinkImpl(
-      {@JsonKey(name: 'url') required this.url,
-      @JsonKey(name: 'title') required this.title,
-      @JsonKey(name: 'description') required this.description,
-      @JsonKey(name: 'type') required this.type,
-      @JsonKey(name: 'author_name') required this.authorName,
-      @JsonKey(name: 'author_url') required this.authorUrl,
-      @JsonKey(name: 'provider_name') required this.providerName,
-      @JsonKey(name: 'provider_url') required this.providerUrl,
-      @JsonKey(name: 'html') required this.html,
-      @JsonKey(name: 'width') required this.width,
-      @JsonKey(name: 'height') required this.height,
+      {@JsonKey(name: 'url') this.url,
+      @JsonKey(name: 'title') this.title,
+      @JsonKey(name: 'description') this.description,
+      @JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'author_name') this.authorName,
+      @JsonKey(name: 'author_url') this.authorUrl,
+      @JsonKey(name: 'provider_name') this.providerName,
+      @JsonKey(name: 'provider_url') this.providerUrl,
+      @JsonKey(name: 'html') this.html,
+      @JsonKey(name: 'width') this.width,
+      @JsonKey(name: 'height') this.height,
       @JsonKey(name: 'image') this.image,
-      @JsonKey(name: 'embed_url') required this.embedUrl,
+      @JsonKey(name: 'embed_url') this.embedUrl,
       @JsonKey(name: 'blurhash') this.blurhash,
-      @JsonKey(name: 'history') required final List<TrendsLinkHistory> history})
+      @JsonKey(name: 'history') final List<TrendsLinkHistory>? history})
       : _history = history;
 
   factory _$TrendsLinkImpl.fromJson(Map<String, dynamic> json) =>
@@ -899,57 +899,57 @@ class _$TrendsLinkImpl implements _TrendsLink {
   /// Location of linked resource.
   @override
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   /// Title of linked resource.
   @override
   @JsonKey(name: 'title')
-  final String title;
+  final String? title;
 
   /// Description of preview.
   @override
   @JsonKey(name: 'description')
-  final String description;
+  final String? description;
 
   /// The type of the preview card.
   @override
   @JsonKey(name: 'type')
-  final PreviewCardType type;
+  final PreviewCardType? type;
 
   /// The author of the original resource.
   @override
   @JsonKey(name: 'author_name')
-  final String authorName;
+  final String? authorName;
 
   /// A link to the author of the original resource.
   @override
   @JsonKey(name: 'author_url')
-  final String authorUrl;
+  final String? authorUrl;
 
   /// The provider of the original resource.
   @override
   @JsonKey(name: 'provider_name')
-  final String providerName;
+  final String? providerName;
 
   /// A link to the provider of the original resource.
   @override
   @JsonKey(name: 'provider_url')
-  final String providerUrl;
+  final String? providerUrl;
 
   /// HTML to be used for generating the preview card.
   @override
   @JsonKey(name: 'html')
-  final String html;
+  final String? html;
 
   /// Width of preview, in pixels.
   @override
   @JsonKey(name: 'width')
-  final int width;
+  final int? width;
 
   /// Height of preview, in pixels.
   @override
   @JsonKey(name: 'height')
-  final int height;
+  final int? height;
 
   /// Preview thumbnail.
   @override
@@ -959,7 +959,7 @@ class _$TrendsLinkImpl implements _TrendsLink {
   /// Used for photo embeds, instead of custom [html].
   @override
   @JsonKey(name: 'embed_url')
-  final String embedUrl;
+  final String? embedUrl;
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
@@ -968,15 +968,17 @@ class _$TrendsLinkImpl implements _TrendsLink {
   final String? blurhash;
 
   /// Usage statistics for given days (typically the past week).
-  final List<TrendsLinkHistory> _history;
+  final List<TrendsLinkHistory>? _history;
 
   /// Usage statistics for given days (typically the past week).
   @override
   @JsonKey(name: 'history')
-  List<TrendsLinkHistory> get history {
+  List<TrendsLinkHistory>? get history {
+    final value = _history;
+    if (value == null) return null;
     if (_history is EqualUnmodifiableListView) return _history;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_history);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -1049,22 +1051,22 @@ class _$TrendsLinkImpl implements _TrendsLink {
 
 abstract class _TrendsLink implements TrendsLink {
   const factory _TrendsLink(
-      {@JsonKey(name: 'url') required final String url,
-      @JsonKey(name: 'title') required final String title,
-      @JsonKey(name: 'description') required final String description,
-      @JsonKey(name: 'type') required final PreviewCardType type,
-      @JsonKey(name: 'author_name') required final String authorName,
-      @JsonKey(name: 'author_url') required final String authorUrl,
-      @JsonKey(name: 'provider_name') required final String providerName,
-      @JsonKey(name: 'provider_url') required final String providerUrl,
-      @JsonKey(name: 'html') required final String html,
-      @JsonKey(name: 'width') required final int width,
-      @JsonKey(name: 'height') required final int height,
-      @JsonKey(name: 'image') final String? image,
-      @JsonKey(name: 'embed_url') required final String embedUrl,
-      @JsonKey(name: 'blurhash') final String? blurhash,
-      @JsonKey(name: 'history')
-      required final List<TrendsLinkHistory> history}) = _$TrendsLinkImpl;
+          {@JsonKey(name: 'url') final String? url,
+          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'description') final String? description,
+          @JsonKey(name: 'type') final PreviewCardType? type,
+          @JsonKey(name: 'author_name') final String? authorName,
+          @JsonKey(name: 'author_url') final String? authorUrl,
+          @JsonKey(name: 'provider_name') final String? providerName,
+          @JsonKey(name: 'provider_url') final String? providerUrl,
+          @JsonKey(name: 'html') final String? html,
+          @JsonKey(name: 'width') final int? width,
+          @JsonKey(name: 'height') final int? height,
+          @JsonKey(name: 'image') final String? image,
+          @JsonKey(name: 'embed_url') final String? embedUrl,
+          @JsonKey(name: 'blurhash') final String? blurhash,
+          @JsonKey(name: 'history') final List<TrendsLinkHistory>? history}) =
+      _$TrendsLinkImpl;
 
   factory _TrendsLink.fromJson(Map<String, dynamic> json) =
       _$TrendsLinkImpl.fromJson;
@@ -1073,57 +1075,57 @@ abstract class _TrendsLink implements TrendsLink {
 
   /// Location of linked resource.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url;
   @override
 
   /// Title of linked resource.
   @JsonKey(name: 'title')
-  String get title;
+  String? get title;
   @override
 
   /// Description of preview.
   @JsonKey(name: 'description')
-  String get description;
+  String? get description;
   @override
 
   /// The type of the preview card.
   @JsonKey(name: 'type')
-  PreviewCardType get type;
+  PreviewCardType? get type;
   @override
 
   /// The author of the original resource.
   @JsonKey(name: 'author_name')
-  String get authorName;
+  String? get authorName;
   @override
 
   /// A link to the author of the original resource.
   @JsonKey(name: 'author_url')
-  String get authorUrl;
+  String? get authorUrl;
   @override
 
   /// The provider of the original resource.
   @JsonKey(name: 'provider_name')
-  String get providerName;
+  String? get providerName;
   @override
 
   /// A link to the provider of the original resource.
   @JsonKey(name: 'provider_url')
-  String get providerUrl;
+  String? get providerUrl;
   @override
 
   /// HTML to be used for generating the preview card.
   @JsonKey(name: 'html')
-  String get html;
+  String? get html;
   @override
 
   /// Width of preview, in pixels.
   @JsonKey(name: 'width')
-  int get width;
+  int? get width;
   @override
 
   /// Height of preview, in pixels.
   @JsonKey(name: 'height')
-  int get height;
+  int? get height;
   @override
 
   /// Preview thumbnail.
@@ -1133,7 +1135,7 @@ abstract class _TrendsLink implements TrendsLink {
 
   /// Used for photo embeds, instead of custom [html].
   @JsonKey(name: 'embed_url')
-  String get embedUrl;
+  String? get embedUrl;
   @override
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
@@ -1144,7 +1146,7 @@ abstract class _TrendsLink implements TrendsLink {
 
   /// Usage statistics for given days (typically the past week).
   @JsonKey(name: 'history')
-  List<TrendsLinkHistory> get history;
+  List<TrendsLinkHistory>? get history;
   @override
   @JsonKey(ignore: true)
   _$$TrendsLinkImplCopyWith<_$TrendsLinkImpl> get copyWith =>
@@ -1159,15 +1161,15 @@ TrendsLinkHistory _$TrendsLinkHistoryFromJson(Map<String, dynamic> json) {
 mixin _$TrendsLinkHistory {
   /// UNIX timestamp on midnight of the given day.
   @JsonKey(name: 'day')
-  String get day => throw _privateConstructorUsedError;
+  String? get day => throw _privateConstructorUsedError;
 
   /// The counted accounts using the link within that day.
   @JsonKey(name: 'uses')
-  String get uses => throw _privateConstructorUsedError;
+  String? get uses => throw _privateConstructorUsedError;
 
   /// The counted statuses using the link within that day.
   @JsonKey(name: 'accounts')
-  String get accounts => throw _privateConstructorUsedError;
+  String? get accounts => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1182,9 +1184,9 @@ abstract class $TrendsLinkHistoryCopyWith<$Res> {
       _$TrendsLinkHistoryCopyWithImpl<$Res, TrendsLinkHistory>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'day') String day,
-      @JsonKey(name: 'uses') String uses,
-      @JsonKey(name: 'accounts') String accounts});
+      {@JsonKey(name: 'day') String? day,
+      @JsonKey(name: 'uses') String? uses,
+      @JsonKey(name: 'accounts') String? accounts});
 }
 
 /// @nodoc
@@ -1200,23 +1202,23 @@ class _$TrendsLinkHistoryCopyWithImpl<$Res, $Val extends TrendsLinkHistory>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? day = null,
-    Object? uses = null,
-    Object? accounts = null,
+    Object? day = freezed,
+    Object? uses = freezed,
+    Object? accounts = freezed,
   }) {
     return _then(_value.copyWith(
-      day: null == day
+      day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as String,
-      uses: null == uses
+              as String?,
+      uses: freezed == uses
           ? _value.uses
           : uses // ignore: cast_nullable_to_non_nullable
-              as String,
-      accounts: null == accounts
+              as String?,
+      accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -1230,9 +1232,9 @@ abstract class _$$TrendsLinkHistoryImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'day') String day,
-      @JsonKey(name: 'uses') String uses,
-      @JsonKey(name: 'accounts') String accounts});
+      {@JsonKey(name: 'day') String? day,
+      @JsonKey(name: 'uses') String? uses,
+      @JsonKey(name: 'accounts') String? accounts});
 }
 
 /// @nodoc
@@ -1246,23 +1248,23 @@ class __$$TrendsLinkHistoryImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? day = null,
-    Object? uses = null,
-    Object? accounts = null,
+    Object? day = freezed,
+    Object? uses = freezed,
+    Object? accounts = freezed,
   }) {
     return _then(_$TrendsLinkHistoryImpl(
-      day: null == day
+      day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as String,
-      uses: null == uses
+              as String?,
+      uses: freezed == uses
           ? _value.uses
           : uses // ignore: cast_nullable_to_non_nullable
-              as String,
-      accounts: null == accounts
+              as String?,
+      accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -1271,9 +1273,9 @@ class __$$TrendsLinkHistoryImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TrendsLinkHistoryImpl implements _TrendsLinkHistory {
   const _$TrendsLinkHistoryImpl(
-      {@JsonKey(name: 'day') required this.day,
-      @JsonKey(name: 'uses') required this.uses,
-      @JsonKey(name: 'accounts') required this.accounts});
+      {@JsonKey(name: 'day') this.day,
+      @JsonKey(name: 'uses') this.uses,
+      @JsonKey(name: 'accounts') this.accounts});
 
   factory _$TrendsLinkHistoryImpl.fromJson(Map<String, dynamic> json) =>
       _$$TrendsLinkHistoryImplFromJson(json);
@@ -1281,17 +1283,17 @@ class _$TrendsLinkHistoryImpl implements _TrendsLinkHistory {
   /// UNIX timestamp on midnight of the given day.
   @override
   @JsonKey(name: 'day')
-  final String day;
+  final String? day;
 
   /// The counted accounts using the link within that day.
   @override
   @JsonKey(name: 'uses')
-  final String uses;
+  final String? uses;
 
   /// The counted statuses using the link within that day.
   @override
   @JsonKey(name: 'accounts')
-  final String accounts;
+  final String? accounts;
 
   @override
   String toString() {
@@ -1330,9 +1332,9 @@ class _$TrendsLinkHistoryImpl implements _TrendsLinkHistory {
 
 abstract class _TrendsLinkHistory implements TrendsLinkHistory {
   const factory _TrendsLinkHistory(
-          {@JsonKey(name: 'day') required final String day,
-          @JsonKey(name: 'uses') required final String uses,
-          @JsonKey(name: 'accounts') required final String accounts}) =
+          {@JsonKey(name: 'day') final String? day,
+          @JsonKey(name: 'uses') final String? uses,
+          @JsonKey(name: 'accounts') final String? accounts}) =
       _$TrendsLinkHistoryImpl;
 
   factory _TrendsLinkHistory.fromJson(Map<String, dynamic> json) =
@@ -1342,17 +1344,17 @@ abstract class _TrendsLinkHistory implements TrendsLinkHistory {
 
   /// UNIX timestamp on midnight of the given day.
   @JsonKey(name: 'day')
-  String get day;
+  String? get day;
   @override
 
   /// The counted accounts using the link within that day.
   @JsonKey(name: 'uses')
-  String get uses;
+  String? get uses;
   @override
 
   /// The counted statuses using the link within that day.
   @JsonKey(name: 'accounts')
-  String get accounts;
+  String? get accounts;
   @override
   @JsonKey(ignore: true)
   _$$TrendsLinkHistoryImplCopyWith<_$TrendsLinkHistoryImpl> get copyWith =>

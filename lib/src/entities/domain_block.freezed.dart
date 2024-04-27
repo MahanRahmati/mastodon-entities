@@ -23,15 +23,15 @@ mixin _$DomainBlock {
   /// The domain which is blocked. This may be obfuscated or partially
   /// censored.
   @JsonKey(name: 'domain')
-  String get domain => throw _privateConstructorUsedError;
+  String? get domain => throw _privateConstructorUsedError;
 
   /// The SHA256 hash digest of the domain string.
   @JsonKey(name: 'digest')
-  String get digest => throw _privateConstructorUsedError;
+  String? get digest => throw _privateConstructorUsedError;
 
   /// The level to which the domain is blocked.
   @JsonKey(name: 'severity')
-  DomainBlockSeverity get severity => throw _privateConstructorUsedError;
+  DomainBlockSeverity? get severity => throw _privateConstructorUsedError;
 
   /// An optional reason for the domain block.
   @JsonKey(name: 'comment')
@@ -50,9 +50,9 @@ abstract class $DomainBlockCopyWith<$Res> {
       _$DomainBlockCopyWithImpl<$Res, DomainBlock>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'domain') String domain,
-      @JsonKey(name: 'digest') String digest,
-      @JsonKey(name: 'severity') DomainBlockSeverity severity,
+      {@JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'digest') String? digest,
+      @JsonKey(name: 'severity') DomainBlockSeverity? severity,
       @JsonKey(name: 'comment') String? comment});
 }
 
@@ -69,24 +69,24 @@ class _$DomainBlockCopyWithImpl<$Res, $Val extends DomainBlock>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? domain = null,
-    Object? digest = null,
-    Object? severity = null,
+    Object? domain = freezed,
+    Object? digest = freezed,
+    Object? severity = freezed,
     Object? comment = freezed,
   }) {
     return _then(_value.copyWith(
-      domain: null == domain
+      domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as String,
-      digest: null == digest
+              as String?,
+      digest: freezed == digest
           ? _value.digest
           : digest // ignore: cast_nullable_to_non_nullable
-              as String,
-      severity: null == severity
+              as String?,
+      severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as DomainBlockSeverity,
+              as DomainBlockSeverity?,
       comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
@@ -104,9 +104,9 @@ abstract class _$$DomainBlockImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'domain') String domain,
-      @JsonKey(name: 'digest') String digest,
-      @JsonKey(name: 'severity') DomainBlockSeverity severity,
+      {@JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'digest') String? digest,
+      @JsonKey(name: 'severity') DomainBlockSeverity? severity,
       @JsonKey(name: 'comment') String? comment});
 }
 
@@ -121,24 +121,24 @@ class __$$DomainBlockImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? domain = null,
-    Object? digest = null,
-    Object? severity = null,
+    Object? domain = freezed,
+    Object? digest = freezed,
+    Object? severity = freezed,
     Object? comment = freezed,
   }) {
     return _then(_$DomainBlockImpl(
-      domain: null == domain
+      domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
-              as String,
-      digest: null == digest
+              as String?,
+      digest: freezed == digest
           ? _value.digest
           : digest // ignore: cast_nullable_to_non_nullable
-              as String,
-      severity: null == severity
+              as String?,
+      severity: freezed == severity
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as DomainBlockSeverity,
+              as DomainBlockSeverity?,
       comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
@@ -151,9 +151,9 @@ class __$$DomainBlockImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DomainBlockImpl implements _DomainBlock {
   const _$DomainBlockImpl(
-      {@JsonKey(name: 'domain') required this.domain,
-      @JsonKey(name: 'digest') required this.digest,
-      @JsonKey(name: 'severity') required this.severity,
+      {@JsonKey(name: 'domain') this.domain,
+      @JsonKey(name: 'digest') this.digest,
+      @JsonKey(name: 'severity') this.severity,
       @JsonKey(name: 'comment') this.comment});
 
   factory _$DomainBlockImpl.fromJson(Map<String, dynamic> json) =>
@@ -163,17 +163,17 @@ class _$DomainBlockImpl implements _DomainBlock {
   /// censored.
   @override
   @JsonKey(name: 'domain')
-  final String domain;
+  final String? domain;
 
   /// The SHA256 hash digest of the domain string.
   @override
   @JsonKey(name: 'digest')
-  final String digest;
+  final String? digest;
 
   /// The level to which the domain is blocked.
   @override
   @JsonKey(name: 'severity')
-  final DomainBlockSeverity severity;
+  final DomainBlockSeverity? severity;
 
   /// An optional reason for the domain block.
   @override
@@ -218,9 +218,9 @@ class _$DomainBlockImpl implements _DomainBlock {
 
 abstract class _DomainBlock implements DomainBlock {
   const factory _DomainBlock(
-      {@JsonKey(name: 'domain') required final String domain,
-      @JsonKey(name: 'digest') required final String digest,
-      @JsonKey(name: 'severity') required final DomainBlockSeverity severity,
+      {@JsonKey(name: 'domain') final String? domain,
+      @JsonKey(name: 'digest') final String? digest,
+      @JsonKey(name: 'severity') final DomainBlockSeverity? severity,
       @JsonKey(name: 'comment') final String? comment}) = _$DomainBlockImpl;
 
   factory _DomainBlock.fromJson(Map<String, dynamic> json) =
@@ -231,17 +231,17 @@ abstract class _DomainBlock implements DomainBlock {
   /// The domain which is blocked. This may be obfuscated or partially
   /// censored.
   @JsonKey(name: 'domain')
-  String get domain;
+  String? get domain;
   @override
 
   /// The SHA256 hash digest of the domain string.
   @JsonKey(name: 'digest')
-  String get digest;
+  String? get digest;
   @override
 
   /// The level to which the domain is blocked.
   @JsonKey(name: 'severity')
-  DomainBlockSeverity get severity;
+  DomainBlockSeverity? get severity;
   @override
 
   /// An optional reason for the domain block.

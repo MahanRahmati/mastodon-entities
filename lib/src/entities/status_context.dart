@@ -11,10 +11,10 @@ part 'status_context.g.dart';
 class StatusContext with _$StatusContext {
   const factory StatusContext({
     /// Parents in the thread.
-    @JsonKey(name: 'ancestors') required final List<Status> ancestors,
+    @JsonKey(name: 'ancestors') final List<Status>? ancestors,
 
     /// Children in the thread.
-    @JsonKey(name: 'descendants') required final List<Status> descendants,
+    @JsonKey(name: 'descendants') final List<Status>? descendants,
   }) = _StatusContext;
 
   factory StatusContext.fromJson(final Map<String, dynamic> json) =>

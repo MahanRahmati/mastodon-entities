@@ -9,10 +9,10 @@ class Reaction with _$Reaction {
   const factory Reaction({
     /// The emoji used for the reaction. Either a unicode emoji, or a custom
     /// emoji's shortcode.
-    @JsonKey(name: 'name') required final String name,
+    @JsonKey(name: 'name') final String? name,
 
     /// The total number of users who have added this reaction.
-    @JsonKey(name: 'count') required final int count,
+    @JsonKey(name: 'count') final int? count,
 
     /// If there is a currently authorized user: Have you added this reaction?
     @JsonKey(name: 'me') final bool? me,

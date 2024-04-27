@@ -22,7 +22,7 @@ Poll _$PollFromJson(Map<String, dynamic> json) {
 mixin _$Poll {
   /// The ID of the poll in the database.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// When the poll ends.
   @JsonKey(name: 'expires_at')
@@ -30,15 +30,15 @@ mixin _$Poll {
 
   /// Is the poll currently expired?
   @JsonKey(name: 'expired')
-  bool get expired => throw _privateConstructorUsedError;
+  bool? get expired => throw _privateConstructorUsedError;
 
   /// Does the poll allow multiple-choice answers?
   @JsonKey(name: 'multiple')
-  bool get multiple => throw _privateConstructorUsedError;
+  bool? get multiple => throw _privateConstructorUsedError;
 
   /// How many votes have been received.
   @JsonKey(name: 'votes_count')
-  int get votesCount => throw _privateConstructorUsedError;
+  int? get votesCount => throw _privateConstructorUsedError;
 
   /// How many unique accounts have voted on a multiple-choice poll.
   @JsonKey(name: 'voters_count')
@@ -50,7 +50,7 @@ mixin _$Poll {
 
   /// Custom emoji to be used for rendering poll options.
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis => throw _privateConstructorUsedError;
+  List<CustomEmoji>? get emojis => throw _privateConstructorUsedError;
 
   /// When called with a user token, has the authorized user voted?
   @JsonKey(name: 'voted')
@@ -72,14 +72,14 @@ abstract class $PollCopyWith<$Res> {
       _$PollCopyWithImpl<$Res, Poll>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
+      {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'expires_at') DateTime? expiresAt,
-      @JsonKey(name: 'expired') bool expired,
-      @JsonKey(name: 'multiple') bool multiple,
-      @JsonKey(name: 'votes_count') int votesCount,
+      @JsonKey(name: 'expired') bool? expired,
+      @JsonKey(name: 'multiple') bool? multiple,
+      @JsonKey(name: 'votes_count') int? votesCount,
       @JsonKey(name: 'voters_count') int? votersCount,
       @JsonKey(name: 'options') List<PollOption>? options,
-      @JsonKey(name: 'emojis') List<CustomEmoji> emojis,
+      @JsonKey(name: 'emojis') List<CustomEmoji>? emojis,
       @JsonKey(name: 'voted') bool? voted,
       @JsonKey(name: 'own_votes') List<int>? ownVotes});
 }
@@ -97,38 +97,38 @@ class _$PollCopyWithImpl<$Res, $Val extends Poll>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? expiresAt = freezed,
-    Object? expired = null,
-    Object? multiple = null,
-    Object? votesCount = null,
+    Object? expired = freezed,
+    Object? multiple = freezed,
+    Object? votesCount = freezed,
     Object? votersCount = freezed,
     Object? options = freezed,
-    Object? emojis = null,
+    Object? emojis = freezed,
     Object? voted = freezed,
     Object? ownVotes = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       expiresAt: freezed == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      expired: null == expired
+      expired: freezed == expired
           ? _value.expired
           : expired // ignore: cast_nullable_to_non_nullable
-              as bool,
-      multiple: null == multiple
+              as bool?,
+      multiple: freezed == multiple
           ? _value.multiple
           : multiple // ignore: cast_nullable_to_non_nullable
-              as bool,
-      votesCount: null == votesCount
+              as bool?,
+      votesCount: freezed == votesCount
           ? _value.votesCount
           : votesCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       votersCount: freezed == votersCount
           ? _value.votersCount
           : votersCount // ignore: cast_nullable_to_non_nullable
@@ -137,10 +137,10 @@ class _$PollCopyWithImpl<$Res, $Val extends Poll>
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
               as List<PollOption>?,
-      emojis: null == emojis
+      emojis: freezed == emojis
           ? _value.emojis
           : emojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmoji>,
+              as List<CustomEmoji>?,
       voted: freezed == voted
           ? _value.voted
           : voted // ignore: cast_nullable_to_non_nullable
@@ -161,14 +161,14 @@ abstract class _$$PollImplCopyWith<$Res> implements $PollCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
+      {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'expires_at') DateTime? expiresAt,
-      @JsonKey(name: 'expired') bool expired,
-      @JsonKey(name: 'multiple') bool multiple,
-      @JsonKey(name: 'votes_count') int votesCount,
+      @JsonKey(name: 'expired') bool? expired,
+      @JsonKey(name: 'multiple') bool? multiple,
+      @JsonKey(name: 'votes_count') int? votesCount,
       @JsonKey(name: 'voters_count') int? votersCount,
       @JsonKey(name: 'options') List<PollOption>? options,
-      @JsonKey(name: 'emojis') List<CustomEmoji> emojis,
+      @JsonKey(name: 'emojis') List<CustomEmoji>? emojis,
       @JsonKey(name: 'voted') bool? voted,
       @JsonKey(name: 'own_votes') List<int>? ownVotes});
 }
@@ -183,38 +183,38 @@ class __$$PollImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? expiresAt = freezed,
-    Object? expired = null,
-    Object? multiple = null,
-    Object? votesCount = null,
+    Object? expired = freezed,
+    Object? multiple = freezed,
+    Object? votesCount = freezed,
     Object? votersCount = freezed,
     Object? options = freezed,
-    Object? emojis = null,
+    Object? emojis = freezed,
     Object? voted = freezed,
     Object? ownVotes = freezed,
   }) {
     return _then(_$PollImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       expiresAt: freezed == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      expired: null == expired
+      expired: freezed == expired
           ? _value.expired
           : expired // ignore: cast_nullable_to_non_nullable
-              as bool,
-      multiple: null == multiple
+              as bool?,
+      multiple: freezed == multiple
           ? _value.multiple
           : multiple // ignore: cast_nullable_to_non_nullable
-              as bool,
-      votesCount: null == votesCount
+              as bool?,
+      votesCount: freezed == votesCount
           ? _value.votesCount
           : votesCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       votersCount: freezed == votersCount
           ? _value.votersCount
           : votersCount // ignore: cast_nullable_to_non_nullable
@@ -223,10 +223,10 @@ class __$$PollImplCopyWithImpl<$Res>
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
               as List<PollOption>?,
-      emojis: null == emojis
+      emojis: freezed == emojis
           ? _value._emojis
           : emojis // ignore: cast_nullable_to_non_nullable
-              as List<CustomEmoji>,
+              as List<CustomEmoji>?,
       voted: freezed == voted
           ? _value.voted
           : voted // ignore: cast_nullable_to_non_nullable
@@ -243,14 +243,14 @@ class __$$PollImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PollImpl implements _Poll {
   const _$PollImpl(
-      {@JsonKey(name: 'id') required this.id,
+      {@JsonKey(name: 'id') this.id,
       @JsonKey(name: 'expires_at') this.expiresAt,
-      @JsonKey(name: 'expired') required this.expired,
-      @JsonKey(name: 'multiple') required this.multiple,
-      @JsonKey(name: 'votes_count') required this.votesCount,
+      @JsonKey(name: 'expired') this.expired,
+      @JsonKey(name: 'multiple') this.multiple,
+      @JsonKey(name: 'votes_count') this.votesCount,
       @JsonKey(name: 'voters_count') this.votersCount,
       @JsonKey(name: 'options') final List<PollOption>? options,
-      @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
+      @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
       @JsonKey(name: 'voted') this.voted,
       @JsonKey(name: 'own_votes') final List<int>? ownVotes})
       : _options = options,
@@ -263,7 +263,7 @@ class _$PollImpl implements _Poll {
   /// The ID of the poll in the database.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// When the poll ends.
   @override
@@ -273,17 +273,17 @@ class _$PollImpl implements _Poll {
   /// Is the poll currently expired?
   @override
   @JsonKey(name: 'expired')
-  final bool expired;
+  final bool? expired;
 
   /// Does the poll allow multiple-choice answers?
   @override
   @JsonKey(name: 'multiple')
-  final bool multiple;
+  final bool? multiple;
 
   /// How many votes have been received.
   @override
   @JsonKey(name: 'votes_count')
-  final int votesCount;
+  final int? votesCount;
 
   /// How many unique accounts have voted on a multiple-choice poll.
   @override
@@ -305,15 +305,17 @@ class _$PollImpl implements _Poll {
   }
 
   /// Custom emoji to be used for rendering poll options.
-  final List<CustomEmoji> _emojis;
+  final List<CustomEmoji>? _emojis;
 
   /// Custom emoji to be used for rendering poll options.
   @override
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis {
+  List<CustomEmoji>? get emojis {
+    final value = _emojis;
+    if (value == null) return null;
     if (_emojis is EqualUnmodifiableListView) return _emojis;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_emojis);
+    return EqualUnmodifiableListView(value);
   }
 
   /// When called with a user token, has the authorized user voted?
@@ -394,14 +396,14 @@ class _$PollImpl implements _Poll {
 
 abstract class _Poll implements Poll {
   const factory _Poll(
-      {@JsonKey(name: 'id') required final String id,
+      {@JsonKey(name: 'id') final String? id,
       @JsonKey(name: 'expires_at') final DateTime? expiresAt,
-      @JsonKey(name: 'expired') required final bool expired,
-      @JsonKey(name: 'multiple') required final bool multiple,
-      @JsonKey(name: 'votes_count') required final int votesCount,
+      @JsonKey(name: 'expired') final bool? expired,
+      @JsonKey(name: 'multiple') final bool? multiple,
+      @JsonKey(name: 'votes_count') final int? votesCount,
       @JsonKey(name: 'voters_count') final int? votersCount,
       @JsonKey(name: 'options') final List<PollOption>? options,
-      @JsonKey(name: 'emojis') required final List<CustomEmoji> emojis,
+      @JsonKey(name: 'emojis') final List<CustomEmoji>? emojis,
       @JsonKey(name: 'voted') final bool? voted,
       @JsonKey(name: 'own_votes') final List<int>? ownVotes}) = _$PollImpl;
 
@@ -411,7 +413,7 @@ abstract class _Poll implements Poll {
 
   /// The ID of the poll in the database.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// When the poll ends.
@@ -421,17 +423,17 @@ abstract class _Poll implements Poll {
 
   /// Is the poll currently expired?
   @JsonKey(name: 'expired')
-  bool get expired;
+  bool? get expired;
   @override
 
   /// Does the poll allow multiple-choice answers?
   @JsonKey(name: 'multiple')
-  bool get multiple;
+  bool? get multiple;
   @override
 
   /// How many votes have been received.
   @JsonKey(name: 'votes_count')
-  int get votesCount;
+  int? get votesCount;
   @override
 
   /// How many unique accounts have voted on a multiple-choice poll.
@@ -446,7 +448,7 @@ abstract class _Poll implements Poll {
 
   /// Custom emoji to be used for rendering poll options.
   @JsonKey(name: 'emojis')
-  List<CustomEmoji> get emojis;
+  List<CustomEmoji>? get emojis;
   @override
 
   /// When called with a user token, has the authorized user voted?
@@ -472,7 +474,7 @@ PollOption _$PollOptionFromJson(Map<String, dynamic> json) {
 mixin _$PollOption {
   /// The text value of the poll option.
   @JsonKey(name: 'title')
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
 
   /// The total number of received votes for this option.
   @JsonKey(name: 'votes_count')
@@ -491,7 +493,7 @@ abstract class $PollOptionCopyWith<$Res> {
       _$PollOptionCopyWithImpl<$Res, PollOption>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'title') String title,
+      {@JsonKey(name: 'title') String? title,
       @JsonKey(name: 'votes_count') int? votesCount});
 }
 
@@ -508,14 +510,14 @@ class _$PollOptionCopyWithImpl<$Res, $Val extends PollOption>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
+    Object? title = freezed,
     Object? votesCount = freezed,
   }) {
     return _then(_value.copyWith(
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       votesCount: freezed == votesCount
           ? _value.votesCount
           : votesCount // ignore: cast_nullable_to_non_nullable
@@ -533,7 +535,7 @@ abstract class _$$PollOptionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'title') String title,
+      {@JsonKey(name: 'title') String? title,
       @JsonKey(name: 'votes_count') int? votesCount});
 }
 
@@ -548,14 +550,14 @@ class __$$PollOptionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
+    Object? title = freezed,
     Object? votesCount = freezed,
   }) {
     return _then(_$PollOptionImpl(
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       votesCount: freezed == votesCount
           ? _value.votesCount
           : votesCount // ignore: cast_nullable_to_non_nullable
@@ -568,7 +570,7 @@ class __$$PollOptionImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PollOptionImpl implements _PollOption {
   const _$PollOptionImpl(
-      {@JsonKey(name: 'title') required this.title,
+      {@JsonKey(name: 'title') this.title,
       @JsonKey(name: 'votes_count') this.votesCount});
 
   factory _$PollOptionImpl.fromJson(Map<String, dynamic> json) =>
@@ -577,7 +579,7 @@ class _$PollOptionImpl implements _PollOption {
   /// The text value of the poll option.
   @override
   @JsonKey(name: 'title')
-  final String title;
+  final String? title;
 
   /// The total number of received votes for this option.
   @override
@@ -619,7 +621,7 @@ class _$PollOptionImpl implements _PollOption {
 
 abstract class _PollOption implements PollOption {
   const factory _PollOption(
-      {@JsonKey(name: 'title') required final String title,
+      {@JsonKey(name: 'title') final String? title,
       @JsonKey(name: 'votes_count') final int? votesCount}) = _$PollOptionImpl;
 
   factory _PollOption.fromJson(Map<String, dynamic> json) =
@@ -629,7 +631,7 @@ abstract class _PollOption implements PollOption {
 
   /// The text value of the poll option.
   @JsonKey(name: 'title')
-  String get title;
+  String? get title;
   @override
 
   /// The total number of received votes for this option.

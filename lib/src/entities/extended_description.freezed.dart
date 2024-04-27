@@ -22,11 +22,11 @@ ExtendedDescription _$ExtendedDescriptionFromJson(Map<String, dynamic> json) {
 mixin _$ExtendedDescription {
   /// A timestamp of when the extended description was last updated.
   @JsonKey(name: 'updated_at')
-  DateTime get updatedAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
 
   /// The rendered HTML content of the extended description.
   @JsonKey(name: 'content')
-  String get content => throw _privateConstructorUsedError;
+  String? get content => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,8 +41,8 @@ abstract class $ExtendedDescriptionCopyWith<$Res> {
       _$ExtendedDescriptionCopyWithImpl<$Res, ExtendedDescription>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'updated_at') DateTime updatedAt,
-      @JsonKey(name: 'content') String content});
+      {@JsonKey(name: 'updated_at') DateTime? updatedAt,
+      @JsonKey(name: 'content') String? content});
 }
 
 /// @nodoc
@@ -58,18 +58,18 @@ class _$ExtendedDescriptionCopyWithImpl<$Res, $Val extends ExtendedDescription>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? updatedAt = null,
-    Object? content = null,
+    Object? updatedAt = freezed,
+    Object? content = freezed,
   }) {
     return _then(_value.copyWith(
-      updatedAt: null == updatedAt
+      updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      content: null == content
+              as DateTime?,
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -83,8 +83,8 @@ abstract class _$$ExtendedDescriptionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'updated_at') DateTime updatedAt,
-      @JsonKey(name: 'content') String content});
+      {@JsonKey(name: 'updated_at') DateTime? updatedAt,
+      @JsonKey(name: 'content') String? content});
 }
 
 /// @nodoc
@@ -98,18 +98,18 @@ class __$$ExtendedDescriptionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? updatedAt = null,
-    Object? content = null,
+    Object? updatedAt = freezed,
+    Object? content = freezed,
   }) {
     return _then(_$ExtendedDescriptionImpl(
-      updatedAt: null == updatedAt
+      updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      content: null == content
+              as DateTime?,
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -118,8 +118,8 @@ class __$$ExtendedDescriptionImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ExtendedDescriptionImpl implements _ExtendedDescription {
   const _$ExtendedDescriptionImpl(
-      {@JsonKey(name: 'updated_at') required this.updatedAt,
-      @JsonKey(name: 'content') required this.content});
+      {@JsonKey(name: 'updated_at') this.updatedAt,
+      @JsonKey(name: 'content') this.content});
 
   factory _$ExtendedDescriptionImpl.fromJson(Map<String, dynamic> json) =>
       _$$ExtendedDescriptionImplFromJson(json);
@@ -127,12 +127,12 @@ class _$ExtendedDescriptionImpl implements _ExtendedDescription {
   /// A timestamp of when the extended description was last updated.
   @override
   @JsonKey(name: 'updated_at')
-  final DateTime updatedAt;
+  final DateTime? updatedAt;
 
   /// The rendered HTML content of the extended description.
   @override
   @JsonKey(name: 'content')
-  final String content;
+  final String? content;
 
   @override
   String toString() {
@@ -170,8 +170,8 @@ class _$ExtendedDescriptionImpl implements _ExtendedDescription {
 
 abstract class _ExtendedDescription implements ExtendedDescription {
   const factory _ExtendedDescription(
-          {@JsonKey(name: 'updated_at') required final DateTime updatedAt,
-          @JsonKey(name: 'content') required final String content}) =
+          {@JsonKey(name: 'updated_at') final DateTime? updatedAt,
+          @JsonKey(name: 'content') final String? content}) =
       _$ExtendedDescriptionImpl;
 
   factory _ExtendedDescription.fromJson(Map<String, dynamic> json) =
@@ -181,12 +181,12 @@ abstract class _ExtendedDescription implements ExtendedDescription {
 
   /// A timestamp of when the extended description was last updated.
   @JsonKey(name: 'updated_at')
-  DateTime get updatedAt;
+  DateTime? get updatedAt;
   @override
 
   /// The rendered HTML content of the extended description.
   @JsonKey(name: 'content')
-  String get content;
+  String? get content;
   @override
   @JsonKey(ignore: true)
   _$$ExtendedDescriptionImplCopyWith<_$ExtendedDescriptionImpl> get copyWith =>

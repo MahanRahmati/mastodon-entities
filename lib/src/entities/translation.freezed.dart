@@ -22,11 +22,11 @@ Translation _$TranslationFromJson(Map<String, dynamic> json) {
 mixin _$Translation {
   /// HTML-encoded translated content of the status.
   @JsonKey(name: 'content')
-  String get content => throw _privateConstructorUsedError;
+  String? get content => throw _privateConstructorUsedError;
 
   /// The translated spoiler warning of the status.
   @JsonKey(name: 'spoiler_text')
-  String get spoilerText => throw _privateConstructorUsedError;
+  String? get spoilerText => throw _privateConstructorUsedError;
 
   /// The translated poll of the status.
   @JsonKey(name: 'poll')
@@ -34,17 +34,17 @@ mixin _$Translation {
 
   /// The translated media descriptions of the status.
   @JsonKey(name: 'media_attachments')
-  List<TranslationAttachment> get mediaAttachments =>
+  List<TranslationAttachment>? get mediaAttachments =>
       throw _privateConstructorUsedError;
 
   /// The language of the source text, as auto-detected by the machine
   /// translation provider.
   @JsonKey(name: 'detected_source_language')
-  String get detectedSourceLanguage => throw _privateConstructorUsedError;
+  String? get detectedSourceLanguage => throw _privateConstructorUsedError;
 
   /// The service that provided the machine translation.
   @JsonKey(name: 'provider')
-  String get provider => throw _privateConstructorUsedError;
+  String? get provider => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -59,13 +59,13 @@ abstract class $TranslationCopyWith<$Res> {
       _$TranslationCopyWithImpl<$Res, Translation>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'content') String content,
-      @JsonKey(name: 'spoiler_text') String spoilerText,
+      {@JsonKey(name: 'content') String? content,
+      @JsonKey(name: 'spoiler_text') String? spoilerText,
       @JsonKey(name: 'poll') TranslationPoll? poll,
       @JsonKey(name: 'media_attachments')
-      List<TranslationAttachment> mediaAttachments,
-      @JsonKey(name: 'detected_source_language') String detectedSourceLanguage,
-      @JsonKey(name: 'provider') String provider});
+      List<TranslationAttachment>? mediaAttachments,
+      @JsonKey(name: 'detected_source_language') String? detectedSourceLanguage,
+      @JsonKey(name: 'provider') String? provider});
 
   $TranslationPollCopyWith<$Res>? get poll;
 }
@@ -83,38 +83,38 @@ class _$TranslationCopyWithImpl<$Res, $Val extends Translation>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? content = null,
-    Object? spoilerText = null,
+    Object? content = freezed,
+    Object? spoilerText = freezed,
     Object? poll = freezed,
-    Object? mediaAttachments = null,
-    Object? detectedSourceLanguage = null,
-    Object? provider = null,
+    Object? mediaAttachments = freezed,
+    Object? detectedSourceLanguage = freezed,
+    Object? provider = freezed,
   }) {
     return _then(_value.copyWith(
-      content: null == content
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      spoilerText: null == spoilerText
+              as String?,
+      spoilerText: freezed == spoilerText
           ? _value.spoilerText
           : spoilerText // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       poll: freezed == poll
           ? _value.poll
           : poll // ignore: cast_nullable_to_non_nullable
               as TranslationPoll?,
-      mediaAttachments: null == mediaAttachments
+      mediaAttachments: freezed == mediaAttachments
           ? _value.mediaAttachments
           : mediaAttachments // ignore: cast_nullable_to_non_nullable
-              as List<TranslationAttachment>,
-      detectedSourceLanguage: null == detectedSourceLanguage
+              as List<TranslationAttachment>?,
+      detectedSourceLanguage: freezed == detectedSourceLanguage
           ? _value.detectedSourceLanguage
           : detectedSourceLanguage // ignore: cast_nullable_to_non_nullable
-              as String,
-      provider: null == provider
+              as String?,
+      provider: freezed == provider
           ? _value.provider
           : provider // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 
@@ -140,13 +140,13 @@ abstract class _$$TranslationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'content') String content,
-      @JsonKey(name: 'spoiler_text') String spoilerText,
+      {@JsonKey(name: 'content') String? content,
+      @JsonKey(name: 'spoiler_text') String? spoilerText,
       @JsonKey(name: 'poll') TranslationPoll? poll,
       @JsonKey(name: 'media_attachments')
-      List<TranslationAttachment> mediaAttachments,
-      @JsonKey(name: 'detected_source_language') String detectedSourceLanguage,
-      @JsonKey(name: 'provider') String provider});
+      List<TranslationAttachment>? mediaAttachments,
+      @JsonKey(name: 'detected_source_language') String? detectedSourceLanguage,
+      @JsonKey(name: 'provider') String? provider});
 
   @override
   $TranslationPollCopyWith<$Res>? get poll;
@@ -163,38 +163,38 @@ class __$$TranslationImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? content = null,
-    Object? spoilerText = null,
+    Object? content = freezed,
+    Object? spoilerText = freezed,
     Object? poll = freezed,
-    Object? mediaAttachments = null,
-    Object? detectedSourceLanguage = null,
-    Object? provider = null,
+    Object? mediaAttachments = freezed,
+    Object? detectedSourceLanguage = freezed,
+    Object? provider = freezed,
   }) {
     return _then(_$TranslationImpl(
-      content: null == content
+      content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      spoilerText: null == spoilerText
+              as String?,
+      spoilerText: freezed == spoilerText
           ? _value.spoilerText
           : spoilerText // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       poll: freezed == poll
           ? _value.poll
           : poll // ignore: cast_nullable_to_non_nullable
               as TranslationPoll?,
-      mediaAttachments: null == mediaAttachments
+      mediaAttachments: freezed == mediaAttachments
           ? _value._mediaAttachments
           : mediaAttachments // ignore: cast_nullable_to_non_nullable
-              as List<TranslationAttachment>,
-      detectedSourceLanguage: null == detectedSourceLanguage
+              as List<TranslationAttachment>?,
+      detectedSourceLanguage: freezed == detectedSourceLanguage
           ? _value.detectedSourceLanguage
           : detectedSourceLanguage // ignore: cast_nullable_to_non_nullable
-              as String,
-      provider: null == provider
+              as String?,
+      provider: freezed == provider
           ? _value.provider
           : provider // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -203,14 +203,13 @@ class __$$TranslationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TranslationImpl implements _Translation {
   const _$TranslationImpl(
-      {@JsonKey(name: 'content') required this.content,
-      @JsonKey(name: 'spoiler_text') required this.spoilerText,
+      {@JsonKey(name: 'content') this.content,
+      @JsonKey(name: 'spoiler_text') this.spoilerText,
       @JsonKey(name: 'poll') this.poll,
       @JsonKey(name: 'media_attachments')
-      required final List<TranslationAttachment> mediaAttachments,
-      @JsonKey(name: 'detected_source_language')
-      required this.detectedSourceLanguage,
-      @JsonKey(name: 'provider') required this.provider})
+      final List<TranslationAttachment>? mediaAttachments,
+      @JsonKey(name: 'detected_source_language') this.detectedSourceLanguage,
+      @JsonKey(name: 'provider') this.provider})
       : _mediaAttachments = mediaAttachments;
 
   factory _$TranslationImpl.fromJson(Map<String, dynamic> json) =>
@@ -219,12 +218,12 @@ class _$TranslationImpl implements _Translation {
   /// HTML-encoded translated content of the status.
   @override
   @JsonKey(name: 'content')
-  final String content;
+  final String? content;
 
   /// The translated spoiler warning of the status.
   @override
   @JsonKey(name: 'spoiler_text')
-  final String spoilerText;
+  final String? spoilerText;
 
   /// The translated poll of the status.
   @override
@@ -232,28 +231,30 @@ class _$TranslationImpl implements _Translation {
   final TranslationPoll? poll;
 
   /// The translated media descriptions of the status.
-  final List<TranslationAttachment> _mediaAttachments;
+  final List<TranslationAttachment>? _mediaAttachments;
 
   /// The translated media descriptions of the status.
   @override
   @JsonKey(name: 'media_attachments')
-  List<TranslationAttachment> get mediaAttachments {
+  List<TranslationAttachment>? get mediaAttachments {
+    final value = _mediaAttachments;
+    if (value == null) return null;
     if (_mediaAttachments is EqualUnmodifiableListView)
       return _mediaAttachments;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_mediaAttachments);
+    return EqualUnmodifiableListView(value);
   }
 
   /// The language of the source text, as auto-detected by the machine
   /// translation provider.
   @override
   @JsonKey(name: 'detected_source_language')
-  final String detectedSourceLanguage;
+  final String? detectedSourceLanguage;
 
   /// The service that provided the machine translation.
   @override
   @JsonKey(name: 'provider')
-  final String provider;
+  final String? provider;
 
   @override
   String toString() {
@@ -304,15 +305,14 @@ class _$TranslationImpl implements _Translation {
 
 abstract class _Translation implements Translation {
   const factory _Translation(
-          {@JsonKey(name: 'content') required final String content,
-          @JsonKey(name: 'spoiler_text') required final String spoilerText,
-          @JsonKey(name: 'poll') final TranslationPoll? poll,
-          @JsonKey(name: 'media_attachments')
-          required final List<TranslationAttachment> mediaAttachments,
-          @JsonKey(name: 'detected_source_language')
-          required final String detectedSourceLanguage,
-          @JsonKey(name: 'provider') required final String provider}) =
-      _$TranslationImpl;
+      {@JsonKey(name: 'content') final String? content,
+      @JsonKey(name: 'spoiler_text') final String? spoilerText,
+      @JsonKey(name: 'poll') final TranslationPoll? poll,
+      @JsonKey(name: 'media_attachments')
+      final List<TranslationAttachment>? mediaAttachments,
+      @JsonKey(name: 'detected_source_language')
+      final String? detectedSourceLanguage,
+      @JsonKey(name: 'provider') final String? provider}) = _$TranslationImpl;
 
   factory _Translation.fromJson(Map<String, dynamic> json) =
       _$TranslationImpl.fromJson;
@@ -321,12 +321,12 @@ abstract class _Translation implements Translation {
 
   /// HTML-encoded translated content of the status.
   @JsonKey(name: 'content')
-  String get content;
+  String? get content;
   @override
 
   /// The translated spoiler warning of the status.
   @JsonKey(name: 'spoiler_text')
-  String get spoilerText;
+  String? get spoilerText;
   @override
 
   /// The translated poll of the status.
@@ -336,18 +336,18 @@ abstract class _Translation implements Translation {
 
   /// The translated media descriptions of the status.
   @JsonKey(name: 'media_attachments')
-  List<TranslationAttachment> get mediaAttachments;
+  List<TranslationAttachment>? get mediaAttachments;
   @override
 
   /// The language of the source text, as auto-detected by the machine
   /// translation provider.
   @JsonKey(name: 'detected_source_language')
-  String get detectedSourceLanguage;
+  String? get detectedSourceLanguage;
   @override
 
   /// The service that provided the machine translation.
   @JsonKey(name: 'provider')
-  String get provider;
+  String? get provider;
   @override
   @JsonKey(ignore: true)
   _$$TranslationImplCopyWith<_$TranslationImpl> get copyWith =>
@@ -362,11 +362,12 @@ TranslationPoll _$TranslationPollFromJson(Map<String, dynamic> json) {
 mixin _$TranslationPoll {
   /// The ID of the poll.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The translated poll options.
   @JsonKey(name: 'options')
-  List<TranslationPollOption> get options => throw _privateConstructorUsedError;
+  List<TranslationPollOption>? get options =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -381,8 +382,8 @@ abstract class $TranslationPollCopyWith<$Res> {
       _$TranslationPollCopyWithImpl<$Res, TranslationPoll>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'options') List<TranslationPollOption> options});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'options') List<TranslationPollOption>? options});
 }
 
 /// @nodoc
@@ -398,18 +399,18 @@ class _$TranslationPollCopyWithImpl<$Res, $Val extends TranslationPoll>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? options = null,
+    Object? id = freezed,
+    Object? options = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      options: null == options
+              as String?,
+      options: freezed == options
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
-              as List<TranslationPollOption>,
+              as List<TranslationPollOption>?,
     ) as $Val);
   }
 }
@@ -423,8 +424,8 @@ abstract class _$$TranslationPollImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'options') List<TranslationPollOption> options});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'options') List<TranslationPollOption>? options});
 }
 
 /// @nodoc
@@ -438,18 +439,18 @@ class __$$TranslationPollImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? options = null,
+    Object? id = freezed,
+    Object? options = freezed,
   }) {
     return _then(_$TranslationPollImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      options: null == options
+              as String?,
+      options: freezed == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
-              as List<TranslationPollOption>,
+              as List<TranslationPollOption>?,
     ));
   }
 }
@@ -458,9 +459,8 @@ class __$$TranslationPollImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TranslationPollImpl implements _TranslationPoll {
   const _$TranslationPollImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'options')
-      required final List<TranslationPollOption> options})
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'options') final List<TranslationPollOption>? options})
       : _options = options;
 
   factory _$TranslationPollImpl.fromJson(Map<String, dynamic> json) =>
@@ -469,18 +469,20 @@ class _$TranslationPollImpl implements _TranslationPoll {
   /// The ID of the poll.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The translated poll options.
-  final List<TranslationPollOption> _options;
+  final List<TranslationPollOption>? _options;
 
   /// The translated poll options.
   @override
   @JsonKey(name: 'options')
-  List<TranslationPollOption> get options {
+  List<TranslationPollOption>? get options {
+    final value = _options;
+    if (value == null) return null;
     if (_options is EqualUnmodifiableListView) return _options;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_options);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -519,10 +521,9 @@ class _$TranslationPollImpl implements _TranslationPoll {
 
 abstract class _TranslationPoll implements TranslationPoll {
   const factory _TranslationPoll(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'options')
-          required final List<TranslationPollOption> options}) =
-      _$TranslationPollImpl;
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'options')
+      final List<TranslationPollOption>? options}) = _$TranslationPollImpl;
 
   factory _TranslationPoll.fromJson(Map<String, dynamic> json) =
       _$TranslationPollImpl.fromJson;
@@ -531,12 +532,12 @@ abstract class _TranslationPoll implements TranslationPoll {
 
   /// The ID of the poll.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The translated poll options.
   @JsonKey(name: 'options')
-  List<TranslationPollOption> get options;
+  List<TranslationPollOption>? get options;
   @override
   @JsonKey(ignore: true)
   _$$TranslationPollImplCopyWith<_$TranslationPollImpl> get copyWith =>
@@ -552,7 +553,7 @@ TranslationPollOption _$TranslationPollOptionFromJson(
 mixin _$TranslationPollOption {
   /// The translated title of the poll option.
   @JsonKey(name: 'title')
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -566,7 +567,7 @@ abstract class $TranslationPollOptionCopyWith<$Res> {
           $Res Function(TranslationPollOption) then) =
       _$TranslationPollOptionCopyWithImpl<$Res, TranslationPollOption>;
   @useResult
-  $Res call({@JsonKey(name: 'title') String title});
+  $Res call({@JsonKey(name: 'title') String? title});
 }
 
 /// @nodoc
@@ -583,13 +584,13 @@ class _$TranslationPollOptionCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
+    Object? title = freezed,
   }) {
     return _then(_value.copyWith(
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -603,7 +604,7 @@ abstract class _$$TranslationPollOptionImplCopyWith<$Res>
       __$$TranslationPollOptionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'title') String title});
+  $Res call({@JsonKey(name: 'title') String? title});
 }
 
 /// @nodoc
@@ -618,13 +619,13 @@ class __$$TranslationPollOptionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
+    Object? title = freezed,
   }) {
     return _then(_$TranslationPollOptionImpl(
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -632,8 +633,7 @@ class __$$TranslationPollOptionImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$TranslationPollOptionImpl implements _TranslationPollOption {
-  const _$TranslationPollOptionImpl(
-      {@JsonKey(name: 'title') required this.title});
+  const _$TranslationPollOptionImpl({@JsonKey(name: 'title') this.title});
 
   factory _$TranslationPollOptionImpl.fromJson(Map<String, dynamic> json) =>
       _$$TranslationPollOptionImplFromJson(json);
@@ -641,7 +641,7 @@ class _$TranslationPollOptionImpl implements _TranslationPollOption {
   /// The translated title of the poll option.
   @override
   @JsonKey(name: 'title')
-  final String title;
+  final String? title;
 
   @override
   String toString() {
@@ -677,7 +677,7 @@ class _$TranslationPollOptionImpl implements _TranslationPollOption {
 
 abstract class _TranslationPollOption implements TranslationPollOption {
   const factory _TranslationPollOption(
-          {@JsonKey(name: 'title') required final String title}) =
+          {@JsonKey(name: 'title') final String? title}) =
       _$TranslationPollOptionImpl;
 
   factory _TranslationPollOption.fromJson(Map<String, dynamic> json) =
@@ -687,7 +687,7 @@ abstract class _TranslationPollOption implements TranslationPollOption {
 
   /// The translated title of the poll option.
   @JsonKey(name: 'title')
-  String get title;
+  String? get title;
   @override
   @JsonKey(ignore: true)
   _$$TranslationPollOptionImplCopyWith<_$TranslationPollOptionImpl>
@@ -703,11 +703,11 @@ TranslationAttachment _$TranslationAttachmentFromJson(
 mixin _$TranslationAttachment {
   /// The id of the attachment.
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The translated description of the attachment.
   @JsonKey(name: 'description')
-  String get description => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -722,8 +722,8 @@ abstract class $TranslationAttachmentCopyWith<$Res> {
       _$TranslationAttachmentCopyWithImpl<$Res, TranslationAttachment>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'description') String description});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'description') String? description});
 }
 
 /// @nodoc
@@ -740,18 +740,18 @@ class _$TranslationAttachmentCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? description = null,
+    Object? id = freezed,
+    Object? description = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -766,8 +766,8 @@ abstract class _$$TranslationAttachmentImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'description') String description});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'description') String? description});
 }
 
 /// @nodoc
@@ -782,18 +782,18 @@ class __$$TranslationAttachmentImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? description = null,
+    Object? id = freezed,
+    Object? description = freezed,
   }) {
     return _then(_$TranslationAttachmentImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
+              as String?,
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -802,8 +802,8 @@ class __$$TranslationAttachmentImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TranslationAttachmentImpl implements _TranslationAttachment {
   const _$TranslationAttachmentImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'description') required this.description});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'description') this.description});
 
   factory _$TranslationAttachmentImpl.fromJson(Map<String, dynamic> json) =>
       _$$TranslationAttachmentImplFromJson(json);
@@ -811,12 +811,12 @@ class _$TranslationAttachmentImpl implements _TranslationAttachment {
   /// The id of the attachment.
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   /// The translated description of the attachment.
   @override
   @JsonKey(name: 'description')
-  final String description;
+  final String? description;
 
   @override
   String toString() {
@@ -854,8 +854,8 @@ class _$TranslationAttachmentImpl implements _TranslationAttachment {
 
 abstract class _TranslationAttachment implements TranslationAttachment {
   const factory _TranslationAttachment(
-          {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'description') required final String description}) =
+          {@JsonKey(name: 'id') final String? id,
+          @JsonKey(name: 'description') final String? description}) =
       _$TranslationAttachmentImpl;
 
   factory _TranslationAttachment.fromJson(Map<String, dynamic> json) =
@@ -865,12 +865,12 @@ abstract class _TranslationAttachment implements TranslationAttachment {
 
   /// The id of the attachment.
   @JsonKey(name: 'id')
-  String get id;
+  String? get id;
   @override
 
   /// The translated description of the attachment.
   @JsonKey(name: 'description')
-  String get description;
+  String? get description;
   @override
   @JsonKey(ignore: true)
   _$$TranslationAttachmentImplCopyWith<_$TranslationAttachmentImpl>
