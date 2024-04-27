@@ -111,6 +111,7 @@ _$AccountSourceImpl _$$AccountSourceImplFromJson(Map<String, dynamic> json) =>
       language: json['language'] as String,
       followRequestsCount: (json['follow_requests_count'] as num).toInt(),
       role: Role.fromJson(json['role'] as Map<String, dynamic>),
+      indexable: json['indexable'] as bool,
     );
 
 Map<String, dynamic> _$$AccountSourceImplToJson(_$AccountSourceImpl instance) =>
@@ -122,6 +123,7 @@ Map<String, dynamic> _$$AccountSourceImplToJson(_$AccountSourceImpl instance) =>
       'language': instance.language,
       'follow_requests_count': instance.followRequestsCount,
       'role': instance.role,
+      'indexable': instance.indexable,
     };
 
 const _$StatusVisibilityEnumMap = {

@@ -1309,7 +1309,10 @@ mixin _$AccountSource {
 
   /// The role assigned to the currently authorized user.
   @JsonKey(name: 'role')
-  Role get role => throw _privateConstructorUsedError;
+  Role get role =>
+      throw _privateConstructorUsedError; // TODO(E): Add description.
+  @JsonKey(name: 'indexable')
+  bool get indexable => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1330,7 +1333,8 @@ abstract class $AccountSourceCopyWith<$Res> {
       @JsonKey(name: 'sensitive') bool sensitive,
       @JsonKey(name: 'language') String language,
       @JsonKey(name: 'follow_requests_count') int followRequestsCount,
-      @JsonKey(name: 'role') Role role});
+      @JsonKey(name: 'role') Role role,
+      @JsonKey(name: 'indexable') bool indexable});
 
   $RoleCopyWith<$Res> get role;
 }
@@ -1355,6 +1359,7 @@ class _$AccountSourceCopyWithImpl<$Res, $Val extends AccountSource>
     Object? language = null,
     Object? followRequestsCount = null,
     Object? role = null,
+    Object? indexable = null,
   }) {
     return _then(_value.copyWith(
       note: null == note
@@ -1385,6 +1390,10 @@ class _$AccountSourceCopyWithImpl<$Res, $Val extends AccountSource>
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as Role,
+      indexable: null == indexable
+          ? _value.indexable
+          : indexable // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 
@@ -1412,7 +1421,8 @@ abstract class _$$AccountSourceImplCopyWith<$Res>
       @JsonKey(name: 'sensitive') bool sensitive,
       @JsonKey(name: 'language') String language,
       @JsonKey(name: 'follow_requests_count') int followRequestsCount,
-      @JsonKey(name: 'role') Role role});
+      @JsonKey(name: 'role') Role role,
+      @JsonKey(name: 'indexable') bool indexable});
 
   @override
   $RoleCopyWith<$Res> get role;
@@ -1436,6 +1446,7 @@ class __$$AccountSourceImplCopyWithImpl<$Res>
     Object? language = null,
     Object? followRequestsCount = null,
     Object? role = null,
+    Object? indexable = null,
   }) {
     return _then(_$AccountSourceImpl(
       note: null == note
@@ -1466,6 +1477,10 @@ class __$$AccountSourceImplCopyWithImpl<$Res>
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as Role,
+      indexable: null == indexable
+          ? _value.indexable
+          : indexable // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -1480,7 +1495,8 @@ class _$AccountSourceImpl implements _AccountSource {
       @JsonKey(name: 'sensitive') required this.sensitive,
       @JsonKey(name: 'language') required this.language,
       @JsonKey(name: 'follow_requests_count') required this.followRequestsCount,
-      @JsonKey(name: 'role') required this.role})
+      @JsonKey(name: 'role') required this.role,
+      @JsonKey(name: 'indexable') required this.indexable})
       : _fields = fields;
 
   factory _$AccountSourceImpl.fromJson(Map<String, dynamic> json) =>
@@ -1527,10 +1543,14 @@ class _$AccountSourceImpl implements _AccountSource {
   @override
   @JsonKey(name: 'role')
   final Role role;
+// TODO(E): Add description.
+  @override
+  @JsonKey(name: 'indexable')
+  final bool indexable;
 
   @override
   String toString() {
-    return 'AccountSource(note: $note, fields: $fields, privacy: $privacy, sensitive: $sensitive, language: $language, followRequestsCount: $followRequestsCount, role: $role)';
+    return 'AccountSource(note: $note, fields: $fields, privacy: $privacy, sensitive: $sensitive, language: $language, followRequestsCount: $followRequestsCount, role: $role, indexable: $indexable)';
   }
 
   @override
@@ -1547,7 +1567,9 @@ class _$AccountSourceImpl implements _AccountSource {
                 other.language == language) &&
             (identical(other.followRequestsCount, followRequestsCount) ||
                 other.followRequestsCount == followRequestsCount) &&
-            (identical(other.role, role) || other.role == role));
+            (identical(other.role, role) || other.role == role) &&
+            (identical(other.indexable, indexable) ||
+                other.indexable == indexable));
   }
 
   @JsonKey(ignore: true)
@@ -1560,7 +1582,8 @@ class _$AccountSourceImpl implements _AccountSource {
       sensitive,
       language,
       followRequestsCount,
-      role);
+      role,
+      indexable);
 
   @JsonKey(ignore: true)
   @override
@@ -1578,14 +1601,16 @@ class _$AccountSourceImpl implements _AccountSource {
 
 abstract class _AccountSource implements AccountSource {
   const factory _AccountSource(
-      {@JsonKey(name: 'note') required final String note,
-      @JsonKey(name: 'fields') required final List<AccountField> fields,
-      @JsonKey(name: 'privacy') required final StatusVisibility privacy,
-      @JsonKey(name: 'sensitive') required final bool sensitive,
-      @JsonKey(name: 'language') required final String language,
-      @JsonKey(name: 'follow_requests_count')
-      required final int followRequestsCount,
-      @JsonKey(name: 'role') required final Role role}) = _$AccountSourceImpl;
+          {@JsonKey(name: 'note') required final String note,
+          @JsonKey(name: 'fields') required final List<AccountField> fields,
+          @JsonKey(name: 'privacy') required final StatusVisibility privacy,
+          @JsonKey(name: 'sensitive') required final bool sensitive,
+          @JsonKey(name: 'language') required final String language,
+          @JsonKey(name: 'follow_requests_count')
+          required final int followRequestsCount,
+          @JsonKey(name: 'role') required final Role role,
+          @JsonKey(name: 'indexable') required final bool indexable}) =
+      _$AccountSourceImpl;
 
   factory _AccountSource.fromJson(Map<String, dynamic> json) =
       _$AccountSourceImpl.fromJson;
@@ -1625,6 +1650,9 @@ abstract class _AccountSource implements AccountSource {
   /// The role assigned to the currently authorized user.
   @JsonKey(name: 'role')
   Role get role;
+  @override // TODO(E): Add description.
+  @JsonKey(name: 'indexable')
+  bool get indexable;
   @override
   @JsonKey(ignore: true)
   _$$AccountSourceImplCopyWith<_$AccountSourceImpl> get copyWith =>

@@ -149,6 +149,9 @@ class AccountSource with _$AccountSource {
 
     /// The role assigned to the currently authorized user.
     @JsonKey(name: 'role') required final Role role,
+
+    // TODO(E): Add description.
+    @JsonKey(name: 'indexable') required final bool indexable,
   }) = _AccountSource;
 
   factory AccountSource.fromJson(final Map<String, dynamic> json) =>
