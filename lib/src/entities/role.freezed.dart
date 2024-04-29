@@ -22,7 +22,7 @@ Role _$RoleFromJson(Map<String, dynamic> json) {
 mixin _$Role {
   /// The ID of the Role in the database.
   @JsonKey(name: 'id')
-  int? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   /// The name of the role.
   @JsonKey(name: 'name')
@@ -36,7 +36,7 @@ mixin _$Role {
   /// A bitmask that represents the sum of all permissions granted to the
   /// role.
   @JsonKey(name: 'permissions')
-  int? get permissions => throw _privateConstructorUsedError;
+  String? get permissions => throw _privateConstructorUsedError;
 
   /// Whether the role is publicly visible as a badge on user profiles.
   @JsonKey(name: 'highlighted')
@@ -53,10 +53,10 @@ abstract class $RoleCopyWith<$Res> {
       _$RoleCopyWithImpl<$Res, Role>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int? id,
+      {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'color') String? color,
-      @JsonKey(name: 'permissions') int? permissions,
+      @JsonKey(name: 'permissions') String? permissions,
       @JsonKey(name: 'highlighted') bool? highlighted});
 }
 
@@ -83,7 +83,7 @@ class _$RoleCopyWithImpl<$Res, $Val extends Role>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -95,7 +95,7 @@ class _$RoleCopyWithImpl<$Res, $Val extends Role>
       permissions: freezed == permissions
           ? _value.permissions
           : permissions // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       highlighted: freezed == highlighted
           ? _value.highlighted
           : highlighted // ignore: cast_nullable_to_non_nullable
@@ -112,10 +112,10 @@ abstract class _$$RoleImplCopyWith<$Res> implements $RoleCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int? id,
+      {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'color') String? color,
-      @JsonKey(name: 'permissions') int? permissions,
+      @JsonKey(name: 'permissions') String? permissions,
       @JsonKey(name: 'highlighted') bool? highlighted});
 }
 
@@ -139,7 +139,7 @@ class __$$RoleImplCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -151,7 +151,7 @@ class __$$RoleImplCopyWithImpl<$Res>
       permissions: freezed == permissions
           ? _value.permissions
           : permissions // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       highlighted: freezed == highlighted
           ? _value.highlighted
           : highlighted // ignore: cast_nullable_to_non_nullable
@@ -176,7 +176,7 @@ class _$RoleImpl implements _Role {
   /// The ID of the Role in the database.
   @override
   @JsonKey(name: 'id')
-  final int? id;
+  final String? id;
 
   /// The name of the role.
   @override
@@ -193,7 +193,7 @@ class _$RoleImpl implements _Role {
   /// role.
   @override
   @JsonKey(name: 'permissions')
-  final int? permissions;
+  final String? permissions;
 
   /// Whether the role is publicly visible as a badge on user profiles.
   @override
@@ -240,10 +240,10 @@ class _$RoleImpl implements _Role {
 
 abstract class _Role implements Role {
   const factory _Role(
-      {@JsonKey(name: 'id') final int? id,
+      {@JsonKey(name: 'id') final String? id,
       @JsonKey(name: 'name') final String? name,
       @JsonKey(name: 'color') final String? color,
-      @JsonKey(name: 'permissions') final int? permissions,
+      @JsonKey(name: 'permissions') final String? permissions,
       @JsonKey(name: 'highlighted') final bool? highlighted}) = _$RoleImpl;
 
   factory _Role.fromJson(Map<String, dynamic> json) = _$RoleImpl.fromJson;
@@ -252,7 +252,7 @@ abstract class _Role implements Role {
 
   /// The ID of the Role in the database.
   @JsonKey(name: 'id')
-  int? get id;
+  String? get id;
   @override
 
   /// The name of the role.
@@ -269,7 +269,7 @@ abstract class _Role implements Role {
   /// A bitmask that represents the sum of all permissions granted to the
   /// role.
   @JsonKey(name: 'permissions')
-  int? get permissions;
+  String? get permissions;
   @override
 
   /// Whether the role is publicly visible as a badge on user profiles.

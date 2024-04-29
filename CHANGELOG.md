@@ -1,3 +1,7 @@
+## 1.1.1
+
+- Update Role id and permission types.
+
 ## 1.1.0
 
 - Make everything nullable

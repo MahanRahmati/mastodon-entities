@@ -8,7 +8,7 @@ part 'role.g.dart';
 class Role with _$Role {
   const factory Role({
     /// The ID of the Role in the database.
-    @JsonKey(name: 'id') final int? id,
+    @JsonKey(name: 'id') final String? id,
 
     /// The name of the role.
     @JsonKey(name: 'name') final String? name,
@@ -19,7 +19,7 @@ class Role with _$Role {
 
     /// A bitmask that represents the sum of all permissions granted to the
     /// role.
-    @JsonKey(name: 'permissions') final int? permissions,
+    @JsonKey(name: 'permissions') final String? permissions,
 
     /// Whether the role is publicly visible as a badge on user profiles.
     @JsonKey(name: 'highlighted') final bool? highlighted,
