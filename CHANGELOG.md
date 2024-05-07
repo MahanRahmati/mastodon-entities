@@ -1,3 +1,7 @@
+## 1.1.2
+
+- Added digest to AdminDomainBlock
+
 ## 1.1.1
 
 - Update Role id and permission types.

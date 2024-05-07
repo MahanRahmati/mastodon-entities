@@ -28,6 +28,10 @@ mixin _$AdminDomainBlock {
   @JsonKey(name: 'domain')
   String? get domain => throw _privateConstructorUsedError;
 
+  /// The sha256 hex digest of the domain that is not allowed to federated.
+  @JsonKey(name: 'digest')
+  String? get digest => throw _privateConstructorUsedError;
+
   /// When the domain was blocked from federating.
   @JsonKey(name: 'created_at')
   DateTime? get createdAt => throw _privateConstructorUsedError;
@@ -69,6 +73,7 @@ abstract class $AdminDomainBlockCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'digest') String? digest,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'severity') AdminDomainBlockSeverity? severity,
       @JsonKey(name: 'reject_media') bool? rejectMedia,
@@ -93,6 +98,7 @@ class _$AdminDomainBlockCopyWithImpl<$Res, $Val extends AdminDomainBlock>
   $Res call({
     Object? id = freezed,
     Object? domain = freezed,
+    Object? digest = freezed,
     Object? createdAt = freezed,
     Object? severity = freezed,
     Object? rejectMedia = freezed,
@@ -109,6 +115,10 @@ class _$AdminDomainBlockCopyWithImpl<$Res, $Val extends AdminDomainBlock>
       domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
+              as String?,
+      digest: freezed == digest
+          ? _value.digest
+          : digest // ignore: cast_nullable_to_non_nullable
               as String?,
       createdAt: freezed == createdAt
           ? _value.createdAt
@@ -153,6 +163,7 @@ abstract class _$$AdminDomainBlockImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'domain') String? domain,
+      @JsonKey(name: 'digest') String? digest,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'severity') AdminDomainBlockSeverity? severity,
       @JsonKey(name: 'reject_media') bool? rejectMedia,
@@ -175,6 +186,7 @@ class __$$AdminDomainBlockImplCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? domain = freezed,
+    Object? digest = freezed,
     Object? createdAt = freezed,
     Object? severity = freezed,
     Object? rejectMedia = freezed,
@@ -191,6 +203,10 @@ class __$$AdminDomainBlockImplCopyWithImpl<$Res>
       domain: freezed == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
+              as String?,
+      digest: freezed == digest
+          ? _value.digest
+          : digest // ignore: cast_nullable_to_non_nullable
               as String?,
       createdAt: freezed == createdAt
           ? _value.createdAt
@@ -230,6 +246,7 @@ class _$AdminDomainBlockImpl implements _AdminDomainBlock {
   const _$AdminDomainBlockImpl(
       {@JsonKey(name: 'id') this.id,
       @JsonKey(name: 'domain') this.domain,
+      @JsonKey(name: 'digest') this.digest,
       @JsonKey(name: 'created_at') this.createdAt,
       @JsonKey(name: 'severity') this.severity,
       @JsonKey(name: 'reject_media') this.rejectMedia,
@@ -250,6 +267,11 @@ class _$AdminDomainBlockImpl implements _AdminDomainBlock {
   @override
   @JsonKey(name: 'domain')
   final String? domain;
+
+  /// The sha256 hex digest of the domain that is not allowed to federated.
+  @override
+  @JsonKey(name: 'digest')
+  final String? digest;
 
   /// When the domain was blocked from federating.
   @override
@@ -286,7 +308,7 @@ class _$AdminDomainBlockImpl implements _AdminDomainBlock {
 
   @override
   String toString() {
-    return 'AdminDomainBlock(id: $id, domain: $domain, createdAt: $createdAt, severity: $severity, rejectMedia: $rejectMedia, rejectReports: $rejectReports, privateComment: $privateComment, publicComment: $publicComment, obfuscate: $obfuscate)';
+    return 'AdminDomainBlock(id: $id, domain: $domain, digest: $digest, createdAt: $createdAt, severity: $severity, rejectMedia: $rejectMedia, rejectReports: $rejectReports, privateComment: $privateComment, publicComment: $publicComment, obfuscate: $obfuscate)';
   }
 
   @override
@@ -296,6 +318,7 @@ class _$AdminDomainBlockImpl implements _AdminDomainBlock {
             other is _$AdminDomainBlockImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.domain, domain) || other.domain == domain) &&
+            (identical(other.digest, digest) || other.digest == digest) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.severity, severity) ||
@@ -314,8 +337,18 @@ class _$AdminDomainBlockImpl implements _AdminDomainBlock {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, domain, createdAt, severity,
-      rejectMedia, rejectReports, privateComment, publicComment, obfuscate);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      domain,
+      digest,
+      createdAt,
+      severity,
+      rejectMedia,
+      rejectReports,
+      privateComment,
+      publicComment,
+      obfuscate);
 
   @JsonKey(ignore: true)
   @override
@@ -336,6 +369,7 @@ abstract class _AdminDomainBlock implements AdminDomainBlock {
   const factory _AdminDomainBlock(
           {@JsonKey(name: 'id') final String? id,
           @JsonKey(name: 'domain') final String? domain,
+          @JsonKey(name: 'digest') final String? digest,
           @JsonKey(name: 'created_at') final DateTime? createdAt,
           @JsonKey(name: 'severity') final AdminDomainBlockSeverity? severity,
           @JsonKey(name: 'reject_media') final bool? rejectMedia,
@@ -358,6 +392,11 @@ abstract class _AdminDomainBlock implements AdminDomainBlock {
   /// The domain that is not allowed to federate.
   @JsonKey(name: 'domain')
   String? get domain;
+  @override
+
+  /// The sha256 hex digest of the domain that is not allowed to federated.
+  @JsonKey(name: 'digest')
+  String? get digest;
   @override
 
   /// When the domain was blocked from federating.

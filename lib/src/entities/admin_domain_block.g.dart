@@ -11,6 +11,7 @@ _$AdminDomainBlockImpl _$$AdminDomainBlockImplFromJson(
     _$AdminDomainBlockImpl(
       id: json['id'] as String?,
       domain: json['domain'] as String?,
+      digest: json['digest'] as String?,
       createdAt: json['created_at'] == null
           ? null
           : DateTime.parse(json['created_at'] as String),
@@ -28,6 +29,7 @@ Map<String, dynamic> _$$AdminDomainBlockImplToJson(
     <String, dynamic>{
       'id': instance.id,
       'domain': instance.domain,
+      'digest': instance.digest,
       'created_at': instance.createdAt?.toIso8601String(),
       'severity': _$AdminDomainBlockSeverityEnumMap[instance.severity],
       'reject_media': instance.rejectMedia,

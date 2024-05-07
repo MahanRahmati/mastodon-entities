@@ -15,6 +15,9 @@ class AdminDomainBlock with _$AdminDomainBlock {
     /// The domain that is not allowed to federate.
     @JsonKey(name: 'domain') final String? domain,
 
+    /// The sha256 hex digest of the domain that is not allowed to federated.
+    @JsonKey(name: 'digest') final String? digest,
+
     /// When the domain was blocked from federating.
     @JsonKey(name: 'created_at') final DateTime? createdAt,
 
