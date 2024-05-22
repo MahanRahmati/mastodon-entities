@@ -68,5 +68,6 @@ export 'src/enums/preview_card_type.dart';
 export 'src/enums/relationship_severance_event_type.dart';
 export 'src/enums/replies_policy.dart';
 export 'src/enums/report_category.dart';
+export 'src/enums/search_type.dart';
 export 'src/enums/status_visibility.dart';
 export 'src/enums/suggestion_source.dart';

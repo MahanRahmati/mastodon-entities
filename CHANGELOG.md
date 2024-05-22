@@ -1,3 +1,8 @@
+## 1.1.3
+
+- Added Search type
+- Bump dependencies
+
 ## 1.1.2
 
 - Added digest to AdminDomainBlock
