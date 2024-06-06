@@ -1,3 +1,7 @@
+## 1.1.4
+
+- Update report categories.
+
 ## 1.1.3
 
 - Added Search type

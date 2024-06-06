@@ -5,6 +5,9 @@ enum ReportCategory {
   /// Unwanted or repetitive content
   spam('spam'),
 
+  /// Illegal content
+  legal('legal'),
+
   /// A specific rule was violated
   violation('violation'),
 
@@ -17,6 +20,7 @@ enum ReportCategory {
   static ReportCategory? fromValue(final String? value) {
     return switch (value) {
       'spam' => ReportCategory.spam,
+      'legal' => ReportCategory.legal,
       'violation' => ReportCategory.violation,
       'other' => ReportCategory.other,
       _ => null
