@@ -1,6 +1,8 @@
 ## 1.1.4
 
 - Update report categories.
+- Added Markers.
+- Added InstanceActivity.
 
 ## 1.1.3
 

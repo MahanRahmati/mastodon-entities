@@ -65,6 +65,7 @@ Map<String, dynamic> _$$AdminReportImplToJson(_$AdminReportImpl instance) =>
 
 const _$ReportCategoryEnumMap = {
   ReportCategory.spam: 'spam',
+  ReportCategory.legal: 'legal',
   ReportCategory.violation: 'violation',
   ReportCategory.other: 'other',
 };
