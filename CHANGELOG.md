@@ -1,13 +1,17 @@
+## 1.1.5
+
+- Added MarkerTimeline
+
 ## 1.1.4
 
-- Update report categories.
+- Updated report categories.
 - Added Markers.
 - Added InstanceActivity.
 
 ## 1.1.3
 
 - Added Search type
-- Bump dependencies
+- Bumped dependencies
 
 ## 1.1.2
 
@@ -15,20 +19,20 @@
 
 ## 1.1.1
 
-- Update Role id and permission types.
+- Updated Role id and permission types.
 
 ## 1.1.0
 
-- Make everything nullable
+- Made everything nullable
 
 ## 1.0.2
 
-- Add indexable to Account.
+- Added indexable to Account.
 
 ## 1.0.1
 
-- Update descriptions and README.
-- Add example.
+- Updated descriptions and README.
+- Added example.
 
 ## 1.0.0
 

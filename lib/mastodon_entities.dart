@@ -63,6 +63,7 @@ export 'src/enums/domain_block_severity.dart';
 export 'src/enums/encrypted_message_type.dart';
 export 'src/enums/filter_action.dart';
 export 'src/enums/filter_context.dart';
+export 'src/enums/marker_timeline.dart';
 export 'src/enums/media_attachment_type.dart';
 export 'src/enums/notification_type.dart';
 export 'src/enums/preferences_reading_expand_media.dart';
