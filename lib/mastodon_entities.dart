@@ -34,6 +34,7 @@ export 'src/entities/marker.dart';
 export 'src/entities/markers.dart';
 export 'src/entities/mastodon_error.dart';
 export 'src/entities/media_attachment.dart';
+export 'src/entities/media_attribute.dart';
 export 'src/entities/notification.dart';
 export 'src/entities/poll.dart';
 export 'src/entities/preferences.dart';

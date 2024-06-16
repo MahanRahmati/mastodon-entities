@@ -1,3 +1,7 @@
+## 1.1.6
+
+- Added MediaAttribute
+
 ## 1.1.5
 
 - Added MarkerTimeline
