@@ -1,10 +1,12 @@
 ## 1.1.6
 
-- Added MediaAttribute
+- Added MediaAttribute.
+- Added NotificationRequest.
+- Added NotificationPolicy.
 
 ## 1.1.5
 
-- Added MarkerTimeline
+- Added MarkerTimeline.
 
 ## 1.1.4
 
@@ -14,12 +16,12 @@
 
 ## 1.1.3
 
-- Added Search type
-- Bumped dependencies
+- Added Search type.
+- Bumped dependencies.
 
 ## 1.1.2
 
-- Added digest to AdminDomainBlock
+- Added digest to AdminDomainBlock.
 
 ## 1.1.1
 
@@ -27,7 +29,7 @@
 
 ## 1.1.0
 
-- Made everything nullable
+- Made everything nullable.
 
 ## 1.0.2
 
