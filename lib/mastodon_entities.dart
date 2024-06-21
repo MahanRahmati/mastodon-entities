@@ -4,6 +4,7 @@
 library mastodon_entities;
 
 export 'src/entities/account.dart';
+export 'src/entities/accounts_fields_attributes.dart';
 export 'src/entities/admin_account.dart';
 export 'src/entities/admin_canonical_email_block.dart';
 export 'src/entities/admin_cohort.dart';

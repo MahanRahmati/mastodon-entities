@@ -1,3 +1,7 @@
+## 1.1.7
+
+- Added AccountsFieldsAttributes.
+
 ## 1.1.6
 
 - Added MediaAttribute.
