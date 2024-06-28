@@ -34,7 +34,7 @@ mixin _$FeaturedTag {
 
   /// The number of authored statuses containing this hashtag.
   @JsonKey(name: 'statuses_count')
-  int? get statusesCount => throw _privateConstructorUsedError;
+  String? get statusesCount => throw _privateConstructorUsedError;
 
   /// The timestamp of the last authored status containing this hashtag.
   @JsonKey(name: 'last_status_at')
@@ -56,7 +56,7 @@ abstract class $FeaturedTagCopyWith<$Res> {
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'url') String? url,
-      @JsonKey(name: 'statuses_count') int? statusesCount,
+      @JsonKey(name: 'statuses_count') String? statusesCount,
       @JsonKey(name: 'last_status_at') DateTime? lastStatusAt});
 }
 
@@ -95,7 +95,7 @@ class _$FeaturedTagCopyWithImpl<$Res, $Val extends FeaturedTag>
       statusesCount: freezed == statusesCount
           ? _value.statusesCount
           : statusesCount // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       lastStatusAt: freezed == lastStatusAt
           ? _value.lastStatusAt
           : lastStatusAt // ignore: cast_nullable_to_non_nullable
@@ -116,7 +116,7 @@ abstract class _$$FeaturedTagImplCopyWith<$Res>
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'url') String? url,
-      @JsonKey(name: 'statuses_count') int? statusesCount,
+      @JsonKey(name: 'statuses_count') String? statusesCount,
       @JsonKey(name: 'last_status_at') DateTime? lastStatusAt});
 }
 
@@ -153,7 +153,7 @@ class __$$FeaturedTagImplCopyWithImpl<$Res>
       statusesCount: freezed == statusesCount
           ? _value.statusesCount
           : statusesCount // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       lastStatusAt: freezed == lastStatusAt
           ? _value.lastStatusAt
           : lastStatusAt // ignore: cast_nullable_to_non_nullable
@@ -193,7 +193,7 @@ class _$FeaturedTagImpl implements _FeaturedTag {
   /// The number of authored statuses containing this hashtag.
   @override
   @JsonKey(name: 'statuses_count')
-  final int? statusesCount;
+  final String? statusesCount;
 
   /// The timestamp of the last authored status containing this hashtag.
   @override
@@ -243,7 +243,7 @@ abstract class _FeaturedTag implements FeaturedTag {
           {@JsonKey(name: 'id') final String? id,
           @JsonKey(name: 'name') final String? name,
           @JsonKey(name: 'url') final String? url,
-          @JsonKey(name: 'statuses_count') final int? statusesCount,
+          @JsonKey(name: 'statuses_count') final String? statusesCount,
           @JsonKey(name: 'last_status_at') final DateTime? lastStatusAt}) =
       _$FeaturedTagImpl;
 
@@ -269,7 +269,7 @@ abstract class _FeaturedTag implements FeaturedTag {
 
   /// The number of authored statuses containing this hashtag.
   @JsonKey(name: 'statuses_count')
-  int? get statusesCount;
+  String? get statusesCount;
   @override
 
   /// The timestamp of the last authored status containing this hashtag.

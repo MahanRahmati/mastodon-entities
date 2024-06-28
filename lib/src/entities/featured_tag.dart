@@ -17,7 +17,7 @@ class FeaturedTag with _$FeaturedTag {
     @JsonKey(name: 'url') final String? url,
 
     /// The number of authored statuses containing this hashtag.
-    @JsonKey(name: 'statuses_count') final int? statusesCount,
+    @JsonKey(name: 'statuses_count') final String? statusesCount,
 
     /// The timestamp of the last authored status containing this hashtag.
     @JsonKey(name: 'last_status_at') final DateTime? lastStatusAt,

@@ -1,3 +1,7 @@
+## 1.1.8
+
+- Fix FeaturedTag type.
+
 ## 1.1.7
 
 - Added AccountsFieldsAttributes.
