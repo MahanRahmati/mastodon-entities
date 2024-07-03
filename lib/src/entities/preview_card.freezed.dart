@@ -76,6 +76,10 @@ mixin _$PreviewCard {
   /// preview thumbnails when media has not been downloaded yet.
   @JsonKey(name: 'blurhash')
   String? get blurhash => throw _privateConstructorUsedError;
+  @JsonKey(name: 'published_at')
+  DateTime? get publishedAt => throw _privateConstructorUsedError;
+  @JsonKey(name: 'authors')
+  List<Author>? get authors => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -103,7 +107,9 @@ abstract class $PreviewCardCopyWith<$Res> {
       @JsonKey(name: 'height') int? height,
       @JsonKey(name: 'image') String? image,
       @JsonKey(name: 'embed_url') String? embedUrl,
-      @JsonKey(name: 'blurhash') String? blurhash});
+      @JsonKey(name: 'blurhash') String? blurhash,
+      @JsonKey(name: 'published_at') DateTime? publishedAt,
+      @JsonKey(name: 'authors') List<Author>? authors});
 }
 
 /// @nodoc
@@ -133,6 +139,8 @@ class _$PreviewCardCopyWithImpl<$Res, $Val extends PreviewCard>
     Object? image = freezed,
     Object? embedUrl = freezed,
     Object? blurhash = freezed,
+    Object? publishedAt = freezed,
+    Object? authors = freezed,
   }) {
     return _then(_value.copyWith(
       url: freezed == url
@@ -191,6 +199,14 @@ class _$PreviewCardCopyWithImpl<$Res, $Val extends PreviewCard>
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
               as String?,
+      publishedAt: freezed == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      authors: freezed == authors
+          ? _value.authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<Author>?,
     ) as $Val);
   }
 }
@@ -217,7 +233,9 @@ abstract class _$$PreviewCardImplCopyWith<$Res>
       @JsonKey(name: 'height') int? height,
       @JsonKey(name: 'image') String? image,
       @JsonKey(name: 'embed_url') String? embedUrl,
-      @JsonKey(name: 'blurhash') String? blurhash});
+      @JsonKey(name: 'blurhash') String? blurhash,
+      @JsonKey(name: 'published_at') DateTime? publishedAt,
+      @JsonKey(name: 'authors') List<Author>? authors});
 }
 
 /// @nodoc
@@ -245,6 +263,8 @@ class __$$PreviewCardImplCopyWithImpl<$Res>
     Object? image = freezed,
     Object? embedUrl = freezed,
     Object? blurhash = freezed,
+    Object? publishedAt = freezed,
+    Object? authors = freezed,
   }) {
     return _then(_$PreviewCardImpl(
       url: freezed == url
@@ -303,6 +323,14 @@ class __$$PreviewCardImplCopyWithImpl<$Res>
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
               as String?,
+      publishedAt: freezed == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      authors: freezed == authors
+          ? _value._authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<Author>?,
     ));
   }
 }
@@ -324,7 +352,10 @@ class _$PreviewCardImpl implements _PreviewCard {
       @JsonKey(name: 'height') this.height,
       @JsonKey(name: 'image') this.image,
       @JsonKey(name: 'embed_url') this.embedUrl,
-      @JsonKey(name: 'blurhash') this.blurhash});
+      @JsonKey(name: 'blurhash') this.blurhash,
+      @JsonKey(name: 'published_at') this.publishedAt,
+      @JsonKey(name: 'authors') final List<Author>? authors})
+      : _authors = authors;
 
   factory _$PreviewCardImpl.fromJson(Map<String, dynamic> json) =>
       _$$PreviewCardImplFromJson(json);
@@ -399,10 +430,23 @@ class _$PreviewCardImpl implements _PreviewCard {
   @override
   @JsonKey(name: 'blurhash')
   final String? blurhash;
+  @override
+  @JsonKey(name: 'published_at')
+  final DateTime? publishedAt;
+  final List<Author>? _authors;
+  @override
+  @JsonKey(name: 'authors')
+  List<Author>? get authors {
+    final value = _authors;
+    if (value == null) return null;
+    if (_authors is EqualUnmodifiableListView) return _authors;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'PreviewCard(url: $url, title: $title, description: $description, type: $type, authorName: $authorName, authorUrl: $authorUrl, providerName: $providerName, providerUrl: $providerUrl, html: $html, width: $width, height: $height, image: $image, embedUrl: $embedUrl, blurhash: $blurhash)';
+    return 'PreviewCard(url: $url, title: $title, description: $description, type: $type, authorName: $authorName, authorUrl: $authorUrl, providerName: $providerName, providerUrl: $providerUrl, html: $html, width: $width, height: $height, image: $image, embedUrl: $embedUrl, blurhash: $blurhash, publishedAt: $publishedAt, authors: $authors)';
   }
 
   @override
@@ -430,7 +474,10 @@ class _$PreviewCardImpl implements _PreviewCard {
             (identical(other.embedUrl, embedUrl) ||
                 other.embedUrl == embedUrl) &&
             (identical(other.blurhash, blurhash) ||
-                other.blurhash == blurhash));
+                other.blurhash == blurhash) &&
+            (identical(other.publishedAt, publishedAt) ||
+                other.publishedAt == publishedAt) &&
+            const DeepCollectionEquality().equals(other._authors, _authors));
   }
 
   @JsonKey(ignore: true)
@@ -450,7 +497,9 @@ class _$PreviewCardImpl implements _PreviewCard {
       height,
       image,
       embedUrl,
-      blurhash);
+      blurhash,
+      publishedAt,
+      const DeepCollectionEquality().hash(_authors));
 
   @JsonKey(ignore: true)
   @override
@@ -468,20 +517,23 @@ class _$PreviewCardImpl implements _PreviewCard {
 
 abstract class _PreviewCard implements PreviewCard {
   const factory _PreviewCard(
-      {@JsonKey(name: 'url') final String? url,
-      @JsonKey(name: 'title') final String? title,
-      @JsonKey(name: 'description') final String? description,
-      @JsonKey(name: 'type') final PreviewCardType? type,
-      @JsonKey(name: 'author_name') final String? authorName,
-      @JsonKey(name: 'author_url') final String? authorUrl,
-      @JsonKey(name: 'provider_name') final String? providerName,
-      @JsonKey(name: 'provider_url') final String? providerUrl,
-      @JsonKey(name: 'html') final String? html,
-      @JsonKey(name: 'width') final int? width,
-      @JsonKey(name: 'height') final int? height,
-      @JsonKey(name: 'image') final String? image,
-      @JsonKey(name: 'embed_url') final String? embedUrl,
-      @JsonKey(name: 'blurhash') final String? blurhash}) = _$PreviewCardImpl;
+          {@JsonKey(name: 'url') final String? url,
+          @JsonKey(name: 'title') final String? title,
+          @JsonKey(name: 'description') final String? description,
+          @JsonKey(name: 'type') final PreviewCardType? type,
+          @JsonKey(name: 'author_name') final String? authorName,
+          @JsonKey(name: 'author_url') final String? authorUrl,
+          @JsonKey(name: 'provider_name') final String? providerName,
+          @JsonKey(name: 'provider_url') final String? providerUrl,
+          @JsonKey(name: 'html') final String? html,
+          @JsonKey(name: 'width') final int? width,
+          @JsonKey(name: 'height') final int? height,
+          @JsonKey(name: 'image') final String? image,
+          @JsonKey(name: 'embed_url') final String? embedUrl,
+          @JsonKey(name: 'blurhash') final String? blurhash,
+          @JsonKey(name: 'published_at') final DateTime? publishedAt,
+          @JsonKey(name: 'authors') final List<Author>? authors}) =
+      _$PreviewCardImpl;
 
   factory _PreviewCard.fromJson(Map<String, dynamic> json) =
       _$PreviewCardImpl.fromJson;
@@ -557,6 +609,12 @@ abstract class _PreviewCard implements PreviewCard {
   /// preview thumbnails when media has not been downloaded yet.
   @JsonKey(name: 'blurhash')
   String? get blurhash;
+  @override
+  @JsonKey(name: 'published_at')
+  DateTime? get publishedAt;
+  @override
+  @JsonKey(name: 'authors')
+  List<Author>? get authors;
   @override
   @JsonKey(ignore: true)
   _$$PreviewCardImplCopyWith<_$PreviewCardImpl> get copyWith =>
@@ -1358,5 +1416,189 @@ abstract class _TrendsLinkHistory implements TrendsLinkHistory {
   @override
   @JsonKey(ignore: true)
   _$$TrendsLinkHistoryImplCopyWith<_$TrendsLinkHistoryImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Author _$AuthorFromJson(Map<String, dynamic> json) {
+  return _Author.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Author {
+  String? get name => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
+  Account? get account => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AuthorCopyWith<Author> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AuthorCopyWith<$Res> {
+  factory $AuthorCopyWith(Author value, $Res Function(Author) then) =
+      _$AuthorCopyWithImpl<$Res, Author>;
+  @useResult
+  $Res call({String? name, String? url, Account? account});
+
+  $AccountCopyWith<$Res>? get account;
+}
+
+/// @nodoc
+class _$AuthorCopyWithImpl<$Res, $Val extends Author>
+    implements $AuthorCopyWith<$Res> {
+  _$AuthorCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? url = freezed,
+    Object? account = freezed,
+  }) {
+    return _then(_value.copyWith(
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      account: freezed == account
+          ? _value.account
+          : account // ignore: cast_nullable_to_non_nullable
+              as Account?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AccountCopyWith<$Res>? get account {
+    if (_value.account == null) {
+      return null;
+    }
+
+    return $AccountCopyWith<$Res>(_value.account!, (value) {
+      return _then(_value.copyWith(account: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$AuthorImplCopyWith<$Res> implements $AuthorCopyWith<$Res> {
+  factory _$$AuthorImplCopyWith(
+          _$AuthorImpl value, $Res Function(_$AuthorImpl) then) =
+      __$$AuthorImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? name, String? url, Account? account});
+
+  @override
+  $AccountCopyWith<$Res>? get account;
+}
+
+/// @nodoc
+class __$$AuthorImplCopyWithImpl<$Res>
+    extends _$AuthorCopyWithImpl<$Res, _$AuthorImpl>
+    implements _$$AuthorImplCopyWith<$Res> {
+  __$$AuthorImplCopyWithImpl(
+      _$AuthorImpl _value, $Res Function(_$AuthorImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? url = freezed,
+    Object? account = freezed,
+  }) {
+    return _then(_$AuthorImpl(
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      account: freezed == account
+          ? _value.account
+          : account // ignore: cast_nullable_to_non_nullable
+              as Account?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$AuthorImpl implements _Author {
+  const _$AuthorImpl({this.name, this.url, this.account});
+
+  factory _$AuthorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuthorImplFromJson(json);
+
+  @override
+  final String? name;
+  @override
+  final String? url;
+  @override
+  final Account? account;
+
+  @override
+  String toString() {
+    return 'Author(name: $name, url: $url, account: $account)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AuthorImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.account, account) || other.account == account));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url, account);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AuthorImplCopyWith<_$AuthorImpl> get copyWith =>
+      __$$AuthorImplCopyWithImpl<_$AuthorImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AuthorImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Author implements Author {
+  const factory _Author(
+      {final String? name,
+      final String? url,
+      final Account? account}) = _$AuthorImpl;
+
+  factory _Author.fromJson(Map<String, dynamic> json) = _$AuthorImpl.fromJson;
+
+  @override
+  String? get name;
+  @override
+  String? get url;
+  @override
+  Account? get account;
+  @override
+  @JsonKey(ignore: true)
+  _$$AuthorImplCopyWith<_$AuthorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

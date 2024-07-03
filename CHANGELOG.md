@@ -1,3 +1,7 @@
+## 1.1.9
+
+- Added authors and publishedAt to PreviewCard.
+
 ## 1.1.8
 
 - Fix FeaturedTag type.

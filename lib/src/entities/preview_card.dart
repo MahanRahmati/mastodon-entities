@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../enums/preview_card_type.dart';
+import 'account.dart';
 
 part 'preview_card.freezed.dart';
 part 'preview_card.g.dart';
@@ -52,6 +53,8 @@ class PreviewCard with _$PreviewCard {
     /// A hash computed by the BlurHash algorithm, for generating colorful
     /// preview thumbnails when media has not been downloaded yet.
     @JsonKey(name: 'blurhash') final String? blurhash,
+    @JsonKey(name: 'published_at') final DateTime? publishedAt,
+    @JsonKey(name: 'authors') final List<Author>? authors,
   }) = _PreviewCard;
 
   factory PreviewCard.fromJson(final Map<String, dynamic> json) =>
@@ -127,4 +130,16 @@ class TrendsLinkHistory with _$TrendsLinkHistory {
 
   factory TrendsLinkHistory.fromJson(final Map<String, dynamic> json) =>
       _$TrendsLinkHistoryFromJson(json);
+}
+
+@freezed
+class Author with _$Author {
+  const factory Author({
+    final String? name,
+    final String? url,
+    final Account? account,
+  }) = _Author;
+
+  factory Author.fromJson(final Map<String, dynamic> json) =>
+      _$AuthorFromJson(json);
 }

@@ -22,6 +22,12 @@ _$PreviewCardImpl _$$PreviewCardImplFromJson(Map<String, dynamic> json) =>
       image: json['image'] as String?,
       embedUrl: json['embed_url'] as String?,
       blurhash: json['blurhash'] as String?,
+      publishedAt: json['published_at'] == null
+          ? null
+          : DateTime.parse(json['published_at'] as String),
+      authors: (json['authors'] as List<dynamic>?)
+          ?.map((e) => Author.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$PreviewCardImplToJson(_$PreviewCardImpl instance) =>
@@ -40,6 +46,8 @@ Map<String, dynamic> _$$PreviewCardImplToJson(_$PreviewCardImpl instance) =>
       'image': instance.image,
       'embed_url': instance.embedUrl,
       'blurhash': instance.blurhash,
+      'published_at': instance.publishedAt?.toIso8601String(),
+      'authors': instance.authors,
     };
 
 const _$PreviewCardTypeEnumMap = {
@@ -103,4 +111,19 @@ Map<String, dynamic> _$$TrendsLinkHistoryImplToJson(
       'day': instance.day,
       'uses': instance.uses,
       'accounts': instance.accounts,
+    };
+
+_$AuthorImpl _$$AuthorImplFromJson(Map<String, dynamic> json) => _$AuthorImpl(
+      name: json['name'] as String?,
+      url: json['url'] as String?,
+      account: json['account'] == null
+          ? null
+          : Account.fromJson(json['account'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$AuthorImplToJson(_$AuthorImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'url': instance.url,
+      'account': instance.account,
     };
