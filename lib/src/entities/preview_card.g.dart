@@ -76,6 +76,12 @@ _$TrendsLinkImpl _$$TrendsLinkImplFromJson(Map<String, dynamic> json) =>
       history: (json['history'] as List<dynamic>?)
           ?.map((e) => TrendsLinkHistory.fromJson(e as Map<String, dynamic>))
           .toList(),
+      publishedAt: json['published_at'] == null
+          ? null
+          : DateTime.parse(json['published_at'] as String),
+      authors: (json['authors'] as List<dynamic>?)
+          ?.map((e) => Author.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$TrendsLinkImplToJson(_$TrendsLinkImpl instance) =>
@@ -95,6 +101,8 @@ Map<String, dynamic> _$$TrendsLinkImplToJson(_$TrendsLinkImpl instance) =>
       'embed_url': instance.embedUrl,
       'blurhash': instance.blurhash,
       'history': instance.history,
+      'published_at': instance.publishedAt?.toIso8601String(),
+      'authors': instance.authors,
     };
 
 _$TrendsLinkHistoryImpl _$$TrendsLinkHistoryImplFromJson(

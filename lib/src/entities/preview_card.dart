@@ -109,6 +109,8 @@ class TrendsLink with _$TrendsLink {
 
     /// Usage statistics for given days (typically the past week).
     @JsonKey(name: 'history') final List<TrendsLinkHistory>? history,
+    @JsonKey(name: 'published_at') final DateTime? publishedAt,
+    @JsonKey(name: 'authors') final List<Author>? authors,
   }) = _TrendsLink;
 
   factory TrendsLink.fromJson(final Map<String, dynamic> json) =>

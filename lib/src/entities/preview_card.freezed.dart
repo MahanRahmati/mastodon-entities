@@ -687,6 +687,10 @@ mixin _$TrendsLink {
   /// Usage statistics for given days (typically the past week).
   @JsonKey(name: 'history')
   List<TrendsLinkHistory>? get history => throw _privateConstructorUsedError;
+  @JsonKey(name: 'published_at')
+  DateTime? get publishedAt => throw _privateConstructorUsedError;
+  @JsonKey(name: 'authors')
+  List<Author>? get authors => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -715,7 +719,9 @@ abstract class $TrendsLinkCopyWith<$Res> {
       @JsonKey(name: 'image') String? image,
       @JsonKey(name: 'embed_url') String? embedUrl,
       @JsonKey(name: 'blurhash') String? blurhash,
-      @JsonKey(name: 'history') List<TrendsLinkHistory>? history});
+      @JsonKey(name: 'history') List<TrendsLinkHistory>? history,
+      @JsonKey(name: 'published_at') DateTime? publishedAt,
+      @JsonKey(name: 'authors') List<Author>? authors});
 }
 
 /// @nodoc
@@ -746,6 +752,8 @@ class _$TrendsLinkCopyWithImpl<$Res, $Val extends TrendsLink>
     Object? embedUrl = freezed,
     Object? blurhash = freezed,
     Object? history = freezed,
+    Object? publishedAt = freezed,
+    Object? authors = freezed,
   }) {
     return _then(_value.copyWith(
       url: freezed == url
@@ -808,6 +816,14 @@ class _$TrendsLinkCopyWithImpl<$Res, $Val extends TrendsLink>
           ? _value.history
           : history // ignore: cast_nullable_to_non_nullable
               as List<TrendsLinkHistory>?,
+      publishedAt: freezed == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      authors: freezed == authors
+          ? _value.authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<Author>?,
     ) as $Val);
   }
 }
@@ -835,7 +851,9 @@ abstract class _$$TrendsLinkImplCopyWith<$Res>
       @JsonKey(name: 'image') String? image,
       @JsonKey(name: 'embed_url') String? embedUrl,
       @JsonKey(name: 'blurhash') String? blurhash,
-      @JsonKey(name: 'history') List<TrendsLinkHistory>? history});
+      @JsonKey(name: 'history') List<TrendsLinkHistory>? history,
+      @JsonKey(name: 'published_at') DateTime? publishedAt,
+      @JsonKey(name: 'authors') List<Author>? authors});
 }
 
 /// @nodoc
@@ -864,6 +882,8 @@ class __$$TrendsLinkImplCopyWithImpl<$Res>
     Object? embedUrl = freezed,
     Object? blurhash = freezed,
     Object? history = freezed,
+    Object? publishedAt = freezed,
+    Object? authors = freezed,
   }) {
     return _then(_$TrendsLinkImpl(
       url: freezed == url
@@ -926,6 +946,14 @@ class __$$TrendsLinkImplCopyWithImpl<$Res>
           ? _value._history
           : history // ignore: cast_nullable_to_non_nullable
               as List<TrendsLinkHistory>?,
+      publishedAt: freezed == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      authors: freezed == authors
+          ? _value._authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<Author>?,
     ));
   }
 }
@@ -948,8 +976,11 @@ class _$TrendsLinkImpl implements _TrendsLink {
       @JsonKey(name: 'image') this.image,
       @JsonKey(name: 'embed_url') this.embedUrl,
       @JsonKey(name: 'blurhash') this.blurhash,
-      @JsonKey(name: 'history') final List<TrendsLinkHistory>? history})
-      : _history = history;
+      @JsonKey(name: 'history') final List<TrendsLinkHistory>? history,
+      @JsonKey(name: 'published_at') this.publishedAt,
+      @JsonKey(name: 'authors') final List<Author>? authors})
+      : _history = history,
+        _authors = authors;
 
   factory _$TrendsLinkImpl.fromJson(Map<String, dynamic> json) =>
       _$$TrendsLinkImplFromJson(json);
@@ -1040,8 +1071,22 @@ class _$TrendsLinkImpl implements _TrendsLink {
   }
 
   @override
+  @JsonKey(name: 'published_at')
+  final DateTime? publishedAt;
+  final List<Author>? _authors;
+  @override
+  @JsonKey(name: 'authors')
+  List<Author>? get authors {
+    final value = _authors;
+    if (value == null) return null;
+    if (_authors is EqualUnmodifiableListView) return _authors;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
   String toString() {
-    return 'TrendsLink(url: $url, title: $title, description: $description, type: $type, authorName: $authorName, authorUrl: $authorUrl, providerName: $providerName, providerUrl: $providerUrl, html: $html, width: $width, height: $height, image: $image, embedUrl: $embedUrl, blurhash: $blurhash, history: $history)';
+    return 'TrendsLink(url: $url, title: $title, description: $description, type: $type, authorName: $authorName, authorUrl: $authorUrl, providerName: $providerName, providerUrl: $providerUrl, html: $html, width: $width, height: $height, image: $image, embedUrl: $embedUrl, blurhash: $blurhash, history: $history, publishedAt: $publishedAt, authors: $authors)';
   }
 
   @override
@@ -1070,7 +1115,10 @@ class _$TrendsLinkImpl implements _TrendsLink {
                 other.embedUrl == embedUrl) &&
             (identical(other.blurhash, blurhash) ||
                 other.blurhash == blurhash) &&
-            const DeepCollectionEquality().equals(other._history, _history));
+            const DeepCollectionEquality().equals(other._history, _history) &&
+            (identical(other.publishedAt, publishedAt) ||
+                other.publishedAt == publishedAt) &&
+            const DeepCollectionEquality().equals(other._authors, _authors));
   }
 
   @JsonKey(ignore: true)
@@ -1091,7 +1139,9 @@ class _$TrendsLinkImpl implements _TrendsLink {
       image,
       embedUrl,
       blurhash,
-      const DeepCollectionEquality().hash(_history));
+      const DeepCollectionEquality().hash(_history),
+      publishedAt,
+      const DeepCollectionEquality().hash(_authors));
 
   @JsonKey(ignore: true)
   @override
@@ -1123,7 +1173,9 @@ abstract class _TrendsLink implements TrendsLink {
           @JsonKey(name: 'image') final String? image,
           @JsonKey(name: 'embed_url') final String? embedUrl,
           @JsonKey(name: 'blurhash') final String? blurhash,
-          @JsonKey(name: 'history') final List<TrendsLinkHistory>? history}) =
+          @JsonKey(name: 'history') final List<TrendsLinkHistory>? history,
+          @JsonKey(name: 'published_at') final DateTime? publishedAt,
+          @JsonKey(name: 'authors') final List<Author>? authors}) =
       _$TrendsLinkImpl;
 
   factory _TrendsLink.fromJson(Map<String, dynamic> json) =
@@ -1205,6 +1257,12 @@ abstract class _TrendsLink implements TrendsLink {
   /// Usage statistics for given days (typically the past week).
   @JsonKey(name: 'history')
   List<TrendsLinkHistory>? get history;
+  @override
+  @JsonKey(name: 'published_at')
+  DateTime? get publishedAt;
+  @override
+  @JsonKey(name: 'authors')
+  List<Author>? get authors;
   @override
   @JsonKey(ignore: true)
   _$$TrendsLinkImplCopyWith<_$TrendsLinkImpl> get copyWith =>

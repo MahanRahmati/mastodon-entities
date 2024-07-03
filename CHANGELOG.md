@@ -1,3 +1,7 @@
+## 1.1.10
+
+- Added authors and publishedAt to TrendsLink.
+
 ## 1.1.9
 
 - Added authors and publishedAt to PreviewCard.
