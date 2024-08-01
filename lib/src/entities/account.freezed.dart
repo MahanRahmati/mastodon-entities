@@ -136,6 +136,10 @@ mixin _$Account {
   @JsonKey(name: 'role')
   Role? get role => throw _privateConstructorUsedError;
 
+  /// The roles assigned to the currently authorized user.
+  @JsonKey(name: 'roles')
+  List<Role>? get roles => throw _privateConstructorUsedError;
+
   /// When a timed mute will expire, if applicable.
   @JsonKey(name: 'mute_expires_at')
   DateTime? get muteExpiresAt => throw _privateConstructorUsedError;
@@ -178,6 +182,7 @@ abstract class $AccountCopyWith<$Res> {
       @JsonKey(name: 'following_count') int? followingCount,
       @JsonKey(name: 'source') AccountSource? source,
       @JsonKey(name: 'role') Role? role,
+      @JsonKey(name: 'roles') List<Role>? roles,
       @JsonKey(name: 'mute_expires_at') DateTime? muteExpiresAt});
 
   $AccountCopyWith<$Res>? get moved;
@@ -225,6 +230,7 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
     Object? followingCount = freezed,
     Object? source = freezed,
     Object? role = freezed,
+    Object? roles = freezed,
     Object? muteExpiresAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -336,6 +342,10 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as Role?,
+      roles: freezed == roles
+          ? _value.roles
+          : roles // ignore: cast_nullable_to_non_nullable
+              as List<Role>?,
       muteExpiresAt: freezed == muteExpiresAt
           ? _value.muteExpiresAt
           : muteExpiresAt // ignore: cast_nullable_to_non_nullable
@@ -415,6 +425,7 @@ abstract class _$$AccountImplCopyWith<$Res> implements $AccountCopyWith<$Res> {
       @JsonKey(name: 'following_count') int? followingCount,
       @JsonKey(name: 'source') AccountSource? source,
       @JsonKey(name: 'role') Role? role,
+      @JsonKey(name: 'roles') List<Role>? roles,
       @JsonKey(name: 'mute_expires_at') DateTime? muteExpiresAt});
 
   @override
@@ -463,6 +474,7 @@ class __$$AccountImplCopyWithImpl<$Res>
     Object? followingCount = freezed,
     Object? source = freezed,
     Object? role = freezed,
+    Object? roles = freezed,
     Object? muteExpiresAt = freezed,
   }) {
     return _then(_$AccountImpl(
@@ -574,6 +586,10 @@ class __$$AccountImplCopyWithImpl<$Res>
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as Role?,
+      roles: freezed == roles
+          ? _value._roles
+          : roles // ignore: cast_nullable_to_non_nullable
+              as List<Role>?,
       muteExpiresAt: freezed == muteExpiresAt
           ? _value.muteExpiresAt
           : muteExpiresAt // ignore: cast_nullable_to_non_nullable
@@ -613,9 +629,11 @@ class _$AccountImpl implements _Account {
       @JsonKey(name: 'following_count') this.followingCount,
       @JsonKey(name: 'source') this.source,
       @JsonKey(name: 'role') this.role,
+      @JsonKey(name: 'roles') final List<Role>? roles,
       @JsonKey(name: 'mute_expires_at') this.muteExpiresAt})
       : _fields = fields,
-        _emojis = emojis;
+        _emojis = emojis,
+        _roles = roles;
 
   factory _$AccountImpl.fromJson(Map<String, dynamic> json) =>
       _$$AccountImplFromJson(json);
@@ -781,6 +799,20 @@ class _$AccountImpl implements _Account {
   @JsonKey(name: 'role')
   final Role? role;
 
+  /// The roles assigned to the currently authorized user.
+  final List<Role>? _roles;
+
+  /// The roles assigned to the currently authorized user.
+  @override
+  @JsonKey(name: 'roles')
+  List<Role>? get roles {
+    final value = _roles;
+    if (value == null) return null;
+    if (_roles is EqualUnmodifiableListView) return _roles;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   /// When a timed mute will expire, if applicable.
   @override
   @JsonKey(name: 'mute_expires_at')
@@ -788,7 +820,7 @@ class _$AccountImpl implements _Account {
 
   @override
   String toString() {
-    return 'Account(id: $id, username: $username, acct: $acct, url: $url, displayName: $displayName, note: $note, avatar: $avatar, avatarStatic: $avatarStatic, header: $header, headerStatic: $headerStatic, locked: $locked, fields: $fields, emojis: $emojis, bot: $bot, group: $group, discoverable: $discoverable, noindex: $noindex, moved: $moved, suspended: $suspended, limited: $limited, createdAt: $createdAt, lastStatusAt: $lastStatusAt, statusesCount: $statusesCount, followersCount: $followersCount, followingCount: $followingCount, source: $source, role: $role, muteExpiresAt: $muteExpiresAt)';
+    return 'Account(id: $id, username: $username, acct: $acct, url: $url, displayName: $displayName, note: $note, avatar: $avatar, avatarStatic: $avatarStatic, header: $header, headerStatic: $headerStatic, locked: $locked, fields: $fields, emojis: $emojis, bot: $bot, group: $group, discoverable: $discoverable, noindex: $noindex, moved: $moved, suspended: $suspended, limited: $limited, createdAt: $createdAt, lastStatusAt: $lastStatusAt, statusesCount: $statusesCount, followersCount: $followersCount, followingCount: $followingCount, source: $source, role: $role, roles: $roles, muteExpiresAt: $muteExpiresAt)';
   }
 
   @override
@@ -834,6 +866,7 @@ class _$AccountImpl implements _Account {
                 other.followingCount == followingCount) &&
             (identical(other.source, source) || other.source == source) &&
             (identical(other.role, role) || other.role == role) &&
+            const DeepCollectionEquality().equals(other._roles, _roles) &&
             (identical(other.muteExpiresAt, muteExpiresAt) ||
                 other.muteExpiresAt == muteExpiresAt));
   }
@@ -869,6 +902,7 @@ class _$AccountImpl implements _Account {
         followingCount,
         source,
         role,
+        const DeepCollectionEquality().hash(_roles),
         muteExpiresAt
       ]);
 
@@ -915,6 +949,7 @@ abstract class _Account implements Account {
           @JsonKey(name: 'following_count') final int? followingCount,
           @JsonKey(name: 'source') final AccountSource? source,
           @JsonKey(name: 'role') final Role? role,
+          @JsonKey(name: 'roles') final List<Role>? roles,
           @JsonKey(name: 'mute_expires_at') final DateTime? muteExpiresAt}) =
       _$AccountImpl;
 
@@ -1063,6 +1098,11 @@ abstract class _Account implements Account {
   /// The role assigned to the currently authorized user.
   @JsonKey(name: 'role')
   Role? get role;
+  @override
+
+  /// The roles assigned to the currently authorized user.
+  @JsonKey(name: 'roles')
+  List<Role>? get roles;
   @override
 
   /// When a timed mute will expire, if applicable.

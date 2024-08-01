@@ -2,6 +2,7 @@
 
 - Added sources to Suggestion.
 - Added hint to Rule.
+- Added roles to Account.
 
 ## 1.1.10
 

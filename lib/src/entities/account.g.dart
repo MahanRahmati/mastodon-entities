@@ -49,6 +49,9 @@ _$AccountImpl _$$AccountImplFromJson(Map<String, dynamic> json) =>
       role: json['role'] == null
           ? null
           : Role.fromJson(json['role'] as Map<String, dynamic>),
+      roles: (json['roles'] as List<dynamic>?)
+          ?.map((e) => Role.fromJson(e as Map<String, dynamic>))
+          .toList(),
       muteExpiresAt: json['mute_expires_at'] == null
           ? null
           : DateTime.parse(json['mute_expires_at'] as String),
@@ -83,6 +86,7 @@ Map<String, dynamic> _$$AccountImplToJson(_$AccountImpl instance) =>
       'following_count': instance.followingCount,
       'source': instance.source,
       'role': instance.role,
+      'roles': instance.roles,
       'mute_expires_at': instance.muteExpiresAt?.toIso8601String(),
     };
 

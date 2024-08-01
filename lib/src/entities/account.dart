@@ -100,6 +100,9 @@ class Account with _$Account {
     /// The role assigned to the currently authorized user.
     @JsonKey(name: 'role') final Role? role,
 
+    /// The roles assigned to the currently authorized user.
+    @JsonKey(name: 'roles') final List<Role>? roles,
+
     /// When a timed mute will expire, if applicable.
     @JsonKey(name: 'mute_expires_at') final DateTime? muteExpiresAt,
   }) = _Account;
