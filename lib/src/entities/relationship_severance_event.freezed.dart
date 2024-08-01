@@ -48,8 +48,12 @@ mixin _$RelationshipSeveranceEvent {
   @JsonKey(name: 'created_at')
   DateTime? get createdAt => throw _privateConstructorUsedError;
 
+  /// Serializes this RelationshipSeveranceEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RelationshipSeveranceEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RelationshipSeveranceEventCopyWith<RelationshipSeveranceEvent>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -81,6 +85,8 @@ class _$RelationshipSeveranceEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RelationshipSeveranceEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -148,6 +154,8 @@ class __$$RelationshipSeveranceEventImplCopyWithImpl<$Res>
       $Res Function(_$RelationshipSeveranceEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RelationshipSeveranceEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,12 +263,14 @@ class _$RelationshipSeveranceEventImpl implements _RelationshipSeveranceEvent {
                 other.createdAt == createdAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, type, purged, targetName, relationshipsCount, createdAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RelationshipSeveranceEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RelationshipSeveranceEventImplCopyWith<_$RelationshipSeveranceEventImpl>
@@ -289,40 +299,42 @@ abstract class _RelationshipSeveranceEvent
   factory _RelationshipSeveranceEvent.fromJson(Map<String, dynamic> json) =
       _$RelationshipSeveranceEventImpl.fromJson;
 
-  @override
-
   /// The ID of the relationship severance event in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// Type of event.
+  @override
   @JsonKey(name: 'type')
   RelationshipSeveranceEventType? get type;
-  @override
 
   /// Whether the list of severed relationships is unavailable because the
   /// underlying issue has been purged.
+  @override
   @JsonKey(name: 'purged')
   bool? get purged;
-  @override
 
   /// Name of the target of the moderation/block event. This is either a
   /// domain name or a user handle, depending on the event type.
+  @override
   @JsonKey(name: 'target_name')
   String? get targetName;
-  @override
 
   /// Number of follow relationships (in either direction) that were severed.
+  @override
   @JsonKey(name: 'relationships_count')
   int? get relationshipsCount;
-  @override
 
   /// When the event took place.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
+
+  /// Create a copy of RelationshipSeveranceEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RelationshipSeveranceEventImplCopyWith<_$RelationshipSeveranceEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

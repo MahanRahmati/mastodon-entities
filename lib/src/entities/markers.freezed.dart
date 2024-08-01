@@ -23,8 +23,12 @@ mixin _$Markers {
   Marker? get notifications => throw _privateConstructorUsedError;
   Marker? get home => throw _privateConstructorUsedError;
 
+  /// Serializes this Markers to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Markers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MarkersCopyWith<Markers> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -49,6 +53,8 @@ class _$MarkersCopyWithImpl<$Res, $Val extends Markers>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Markers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -67,6 +73,8 @@ class _$MarkersCopyWithImpl<$Res, $Val extends Markers>
     ) as $Val);
   }
 
+  /// Create a copy of Markers
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MarkerCopyWith<$Res>? get notifications {
@@ -79,6 +87,8 @@ class _$MarkersCopyWithImpl<$Res, $Val extends Markers>
     });
   }
 
+  /// Create a copy of Markers
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MarkerCopyWith<$Res>? get home {
@@ -115,6 +125,8 @@ class __$$MarkersImplCopyWithImpl<$Res>
       _$MarkersImpl _value, $Res Function(_$MarkersImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Markers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -162,11 +174,13 @@ class _$MarkersImpl implements _Markers {
             (identical(other.home, home) || other.home == home));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, notifications, home);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Markers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MarkersImplCopyWith<_$MarkersImpl> get copyWith =>
@@ -190,8 +204,11 @@ abstract class _Markers implements Markers {
   Marker? get notifications;
   @override
   Marker? get home;
+
+  /// Create a copy of Markers
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MarkersImplCopyWith<_$MarkersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

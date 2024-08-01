@@ -32,8 +32,12 @@ mixin _$StatusSource {
   @JsonKey(name: 'spoiler_text')
   String? get spoilerText => throw _privateConstructorUsedError;
 
+  /// Serializes this StatusSource to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StatusSource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StatusSourceCopyWith<StatusSource> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$StatusSourceCopyWithImpl<$Res, $Val extends StatusSource>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StatusSource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +112,8 @@ class __$$StatusSourceImplCopyWithImpl<$Res>
       _$StatusSourceImpl _value, $Res Function(_$StatusSourceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StatusSource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -172,11 +180,13 @@ class _$StatusSourceImpl implements _StatusSource {
                 other.spoilerText == spoilerText));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, text, spoilerText);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StatusSource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StatusSourceImplCopyWith<_$StatusSourceImpl> get copyWith =>
@@ -200,23 +210,25 @@ abstract class _StatusSource implements StatusSource {
   factory _StatusSource.fromJson(Map<String, dynamic> json) =
       _$StatusSourceImpl.fromJson;
 
-  @override
-
   /// ID of the status in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The plain text used to compose the status.
+  @override
   @JsonKey(name: 'text')
   String? get text;
-  @override
 
   /// The plain text used to compose the status's subject or content warning.
+  @override
   @JsonKey(name: 'spoiler_text')
   String? get spoilerText;
+
+  /// Create a copy of StatusSource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StatusSourceImplCopyWith<_$StatusSourceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

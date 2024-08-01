@@ -28,8 +28,12 @@ mixin _$AdminDimension {
   @JsonKey(name: 'data')
   List<AdminDimensionData>? get data => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminDimension to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminDimension
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminDimensionCopyWith<AdminDimension> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$AdminDimensionCopyWithImpl<$Res, $Val extends AdminDimension>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminDimension
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class __$$AdminDimensionImplCopyWithImpl<$Res>
       _$AdminDimensionImpl _value, $Res Function(_$AdminDimensionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminDimension
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -158,12 +166,14 @@ class _$AdminDimensionImpl implements _AdminDimension {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, key, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminDimension
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminDimensionImplCopyWith<_$AdminDimensionImpl> get copyWith =>
@@ -187,18 +197,20 @@ abstract class _AdminDimension implements AdminDimension {
   factory _AdminDimension.fromJson(Map<String, dynamic> json) =
       _$AdminDimensionImpl.fromJson;
 
-  @override
-
   /// The unique keystring for the requested dimension.
+  @override
   @JsonKey(name: 'key')
   String? get key;
-  @override
 
   /// The data available for the requested dimension.
+  @override
   @JsonKey(name: 'data')
   List<AdminDimensionData>? get data;
+
+  /// Create a copy of AdminDimension
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminDimensionImplCopyWith<_$AdminDimensionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -229,8 +241,12 @@ mixin _$AdminDimensionData {
   @JsonKey(name: 'human_value')
   String? get humanValue => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminDimensionData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminDimensionData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminDimensionDataCopyWith<AdminDimensionData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -259,6 +275,8 @@ class _$AdminDimensionDataCopyWithImpl<$Res, $Val extends AdminDimensionData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminDimensionData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -317,6 +335,8 @@ class __$$AdminDimensionDataImplCopyWithImpl<$Res>
       $Res Function(_$AdminDimensionDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminDimensionData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -408,12 +428,14 @@ class _$AdminDimensionDataImpl implements _AdminDimensionData {
                 other.humanValue == humanValue));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, key, humanKey, value, unit, humanValue);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminDimensionData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminDimensionDataImplCopyWith<_$AdminDimensionDataImpl> get copyWith =>
@@ -440,33 +462,35 @@ abstract class _AdminDimensionData implements AdminDimensionData {
   factory _AdminDimensionData.fromJson(Map<String, dynamic> json) =
       _$AdminDimensionDataImpl.fromJson;
 
-  @override
-
   /// The unique keystring for this data item.
+  @override
   @JsonKey(name: 'key')
   String? get key;
-  @override
 
   /// A human-readable key for this data item.
+  @override
   @JsonKey(name: 'human_key')
   String? get humanKey;
-  @override
 
   /// The value for this data item.
+  @override
   @JsonKey(name: 'value')
   String? get value;
-  @override
 
   /// The units associated with this data item's value, if applicable.
+  @override
   @JsonKey(name: 'unit')
   String? get unit;
-  @override
 
   /// A human-readable formatted value for this data item.
+  @override
   @JsonKey(name: 'human_value')
   String? get humanValue;
+
+  /// Create a copy of AdminDimensionData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminDimensionDataImplCopyWith<_$AdminDimensionDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

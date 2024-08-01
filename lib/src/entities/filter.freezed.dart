@@ -48,8 +48,12 @@ mixin _$Filter {
   @JsonKey(name: 'statuses')
   List<FilterStatus>? get statuses => throw _privateConstructorUsedError;
 
+  /// Serializes this Filter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Filter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FilterCopyWith<Filter> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -78,6 +82,8 @@ class _$FilterCopyWithImpl<$Res, $Val extends Filter>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Filter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,6 +153,8 @@ class __$$FilterImplCopyWithImpl<$Res>
       _$FilterImpl _value, $Res Function(_$FilterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Filter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -292,7 +300,7 @@ class _$FilterImpl implements _Filter {
             const DeepCollectionEquality().equals(other._statuses, _statuses));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -304,7 +312,9 @@ class _$FilterImpl implements _Filter {
       const DeepCollectionEquality().hash(_keywords),
       const DeepCollectionEquality().hash(_statuses));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Filter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FilterImplCopyWith<_$FilterImpl> get copyWith =>
@@ -331,43 +341,45 @@ abstract class _Filter implements Filter {
 
   factory _Filter.fromJson(Map<String, dynamic> json) = _$FilterImpl.fromJson;
 
-  @override
-
   /// The ID of the Filter in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// A title given by the user to name the filter.
+  @override
   @JsonKey(name: 'title')
   String? get title;
-  @override
 
   /// The contexts in which the filter should be applied.
+  @override
   @JsonKey(name: 'context')
   List<FilterContext>? get context;
-  @override
 
   /// When the filter should no longer be applied.
+  @override
   @JsonKey(name: 'expires_at')
   DateTime? get expiresAt;
-  @override
 
   /// The action to be taken when a status matches this filter.
+  @override
   @JsonKey(name: 'filter_action')
   FilterAction? get filterAction;
-  @override
 
   /// The keywords grouped under this filter.
+  @override
   @JsonKey(name: 'keywords')
   List<FilterKeyword>? get keywords;
-  @override
 
   /// The statuses grouped under this filter.
+  @override
   @JsonKey(name: 'statuses')
   List<FilterStatus>? get statuses;
+
+  /// Create a copy of Filter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FilterImplCopyWith<_$FilterImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

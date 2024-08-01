@@ -32,8 +32,12 @@ mixin _$InstanceActivity {
   /// The number of user registrations since the week began.
   String? get registrations => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceActivity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceActivity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceActivityCopyWith<InstanceActivity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$InstanceActivityCopyWithImpl<$Res, $Val extends InstanceActivity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceActivity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,6 +113,8 @@ class __$$InstanceActivityImplCopyWithImpl<$Res>
       $Res Function(_$InstanceActivityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceActivity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -179,12 +187,14 @@ class _$InstanceActivityImpl implements _InstanceActivity {
                 other.registrations == registrations));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, week, statuses, logins, registrations);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceActivity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceActivityImplCopyWith<_$InstanceActivityImpl> get copyWith =>
@@ -209,24 +219,26 @@ abstract class _InstanceActivity implements InstanceActivity {
   factory _InstanceActivity.fromJson(Map<String, dynamic> json) =
       _$InstanceActivityImpl.fromJson;
 
-  @override
-
   /// Midnight at the first day of the week.
-  String? get week;
   @override
+  String? get week;
 
   /// The number of Statuses created since the week began.
-  String? get statuses;
   @override
+  String? get statuses;
 
   /// The number of user logins since the week began.
-  String? get logins;
   @override
+  String? get logins;
 
   /// The number of user registrations since the week began.
-  String? get registrations;
   @override
-  @JsonKey(ignore: true)
+  String? get registrations;
+
+  /// Create a copy of InstanceActivity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceActivityImplCopyWith<_$InstanceActivityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

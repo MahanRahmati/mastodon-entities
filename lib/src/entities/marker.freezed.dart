@@ -32,8 +32,12 @@ mixin _$Marker {
   @JsonKey(name: 'updated_at')
   DateTime? get updatedAt => throw _privateConstructorUsedError;
 
+  /// Serializes this Marker to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Marker
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MarkerCopyWith<Marker> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -58,6 +62,8 @@ class _$MarkerCopyWithImpl<$Res, $Val extends Marker>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Marker
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,6 +109,8 @@ class __$$MarkerImplCopyWithImpl<$Res>
       _$MarkerImpl _value, $Res Function(_$MarkerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Marker
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -170,11 +178,13 @@ class _$MarkerImpl implements _Marker {
                 other.updatedAt == updatedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, lastReadId, version, updatedAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Marker
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MarkerImplCopyWith<_$MarkerImpl> get copyWith =>
@@ -196,23 +206,25 @@ abstract class _Marker implements Marker {
 
   factory _Marker.fromJson(Map<String, dynamic> json) = _$MarkerImpl.fromJson;
 
-  @override
-
   /// The ID of the most recently viewed entity.
+  @override
   @JsonKey(name: 'last_read_id')
   String? get lastReadId;
-  @override
 
   /// An incrementing counter, used for locking to prevent write conflicts.
+  @override
   @JsonKey(name: 'version')
   int? get version;
-  @override
 
   /// The timestamp of when the marker was set.
+  @override
   @JsonKey(name: 'updated_at')
   DateTime? get updatedAt;
+
+  /// Create a copy of Marker
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MarkerImplCopyWith<_$MarkerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

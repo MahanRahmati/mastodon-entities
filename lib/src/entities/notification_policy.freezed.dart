@@ -44,8 +44,12 @@ mixin _$NotificationPolicy {
   @JsonKey(name: 'summary')
   NotificationPolicySummary? get summary => throw _privateConstructorUsedError;
 
+  /// Serializes this NotificationPolicy to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotificationPolicy
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationPolicyCopyWith<NotificationPolicy> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -76,6 +80,8 @@ class _$NotificationPolicyCopyWithImpl<$Res, $Val extends NotificationPolicy>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotificationPolicy
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -109,6 +115,8 @@ class _$NotificationPolicyCopyWithImpl<$Res, $Val extends NotificationPolicy>
     ) as $Val);
   }
 
+  /// Create a copy of NotificationPolicy
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationPolicySummaryCopyWith<$Res>? get summary {
@@ -149,6 +157,8 @@ class __$$NotificationPolicyImplCopyWithImpl<$Res>
       $Res Function(_$NotificationPolicyImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotificationPolicy
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -246,12 +256,14 @@ class _$NotificationPolicyImpl implements _NotificationPolicy {
             (identical(other.summary, summary) || other.summary == summary));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, filterNotFollowing,
       filterNotFollowers, filterNewAccounts, filterPrivateMentions, summary);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotificationPolicy
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationPolicyImplCopyWith<_$NotificationPolicyImpl> get copyWith =>
@@ -279,37 +291,39 @@ abstract class _NotificationPolicy implements NotificationPolicy {
   factory _NotificationPolicy.fromJson(Map<String, dynamic> json) =
       _$NotificationPolicyImpl.fromJson;
 
-  @override
-
   /// Whether to filter notifications from accounts the user is not following.
+  @override
   @JsonKey(name: 'filter_not_following')
   bool? get filterNotFollowing;
-  @override
 
   /// Whether to filter notifications from accounts that are not following the
   /// user.
+  @override
   @JsonKey(name: 'filter_not_followers')
   bool? get filterNotFollowers;
-  @override
 
   /// Whether to filter notifications from accounts created in the past 30
   /// days.
+  @override
   @JsonKey(name: 'filter_new_accounts')
   bool? get filterNewAccounts;
-  @override
 
   /// Whether to filter notifications from private mentions. Replies to
   /// private mentions initiated by the user, as well as accounts the user
   /// follows, are never filtered.
+  @override
   @JsonKey(name: 'filter_private_mentions')
   bool? get filterPrivateMentions;
-  @override
 
   /// Summary of the filtered notifications.
+  @override
   @JsonKey(name: 'summary')
   NotificationPolicySummary? get summary;
+
+  /// Create a copy of NotificationPolicy
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationPolicyImplCopyWith<_$NotificationPolicyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -330,8 +344,12 @@ mixin _$NotificationPolicySummary {
   @JsonKey(name: 'pending_notifications_count')
   int? get pendingNotificationsCount => throw _privateConstructorUsedError;
 
+  /// Serializes this NotificationPolicySummary to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotificationPolicySummary
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationPolicySummaryCopyWith<NotificationPolicySummary> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -359,6 +377,8 @@ class _$NotificationPolicySummaryCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotificationPolicySummary
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -403,6 +423,8 @@ class __$$NotificationPolicySummaryImplCopyWithImpl<$Res>
       $Res Function(_$NotificationPolicySummaryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotificationPolicySummary
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -461,12 +483,14 @@ class _$NotificationPolicySummaryImpl implements _NotificationPolicySummary {
                 other.pendingNotificationsCount == pendingNotificationsCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, pendingRequestsCount, pendingNotificationsCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotificationPolicySummary
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationPolicySummaryImplCopyWith<_$NotificationPolicySummaryImpl>
@@ -490,19 +514,21 @@ abstract class _NotificationPolicySummary implements NotificationPolicySummary {
   factory _NotificationPolicySummary.fromJson(Map<String, dynamic> json) =
       _$NotificationPolicySummaryImpl.fromJson;
 
-  @override
-
   /// Number of different accounts from which the user has non-dismissed
   /// filtered notifications. Capped at 100.
+  @override
   @JsonKey(name: 'pending_requests_count')
   int? get pendingRequestsCount;
-  @override
 
   /// Number of total non-dismissed filtered notifications. May be inaccurate.
+  @override
   @JsonKey(name: 'pending_notifications_count')
   int? get pendingNotificationsCount;
+
+  /// Create a copy of NotificationPolicySummary
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationPolicySummaryImplCopyWith<_$NotificationPolicySummaryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

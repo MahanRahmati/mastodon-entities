@@ -71,8 +71,12 @@ mixin _$Instance {
   @JsonKey(name: 'rules')
   List<Rule>? get rules => throw _privateConstructorUsedError;
 
+  /// Serializes this Instance to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceCopyWith<Instance> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -113,6 +117,8 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -181,6 +187,8 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
     ) as $Val);
   }
 
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceUsageCopyWith<$Res>? get usage {
@@ -193,6 +201,8 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
     });
   }
 
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceThumbnailCopyWith<$Res>? get thumbnail {
@@ -205,6 +215,8 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
     });
   }
 
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceConfigurationCopyWith<$Res>? get configuration {
@@ -217,6 +229,8 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
     });
   }
 
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceRegistrationsCopyWith<$Res>? get registrations {
@@ -229,6 +243,8 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
     });
   }
 
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceContactCopyWith<$Res>? get contact {
@@ -284,6 +300,8 @@ class __$$InstanceImplCopyWithImpl<$Res>
       _$InstanceImpl _value, $Res Function(_$InstanceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -484,7 +502,7 @@ class _$InstanceImpl implements _Instance {
             const DeepCollectionEquality().equals(other._rules, _rules));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -501,7 +519,9 @@ class _$InstanceImpl implements _Instance {
       contact,
       const DeepCollectionEquality().hash(_rules));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
@@ -535,69 +555,71 @@ abstract class _Instance implements Instance {
   factory _Instance.fromJson(Map<String, dynamic> json) =
       _$InstanceImpl.fromJson;
 
-  @override
-
   /// The domain name of the instance.
+  @override
   @JsonKey(name: 'domain')
   String? get domain;
-  @override
 
   /// The title of the website.
+  @override
   @JsonKey(name: 'title')
   String? get title;
-  @override
 
   /// The version of Mastodon installed on the instance.
+  @override
   @JsonKey(name: 'version')
   String? get version;
-  @override
 
   /// The URL for the source code of the software running on this instance,
   /// in keeping with AGPL license requirements.
+  @override
   @JsonKey(name: 'source_url')
   String? get sourceUrl;
-  @override
 
   /// A short, plain-text description defined by the admin.
+  @override
   @JsonKey(name: 'description')
   String? get description;
-  @override
 
   /// Usage data for this instance.
+  @override
   @JsonKey(name: 'usage')
   InstanceUsage? get usage;
-  @override
 
   /// An image used to represent this instance.
+  @override
   @JsonKey(name: 'thumbnail')
   InstanceThumbnail? get thumbnail;
-  @override
 
   /// Primary languages of the website and its staff.
+  @override
   @JsonKey(name: 'languages')
   List<String>? get languages;
-  @override
 
   /// Configured values and limits for this website.
+  @override
   @JsonKey(name: 'configuration')
   InstanceConfiguration? get configuration;
-  @override
 
   /// Information about registering for this website.
+  @override
   @JsonKey(name: 'registrations')
   InstanceRegistrations? get registrations;
-  @override
 
   /// Hints related to contacting a representative of the website.
+  @override
   @JsonKey(name: 'contact')
   InstanceContact? get contact;
-  @override
 
   /// An itemized list of rules for this website.
+  @override
   @JsonKey(name: 'rules')
   List<Rule>? get rules;
+
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -612,8 +634,12 @@ mixin _$InstanceUsage {
   @JsonKey(name: 'users')
   InstanceUsageUsers? get users => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceUsage to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceUsage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceUsageCopyWith<InstanceUsage> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -639,6 +665,8 @@ class _$InstanceUsageCopyWithImpl<$Res, $Val extends InstanceUsage>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceUsage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -652,6 +680,8 @@ class _$InstanceUsageCopyWithImpl<$Res, $Val extends InstanceUsage>
     ) as $Val);
   }
 
+  /// Create a copy of InstanceUsage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceUsageUsersCopyWith<$Res>? get users {
@@ -687,6 +717,8 @@ class __$$InstanceUsageImplCopyWithImpl<$Res>
       _$InstanceUsageImpl _value, $Res Function(_$InstanceUsageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceUsage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -727,11 +759,13 @@ class _$InstanceUsageImpl implements _InstanceUsage {
             (identical(other.users, users) || other.users == users));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, users);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceUsage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceUsageImplCopyWith<_$InstanceUsageImpl> get copyWith =>
@@ -753,13 +787,15 @@ abstract class _InstanceUsage implements InstanceUsage {
   factory _InstanceUsage.fromJson(Map<String, dynamic> json) =
       _$InstanceUsageImpl.fromJson;
 
-  @override
-
   /// Usage data related to users on this instance.
+  @override
   @JsonKey(name: 'users')
   InstanceUsageUsers? get users;
+
+  /// Create a copy of InstanceUsage
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceUsageImplCopyWith<_$InstanceUsageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -774,8 +810,12 @@ mixin _$InstanceUsageUsers {
   @JsonKey(name: 'active_month')
   int? get activeMonth => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceUsageUsers to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceUsageUsers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceUsageUsersCopyWith<InstanceUsageUsers> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -799,6 +839,8 @@ class _$InstanceUsageUsersCopyWithImpl<$Res, $Val extends InstanceUsageUsers>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceUsageUsers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -832,6 +874,8 @@ class __$$InstanceUsageUsersImplCopyWithImpl<$Res>
       $Res Function(_$InstanceUsageUsersImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceUsageUsers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -874,11 +918,13 @@ class _$InstanceUsageUsersImpl implements _InstanceUsageUsers {
                 other.activeMonth == activeMonth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, activeMonth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceUsageUsers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceUsageUsersImplCopyWith<_$InstanceUsageUsersImpl> get copyWith =>
@@ -901,13 +947,15 @@ abstract class _InstanceUsageUsers implements InstanceUsageUsers {
   factory _InstanceUsageUsers.fromJson(Map<String, dynamic> json) =
       _$InstanceUsageUsersImpl.fromJson;
 
-  @override
-
   /// The number of active users in the past 4 weeks.
+  @override
   @JsonKey(name: 'active_month')
   int? get activeMonth;
+
+  /// Create a copy of InstanceUsageUsers
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceUsageUsersImplCopyWith<_$InstanceUsageUsersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -931,8 +979,12 @@ mixin _$InstanceThumbnail {
   @JsonKey(name: 'versions')
   InstanceVersions? get versions => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceThumbnail to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceThumbnail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceThumbnailCopyWith<InstanceThumbnail> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -961,6 +1013,8 @@ class _$InstanceThumbnailCopyWithImpl<$Res, $Val extends InstanceThumbnail>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceThumbnail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -984,6 +1038,8 @@ class _$InstanceThumbnailCopyWithImpl<$Res, $Val extends InstanceThumbnail>
     ) as $Val);
   }
 
+  /// Create a copy of InstanceThumbnail
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceVersionsCopyWith<$Res>? get versions {
@@ -1022,6 +1078,8 @@ class __$$InstanceThumbnailImplCopyWithImpl<$Res>
       $Res Function(_$InstanceThumbnailImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceThumbnail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1090,11 +1148,13 @@ class _$InstanceThumbnailImpl implements _InstanceThumbnail {
                 other.versions == versions));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, url, blurhash, versions);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceThumbnail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceThumbnailImplCopyWith<_$InstanceThumbnailImpl> get copyWith =>
@@ -1119,24 +1179,26 @@ abstract class _InstanceThumbnail implements InstanceThumbnail {
   factory _InstanceThumbnail.fromJson(Map<String, dynamic> json) =
       _$InstanceThumbnailImpl.fromJson;
 
-  @override
-
   /// The URL for the thumbnail image.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
+  @override
   @JsonKey(name: 'blurhash')
   String? get blurhash;
-  @override
 
   /// Links to scaled resolution images, for high DPI screens.
+  @override
   @JsonKey(name: 'versions')
   InstanceVersions? get versions;
+
+  /// Create a copy of InstanceThumbnail
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceThumbnailImplCopyWith<_$InstanceThumbnailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1155,8 +1217,12 @@ mixin _$InstanceVersions {
   @JsonKey(name: '@2x')
   String? get x2 => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceVersions to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceVersions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceVersionsCopyWith<InstanceVersions> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1181,6 +1247,8 @@ class _$InstanceVersionsCopyWithImpl<$Res, $Val extends InstanceVersions>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceVersions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1220,6 +1288,8 @@ class __$$InstanceVersionsImplCopyWithImpl<$Res>
       $Res Function(_$InstanceVersionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceVersions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1272,11 +1342,13 @@ class _$InstanceVersionsImpl implements _InstanceVersions {
             (identical(other.x2, x2) || other.x2 == x2));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, x1, x2);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceVersions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceVersionsImplCopyWith<_$InstanceVersionsImpl> get copyWith =>
@@ -1299,18 +1371,20 @@ abstract class _InstanceVersions implements InstanceVersions {
   factory _InstanceVersions.fromJson(Map<String, dynamic> json) =
       _$InstanceVersionsImpl.fromJson;
 
-  @override
-
   /// The URL for the thumbnail image at 1x resolution.
+  @override
   @JsonKey(name: '@1x')
   String? get x1;
-  @override
 
   /// The URL for the thumbnail image at 2x resolution.
+  @override
   @JsonKey(name: '@2x')
   String? get x2;
+
+  /// Create a copy of InstanceVersions
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceVersionsImplCopyWith<_$InstanceVersionsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1355,8 +1429,12 @@ mixin _$InstanceConfiguration {
   InstanceConfigurationTranslation? get translation =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceConfiguration to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceConfigurationCopyWith<InstanceConfiguration> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1398,6 +1476,8 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1441,6 +1521,8 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceConfigurationUrlsCopyWith<$Res>? get urls {
@@ -1453,6 +1535,8 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceConfigurationVapidCopyWith<$Res>? get vapid {
@@ -1465,6 +1549,8 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceConfigurationAccountsCopyWith<$Res>? get accounts {
@@ -1478,6 +1564,8 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceConfigurationStatusesCopyWith<$Res>? get statuses {
@@ -1491,6 +1579,8 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceConfigurationMediaAttachmentsCopyWith<$Res>? get mediaAttachments {
@@ -1504,6 +1594,8 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceConfigurationPollsCopyWith<$Res>? get polls {
@@ -1516,6 +1608,8 @@ class _$InstanceConfigurationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceConfigurationTranslationCopyWith<$Res>? get translation {
@@ -1575,6 +1669,8 @@ class __$$InstanceConfigurationImplCopyWithImpl<$Res>
       $Res Function(_$InstanceConfigurationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1693,12 +1789,14 @@ class _$InstanceConfigurationImpl implements _InstanceConfiguration {
                 other.translation == translation));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, urls, vapid, accounts, statuses,
       mediaAttachments, polls, translation);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceConfigurationImplCopyWith<_$InstanceConfigurationImpl>
@@ -1729,44 +1827,46 @@ abstract class _InstanceConfiguration implements InstanceConfiguration {
   factory _InstanceConfiguration.fromJson(Map<String, dynamic> json) =
       _$InstanceConfigurationImpl.fromJson;
 
-  @override
-
   /// URLs of interest for clients apps.
+  @override
   @JsonKey(name: 'urls')
   InstanceConfigurationUrls? get urls;
-  @override
 
   /// The instances VAPID public key, used for push notifications, the same
   /// as WebPushSubscription.serverkey.
+  @override
   @JsonKey(name: 'vapid')
   InstanceConfigurationVapid? get vapid;
-  @override
 
   /// Limits related to accounts.
+  @override
   @JsonKey(name: 'accounts')
   InstanceConfigurationAccounts? get accounts;
-  @override
 
   /// Limits related to authoring statuses.
+  @override
   @JsonKey(name: 'statuses')
   InstanceConfigurationStatuses? get statuses;
-  @override
 
   /// Hints for which attachments will be accepted.
+  @override
   @JsonKey(name: 'media_attachments')
   InstanceConfigurationMediaAttachments? get mediaAttachments;
-  @override
 
   /// Limits related to polls.
+  @override
   @JsonKey(name: 'polls')
   InstanceConfigurationPolls? get polls;
-  @override
 
   /// Hints related to translation.
+  @override
   @JsonKey(name: 'translation')
   InstanceConfigurationTranslation? get translation;
+
+  /// Create a copy of InstanceConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceConfigurationImplCopyWith<_$InstanceConfigurationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1782,8 +1882,12 @@ mixin _$InstanceConfigurationUrls {
   @JsonKey(name: 'streaming')
   String? get streaming => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceConfigurationUrls to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceConfigurationUrls
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceConfigurationUrlsCopyWith<InstanceConfigurationUrls> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1808,6 +1912,8 @@ class _$InstanceConfigurationUrlsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceConfigurationUrls
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1844,6 +1950,8 @@ class __$$InstanceConfigurationUrlsImplCopyWithImpl<$Res>
       $Res Function(_$InstanceConfigurationUrlsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceConfigurationUrls
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1886,11 +1994,13 @@ class _$InstanceConfigurationUrlsImpl implements _InstanceConfigurationUrls {
                 other.streaming == streaming));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, streaming);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceConfigurationUrls
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceConfigurationUrlsImplCopyWith<_$InstanceConfigurationUrlsImpl>
@@ -1913,13 +2023,15 @@ abstract class _InstanceConfigurationUrls implements InstanceConfigurationUrls {
   factory _InstanceConfigurationUrls.fromJson(Map<String, dynamic> json) =
       _$InstanceConfigurationUrlsImpl.fromJson;
 
-  @override
-
   /// The Websockets URL for connecting to the streaming API.
+  @override
   @JsonKey(name: 'streaming')
   String? get streaming;
+
+  /// Create a copy of InstanceConfigurationUrls
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceConfigurationUrlsImplCopyWith<_$InstanceConfigurationUrlsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1936,8 +2048,12 @@ mixin _$InstanceConfigurationVapid {
   @JsonKey(name: 'public_key')
   String? get publicKey => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceConfigurationVapid to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceConfigurationVapid
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceConfigurationVapidCopyWith<InstanceConfigurationVapid>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1963,6 +2079,8 @@ class _$InstanceConfigurationVapidCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceConfigurationVapid
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1999,6 +2117,8 @@ class __$$InstanceConfigurationVapidImplCopyWithImpl<$Res>
       $Res Function(_$InstanceConfigurationVapidImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceConfigurationVapid
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2043,11 +2163,13 @@ class _$InstanceConfigurationVapidImpl implements _InstanceConfigurationVapid {
                 other.publicKey == publicKey));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, publicKey);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceConfigurationVapid
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceConfigurationVapidImplCopyWith<_$InstanceConfigurationVapidImpl>
@@ -2071,14 +2193,16 @@ abstract class _InstanceConfigurationVapid
   factory _InstanceConfigurationVapid.fromJson(Map<String, dynamic> json) =
       _$InstanceConfigurationVapidImpl.fromJson;
 
-  @override
-
   /// The instances VAPID public key, used for push notifications, the same
   /// as WebPushSubscription.serverkey.
+  @override
   @JsonKey(name: 'public_key')
   String? get publicKey;
+
+  /// Create a copy of InstanceConfigurationVapid
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceConfigurationVapidImplCopyWith<_$InstanceConfigurationVapidImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2098,8 +2222,12 @@ mixin _$InstanceConfigurationAccounts {
   @JsonKey(name: 'max_pinned_statuses')
   int? get maxPinnedStatuses => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceConfigurationAccounts to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceConfigurationAccounts
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceConfigurationAccountsCopyWith<InstanceConfigurationAccounts>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2128,6 +2256,8 @@ class _$InstanceConfigurationAccountsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceConfigurationAccounts
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2171,6 +2301,8 @@ class __$$InstanceConfigurationAccountsImplCopyWithImpl<$Res>
       $Res Function(_$InstanceConfigurationAccountsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceConfigurationAccounts
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2228,12 +2360,14 @@ class _$InstanceConfigurationAccountsImpl
                 other.maxPinnedStatuses == maxPinnedStatuses));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, maxFeaturedTags, maxPinnedStatuses);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceConfigurationAccounts
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceConfigurationAccountsImplCopyWith<
@@ -2259,18 +2393,20 @@ abstract class _InstanceConfigurationAccounts
   factory _InstanceConfigurationAccounts.fromJson(Map<String, dynamic> json) =
       _$InstanceConfigurationAccountsImpl.fromJson;
 
-  @override
-
   /// The maximum number of featured tags allowed for each account.
+  @override
   @JsonKey(name: 'max_featured_tags')
   int? get maxFeaturedTags;
-  @override
 
   /// The maximum number of pinned statuses for each account.
+  @override
   @JsonKey(name: 'max_pinned_statuses')
   int? get maxPinnedStatuses;
+
+  /// Create a copy of InstanceConfigurationAccounts
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceConfigurationAccountsImplCopyWith<
           _$InstanceConfigurationAccountsImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2295,8 +2431,12 @@ mixin _$InstanceConfigurationStatuses {
   @JsonKey(name: 'characters_reserved_per_url')
   int? get charactersReservedPerUrl => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceConfigurationStatuses to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceConfigurationStatuses
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceConfigurationStatusesCopyWith<InstanceConfigurationStatuses>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2327,6 +2467,8 @@ class _$InstanceConfigurationStatusesCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceConfigurationStatuses
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2377,6 +2519,8 @@ class __$$InstanceConfigurationStatusesImplCopyWithImpl<$Res>
       $Res Function(_$InstanceConfigurationStatusesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceConfigurationStatuses
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2449,12 +2593,14 @@ class _$InstanceConfigurationStatusesImpl
                 other.charactersReservedPerUrl == charactersReservedPerUrl));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, maxCharacters,
       maxMediaAttachments, charactersReservedPerUrl);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceConfigurationStatuses
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceConfigurationStatusesImplCopyWith<
@@ -2482,23 +2628,25 @@ abstract class _InstanceConfigurationStatuses
   factory _InstanceConfigurationStatuses.fromJson(Map<String, dynamic> json) =
       _$InstanceConfigurationStatusesImpl.fromJson;
 
-  @override
-
   /// The maximum number of allowed characters per status.
+  @override
   @JsonKey(name: 'max_characters')
   int? get maxCharacters;
-  @override
 
   /// The maximum number of media attachments that can be added to a status.
+  @override
   @JsonKey(name: 'max_media_attachments')
   int? get maxMediaAttachments;
-  @override
 
   /// Each URL in a status will be assumed to be exactly this many characters.
+  @override
   @JsonKey(name: 'characters_reserved_per_url')
   int? get charactersReservedPerUrl;
+
+  /// Create a copy of InstanceConfigurationStatuses
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceConfigurationStatusesImplCopyWith<
           _$InstanceConfigurationStatusesImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2535,8 +2683,12 @@ mixin _$InstanceConfigurationMediaAttachments {
   @JsonKey(name: 'video_matrix_limit')
   int? get videoMatrixLimit => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceConfigurationMediaAttachments to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceConfigurationMediaAttachments
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceConfigurationMediaAttachmentsCopyWith<
           InstanceConfigurationMediaAttachments>
       get copyWith => throw _privateConstructorUsedError;
@@ -2570,6 +2722,8 @@ class _$InstanceConfigurationMediaAttachmentsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceConfigurationMediaAttachments
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2637,6 +2791,8 @@ class __$$InstanceConfigurationMediaAttachmentsImplCopyWithImpl<$Res>
       $Res Function(_$InstanceConfigurationMediaAttachmentsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceConfigurationMediaAttachments
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2758,7 +2914,7 @@ class _$InstanceConfigurationMediaAttachmentsImpl
                 other.videoMatrixLimit == videoMatrixLimit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2769,7 +2925,9 @@ class _$InstanceConfigurationMediaAttachmentsImpl
       videoFrameRateLimit,
       videoMatrixLimit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceConfigurationMediaAttachments
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceConfigurationMediaAttachmentsImplCopyWith<
@@ -2802,38 +2960,40 @@ abstract class _InstanceConfigurationMediaAttachments
           Map<String, dynamic> json) =
       _$InstanceConfigurationMediaAttachmentsImpl.fromJson;
 
-  @override
-
   /// Contains MIME types that can be uploaded.
+  @override
   @JsonKey(name: 'supported_mime_types')
   List<String>? get supportedMimeTypes;
-  @override
 
   /// The maximum size of any uploaded image, in bytes.
+  @override
   @JsonKey(name: 'image_size_limit')
   int? get imageSizeLimit;
-  @override
 
   /// The maximum number of pixels (width times height) for image uploads.
+  @override
   @JsonKey(name: 'image_matrix_limit')
   int? get imageMatrixLimit;
-  @override
 
   /// The maximum size of any uploaded video, in bytes.
+  @override
   @JsonKey(name: 'video_size_limit')
   int? get videoSizeLimit;
-  @override
 
   /// The maximum frame rate for any uploaded video.
+  @override
   @JsonKey(name: 'video_frame_rate_limit')
   int? get videoFrameRateLimit;
-  @override
 
   /// The maximum number of pixels (width times height) for video uploads.
+  @override
   @JsonKey(name: 'video_matrix_limit')
   int? get videoMatrixLimit;
+
+  /// Create a copy of InstanceConfigurationMediaAttachments
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceConfigurationMediaAttachmentsImplCopyWith<
           _$InstanceConfigurationMediaAttachmentsImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2862,8 +3022,12 @@ mixin _$InstanceConfigurationPolls {
   @JsonKey(name: 'max_expiration')
   int? get maxExpiration => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceConfigurationPolls to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceConfigurationPolls
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceConfigurationPollsCopyWith<InstanceConfigurationPolls>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2893,6 +3057,8 @@ class _$InstanceConfigurationPollsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceConfigurationPolls
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2948,6 +3114,8 @@ class __$$InstanceConfigurationPollsImplCopyWithImpl<$Res>
       $Res Function(_$InstanceConfigurationPollsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceConfigurationPolls
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3030,12 +3198,14 @@ class _$InstanceConfigurationPollsImpl implements _InstanceConfigurationPolls {
                 other.maxExpiration == maxExpiration));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, maxOptions,
       maxCharactersPerOption, minExpiration, maxExpiration);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceConfigurationPolls
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceConfigurationPollsImplCopyWith<_$InstanceConfigurationPollsImpl>
@@ -3063,28 +3233,30 @@ abstract class _InstanceConfigurationPolls
   factory _InstanceConfigurationPolls.fromJson(Map<String, dynamic> json) =
       _$InstanceConfigurationPollsImpl.fromJson;
 
-  @override
-
   /// Each poll is allowed to have up to this many options.
+  @override
   @JsonKey(name: 'max_options')
   int? get maxOptions;
-  @override
 
   /// Each poll option is allowed to have this many characters.
+  @override
   @JsonKey(name: 'max_characters_per_option')
   int? get maxCharactersPerOption;
-  @override
 
   /// The shortest allowed poll duration, in seconds.
+  @override
   @JsonKey(name: 'min_expiration')
   int? get minExpiration;
-  @override
 
   /// The longest allowed poll duration, in seconds.
+  @override
   @JsonKey(name: 'max_expiration')
   int? get maxExpiration;
+
+  /// Create a copy of InstanceConfigurationPolls
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceConfigurationPollsImplCopyWith<_$InstanceConfigurationPollsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3100,8 +3272,12 @@ mixin _$InstanceConfigurationTranslation {
   @JsonKey(name: 'enabled')
   bool? get enabled => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceConfigurationTranslation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceConfigurationTranslation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceConfigurationTranslationCopyWith<InstanceConfigurationTranslation>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3128,6 +3304,8 @@ class _$InstanceConfigurationTranslationCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceConfigurationTranslation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3164,6 +3342,8 @@ class __$$InstanceConfigurationTranslationImplCopyWithImpl<$Res>
       $Res Function(_$InstanceConfigurationTranslationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceConfigurationTranslation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3207,11 +3387,13 @@ class _$InstanceConfigurationTranslationImpl
             (identical(other.enabled, enabled) || other.enabled == enabled));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, enabled);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceConfigurationTranslation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceConfigurationTranslationImplCopyWith<
@@ -3237,13 +3419,15 @@ abstract class _InstanceConfigurationTranslation
           Map<String, dynamic> json) =
       _$InstanceConfigurationTranslationImpl.fromJson;
 
-  @override
-
   /// Whether the Translations API is available on this instance.
+  @override
   @JsonKey(name: 'enabled')
   bool? get enabled;
+
+  /// Create a copy of InstanceConfigurationTranslation
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceConfigurationTranslationImplCopyWith<
           _$InstanceConfigurationTranslationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -3268,8 +3452,12 @@ mixin _$InstanceRegistrations {
   @JsonKey(name: 'message')
   String? get message => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceRegistrations to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceRegistrations
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceRegistrationsCopyWith<InstanceRegistrations> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3297,6 +3485,8 @@ class _$InstanceRegistrationsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceRegistrations
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3345,6 +3535,8 @@ class __$$InstanceRegistrationsImplCopyWithImpl<$Res>
       $Res Function(_$InstanceRegistrationsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceRegistrations
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3411,12 +3603,14 @@ class _$InstanceRegistrationsImpl implements _InstanceRegistrations {
             (identical(other.message, message) || other.message == message));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, enabled, approvalRequired, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceRegistrations
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceRegistrationsImplCopyWith<_$InstanceRegistrationsImpl>
@@ -3441,23 +3635,25 @@ abstract class _InstanceRegistrations implements InstanceRegistrations {
   factory _InstanceRegistrations.fromJson(Map<String, dynamic> json) =
       _$InstanceRegistrationsImpl.fromJson;
 
-  @override
-
   /// Whether registrations are enabled.
+  @override
   @JsonKey(name: 'enabled')
   bool? get enabled;
-  @override
 
   /// Whether registrations require moderator approval.
+  @override
   @JsonKey(name: 'approval_required')
   bool? get approvalRequired;
-  @override
 
   /// A custom message to be shown when registrations are closed.
+  @override
   @JsonKey(name: 'message')
   String? get message;
+
+  /// Create a copy of InstanceRegistrations
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceRegistrationsImplCopyWith<_$InstanceRegistrationsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3477,8 +3673,12 @@ mixin _$InstanceContact {
   @JsonKey(name: 'account')
   Account? get account => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceContact to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceContact
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceContactCopyWith<InstanceContact> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3506,6 +3706,8 @@ class _$InstanceContactCopyWithImpl<$Res, $Val extends InstanceContact>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceContact
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3524,6 +3726,8 @@ class _$InstanceContactCopyWithImpl<$Res, $Val extends InstanceContact>
     ) as $Val);
   }
 
+  /// Create a copy of InstanceContact
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountCopyWith<$Res>? get account {
@@ -3561,6 +3765,8 @@ class __$$InstanceContactImplCopyWithImpl<$Res>
       _$InstanceContactImpl _value, $Res Function(_$InstanceContactImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceContact
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3615,11 +3821,13 @@ class _$InstanceContactImpl implements _InstanceContact {
             (identical(other.account, account) || other.account == account));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, email, account);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceContact
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceContactImplCopyWith<_$InstanceContactImpl> get copyWith =>
@@ -3643,19 +3851,21 @@ abstract class _InstanceContact implements InstanceContact {
   factory _InstanceContact.fromJson(Map<String, dynamic> json) =
       _$InstanceContactImpl.fromJson;
 
-  @override
-
   /// An email address that can be messaged regarding inquiries or issues.
+  @override
   @JsonKey(name: 'email')
   String? get email;
-  @override
 
   /// An account that can be contacted natively over the network regarding
   /// inquiries or issues.
+  @override
   @JsonKey(name: 'account')
   Account? get account;
+
+  /// Create a copy of InstanceContact
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceContactImplCopyWith<_$InstanceContactImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -81,8 +81,12 @@ mixin _$PreviewCard {
   @JsonKey(name: 'authors')
   List<Author>? get authors => throw _privateConstructorUsedError;
 
+  /// Serializes this PreviewCard to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PreviewCard
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PreviewCardCopyWith<PreviewCard> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -122,6 +126,8 @@ class _$PreviewCardCopyWithImpl<$Res, $Val extends PreviewCard>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PreviewCard
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -246,6 +252,8 @@ class __$$PreviewCardImplCopyWithImpl<$Res>
       _$PreviewCardImpl _value, $Res Function(_$PreviewCardImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PreviewCard
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -480,7 +488,7 @@ class _$PreviewCardImpl implements _PreviewCard {
             const DeepCollectionEquality().equals(other._authors, _authors));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -501,7 +509,9 @@ class _$PreviewCardImpl implements _PreviewCard {
       publishedAt,
       const DeepCollectionEquality().hash(_authors));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PreviewCard
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PreviewCardImplCopyWith<_$PreviewCardImpl> get copyWith =>
@@ -538,75 +548,74 @@ abstract class _PreviewCard implements PreviewCard {
   factory _PreviewCard.fromJson(Map<String, dynamic> json) =
       _$PreviewCardImpl.fromJson;
 
-  @override
-
   /// Location of linked resource.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// Title of linked resource.
+  @override
   @JsonKey(name: 'title')
   String? get title;
-  @override
 
   /// Description of preview.
+  @override
   @JsonKey(name: 'description')
   String? get description;
-  @override
 
   /// The type of the preview card.
+  @override
   @JsonKey(name: 'type')
   PreviewCardType? get type;
-  @override
 
   /// The author of the original resource.
+  @override
   @JsonKey(name: 'author_name')
   String? get authorName;
-  @override
 
   /// A link to the author of the original resource.
+  @override
   @JsonKey(name: 'author_url')
   String? get authorUrl;
-  @override
 
   /// The provider of the original resource.
+  @override
   @JsonKey(name: 'provider_name')
   String? get providerName;
-  @override
 
   /// A link to the provider of the original resource.
+  @override
   @JsonKey(name: 'provider_url')
   String? get providerUrl;
-  @override
 
   /// HTML to be used for generating the preview card.
+  @override
   @JsonKey(name: 'html')
   String? get html;
-  @override
 
   /// Width of preview, in pixels.
+  @override
   @JsonKey(name: 'width')
   int? get width;
-  @override
 
   /// Height of preview, in pixels.
+  @override
   @JsonKey(name: 'height')
   int? get height;
-  @override
 
   /// Preview thumbnail.
+  @override
   @JsonKey(name: 'image')
   String? get image;
-  @override
 
   /// Used for photo embeds, instead of custom [html].
+  @override
   @JsonKey(name: 'embed_url')
   String? get embedUrl;
-  @override
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
+  @override
   @JsonKey(name: 'blurhash')
   String? get blurhash;
   @override
@@ -615,8 +624,11 @@ abstract class _PreviewCard implements PreviewCard {
   @override
   @JsonKey(name: 'authors')
   List<Author>? get authors;
+
+  /// Create a copy of PreviewCard
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PreviewCardImplCopyWith<_$PreviewCardImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -692,8 +704,12 @@ mixin _$TrendsLink {
   @JsonKey(name: 'authors')
   List<Author>? get authors => throw _privateConstructorUsedError;
 
+  /// Serializes this TrendsLink to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TrendsLink
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TrendsLinkCopyWith<TrendsLink> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -734,6 +750,8 @@ class _$TrendsLinkCopyWithImpl<$Res, $Val extends TrendsLink>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TrendsLink
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -864,6 +882,8 @@ class __$$TrendsLinkImplCopyWithImpl<$Res>
       _$TrendsLinkImpl _value, $Res Function(_$TrendsLinkImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TrendsLink
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1121,7 +1141,7 @@ class _$TrendsLinkImpl implements _TrendsLink {
             const DeepCollectionEquality().equals(other._authors, _authors));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1143,7 +1163,9 @@ class _$TrendsLinkImpl implements _TrendsLink {
       publishedAt,
       const DeepCollectionEquality().hash(_authors));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrendsLink
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TrendsLinkImplCopyWith<_$TrendsLinkImpl> get copyWith =>
@@ -1181,80 +1203,79 @@ abstract class _TrendsLink implements TrendsLink {
   factory _TrendsLink.fromJson(Map<String, dynamic> json) =
       _$TrendsLinkImpl.fromJson;
 
-  @override
-
   /// Location of linked resource.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// Title of linked resource.
+  @override
   @JsonKey(name: 'title')
   String? get title;
-  @override
 
   /// Description of preview.
+  @override
   @JsonKey(name: 'description')
   String? get description;
-  @override
 
   /// The type of the preview card.
+  @override
   @JsonKey(name: 'type')
   PreviewCardType? get type;
-  @override
 
   /// The author of the original resource.
+  @override
   @JsonKey(name: 'author_name')
   String? get authorName;
-  @override
 
   /// A link to the author of the original resource.
+  @override
   @JsonKey(name: 'author_url')
   String? get authorUrl;
-  @override
 
   /// The provider of the original resource.
+  @override
   @JsonKey(name: 'provider_name')
   String? get providerName;
-  @override
 
   /// A link to the provider of the original resource.
+  @override
   @JsonKey(name: 'provider_url')
   String? get providerUrl;
-  @override
 
   /// HTML to be used for generating the preview card.
+  @override
   @JsonKey(name: 'html')
   String? get html;
-  @override
 
   /// Width of preview, in pixels.
+  @override
   @JsonKey(name: 'width')
   int? get width;
-  @override
 
   /// Height of preview, in pixels.
+  @override
   @JsonKey(name: 'height')
   int? get height;
-  @override
 
   /// Preview thumbnail.
+  @override
   @JsonKey(name: 'image')
   String? get image;
-  @override
 
   /// Used for photo embeds, instead of custom [html].
+  @override
   @JsonKey(name: 'embed_url')
   String? get embedUrl;
-  @override
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
+  @override
   @JsonKey(name: 'blurhash')
   String? get blurhash;
-  @override
 
   /// Usage statistics for given days (typically the past week).
+  @override
   @JsonKey(name: 'history')
   List<TrendsLinkHistory>? get history;
   @override
@@ -1263,8 +1284,11 @@ abstract class _TrendsLink implements TrendsLink {
   @override
   @JsonKey(name: 'authors')
   List<Author>? get authors;
+
+  /// Create a copy of TrendsLink
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrendsLinkImplCopyWith<_$TrendsLinkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1287,8 +1311,12 @@ mixin _$TrendsLinkHistory {
   @JsonKey(name: 'accounts')
   String? get accounts => throw _privateConstructorUsedError;
 
+  /// Serializes this TrendsLinkHistory to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TrendsLinkHistory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TrendsLinkHistoryCopyWith<TrendsLinkHistory> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1315,6 +1343,8 @@ class _$TrendsLinkHistoryCopyWithImpl<$Res, $Val extends TrendsLinkHistory>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TrendsLinkHistory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1361,6 +1391,8 @@ class __$$TrendsLinkHistoryImplCopyWithImpl<$Res>
       $Res Function(_$TrendsLinkHistoryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TrendsLinkHistory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1427,11 +1459,13 @@ class _$TrendsLinkHistoryImpl implements _TrendsLinkHistory {
                 other.accounts == accounts));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, day, uses, accounts);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrendsLinkHistory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TrendsLinkHistoryImplCopyWith<_$TrendsLinkHistoryImpl> get copyWith =>
@@ -1456,23 +1490,25 @@ abstract class _TrendsLinkHistory implements TrendsLinkHistory {
   factory _TrendsLinkHistory.fromJson(Map<String, dynamic> json) =
       _$TrendsLinkHistoryImpl.fromJson;
 
-  @override
-
   /// UNIX timestamp on midnight of the given day.
+  @override
   @JsonKey(name: 'day')
   String? get day;
-  @override
 
   /// The counted accounts using the link within that day.
+  @override
   @JsonKey(name: 'uses')
   String? get uses;
-  @override
 
   /// The counted statuses using the link within that day.
+  @override
   @JsonKey(name: 'accounts')
   String? get accounts;
+
+  /// Create a copy of TrendsLinkHistory
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrendsLinkHistoryImplCopyWith<_$TrendsLinkHistoryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1487,8 +1523,12 @@ mixin _$Author {
   String? get url => throw _privateConstructorUsedError;
   Account? get account => throw _privateConstructorUsedError;
 
+  /// Serializes this Author to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AuthorCopyWith<Author> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1512,6 +1552,8 @@ class _$AuthorCopyWithImpl<$Res, $Val extends Author>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1535,6 +1577,8 @@ class _$AuthorCopyWithImpl<$Res, $Val extends Author>
     ) as $Val);
   }
 
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountCopyWith<$Res>? get account {
@@ -1569,6 +1613,8 @@ class __$$AuthorImplCopyWithImpl<$Res>
       _$AuthorImpl _value, $Res Function(_$AuthorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1623,11 +1669,13 @@ class _$AuthorImpl implements _Author {
             (identical(other.account, account) || other.account == account));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, url, account);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthorImplCopyWith<_$AuthorImpl> get copyWith =>
@@ -1655,8 +1703,11 @@ abstract class _Author implements Author {
   String? get url;
   @override
   Account? get account;
+
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthorImplCopyWith<_$AuthorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

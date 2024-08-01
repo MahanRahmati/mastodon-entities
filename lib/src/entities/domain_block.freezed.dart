@@ -37,8 +37,12 @@ mixin _$DomainBlock {
   @JsonKey(name: 'comment')
   String? get comment => throw _privateConstructorUsedError;
 
+  /// Serializes this DomainBlock to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DomainBlock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DomainBlockCopyWith<DomainBlock> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -66,6 +70,8 @@ class _$DomainBlockCopyWithImpl<$Res, $Val extends DomainBlock>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DomainBlock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,6 +124,8 @@ class __$$DomainBlockImplCopyWithImpl<$Res>
       _$DomainBlockImpl _value, $Res Function(_$DomainBlockImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DomainBlock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -197,12 +205,14 @@ class _$DomainBlockImpl implements _DomainBlock {
             (identical(other.comment, comment) || other.comment == comment));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, domain, digest, severity, comment);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DomainBlock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DomainBlockImplCopyWith<_$DomainBlockImpl> get copyWith =>
@@ -226,29 +236,31 @@ abstract class _DomainBlock implements DomainBlock {
   factory _DomainBlock.fromJson(Map<String, dynamic> json) =
       _$DomainBlockImpl.fromJson;
 
-  @override
-
   /// The domain which is blocked. This may be obfuscated or partially
   /// censored.
+  @override
   @JsonKey(name: 'domain')
   String? get domain;
-  @override
 
   /// The SHA256 hash digest of the domain string.
+  @override
   @JsonKey(name: 'digest')
   String? get digest;
-  @override
 
   /// The level to which the domain is blocked.
+  @override
   @JsonKey(name: 'severity')
   DomainBlockSeverity? get severity;
-  @override
 
   /// An optional reason for the domain block.
+  @override
   @JsonKey(name: 'comment')
   String? get comment;
+
+  /// Create a copy of DomainBlock
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DomainBlockImplCopyWith<_$DomainBlockImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -93,8 +93,12 @@ mixin _$AdminAccount {
   @JsonKey(name: 'invited_by_account_id')
   String? get invitedByAccountId => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminAccount to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminAccount
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminAccountCopyWith<AdminAccount> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -140,6 +144,8 @@ class _$AdminAccountCopyWithImpl<$Res, $Val extends AdminAccount>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminAccount
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -238,6 +244,8 @@ class _$AdminAccountCopyWithImpl<$Res, $Val extends AdminAccount>
     ) as $Val);
   }
 
+  /// Create a copy of AdminAccount
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RoleCopyWith<$Res>? get role {
@@ -250,6 +258,8 @@ class _$AdminAccountCopyWithImpl<$Res, $Val extends AdminAccount>
     });
   }
 
+  /// Create a copy of AdminAccount
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountCopyWith<$Res>? get account {
@@ -306,6 +316,8 @@ class __$$AdminAccountImplCopyWithImpl<$Res>
       _$AdminAccountImpl _value, $Res Function(_$AdminAccountImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminAccount
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -572,7 +584,7 @@ class _$AdminAccountImpl implements _AdminAccount {
                 other.invitedByAccountId == invitedByAccountId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -595,7 +607,9 @@ class _$AdminAccountImpl implements _AdminAccount {
       createdByApplicationId,
       invitedByAccountId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminAccount
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminAccountImplCopyWith<_$AdminAccountImpl> get copyWith =>
@@ -635,99 +649,101 @@ abstract class _AdminAccount implements AdminAccount {
   factory _AdminAccount.fromJson(Map<String, dynamic> json) =
       _$AdminAccountImpl.fromJson;
 
-  @override
-
   /// The ID of the account in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The username of the account.
+  @override
   @JsonKey(name: 'username')
   String? get username;
-  @override
 
   /// The domain of the account, if it is remote.
+  @override
   @JsonKey(name: 'domain')
   String? get domain;
-  @override
 
   /// When the account was first discovered.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-  @override
 
   /// The email address associated with the account.
+  @override
   @JsonKey(name: 'email')
   String? get email;
-  @override
 
   /// The IP address last used to login to this account.
+  @override
   @JsonKey(name: 'ip')
   String? get ip;
-  @override
 
   /// All known IP addresses associated with this account.
+  @override
   @JsonKey(name: 'ips')
   List<AdminIp>? get ips;
-  @override
 
   /// The locale of the account.
+  @override
   @JsonKey(name: 'locale')
   String? get locale;
-  @override
 
   /// The reason given when requesting an invite (for instances that require
   /// manual approval of registrations)
+  @override
   @JsonKey(name: 'invite_request')
   String? get inviteRequest;
-  @override
 
   /// The current role of the account.
+  @override
   @JsonKey(name: 'role')
   Role? get role;
-  @override
 
   /// Whether the account has confirmed their email address.
+  @override
   @JsonKey(name: 'confirmed')
   bool? get confirmed;
-  @override
 
   /// Whether the account is currently approved.
+  @override
   @JsonKey(name: 'approved')
   bool? get approved;
-  @override
 
   /// Whether the account is currently disabled.
+  @override
   @JsonKey(name: 'disabled')
   bool? get disabled;
-  @override
 
   /// Whether the account is currently silenced.
+  @override
   @JsonKey(name: 'silenced')
   bool? get silenced;
-  @override
 
   /// Whether the account is currently suspended.
+  @override
   @JsonKey(name: 'suspended')
   bool? get suspended;
-  @override
 
   /// User-level information about the account.
+  @override
   @JsonKey(name: 'account')
   Account? get account;
-  @override
 
   /// The ID of the Application that created this account, if applicable.
+  @override
   @JsonKey(name: 'created_by_application_id')
   String? get createdByApplicationId;
-  @override
 
   /// The ID of the Account that invited this user, if applicable.
+  @override
   @JsonKey(name: 'invited_by_account_id')
   String? get invitedByAccountId;
+
+  /// Create a copy of AdminAccount
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminAccountImplCopyWith<_$AdminAccountImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -32,8 +32,12 @@ mixin _$AdminCohort {
   @JsonKey(name: 'data')
   List<CohortData>? get data => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminCohort to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminCohort
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminCohortCopyWith<AdminCohort> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$AdminCohortCopyWithImpl<$Res, $Val extends AdminCohort>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminCohort
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +112,8 @@ class __$$AdminCohortImplCopyWithImpl<$Res>
       _$AdminCohortImpl _value, $Res Function(_$AdminCohortImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminCohort
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -182,12 +190,14 @@ class _$AdminCohortImpl implements _AdminCohort {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, period, frequency,
       const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminCohort
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminCohortImplCopyWith<_$AdminCohortImpl> get copyWith =>
@@ -210,23 +220,25 @@ abstract class _AdminCohort implements AdminCohort {
   factory _AdminCohort.fromJson(Map<String, dynamic> json) =
       _$AdminCohortImpl.fromJson;
 
-  @override
-
   /// The timestamp for the start of the period, at midnight.
+  @override
   @JsonKey(name: 'period')
   DateTime? get period;
-  @override
 
   /// The size of the bucket for the returned data.
+  @override
   @JsonKey(name: 'frequency')
   AdminCohortFrequency? get frequency;
-  @override
 
   /// Retention data for users who registered during the given period.
+  @override
   @JsonKey(name: 'data')
   List<CohortData>? get data;
+
+  /// Create a copy of AdminCohort
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminCohortImplCopyWith<_$AdminCohortImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -251,8 +263,12 @@ mixin _$CohortData {
   @JsonKey(name: 'value')
   int? get value => throw _privateConstructorUsedError;
 
+  /// Serializes this CohortData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CohortData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CohortDataCopyWith<CohortData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -279,6 +295,8 @@ class _$CohortDataCopyWithImpl<$Res, $Val extends CohortData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CohortData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -325,6 +343,8 @@ class __$$CohortDataImplCopyWithImpl<$Res>
       _$CohortDataImpl _value, $Res Function(_$CohortDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CohortData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -392,11 +412,13 @@ class _$CohortDataImpl implements _CohortData {
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, date, rate, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CohortData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CohortDataImplCopyWith<_$CohortDataImpl> get copyWith =>
@@ -419,25 +441,27 @@ abstract class _CohortData implements CohortData {
   factory _CohortData.fromJson(Map<String, dynamic> json) =
       _$CohortDataImpl.fromJson;
 
-  @override
-
   /// The timestamp for the start of the bucket, at midnight.
+  @override
   @JsonKey(name: 'date')
   DateTime? get date;
-  @override
 
   /// The percentage rate of users who registered in the specified `period`
   /// and were active for the given `date` bucket.
+  @override
   @JsonKey(name: 'rate')
   double? get rate;
-  @override
 
   /// How many users registered in the specified `period` and were active for
   /// the given `date` bucket.
+  @override
   @JsonKey(name: 'value')
   int? get value;
+
+  /// Create a copy of CohortData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CohortDataImplCopyWith<_$CohortDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

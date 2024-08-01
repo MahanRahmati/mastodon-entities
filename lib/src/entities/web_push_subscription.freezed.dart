@@ -36,8 +36,12 @@ mixin _$WebPushSubscription {
   @JsonKey(name: 'alerts')
   WebPushSubscriptionAlerts? get alerts => throw _privateConstructorUsedError;
 
+  /// Serializes this WebPushSubscription to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of WebPushSubscription
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $WebPushSubscriptionCopyWith<WebPushSubscription> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -67,6 +71,8 @@ class _$WebPushSubscriptionCopyWithImpl<$Res, $Val extends WebPushSubscription>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of WebPushSubscription
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class _$WebPushSubscriptionCopyWithImpl<$Res, $Val extends WebPushSubscription>
     ) as $Val);
   }
 
+  /// Create a copy of WebPushSubscription
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $WebPushSubscriptionAlertsCopyWith<$Res>? get alerts {
@@ -134,6 +142,8 @@ class __$$WebPushSubscriptionImplCopyWithImpl<$Res>
       $Res Function(_$WebPushSubscriptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of WebPushSubscription
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -213,11 +223,13 @@ class _$WebPushSubscriptionImpl implements _WebPushSubscription {
             (identical(other.alerts, alerts) || other.alerts == alerts));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, endpoint, serverKey, alerts);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WebPushSubscription
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WebPushSubscriptionImplCopyWith<_$WebPushSubscriptionImpl> get copyWith =>
@@ -243,28 +255,30 @@ abstract class _WebPushSubscription implements WebPushSubscription {
   factory _WebPushSubscription.fromJson(Map<String, dynamic> json) =
       _$WebPushSubscriptionImpl.fromJson;
 
-  @override
-
   /// The ID of the Web Push subscription in the database.
+  @override
   @JsonKey(name: 'id')
   int? get id;
-  @override
 
   /// Where push alerts will be sent to.
+  @override
   @JsonKey(name: 'endpoint')
   String? get endpoint;
-  @override
 
   /// The streaming server's VAPID key.
+  @override
   @JsonKey(name: 'server_key')
   String? get serverKey;
-  @override
 
   /// Which alerts should be delivered to the [endpoint].
+  @override
   @JsonKey(name: 'alerts')
   WebPushSubscriptionAlerts? get alerts;
+
+  /// Create a copy of WebPushSubscription
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WebPushSubscriptionImplCopyWith<_$WebPushSubscriptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -321,8 +335,12 @@ mixin _$WebPushSubscriptionAlerts {
   @JsonKey(name: 'admin.report')
   bool? get adminReport => throw _privateConstructorUsedError;
 
+  /// Serializes this WebPushSubscriptionAlerts to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of WebPushSubscriptionAlerts
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $WebPushSubscriptionAlertsCopyWith<WebPushSubscriptionAlerts> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -357,6 +375,8 @@ class _$WebPushSubscriptionAlertsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of WebPushSubscriptionAlerts
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -448,6 +468,8 @@ class __$$WebPushSubscriptionAlertsImplCopyWithImpl<$Res>
       $Res Function(_$WebPushSubscriptionAlertsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of WebPushSubscriptionAlerts
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -606,12 +628,14 @@ class _$WebPushSubscriptionAlertsImpl implements _WebPushSubscriptionAlerts {
                 other.adminReport == adminReport));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, mention, status, reblog, follow,
       followRequest, favourite, poll, update, adminSignUp, adminReport);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WebPushSubscriptionAlerts
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WebPushSubscriptionAlertsImplCopyWith<_$WebPushSubscriptionAlertsImpl>
@@ -643,63 +667,65 @@ abstract class _WebPushSubscriptionAlerts implements WebPushSubscriptionAlerts {
   factory _WebPushSubscriptionAlerts.fromJson(Map<String, dynamic> json) =
       _$WebPushSubscriptionAlertsImpl.fromJson;
 
-  @override
-
   /// Receive a push notification when someone else has mentioned you in a
   /// status?
+  @override
   @JsonKey(name: 'mention')
   bool? get mention;
-  @override
 
   /// Receive a push notification when a subscribed account posts a status?
+  @override
   @JsonKey(name: 'status')
   bool? get status;
-  @override
 
   /// Receive a push notification when a status you created has been boosted
   /// by someone else?
+  @override
   @JsonKey(name: 'reblog')
   bool? get reblog;
-  @override
 
   /// Receive a push notification when someone has followed you?
+  @override
   @JsonKey(name: 'follow')
   bool? get follow;
-  @override
 
   /// Receive a push notification when someone has requested to followed you?
+  @override
   @JsonKey(name: 'follow_request')
   bool? get followRequest;
-  @override
 
   /// Receive a push notification when a status you created has been
   /// favourited by someone else?
+  @override
   @JsonKey(name: 'favourite')
   bool? get favourite;
-  @override
 
   /// Receive a push notification when a poll you voted in or created has
   /// ended?
+  @override
   @JsonKey(name: 'poll')
   bool? get poll;
-  @override
 
   /// Receive a push notification when a status you interacted with has been
   /// edited?
+  @override
   @JsonKey(name: 'update')
   bool? get update;
-  @override
 
   /// Receive a push notification when a new user has signed up?
+  @override
   @JsonKey(name: 'admin.sign_up')
   bool? get adminSignUp;
-  @override
 
   /// Receive a push notification when a new report has been filed?
+  @override
   @JsonKey(name: 'admin.report')
   bool? get adminReport;
+
+  /// Create a copy of WebPushSubscriptionAlerts
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WebPushSubscriptionAlertsImplCopyWith<_$WebPushSubscriptionAlertsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

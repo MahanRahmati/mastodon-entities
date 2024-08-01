@@ -27,8 +27,12 @@ mixin _$MediaAttribute {
   @JsonKey(name: 'focus')
   String? get focus => throw _privateConstructorUsedError;
 
+  /// Serializes this MediaAttribute to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MediaAttribute
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MediaAttributeCopyWith<MediaAttribute> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$MediaAttributeCopyWithImpl<$Res, $Val extends MediaAttribute>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MediaAttribute
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -101,6 +107,8 @@ class __$$MediaAttributeImplCopyWithImpl<$Res>
       _$MediaAttributeImpl _value, $Res Function(_$MediaAttributeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaAttribute
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -162,11 +170,13 @@ class _$MediaAttributeImpl implements _MediaAttribute {
             (identical(other.focus, focus) || other.focus == focus));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, description, focus);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaAttribute
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MediaAttributeImplCopyWith<_$MediaAttributeImpl> get copyWith =>
@@ -199,8 +209,11 @@ abstract class _MediaAttribute implements MediaAttribute {
   @override
   @JsonKey(name: 'focus')
   String? get focus;
+
+  /// Create a copy of MediaAttribute
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MediaAttributeImplCopyWith<_$MediaAttributeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

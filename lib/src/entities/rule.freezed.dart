@@ -32,8 +32,12 @@ mixin _$Rule {
   @JsonKey(name: 'hint')
   String? get hint => throw _privateConstructorUsedError;
 
+  /// Serializes this Rule to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Rule
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RuleCopyWith<Rule> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -58,6 +62,8 @@ class _$RuleCopyWithImpl<$Res, $Val extends Rule>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Rule
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -102,6 +108,8 @@ class __$$RuleImplCopyWithImpl<$Res>
   __$$RuleImplCopyWithImpl(_$RuleImpl _value, $Res Function(_$RuleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Rule
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -167,11 +175,13 @@ class _$RuleImpl implements _Rule {
             (identical(other.hint, hint) || other.hint == hint));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, text, hint);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Rule
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RuleImplCopyWith<_$RuleImpl> get copyWith =>
@@ -193,23 +203,25 @@ abstract class _Rule implements Rule {
 
   factory _Rule.fromJson(Map<String, dynamic> json) = _$RuleImpl.fromJson;
 
-  @override
-
   /// An identifier for the rule.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The rule to be followed.
+  @override
   @JsonKey(name: 'text')
   String? get text;
-  @override
 
   /// Longer-form description of the rule.
+  @override
   @JsonKey(name: 'hint')
   String? get hint;
+
+  /// Create a copy of Rule
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RuleImplCopyWith<_$RuleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

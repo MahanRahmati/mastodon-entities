@@ -44,8 +44,12 @@ mixin _$AdminIpBlock {
   @JsonKey(name: 'expires_at')
   DateTime? get expiresAt => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminIpBlock to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminIpBlock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminIpBlockCopyWith<AdminIpBlock> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -75,6 +79,8 @@ class _$AdminIpBlockCopyWithImpl<$Res, $Val extends AdminIpBlock>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminIpBlock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,6 +145,8 @@ class __$$AdminIpBlockImplCopyWithImpl<$Res>
       _$AdminIpBlockImpl _value, $Res Function(_$AdminIpBlockImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminIpBlock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -243,12 +251,14 @@ class _$AdminIpBlockImpl implements _AdminIpBlock {
                 other.expiresAt == expiresAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, ip, severity, comment, createdAt, expiresAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminIpBlock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminIpBlockImplCopyWith<_$AdminIpBlockImpl> get copyWith =>
@@ -275,38 +285,40 @@ abstract class _AdminIpBlock implements AdminIpBlock {
   factory _AdminIpBlock.fromJson(Map<String, dynamic> json) =
       _$AdminIpBlockImpl.fromJson;
 
-  @override
-
   /// The ID of the DomainBlock in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The IP address range that is not allowed to federate.
+  @override
   @JsonKey(name: 'ip')
   String? get ip;
-  @override
 
   /// The associated policy with this IP block.
+  @override
   @JsonKey(name: 'severity')
   AdminIpBlockSeverity? get severity;
-  @override
 
   /// The recorded reason for this IP block.
+  @override
   @JsonKey(name: 'comment')
   String? get comment;
-  @override
 
   /// When the IP block was created.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-  @override
 
   /// When the IP block will expire.
+  @override
   @JsonKey(name: 'expires_at')
   DateTime? get expiresAt;
+
+  /// Create a copy of AdminIpBlock
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminIpBlockImplCopyWith<_$AdminIpBlockImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

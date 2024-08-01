@@ -55,8 +55,12 @@ mixin _$StatusEdit {
   @JsonKey(name: 'emojis')
   List<CustomEmoji>? get emojis => throw _privateConstructorUsedError;
 
+  /// Serializes this StatusEdit to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StatusEdit
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StatusEditCopyWith<StatusEdit> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -92,6 +96,8 @@ class _$StatusEditCopyWithImpl<$Res, $Val extends StatusEdit>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StatusEdit
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,6 +146,8 @@ class _$StatusEditCopyWithImpl<$Res, $Val extends StatusEdit>
     ) as $Val);
   }
 
+  /// Create a copy of StatusEdit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountCopyWith<$Res>? get account {
@@ -152,6 +160,8 @@ class _$StatusEditCopyWithImpl<$Res, $Val extends StatusEdit>
     });
   }
 
+  /// Create a copy of StatusEdit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StatusEditPollCopyWith<$Res>? get poll {
@@ -198,6 +208,8 @@ class __$$StatusEditImplCopyWithImpl<$Res>
       _$StatusEditImpl _value, $Res Function(_$StatusEditImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StatusEdit
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -351,7 +363,7 @@ class _$StatusEditImpl implements _StatusEdit {
             const DeepCollectionEquality().equals(other._emojis, _emojis));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -364,7 +376,9 @@ class _$StatusEditImpl implements _StatusEdit {
       const DeepCollectionEquality().hash(_mediaAttachments),
       const DeepCollectionEquality().hash(_emojis));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StatusEdit
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StatusEditImplCopyWith<_$StatusEditImpl> get copyWith =>
@@ -394,50 +408,52 @@ abstract class _StatusEdit implements StatusEdit {
   factory _StatusEdit.fromJson(Map<String, dynamic> json) =
       _$StatusEditImpl.fromJson;
 
-  @override
-
   /// The content of the status at this revision.
+  @override
   @JsonKey(name: 'content')
   String? get content;
-  @override
 
   /// The content of the subject or content warning at this revision.
+  @override
   @JsonKey(name: 'spoiler_text')
   String? get spoilerText;
-  @override
 
   /// Whether the status was marked sensitive at this revision.
+  @override
   @JsonKey(name: 'sensitive')
   bool? get sensitive;
-  @override
 
   /// The timestamp of when the revision was published.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-  @override
 
   /// The account that published this revision.
+  @override
   @JsonKey(name: 'account')
   Account? get account;
-  @override
 
   /// The current state of the poll options at this revision. Note that edits
   /// changing the poll options will be collapsed together into one edit,
   /// since this action resets the poll.
+  @override
   @JsonKey(name: 'poll')
   StatusEditPoll? get poll;
-  @override
 
   /// The current state of the media attachments at this revision.
+  @override
   @JsonKey(name: 'media_attachments')
   List<MediaAttachment>? get mediaAttachments;
-  @override
 
   /// Any custom emoji that are used in the current revision.
+  @override
   @JsonKey(name: 'emojis')
   List<CustomEmoji>? get emojis;
+
+  /// Create a copy of StatusEdit
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StatusEditImplCopyWith<_$StatusEditImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -452,8 +468,12 @@ mixin _$StatusEditPoll {
   @JsonKey(name: 'options')
   List<StatusEditPollOption>? get options => throw _privateConstructorUsedError;
 
+  /// Serializes this StatusEditPoll to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StatusEditPoll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StatusEditPollCopyWith<StatusEditPoll> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -477,6 +497,8 @@ class _$StatusEditPollCopyWithImpl<$Res, $Val extends StatusEditPoll>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StatusEditPoll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -510,6 +532,8 @@ class __$$StatusEditPollImplCopyWithImpl<$Res>
       _$StatusEditPollImpl _value, $Res Function(_$StatusEditPollImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StatusEditPoll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -561,12 +585,14 @@ class _$StatusEditPollImpl implements _StatusEditPoll {
             const DeepCollectionEquality().equals(other._options, _options));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_options));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StatusEditPoll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StatusEditPollImplCopyWith<_$StatusEditPollImpl> get copyWith =>
@@ -589,13 +615,15 @@ abstract class _StatusEditPoll implements StatusEditPoll {
   factory _StatusEditPoll.fromJson(Map<String, dynamic> json) =
       _$StatusEditPollImpl.fromJson;
 
-  @override
-
   /// The poll options at this revision.
+  @override
   @JsonKey(name: 'options')
   List<StatusEditPollOption>? get options;
+
+  /// Create a copy of StatusEditPoll
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StatusEditPollImplCopyWith<_$StatusEditPollImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -610,8 +638,12 @@ mixin _$StatusEditPollOption {
   @JsonKey(name: 'title')
   String? get title => throw _privateConstructorUsedError;
 
+  /// Serializes this StatusEditPollOption to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StatusEditPollOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StatusEditPollOptionCopyWith<StatusEditPollOption> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -636,6 +668,8 @@ class _$StatusEditPollOptionCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StatusEditPollOption
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -669,6 +703,8 @@ class __$$StatusEditPollOptionImplCopyWithImpl<$Res>
       $Res Function(_$StatusEditPollOptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StatusEditPollOption
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -709,11 +745,13 @@ class _$StatusEditPollOptionImpl implements _StatusEditPollOption {
             (identical(other.title, title) || other.title == title));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StatusEditPollOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StatusEditPollOptionImplCopyWith<_$StatusEditPollOptionImpl>
@@ -737,13 +775,15 @@ abstract class _StatusEditPollOption implements StatusEditPollOption {
   factory _StatusEditPollOption.fromJson(Map<String, dynamic> json) =
       _$StatusEditPollOptionImpl.fromJson;
 
-  @override
-
   /// The text for a poll option.
+  @override
   @JsonKey(name: 'title')
   String? get title;
+
+  /// Create a copy of StatusEditPollOption
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StatusEditPollOptionImplCopyWith<_$StatusEditPollOptionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

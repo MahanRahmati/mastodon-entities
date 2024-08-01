@@ -32,8 +32,12 @@ mixin _$Suggestion {
   @JsonKey(name: 'account')
   Account? get account => throw _privateConstructorUsedError;
 
+  /// Serializes this Suggestion to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Suggestion
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SuggestionCopyWith<Suggestion> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$SuggestionCopyWithImpl<$Res, $Val extends Suggestion>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Suggestion
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class _$SuggestionCopyWithImpl<$Res, $Val extends Suggestion>
     ) as $Val);
   }
 
+  /// Create a copy of Suggestion
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountCopyWith<$Res>? get account {
@@ -123,6 +131,8 @@ class __$$SuggestionImplCopyWithImpl<$Res>
       _$SuggestionImpl _value, $Res Function(_$SuggestionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Suggestion
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -188,11 +198,13 @@ class _$SuggestionImpl implements _Suggestion {
             (identical(other.account, account) || other.account == account));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, source, sources, account);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Suggestion
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuggestionImplCopyWith<_$SuggestionImpl> get copyWith =>
@@ -215,23 +227,25 @@ abstract class _Suggestion implements Suggestion {
   factory _Suggestion.fromJson(Map<String, dynamic> json) =
       _$SuggestionImpl.fromJson;
 
-  @override
-
   /// The reason this account is being suggested.
+  @override
   @JsonKey(name: 'source')
   SuggestionSource? get source;
-  @override
 
   /// A list of reasons this account is being suggested.
+  @override
   @JsonKey(name: 'sources')
   SuggestionSources? get sources;
-  @override
 
   /// The account being recommended to follow.
+  @override
   @JsonKey(name: 'account')
   Account? get account;
+
+  /// Create a copy of Suggestion
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuggestionImplCopyWith<_$SuggestionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

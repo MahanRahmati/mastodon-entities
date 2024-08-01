@@ -28,8 +28,12 @@ mixin _$ExtendedDescription {
   @JsonKey(name: 'content')
   String? get content => throw _privateConstructorUsedError;
 
+  /// Serializes this ExtendedDescription to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ExtendedDescription
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ExtendedDescriptionCopyWith<ExtendedDescription> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$ExtendedDescriptionCopyWithImpl<$Res, $Val extends ExtendedDescription>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ExtendedDescription
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class __$$ExtendedDescriptionImplCopyWithImpl<$Res>
       $Res Function(_$ExtendedDescriptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ExtendedDescription
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +157,13 @@ class _$ExtendedDescriptionImpl implements _ExtendedDescription {
             (identical(other.content, content) || other.content == content));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, updatedAt, content);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ExtendedDescription
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ExtendedDescriptionImplCopyWith<_$ExtendedDescriptionImpl> get copyWith =>
@@ -177,18 +187,20 @@ abstract class _ExtendedDescription implements ExtendedDescription {
   factory _ExtendedDescription.fromJson(Map<String, dynamic> json) =
       _$ExtendedDescriptionImpl.fromJson;
 
-  @override
-
   /// A timestamp of when the extended description was last updated.
+  @override
   @JsonKey(name: 'updated_at')
   DateTime? get updatedAt;
-  @override
 
   /// The rendered HTML content of the extended description.
+  @override
   @JsonKey(name: 'content')
   String? get content;
+
+  /// Create a copy of ExtendedDescription
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ExtendedDescriptionImplCopyWith<_$ExtendedDescriptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

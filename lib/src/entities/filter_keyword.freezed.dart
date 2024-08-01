@@ -33,8 +33,12 @@ mixin _$FilterKeyword {
   @JsonKey(name: 'whole_word')
   bool? get wholeWord => throw _privateConstructorUsedError;
 
+  /// Serializes this FilterKeyword to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FilterKeyword
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FilterKeywordCopyWith<FilterKeyword> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -61,6 +65,8 @@ class _$FilterKeywordCopyWithImpl<$Res, $Val extends FilterKeyword>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FilterKeyword
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,6 +113,8 @@ class __$$FilterKeywordImplCopyWithImpl<$Res>
       _$FilterKeywordImpl _value, $Res Function(_$FilterKeywordImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FilterKeyword
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -174,11 +182,13 @@ class _$FilterKeywordImpl implements _FilterKeyword {
                 other.wholeWord == wholeWord));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, keyword, wholeWord);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FilterKeyword
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FilterKeywordImplCopyWith<_$FilterKeywordImpl> get copyWith =>
@@ -202,24 +212,26 @@ abstract class _FilterKeyword implements FilterKeyword {
   factory _FilterKeyword.fromJson(Map<String, dynamic> json) =
       _$FilterKeywordImpl.fromJson;
 
-  @override
-
   /// The ID of the FilterKeyword in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The phrase to be matched against.
+  @override
   @JsonKey(name: 'keyword')
   String? get keyword;
-  @override
 
   /// Should the filter consider word boundaries? See implementation
   /// guidelines for filters.
+  @override
   @JsonKey(name: 'whole_word')
   bool? get wholeWord;
+
+  /// Create a copy of FilterKeyword
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FilterKeywordImplCopyWith<_$FilterKeywordImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

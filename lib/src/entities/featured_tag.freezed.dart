@@ -40,8 +40,12 @@ mixin _$FeaturedTag {
   @JsonKey(name: 'last_status_at')
   DateTime? get lastStatusAt => throw _privateConstructorUsedError;
 
+  /// Serializes this FeaturedTag to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FeaturedTag
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FeaturedTagCopyWith<FeaturedTag> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -70,6 +74,8 @@ class _$FeaturedTagCopyWithImpl<$Res, $Val extends FeaturedTag>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FeaturedTag
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -128,6 +134,8 @@ class __$$FeaturedTagImplCopyWithImpl<$Res>
       _$FeaturedTagImpl _value, $Res Function(_$FeaturedTagImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FeaturedTag
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -219,12 +227,14 @@ class _$FeaturedTagImpl implements _FeaturedTag {
                 other.lastStatusAt == lastStatusAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, name, url, statusesCount, lastStatusAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FeaturedTag
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FeaturedTagImplCopyWith<_$FeaturedTagImpl> get copyWith =>
@@ -250,33 +260,35 @@ abstract class _FeaturedTag implements FeaturedTag {
   factory _FeaturedTag.fromJson(Map<String, dynamic> json) =
       _$FeaturedTagImpl.fromJson;
 
-  @override
-
   /// The internal ID of the featured tag in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The name of the hashtag being featured.
+  @override
   @JsonKey(name: 'name')
   String? get name;
-  @override
 
   /// A link to all statuses by a user that contain this hashtag.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// The number of authored statuses containing this hashtag.
+  @override
   @JsonKey(name: 'statuses_count')
   String? get statusesCount;
-  @override
 
   /// The timestamp of the last authored status containing this hashtag.
+  @override
   @JsonKey(name: 'last_status_at')
   DateTime? get lastStatusAt;
+
+  /// Create a copy of FeaturedTag
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FeaturedTagImplCopyWith<_$FeaturedTagImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

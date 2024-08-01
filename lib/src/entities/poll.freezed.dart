@@ -61,8 +61,12 @@ mixin _$Poll {
   @JsonKey(name: 'own_votes')
   List<int>? get ownVotes => throw _privateConstructorUsedError;
 
+  /// Serializes this Poll to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Poll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PollCopyWith<Poll> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -94,6 +98,8 @@ class _$PollCopyWithImpl<$Res, $Val extends Poll>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Poll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -180,6 +186,8 @@ class __$$PollImplCopyWithImpl<$Res>
   __$$PollImplCopyWithImpl(_$PollImpl _value, $Res Function(_$PollImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Poll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -365,7 +373,7 @@ class _$PollImpl implements _Poll {
             const DeepCollectionEquality().equals(other._ownVotes, _ownVotes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -380,7 +388,9 @@ class _$PollImpl implements _Poll {
       voted,
       const DeepCollectionEquality().hash(_ownVotes));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Poll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PollImplCopyWith<_$PollImpl> get copyWith =>
@@ -409,59 +419,61 @@ abstract class _Poll implements Poll {
 
   factory _Poll.fromJson(Map<String, dynamic> json) = _$PollImpl.fromJson;
 
-  @override
-
   /// The ID of the poll in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// When the poll ends.
+  @override
   @JsonKey(name: 'expires_at')
   DateTime? get expiresAt;
-  @override
 
   /// Is the poll currently expired?
+  @override
   @JsonKey(name: 'expired')
   bool? get expired;
-  @override
 
   /// Does the poll allow multiple-choice answers?
+  @override
   @JsonKey(name: 'multiple')
   bool? get multiple;
-  @override
 
   /// How many votes have been received.
+  @override
   @JsonKey(name: 'votes_count')
   int? get votesCount;
-  @override
 
   /// How many unique accounts have voted on a multiple-choice poll.
+  @override
   @JsonKey(name: 'voters_count')
   int? get votersCount;
-  @override
 
   /// Possible answers for the poll.
+  @override
   @JsonKey(name: 'options')
   List<PollOption>? get options;
-  @override
 
   /// Custom emoji to be used for rendering poll options.
+  @override
   @JsonKey(name: 'emojis')
   List<CustomEmoji>? get emojis;
-  @override
 
   /// When called with a user token, has the authorized user voted?
+  @override
   @JsonKey(name: 'voted')
   bool? get voted;
-  @override
 
   /// When called with a user token, which options has the authorized user
   /// chosen? Contains an array of index values for options.
+  @override
   @JsonKey(name: 'own_votes')
   List<int>? get ownVotes;
+
+  /// Create a copy of Poll
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PollImplCopyWith<_$PollImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -480,8 +492,12 @@ mixin _$PollOption {
   @JsonKey(name: 'votes_count')
   int? get votesCount => throw _privateConstructorUsedError;
 
+  /// Serializes this PollOption to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PollOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PollOptionCopyWith<PollOption> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -507,6 +523,8 @@ class _$PollOptionCopyWithImpl<$Res, $Val extends PollOption>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PollOption
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -547,6 +565,8 @@ class __$$PollOptionImplCopyWithImpl<$Res>
       _$PollOptionImpl _value, $Res Function(_$PollOptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PollOption
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -601,11 +621,13 @@ class _$PollOptionImpl implements _PollOption {
                 other.votesCount == votesCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title, votesCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PollOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PollOptionImplCopyWith<_$PollOptionImpl> get copyWith =>
@@ -627,18 +649,20 @@ abstract class _PollOption implements PollOption {
   factory _PollOption.fromJson(Map<String, dynamic> json) =
       _$PollOptionImpl.fromJson;
 
-  @override
-
   /// The text value of the poll option.
+  @override
   @JsonKey(name: 'title')
   String? get title;
-  @override
 
   /// The total number of received votes for this option.
+  @override
   @JsonKey(name: 'votes_count')
   int? get votesCount;
+
+  /// Create a copy of PollOption
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PollOptionImplCopyWith<_$PollOptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

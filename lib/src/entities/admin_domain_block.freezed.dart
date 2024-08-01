@@ -58,8 +58,12 @@ mixin _$AdminDomainBlock {
   @JsonKey(name: 'obfuscate')
   bool? get obfuscate => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminDomainBlock to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminDomainBlock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminDomainBlockCopyWith<AdminDomainBlock> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -93,6 +97,8 @@ class _$AdminDomainBlockCopyWithImpl<$Res, $Val extends AdminDomainBlock>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminDomainBlock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -181,6 +187,8 @@ class __$$AdminDomainBlockImplCopyWithImpl<$Res>
       $Res Function(_$AdminDomainBlockImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminDomainBlock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -335,7 +343,7 @@ class _$AdminDomainBlockImpl implements _AdminDomainBlock {
                 other.obfuscate == obfuscate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -350,7 +358,9 @@ class _$AdminDomainBlockImpl implements _AdminDomainBlock {
       publicComment,
       obfuscate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminDomainBlock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminDomainBlockImplCopyWith<_$AdminDomainBlockImpl> get copyWith =>
@@ -382,54 +392,56 @@ abstract class _AdminDomainBlock implements AdminDomainBlock {
   factory _AdminDomainBlock.fromJson(Map<String, dynamic> json) =
       _$AdminDomainBlockImpl.fromJson;
 
-  @override
-
   /// The ID of the DomainBlock in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The domain that is not allowed to federate.
+  @override
   @JsonKey(name: 'domain')
   String? get domain;
-  @override
 
   /// The sha256 hex digest of the domain that is not allowed to federated.
+  @override
   @JsonKey(name: 'digest')
   String? get digest;
-  @override
 
   /// When the domain was blocked from federating.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-  @override
 
   /// The policy to be applied by this domain block.
+  @override
   @JsonKey(name: 'severity')
   AdminDomainBlockSeverity? get severity;
-  @override
 
   /// Whether to reject media attachments from this domain.
+  @override
   @JsonKey(name: 'reject_media')
   bool? get rejectMedia;
-  @override
 
   /// Whether to reject reports from this domain.
+  @override
   @JsonKey(name: 'reject_reports')
-  bool? get rejectReports;
-  @override // TODO(E): Add description.
+  bool? get rejectReports; // TODO(E): Add description.
+  @override
   @JsonKey(name: 'private_comment')
-  String? get privateComment;
-  @override // TODO(E): Add description.
+  String? get privateComment; // TODO(E): Add description.
+  @override
   @JsonKey(name: 'public_comment')
   String? get publicComment;
-  @override
 
   /// Whether to obfuscate public displays of this domain block.
+  @override
   @JsonKey(name: 'obfuscate')
   bool? get obfuscate;
+
+  /// Create a copy of AdminDomainBlock
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminDomainBlockImplCopyWith<_$AdminDomainBlockImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

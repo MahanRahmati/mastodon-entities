@@ -36,8 +36,12 @@ mixin _$Conversation {
   @JsonKey(name: 'last_status')
   Status? get lastStatus => throw _privateConstructorUsedError;
 
+  /// Serializes this Conversation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Conversation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConversationCopyWith<Conversation> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -67,6 +71,8 @@ class _$ConversationCopyWithImpl<$Res, $Val extends Conversation>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Conversation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class _$ConversationCopyWithImpl<$Res, $Val extends Conversation>
     ) as $Val);
   }
 
+  /// Create a copy of Conversation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StatusCopyWith<$Res>? get lastStatus {
@@ -134,6 +142,8 @@ class __$$ConversationImplCopyWithImpl<$Res>
       _$ConversationImpl _value, $Res Function(_$ConversationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Conversation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -222,12 +232,14 @@ class _$ConversationImpl implements _Conversation {
                 other.lastStatus == lastStatus));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, unread,
       const DeepCollectionEquality().hash(_accounts), lastStatus);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Conversation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConversationImplCopyWith<_$ConversationImpl> get copyWith =>
@@ -252,28 +264,30 @@ abstract class _Conversation implements Conversation {
   factory _Conversation.fromJson(Map<String, dynamic> json) =
       _$ConversationImpl.fromJson;
 
-  @override
-
   /// The ID of the conversation in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// Is the conversation currently marked as unread?
+  @override
   @JsonKey(name: 'unread')
   bool? get unread;
-  @override
 
   /// Participants in the conversation.
+  @override
   @JsonKey(name: 'accounts')
   List<Account>? get accounts;
-  @override
 
   /// The last status in the conversation.
+  @override
   @JsonKey(name: 'last_status')
   Status? get lastStatus;
+
+  /// Create a copy of Conversation
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConversationImplCopyWith<_$ConversationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

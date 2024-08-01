@@ -54,8 +54,12 @@ mixin _$MediaAttachment {
   @JsonKey(name: 'blurhash')
   String? get blurhash => throw _privateConstructorUsedError;
 
+  /// Serializes this MediaAttachment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MediaAttachment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MediaAttachmentCopyWith<MediaAttachment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -89,6 +93,8 @@ class _$MediaAttachmentCopyWithImpl<$Res, $Val extends MediaAttachment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MediaAttachment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,6 +143,8 @@ class _$MediaAttachmentCopyWithImpl<$Res, $Val extends MediaAttachment>
     ) as $Val);
   }
 
+  /// Create a copy of MediaAttachment
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MediaAttachmentMetaCopyWith<$Res>? get meta {
@@ -180,6 +188,8 @@ class __$$MediaAttachmentImplCopyWithImpl<$Res>
       _$MediaAttachmentImpl _value, $Res Function(_$MediaAttachmentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaAttachment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -311,12 +321,14 @@ class _$MediaAttachmentImpl implements _MediaAttachment {
                 other.blurhash == blurhash));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, url, previewUrl,
       remoteUrl, meta, description, blurhash);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaAttachment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MediaAttachmentImplCopyWith<_$MediaAttachmentImpl> get copyWith =>
@@ -346,50 +358,52 @@ abstract class _MediaAttachment implements MediaAttachment {
   factory _MediaAttachment.fromJson(Map<String, dynamic> json) =
       _$MediaAttachmentImpl.fromJson;
 
-  @override
-
   ///  The ID of the attachment in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The type of the attachment.
+  @override
   @JsonKey(name: 'type')
   MediaAttachmentType? get type;
-  @override
 
   /// The location of the original full-size attachment.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// The location of a scaled-down preview of the attachment.
+  @override
   @JsonKey(name: 'preview_url')
   String? get previewUrl;
-  @override
 
   /// The location of the full-size original attachment on the remote website.
+  @override
   @JsonKey(name: 'remote_url')
   String? get remoteUrl;
-  @override
 
   /// Metadata returned by Paperclip.
+  @override
   @JsonKey(name: 'meta')
   MediaAttachmentMeta? get meta;
-  @override
 
   /// Alternate text that describes what is in the media attachment, to be
   /// used for the visually impaired or when media attachments do not load.
+  @override
   @JsonKey(name: 'description')
   String? get description;
-  @override
 
   /// A hash computed by the BlurHash algorithm, for generating colorful
   /// preview thumbnails when media has not been downloaded yet.
+  @override
   @JsonKey(name: 'blurhash')
   String? get blurhash;
+
+  /// Create a copy of MediaAttachment
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MediaAttachmentImplCopyWith<_$MediaAttachmentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -427,8 +441,12 @@ mixin _$MediaAttachmentMeta {
   @JsonKey(name: 'focus')
   MediaAttachmentMetaFocus? get focus => throw _privateConstructorUsedError;
 
+  /// Serializes this MediaAttachmentMeta to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MediaAttachmentMeta
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MediaAttachmentMetaCopyWith<MediaAttachmentMeta> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -469,6 +487,8 @@ class _$MediaAttachmentMetaCopyWithImpl<$Res, $Val extends MediaAttachmentMeta>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MediaAttachmentMeta
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -542,6 +562,8 @@ class _$MediaAttachmentMetaCopyWithImpl<$Res, $Val extends MediaAttachmentMeta>
     ) as $Val);
   }
 
+  /// Create a copy of MediaAttachmentMeta
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MediaAttachmentMetadataCopyWith<$Res>? get original {
@@ -554,6 +576,8 @@ class _$MediaAttachmentMetaCopyWithImpl<$Res, $Val extends MediaAttachmentMeta>
     });
   }
 
+  /// Create a copy of MediaAttachmentMeta
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MediaAttachmentMetadataCopyWith<$Res>? get small {
@@ -566,6 +590,8 @@ class _$MediaAttachmentMetaCopyWithImpl<$Res, $Val extends MediaAttachmentMeta>
     });
   }
 
+  /// Create a copy of MediaAttachmentMeta
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MediaAttachmentMetaFocusCopyWith<$Res>? get focus {
@@ -618,6 +644,8 @@ class __$$MediaAttachmentMetaImplCopyWithImpl<$Res>
       $Res Function(_$MediaAttachmentMetaImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaAttachmentMeta
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -783,7 +811,7 @@ class _$MediaAttachmentMetaImpl implements _MediaAttachmentMeta {
             (identical(other.focus, focus) || other.focus == focus));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -801,7 +829,9 @@ class _$MediaAttachmentMetaImpl implements _MediaAttachmentMeta {
       small,
       focus);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaAttachmentMeta
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MediaAttachmentMetaImplCopyWith<_$MediaAttachmentMetaImpl> get copyWith =>
@@ -875,8 +905,11 @@ abstract class _MediaAttachmentMeta implements MediaAttachmentMeta {
   @override
   @JsonKey(name: 'focus')
   MediaAttachmentMetaFocus? get focus;
+
+  /// Create a copy of MediaAttachmentMeta
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MediaAttachmentMetaImplCopyWith<_$MediaAttachmentMetaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -903,8 +936,12 @@ mixin _$MediaAttachmentMetadata {
   @JsonKey(name: 'bitrate')
   int? get bitrate => throw _privateConstructorUsedError;
 
+  /// Serializes this MediaAttachmentMetadata to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MediaAttachmentMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MediaAttachmentMetadataCopyWith<MediaAttachmentMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -936,6 +973,8 @@ class _$MediaAttachmentMetadataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MediaAttachmentMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1009,6 +1048,8 @@ class __$$MediaAttachmentMetadataImplCopyWithImpl<$Res>
       $Res Function(_$MediaAttachmentMetadataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaAttachmentMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1111,12 +1152,14 @@ class _$MediaAttachmentMetadataImpl implements _MediaAttachmentMetadata {
             (identical(other.bitrate, bitrate) || other.bitrate == bitrate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, width, height, size, aspect, frameRate, duration, bitrate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaAttachmentMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MediaAttachmentMetadataImplCopyWith<_$MediaAttachmentMetadataImpl>
@@ -1166,8 +1209,11 @@ abstract class _MediaAttachmentMetadata implements MediaAttachmentMetadata {
   @override
   @JsonKey(name: 'bitrate')
   int? get bitrate;
+
+  /// Create a copy of MediaAttachmentMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MediaAttachmentMetadataImplCopyWith<_$MediaAttachmentMetadataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1184,8 +1230,12 @@ mixin _$MediaAttachmentMetaFocus {
   @JsonKey(name: 'y')
   double? get y => throw _privateConstructorUsedError;
 
+  /// Serializes this MediaAttachmentMetaFocus to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MediaAttachmentMetaFocus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MediaAttachmentMetaFocusCopyWith<MediaAttachmentMetaFocus> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1210,6 +1260,8 @@ class _$MediaAttachmentMetaFocusCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MediaAttachmentMetaFocus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1251,6 +1303,8 @@ class __$$MediaAttachmentMetaFocusImplCopyWithImpl<$Res>
       $Res Function(_$MediaAttachmentMetaFocusImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaAttachmentMetaFocus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1300,11 +1354,13 @@ class _$MediaAttachmentMetaFocusImpl implements _MediaAttachmentMetaFocus {
             (identical(other.y, y) || other.y == y));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, x, y);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaAttachmentMetaFocus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MediaAttachmentMetaFocusImplCopyWith<_$MediaAttachmentMetaFocusImpl>
@@ -1333,8 +1389,11 @@ abstract class _MediaAttachmentMetaFocus implements MediaAttachmentMetaFocus {
   @override
   @JsonKey(name: 'y')
   double? get y;
+
+  /// Create a copy of MediaAttachmentMetaFocus
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MediaAttachmentMetaFocusImplCopyWith<_$MediaAttachmentMetaFocusImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

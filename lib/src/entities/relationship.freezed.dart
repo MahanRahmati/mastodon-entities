@@ -80,8 +80,12 @@ mixin _$Relationship {
   @JsonKey(name: 'note')
   String? get note => throw _privateConstructorUsedError;
 
+  /// Serializes this Relationship to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Relationship
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RelationshipCopyWith<Relationship> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -120,6 +124,8 @@ class _$RelationshipCopyWithImpl<$Res, $Val extends Relationship>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Relationship
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -238,6 +244,8 @@ class __$$RelationshipImplCopyWithImpl<$Res>
       _$RelationshipImpl _value, $Res Function(_$RelationshipImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Relationship
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -469,7 +477,7 @@ class _$RelationshipImpl implements _Relationship {
             (identical(other.note, note) || other.note == note));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -489,7 +497,9 @@ class _$RelationshipImpl implements _Relationship {
       endorsed,
       note);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Relationship
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RelationshipImplCopyWith<_$RelationshipImpl> get copyWith =>
@@ -524,83 +534,85 @@ abstract class _Relationship implements Relationship {
   factory _Relationship.fromJson(Map<String, dynamic> json) =
       _$RelationshipImpl.fromJson;
 
-  @override
-
   /// The account ID.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// Are you following this user?
+  @override
   @JsonKey(name: 'following')
   bool? get following;
-  @override
 
   /// Are you receiving this user’s boosts in your home timeline?
+  @override
   @JsonKey(name: 'showing_reblogs')
   bool? get showingReblogs;
-  @override
 
   /// Have you enabled notifications for this user?
+  @override
   @JsonKey(name: 'notifying')
   bool? get notifying;
-  @override
 
   /// Which languages are you following from this user?
+  @override
   @JsonKey(name: 'languages')
   List<String>? get languages;
-  @override
 
   /// Are you followed by this user?
+  @override
   @JsonKey(name: 'followed_by')
   bool? get followedBy;
-  @override
 
   /// Are you blocking this user?
+  @override
   @JsonKey(name: 'blocking')
   bool? get blocking;
-  @override
 
   /// Is this user blocking you?
+  @override
   @JsonKey(name: 'blocked_by')
   bool? get blockedBy;
-  @override
 
   /// Are you muting this user?
+  @override
   @JsonKey(name: 'muting')
   bool? get muting;
-  @override
 
   /// Are you muting notifications from this user?
+  @override
   @JsonKey(name: 'muting_notifications')
   bool? get mutingNotifications;
-  @override
 
   /// Do you have a pending follow request for this user?
+  @override
   @JsonKey(name: 'requested')
   bool? get requested;
-  @override
 
   /// Has this user requested to follow you?
+  @override
   @JsonKey(name: 'requested_by')
   bool? get requestedBy;
-  @override
 
   /// Are you blocking this user’s domain?
+  @override
   @JsonKey(name: 'domain_blocking')
   bool? get domainBlocking;
-  @override
 
   /// Are you featuring this user on your profile?
+  @override
   @JsonKey(name: 'endorsed')
   bool? get endorsed;
-  @override
 
   /// This user’s profile bio
+  @override
   @JsonKey(name: 'note')
   String? get note;
+
+  /// Create a copy of Relationship
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RelationshipImplCopyWith<_$RelationshipImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

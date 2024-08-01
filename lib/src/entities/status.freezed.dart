@@ -155,8 +155,12 @@ mixin _$Status {
   @JsonKey(name: 'filtered')
   List<FilterResult>? get filtered => throw _privateConstructorUsedError;
 
+  /// Serializes this Status to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Status
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StatusCopyWith<Status> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -216,6 +220,8 @@ class _$StatusCopyWithImpl<$Res, $Val extends Status>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Status
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -379,6 +385,8 @@ class _$StatusCopyWithImpl<$Res, $Val extends Status>
     ) as $Val);
   }
 
+  /// Create a copy of Status
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountCopyWith<$Res>? get account {
@@ -391,6 +399,8 @@ class _$StatusCopyWithImpl<$Res, $Val extends Status>
     });
   }
 
+  /// Create a copy of Status
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ApplicationCopyWith<$Res>? get application {
@@ -403,6 +413,8 @@ class _$StatusCopyWithImpl<$Res, $Val extends Status>
     });
   }
 
+  /// Create a copy of Status
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StatusCopyWith<$Res>? get reblog {
@@ -415,6 +427,8 @@ class _$StatusCopyWithImpl<$Res, $Val extends Status>
     });
   }
 
+  /// Create a copy of Status
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PollCopyWith<$Res>? get poll {
@@ -427,6 +441,8 @@ class _$StatusCopyWithImpl<$Res, $Val extends Status>
     });
   }
 
+  /// Create a copy of Status
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PreviewCardCopyWith<$Res>? get card {
@@ -501,6 +517,8 @@ class __$$StatusImplCopyWithImpl<$Res>
       _$StatusImpl _value, $Res Function(_$StatusImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Status
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -981,7 +999,7 @@ class _$StatusImpl implements _Status {
             const DeepCollectionEquality().equals(other._filtered, _filtered));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1018,7 +1036,9 @@ class _$StatusImpl implements _Status {
         const DeepCollectionEquality().hash(_filtered)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Status
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StatusImplCopyWith<_$StatusImpl> get copyWith =>
@@ -1070,173 +1090,175 @@ abstract class _Status implements Status {
 
   factory _Status.fromJson(Map<String, dynamic> json) = _$StatusImpl.fromJson;
 
-  @override
-
   /// ID of the status in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// URI of the status used for federation.
+  @override
   @JsonKey(name: 'uri')
   String? get uri;
-  @override
 
   /// The date when this status was created.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-  @override
 
   /// The account that authored this status.
+  @override
   @JsonKey(name: 'account')
   Account? get account;
-  @override
 
   /// HTML-encoded status content.
+  @override
   @JsonKey(name: 'content')
   String? get content;
-  @override
 
   /// Visibility of this status.
+  @override
   @JsonKey(name: 'visibility')
   StatusVisibility? get visibility;
-  @override
 
   /// Is this status marked as sensitive content?
+  @override
   @JsonKey(name: 'sensitive')
   bool? get sensitive;
-  @override
 
   /// Subject or summary line, below which status content is collapsed until
   /// expanded.
+  @override
   @JsonKey(name: 'spoiler_text')
   String? get spoilerText;
-  @override
 
   /// Media that is attached to this status.
+  @override
   @JsonKey(name: 'media_attachments')
   List<MediaAttachment>? get mediaAttachments;
-  @override
 
   /// The application used to post this status.
+  @override
   @JsonKey(name: 'application')
   Application? get application;
-  @override
 
   /// Mentions of users within the status content.
+  @override
   @JsonKey(name: 'mentions')
   List<StatusMention>? get mentions;
-  @override
 
   /// Hashtags used within the status content.
+  @override
   @JsonKey(name: 'tags')
   List<StatusTag>? get tags;
-  @override
 
   /// Custom emoji to be used when rendering status content.
+  @override
   @JsonKey(name: 'emojis')
   List<CustomEmoji>? get emojis;
-  @override
 
   /// How many boosts this status has received.
+  @override
   @JsonKey(name: 'reblogs_count')
   int? get reblogsCount;
-  @override
 
   /// How many favourites this status has received.
+  @override
   @JsonKey(name: 'favourites_count')
   int? get favouritesCount;
-  @override
 
   /// How many replies this status has received.
+  @override
   @JsonKey(name: 'replies_count')
   int? get repliesCount;
-  @override
 
   /// A link to the status's HTML representation.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// ID of the status being replied to.
+  @override
   @JsonKey(name: 'in_reply_to_id')
   String? get inReplyToId;
-  @override
 
   /// ID of the account that authored the status being replied to.
+  @override
   @JsonKey(name: 'in_reply_to_account_id')
   String? get inReplyToAccountId;
-  @override
 
   /// The status being reblogged.
+  @override
   @JsonKey(name: 'reblog')
   Status? get reblog;
-  @override
 
   /// The poll attached to the status.
+  @override
   @JsonKey(name: 'poll')
   Poll? get poll;
-  @override
 
   /// Preview card for links included within status content.
+  @override
   @JsonKey(name: 'card')
   PreviewCard? get card;
-  @override
 
   /// Primary language of this status.
+  @override
   @JsonKey(name: 'language')
   String? get language;
-  @override
 
   /// Plain-text source of a status. Returned instead of [content] when
   /// status is deleted, so the user may redraft from the source text without
   /// the client having to reverse-engineer the original text from the HTML
   /// content.
+  @override
   @JsonKey(name: 'text')
   String? get text;
-  @override
 
   /// Timestamp of when the status was last edited.
+  @override
   @JsonKey(name: 'edited_at')
   DateTime? get editedAt;
-  @override
 
   /// If the current token has an authorized user: Have you favourited this
   /// status?
+  @override
   @JsonKey(name: 'favourited')
   bool? get favourited;
-  @override
 
   /// If the current token has an authorized user: Have you boosted this
   /// status?
+  @override
   @JsonKey(name: 'reblogged')
   bool? get reblogged;
-  @override
 
   /// If the current token has an authorized user: Have you muted
   /// notifications for this status's conversation?
+  @override
   @JsonKey(name: 'muted')
   bool? get muted;
-  @override
 
   /// If the current token has an authorized user: Have you bookmarked this
   /// status?
+  @override
   @JsonKey(name: 'bookmarked')
   bool? get bookmarked;
-  @override
 
   /// If the current token has an authorized user: Have you pinned this
   /// status? Only appears if the status is pinnable.
+  @override
   @JsonKey(name: 'pinned')
   bool? get pinned;
-  @override
 
   /// If the current token has an authorized user: The filter and keywords
   /// that matched this status.
+  @override
   @JsonKey(name: 'filtered')
   List<FilterResult>? get filtered;
+
+  /// Create a copy of Status
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StatusImplCopyWith<_$StatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1264,8 +1286,12 @@ mixin _$StatusMention {
   @JsonKey(name: 'acct')
   String? get acct => throw _privateConstructorUsedError;
 
+  /// Serializes this StatusMention to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StatusMention
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StatusMentionCopyWith<StatusMention> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1293,6 +1319,8 @@ class _$StatusMentionCopyWithImpl<$Res, $Val extends StatusMention>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StatusMention
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1345,6 +1373,8 @@ class __$$StatusMentionImplCopyWithImpl<$Res>
       _$StatusMentionImpl _value, $Res Function(_$StatusMentionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StatusMention
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1424,11 +1454,13 @@ class _$StatusMentionImpl implements _StatusMention {
             (identical(other.acct, acct) || other.acct == acct));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, username, url, acct);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StatusMention
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StatusMentionImplCopyWith<_$StatusMentionImpl> get copyWith =>
@@ -1452,29 +1484,31 @@ abstract class _StatusMention implements StatusMention {
   factory _StatusMention.fromJson(Map<String, dynamic> json) =
       _$StatusMentionImpl.fromJson;
 
-  @override
-
   /// The account ID of the mentioned user.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The username of the mentioned user.
+  @override
   @JsonKey(name: 'username')
   String? get username;
-  @override
 
   /// The location of the mentioned user’s profile.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// The webfinger acct: URI of the mentioned user. Equivalent to [username]
   /// for local users, or username@domain for remote users.
+  @override
   @JsonKey(name: 'acct')
   String? get acct;
+
+  /// Create a copy of StatusMention
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StatusMentionImplCopyWith<_$StatusMentionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1493,8 +1527,12 @@ mixin _$StatusTag {
   @JsonKey(name: 'url')
   String? get url => throw _privateConstructorUsedError;
 
+  /// Serializes this StatusTag to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StatusTag
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StatusTagCopyWith<StatusTag> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1518,6 +1556,8 @@ class _$StatusTagCopyWithImpl<$Res, $Val extends StatusTag>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StatusTag
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1557,6 +1597,8 @@ class __$$StatusTagImplCopyWithImpl<$Res>
       _$StatusTagImpl _value, $Res Function(_$StatusTagImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StatusTag
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1609,11 +1651,13 @@ class _$StatusTagImpl implements _StatusTag {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StatusTag
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StatusTagImplCopyWith<_$StatusTagImpl> get copyWith =>
@@ -1635,18 +1679,20 @@ abstract class _StatusTag implements StatusTag {
   factory _StatusTag.fromJson(Map<String, dynamic> json) =
       _$StatusTagImpl.fromJson;
 
-  @override
-
   /// The value of the hashtag after the # sign.
+  @override
   @JsonKey(name: 'name')
   String? get name;
-  @override
 
   /// A link to the hashtag on the instance.
+  @override
   @JsonKey(name: 'url')
   String? get url;
+
+  /// Create a copy of StatusTag
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StatusTagImplCopyWith<_$StatusTagImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -28,8 +28,12 @@ mixin _$AdminIp {
   @JsonKey(name: 'used_at')
   DateTime? get usedAt => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminIp to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminIp
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminIpCopyWith<AdminIp> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -53,6 +57,8 @@ class _$AdminIpCopyWithImpl<$Res, $Val extends AdminIp>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminIp
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$AdminIpImplCopyWithImpl<$Res>
       _$AdminIpImpl _value, $Res Function(_$AdminIpImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminIp
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -144,11 +152,13 @@ class _$AdminIpImpl implements _AdminIp {
             (identical(other.usedAt, usedAt) || other.usedAt == usedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, ip, usedAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminIp
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminIpImplCopyWith<_$AdminIpImpl> get copyWith =>
@@ -169,18 +179,20 @@ abstract class _AdminIp implements AdminIp {
 
   factory _AdminIp.fromJson(Map<String, dynamic> json) = _$AdminIpImpl.fromJson;
 
-  @override
-
   /// The IP address.
+  @override
   @JsonKey(name: 'ip')
   String? get ip;
-  @override
 
   /// The timestamp of when the IP address was last used for this account.
+  @override
   @JsonKey(name: 'used_at')
   DateTime? get usedAt;
+
+  /// Create a copy of AdminIp
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminIpImplCopyWith<_$AdminIpImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

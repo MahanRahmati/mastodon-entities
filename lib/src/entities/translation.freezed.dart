@@ -46,8 +46,12 @@ mixin _$Translation {
   @JsonKey(name: 'provider')
   String? get provider => throw _privateConstructorUsedError;
 
+  /// Serializes this Translation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Translation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TranslationCopyWith<Translation> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -80,6 +84,8 @@ class _$TranslationCopyWithImpl<$Res, $Val extends Translation>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Translation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,6 +124,8 @@ class _$TranslationCopyWithImpl<$Res, $Val extends Translation>
     ) as $Val);
   }
 
+  /// Create a copy of Translation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TranslationPollCopyWith<$Res>? get poll {
@@ -160,6 +168,8 @@ class __$$TranslationImplCopyWithImpl<$Res>
       _$TranslationImpl _value, $Res Function(_$TranslationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Translation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -278,7 +288,7 @@ class _$TranslationImpl implements _Translation {
                 other.provider == provider));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -289,7 +299,9 @@ class _$TranslationImpl implements _Translation {
       detectedSourceLanguage,
       provider);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Translation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TranslationImplCopyWith<_$TranslationImpl> get copyWith =>
@@ -317,39 +329,41 @@ abstract class _Translation implements Translation {
   factory _Translation.fromJson(Map<String, dynamic> json) =
       _$TranslationImpl.fromJson;
 
-  @override
-
   /// HTML-encoded translated content of the status.
+  @override
   @JsonKey(name: 'content')
   String? get content;
-  @override
 
   /// The translated spoiler warning of the status.
+  @override
   @JsonKey(name: 'spoiler_text')
   String? get spoilerText;
-  @override
 
   /// The translated poll of the status.
+  @override
   @JsonKey(name: 'poll')
   TranslationPoll? get poll;
-  @override
 
   /// The translated media descriptions of the status.
+  @override
   @JsonKey(name: 'media_attachments')
   List<TranslationAttachment>? get mediaAttachments;
-  @override
 
   /// The language of the source text, as auto-detected by the machine
   /// translation provider.
+  @override
   @JsonKey(name: 'detected_source_language')
   String? get detectedSourceLanguage;
-  @override
 
   /// The service that provided the machine translation.
+  @override
   @JsonKey(name: 'provider')
   String? get provider;
+
+  /// Create a copy of Translation
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TranslationImplCopyWith<_$TranslationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -369,8 +383,12 @@ mixin _$TranslationPoll {
   List<TranslationPollOption>? get options =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this TranslationPoll to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TranslationPoll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TranslationPollCopyWith<TranslationPoll> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -396,6 +414,8 @@ class _$TranslationPollCopyWithImpl<$Res, $Val extends TranslationPoll>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TranslationPoll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -436,6 +456,8 @@ class __$$TranslationPollImplCopyWithImpl<$Res>
       _$TranslationPollImpl _value, $Res Function(_$TranslationPollImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TranslationPoll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -499,12 +521,14 @@ class _$TranslationPollImpl implements _TranslationPoll {
             const DeepCollectionEquality().equals(other._options, _options));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_options));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TranslationPoll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TranslationPollImplCopyWith<_$TranslationPollImpl> get copyWith =>
@@ -528,18 +552,20 @@ abstract class _TranslationPoll implements TranslationPoll {
   factory _TranslationPoll.fromJson(Map<String, dynamic> json) =
       _$TranslationPollImpl.fromJson;
 
-  @override
-
   /// The ID of the poll.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The translated poll options.
+  @override
   @JsonKey(name: 'options')
   List<TranslationPollOption>? get options;
+
+  /// Create a copy of TranslationPoll
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TranslationPollImplCopyWith<_$TranslationPollImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -555,8 +581,12 @@ mixin _$TranslationPollOption {
   @JsonKey(name: 'title')
   String? get title => throw _privateConstructorUsedError;
 
+  /// Serializes this TranslationPollOption to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TranslationPollOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TranslationPollOptionCopyWith<TranslationPollOption> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -581,6 +611,8 @@ class _$TranslationPollOptionCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TranslationPollOption
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -616,6 +648,8 @@ class __$$TranslationPollOptionImplCopyWithImpl<$Res>
       $Res Function(_$TranslationPollOptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TranslationPollOption
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -656,11 +690,13 @@ class _$TranslationPollOptionImpl implements _TranslationPollOption {
             (identical(other.title, title) || other.title == title));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TranslationPollOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TranslationPollOptionImplCopyWith<_$TranslationPollOptionImpl>
@@ -683,13 +719,15 @@ abstract class _TranslationPollOption implements TranslationPollOption {
   factory _TranslationPollOption.fromJson(Map<String, dynamic> json) =
       _$TranslationPollOptionImpl.fromJson;
 
-  @override
-
   /// The translated title of the poll option.
+  @override
   @JsonKey(name: 'title')
   String? get title;
+
+  /// Create a copy of TranslationPollOption
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TranslationPollOptionImplCopyWith<_$TranslationPollOptionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -709,8 +747,12 @@ mixin _$TranslationAttachment {
   @JsonKey(name: 'description')
   String? get description => throw _privateConstructorUsedError;
 
+  /// Serializes this TranslationAttachment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TranslationAttachment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TranslationAttachmentCopyWith<TranslationAttachment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -737,6 +779,8 @@ class _$TranslationAttachmentCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TranslationAttachment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -779,6 +823,8 @@ class __$$TranslationAttachmentImplCopyWithImpl<$Res>
       $Res Function(_$TranslationAttachmentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TranslationAttachment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -833,11 +879,13 @@ class _$TranslationAttachmentImpl implements _TranslationAttachment {
                 other.description == description));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, description);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TranslationAttachment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TranslationAttachmentImplCopyWith<_$TranslationAttachmentImpl>
@@ -861,18 +909,20 @@ abstract class _TranslationAttachment implements TranslationAttachment {
   factory _TranslationAttachment.fromJson(Map<String, dynamic> json) =
       _$TranslationAttachmentImpl.fromJson;
 
-  @override
-
   /// The id of the attachment.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The translated description of the attachment.
+  @override
   @JsonKey(name: 'description')
   String? get description;
+
+  /// Create a copy of TranslationAttachment
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TranslationAttachmentImplCopyWith<_$TranslationAttachmentImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

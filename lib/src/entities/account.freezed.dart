@@ -144,8 +144,12 @@ mixin _$Account {
   @JsonKey(name: 'mute_expires_at')
   DateTime? get muteExpiresAt => throw _privateConstructorUsedError;
 
+  /// Serializes this Account to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Account
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AccountCopyWith<Account> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -200,6 +204,8 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Account
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -353,6 +359,8 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
     ) as $Val);
   }
 
+  /// Create a copy of Account
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountCopyWith<$Res>? get moved {
@@ -365,6 +373,8 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
     });
   }
 
+  /// Create a copy of Account
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountSourceCopyWith<$Res>? get source {
@@ -377,6 +387,8 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
     });
   }
 
+  /// Create a copy of Account
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RoleCopyWith<$Res>? get role {
@@ -444,6 +456,8 @@ class __$$AccountImplCopyWithImpl<$Res>
       _$AccountImpl _value, $Res Function(_$AccountImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Account
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -871,7 +885,7 @@ class _$AccountImpl implements _Account {
                 other.muteExpiresAt == muteExpiresAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -906,7 +920,9 @@ class _$AccountImpl implements _Account {
         muteExpiresAt
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Account
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AccountImplCopyWith<_$AccountImpl> get copyWith =>
@@ -955,161 +971,163 @@ abstract class _Account implements Account {
 
   factory _Account.fromJson(Map<String, dynamic> json) = _$AccountImpl.fromJson;
 
-  @override
-
   /// The account id.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The username of the account, not including domain.
+  @override
   @JsonKey(name: 'username')
   String? get username;
-  @override
 
   /// The Webfinger account URI. Equal to `username` for local users, or
   /// `username@domain` for remote users.
+  @override
   @JsonKey(name: 'acct')
   String? get acct;
-  @override
 
   /// The location of the user's profile page.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// The profile's display name.
+  @override
   @JsonKey(name: 'display_name')
   String? get displayName;
-  @override
 
   /// The profile's bio or description.
+  @override
   @JsonKey(name: 'note')
   String? get note;
-  @override
 
   /// An image icon that is shown next to statuses and in the profile.
+  @override
   @JsonKey(name: 'avatar')
   String? get avatar;
-  @override
 
   /// A static version of the avatar. Equal to `avatar` if its value is a
   /// static image; different if `avatar` is an animated GIF.
+  @override
   @JsonKey(name: 'avatar_static')
   String? get avatarStatic;
-  @override
 
   /// An image banner that is shown above the profile and in profile cards.
+  @override
   @JsonKey(name: 'header')
   String? get header;
-  @override
 
   /// A static version of the header. Equal to `header` if its value is a
   /// static image; different if `header` is an animated GIF.
+  @override
   @JsonKey(name: 'header_static')
   String? get headerStatic;
-  @override
 
   /// Whether the account manually approves follow requests.
+  @override
   @JsonKey(name: 'locked')
   bool? get locked;
-  @override
 
   /// Additional metadata attached to a profile as name-value pairs.
+  @override
   @JsonKey(name: 'fields')
   List<AccountField>? get fields;
-  @override
 
   /// Additional metadata attached to a profile as name-value pairs.
+  @override
   @JsonKey(name: 'emojis')
   List<CustomEmoji>? get emojis;
-  @override
 
   /// Indicates that the account may perform automated actions, may not be
   /// monitored, or identifies as a robot.
+  @override
   @JsonKey(name: 'bot')
   bool? get bot;
-  @override
 
   /// Indicates that the account represents a Group actor.
+  @override
   @JsonKey(name: 'group')
   bool? get group;
-  @override
 
   /// Whether the account has opted into discovery features such as the
   /// profile directory.
+  @override
   @JsonKey(name: 'discoverable')
   bool? get discoverable;
-  @override
 
   /// Whether the local user has opted out of being indexed by search engines.
+  @override
   @JsonKey(name: 'noindex')
   bool? get noindex;
-  @override
 
   /// Indicates that the profile is currently inactive and that its user has
   /// moved to a new account.
+  @override
   @JsonKey(name: 'moved')
   Account? get moved;
-  @override
 
   /// An extra attribute returned only when an account is suspended.
+  @override
   @JsonKey(name: 'suspended')
   bool? get suspended;
-  @override
 
   /// An extra attribute returned only when an account is silenced. If true,
   /// indicates that the account should be hidden behind a warning screen.
+  @override
   @JsonKey(name: 'limited')
   bool? get limited;
-  @override
 
   /// When the account was created.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-  @override
 
   /// When the most recent status was posted.
+  @override
   @JsonKey(name: 'last_status_at')
   DateTime? get lastStatusAt;
-  @override
 
   /// How many statuses are attached to this account.
+  @override
   @JsonKey(name: 'statuses_count')
   int? get statusesCount;
-  @override
 
   /// The reported followers of this profile.
+  @override
   @JsonKey(name: 'followers_count')
   int? get followersCount;
-  @override
 
   /// The reported follows of this profile.
+  @override
   @JsonKey(name: 'following_count')
   int? get followingCount;
-  @override
 
   /// An extra attribute that contains source values to be used with API
   /// methods that verify credentials and update credentials.
+  @override
   @JsonKey(name: 'source')
   AccountSource? get source;
-  @override
 
   /// The role assigned to the currently authorized user.
+  @override
   @JsonKey(name: 'role')
   Role? get role;
-  @override
 
   /// The roles assigned to the currently authorized user.
+  @override
   @JsonKey(name: 'roles')
   List<Role>? get roles;
-  @override
 
   /// When a timed mute will expire, if applicable.
+  @override
   @JsonKey(name: 'mute_expires_at')
   DateTime? get muteExpiresAt;
+
+  /// Create a copy of Account
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AccountImplCopyWith<_$AccountImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1132,8 +1150,12 @@ mixin _$AccountField {
   @JsonKey(name: 'verified_at')
   DateTime? get verifiedAt => throw _privateConstructorUsedError;
 
+  /// Serializes this AccountField to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AccountField
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AccountFieldCopyWith<AccountField> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1160,6 +1182,8 @@ class _$AccountFieldCopyWithImpl<$Res, $Val extends AccountField>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AccountField
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1206,6 +1230,8 @@ class __$$AccountFieldImplCopyWithImpl<$Res>
       _$AccountFieldImpl _value, $Res Function(_$AccountFieldImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AccountField
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1272,11 +1298,13 @@ class _$AccountFieldImpl implements _AccountField {
                 other.verifiedAt == verifiedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, value, verifiedAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AccountField
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AccountFieldImplCopyWith<_$AccountFieldImpl> get copyWith =>
@@ -1300,23 +1328,25 @@ abstract class _AccountField implements AccountField {
   factory _AccountField.fromJson(Map<String, dynamic> json) =
       _$AccountFieldImpl.fromJson;
 
-  @override
-
   /// The key of a given field's key-value pair.
+  @override
   @JsonKey(name: 'name')
   String? get name;
-  @override
 
   /// The value associated with the `name` key.
+  @override
   @JsonKey(name: 'value')
   String? get value;
-  @override
 
   /// Timestamp of when the server verified a URL value for a rel=“me” link.
+  @override
   @JsonKey(name: 'verified_at')
   DateTime? get verifiedAt;
+
+  /// Create a copy of AccountField
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AccountFieldImplCopyWith<_$AccountFieldImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1358,8 +1388,12 @@ mixin _$AccountSource {
   @JsonKey(name: 'indexable')
   bool? get indexable => throw _privateConstructorUsedError;
 
+  /// Serializes this AccountSource to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AccountSource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AccountSourceCopyWith<AccountSource> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1393,6 +1427,8 @@ class _$AccountSourceCopyWithImpl<$Res, $Val extends AccountSource>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AccountSource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1441,6 +1477,8 @@ class _$AccountSourceCopyWithImpl<$Res, $Val extends AccountSource>
     ) as $Val);
   }
 
+  /// Create a copy of AccountSource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RoleCopyWith<$Res>? get role {
@@ -1484,6 +1522,8 @@ class __$$AccountSourceImplCopyWithImpl<$Res>
       _$AccountSourceImpl _value, $Res Function(_$AccountSourceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AccountSource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1622,7 +1662,7 @@ class _$AccountSourceImpl implements _AccountSource {
                 other.indexable == indexable));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1635,7 +1675,9 @@ class _$AccountSourceImpl implements _AccountSource {
       role,
       indexable);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AccountSource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AccountSourceImplCopyWith<_$AccountSourceImpl> get copyWith =>
@@ -1663,46 +1705,48 @@ abstract class _AccountSource implements AccountSource {
   factory _AccountSource.fromJson(Map<String, dynamic> json) =
       _$AccountSourceImpl.fromJson;
 
-  @override
-
   /// Profile bio, in plain-text instead of in HTML.
+  @override
   @JsonKey(name: 'note')
   String? get note;
-  @override
 
   /// Metadata about the account.
+  @override
   @JsonKey(name: 'fields')
   List<AccountField>? get fields;
-  @override
 
   /// The default post privacy to be used for new statuses.
+  @override
   @JsonKey(name: 'privacy')
   StatusVisibility? get privacy;
-  @override
 
   /// Whether new statuses should be marked sensitive by default.
+  @override
   @JsonKey(name: 'sensitive')
   bool? get sensitive;
-  @override
 
   /// The default posting language for new statuses.
+  @override
   @JsonKey(name: 'language')
   String? get language;
-  @override
 
   /// The number of pending follow requests.
+  @override
   @JsonKey(name: 'follow_requests_count')
   int? get followRequestsCount;
-  @override
 
   /// The role assigned to the currently authorized user.
+  @override
   @JsonKey(name: 'role')
-  Role? get role;
-  @override // TODO(E): Add description.
+  Role? get role; // TODO(E): Add description.
+  @override
   @JsonKey(name: 'indexable')
   bool? get indexable;
+
+  /// Create a copy of AccountSource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AccountSourceImplCopyWith<_$AccountSourceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

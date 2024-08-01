@@ -76,8 +76,12 @@ mixin _$AdminReport {
   @JsonKey(name: 'rules')
   List<Rule>? get rules => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminReport to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminReportCopyWith<AdminReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -121,6 +125,8 @@ class _$AdminReportCopyWithImpl<$Res, $Val extends AdminReport>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -199,6 +205,8 @@ class _$AdminReportCopyWithImpl<$Res, $Val extends AdminReport>
     ) as $Val);
   }
 
+  /// Create a copy of AdminReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AdminAccountCopyWith<$Res>? get account {
@@ -211,6 +219,8 @@ class _$AdminReportCopyWithImpl<$Res, $Val extends AdminReport>
     });
   }
 
+  /// Create a copy of AdminReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AdminAccountCopyWith<$Res>? get targetAccount {
@@ -223,6 +233,8 @@ class _$AdminReportCopyWithImpl<$Res, $Val extends AdminReport>
     });
   }
 
+  /// Create a copy of AdminReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AdminAccountCopyWith<$Res>? get assignedAccount {
@@ -235,6 +247,8 @@ class _$AdminReportCopyWithImpl<$Res, $Val extends AdminReport>
     });
   }
 
+  /// Create a copy of AdminReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AdminAccountCopyWith<$Res>? get actionTakenByAccount {
@@ -291,6 +305,8 @@ class __$$AdminReportImplCopyWithImpl<$Res>
       _$AdminReportImpl _value, $Res Function(_$AdminReportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -517,7 +533,7 @@ class _$AdminReportImpl implements _AdminReport {
             const DeepCollectionEquality().equals(other._rules, _rules));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -536,7 +552,9 @@ class _$AdminReportImpl implements _AdminReport {
       const DeepCollectionEquality().hash(_statuses),
       const DeepCollectionEquality().hash(_rules));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminReportImplCopyWith<_$AdminReportImpl> get copyWith =>
@@ -571,78 +589,80 @@ abstract class _AdminReport implements AdminReport {
   factory _AdminReport.fromJson(Map<String, dynamic> json) =
       _$AdminReportImpl.fromJson;
 
-  @override
-
   /// The ID of the report in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   ///  Whether an action was taken to resolve this report.
+  @override
   @JsonKey(name: 'action_taken')
   bool? get actionTaken;
-  @override
 
   /// When an action was taken, if this report is currently resolved.
+  @override
   @JsonKey(name: 'action_taken_at')
   DateTime? get actionTakenAt;
-  @override
 
   /// The category under which the report is classified.
+  @override
   @JsonKey(name: 'category')
   ReportCategory? get category;
-  @override
 
   /// An optional reason for reporting.
+  @override
   @JsonKey(name: 'comment')
   String? get comment;
-  @override
 
   /// Whether a report was forwarded to a remote instance.
+  @override
   @JsonKey(name: 'forwarded')
   bool? get forwarded;
-  @override
 
   /// The time the report was filed.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-  @override
 
   /// The time of last action on this report.
+  @override
   @JsonKey(name: 'updated_at')
   DateTime? get updatedAt;
-  @override
 
   /// The account which filed the report.
+  @override
   @JsonKey(name: 'account')
   AdminAccount? get account;
-  @override
 
   /// The account being reported.
+  @override
   @JsonKey(name: 'target_account')
   AdminAccount? get targetAccount;
-  @override
 
   /// The account of the moderator assigned to this report.
+  @override
   @JsonKey(name: 'assigned_account')
   AdminAccount? get assignedAccount;
-  @override
 
   /// The account of the moderator who handled the report.
+  @override
   @JsonKey(name: 'action_taken_by_account')
   AdminAccount? get actionTakenByAccount;
-  @override
 
   /// Statuses attached to the report, for context.
+  @override
   @JsonKey(name: 'statuses')
   List<Status>? get statuses;
-  @override
 
   /// Rules attached to the report, for context.
+  @override
   @JsonKey(name: 'rules')
   List<Rule>? get rules;
+
+  /// Create a copy of AdminReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminReportImplCopyWith<_$AdminReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

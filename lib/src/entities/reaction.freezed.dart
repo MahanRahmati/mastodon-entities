@@ -42,8 +42,12 @@ mixin _$Reaction {
   @JsonKey(name: 'static_url')
   String? get staticUrl => throw _privateConstructorUsedError;
 
+  /// Serializes this Reaction to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Reaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReactionCopyWith<Reaction> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -71,6 +75,8 @@ class _$ReactionCopyWithImpl<$Res, $Val extends Reaction>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Reaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,6 +135,8 @@ class __$$ReactionImplCopyWithImpl<$Res>
       _$ReactionImpl _value, $Res Function(_$ReactionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Reaction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -221,11 +229,13 @@ class _$ReactionImpl implements _Reaction {
                 other.staticUrl == staticUrl));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, count, me, url, staticUrl);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Reaction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReactionImplCopyWith<_$ReactionImpl> get copyWith =>
@@ -250,35 +260,37 @@ abstract class _Reaction implements Reaction {
   factory _Reaction.fromJson(Map<String, dynamic> json) =
       _$ReactionImpl.fromJson;
 
-  @override
-
   /// The emoji used for the reaction. Either a unicode emoji, or a custom
   /// emoji's shortcode.
+  @override
   @JsonKey(name: 'name')
   String? get name;
-  @override
 
   /// The total number of users who have added this reaction.
+  @override
   @JsonKey(name: 'count')
   int? get count;
-  @override
 
   /// If there is a currently authorized user: Have you added this reaction?
+  @override
   @JsonKey(name: 'me')
   bool? get me;
-  @override
 
   /// If the reaction is a custom emoji: A link to the custom emoji.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// If the reaction is a custom emoji: A link to a non-animated version of
   /// the custom emoji.
+  @override
   @JsonKey(name: 'static_url')
   String? get staticUrl;
+
+  /// Create a copy of Reaction
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReactionImplCopyWith<_$ReactionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

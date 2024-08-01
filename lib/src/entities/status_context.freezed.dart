@@ -28,8 +28,12 @@ mixin _$StatusContext {
   @JsonKey(name: 'descendants')
   List<Status>? get descendants => throw _privateConstructorUsedError;
 
+  /// Serializes this StatusContext to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StatusContext
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StatusContextCopyWith<StatusContext> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$StatusContextCopyWithImpl<$Res, $Val extends StatusContext>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StatusContext
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class __$$StatusContextImplCopyWithImpl<$Res>
       _$StatusContextImpl _value, $Res Function(_$StatusContextImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StatusContext
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -170,14 +178,16 @@ class _$StatusContextImpl implements _StatusContext {
                 .equals(other._descendants, _descendants));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_ancestors),
       const DeepCollectionEquality().hash(_descendants));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StatusContext
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StatusContextImplCopyWith<_$StatusContextImpl> get copyWith =>
@@ -200,18 +210,20 @@ abstract class _StatusContext implements StatusContext {
   factory _StatusContext.fromJson(Map<String, dynamic> json) =
       _$StatusContextImpl.fromJson;
 
-  @override
-
   /// Parents in the thread.
+  @override
   @JsonKey(name: 'ancestors')
   List<Status>? get ancestors;
-  @override
 
   /// Children in the thread.
+  @override
   @JsonKey(name: 'descendants')
   List<Status>? get descendants;
+
+  /// Create a copy of StatusContext
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StatusContextImplCopyWith<_$StatusContextImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

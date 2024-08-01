@@ -29,8 +29,12 @@ mixin _$AdminCanonicalEmailBlock {
   @JsonKey(name: 'canonical_email_hash')
   String? get canonicalEmailHash => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminCanonicalEmailBlock to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminCanonicalEmailBlock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminCanonicalEmailBlockCopyWith<AdminCanonicalEmailBlock> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$AdminCanonicalEmailBlockCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminCanonicalEmailBlock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -100,6 +106,8 @@ class __$$AdminCanonicalEmailBlockImplCopyWithImpl<$Res>
       $Res Function(_$AdminCanonicalEmailBlockImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminCanonicalEmailBlock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -154,11 +162,13 @@ class _$AdminCanonicalEmailBlockImpl implements _AdminCanonicalEmailBlock {
                 other.canonicalEmailHash == canonicalEmailHash));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, canonicalEmailHash);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminCanonicalEmailBlock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminCanonicalEmailBlockImplCopyWith<_$AdminCanonicalEmailBlockImpl>
@@ -182,18 +192,20 @@ abstract class _AdminCanonicalEmailBlock implements AdminCanonicalEmailBlock {
   factory _AdminCanonicalEmailBlock.fromJson(Map<String, dynamic> json) =
       _$AdminCanonicalEmailBlockImpl.fromJson;
 
-  @override
-
   /// The ID of the email block in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The SHA256 hash of the canonical email address.
+  @override
   @JsonKey(name: 'canonical_email_hash')
   String? get canonicalEmailHash;
+
+  /// Create a copy of AdminCanonicalEmailBlock
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminCanonicalEmailBlockImplCopyWith<_$AdminCanonicalEmailBlockImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

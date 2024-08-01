@@ -40,8 +40,12 @@ mixin _$CustomEmoji {
   @JsonKey(name: 'category')
   String? get category => throw _privateConstructorUsedError;
 
+  /// Serializes this CustomEmoji to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CustomEmojiCopyWith<CustomEmoji> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -70,6 +74,8 @@ class _$CustomEmojiCopyWithImpl<$Res, $Val extends CustomEmoji>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -128,6 +134,8 @@ class __$$CustomEmojiImplCopyWithImpl<$Res>
       _$CustomEmojiImpl _value, $Res Function(_$CustomEmojiImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -221,12 +229,14 @@ class _$CustomEmojiImpl implements _CustomEmoji {
                 other.category == category));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, shortcode, url, staticUrl, visibleInPicker, category);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith =>
@@ -251,33 +261,35 @@ abstract class _CustomEmoji implements CustomEmoji {
   factory _CustomEmoji.fromJson(Map<String, dynamic> json) =
       _$CustomEmojiImpl.fromJson;
 
-  @override
-
   /// The name of the custom emoji.
+  @override
   @JsonKey(name: 'shortcode')
   String? get shortcode;
-  @override
 
   /// A link to the custom emoji.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// A link to a static copy of the custom emoji.
+  @override
   @JsonKey(name: 'static_url')
   String? get staticUrl;
-  @override
 
   /// Whether this Emoji should be visible in the picker or unlisted.
+  @override
   @JsonKey(name: 'visible_in_picker')
   bool? get visibleInPicker;
-  @override
 
   /// Used for sorting custom emoji in the picker.
+  @override
   @JsonKey(name: 'category')
   String? get category;
+
+  /// Create a copy of CustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

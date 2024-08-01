@@ -38,8 +38,12 @@ mixin _$AdminEmailDomainBlock {
   List<AdminEmailDomainBlockHistory>? get history =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this AdminEmailDomainBlock to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminEmailDomainBlock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminEmailDomainBlockCopyWith<AdminEmailDomainBlock> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$AdminEmailDomainBlockCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminEmailDomainBlock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,6 +128,8 @@ class __$$AdminEmailDomainBlockImplCopyWithImpl<$Res>
       $Res Function(_$AdminEmailDomainBlockImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminEmailDomainBlock
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -211,12 +219,14 @@ class _$AdminEmailDomainBlockImpl implements _AdminEmailDomainBlock {
             const DeepCollectionEquality().equals(other._history, _history));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, domain, createdAt,
       const DeepCollectionEquality().hash(_history));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminEmailDomainBlock
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminEmailDomainBlockImplCopyWith<_$AdminEmailDomainBlockImpl>
@@ -243,28 +253,30 @@ abstract class _AdminEmailDomainBlock implements AdminEmailDomainBlock {
   factory _AdminEmailDomainBlock.fromJson(Map<String, dynamic> json) =
       _$AdminEmailDomainBlockImpl.fromJson;
 
-  @override
-
   /// The ID of the EmailDomainBlock in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The email domain that is not allowed to be used for signups.
+  @override
   @JsonKey(name: 'domain')
   String? get domain;
-  @override
 
   /// When the email domain was disallowed from signups.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-  @override
 
   /// Usage statistics for given days (typically the past week).
+  @override
   @JsonKey(name: 'history')
   List<AdminEmailDomainBlockHistory>? get history;
+
+  /// Create a copy of AdminEmailDomainBlock
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminEmailDomainBlockImplCopyWith<_$AdminEmailDomainBlockImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -289,8 +301,12 @@ mixin _$AdminEmailDomainBlockHistory {
   @JsonKey(name: 'uses')
   String? get uses => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminEmailDomainBlockHistory to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminEmailDomainBlockHistory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminEmailDomainBlockHistoryCopyWith<AdminEmailDomainBlockHistory>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -320,6 +336,8 @@ class _$AdminEmailDomainBlockHistoryCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminEmailDomainBlockHistory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -369,6 +387,8 @@ class __$$AdminEmailDomainBlockHistoryImplCopyWithImpl<$Res>
       $Res Function(_$AdminEmailDomainBlockHistoryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminEmailDomainBlockHistory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -438,11 +458,13 @@ class _$AdminEmailDomainBlockHistoryImpl
             (identical(other.uses, uses) || other.uses == uses));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, day, accounts, uses);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminEmailDomainBlockHistory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminEmailDomainBlockHistoryImplCopyWith<
@@ -469,24 +491,26 @@ abstract class _AdminEmailDomainBlockHistory
   factory _AdminEmailDomainBlockHistory.fromJson(Map<String, dynamic> json) =
       _$AdminEmailDomainBlockHistoryImpl.fromJson;
 
-  @override
-
   /// UNIX timestamp on midnight of the given day.
+  @override
   @JsonKey(name: 'day')
   String? get day;
-  @override
 
   /// The counted accounts signup attempts using that email domain within
   /// that day.
+  @override
   @JsonKey(name: 'accounts')
   String? get accounts;
-  @override
 
   /// The counted IP signup attempts of that email domain within that day.
+  @override
   @JsonKey(name: 'uses')
   String? get uses;
+
+  /// Create a copy of AdminEmailDomainBlockHistory
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminEmailDomainBlockHistoryImplCopyWith<
           _$AdminEmailDomainBlockHistoryImpl>
       get copyWith => throw _privateConstructorUsedError;

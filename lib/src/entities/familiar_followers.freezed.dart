@@ -28,8 +28,12 @@ mixin _$FamiliarFollowers {
   @JsonKey(name: 'accounts')
   List<Account>? get accounts => throw _privateConstructorUsedError;
 
+  /// Serializes this FamiliarFollowers to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FamiliarFollowers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FamiliarFollowersCopyWith<FamiliarFollowers> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$FamiliarFollowersCopyWithImpl<$Res, $Val extends FamiliarFollowers>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FamiliarFollowers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class __$$FamiliarFollowersImplCopyWithImpl<$Res>
       $Res Function(_$FamiliarFollowersImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FamiliarFollowers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -158,12 +166,14 @@ class _$FamiliarFollowersImpl implements _FamiliarFollowers {
             const DeepCollectionEquality().equals(other._accounts, _accounts));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_accounts));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FamiliarFollowers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FamiliarFollowersImplCopyWith<_$FamiliarFollowersImpl> get copyWith =>
@@ -187,18 +197,20 @@ abstract class _FamiliarFollowers implements FamiliarFollowers {
   factory _FamiliarFollowers.fromJson(Map<String, dynamic> json) =
       _$FamiliarFollowersImpl.fromJson;
 
-  @override
-
   /// The ID of the Account in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// Accounts you follow that also follow this account.
+  @override
   @JsonKey(name: 'accounts')
   List<Account>? get accounts;
+
+  /// Create a copy of FamiliarFollowers
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FamiliarFollowersImplCopyWith<_$FamiliarFollowersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

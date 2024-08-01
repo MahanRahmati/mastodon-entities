@@ -47,8 +47,12 @@ mixin _$AdminMeasure {
   @JsonKey(name: 'data')
   List<AdminMeasureData>? get data => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminMeasure to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminMeasure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminMeasureCopyWith<AdminMeasure> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -78,6 +82,8 @@ class _$AdminMeasureCopyWithImpl<$Res, $Val extends AdminMeasure>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminMeasure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -142,6 +148,8 @@ class __$$AdminMeasureImplCopyWithImpl<$Res>
       _$AdminMeasureImpl _value, $Res Function(_$AdminMeasureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminMeasure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -258,12 +266,14 @@ class _$AdminMeasureImpl implements _AdminMeasure {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, unit, total, humanValue,
       previousTotal, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminMeasure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminMeasureImplCopyWith<_$AdminMeasureImpl> get copyWith =>
@@ -290,41 +300,43 @@ abstract class _AdminMeasure implements AdminMeasure {
   factory _AdminMeasure.fromJson(Map<String, dynamic> json) =
       _$AdminMeasureImpl.fromJson;
 
-  @override
-
   /// The unique keystring for the requested measure.
+  @override
   @JsonKey(name: 'key')
   String? get key;
-  @override
 
   /// The units associated with this data item's value, if applicable.
+  @override
   @JsonKey(name: 'unit')
   String? get unit;
-  @override
 
   /// The numeric total associated with the requested measure.
+  @override
   @JsonKey(name: 'total')
   String? get total;
-  @override
 
   /// A human-readable formatted value for this data item.
+  @override
   @JsonKey(name: 'human_value')
   String? get humanValue;
-  @override
 
   /// The numeric total associated with the requested measure, in the
   /// previous period. Previous period is calculated by subtracting the
   /// start_at and end_at dates, then offsetting both start and end dates
   /// backwards by the length of the time period.
+  @override
   @JsonKey(name: 'previous_total')
   String? get previousTotal;
-  @override
 
   /// The data available for the requested measure, split into daily buckets.
+  @override
   @JsonKey(name: 'data')
   List<AdminMeasureData>? get data;
+
+  /// Create a copy of AdminMeasure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminMeasureImplCopyWith<_$AdminMeasureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -343,8 +355,12 @@ mixin _$AdminMeasureData {
   @JsonKey(name: 'value')
   String? get value => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminMeasureData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminMeasureData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminMeasureDataCopyWith<AdminMeasureData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -370,6 +386,8 @@ class _$AdminMeasureDataCopyWithImpl<$Res, $Val extends AdminMeasureData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminMeasureData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -410,6 +428,8 @@ class __$$AdminMeasureDataImplCopyWithImpl<$Res>
       $Res Function(_$AdminMeasureDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminMeasureData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -462,11 +482,13 @@ class _$AdminMeasureDataImpl implements _AdminMeasureData {
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, date, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminMeasureData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminMeasureDataImplCopyWith<_$AdminMeasureDataImpl> get copyWith =>
@@ -489,18 +511,20 @@ abstract class _AdminMeasureData implements AdminMeasureData {
   factory _AdminMeasureData.fromJson(Map<String, dynamic> json) =
       _$AdminMeasureDataImpl.fromJson;
 
-  @override
-
   /// Midnight on the requested day in the time period.
+  @override
   @JsonKey(name: 'date')
   DateTime? get date;
-  @override
 
   /// The numeric value for the requested measure.
+  @override
   @JsonKey(name: 'value')
   String? get value;
+
+  /// Create a copy of AdminMeasureData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminMeasureDataImplCopyWith<_$AdminMeasureDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

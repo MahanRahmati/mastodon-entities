@@ -36,8 +36,12 @@ mixin _$Application {
   @JsonKey(name: 'client_secret')
   String? get clientSecret => throw _privateConstructorUsedError;
 
+  /// Serializes this Application to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Application
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ApplicationCopyWith<Application> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -65,6 +69,8 @@ class _$ApplicationCopyWithImpl<$Res, $Val extends Application>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Application
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -117,6 +123,8 @@ class __$$ApplicationImplCopyWithImpl<$Res>
       _$ApplicationImpl _value, $Res Function(_$ApplicationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Application
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -196,12 +204,14 @@ class _$ApplicationImpl implements _Application {
                 other.clientSecret == clientSecret));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, name, website, clientId, clientSecret);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Application
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ApplicationImplCopyWith<_$ApplicationImpl> get copyWith =>
@@ -226,28 +236,30 @@ abstract class _Application implements Application {
   factory _Application.fromJson(Map<String, dynamic> json) =
       _$ApplicationImpl.fromJson;
 
-  @override
-
   /// The name of your application.
+  @override
   @JsonKey(name: 'name')
   String? get name;
-  @override
 
   /// The website associated with your application.
+  @override
   @JsonKey(name: 'website')
   String? get website;
-  @override
 
   /// Client ID key, to be used for obtaining OAuth tokens
+  @override
   @JsonKey(name: 'client_id')
   String? get clientId;
-  @override
 
   /// Client secret key, to be used for obtaining OAuth tokens
+  @override
   @JsonKey(name: 'client_secret')
   String? get clientSecret;
+
+  /// Create a copy of Application
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApplicationImplCopyWith<_$ApplicationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

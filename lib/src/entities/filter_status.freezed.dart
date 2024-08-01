@@ -28,8 +28,12 @@ mixin _$FilterStatus {
   @JsonKey(name: 'status_id')
   String? get statusId => throw _privateConstructorUsedError;
 
+  /// Serializes this FilterStatus to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FilterStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FilterStatusCopyWith<FilterStatus> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$FilterStatusCopyWithImpl<$Res, $Val extends FilterStatus>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FilterStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class __$$FilterStatusImplCopyWithImpl<$Res>
       _$FilterStatusImpl _value, $Res Function(_$FilterStatusImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FilterStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +157,13 @@ class _$FilterStatusImpl implements _FilterStatus {
                 other.statusId == statusId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, statusId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FilterStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FilterStatusImplCopyWith<_$FilterStatusImpl> get copyWith =>
@@ -175,18 +185,20 @@ abstract class _FilterStatus implements FilterStatus {
   factory _FilterStatus.fromJson(Map<String, dynamic> json) =
       _$FilterStatusImpl.fromJson;
 
-  @override
-
   /// The ID of the FilterStatus in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The ID of the Status that will be filtered.
+  @override
   @JsonKey(name: 'status_id')
   String? get statusId;
+
+  /// Create a copy of FilterStatus
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FilterStatusImplCopyWith<_$FilterStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

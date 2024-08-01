@@ -54,8 +54,12 @@ mixin _$EncryptedMessage {
   @JsonKey(name: 'created_at')
   DateTime? get createdAt => throw _privateConstructorUsedError;
 
+  /// Serializes this EncryptedMessage to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EncryptedMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EncryptedMessageCopyWith<EncryptedMessage> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -87,6 +91,8 @@ class _$EncryptedMessageCopyWithImpl<$Res, $Val extends EncryptedMessage>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EncryptedMessage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -163,6 +169,8 @@ class __$$EncryptedMessageImplCopyWithImpl<$Res>
       $Res Function(_$EncryptedMessageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EncryptedMessage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -294,12 +302,14 @@ class _$EncryptedMessageImpl implements _EncryptedMessage {
                 other.createdAt == createdAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, accountId, deviceId, type,
       body, digest, messageFranking, createdAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EncryptedMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EncryptedMessageImplCopyWith<_$EncryptedMessageImpl> get copyWith =>
@@ -329,50 +339,52 @@ abstract class _EncryptedMessage implements EncryptedMessage {
   factory _EncryptedMessage.fromJson(Map<String, dynamic> json) =
       _$EncryptedMessageImpl.fromJson;
 
-  @override
-
   /// The ID of the EncryptedMessage in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The ID of the Account that sent this message.
+  @override
   @JsonKey(name: 'account_id')
   String? get accountId;
-  @override
 
   /// The ID of the Device that sent this message.
+  @override
   @JsonKey(name: 'device_id')
   String? get deviceId;
-  @override
 
   /// Whether the message is a pre-key message (used to establish a new
   /// session) or a normally encrypted message (part of an existing session).
+  @override
   @JsonKey(name: 'type')
   EncryptedMessageType? get type;
-  @override
 
   /// The encrypted message content.
+  @override
   @JsonKey(name: 'body')
   String? get body;
-  @override
 
   /// An HMAC SHA-256 digest hash of the message.
+  @override
   @JsonKey(name: 'digest')
   String? get digest;
-  @override
 
   /// A signed value to be used when reporting the message body for its
   /// content.
+  @override
   @JsonKey(name: 'message_franking')
   String? get messageFranking;
-  @override
 
   /// A timestamp for when the message was created.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
+
+  /// Create a copy of EncryptedMessage
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EncryptedMessageImplCopyWith<_$EncryptedMessageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -28,8 +28,12 @@ mixin _$MastodonError {
   @JsonKey(name: 'error_description')
   String? get errorDescription => throw _privateConstructorUsedError;
 
+  /// Serializes this MastodonError to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MastodonError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MastodonErrorCopyWith<MastodonError> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$MastodonErrorCopyWithImpl<$Res, $Val extends MastodonError>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MastodonError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class __$$MastodonErrorImplCopyWithImpl<$Res>
       _$MastodonErrorImpl _value, $Res Function(_$MastodonErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MastodonError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +157,13 @@ class _$MastodonErrorImpl implements _MastodonError {
                 other.errorDescription == errorDescription));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, error, errorDescription);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MastodonError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MastodonErrorImplCopyWith<_$MastodonErrorImpl> get copyWith =>
@@ -176,18 +186,20 @@ abstract class _MastodonError implements MastodonError {
   factory _MastodonError.fromJson(Map<String, dynamic> json) =
       _$MastodonErrorImpl.fromJson;
 
-  @override
-
   /// The error message.
+  @override
   @JsonKey(name: 'error')
   String? get error;
-  @override
 
   /// A longer description of the error, mainly provided with the OAuth API.
+  @override
   @JsonKey(name: 'error_description')
   String? get errorDescription;
+
+  /// Create a copy of MastodonError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MastodonErrorImplCopyWith<_$MastodonErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

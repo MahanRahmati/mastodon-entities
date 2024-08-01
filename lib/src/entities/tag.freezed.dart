@@ -36,8 +36,12 @@ mixin _$Tag {
   @JsonKey(name: 'following')
   bool? get following => throw _privateConstructorUsedError;
 
+  /// Serializes this Tag to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Tag
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TagCopyWith<Tag> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -62,6 +66,8 @@ class _$TagCopyWithImpl<$Res, $Val extends Tag> implements $TagCopyWith<$Res> {
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Tag
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -110,6 +116,8 @@ class __$$TagImplCopyWithImpl<$Res> extends _$TagCopyWithImpl<$Res, _$TagImpl>
   __$$TagImplCopyWithImpl(_$TagImpl _value, $Res Function(_$TagImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Tag
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -198,12 +206,14 @@ class _$TagImpl implements _Tag {
                 other.following == following));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, url,
       const DeepCollectionEquality().hash(_history), following);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Tag
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TagImplCopyWith<_$TagImpl> get copyWith =>
@@ -226,28 +236,30 @@ abstract class _Tag implements Tag {
 
   factory _Tag.fromJson(Map<String, dynamic> json) = _$TagImpl.fromJson;
 
-  @override
-
   /// The value of the hashtag after the # sign.
+  @override
   @JsonKey(name: 'name')
   String? get name;
-  @override
 
   /// A link to the hashtag on the instance.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// Usage statistics for given days (typically the past week).
+  @override
   @JsonKey(name: 'history')
   List<TagHistory>? get history;
-  @override
 
   /// Whether the current token's authorized user is following this tag.
+  @override
   @JsonKey(name: 'following')
   bool? get following;
+
+  /// Create a copy of Tag
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TagImplCopyWith<_$TagImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -270,8 +282,12 @@ mixin _$TagHistory {
   @JsonKey(name: 'accounts')
   String? get accounts => throw _privateConstructorUsedError;
 
+  /// Serializes this TagHistory to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TagHistory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TagHistoryCopyWith<TagHistory> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -298,6 +314,8 @@ class _$TagHistoryCopyWithImpl<$Res, $Val extends TagHistory>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TagHistory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -344,6 +362,8 @@ class __$$TagHistoryImplCopyWithImpl<$Res>
       _$TagHistoryImpl _value, $Res Function(_$TagHistoryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TagHistory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -410,11 +430,13 @@ class _$TagHistoryImpl implements _TagHistory {
                 other.accounts == accounts));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, day, uses, accounts);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TagHistory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TagHistoryImplCopyWith<_$TagHistoryImpl> get copyWith =>
@@ -437,23 +459,25 @@ abstract class _TagHistory implements TagHistory {
   factory _TagHistory.fromJson(Map<String, dynamic> json) =
       _$TagHistoryImpl.fromJson;
 
-  @override
-
   /// UNIX timestamp on midnight of the given day.
+  @override
   @JsonKey(name: 'day')
   String? get day;
-  @override
 
   /// The counted usage of the tag within that day.
+  @override
   @JsonKey(name: 'uses')
   String? get uses;
-  @override
 
   /// The total of accounts using the tag within that day.
+  @override
   @JsonKey(name: 'accounts')
   String? get accounts;
+
+  /// Create a copy of TagHistory
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TagHistoryImplCopyWith<_$TagHistoryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -481,8 +505,12 @@ mixin _$AdminTag {
   @JsonKey(name: 'requires_review')
   bool? get requiresReview => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminTag to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminTag
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminTagCopyWith<AdminTag> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -509,6 +537,8 @@ class _$AdminTagCopyWithImpl<$Res, $Val extends AdminTag>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminTag
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -561,6 +591,8 @@ class __$$AdminTagImplCopyWithImpl<$Res>
       _$AdminTagImpl _value, $Res Function(_$AdminTagImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminTag
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -641,12 +673,14 @@ class _$AdminTagImpl implements _AdminTag {
                 other.requiresReview == requiresReview));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, trendable, usable, requiresReview);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminTag
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminTagImplCopyWith<_$AdminTagImpl> get copyWith =>
@@ -671,29 +705,31 @@ abstract class _AdminTag implements AdminTag {
   factory _AdminTag.fromJson(Map<String, dynamic> json) =
       _$AdminTagImpl.fromJson;
 
-  @override
-
   /// The ID of the Tag in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// Whether the hashtag has been approved to trend.
+  @override
   @JsonKey(name: 'trendable')
   bool? get trendable;
-  @override
 
   /// Whether the hashtag has not been disabled from auto-linking.
+  @override
   @JsonKey(name: 'usable')
   bool? get usable;
-  @override
 
   /// Whether the hashtag has not been reviewed yet to approve or deny its
   /// trending.
+  @override
   @JsonKey(name: 'requires_review')
   bool? get requiresReview;
+
+  /// Create a copy of AdminTag
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminTagImplCopyWith<_$AdminTagImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

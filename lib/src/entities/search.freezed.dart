@@ -32,8 +32,12 @@ mixin _$Search {
   @JsonKey(name: 'hashtags')
   List<Tag>? get hashtags => throw _privateConstructorUsedError;
 
+  /// Serializes this Search to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchCopyWith<Search> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -58,6 +62,8 @@ class _$SearchCopyWithImpl<$Res, $Val extends Search>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,6 +109,8 @@ class __$$SearchImplCopyWithImpl<$Res>
       _$SearchImpl _value, $Res Function(_$SearchImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -198,7 +206,7 @@ class _$SearchImpl implements _Search {
             const DeepCollectionEquality().equals(other._hashtags, _hashtags));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -206,7 +214,9 @@ class _$SearchImpl implements _Search {
       const DeepCollectionEquality().hash(_statuses),
       const DeepCollectionEquality().hash(_hashtags));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>
@@ -228,23 +238,25 @@ abstract class _Search implements Search {
 
   factory _Search.fromJson(Map<String, dynamic> json) = _$SearchImpl.fromJson;
 
-  @override
-
   /// Accounts which match the given query.
+  @override
   @JsonKey(name: 'accounts')
   List<Account>? get accounts;
-  @override
 
   /// Statuses which match the given query.
+  @override
   @JsonKey(name: 'statuses')
   List<Status>? get statuses;
-  @override
 
   /// Hashtags which match the given query.
+  @override
   @JsonKey(name: 'hashtags')
   List<Tag>? get hashtags;
+
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

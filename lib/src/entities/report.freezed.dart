@@ -61,8 +61,12 @@ mixin _$Report {
   @JsonKey(name: 'target_account')
   Account? get targetAccount => throw _privateConstructorUsedError;
 
+  /// Serializes this Report to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Report
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReportCopyWith<Report> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -96,6 +100,8 @@ class _$ReportCopyWithImpl<$Res, $Val extends Report>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Report
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -154,6 +160,8 @@ class _$ReportCopyWithImpl<$Res, $Val extends Report>
     ) as $Val);
   }
 
+  /// Create a copy of Report
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountCopyWith<$Res>? get targetAccount {
@@ -198,6 +206,8 @@ class __$$ReportImplCopyWithImpl<$Res>
       _$ReportImpl _value, $Res Function(_$ReportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Report
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -376,7 +386,7 @@ class _$ReportImpl implements _Report {
                 other.targetAccount == targetAccount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -391,7 +401,9 @@ class _$ReportImpl implements _Report {
       const DeepCollectionEquality().hash(_ruleIds),
       targetAccount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Report
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReportImplCopyWith<_$ReportImpl> get copyWith =>
@@ -421,59 +433,61 @@ abstract class _Report implements Report {
 
   factory _Report.fromJson(Map<String, dynamic> json) = _$ReportImpl.fromJson;
 
-  @override
-
   /// The ID of the report in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// Whether an action was taken yet.
+  @override
   @JsonKey(name: 'action_taken')
   bool? get actionTaken;
-  @override
 
   /// When an action was taken against the report.
+  @override
   @JsonKey(name: 'action_taken_at')
   DateTime? get actionTakenAt;
-  @override
 
   /// The generic reason for the report.
+  @override
   @JsonKey(name: 'category')
   ReportCategory? get category;
-  @override
 
   /// The reason for the report.
+  @override
   @JsonKey(name: 'comment')
   String? get comment;
-  @override
 
   /// Whether the report was forwarded to a remote domain.
+  @override
   @JsonKey(name: 'forwarded')
   bool? get forwarded;
-  @override
 
   /// When the report was created.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-  @override
 
   /// IDs of statuses that have been attached to this report for additional
   /// context.
+  @override
   @JsonKey(name: 'status_ids')
   List<String>? get statusIds;
-  @override
 
   /// IDs of the rules that have been cited as a violation by this report.
+  @override
   @JsonKey(name: 'rule_ids')
   List<String>? get ruleIds;
-  @override
 
   /// The account that was reported.
+  @override
   @JsonKey(name: 'target_account')
   Account? get targetAccount;
+
+  /// Create a copy of Report
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReportImplCopyWith<_$ReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

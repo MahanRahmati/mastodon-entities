@@ -32,8 +32,12 @@ mixin _$FilterResult {
   @JsonKey(name: 'status_matches')
   List<String>? get statusMatches => throw _privateConstructorUsedError;
 
+  /// Serializes this FilterResult to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FilterResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FilterResultCopyWith<FilterResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$FilterResultCopyWithImpl<$Res, $Val extends FilterResult>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FilterResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class _$FilterResultCopyWithImpl<$Res, $Val extends FilterResult>
     ) as $Val);
   }
 
+  /// Create a copy of FilterResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FilterCopyWith<$Res>? get filter {
@@ -123,6 +131,8 @@ class __$$FilterResultImplCopyWithImpl<$Res>
       _$FilterResultImpl _value, $Res Function(_$FilterResultImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FilterResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -210,7 +220,7 @@ class _$FilterResultImpl implements _FilterResult {
                 .equals(other._statusMatches, _statusMatches));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -218,7 +228,9 @@ class _$FilterResultImpl implements _FilterResult {
       const DeepCollectionEquality().hash(_keywordMatches),
       const DeepCollectionEquality().hash(_statusMatches));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FilterResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FilterResultImplCopyWith<_$FilterResultImpl> get copyWith =>
@@ -242,23 +254,25 @@ abstract class _FilterResult implements FilterResult {
   factory _FilterResult.fromJson(Map<String, dynamic> json) =
       _$FilterResultImpl.fromJson;
 
-  @override
-
   /// The filter that was matched.
+  @override
   @JsonKey(name: 'filter')
   Filter? get filter;
-  @override
 
   /// The keyword within the filter that was matched.
+  @override
   @JsonKey(name: 'keyword_matches')
   List<String>? get keywordMatches;
-  @override
 
   /// The status ID within the filter that was matched.
+  @override
   @JsonKey(name: 'status_matches')
   List<String>? get statusMatches;
+
+  /// Create a copy of FilterResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FilterResultImplCopyWith<_$FilterResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

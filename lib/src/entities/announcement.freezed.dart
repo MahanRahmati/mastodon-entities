@@ -77,8 +77,12 @@ mixin _$Announcement {
   @JsonKey(name: 'reactions')
   List<Reaction>? get reactions => throw _privateConstructorUsedError;
 
+  /// Serializes this Announcement to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Announcement
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AnnouncementCopyWith<Announcement> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -116,6 +120,8 @@ class _$AnnouncementCopyWithImpl<$Res, $Val extends Announcement>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Announcement
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -228,6 +234,8 @@ class __$$AnnouncementImplCopyWithImpl<$Res>
       _$AnnouncementImpl _value, $Res Function(_$AnnouncementImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Announcement
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -481,7 +489,7 @@ class _$AnnouncementImpl implements _Announcement {
                 .equals(other._reactions, _reactions));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -500,7 +508,9 @@ class _$AnnouncementImpl implements _Announcement {
       const DeepCollectionEquality().hash(_emojis),
       const DeepCollectionEquality().hash(_reactions));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Announcement
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AnnouncementImplCopyWith<_$AnnouncementImpl> get copyWith =>
@@ -535,79 +545,81 @@ abstract class _Announcement implements Announcement {
   factory _Announcement.fromJson(Map<String, dynamic> json) =
       _$AnnouncementImpl.fromJson;
 
-  @override
-
   /// The ID of the announcement in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The text of the announcement.
+  @override
   @JsonKey(name: 'content')
   String? get content;
-  @override
 
   /// When the announcement will start.
+  @override
   @JsonKey(name: 'starts_at')
   DateTime? get startsAt;
-  @override
 
   /// When the announcement will end.
+  @override
   @JsonKey(name: 'ends_at')
   DateTime? get endsAt;
-  @override
 
   /// Whether the announcement is currently active.
+  @override
   @JsonKey(name: 'published')
   bool? get published;
-  @override
 
   /// Whether the announcement should start and end on dates only instead of
   /// datetimes. Will be false if there is no starts_at or ends_at time.
+  @override
   @JsonKey(name: 'all_day')
   bool? get allDay;
-  @override
 
   /// When the announcement was published.
+  @override
   @JsonKey(name: 'published_at')
   DateTime? get publishedAt;
-  @override
 
   /// When the announcement was last updated.
+  @override
   @JsonKey(name: 'updated_at')
   DateTime? get updatedAt;
-  @override
 
   /// Whether the announcement has been read by the current user.
+  @override
   @JsonKey(name: 'read')
   bool? get read;
-  @override
 
   /// Accounts mentioned in the announcement text.
+  @override
   @JsonKey(name: 'mentions')
   List<AnnouncementAccount>? get mentions;
-  @override
 
   /// Statuses linked in the announcement text.
+  @override
   @JsonKey(name: 'statuses')
   List<AnnouncementStatus>? get statuses;
-  @override
 
   /// Tags linked in the announcement text.
+  @override
   @JsonKey(name: 'tags')
   List<StatusTag>? get tags;
-  @override
 
   /// Custom emoji used in the announcement text.
+  @override
   @JsonKey(name: 'emojis')
   List<CustomEmoji>? get emojis;
-  @override
 
   /// Emoji reactions attached to the announcement.
+  @override
   @JsonKey(name: 'reactions')
   List<Reaction>? get reactions;
+
+  /// Create a copy of Announcement
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AnnouncementImplCopyWith<_$AnnouncementImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -635,8 +647,12 @@ mixin _$AnnouncementAccount {
   @JsonKey(name: 'acct')
   String? get acct => throw _privateConstructorUsedError;
 
+  /// Serializes this AnnouncementAccount to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AnnouncementAccount
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AnnouncementAccountCopyWith<AnnouncementAccount> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -664,6 +680,8 @@ class _$AnnouncementAccountCopyWithImpl<$Res, $Val extends AnnouncementAccount>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AnnouncementAccount
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -716,6 +734,8 @@ class __$$AnnouncementAccountImplCopyWithImpl<$Res>
       $Res Function(_$AnnouncementAccountImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AnnouncementAccount
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -795,11 +815,13 @@ class _$AnnouncementAccountImpl implements _AnnouncementAccount {
             (identical(other.acct, acct) || other.acct == acct));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, username, url, acct);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AnnouncementAccount
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AnnouncementAccountImplCopyWith<_$AnnouncementAccountImpl> get copyWith =>
@@ -824,29 +846,31 @@ abstract class _AnnouncementAccount implements AnnouncementAccount {
   factory _AnnouncementAccount.fromJson(Map<String, dynamic> json) =
       _$AnnouncementAccountImpl.fromJson;
 
-  @override
-
   /// The account ID of the mentioned user.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The username of the mentioned user.
+  @override
   @JsonKey(name: 'username')
   String? get username;
-  @override
 
   /// The location of the mentioned user’s profile.
+  @override
   @JsonKey(name: 'url')
   String? get url;
-  @override
 
   /// The webfinger acct: URI of the mentioned user. Equivalent to `username`
   /// for local users, or `username@domain` for remote users.
+  @override
   @JsonKey(name: 'acct')
   String? get acct;
+
+  /// Create a copy of AnnouncementAccount
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AnnouncementAccountImplCopyWith<_$AnnouncementAccountImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -865,8 +889,12 @@ mixin _$AnnouncementStatus {
   @JsonKey(name: 'url')
   String? get url => throw _privateConstructorUsedError;
 
+  /// Serializes this AnnouncementStatus to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AnnouncementStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AnnouncementStatusCopyWith<AnnouncementStatus> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -891,6 +919,8 @@ class _$AnnouncementStatusCopyWithImpl<$Res, $Val extends AnnouncementStatus>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AnnouncementStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -930,6 +960,8 @@ class __$$AnnouncementStatusImplCopyWithImpl<$Res>
       $Res Function(_$AnnouncementStatusImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AnnouncementStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -982,11 +1014,13 @@ class _$AnnouncementStatusImpl implements _AnnouncementStatus {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AnnouncementStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AnnouncementStatusImplCopyWith<_$AnnouncementStatusImpl> get copyWith =>
@@ -1009,18 +1043,20 @@ abstract class _AnnouncementStatus implements AnnouncementStatus {
   factory _AnnouncementStatus.fromJson(Map<String, dynamic> json) =
       _$AnnouncementStatusImpl.fromJson;
 
-  @override
-
   /// The ID of an attached Status in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The URL of an attached Status.
+  @override
   @JsonKey(name: 'url')
   String? get url;
+
+  /// Create a copy of AnnouncementStatus
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AnnouncementStatusImplCopyWith<_$AnnouncementStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

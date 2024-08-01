@@ -32,8 +32,12 @@ mixin _$AdminDomainAllow {
   @JsonKey(name: 'created_at')
   DateTime? get createdAt => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminDomainAllow to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminDomainAllow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminDomainAllowCopyWith<AdminDomainAllow> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$AdminDomainAllowCopyWithImpl<$Res, $Val extends AdminDomainAllow>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminDomainAllow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +112,8 @@ class __$$AdminDomainAllowImplCopyWithImpl<$Res>
       $Res Function(_$AdminDomainAllowImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminDomainAllow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -172,11 +180,13 @@ class _$AdminDomainAllowImpl implements _AdminDomainAllow {
                 other.createdAt == createdAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, domain, createdAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminDomainAllow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminDomainAllowImplCopyWith<_$AdminDomainAllowImpl> get copyWith =>
@@ -201,23 +211,25 @@ abstract class _AdminDomainAllow implements AdminDomainAllow {
   factory _AdminDomainAllow.fromJson(Map<String, dynamic> json) =
       _$AdminDomainAllowImpl.fromJson;
 
-  @override
-
   /// The ID of the DomainAllow in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The domain that is allowed to federate.
+  @override
   @JsonKey(name: 'domain')
   String? get domain;
-  @override
 
   /// When the domain was allowed to federate.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
+
+  /// Create a copy of AdminDomainAllow
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminDomainAllowImplCopyWith<_$AdminDomainAllowImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

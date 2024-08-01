@@ -47,8 +47,12 @@ mixin _$NotificationRequest {
   @JsonKey(name: 'last_status')
   Status? get lastStatus => throw _privateConstructorUsedError;
 
+  /// Serializes this NotificationRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotificationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationRequestCopyWith<NotificationRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -81,6 +85,8 @@ class _$NotificationRequestCopyWithImpl<$Res, $Val extends NotificationRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotificationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,6 +125,8 @@ class _$NotificationRequestCopyWithImpl<$Res, $Val extends NotificationRequest>
     ) as $Val);
   }
 
+  /// Create a copy of NotificationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountCopyWith<$Res>? get account {
@@ -131,6 +139,8 @@ class _$NotificationRequestCopyWithImpl<$Res, $Val extends NotificationRequest>
     });
   }
 
+  /// Create a copy of NotificationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StatusCopyWith<$Res>? get lastStatus {
@@ -174,6 +184,8 @@ class __$$NotificationRequestImplCopyWithImpl<$Res>
       $Res Function(_$NotificationRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotificationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -282,12 +294,14 @@ class _$NotificationRequestImpl implements _NotificationRequest {
                 other.lastStatus == lastStatus));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, createdAt, updatedAt,
       account, notificationsCount, lastStatus);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotificationRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationRequestImplCopyWith<_$NotificationRequestImpl> get copyWith =>
@@ -315,41 +329,43 @@ abstract class _NotificationRequest implements NotificationRequest {
   factory _NotificationRequest.fromJson(Map<String, dynamic> json) =
       _$NotificationRequestImpl.fromJson;
 
-  @override
-
   /// The id of the notification request in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The timestamp of the notification request, i.e. when the first filtered
   /// notification from that user was created.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-  @override
 
   /// The timestamp of when the notification request was last updated.
+  @override
   @JsonKey(name: 'updated_at')
   DateTime? get updatedAt;
-  @override
 
   /// The account that performed the action that generated the filtered
   /// notifications.
+  @override
   @JsonKey(name: 'from_account')
   Account? get account;
-  @override
 
   /// How many of this account's notifications were filtered.
+  @override
   @JsonKey(name: 'notifications_count')
   String? get notificationsCount;
-  @override
 
   /// Most recent status associated with a filtered notification from that
   /// account.
+  @override
   @JsonKey(name: 'last_status')
   Status? get lastStatus;
+
+  /// Create a copy of NotificationRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationRequestImplCopyWith<_$NotificationRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

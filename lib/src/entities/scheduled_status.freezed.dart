@@ -38,8 +38,12 @@ mixin _$ScheduledStatus {
   List<MediaAttachment>? get mediaAttachments =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ScheduledStatus to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ScheduledStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ScheduledStatusCopyWith<ScheduledStatus> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -70,6 +74,8 @@ class _$ScheduledStatusCopyWithImpl<$Res, $Val extends ScheduledStatus>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ScheduledStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,6 +104,8 @@ class _$ScheduledStatusCopyWithImpl<$Res, $Val extends ScheduledStatus>
     ) as $Val);
   }
 
+  /// Create a copy of ScheduledStatus
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ScheduledStatusParamsCopyWith<$Res>? get params {
@@ -138,6 +146,8 @@ class __$$ScheduledStatusImplCopyWithImpl<$Res>
       _$ScheduledStatusImpl _value, $Res Function(_$ScheduledStatusImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ScheduledStatus
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -230,12 +240,14 @@ class _$ScheduledStatusImpl implements _ScheduledStatus {
                 .equals(other._mediaAttachments, _mediaAttachments));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, scheduledAt, params,
       const DeepCollectionEquality().hash(_mediaAttachments));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ScheduledStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ScheduledStatusImplCopyWith<_$ScheduledStatusImpl> get copyWith =>
@@ -261,29 +273,31 @@ abstract class _ScheduledStatus implements ScheduledStatus {
   factory _ScheduledStatus.fromJson(Map<String, dynamic> json) =
       _$ScheduledStatusImpl.fromJson;
 
-  @override
-
   /// ID of the scheduled status in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The timestamp for when the status will be posted.
+  @override
   @JsonKey(name: 'scheduled_at')
   DateTime? get scheduledAt;
-  @override
 
   /// The parameters that were used when scheduling the status, to be used
   /// when the status is posted.
+  @override
   @JsonKey(name: 'params')
   ScheduledStatusParams? get params;
-  @override
 
   /// Media that will be attached when the status is posted.
+  @override
   @JsonKey(name: 'media_attachments')
   List<MediaAttachment>? get mediaAttachments;
+
+  /// Create a copy of ScheduledStatus
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ScheduledStatusImplCopyWith<_$ScheduledStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -344,8 +358,12 @@ mixin _$ScheduledStatusParams {
   @JsonKey(name: 'with_rate_limit')
   bool? get withRateLimit => throw _privateConstructorUsedError;
 
+  /// Serializes this ScheduledStatusParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ScheduledStatusParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ScheduledStatusParamsCopyWith<ScheduledStatusParams> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -384,6 +402,8 @@ class _$ScheduledStatusParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ScheduledStatusParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -452,6 +472,8 @@ class _$ScheduledStatusParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ScheduledStatusParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ScheduledStatusPollCopyWith<$Res>? get poll {
@@ -501,6 +523,8 @@ class __$$ScheduledStatusParamsImplCopyWithImpl<$Res>
       $Res Function(_$ScheduledStatusParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ScheduledStatusParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -694,7 +718,7 @@ class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
                 other.withRateLimit == withRateLimit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -711,7 +735,9 @@ class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
       idempotency,
       withRateLimit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ScheduledStatusParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ScheduledStatusParamsImplCopyWith<_$ScheduledStatusParamsImpl>
@@ -745,69 +771,71 @@ abstract class _ScheduledStatusParams implements ScheduledStatusParams {
   factory _ScheduledStatusParams.fromJson(Map<String, dynamic> json) =
       _$ScheduledStatusParamsImpl.fromJson;
 
-  @override
-
   /// Text to be used as status content.
+  @override
   @JsonKey(name: 'text')
   String? get text;
-  @override
 
   /// Poll to be attached to the status.
+  @override
   @JsonKey(name: 'poll')
   ScheduledStatusPoll? get poll;
-  @override
 
   /// IDs of the MediaAttachments that will be attached to the status.
+  @override
   @JsonKey(name: 'media_ids')
   List<String>? get mediaIds;
-  @override
 
   /// Whether the status will be marked as sensitive.
+  @override
   @JsonKey(name: 'sensitive')
   bool? get sensitive;
-  @override
 
   /// The text of the content warning or summary for the status.
+  @override
   @JsonKey(name: 'spoiler_text')
   String? get spoilerText;
-  @override
 
   /// The visibility that the status will have once it is posted.
+  @override
   @JsonKey(name: 'visibility')
   StatusVisibility? get visibility;
-  @override
 
   /// ID of the Status that will be replied to.
+  @override
   @JsonKey(name: 'in_reply_to_id')
   int? get inReplyToId;
-  @override
 
   /// The language that will be used for the status.
+  @override
   @JsonKey(name: 'language')
   String? get language;
-  @override
 
   /// ID of the Application that posted the status.
+  @override
   @JsonKey(name: 'application_id')
   int? get applicationId;
-  @override
 
   /// When the status will be scheduled. This will be null because the status
   /// is only scheduled once.
+  @override
   @JsonKey(name: 'scheduled_at')
   DateTime? get scheduledAt;
-  @override
 
   /// Idempotency key to prevent duplicate statuses.
+  @override
   @JsonKey(name: 'idempotency')
   String? get idempotency;
-  @override
 
   /// Whether the status should be rate limited
+  @override
   @JsonKey(name: 'with_rate_limit')
   bool? get withRateLimit;
+
+  /// Create a copy of ScheduledStatusParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ScheduledStatusParamsImplCopyWith<_$ScheduledStatusParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -834,8 +862,12 @@ mixin _$ScheduledStatusPoll {
   @JsonKey(name: 'hide_totals')
   bool? get hideTotals => throw _privateConstructorUsedError;
 
+  /// Serializes this ScheduledStatusPoll to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ScheduledStatusPoll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ScheduledStatusPollCopyWith<ScheduledStatusPoll> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -863,6 +895,8 @@ class _$ScheduledStatusPollCopyWithImpl<$Res, $Val extends ScheduledStatusPoll>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ScheduledStatusPoll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -915,6 +949,8 @@ class __$$ScheduledStatusPollImplCopyWithImpl<$Res>
       $Res Function(_$ScheduledStatusPollImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ScheduledStatusPoll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1005,7 +1041,7 @@ class _$ScheduledStatusPollImpl implements _ScheduledStatusPoll {
                 other.hideTotals == hideTotals));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1014,7 +1050,9 @@ class _$ScheduledStatusPollImpl implements _ScheduledStatusPoll {
       multiple,
       hideTotals);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ScheduledStatusPoll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ScheduledStatusPollImplCopyWith<_$ScheduledStatusPollImpl> get copyWith =>
@@ -1040,28 +1078,30 @@ abstract class _ScheduledStatusPoll implements ScheduledStatusPoll {
   factory _ScheduledStatusPoll.fromJson(Map<String, dynamic> json) =
       _$ScheduledStatusPollImpl.fromJson;
 
-  @override
-
   /// The poll options to be used.
+  @override
   @JsonKey(name: 'options[]')
   List<String>? get options;
-  @override
 
   /// How many seconds the poll should last before closing.
+  @override
   @JsonKey(name: 'expires_in')
   String? get expiresIn;
-  @override
 
   /// Whether the poll allows multiple choices.
+  @override
   @JsonKey(name: 'multiple')
   bool? get multiple;
-  @override
 
   /// Whether the poll should hide total votes until after voting has ended.
+  @override
   @JsonKey(name: 'hide_totals')
   bool? get hideTotals;
+
+  /// Create a copy of ScheduledStatusPoll
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ScheduledStatusPollImplCopyWith<_$ScheduledStatusPollImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
