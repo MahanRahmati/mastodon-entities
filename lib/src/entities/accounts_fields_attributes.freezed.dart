@@ -25,8 +25,12 @@ mixin _$AccountsFieldsAttributes {
   Map<String, FieldsAttribute> get fieldsAttributes =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this AccountsFieldsAttributes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AccountsFieldsAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AccountsFieldsAttributesCopyWith<AccountsFieldsAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$AccountsFieldsAttributesCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AccountsFieldsAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$AccountsFieldsAttributesImplCopyWithImpl<$Res>
       $Res Function(_$AccountsFieldsAttributesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AccountsFieldsAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,12 +147,14 @@ class _$AccountsFieldsAttributesImpl implements _AccountsFieldsAttributes {
                 .equals(other._fieldsAttributes, _fieldsAttributes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_fieldsAttributes));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AccountsFieldsAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AccountsFieldsAttributesImplCopyWith<_$AccountsFieldsAttributesImpl>
@@ -171,8 +181,11 @@ abstract class _AccountsFieldsAttributes implements AccountsFieldsAttributes {
   @override
   @JsonKey(name: 'fields_attributes')
   Map<String, FieldsAttribute> get fieldsAttributes;
+
+  /// Create a copy of AccountsFieldsAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AccountsFieldsAttributesImplCopyWith<_$AccountsFieldsAttributesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -188,8 +201,12 @@ mixin _$FieldsAttribute {
   @JsonKey(name: 'value')
   String get value => throw _privateConstructorUsedError;
 
+  /// Serializes this FieldsAttribute to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FieldsAttribute
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FieldsAttributeCopyWith<FieldsAttribute> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -215,6 +232,8 @@ class _$FieldsAttributeCopyWithImpl<$Res, $Val extends FieldsAttribute>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FieldsAttribute
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,6 +274,8 @@ class __$$FieldsAttributeImplCopyWithImpl<$Res>
       _$FieldsAttributeImpl _value, $Res Function(_$FieldsAttributeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FieldsAttribute
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -305,11 +326,13 @@ class _$FieldsAttributeImpl implements _FieldsAttribute {
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FieldsAttribute
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FieldsAttributeImplCopyWith<_$FieldsAttributeImpl> get copyWith =>
@@ -339,8 +362,11 @@ abstract class _FieldsAttribute implements FieldsAttribute {
   @override
   @JsonKey(name: 'value')
   String get value;
+
+  /// Create a copy of FieldsAttribute
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FieldsAttributeImplCopyWith<_$FieldsAttributeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -26,6 +26,10 @@ _$NotificationImpl _$$NotificationImplFromJson(Map<String, dynamic> json) =>
           ? null
           : RelationshipSeveranceEvent.fromJson(
               json['relationship_severance_event'] as Map<String, dynamic>),
+      moderationWarning: json['moderation_warning'] == null
+          ? null
+          : AccountWarning.fromJson(
+              json['moderation_warning'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$NotificationImplToJson(_$NotificationImpl instance) =>
@@ -37,6 +41,7 @@ Map<String, dynamic> _$$NotificationImplToJson(_$NotificationImpl instance) =>
       'status': instance.status,
       'report': instance.report,
       'relationship_severance_event': instance.relationshipSeveranceEvent,
+      'moderation_warning': instance.moderationWarning,
     };
 
 const _$NotificationTypeEnumMap = {
@@ -51,4 +56,5 @@ const _$NotificationTypeEnumMap = {
   NotificationType.adminSignUp: 'admin.sign_up',
   NotificationType.adminReport: 'admin.report',
   NotificationType.severedRelationships: 'severed_relationships',
+  NotificationType.moderationWarning: 'moderation_warning',
 };

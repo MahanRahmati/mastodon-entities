@@ -4,6 +4,7 @@
 library mastodon_entities;
 
 export 'src/entities/account.dart';
+export 'src/entities/account_warning.dart';
 export 'src/entities/accounts_fields_attributes.dart';
 export 'src/entities/admin_account.dart';
 export 'src/entities/admin_canonical_email_block.dart';
@@ -17,6 +18,7 @@ export 'src/entities/admin_ip_block.dart';
 export 'src/entities/admin_measure.dart';
 export 'src/entities/admin_report.dart';
 export 'src/entities/announcement.dart';
+export 'src/entities/appeal.dart';
 export 'src/entities/application.dart';
 export 'src/entities/conversation.dart';
 export 'src/entities/custom_emoji.dart';
@@ -60,9 +62,11 @@ export 'src/entities/token.dart';
 export 'src/entities/translation.dart';
 export 'src/entities/user_list.dart';
 export 'src/entities/web_push_subscription.dart';
+export 'src/enums/account_warning_action.dart';
 export 'src/enums/admin_cohort_frequency.dart';
 export 'src/enums/admin_domain_block_severity.dart';
 export 'src/enums/admin_ip_block_severity.dart';
+export 'src/enums/appeal_state.dart';
 export 'src/enums/domain_block_severity.dart';
 export 'src/enums/encrypted_message_type.dart';
 export 'src/enums/filter_action.dart';

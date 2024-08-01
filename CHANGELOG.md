@@ -3,6 +3,8 @@
 - Added sources to Suggestion.
 - Added hint to Rule.
 - Added roles to Account.
+- Added AccountWarning.
+- Added Appeal.
 
 ## 1.1.10
 

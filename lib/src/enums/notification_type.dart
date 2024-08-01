@@ -33,8 +33,12 @@ enum NotificationType {
   adminReport('admin.report'),
 
   /// Some of your follow relationships have been severed as a result of a
-  /// moderation or block event
-  severedRelationships('severed_relationships');
+  /// moderation or block event.
+  severedRelationships('severed_relationships'),
+
+  /// A moderator has taken action against your account or has sent you a
+  /// warning.
+  moderationWarning('moderation_warning');
 
   const NotificationType(this.value);
   final String value;
@@ -52,6 +56,7 @@ enum NotificationType {
       'admin.sign_up' => NotificationType.adminSignUp,
       'admin.report' => NotificationType.adminReport,
       'severed_relationships' => NotificationType.severedRelationships,
+      'moderation_warning' => NotificationType.moderationWarning,
       _ => null
     };
   }

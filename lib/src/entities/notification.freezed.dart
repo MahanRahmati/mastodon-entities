@@ -53,8 +53,17 @@ mixin _$Notification {
   RelationshipSeveranceEvent? get relationshipSeveranceEvent =>
       throw _privateConstructorUsedError;
 
+  /// Moderation warning that caused the notification. Attached when type of
+  /// the notification is moderation_warning.
+  @JsonKey(name: 'moderation_warning')
+  AccountWarning? get moderationWarning => throw _privateConstructorUsedError;
+
+  /// Serializes this Notification to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Notification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationCopyWith<Notification> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -73,12 +82,14 @@ abstract class $NotificationCopyWith<$Res> {
       @JsonKey(name: 'status') Status? status,
       @JsonKey(name: 'report') Report? report,
       @JsonKey(name: 'relationship_severance_event')
-      RelationshipSeveranceEvent? relationshipSeveranceEvent});
+      RelationshipSeveranceEvent? relationshipSeveranceEvent,
+      @JsonKey(name: 'moderation_warning') AccountWarning? moderationWarning});
 
   $AccountCopyWith<$Res>? get account;
   $StatusCopyWith<$Res>? get status;
   $ReportCopyWith<$Res>? get report;
   $RelationshipSeveranceEventCopyWith<$Res>? get relationshipSeveranceEvent;
+  $AccountWarningCopyWith<$Res>? get moderationWarning;
 }
 
 /// @nodoc
@@ -91,6 +102,8 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Notification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -101,6 +114,7 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
     Object? status = freezed,
     Object? report = freezed,
     Object? relationshipSeveranceEvent = freezed,
+    Object? moderationWarning = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -131,9 +145,15 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
           ? _value.relationshipSeveranceEvent
           : relationshipSeveranceEvent // ignore: cast_nullable_to_non_nullable
               as RelationshipSeveranceEvent?,
+      moderationWarning: freezed == moderationWarning
+          ? _value.moderationWarning
+          : moderationWarning // ignore: cast_nullable_to_non_nullable
+              as AccountWarning?,
     ) as $Val);
   }
 
+  /// Create a copy of Notification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountCopyWith<$Res>? get account {
@@ -146,6 +166,8 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
     });
   }
 
+  /// Create a copy of Notification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StatusCopyWith<$Res>? get status {
@@ -158,6 +180,8 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
     });
   }
 
+  /// Create a copy of Notification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReportCopyWith<$Res>? get report {
@@ -170,6 +194,8 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
     });
   }
 
+  /// Create a copy of Notification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RelationshipSeveranceEventCopyWith<$Res>? get relationshipSeveranceEvent {
@@ -180,6 +206,20 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
     return $RelationshipSeveranceEventCopyWith<$Res>(
         _value.relationshipSeveranceEvent!, (value) {
       return _then(_value.copyWith(relationshipSeveranceEvent: value) as $Val);
+    });
+  }
+
+  /// Create a copy of Notification
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AccountWarningCopyWith<$Res>? get moderationWarning {
+    if (_value.moderationWarning == null) {
+      return null;
+    }
+
+    return $AccountWarningCopyWith<$Res>(_value.moderationWarning!, (value) {
+      return _then(_value.copyWith(moderationWarning: value) as $Val);
     });
   }
 }
@@ -200,7 +240,8 @@ abstract class _$$NotificationImplCopyWith<$Res>
       @JsonKey(name: 'status') Status? status,
       @JsonKey(name: 'report') Report? report,
       @JsonKey(name: 'relationship_severance_event')
-      RelationshipSeveranceEvent? relationshipSeveranceEvent});
+      RelationshipSeveranceEvent? relationshipSeveranceEvent,
+      @JsonKey(name: 'moderation_warning') AccountWarning? moderationWarning});
 
   @override
   $AccountCopyWith<$Res>? get account;
@@ -210,6 +251,8 @@ abstract class _$$NotificationImplCopyWith<$Res>
   $ReportCopyWith<$Res>? get report;
   @override
   $RelationshipSeveranceEventCopyWith<$Res>? get relationshipSeveranceEvent;
+  @override
+  $AccountWarningCopyWith<$Res>? get moderationWarning;
 }
 
 /// @nodoc
@@ -220,6 +263,8 @@ class __$$NotificationImplCopyWithImpl<$Res>
       _$NotificationImpl _value, $Res Function(_$NotificationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Notification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -230,6 +275,7 @@ class __$$NotificationImplCopyWithImpl<$Res>
     Object? status = freezed,
     Object? report = freezed,
     Object? relationshipSeveranceEvent = freezed,
+    Object? moderationWarning = freezed,
   }) {
     return _then(_$NotificationImpl(
       id: freezed == id
@@ -260,6 +306,10 @@ class __$$NotificationImplCopyWithImpl<$Res>
           ? _value.relationshipSeveranceEvent
           : relationshipSeveranceEvent // ignore: cast_nullable_to_non_nullable
               as RelationshipSeveranceEvent?,
+      moderationWarning: freezed == moderationWarning
+          ? _value.moderationWarning
+          : moderationWarning // ignore: cast_nullable_to_non_nullable
+              as AccountWarning?,
     ));
   }
 }
@@ -275,7 +325,8 @@ class _$NotificationImpl implements _Notification {
       @JsonKey(name: 'status') this.status,
       @JsonKey(name: 'report') this.report,
       @JsonKey(name: 'relationship_severance_event')
-      this.relationshipSeveranceEvent});
+      this.relationshipSeveranceEvent,
+      @JsonKey(name: 'moderation_warning') this.moderationWarning});
 
   factory _$NotificationImpl.fromJson(Map<String, dynamic> json) =>
       _$$NotificationImplFromJson(json);
@@ -319,9 +370,15 @@ class _$NotificationImpl implements _Notification {
   @JsonKey(name: 'relationship_severance_event')
   final RelationshipSeveranceEvent? relationshipSeveranceEvent;
 
+  /// Moderation warning that caused the notification. Attached when type of
+  /// the notification is moderation_warning.
+  @override
+  @JsonKey(name: 'moderation_warning')
+  final AccountWarning? moderationWarning;
+
   @override
   String toString() {
-    return 'Notification(id: $id, type: $type, createdAt: $createdAt, account: $account, status: $status, report: $report, relationshipSeveranceEvent: $relationshipSeveranceEvent)';
+    return 'Notification(id: $id, type: $type, createdAt: $createdAt, account: $account, status: $status, report: $report, relationshipSeveranceEvent: $relationshipSeveranceEvent, moderationWarning: $moderationWarning)';
   }
 
   @override
@@ -339,15 +396,19 @@ class _$NotificationImpl implements _Notification {
             (identical(other.relationshipSeveranceEvent,
                     relationshipSeveranceEvent) ||
                 other.relationshipSeveranceEvent ==
-                    relationshipSeveranceEvent));
+                    relationshipSeveranceEvent) &&
+            (identical(other.moderationWarning, moderationWarning) ||
+                other.moderationWarning == moderationWarning));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, createdAt, account,
-      status, report, relationshipSeveranceEvent);
+      status, report, relationshipSeveranceEvent, moderationWarning);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Notification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationImplCopyWith<_$NotificationImpl> get copyWith =>
@@ -363,60 +424,69 @@ class _$NotificationImpl implements _Notification {
 
 abstract class _Notification implements Notification {
   const factory _Notification(
-          {@JsonKey(name: 'id') final String? id,
-          @JsonKey(name: 'type') final NotificationType? type,
-          @JsonKey(name: 'created_at') final DateTime? createdAt,
-          @JsonKey(name: 'account') final Account? account,
-          @JsonKey(name: 'status') final Status? status,
-          @JsonKey(name: 'report') final Report? report,
-          @JsonKey(name: 'relationship_severance_event')
-          final RelationshipSeveranceEvent? relationshipSeveranceEvent}) =
-      _$NotificationImpl;
+      {@JsonKey(name: 'id') final String? id,
+      @JsonKey(name: 'type') final NotificationType? type,
+      @JsonKey(name: 'created_at') final DateTime? createdAt,
+      @JsonKey(name: 'account') final Account? account,
+      @JsonKey(name: 'status') final Status? status,
+      @JsonKey(name: 'report') final Report? report,
+      @JsonKey(name: 'relationship_severance_event')
+      final RelationshipSeveranceEvent? relationshipSeveranceEvent,
+      @JsonKey(name: 'moderation_warning')
+      final AccountWarning? moderationWarning}) = _$NotificationImpl;
 
   factory _Notification.fromJson(Map<String, dynamic> json) =
       _$NotificationImpl.fromJson;
 
-  @override
-
   /// The id of the notification in the database.
+  @override
   @JsonKey(name: 'id')
   String? get id;
-  @override
 
   /// The type of event that resulted in the notification.
+  @override
   @JsonKey(name: 'type')
   NotificationType? get type;
-  @override
 
   /// The timestamp of the notification.
+  @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
-  @override
 
   /// The account that performed the action that generated the notification.
+  @override
   @JsonKey(name: 'account')
   Account? get account;
-  @override
 
   /// Status that was the object of the notification. Attached when `type` of
   /// the notification is `favourite`, `reblog`, `status`, `mention`, `poll`,
   /// or `update`.
+  @override
   @JsonKey(name: 'status')
   Status? get status;
-  @override
 
   /// Report that was the object of the notification. Attached when `type` of
   /// the notification is `admin.report`.
+  @override
   @JsonKey(name: 'report')
   Report? get report;
-  @override
 
   /// Summary of the event that caused follow relationships to be severed.
   /// Attached when `type` of the notification is `severed_relationships`.
+  @override
   @JsonKey(name: 'relationship_severance_event')
   RelationshipSeveranceEvent? get relationshipSeveranceEvent;
+
+  /// Moderation warning that caused the notification. Attached when type of
+  /// the notification is moderation_warning.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(name: 'moderation_warning')
+  AccountWarning? get moderationWarning;
+
+  /// Create a copy of Notification
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationImplCopyWith<_$NotificationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

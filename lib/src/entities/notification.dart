@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../enums/notification_type.dart';
 import 'account.dart';
+import 'account_warning.dart';
 import 'relationship_severance_event.dart';
 import 'report.dart';
 import 'status.dart';
@@ -38,6 +39,11 @@ class Notification with _$Notification {
     /// Attached when `type` of the notification is `severed_relationships`.
     @JsonKey(name: 'relationship_severance_event')
     final RelationshipSeveranceEvent? relationshipSeveranceEvent,
+
+    /// Moderation warning that caused the notification. Attached when type of
+    /// the notification is moderation_warning.
+    @JsonKey(name: 'moderation_warning')
+    final AccountWarning? moderationWarning,
   }) = _Notification;
 
   factory Notification.fromJson(final Map<String, dynamic> json) =>
