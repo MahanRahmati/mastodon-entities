@@ -1,6 +1,7 @@
 ## 1.1.11
 
 - Added sources to Suggestion.
+- Added hint to Rule.
 
 ## 1.1.10
 

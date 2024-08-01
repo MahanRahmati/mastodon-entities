@@ -9,10 +9,12 @@ part of 'rule.dart';
 _$RuleImpl _$$RuleImplFromJson(Map<String, dynamic> json) => _$RuleImpl(
       id: json['id'] as String?,
       text: json['text'] as String?,
+      hint: json['hint'] as String?,
     );
 
 Map<String, dynamic> _$$RuleImplToJson(_$RuleImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'text': instance.text,
+      'hint': instance.hint,
     };

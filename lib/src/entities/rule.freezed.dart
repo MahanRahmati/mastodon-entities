@@ -28,6 +28,10 @@ mixin _$Rule {
   @JsonKey(name: 'text')
   String? get text => throw _privateConstructorUsedError;
 
+  /// Longer-form description of the rule.
+  @JsonKey(name: 'hint')
+  String? get hint => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $RuleCopyWith<Rule> get copyWith => throw _privateConstructorUsedError;
@@ -39,7 +43,9 @@ abstract class $RuleCopyWith<$Res> {
       _$RuleCopyWithImpl<$Res, Rule>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? id, @JsonKey(name: 'text') String? text});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'text') String? text,
+      @JsonKey(name: 'hint') String? hint});
 }
 
 /// @nodoc
@@ -57,6 +63,7 @@ class _$RuleCopyWithImpl<$Res, $Val extends Rule>
   $Res call({
     Object? id = freezed,
     Object? text = freezed,
+    Object? hint = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -66,6 +73,10 @@ class _$RuleCopyWithImpl<$Res, $Val extends Rule>
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hint: freezed == hint
+          ? _value.hint
+          : hint // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -79,7 +90,9 @@ abstract class _$$RuleImplCopyWith<$Res> implements $RuleCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? id, @JsonKey(name: 'text') String? text});
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'text') String? text,
+      @JsonKey(name: 'hint') String? hint});
 }
 
 /// @nodoc
@@ -94,6 +107,7 @@ class __$$RuleImplCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? text = freezed,
+    Object? hint = freezed,
   }) {
     return _then(_$RuleImpl(
       id: freezed == id
@@ -104,6 +118,10 @@ class __$$RuleImplCopyWithImpl<$Res>
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
+      hint: freezed == hint
+          ? _value.hint
+          : hint // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -112,7 +130,9 @@ class __$$RuleImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RuleImpl implements _Rule {
   const _$RuleImpl(
-      {@JsonKey(name: 'id') this.id, @JsonKey(name: 'text') this.text});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'text') this.text,
+      @JsonKey(name: 'hint') this.hint});
 
   factory _$RuleImpl.fromJson(Map<String, dynamic> json) =>
       _$$RuleImplFromJson(json);
@@ -127,9 +147,14 @@ class _$RuleImpl implements _Rule {
   @JsonKey(name: 'text')
   final String? text;
 
+  /// Longer-form description of the rule.
+  @override
+  @JsonKey(name: 'hint')
+  final String? hint;
+
   @override
   String toString() {
-    return 'Rule(id: $id, text: $text)';
+    return 'Rule(id: $id, text: $text, hint: $hint)';
   }
 
   @override
@@ -138,12 +163,13 @@ class _$RuleImpl implements _Rule {
         (other.runtimeType == runtimeType &&
             other is _$RuleImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.text, text) || other.text == text));
+            (identical(other.text, text) || other.text == text) &&
+            (identical(other.hint, hint) || other.hint == hint));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, text);
+  int get hashCode => Object.hash(runtimeType, id, text, hint);
 
   @JsonKey(ignore: true)
   @override
@@ -162,7 +188,8 @@ class _$RuleImpl implements _Rule {
 abstract class _Rule implements Rule {
   const factory _Rule(
       {@JsonKey(name: 'id') final String? id,
-      @JsonKey(name: 'text') final String? text}) = _$RuleImpl;
+      @JsonKey(name: 'text') final String? text,
+      @JsonKey(name: 'hint') final String? hint}) = _$RuleImpl;
 
   factory _Rule.fromJson(Map<String, dynamic> json) = _$RuleImpl.fromJson;
 
@@ -176,6 +203,11 @@ abstract class _Rule implements Rule {
   /// The rule to be followed.
   @JsonKey(name: 'text')
   String? get text;
+  @override
+
+  /// Longer-form description of the rule.
+  @JsonKey(name: 'hint')
+  String? get hint;
   @override
   @JsonKey(ignore: true)
   _$$RuleImplCopyWith<_$RuleImpl> get copyWith =>

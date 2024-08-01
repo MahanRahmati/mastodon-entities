@@ -12,6 +12,9 @@ class Rule with _$Rule {
 
     /// The rule to be followed.
     @JsonKey(name: 'text') final String? text,
+
+    /// Longer-form description of the rule.
+    @JsonKey(name: 'hint') final String? hint,
   }) = _Rule;
 
   factory Rule.fromJson(final Map<String, dynamic> json) =>
