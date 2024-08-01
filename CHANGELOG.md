@@ -1,3 +1,7 @@
+## 1.1.11
+
+- Added sources to Suggestion.
+
 ## 1.1.10
 
 - Added authors and publishedAt to TrendsLink.

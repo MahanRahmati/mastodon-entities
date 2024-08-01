@@ -78,3 +78,4 @@ export 'src/enums/report_category.dart';
 export 'src/enums/search_type.dart';
 export 'src/enums/status_visibility.dart';
 export 'src/enums/suggestion_source.dart';
+export 'src/enums/suggestion_sources.dart';
