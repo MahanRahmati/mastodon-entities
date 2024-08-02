@@ -1,3 +1,7 @@
+## 1.1.12
+
+- Fixed the sources in Suggestion.
+
 ## 1.1.11
 
 - Added sources to Suggestion.

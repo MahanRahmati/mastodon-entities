@@ -16,7 +16,7 @@ class Suggestion with _$Suggestion {
     @JsonKey(name: 'source') final SuggestionSource? source,
 
     /// A list of reasons this account is being suggested.
-    @JsonKey(name: 'sources') final SuggestionSources? sources,
+    @JsonKey(name: 'sources') final List<SuggestionSources>? sources,
 
     /// The account being recommended to follow.
     @JsonKey(name: 'account') final Account? account,

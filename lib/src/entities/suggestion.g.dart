@@ -9,7 +9,9 @@ part of 'suggestion.dart';
 _$SuggestionImpl _$$SuggestionImplFromJson(Map<String, dynamic> json) =>
     _$SuggestionImpl(
       source: $enumDecodeNullable(_$SuggestionSourceEnumMap, json['source']),
-      sources: $enumDecodeNullable(_$SuggestionSourcesEnumMap, json['sources']),
+      sources: (json['sources'] as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$SuggestionSourcesEnumMap, e))
+          .toList(),
       account: json['account'] == null
           ? null
           : Account.fromJson(json['account'] as Map<String, dynamic>),
@@ -18,7 +20,8 @@ _$SuggestionImpl _$$SuggestionImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$SuggestionImplToJson(_$SuggestionImpl instance) =>
     <String, dynamic>{
       'source': _$SuggestionSourceEnumMap[instance.source],
-      'sources': _$SuggestionSourcesEnumMap[instance.sources],
+      'sources':
+          instance.sources?.map((e) => _$SuggestionSourcesEnumMap[e]!).toList(),
       'account': instance.account,
     };
 

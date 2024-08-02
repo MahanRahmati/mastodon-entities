@@ -26,7 +26,7 @@ mixin _$Suggestion {
 
   /// A list of reasons this account is being suggested.
   @JsonKey(name: 'sources')
-  SuggestionSources? get sources => throw _privateConstructorUsedError;
+  List<SuggestionSources>? get sources => throw _privateConstructorUsedError;
 
   /// The account being recommended to follow.
   @JsonKey(name: 'account')
@@ -50,7 +50,7 @@ abstract class $SuggestionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'source') SuggestionSource? source,
-      @JsonKey(name: 'sources') SuggestionSources? sources,
+      @JsonKey(name: 'sources') List<SuggestionSources>? sources,
       @JsonKey(name: 'account') Account? account});
 
   $AccountCopyWith<$Res>? get account;
@@ -83,7 +83,7 @@ class _$SuggestionCopyWithImpl<$Res, $Val extends Suggestion>
       sources: freezed == sources
           ? _value.sources
           : sources // ignore: cast_nullable_to_non_nullable
-              as SuggestionSources?,
+              as List<SuggestionSources>?,
       account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
@@ -116,7 +116,7 @@ abstract class _$$SuggestionImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'source') SuggestionSource? source,
-      @JsonKey(name: 'sources') SuggestionSources? sources,
+      @JsonKey(name: 'sources') List<SuggestionSources>? sources,
       @JsonKey(name: 'account') Account? account});
 
   @override
@@ -146,9 +146,9 @@ class __$$SuggestionImplCopyWithImpl<$Res>
           : source // ignore: cast_nullable_to_non_nullable
               as SuggestionSource?,
       sources: freezed == sources
-          ? _value.sources
+          ? _value._sources
           : sources // ignore: cast_nullable_to_non_nullable
-              as SuggestionSources?,
+              as List<SuggestionSources>?,
       account: freezed == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
@@ -162,8 +162,9 @@ class __$$SuggestionImplCopyWithImpl<$Res>
 class _$SuggestionImpl implements _Suggestion {
   const _$SuggestionImpl(
       {@JsonKey(name: 'source') this.source,
-      @JsonKey(name: 'sources') this.sources,
-      @JsonKey(name: 'account') this.account});
+      @JsonKey(name: 'sources') final List<SuggestionSources>? sources,
+      @JsonKey(name: 'account') this.account})
+      : _sources = sources;
 
   factory _$SuggestionImpl.fromJson(Map<String, dynamic> json) =>
       _$$SuggestionImplFromJson(json);
@@ -174,9 +175,18 @@ class _$SuggestionImpl implements _Suggestion {
   final SuggestionSource? source;
 
   /// A list of reasons this account is being suggested.
+  final List<SuggestionSources>? _sources;
+
+  /// A list of reasons this account is being suggested.
   @override
   @JsonKey(name: 'sources')
-  final SuggestionSources? sources;
+  List<SuggestionSources>? get sources {
+    final value = _sources;
+    if (value == null) return null;
+    if (_sources is EqualUnmodifiableListView) return _sources;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// The account being recommended to follow.
   @override
@@ -194,13 +204,14 @@ class _$SuggestionImpl implements _Suggestion {
         (other.runtimeType == runtimeType &&
             other is _$SuggestionImpl &&
             (identical(other.source, source) || other.source == source) &&
-            (identical(other.sources, sources) || other.sources == sources) &&
+            const DeepCollectionEquality().equals(other._sources, _sources) &&
             (identical(other.account, account) || other.account == account));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, source, sources, account);
+  int get hashCode => Object.hash(runtimeType, source,
+      const DeepCollectionEquality().hash(_sources), account);
 
   /// Create a copy of Suggestion
   /// with the given fields replaced by the non-null parameter values.
@@ -221,7 +232,7 @@ class _$SuggestionImpl implements _Suggestion {
 abstract class _Suggestion implements Suggestion {
   const factory _Suggestion(
       {@JsonKey(name: 'source') final SuggestionSource? source,
-      @JsonKey(name: 'sources') final SuggestionSources? sources,
+      @JsonKey(name: 'sources') final List<SuggestionSources>? sources,
       @JsonKey(name: 'account') final Account? account}) = _$SuggestionImpl;
 
   factory _Suggestion.fromJson(Map<String, dynamic> json) =
@@ -235,7 +246,7 @@ abstract class _Suggestion implements Suggestion {
   /// A list of reasons this account is being suggested.
   @override
   @JsonKey(name: 'sources')
-  SuggestionSources? get sources;
+  List<SuggestionSources>? get sources;
 
   /// The account being recommended to follow.
   @override
