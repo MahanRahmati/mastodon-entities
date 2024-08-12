@@ -82,10 +82,9 @@ const _$StatusVisibilityEnumMap = {
 _$ScheduledStatusPollImpl _$$ScheduledStatusPollImplFromJson(
         Map<String, dynamic> json) =>
     _$ScheduledStatusPollImpl(
-      options: (json['options[]'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      expiresIn: json['expires_in'] as String?,
+      options:
+          (json['options'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      expiresIn: (json['expires_in'] as num?)?.toInt(),
       multiple: json['multiple'] as bool?,
       hideTotals: json['hide_totals'] as bool?,
     );
@@ -93,7 +92,7 @@ _$ScheduledStatusPollImpl _$$ScheduledStatusPollImplFromJson(
 Map<String, dynamic> _$$ScheduledStatusPollImplToJson(
         _$ScheduledStatusPollImpl instance) =>
     <String, dynamic>{
-      'options[]': instance.options,
+      'options': instance.options,
       'expires_in': instance.expiresIn,
       'multiple': instance.multiple,
       'hide_totals': instance.hideTotals,

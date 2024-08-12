@@ -1,3 +1,7 @@
+## 1.1.13
+
+- Fixed options and expiresIn in ScheduledStatusPoll.
+
 ## 1.1.12
 
 - Fixed the sources in Suggestion.

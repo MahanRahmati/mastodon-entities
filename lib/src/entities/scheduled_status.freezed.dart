@@ -847,12 +847,12 @@ ScheduledStatusPoll _$ScheduledStatusPollFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ScheduledStatusPoll {
   /// The poll options to be used.
-  @JsonKey(name: 'options[]')
+  @JsonKey(name: 'options')
   List<String>? get options => throw _privateConstructorUsedError;
 
   /// How many seconds the poll should last before closing.
   @JsonKey(name: 'expires_in')
-  String? get expiresIn => throw _privateConstructorUsedError;
+  int? get expiresIn => throw _privateConstructorUsedError;
 
   /// Whether the poll allows multiple choices.
   @JsonKey(name: 'multiple')
@@ -879,8 +879,8 @@ abstract class $ScheduledStatusPollCopyWith<$Res> {
       _$ScheduledStatusPollCopyWithImpl<$Res, ScheduledStatusPoll>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'options[]') List<String>? options,
-      @JsonKey(name: 'expires_in') String? expiresIn,
+      {@JsonKey(name: 'options') List<String>? options,
+      @JsonKey(name: 'expires_in') int? expiresIn,
       @JsonKey(name: 'multiple') bool? multiple,
       @JsonKey(name: 'hide_totals') bool? hideTotals});
 }
@@ -913,7 +913,7 @@ class _$ScheduledStatusPollCopyWithImpl<$Res, $Val extends ScheduledStatusPoll>
       expiresIn: freezed == expiresIn
           ? _value.expiresIn
           : expiresIn // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       multiple: freezed == multiple
           ? _value.multiple
           : multiple // ignore: cast_nullable_to_non_nullable
@@ -935,8 +935,8 @@ abstract class _$$ScheduledStatusPollImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'options[]') List<String>? options,
-      @JsonKey(name: 'expires_in') String? expiresIn,
+      {@JsonKey(name: 'options') List<String>? options,
+      @JsonKey(name: 'expires_in') int? expiresIn,
       @JsonKey(name: 'multiple') bool? multiple,
       @JsonKey(name: 'hide_totals') bool? hideTotals});
 }
@@ -967,7 +967,7 @@ class __$$ScheduledStatusPollImplCopyWithImpl<$Res>
       expiresIn: freezed == expiresIn
           ? _value.expiresIn
           : expiresIn // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       multiple: freezed == multiple
           ? _value.multiple
           : multiple // ignore: cast_nullable_to_non_nullable
@@ -984,7 +984,7 @@ class __$$ScheduledStatusPollImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ScheduledStatusPollImpl implements _ScheduledStatusPoll {
   const _$ScheduledStatusPollImpl(
-      {@JsonKey(name: 'options[]') final List<String>? options,
+      {@JsonKey(name: 'options') final List<String>? options,
       @JsonKey(name: 'expires_in') this.expiresIn,
       @JsonKey(name: 'multiple') this.multiple,
       @JsonKey(name: 'hide_totals') this.hideTotals})
@@ -998,7 +998,7 @@ class _$ScheduledStatusPollImpl implements _ScheduledStatusPoll {
 
   /// The poll options to be used.
   @override
-  @JsonKey(name: 'options[]')
+  @JsonKey(name: 'options')
   List<String>? get options {
     final value = _options;
     if (value == null) return null;
@@ -1010,7 +1010,7 @@ class _$ScheduledStatusPollImpl implements _ScheduledStatusPoll {
   /// How many seconds the poll should last before closing.
   @override
   @JsonKey(name: 'expires_in')
-  final String? expiresIn;
+  final int? expiresIn;
 
   /// Whether the poll allows multiple choices.
   @override
@@ -1069,8 +1069,8 @@ class _$ScheduledStatusPollImpl implements _ScheduledStatusPoll {
 
 abstract class _ScheduledStatusPoll implements ScheduledStatusPoll {
   const factory _ScheduledStatusPoll(
-          {@JsonKey(name: 'options[]') final List<String>? options,
-          @JsonKey(name: 'expires_in') final String? expiresIn,
+          {@JsonKey(name: 'options') final List<String>? options,
+          @JsonKey(name: 'expires_in') final int? expiresIn,
           @JsonKey(name: 'multiple') final bool? multiple,
           @JsonKey(name: 'hide_totals') final bool? hideTotals}) =
       _$ScheduledStatusPollImpl;
@@ -1080,13 +1080,13 @@ abstract class _ScheduledStatusPoll implements ScheduledStatusPoll {
 
   /// The poll options to be used.
   @override
-  @JsonKey(name: 'options[]')
+  @JsonKey(name: 'options')
   List<String>? get options;
 
   /// How many seconds the poll should last before closing.
   @override
   @JsonKey(name: 'expires_in')
-  String? get expiresIn;
+  int? get expiresIn;
 
   /// Whether the poll allows multiple choices.
   @override

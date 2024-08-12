@@ -78,10 +78,10 @@ class ScheduledStatusParams with _$ScheduledStatusParams {
 class ScheduledStatusPoll with _$ScheduledStatusPoll {
   const factory ScheduledStatusPoll({
     /// The poll options to be used.
-    @JsonKey(name: 'options[]') final List<String>? options,
+    @JsonKey(name: 'options') final List<String>? options,
 
     /// How many seconds the poll should last before closing.
-    @JsonKey(name: 'expires_in') final String? expiresIn,
+    @JsonKey(name: 'expires_in') final int? expiresIn,
 
     /// Whether the poll allows multiple choices.
     @JsonKey(name: 'multiple') final bool? multiple,
