@@ -22,10 +22,10 @@ _$NotificationImpl _$$NotificationImplFromJson(Map<String, dynamic> json) =>
       report: json['report'] == null
           ? null
           : Report.fromJson(json['report'] as Map<String, dynamic>),
-      relationshipSeveranceEvent: json['relationship_severance_event'] == null
+      relationshipSeveranceEvent: json['event'] == null
           ? null
           : RelationshipSeveranceEvent.fromJson(
-              json['relationship_severance_event'] as Map<String, dynamic>),
+              json['event'] as Map<String, dynamic>),
       moderationWarning: json['moderation_warning'] == null
           ? null
           : AccountWarning.fromJson(
@@ -40,7 +40,7 @@ Map<String, dynamic> _$$NotificationImplToJson(_$NotificationImpl instance) =>
       'account': instance.account,
       'status': instance.status,
       'report': instance.report,
-      'relationship_severance_event': instance.relationshipSeveranceEvent,
+      'event': instance.relationshipSeveranceEvent,
       'moderation_warning': instance.moderationWarning,
     };
 

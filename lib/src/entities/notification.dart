@@ -37,7 +37,7 @@ class Notification with _$Notification {
 
     /// Summary of the event that caused follow relationships to be severed.
     /// Attached when `type` of the notification is `severed_relationships`.
-    @JsonKey(name: 'relationship_severance_event')
+    @JsonKey(name: 'event')
     final RelationshipSeveranceEvent? relationshipSeveranceEvent,
 
     /// Moderation warning that caused the notification. Attached when type of

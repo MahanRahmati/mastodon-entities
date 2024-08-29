@@ -49,7 +49,7 @@ mixin _$Notification {
 
   /// Summary of the event that caused follow relationships to be severed.
   /// Attached when `type` of the notification is `severed_relationships`.
-  @JsonKey(name: 'relationship_severance_event')
+  @JsonKey(name: 'event')
   RelationshipSeveranceEvent? get relationshipSeveranceEvent =>
       throw _privateConstructorUsedError;
 
@@ -81,7 +81,7 @@ abstract class $NotificationCopyWith<$Res> {
       @JsonKey(name: 'account') Account? account,
       @JsonKey(name: 'status') Status? status,
       @JsonKey(name: 'report') Report? report,
-      @JsonKey(name: 'relationship_severance_event')
+      @JsonKey(name: 'event')
       RelationshipSeveranceEvent? relationshipSeveranceEvent,
       @JsonKey(name: 'moderation_warning') AccountWarning? moderationWarning});
 
@@ -239,7 +239,7 @@ abstract class _$$NotificationImplCopyWith<$Res>
       @JsonKey(name: 'account') Account? account,
       @JsonKey(name: 'status') Status? status,
       @JsonKey(name: 'report') Report? report,
-      @JsonKey(name: 'relationship_severance_event')
+      @JsonKey(name: 'event')
       RelationshipSeveranceEvent? relationshipSeveranceEvent,
       @JsonKey(name: 'moderation_warning') AccountWarning? moderationWarning});
 
@@ -324,8 +324,7 @@ class _$NotificationImpl implements _Notification {
       @JsonKey(name: 'account') this.account,
       @JsonKey(name: 'status') this.status,
       @JsonKey(name: 'report') this.report,
-      @JsonKey(name: 'relationship_severance_event')
-      this.relationshipSeveranceEvent,
+      @JsonKey(name: 'event') this.relationshipSeveranceEvent,
       @JsonKey(name: 'moderation_warning') this.moderationWarning});
 
   factory _$NotificationImpl.fromJson(Map<String, dynamic> json) =>
@@ -367,7 +366,7 @@ class _$NotificationImpl implements _Notification {
   /// Summary of the event that caused follow relationships to be severed.
   /// Attached when `type` of the notification is `severed_relationships`.
   @override
-  @JsonKey(name: 'relationship_severance_event')
+  @JsonKey(name: 'event')
   final RelationshipSeveranceEvent? relationshipSeveranceEvent;
 
   /// Moderation warning that caused the notification. Attached when type of
@@ -430,7 +429,7 @@ abstract class _Notification implements Notification {
       @JsonKey(name: 'account') final Account? account,
       @JsonKey(name: 'status') final Status? status,
       @JsonKey(name: 'report') final Report? report,
-      @JsonKey(name: 'relationship_severance_event')
+      @JsonKey(name: 'event')
       final RelationshipSeveranceEvent? relationshipSeveranceEvent,
       @JsonKey(name: 'moderation_warning')
       final AccountWarning? moderationWarning}) = _$NotificationImpl;
@@ -474,7 +473,7 @@ abstract class _Notification implements Notification {
   /// Summary of the event that caused follow relationships to be severed.
   /// Attached when `type` of the notification is `severed_relationships`.
   @override
-  @JsonKey(name: 'relationship_severance_event')
+  @JsonKey(name: 'event')
   RelationshipSeveranceEvent? get relationshipSeveranceEvent;
 
   /// Moderation warning that caused the notification. Attached when type of

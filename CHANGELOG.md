@@ -3,6 +3,7 @@
 - Added icon to Instance.
 - Added apiVersions to Instance.
 - Added PreviewCardAuthor.
+- Fixed event in Notification
 
 ## 1.1.13
 
