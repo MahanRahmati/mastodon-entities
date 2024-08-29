@@ -1,3 +1,7 @@
+## 1.1.14+1
+
+- Export PreviewCardAuthor.
+
 ## 1.1.14
 
 - Added icon to Instance.
