@@ -67,6 +67,12 @@ mixin _$Instance {
   InstanceRegistrations? get registrations =>
       throw _privateConstructorUsedError;
 
+  /// Information about which version of the API is implemented by this
+  /// server. It contains at least a `mastodon` attribute, and other
+  /// implementations may have their own additional attributes.
+  @JsonKey(name: 'api_versions')
+  InstanceApiVersion? get apiVersions => throw _privateConstructorUsedError;
+
   /// Hints related to contacting a representative of the website.
   @JsonKey(name: 'contact')
   InstanceContact? get contact => throw _privateConstructorUsedError;
@@ -102,6 +108,7 @@ abstract class $InstanceCopyWith<$Res> {
       @JsonKey(name: 'languages') List<String>? languages,
       @JsonKey(name: 'configuration') InstanceConfiguration? configuration,
       @JsonKey(name: 'registrations') InstanceRegistrations? registrations,
+      @JsonKey(name: 'api_versions') InstanceApiVersion? apiVersions,
       @JsonKey(name: 'contact') InstanceContact? contact,
       @JsonKey(name: 'rules') List<Rule>? rules});
 
@@ -109,6 +116,7 @@ abstract class $InstanceCopyWith<$Res> {
   $InstanceThumbnailCopyWith<$Res>? get thumbnail;
   $InstanceConfigurationCopyWith<$Res>? get configuration;
   $InstanceRegistrationsCopyWith<$Res>? get registrations;
+  $InstanceApiVersionCopyWith<$Res>? get apiVersions;
   $InstanceContactCopyWith<$Res>? get contact;
 }
 
@@ -138,6 +146,7 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
     Object? languages = freezed,
     Object? configuration = freezed,
     Object? registrations = freezed,
+    Object? apiVersions = freezed,
     Object? contact = freezed,
     Object? rules = freezed,
   }) {
@@ -186,6 +195,10 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
           ? _value.registrations
           : registrations // ignore: cast_nullable_to_non_nullable
               as InstanceRegistrations?,
+      apiVersions: freezed == apiVersions
+          ? _value.apiVersions
+          : apiVersions // ignore: cast_nullable_to_non_nullable
+              as InstanceApiVersion?,
       contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
@@ -257,6 +270,20 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
+  $InstanceApiVersionCopyWith<$Res>? get apiVersions {
+    if (_value.apiVersions == null) {
+      return null;
+    }
+
+    return $InstanceApiVersionCopyWith<$Res>(_value.apiVersions!, (value) {
+      return _then(_value.copyWith(apiVersions: value) as $Val);
+    });
+  }
+
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
   $InstanceContactCopyWith<$Res>? get contact {
     if (_value.contact == null) {
       return null;
@@ -288,6 +315,7 @@ abstract class _$$InstanceImplCopyWith<$Res>
       @JsonKey(name: 'languages') List<String>? languages,
       @JsonKey(name: 'configuration') InstanceConfiguration? configuration,
       @JsonKey(name: 'registrations') InstanceRegistrations? registrations,
+      @JsonKey(name: 'api_versions') InstanceApiVersion? apiVersions,
       @JsonKey(name: 'contact') InstanceContact? contact,
       @JsonKey(name: 'rules') List<Rule>? rules});
 
@@ -299,6 +327,8 @@ abstract class _$$InstanceImplCopyWith<$Res>
   $InstanceConfigurationCopyWith<$Res>? get configuration;
   @override
   $InstanceRegistrationsCopyWith<$Res>? get registrations;
+  @override
+  $InstanceApiVersionCopyWith<$Res>? get apiVersions;
   @override
   $InstanceContactCopyWith<$Res>? get contact;
 }
@@ -327,6 +357,7 @@ class __$$InstanceImplCopyWithImpl<$Res>
     Object? languages = freezed,
     Object? configuration = freezed,
     Object? registrations = freezed,
+    Object? apiVersions = freezed,
     Object? contact = freezed,
     Object? rules = freezed,
   }) {
@@ -375,6 +406,10 @@ class __$$InstanceImplCopyWithImpl<$Res>
           ? _value.registrations
           : registrations // ignore: cast_nullable_to_non_nullable
               as InstanceRegistrations?,
+      apiVersions: freezed == apiVersions
+          ? _value.apiVersions
+          : apiVersions // ignore: cast_nullable_to_non_nullable
+              as InstanceApiVersion?,
       contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
@@ -402,6 +437,7 @@ class _$InstanceImpl implements _Instance {
       @JsonKey(name: 'languages') final List<String>? languages,
       @JsonKey(name: 'configuration') this.configuration,
       @JsonKey(name: 'registrations') this.registrations,
+      @JsonKey(name: 'api_versions') this.apiVersions,
       @JsonKey(name: 'contact') this.contact,
       @JsonKey(name: 'rules') final List<Rule>? rules})
       : _icon = icon,
@@ -485,6 +521,13 @@ class _$InstanceImpl implements _Instance {
   @JsonKey(name: 'registrations')
   final InstanceRegistrations? registrations;
 
+  /// Information about which version of the API is implemented by this
+  /// server. It contains at least a `mastodon` attribute, and other
+  /// implementations may have their own additional attributes.
+  @override
+  @JsonKey(name: 'api_versions')
+  final InstanceApiVersion? apiVersions;
+
   /// Hints related to contacting a representative of the website.
   @override
   @JsonKey(name: 'contact')
@@ -506,7 +549,7 @@ class _$InstanceImpl implements _Instance {
 
   @override
   String toString() {
-    return 'Instance(domain: $domain, title: $title, version: $version, sourceUrl: $sourceUrl, description: $description, usage: $usage, thumbnail: $thumbnail, icon: $icon, languages: $languages, configuration: $configuration, registrations: $registrations, contact: $contact, rules: $rules)';
+    return 'Instance(domain: $domain, title: $title, version: $version, sourceUrl: $sourceUrl, description: $description, usage: $usage, thumbnail: $thumbnail, icon: $icon, languages: $languages, configuration: $configuration, registrations: $registrations, apiVersions: $apiVersions, contact: $contact, rules: $rules)';
   }
 
   @override
@@ -531,6 +574,8 @@ class _$InstanceImpl implements _Instance {
                 other.configuration == configuration) &&
             (identical(other.registrations, registrations) ||
                 other.registrations == registrations) &&
+            (identical(other.apiVersions, apiVersions) ||
+                other.apiVersions == apiVersions) &&
             (identical(other.contact, contact) || other.contact == contact) &&
             const DeepCollectionEquality().equals(other._rules, _rules));
   }
@@ -550,6 +595,7 @@ class _$InstanceImpl implements _Instance {
       const DeepCollectionEquality().hash(_languages),
       configuration,
       registrations,
+      apiVersions,
       contact,
       const DeepCollectionEquality().hash(_rules));
 
@@ -584,6 +630,7 @@ abstract class _Instance implements Instance {
       final InstanceConfiguration? configuration,
       @JsonKey(name: 'registrations')
       final InstanceRegistrations? registrations,
+      @JsonKey(name: 'api_versions') final InstanceApiVersion? apiVersions,
       @JsonKey(name: 'contact') final InstanceContact? contact,
       @JsonKey(name: 'rules') final List<Rule>? rules}) = _$InstanceImpl;
 
@@ -645,6 +692,13 @@ abstract class _Instance implements Instance {
   @override
   @JsonKey(name: 'registrations')
   InstanceRegistrations? get registrations;
+
+  /// Information about which version of the API is implemented by this
+  /// server. It contains at least a `mastodon` attribute, and other
+  /// implementations may have their own additional attributes.
+  @override
+  @JsonKey(name: 'api_versions')
+  InstanceApiVersion? get apiVersions;
 
   /// Hints related to contacting a representative of the website.
   @override
@@ -3881,6 +3935,171 @@ abstract class _InstanceRegistrations implements InstanceRegistrations {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceRegistrationsImplCopyWith<_$InstanceRegistrationsImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+InstanceApiVersion _$InstanceApiVersionFromJson(Map<String, dynamic> json) {
+  return _InstanceApiVersion.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InstanceApiVersion {
+  /// API version number that this server implements. Starting from Mastodon
+  /// v4.3.0, API changes will come with a version number, which clients can
+  /// check against this value.
+  @JsonKey(name: 'mastodon')
+  int? get mastodon => throw _privateConstructorUsedError;
+
+  /// Serializes this InstanceApiVersion to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of InstanceApiVersion
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $InstanceApiVersionCopyWith<InstanceApiVersion> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InstanceApiVersionCopyWith<$Res> {
+  factory $InstanceApiVersionCopyWith(
+          InstanceApiVersion value, $Res Function(InstanceApiVersion) then) =
+      _$InstanceApiVersionCopyWithImpl<$Res, InstanceApiVersion>;
+  @useResult
+  $Res call({@JsonKey(name: 'mastodon') int? mastodon});
+}
+
+/// @nodoc
+class _$InstanceApiVersionCopyWithImpl<$Res, $Val extends InstanceApiVersion>
+    implements $InstanceApiVersionCopyWith<$Res> {
+  _$InstanceApiVersionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of InstanceApiVersion
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? mastodon = freezed,
+  }) {
+    return _then(_value.copyWith(
+      mastodon: freezed == mastodon
+          ? _value.mastodon
+          : mastodon // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$InstanceApiVersionImplCopyWith<$Res>
+    implements $InstanceApiVersionCopyWith<$Res> {
+  factory _$$InstanceApiVersionImplCopyWith(_$InstanceApiVersionImpl value,
+          $Res Function(_$InstanceApiVersionImpl) then) =
+      __$$InstanceApiVersionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'mastodon') int? mastodon});
+}
+
+/// @nodoc
+class __$$InstanceApiVersionImplCopyWithImpl<$Res>
+    extends _$InstanceApiVersionCopyWithImpl<$Res, _$InstanceApiVersionImpl>
+    implements _$$InstanceApiVersionImplCopyWith<$Res> {
+  __$$InstanceApiVersionImplCopyWithImpl(_$InstanceApiVersionImpl _value,
+      $Res Function(_$InstanceApiVersionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of InstanceApiVersion
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? mastodon = freezed,
+  }) {
+    return _then(_$InstanceApiVersionImpl(
+      mastodon: freezed == mastodon
+          ? _value.mastodon
+          : mastodon // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$InstanceApiVersionImpl implements _InstanceApiVersion {
+  const _$InstanceApiVersionImpl({@JsonKey(name: 'mastodon') this.mastodon});
+
+  factory _$InstanceApiVersionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceApiVersionImplFromJson(json);
+
+  /// API version number that this server implements. Starting from Mastodon
+  /// v4.3.0, API changes will come with a version number, which clients can
+  /// check against this value.
+  @override
+  @JsonKey(name: 'mastodon')
+  final int? mastodon;
+
+  @override
+  String toString() {
+    return 'InstanceApiVersion(mastodon: $mastodon)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InstanceApiVersionImpl &&
+            (identical(other.mastodon, mastodon) ||
+                other.mastodon == mastodon));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, mastodon);
+
+  /// Create a copy of InstanceApiVersion
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InstanceApiVersionImplCopyWith<_$InstanceApiVersionImpl> get copyWith =>
+      __$$InstanceApiVersionImplCopyWithImpl<_$InstanceApiVersionImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$InstanceApiVersionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InstanceApiVersion implements InstanceApiVersion {
+  const factory _InstanceApiVersion(
+          {@JsonKey(name: 'mastodon') final int? mastodon}) =
+      _$InstanceApiVersionImpl;
+
+  factory _InstanceApiVersion.fromJson(Map<String, dynamic> json) =
+      _$InstanceApiVersionImpl.fromJson;
+
+  /// API version number that this server implements. Starting from Mastodon
+  /// v4.3.0, API changes will come with a version number, which clients can
+  /// check against this value.
+  @override
+  @JsonKey(name: 'mastodon')
+  int? get mastodon;
+
+  /// Create a copy of InstanceApiVersion
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$InstanceApiVersionImplCopyWith<_$InstanceApiVersionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 InstanceContact _$InstanceContactFromJson(Map<String, dynamic> json) {

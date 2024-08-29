@@ -44,6 +44,11 @@ class Instance with _$Instance {
     /// Information about registering for this website.
     @JsonKey(name: 'registrations') final InstanceRegistrations? registrations,
 
+    /// Information about which version of the API is implemented by this
+    /// server. It contains at least a `mastodon` attribute, and other
+    /// implementations may have their own additional attributes.
+    @JsonKey(name: 'api_versions') final InstanceApiVersion? apiVersions,
+
     /// Hints related to contacting a representative of the website.
     @JsonKey(name: 'contact') final InstanceContact? contact,
 
@@ -297,6 +302,19 @@ class InstanceRegistrations with _$InstanceRegistrations {
 
   factory InstanceRegistrations.fromJson(final Map<String, dynamic> json) =>
       _$InstanceRegistrationsFromJson(json);
+}
+
+@freezed
+class InstanceApiVersion with _$InstanceApiVersion {
+  const factory InstanceApiVersion({
+    /// API version number that this server implements. Starting from Mastodon
+    /// v4.3.0, API changes will come with a version number, which clients can
+    /// check against this value.
+    @JsonKey(name: 'mastodon') final int? mastodon,
+  }) = _InstanceApiVersion;
+
+  factory InstanceApiVersion.fromJson(final Map<String, dynamic> json) =>
+      _$InstanceApiVersionFromJson(json);
 }
 
 @freezed

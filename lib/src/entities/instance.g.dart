@@ -34,6 +34,10 @@ _$InstanceImpl _$$InstanceImplFromJson(Map<String, dynamic> json) =>
           ? null
           : InstanceRegistrations.fromJson(
               json['registrations'] as Map<String, dynamic>),
+      apiVersions: json['api_versions'] == null
+          ? null
+          : InstanceApiVersion.fromJson(
+              json['api_versions'] as Map<String, dynamic>),
       contact: json['contact'] == null
           ? null
           : InstanceContact.fromJson(json['contact'] as Map<String, dynamic>),
@@ -55,6 +59,7 @@ Map<String, dynamic> _$$InstanceImplToJson(_$InstanceImpl instance) =>
       'languages': instance.languages,
       'configuration': instance.configuration,
       'registrations': instance.registrations,
+      'api_versions': instance.apiVersions,
       'contact': instance.contact,
       'rules': instance.rules,
     };
@@ -299,6 +304,18 @@ Map<String, dynamic> _$$InstanceRegistrationsImplToJson(
       'enabled': instance.enabled,
       'approval_required': instance.approvalRequired,
       'message': instance.message,
+    };
+
+_$InstanceApiVersionImpl _$$InstanceApiVersionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$InstanceApiVersionImpl(
+      mastodon: (json['mastodon'] as num?)?.toInt(),
+    );
+
+Map<String, dynamic> _$$InstanceApiVersionImplToJson(
+        _$InstanceApiVersionImpl instance) =>
+    <String, dynamic>{
+      'mastodon': instance.mastodon,
     };
 
 _$InstanceContactImpl _$$InstanceContactImplFromJson(

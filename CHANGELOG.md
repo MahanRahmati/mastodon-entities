@@ -1,6 +1,7 @@
 ## 1.1.14
 
 - Added icon to Instance.
+- Added apiVersions to Instance.
 
 ## 1.1.13
 
