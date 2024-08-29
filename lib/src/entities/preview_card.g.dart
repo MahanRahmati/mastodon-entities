@@ -22,12 +22,12 @@ _$PreviewCardImpl _$$PreviewCardImplFromJson(Map<String, dynamic> json) =>
       image: json['image'] as String?,
       embedUrl: json['embed_url'] as String?,
       blurhash: json['blurhash'] as String?,
+      authors: (json['authors'] as List<dynamic>?)
+          ?.map((e) => PreviewCardAuthor.fromJson(e as Map<String, dynamic>))
+          .toList(),
       publishedAt: json['published_at'] == null
           ? null
           : DateTime.parse(json['published_at'] as String),
-      authors: (json['authors'] as List<dynamic>?)
-          ?.map((e) => Author.fromJson(e as Map<String, dynamic>))
-          .toList(),
     );
 
 Map<String, dynamic> _$$PreviewCardImplToJson(_$PreviewCardImpl instance) =>
@@ -46,8 +46,8 @@ Map<String, dynamic> _$$PreviewCardImplToJson(_$PreviewCardImpl instance) =>
       'image': instance.image,
       'embed_url': instance.embedUrl,
       'blurhash': instance.blurhash,
-      'published_at': instance.publishedAt?.toIso8601String(),
       'authors': instance.authors,
+      'published_at': instance.publishedAt?.toIso8601String(),
     };
 
 const _$PreviewCardTypeEnumMap = {
@@ -76,12 +76,12 @@ _$TrendsLinkImpl _$$TrendsLinkImplFromJson(Map<String, dynamic> json) =>
       history: (json['history'] as List<dynamic>?)
           ?.map((e) => TrendsLinkHistory.fromJson(e as Map<String, dynamic>))
           .toList(),
+      authors: (json['authors'] as List<dynamic>?)
+          ?.map((e) => PreviewCardAuthor.fromJson(e as Map<String, dynamic>))
+          .toList(),
       publishedAt: json['published_at'] == null
           ? null
           : DateTime.parse(json['published_at'] as String),
-      authors: (json['authors'] as List<dynamic>?)
-          ?.map((e) => Author.fromJson(e as Map<String, dynamic>))
-          .toList(),
     );
 
 Map<String, dynamic> _$$TrendsLinkImplToJson(_$TrendsLinkImpl instance) =>
@@ -101,8 +101,8 @@ Map<String, dynamic> _$$TrendsLinkImplToJson(_$TrendsLinkImpl instance) =>
       'embed_url': instance.embedUrl,
       'blurhash': instance.blurhash,
       'history': instance.history,
-      'published_at': instance.publishedAt?.toIso8601String(),
       'authors': instance.authors,
+      'published_at': instance.publishedAt?.toIso8601String(),
     };
 
 _$TrendsLinkHistoryImpl _$$TrendsLinkHistoryImplFromJson(
@@ -119,19 +119,4 @@ Map<String, dynamic> _$$TrendsLinkHistoryImplToJson(
       'day': instance.day,
       'uses': instance.uses,
       'accounts': instance.accounts,
-    };
-
-_$AuthorImpl _$$AuthorImplFromJson(Map<String, dynamic> json) => _$AuthorImpl(
-      name: json['name'] as String?,
-      url: json['url'] as String?,
-      account: json['account'] == null
-          ? null
-          : Account.fromJson(json['account'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$AuthorImplToJson(_$AuthorImpl instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'url': instance.url,
-      'account': instance.account,
     };

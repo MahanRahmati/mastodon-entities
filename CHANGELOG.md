@@ -2,6 +2,7 @@
 
 - Added icon to Instance.
 - Added apiVersions to Instance.
+- Added PreviewCardAuthor.
 
 ## 1.1.13
 

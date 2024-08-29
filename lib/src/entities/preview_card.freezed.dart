@@ -76,10 +76,12 @@ mixin _$PreviewCard {
   /// preview thumbnails when media has not been downloaded yet.
   @JsonKey(name: 'blurhash')
   String? get blurhash => throw _privateConstructorUsedError;
+
+  /// Fediverse account of the authors of the original resource.
+  @JsonKey(name: 'authors')
+  List<PreviewCardAuthor>? get authors => throw _privateConstructorUsedError;
   @JsonKey(name: 'published_at')
   DateTime? get publishedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'authors')
-  List<Author>? get authors => throw _privateConstructorUsedError;
 
   /// Serializes this PreviewCard to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -112,8 +114,8 @@ abstract class $PreviewCardCopyWith<$Res> {
       @JsonKey(name: 'image') String? image,
       @JsonKey(name: 'embed_url') String? embedUrl,
       @JsonKey(name: 'blurhash') String? blurhash,
-      @JsonKey(name: 'published_at') DateTime? publishedAt,
-      @JsonKey(name: 'authors') List<Author>? authors});
+      @JsonKey(name: 'authors') List<PreviewCardAuthor>? authors,
+      @JsonKey(name: 'published_at') DateTime? publishedAt});
 }
 
 /// @nodoc
@@ -145,8 +147,8 @@ class _$PreviewCardCopyWithImpl<$Res, $Val extends PreviewCard>
     Object? image = freezed,
     Object? embedUrl = freezed,
     Object? blurhash = freezed,
-    Object? publishedAt = freezed,
     Object? authors = freezed,
+    Object? publishedAt = freezed,
   }) {
     return _then(_value.copyWith(
       url: freezed == url
@@ -205,14 +207,14 @@ class _$PreviewCardCopyWithImpl<$Res, $Val extends PreviewCard>
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
               as String?,
+      authors: freezed == authors
+          ? _value.authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<PreviewCardAuthor>?,
       publishedAt: freezed == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      authors: freezed == authors
-          ? _value.authors
-          : authors // ignore: cast_nullable_to_non_nullable
-              as List<Author>?,
     ) as $Val);
   }
 }
@@ -240,8 +242,8 @@ abstract class _$$PreviewCardImplCopyWith<$Res>
       @JsonKey(name: 'image') String? image,
       @JsonKey(name: 'embed_url') String? embedUrl,
       @JsonKey(name: 'blurhash') String? blurhash,
-      @JsonKey(name: 'published_at') DateTime? publishedAt,
-      @JsonKey(name: 'authors') List<Author>? authors});
+      @JsonKey(name: 'authors') List<PreviewCardAuthor>? authors,
+      @JsonKey(name: 'published_at') DateTime? publishedAt});
 }
 
 /// @nodoc
@@ -271,8 +273,8 @@ class __$$PreviewCardImplCopyWithImpl<$Res>
     Object? image = freezed,
     Object? embedUrl = freezed,
     Object? blurhash = freezed,
-    Object? publishedAt = freezed,
     Object? authors = freezed,
+    Object? publishedAt = freezed,
   }) {
     return _then(_$PreviewCardImpl(
       url: freezed == url
@@ -331,14 +333,14 @@ class __$$PreviewCardImplCopyWithImpl<$Res>
           ? _value.blurhash
           : blurhash // ignore: cast_nullable_to_non_nullable
               as String?,
+      authors: freezed == authors
+          ? _value._authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<PreviewCardAuthor>?,
       publishedAt: freezed == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      authors: freezed == authors
-          ? _value._authors
-          : authors // ignore: cast_nullable_to_non_nullable
-              as List<Author>?,
     ));
   }
 }
@@ -361,8 +363,8 @@ class _$PreviewCardImpl implements _PreviewCard {
       @JsonKey(name: 'image') this.image,
       @JsonKey(name: 'embed_url') this.embedUrl,
       @JsonKey(name: 'blurhash') this.blurhash,
-      @JsonKey(name: 'published_at') this.publishedAt,
-      @JsonKey(name: 'authors') final List<Author>? authors})
+      @JsonKey(name: 'authors') final List<PreviewCardAuthor>? authors,
+      @JsonKey(name: 'published_at') this.publishedAt})
       : _authors = authors;
 
   factory _$PreviewCardImpl.fromJson(Map<String, dynamic> json) =>
@@ -438,13 +440,14 @@ class _$PreviewCardImpl implements _PreviewCard {
   @override
   @JsonKey(name: 'blurhash')
   final String? blurhash;
-  @override
-  @JsonKey(name: 'published_at')
-  final DateTime? publishedAt;
-  final List<Author>? _authors;
+
+  /// Fediverse account of the authors of the original resource.
+  final List<PreviewCardAuthor>? _authors;
+
+  /// Fediverse account of the authors of the original resource.
   @override
   @JsonKey(name: 'authors')
-  List<Author>? get authors {
+  List<PreviewCardAuthor>? get authors {
     final value = _authors;
     if (value == null) return null;
     if (_authors is EqualUnmodifiableListView) return _authors;
@@ -453,8 +456,12 @@ class _$PreviewCardImpl implements _PreviewCard {
   }
 
   @override
+  @JsonKey(name: 'published_at')
+  final DateTime? publishedAt;
+
+  @override
   String toString() {
-    return 'PreviewCard(url: $url, title: $title, description: $description, type: $type, authorName: $authorName, authorUrl: $authorUrl, providerName: $providerName, providerUrl: $providerUrl, html: $html, width: $width, height: $height, image: $image, embedUrl: $embedUrl, blurhash: $blurhash, publishedAt: $publishedAt, authors: $authors)';
+    return 'PreviewCard(url: $url, title: $title, description: $description, type: $type, authorName: $authorName, authorUrl: $authorUrl, providerName: $providerName, providerUrl: $providerUrl, html: $html, width: $width, height: $height, image: $image, embedUrl: $embedUrl, blurhash: $blurhash, authors: $authors, publishedAt: $publishedAt)';
   }
 
   @override
@@ -483,9 +490,9 @@ class _$PreviewCardImpl implements _PreviewCard {
                 other.embedUrl == embedUrl) &&
             (identical(other.blurhash, blurhash) ||
                 other.blurhash == blurhash) &&
+            const DeepCollectionEquality().equals(other._authors, _authors) &&
             (identical(other.publishedAt, publishedAt) ||
-                other.publishedAt == publishedAt) &&
-            const DeepCollectionEquality().equals(other._authors, _authors));
+                other.publishedAt == publishedAt));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -506,8 +513,8 @@ class _$PreviewCardImpl implements _PreviewCard {
       image,
       embedUrl,
       blurhash,
-      publishedAt,
-      const DeepCollectionEquality().hash(_authors));
+      const DeepCollectionEquality().hash(_authors),
+      publishedAt);
 
   /// Create a copy of PreviewCard
   /// with the given fields replaced by the non-null parameter values.
@@ -541,8 +548,8 @@ abstract class _PreviewCard implements PreviewCard {
           @JsonKey(name: 'image') final String? image,
           @JsonKey(name: 'embed_url') final String? embedUrl,
           @JsonKey(name: 'blurhash') final String? blurhash,
-          @JsonKey(name: 'published_at') final DateTime? publishedAt,
-          @JsonKey(name: 'authors') final List<Author>? authors}) =
+          @JsonKey(name: 'authors') final List<PreviewCardAuthor>? authors,
+          @JsonKey(name: 'published_at') final DateTime? publishedAt}) =
       _$PreviewCardImpl;
 
   factory _PreviewCard.fromJson(Map<String, dynamic> json) =
@@ -618,12 +625,14 @@ abstract class _PreviewCard implements PreviewCard {
   @override
   @JsonKey(name: 'blurhash')
   String? get blurhash;
+
+  /// Fediverse account of the authors of the original resource.
+  @override
+  @JsonKey(name: 'authors')
+  List<PreviewCardAuthor>? get authors;
   @override
   @JsonKey(name: 'published_at')
   DateTime? get publishedAt;
-  @override
-  @JsonKey(name: 'authors')
-  List<Author>? get authors;
 
   /// Create a copy of PreviewCard
   /// with the given fields replaced by the non-null parameter values.
@@ -699,10 +708,12 @@ mixin _$TrendsLink {
   /// Usage statistics for given days (typically the past week).
   @JsonKey(name: 'history')
   List<TrendsLinkHistory>? get history => throw _privateConstructorUsedError;
+
+  /// Fediverse account of the authors of the original resource.
+  @JsonKey(name: 'authors')
+  List<PreviewCardAuthor>? get authors => throw _privateConstructorUsedError;
   @JsonKey(name: 'published_at')
   DateTime? get publishedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'authors')
-  List<Author>? get authors => throw _privateConstructorUsedError;
 
   /// Serializes this TrendsLink to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -736,8 +747,8 @@ abstract class $TrendsLinkCopyWith<$Res> {
       @JsonKey(name: 'embed_url') String? embedUrl,
       @JsonKey(name: 'blurhash') String? blurhash,
       @JsonKey(name: 'history') List<TrendsLinkHistory>? history,
-      @JsonKey(name: 'published_at') DateTime? publishedAt,
-      @JsonKey(name: 'authors') List<Author>? authors});
+      @JsonKey(name: 'authors') List<PreviewCardAuthor>? authors,
+      @JsonKey(name: 'published_at') DateTime? publishedAt});
 }
 
 /// @nodoc
@@ -770,8 +781,8 @@ class _$TrendsLinkCopyWithImpl<$Res, $Val extends TrendsLink>
     Object? embedUrl = freezed,
     Object? blurhash = freezed,
     Object? history = freezed,
-    Object? publishedAt = freezed,
     Object? authors = freezed,
+    Object? publishedAt = freezed,
   }) {
     return _then(_value.copyWith(
       url: freezed == url
@@ -834,14 +845,14 @@ class _$TrendsLinkCopyWithImpl<$Res, $Val extends TrendsLink>
           ? _value.history
           : history // ignore: cast_nullable_to_non_nullable
               as List<TrendsLinkHistory>?,
+      authors: freezed == authors
+          ? _value.authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<PreviewCardAuthor>?,
       publishedAt: freezed == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      authors: freezed == authors
-          ? _value.authors
-          : authors // ignore: cast_nullable_to_non_nullable
-              as List<Author>?,
     ) as $Val);
   }
 }
@@ -870,8 +881,8 @@ abstract class _$$TrendsLinkImplCopyWith<$Res>
       @JsonKey(name: 'embed_url') String? embedUrl,
       @JsonKey(name: 'blurhash') String? blurhash,
       @JsonKey(name: 'history') List<TrendsLinkHistory>? history,
-      @JsonKey(name: 'published_at') DateTime? publishedAt,
-      @JsonKey(name: 'authors') List<Author>? authors});
+      @JsonKey(name: 'authors') List<PreviewCardAuthor>? authors,
+      @JsonKey(name: 'published_at') DateTime? publishedAt});
 }
 
 /// @nodoc
@@ -902,8 +913,8 @@ class __$$TrendsLinkImplCopyWithImpl<$Res>
     Object? embedUrl = freezed,
     Object? blurhash = freezed,
     Object? history = freezed,
-    Object? publishedAt = freezed,
     Object? authors = freezed,
+    Object? publishedAt = freezed,
   }) {
     return _then(_$TrendsLinkImpl(
       url: freezed == url
@@ -966,14 +977,14 @@ class __$$TrendsLinkImplCopyWithImpl<$Res>
           ? _value._history
           : history // ignore: cast_nullable_to_non_nullable
               as List<TrendsLinkHistory>?,
+      authors: freezed == authors
+          ? _value._authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<PreviewCardAuthor>?,
       publishedAt: freezed == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      authors: freezed == authors
-          ? _value._authors
-          : authors // ignore: cast_nullable_to_non_nullable
-              as List<Author>?,
     ));
   }
 }
@@ -997,8 +1008,8 @@ class _$TrendsLinkImpl implements _TrendsLink {
       @JsonKey(name: 'embed_url') this.embedUrl,
       @JsonKey(name: 'blurhash') this.blurhash,
       @JsonKey(name: 'history') final List<TrendsLinkHistory>? history,
-      @JsonKey(name: 'published_at') this.publishedAt,
-      @JsonKey(name: 'authors') final List<Author>? authors})
+      @JsonKey(name: 'authors') final List<PreviewCardAuthor>? authors,
+      @JsonKey(name: 'published_at') this.publishedAt})
       : _history = history,
         _authors = authors;
 
@@ -1090,13 +1101,13 @@ class _$TrendsLinkImpl implements _TrendsLink {
     return EqualUnmodifiableListView(value);
   }
 
-  @override
-  @JsonKey(name: 'published_at')
-  final DateTime? publishedAt;
-  final List<Author>? _authors;
+  /// Fediverse account of the authors of the original resource.
+  final List<PreviewCardAuthor>? _authors;
+
+  /// Fediverse account of the authors of the original resource.
   @override
   @JsonKey(name: 'authors')
-  List<Author>? get authors {
+  List<PreviewCardAuthor>? get authors {
     final value = _authors;
     if (value == null) return null;
     if (_authors is EqualUnmodifiableListView) return _authors;
@@ -1105,8 +1116,12 @@ class _$TrendsLinkImpl implements _TrendsLink {
   }
 
   @override
+  @JsonKey(name: 'published_at')
+  final DateTime? publishedAt;
+
+  @override
   String toString() {
-    return 'TrendsLink(url: $url, title: $title, description: $description, type: $type, authorName: $authorName, authorUrl: $authorUrl, providerName: $providerName, providerUrl: $providerUrl, html: $html, width: $width, height: $height, image: $image, embedUrl: $embedUrl, blurhash: $blurhash, history: $history, publishedAt: $publishedAt, authors: $authors)';
+    return 'TrendsLink(url: $url, title: $title, description: $description, type: $type, authorName: $authorName, authorUrl: $authorUrl, providerName: $providerName, providerUrl: $providerUrl, html: $html, width: $width, height: $height, image: $image, embedUrl: $embedUrl, blurhash: $blurhash, history: $history, authors: $authors, publishedAt: $publishedAt)';
   }
 
   @override
@@ -1136,9 +1151,9 @@ class _$TrendsLinkImpl implements _TrendsLink {
             (identical(other.blurhash, blurhash) ||
                 other.blurhash == blurhash) &&
             const DeepCollectionEquality().equals(other._history, _history) &&
+            const DeepCollectionEquality().equals(other._authors, _authors) &&
             (identical(other.publishedAt, publishedAt) ||
-                other.publishedAt == publishedAt) &&
-            const DeepCollectionEquality().equals(other._authors, _authors));
+                other.publishedAt == publishedAt));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1160,8 +1175,8 @@ class _$TrendsLinkImpl implements _TrendsLink {
       embedUrl,
       blurhash,
       const DeepCollectionEquality().hash(_history),
-      publishedAt,
-      const DeepCollectionEquality().hash(_authors));
+      const DeepCollectionEquality().hash(_authors),
+      publishedAt);
 
   /// Create a copy of TrendsLink
   /// with the given fields replaced by the non-null parameter values.
@@ -1196,8 +1211,8 @@ abstract class _TrendsLink implements TrendsLink {
           @JsonKey(name: 'embed_url') final String? embedUrl,
           @JsonKey(name: 'blurhash') final String? blurhash,
           @JsonKey(name: 'history') final List<TrendsLinkHistory>? history,
-          @JsonKey(name: 'published_at') final DateTime? publishedAt,
-          @JsonKey(name: 'authors') final List<Author>? authors}) =
+          @JsonKey(name: 'authors') final List<PreviewCardAuthor>? authors,
+          @JsonKey(name: 'published_at') final DateTime? publishedAt}) =
       _$TrendsLinkImpl;
 
   factory _TrendsLink.fromJson(Map<String, dynamic> json) =
@@ -1278,12 +1293,14 @@ abstract class _TrendsLink implements TrendsLink {
   @override
   @JsonKey(name: 'history')
   List<TrendsLinkHistory>? get history;
+
+  /// Fediverse account of the authors of the original resource.
+  @override
+  @JsonKey(name: 'authors')
+  List<PreviewCardAuthor>? get authors;
   @override
   @JsonKey(name: 'published_at')
   DateTime? get publishedAt;
-  @override
-  @JsonKey(name: 'authors')
-  List<Author>? get authors;
 
   /// Create a copy of TrendsLink
   /// with the given fields replaced by the non-null parameter values.
@@ -1510,204 +1527,5 @@ abstract class _TrendsLinkHistory implements TrendsLinkHistory {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrendsLinkHistoryImplCopyWith<_$TrendsLinkHistoryImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Author _$AuthorFromJson(Map<String, dynamic> json) {
-  return _Author.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Author {
-  String? get name => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-  Account? get account => throw _privateConstructorUsedError;
-
-  /// Serializes this Author to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $AuthorCopyWith<Author> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $AuthorCopyWith<$Res> {
-  factory $AuthorCopyWith(Author value, $Res Function(Author) then) =
-      _$AuthorCopyWithImpl<$Res, Author>;
-  @useResult
-  $Res call({String? name, String? url, Account? account});
-
-  $AccountCopyWith<$Res>? get account;
-}
-
-/// @nodoc
-class _$AuthorCopyWithImpl<$Res, $Val extends Author>
-    implements $AuthorCopyWith<$Res> {
-  _$AuthorCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = freezed,
-    Object? url = freezed,
-    Object? account = freezed,
-  }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      account: freezed == account
-          ? _value.account
-          : account // ignore: cast_nullable_to_non_nullable
-              as Account?,
-    ) as $Val);
-  }
-
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $AccountCopyWith<$Res>? get account {
-    if (_value.account == null) {
-      return null;
-    }
-
-    return $AccountCopyWith<$Res>(_value.account!, (value) {
-      return _then(_value.copyWith(account: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$AuthorImplCopyWith<$Res> implements $AuthorCopyWith<$Res> {
-  factory _$$AuthorImplCopyWith(
-          _$AuthorImpl value, $Res Function(_$AuthorImpl) then) =
-      __$$AuthorImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? name, String? url, Account? account});
-
-  @override
-  $AccountCopyWith<$Res>? get account;
-}
-
-/// @nodoc
-class __$$AuthorImplCopyWithImpl<$Res>
-    extends _$AuthorCopyWithImpl<$Res, _$AuthorImpl>
-    implements _$$AuthorImplCopyWith<$Res> {
-  __$$AuthorImplCopyWithImpl(
-      _$AuthorImpl _value, $Res Function(_$AuthorImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = freezed,
-    Object? url = freezed,
-    Object? account = freezed,
-  }) {
-    return _then(_$AuthorImpl(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      account: freezed == account
-          ? _value.account
-          : account // ignore: cast_nullable_to_non_nullable
-              as Account?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$AuthorImpl implements _Author {
-  const _$AuthorImpl({this.name, this.url, this.account});
-
-  factory _$AuthorImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AuthorImplFromJson(json);
-
-  @override
-  final String? name;
-  @override
-  final String? url;
-  @override
-  final Account? account;
-
-  @override
-  String toString() {
-    return 'Author(name: $name, url: $url, account: $account)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AuthorImpl &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.url, url) || other.url == url) &&
-            (identical(other.account, account) || other.account == account));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, name, url, account);
-
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AuthorImplCopyWith<_$AuthorImpl> get copyWith =>
-      __$$AuthorImplCopyWithImpl<_$AuthorImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AuthorImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Author implements Author {
-  const factory _Author(
-      {final String? name,
-      final String? url,
-      final Account? account}) = _$AuthorImpl;
-
-  factory _Author.fromJson(Map<String, dynamic> json) = _$AuthorImpl.fromJson;
-
-  @override
-  String? get name;
-  @override
-  String? get url;
-  @override
-  Account? get account;
-
-  /// Create a copy of Author
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AuthorImplCopyWith<_$AuthorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
