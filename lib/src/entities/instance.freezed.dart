@@ -49,6 +49,10 @@ mixin _$Instance {
   @JsonKey(name: 'thumbnail')
   InstanceThumbnail? get thumbnail => throw _privateConstructorUsedError;
 
+  /// The list of available size variants for this instance configured icon.
+  @JsonKey(name: 'icon')
+  List<InstanceIcon>? get icon => throw _privateConstructorUsedError;
+
   /// Primary languages of the website and its staff.
   @JsonKey(name: 'languages')
   List<String>? get languages => throw _privateConstructorUsedError;
@@ -94,6 +98,7 @@ abstract class $InstanceCopyWith<$Res> {
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'usage') InstanceUsage? usage,
       @JsonKey(name: 'thumbnail') InstanceThumbnail? thumbnail,
+      @JsonKey(name: 'icon') List<InstanceIcon>? icon,
       @JsonKey(name: 'languages') List<String>? languages,
       @JsonKey(name: 'configuration') InstanceConfiguration? configuration,
       @JsonKey(name: 'registrations') InstanceRegistrations? registrations,
@@ -129,6 +134,7 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
     Object? description = freezed,
     Object? usage = freezed,
     Object? thumbnail = freezed,
+    Object? icon = freezed,
     Object? languages = freezed,
     Object? configuration = freezed,
     Object? registrations = freezed,
@@ -164,6 +170,10 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as InstanceThumbnail?,
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as List<InstanceIcon>?,
       languages: freezed == languages
           ? _value.languages
           : languages // ignore: cast_nullable_to_non_nullable
@@ -274,6 +284,7 @@ abstract class _$$InstanceImplCopyWith<$Res>
       @JsonKey(name: 'description') String? description,
       @JsonKey(name: 'usage') InstanceUsage? usage,
       @JsonKey(name: 'thumbnail') InstanceThumbnail? thumbnail,
+      @JsonKey(name: 'icon') List<InstanceIcon>? icon,
       @JsonKey(name: 'languages') List<String>? languages,
       @JsonKey(name: 'configuration') InstanceConfiguration? configuration,
       @JsonKey(name: 'registrations') InstanceRegistrations? registrations,
@@ -312,6 +323,7 @@ class __$$InstanceImplCopyWithImpl<$Res>
     Object? description = freezed,
     Object? usage = freezed,
     Object? thumbnail = freezed,
+    Object? icon = freezed,
     Object? languages = freezed,
     Object? configuration = freezed,
     Object? registrations = freezed,
@@ -347,6 +359,10 @@ class __$$InstanceImplCopyWithImpl<$Res>
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as InstanceThumbnail?,
+      icon: freezed == icon
+          ? _value._icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as List<InstanceIcon>?,
       languages: freezed == languages
           ? _value._languages
           : languages // ignore: cast_nullable_to_non_nullable
@@ -382,12 +398,14 @@ class _$InstanceImpl implements _Instance {
       @JsonKey(name: 'description') this.description,
       @JsonKey(name: 'usage') this.usage,
       @JsonKey(name: 'thumbnail') this.thumbnail,
+      @JsonKey(name: 'icon') final List<InstanceIcon>? icon,
       @JsonKey(name: 'languages') final List<String>? languages,
       @JsonKey(name: 'configuration') this.configuration,
       @JsonKey(name: 'registrations') this.registrations,
       @JsonKey(name: 'contact') this.contact,
       @JsonKey(name: 'rules') final List<Rule>? rules})
-      : _languages = languages,
+      : _icon = icon,
+        _languages = languages,
         _rules = rules;
 
   factory _$InstanceImpl.fromJson(Map<String, dynamic> json) =>
@@ -428,6 +446,20 @@ class _$InstanceImpl implements _Instance {
   @override
   @JsonKey(name: 'thumbnail')
   final InstanceThumbnail? thumbnail;
+
+  /// The list of available size variants for this instance configured icon.
+  final List<InstanceIcon>? _icon;
+
+  /// The list of available size variants for this instance configured icon.
+  @override
+  @JsonKey(name: 'icon')
+  List<InstanceIcon>? get icon {
+    final value = _icon;
+    if (value == null) return null;
+    if (_icon is EqualUnmodifiableListView) return _icon;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// Primary languages of the website and its staff.
   final List<String>? _languages;
@@ -474,7 +506,7 @@ class _$InstanceImpl implements _Instance {
 
   @override
   String toString() {
-    return 'Instance(domain: $domain, title: $title, version: $version, sourceUrl: $sourceUrl, description: $description, usage: $usage, thumbnail: $thumbnail, languages: $languages, configuration: $configuration, registrations: $registrations, contact: $contact, rules: $rules)';
+    return 'Instance(domain: $domain, title: $title, version: $version, sourceUrl: $sourceUrl, description: $description, usage: $usage, thumbnail: $thumbnail, icon: $icon, languages: $languages, configuration: $configuration, registrations: $registrations, contact: $contact, rules: $rules)';
   }
 
   @override
@@ -492,6 +524,7 @@ class _$InstanceImpl implements _Instance {
             (identical(other.usage, usage) || other.usage == usage) &&
             (identical(other.thumbnail, thumbnail) ||
                 other.thumbnail == thumbnail) &&
+            const DeepCollectionEquality().equals(other._icon, _icon) &&
             const DeepCollectionEquality()
                 .equals(other._languages, _languages) &&
             (identical(other.configuration, configuration) ||
@@ -513,6 +546,7 @@ class _$InstanceImpl implements _Instance {
       description,
       usage,
       thumbnail,
+      const DeepCollectionEquality().hash(_icon),
       const DeepCollectionEquality().hash(_languages),
       configuration,
       registrations,
@@ -544,6 +578,7 @@ abstract class _Instance implements Instance {
       @JsonKey(name: 'description') final String? description,
       @JsonKey(name: 'usage') final InstanceUsage? usage,
       @JsonKey(name: 'thumbnail') final InstanceThumbnail? thumbnail,
+      @JsonKey(name: 'icon') final List<InstanceIcon>? icon,
       @JsonKey(name: 'languages') final List<String>? languages,
       @JsonKey(name: 'configuration')
       final InstanceConfiguration? configuration,
@@ -590,6 +625,11 @@ abstract class _Instance implements Instance {
   @override
   @JsonKey(name: 'thumbnail')
   InstanceThumbnail? get thumbnail;
+
+  /// The list of available size variants for this instance configured icon.
+  @override
+  @JsonKey(name: 'icon')
+  List<InstanceIcon>? get icon;
 
   /// Primary languages of the website and its staff.
   @override
@@ -1386,6 +1426,191 @@ abstract class _InstanceVersions implements InstanceVersions {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceVersionsImplCopyWith<_$InstanceVersionsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+InstanceIcon _$InstanceIconFromJson(Map<String, dynamic> json) {
+  return _InstanceIcon.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InstanceIcon {
+  /// The URL of this icon.
+  @JsonKey(name: 'src')
+  String? get src => throw _privateConstructorUsedError;
+
+  /// The size of this icon.
+  @JsonKey(name: 'size')
+  String? get size => throw _privateConstructorUsedError;
+
+  /// Serializes this InstanceIcon to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of InstanceIcon
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $InstanceIconCopyWith<InstanceIcon> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InstanceIconCopyWith<$Res> {
+  factory $InstanceIconCopyWith(
+          InstanceIcon value, $Res Function(InstanceIcon) then) =
+      _$InstanceIconCopyWithImpl<$Res, InstanceIcon>;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'src') String? src, @JsonKey(name: 'size') String? size});
+}
+
+/// @nodoc
+class _$InstanceIconCopyWithImpl<$Res, $Val extends InstanceIcon>
+    implements $InstanceIconCopyWith<$Res> {
+  _$InstanceIconCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of InstanceIcon
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? src = freezed,
+    Object? size = freezed,
+  }) {
+    return _then(_value.copyWith(
+      src: freezed == src
+          ? _value.src
+          : src // ignore: cast_nullable_to_non_nullable
+              as String?,
+      size: freezed == size
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$InstanceIconImplCopyWith<$Res>
+    implements $InstanceIconCopyWith<$Res> {
+  factory _$$InstanceIconImplCopyWith(
+          _$InstanceIconImpl value, $Res Function(_$InstanceIconImpl) then) =
+      __$$InstanceIconImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'src') String? src, @JsonKey(name: 'size') String? size});
+}
+
+/// @nodoc
+class __$$InstanceIconImplCopyWithImpl<$Res>
+    extends _$InstanceIconCopyWithImpl<$Res, _$InstanceIconImpl>
+    implements _$$InstanceIconImplCopyWith<$Res> {
+  __$$InstanceIconImplCopyWithImpl(
+      _$InstanceIconImpl _value, $Res Function(_$InstanceIconImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of InstanceIcon
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? src = freezed,
+    Object? size = freezed,
+  }) {
+    return _then(_$InstanceIconImpl(
+      src: freezed == src
+          ? _value.src
+          : src // ignore: cast_nullable_to_non_nullable
+              as String?,
+      size: freezed == size
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$InstanceIconImpl implements _InstanceIcon {
+  const _$InstanceIconImpl(
+      {@JsonKey(name: 'src') this.src, @JsonKey(name: 'size') this.size});
+
+  factory _$InstanceIconImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceIconImplFromJson(json);
+
+  /// The URL of this icon.
+  @override
+  @JsonKey(name: 'src')
+  final String? src;
+
+  /// The size of this icon.
+  @override
+  @JsonKey(name: 'size')
+  final String? size;
+
+  @override
+  String toString() {
+    return 'InstanceIcon(src: $src, size: $size)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InstanceIconImpl &&
+            (identical(other.src, src) || other.src == src) &&
+            (identical(other.size, size) || other.size == size));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, src, size);
+
+  /// Create a copy of InstanceIcon
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InstanceIconImplCopyWith<_$InstanceIconImpl> get copyWith =>
+      __$$InstanceIconImplCopyWithImpl<_$InstanceIconImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$InstanceIconImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InstanceIcon implements InstanceIcon {
+  const factory _InstanceIcon(
+      {@JsonKey(name: 'src') final String? src,
+      @JsonKey(name: 'size') final String? size}) = _$InstanceIconImpl;
+
+  factory _InstanceIcon.fromJson(Map<String, dynamic> json) =
+      _$InstanceIconImpl.fromJson;
+
+  /// The URL of this icon.
+  @override
+  @JsonKey(name: 'src')
+  String? get src;
+
+  /// The size of this icon.
+  @override
+  @JsonKey(name: 'size')
+  String? get size;
+
+  /// Create a copy of InstanceIcon
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$InstanceIconImplCopyWith<_$InstanceIconImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

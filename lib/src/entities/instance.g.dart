@@ -20,6 +20,9 @@ _$InstanceImpl _$$InstanceImplFromJson(Map<String, dynamic> json) =>
           ? null
           : InstanceThumbnail.fromJson(
               json['thumbnail'] as Map<String, dynamic>),
+      icon: (json['icon'] as List<dynamic>?)
+          ?.map((e) => InstanceIcon.fromJson(e as Map<String, dynamic>))
+          .toList(),
       languages: (json['languages'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -48,6 +51,7 @@ Map<String, dynamic> _$$InstanceImplToJson(_$InstanceImpl instance) =>
       'description': instance.description,
       'usage': instance.usage,
       'thumbnail': instance.thumbnail,
+      'icon': instance.icon,
       'languages': instance.languages,
       'configuration': instance.configuration,
       'registrations': instance.registrations,
@@ -109,6 +113,18 @@ Map<String, dynamic> _$$InstanceVersionsImplToJson(
     <String, dynamic>{
       '@1x': instance.x1,
       '@2x': instance.x2,
+    };
+
+_$InstanceIconImpl _$$InstanceIconImplFromJson(Map<String, dynamic> json) =>
+    _$InstanceIconImpl(
+      src: json['src'] as String?,
+      size: json['size'] as String?,
+    );
+
+Map<String, dynamic> _$$InstanceIconImplToJson(_$InstanceIconImpl instance) =>
+    <String, dynamic>{
+      'src': instance.src,
+      'size': instance.size,
     };
 
 _$InstanceConfigurationImpl _$$InstanceConfigurationImplFromJson(

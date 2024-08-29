@@ -32,6 +32,9 @@ class Instance with _$Instance {
     /// An image used to represent this instance.
     @JsonKey(name: 'thumbnail') final InstanceThumbnail? thumbnail,
 
+    /// The list of available size variants for this instance configured icon.
+    @JsonKey(name: 'icon') final List<InstanceIcon>? icon,
+
     /// Primary languages of the website and its staff.
     @JsonKey(name: 'languages') final List<String>? languages,
 
@@ -104,6 +107,20 @@ class InstanceVersions with _$InstanceVersions {
 
   factory InstanceVersions.fromJson(final Map<String, dynamic> json) =>
       _$InstanceVersionsFromJson(json);
+}
+
+@freezed
+class InstanceIcon with _$InstanceIcon {
+  const factory InstanceIcon({
+    /// The URL of this icon.
+    @JsonKey(name: 'src') final String? src,
+
+    /// The size of this icon.
+    @JsonKey(name: 'size') final String? size,
+  }) = _InstanceIcon;
+
+  factory InstanceIcon.fromJson(final Map<String, dynamic> json) =>
+      _$InstanceIconFromJson(json);
 }
 
 @freezed

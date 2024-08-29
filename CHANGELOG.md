@@ -1,3 +1,7 @@
+## 1.1.14
+
+- Added icon to Instance.
+
 ## 1.1.13
 
 - Fixed options and expiresIn in ScheduledStatusPoll.
