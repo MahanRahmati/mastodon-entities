@@ -28,6 +28,15 @@ mixin _$Application {
   @JsonKey(name: 'website')
   String? get website => throw _privateConstructorUsedError;
 
+  /// The scopes for your application. This is the registered `scopes` string
+  /// split on whitespace.
+  @JsonKey(name: 'scopes')
+  List<String>? get scopes => throw _privateConstructorUsedError;
+
+  /// The registered redirection URI(s) for your application.
+  @JsonKey(name: 'redirect_uris')
+  List<String>? get redirectUris => throw _privateConstructorUsedError;
+
   /// Client ID key, to be used for obtaining OAuth tokens
   @JsonKey(name: 'client_id')
   String? get clientId => throw _privateConstructorUsedError;
@@ -35,6 +44,11 @@ mixin _$Application {
   /// Client secret key, to be used for obtaining OAuth tokens
   @JsonKey(name: 'client_secret')
   String? get clientSecret => throw _privateConstructorUsedError;
+
+  /// When the client secret key will expire at, presently this always
+  /// returns 0 indicating that OAuth Clients do not expire
+  @JsonKey(name: 'client_secret_expires_at')
+  String? get clientSecretExpiresAt => throw _privateConstructorUsedError;
 
   /// Serializes this Application to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -55,8 +69,12 @@ abstract class $ApplicationCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'name') String? name,
       @JsonKey(name: 'website') String? website,
+      @JsonKey(name: 'scopes') List<String>? scopes,
+      @JsonKey(name: 'redirect_uris') List<String>? redirectUris,
       @JsonKey(name: 'client_id') String? clientId,
-      @JsonKey(name: 'client_secret') String? clientSecret});
+      @JsonKey(name: 'client_secret') String? clientSecret,
+      @JsonKey(name: 'client_secret_expires_at')
+      String? clientSecretExpiresAt});
 }
 
 /// @nodoc
@@ -76,8 +94,11 @@ class _$ApplicationCopyWithImpl<$Res, $Val extends Application>
   $Res call({
     Object? name = freezed,
     Object? website = freezed,
+    Object? scopes = freezed,
+    Object? redirectUris = freezed,
     Object? clientId = freezed,
     Object? clientSecret = freezed,
+    Object? clientSecretExpiresAt = freezed,
   }) {
     return _then(_value.copyWith(
       name: freezed == name
@@ -88,6 +109,14 @@ class _$ApplicationCopyWithImpl<$Res, $Val extends Application>
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
               as String?,
+      scopes: freezed == scopes
+          ? _value.scopes
+          : scopes // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      redirectUris: freezed == redirectUris
+          ? _value.redirectUris
+          : redirectUris // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       clientId: freezed == clientId
           ? _value.clientId
           : clientId // ignore: cast_nullable_to_non_nullable
@@ -95,6 +124,10 @@ class _$ApplicationCopyWithImpl<$Res, $Val extends Application>
       clientSecret: freezed == clientSecret
           ? _value.clientSecret
           : clientSecret // ignore: cast_nullable_to_non_nullable
+              as String?,
+      clientSecretExpiresAt: freezed == clientSecretExpiresAt
+          ? _value.clientSecretExpiresAt
+          : clientSecretExpiresAt // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -111,8 +144,12 @@ abstract class _$$ApplicationImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'name') String? name,
       @JsonKey(name: 'website') String? website,
+      @JsonKey(name: 'scopes') List<String>? scopes,
+      @JsonKey(name: 'redirect_uris') List<String>? redirectUris,
       @JsonKey(name: 'client_id') String? clientId,
-      @JsonKey(name: 'client_secret') String? clientSecret});
+      @JsonKey(name: 'client_secret') String? clientSecret,
+      @JsonKey(name: 'client_secret_expires_at')
+      String? clientSecretExpiresAt});
 }
 
 /// @nodoc
@@ -130,8 +167,11 @@ class __$$ApplicationImplCopyWithImpl<$Res>
   $Res call({
     Object? name = freezed,
     Object? website = freezed,
+    Object? scopes = freezed,
+    Object? redirectUris = freezed,
     Object? clientId = freezed,
     Object? clientSecret = freezed,
+    Object? clientSecretExpiresAt = freezed,
   }) {
     return _then(_$ApplicationImpl(
       name: freezed == name
@@ -142,6 +182,14 @@ class __$$ApplicationImplCopyWithImpl<$Res>
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
               as String?,
+      scopes: freezed == scopes
+          ? _value._scopes
+          : scopes // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      redirectUris: freezed == redirectUris
+          ? _value._redirectUris
+          : redirectUris // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       clientId: freezed == clientId
           ? _value.clientId
           : clientId // ignore: cast_nullable_to_non_nullable
@@ -149,6 +197,10 @@ class __$$ApplicationImplCopyWithImpl<$Res>
       clientSecret: freezed == clientSecret
           ? _value.clientSecret
           : clientSecret // ignore: cast_nullable_to_non_nullable
+              as String?,
+      clientSecretExpiresAt: freezed == clientSecretExpiresAt
+          ? _value.clientSecretExpiresAt
+          : clientSecretExpiresAt // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -160,8 +212,13 @@ class _$ApplicationImpl implements _Application {
   const _$ApplicationImpl(
       {@JsonKey(name: 'name') this.name,
       @JsonKey(name: 'website') this.website,
+      @JsonKey(name: 'scopes') final List<String>? scopes,
+      @JsonKey(name: 'redirect_uris') final List<String>? redirectUris,
       @JsonKey(name: 'client_id') this.clientId,
-      @JsonKey(name: 'client_secret') this.clientSecret});
+      @JsonKey(name: 'client_secret') this.clientSecret,
+      @JsonKey(name: 'client_secret_expires_at') this.clientSecretExpiresAt})
+      : _scopes = scopes,
+        _redirectUris = redirectUris;
 
   factory _$ApplicationImpl.fromJson(Map<String, dynamic> json) =>
       _$$ApplicationImplFromJson(json);
@@ -176,6 +233,36 @@ class _$ApplicationImpl implements _Application {
   @JsonKey(name: 'website')
   final String? website;
 
+  /// The scopes for your application. This is the registered `scopes` string
+  /// split on whitespace.
+  final List<String>? _scopes;
+
+  /// The scopes for your application. This is the registered `scopes` string
+  /// split on whitespace.
+  @override
+  @JsonKey(name: 'scopes')
+  List<String>? get scopes {
+    final value = _scopes;
+    if (value == null) return null;
+    if (_scopes is EqualUnmodifiableListView) return _scopes;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// The registered redirection URI(s) for your application.
+  final List<String>? _redirectUris;
+
+  /// The registered redirection URI(s) for your application.
+  @override
+  @JsonKey(name: 'redirect_uris')
+  List<String>? get redirectUris {
+    final value = _redirectUris;
+    if (value == null) return null;
+    if (_redirectUris is EqualUnmodifiableListView) return _redirectUris;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   /// Client ID key, to be used for obtaining OAuth tokens
   @override
   @JsonKey(name: 'client_id')
@@ -186,9 +273,15 @@ class _$ApplicationImpl implements _Application {
   @JsonKey(name: 'client_secret')
   final String? clientSecret;
 
+  /// When the client secret key will expire at, presently this always
+  /// returns 0 indicating that OAuth Clients do not expire
+  @override
+  @JsonKey(name: 'client_secret_expires_at')
+  final String? clientSecretExpiresAt;
+
   @override
   String toString() {
-    return 'Application(name: $name, website: $website, clientId: $clientId, clientSecret: $clientSecret)';
+    return 'Application(name: $name, website: $website, scopes: $scopes, redirectUris: $redirectUris, clientId: $clientId, clientSecret: $clientSecret, clientSecretExpiresAt: $clientSecretExpiresAt)';
   }
 
   @override
@@ -198,16 +291,28 @@ class _$ApplicationImpl implements _Application {
             other is _$ApplicationImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.website, website) || other.website == website) &&
+            const DeepCollectionEquality().equals(other._scopes, _scopes) &&
+            const DeepCollectionEquality()
+                .equals(other._redirectUris, _redirectUris) &&
             (identical(other.clientId, clientId) ||
                 other.clientId == clientId) &&
             (identical(other.clientSecret, clientSecret) ||
-                other.clientSecret == clientSecret));
+                other.clientSecret == clientSecret) &&
+            (identical(other.clientSecretExpiresAt, clientSecretExpiresAt) ||
+                other.clientSecretExpiresAt == clientSecretExpiresAt));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, name, website, clientId, clientSecret);
+  int get hashCode => Object.hash(
+      runtimeType,
+      name,
+      website,
+      const DeepCollectionEquality().hash(_scopes),
+      const DeepCollectionEquality().hash(_redirectUris),
+      clientId,
+      clientSecret,
+      clientSecretExpiresAt);
 
   /// Create a copy of Application
   /// with the given fields replaced by the non-null parameter values.
@@ -227,11 +332,14 @@ class _$ApplicationImpl implements _Application {
 
 abstract class _Application implements Application {
   const factory _Application(
-          {@JsonKey(name: 'name') final String? name,
-          @JsonKey(name: 'website') final String? website,
-          @JsonKey(name: 'client_id') final String? clientId,
-          @JsonKey(name: 'client_secret') final String? clientSecret}) =
-      _$ApplicationImpl;
+      {@JsonKey(name: 'name') final String? name,
+      @JsonKey(name: 'website') final String? website,
+      @JsonKey(name: 'scopes') final List<String>? scopes,
+      @JsonKey(name: 'redirect_uris') final List<String>? redirectUris,
+      @JsonKey(name: 'client_id') final String? clientId,
+      @JsonKey(name: 'client_secret') final String? clientSecret,
+      @JsonKey(name: 'client_secret_expires_at')
+      final String? clientSecretExpiresAt}) = _$ApplicationImpl;
 
   factory _Application.fromJson(Map<String, dynamic> json) =
       _$ApplicationImpl.fromJson;
@@ -246,6 +354,17 @@ abstract class _Application implements Application {
   @JsonKey(name: 'website')
   String? get website;
 
+  /// The scopes for your application. This is the registered `scopes` string
+  /// split on whitespace.
+  @override
+  @JsonKey(name: 'scopes')
+  List<String>? get scopes;
+
+  /// The registered redirection URI(s) for your application.
+  @override
+  @JsonKey(name: 'redirect_uris')
+  List<String>? get redirectUris;
+
   /// Client ID key, to be used for obtaining OAuth tokens
   @override
   @JsonKey(name: 'client_id')
@@ -255,6 +374,12 @@ abstract class _Application implements Application {
   @override
   @JsonKey(name: 'client_secret')
   String? get clientSecret;
+
+  /// When the client secret key will expire at, presently this always
+  /// returns 0 indicating that OAuth Clients do not expire
+  @override
+  @JsonKey(name: 'client_secret_expires_at')
+  String? get clientSecretExpiresAt;
 
   /// Create a copy of Application
   /// with the given fields replaced by the non-null parameter values.

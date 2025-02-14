@@ -65,9 +65,6 @@ class ScheduledStatusParams with _$ScheduledStatusParams {
 
     /// Idempotency key to prevent duplicate statuses.
     @JsonKey(name: 'idempotency') final String? idempotency,
-
-    /// Whether the status should be rate limited
-    @JsonKey(name: 'with_rate_limit') final bool? withRateLimit,
   }) = _ScheduledStatusParams;
 
   factory ScheduledStatusParams.fromJson(final Map<String, dynamic> json) =>

@@ -45,6 +45,7 @@ export 'src/entities/poll.dart';
 export 'src/entities/preferences.dart';
 export 'src/entities/preview_card.dart';
 export 'src/entities/preview_card_author.dart';
+export 'src/entities/privacy_policy.dart';
 export 'src/entities/reaction.dart';
 export 'src/entities/relationship.dart';
 export 'src/entities/relationship_severance_event.dart';

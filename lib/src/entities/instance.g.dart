@@ -239,6 +239,7 @@ _$InstanceConfigurationMediaAttachmentsImpl
           supportedMimeTypes: (json['supported_mime_types'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList(),
+          descriptionLimit: (json['description_limit'] as num?)?.toInt(),
           imageSizeLimit: (json['image_size_limit'] as num?)?.toInt(),
           imageMatrixLimit: (json['image_matrix_limit'] as num?)?.toInt(),
           videoSizeLimit: (json['video_size_limit'] as num?)?.toInt(),
@@ -251,6 +252,7 @@ Map<String, dynamic> _$$InstanceConfigurationMediaAttachmentsImplToJson(
         _$InstanceConfigurationMediaAttachmentsImpl instance) =>
     <String, dynamic>{
       'supported_mime_types': instance.supportedMimeTypes,
+      'description_limit': instance.descriptionLimit,
       'image_size_limit': instance.imageSizeLimit,
       'image_matrix_limit': instance.imageMatrixLimit,
       'video_size_limit': instance.videoSizeLimit,

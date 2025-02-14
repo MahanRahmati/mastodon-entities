@@ -40,9 +40,9 @@ mixin _$RelationshipSeveranceEvent {
   @JsonKey(name: 'target_name')
   String? get targetName => throw _privateConstructorUsedError;
 
-  /// Number of follow relationships (in either direction) that were severed.
-  @JsonKey(name: 'relationships_count')
-  int? get relationshipsCount => throw _privateConstructorUsedError;
+  /// Number of followers that were removed as result of the event.
+  @JsonKey(name: 'followers_count')
+  int? get followersCount => throw _privateConstructorUsedError;
 
   /// When the event took place.
   @JsonKey(name: 'created_at')
@@ -70,7 +70,7 @@ abstract class $RelationshipSeveranceEventCopyWith<$Res> {
       @JsonKey(name: 'type') RelationshipSeveranceEventType? type,
       @JsonKey(name: 'purged') bool? purged,
       @JsonKey(name: 'target_name') String? targetName,
-      @JsonKey(name: 'relationships_count') int? relationshipsCount,
+      @JsonKey(name: 'followers_count') int? followersCount,
       @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
@@ -94,7 +94,7 @@ class _$RelationshipSeveranceEventCopyWithImpl<$Res,
     Object? type = freezed,
     Object? purged = freezed,
     Object? targetName = freezed,
-    Object? relationshipsCount = freezed,
+    Object? followersCount = freezed,
     Object? createdAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -114,9 +114,9 @@ class _$RelationshipSeveranceEventCopyWithImpl<$Res,
           ? _value.targetName
           : targetName // ignore: cast_nullable_to_non_nullable
               as String?,
-      relationshipsCount: freezed == relationshipsCount
-          ? _value.relationshipsCount
-          : relationshipsCount // ignore: cast_nullable_to_non_nullable
+      followersCount: freezed == followersCount
+          ? _value.followersCount
+          : followersCount // ignore: cast_nullable_to_non_nullable
               as int?,
       createdAt: freezed == createdAt
           ? _value.createdAt
@@ -140,7 +140,7 @@ abstract class _$$RelationshipSeveranceEventImplCopyWith<$Res>
       @JsonKey(name: 'type') RelationshipSeveranceEventType? type,
       @JsonKey(name: 'purged') bool? purged,
       @JsonKey(name: 'target_name') String? targetName,
-      @JsonKey(name: 'relationships_count') int? relationshipsCount,
+      @JsonKey(name: 'followers_count') int? followersCount,
       @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
@@ -163,7 +163,7 @@ class __$$RelationshipSeveranceEventImplCopyWithImpl<$Res>
     Object? type = freezed,
     Object? purged = freezed,
     Object? targetName = freezed,
-    Object? relationshipsCount = freezed,
+    Object? followersCount = freezed,
     Object? createdAt = freezed,
   }) {
     return _then(_$RelationshipSeveranceEventImpl(
@@ -183,9 +183,9 @@ class __$$RelationshipSeveranceEventImplCopyWithImpl<$Res>
           ? _value.targetName
           : targetName // ignore: cast_nullable_to_non_nullable
               as String?,
-      relationshipsCount: freezed == relationshipsCount
-          ? _value.relationshipsCount
-          : relationshipsCount // ignore: cast_nullable_to_non_nullable
+      followersCount: freezed == followersCount
+          ? _value.followersCount
+          : followersCount // ignore: cast_nullable_to_non_nullable
               as int?,
       createdAt: freezed == createdAt
           ? _value.createdAt
@@ -203,7 +203,7 @@ class _$RelationshipSeveranceEventImpl implements _RelationshipSeveranceEvent {
       @JsonKey(name: 'type') this.type,
       @JsonKey(name: 'purged') this.purged,
       @JsonKey(name: 'target_name') this.targetName,
-      @JsonKey(name: 'relationships_count') this.relationshipsCount,
+      @JsonKey(name: 'followers_count') this.followersCount,
       @JsonKey(name: 'created_at') this.createdAt});
 
   factory _$RelationshipSeveranceEventImpl.fromJson(
@@ -232,10 +232,10 @@ class _$RelationshipSeveranceEventImpl implements _RelationshipSeveranceEvent {
   @JsonKey(name: 'target_name')
   final String? targetName;
 
-  /// Number of follow relationships (in either direction) that were severed.
+  /// Number of followers that were removed as result of the event.
   @override
-  @JsonKey(name: 'relationships_count')
-  final int? relationshipsCount;
+  @JsonKey(name: 'followers_count')
+  final int? followersCount;
 
   /// When the event took place.
   @override
@@ -244,7 +244,7 @@ class _$RelationshipSeveranceEventImpl implements _RelationshipSeveranceEvent {
 
   @override
   String toString() {
-    return 'RelationshipSeveranceEvent(id: $id, type: $type, purged: $purged, targetName: $targetName, relationshipsCount: $relationshipsCount, createdAt: $createdAt)';
+    return 'RelationshipSeveranceEvent(id: $id, type: $type, purged: $purged, targetName: $targetName, followersCount: $followersCount, createdAt: $createdAt)';
   }
 
   @override
@@ -257,8 +257,8 @@ class _$RelationshipSeveranceEventImpl implements _RelationshipSeveranceEvent {
             (identical(other.purged, purged) || other.purged == purged) &&
             (identical(other.targetName, targetName) ||
                 other.targetName == targetName) &&
-            (identical(other.relationshipsCount, relationshipsCount) ||
-                other.relationshipsCount == relationshipsCount) &&
+            (identical(other.followersCount, followersCount) ||
+                other.followersCount == followersCount) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt));
   }
@@ -266,7 +266,7 @@ class _$RelationshipSeveranceEventImpl implements _RelationshipSeveranceEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, type, purged, targetName, relationshipsCount, createdAt);
+      runtimeType, id, type, purged, targetName, followersCount, createdAt);
 
   /// Create a copy of RelationshipSeveranceEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -292,7 +292,7 @@ abstract class _RelationshipSeveranceEvent
           @JsonKey(name: 'type') final RelationshipSeveranceEventType? type,
           @JsonKey(name: 'purged') final bool? purged,
           @JsonKey(name: 'target_name') final String? targetName,
-          @JsonKey(name: 'relationships_count') final int? relationshipsCount,
+          @JsonKey(name: 'followers_count') final int? followersCount,
           @JsonKey(name: 'created_at') final DateTime? createdAt}) =
       _$RelationshipSeveranceEventImpl;
 
@@ -321,10 +321,10 @@ abstract class _RelationshipSeveranceEvent
   @JsonKey(name: 'target_name')
   String? get targetName;
 
-  /// Number of follow relationships (in either direction) that were severed.
+  /// Number of followers that were removed as result of the event.
   @override
-  @JsonKey(name: 'relationships_count')
-  int? get relationshipsCount;
+  @JsonKey(name: 'followers_count')
+  int? get followersCount;
 
   /// When the event took place.
   @override

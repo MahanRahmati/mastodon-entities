@@ -23,7 +23,7 @@ enum NotificationType {
   ///  A poll you have voted in or created has ended.
   poll('poll'),
 
-  /// A status you interacted with has been edited.
+  /// A status you reblogged has been edited
   update('update'),
 
   /// Someone signed up (optionally sent to admins).
@@ -38,7 +38,10 @@ enum NotificationType {
 
   /// A moderator has taken action against your account or has sent you a
   /// warning.
-  moderationWarning('moderation_warning');
+  moderationWarning('moderation_warning'),
+
+  /// Annual report.
+  annualReport('annual_report');
 
   const NotificationType(this.value);
   final String value;
@@ -57,7 +60,8 @@ enum NotificationType {
       'admin.report' => NotificationType.adminReport,
       'severed_relationships' => NotificationType.severedRelationships,
       'moderation_warning' => NotificationType.moderationWarning,
-      _ => null
+      'annual_report' => NotificationType.annualReport,
+      _ => null,
     };
   }
 }

@@ -14,7 +14,7 @@ _$RelationshipSeveranceEventImpl _$$RelationshipSeveranceEventImplFromJson(
           _$RelationshipSeveranceEventTypeEnumMap, json['type']),
       purged: json['purged'] as bool?,
       targetName: json['target_name'] as String?,
-      relationshipsCount: (json['relationships_count'] as num?)?.toInt(),
+      followersCount: (json['followers_count'] as num?)?.toInt(),
       createdAt: json['created_at'] == null
           ? null
           : DateTime.parse(json['created_at'] as String),
@@ -27,7 +27,7 @@ Map<String, dynamic> _$$RelationshipSeveranceEventImplToJson(
       'type': _$RelationshipSeveranceEventTypeEnumMap[instance.type],
       'purged': instance.purged,
       'target_name': instance.targetName,
-      'relationships_count': instance.relationshipsCount,
+      'followers_count': instance.followersCount,
       'created_at': instance.createdAt?.toIso8601String(),
     };
 

@@ -111,6 +111,10 @@ mixin _$Account {
   @JsonKey(name: 'created_at')
   DateTime? get createdAt => throw _privateConstructorUsedError;
 
+  /// Domains of websites allowed to credit the account.
+  @JsonKey(name: 'attribution_domains')
+  List<String>? get attributionDomains => throw _privateConstructorUsedError;
+
   /// When the most recent status was posted.
   @JsonKey(name: 'last_status_at')
   DateTime? get lastStatusAt => throw _privateConstructorUsedError;
@@ -180,6 +184,7 @@ abstract class $AccountCopyWith<$Res> {
       @JsonKey(name: 'suspended') bool? suspended,
       @JsonKey(name: 'limited') bool? limited,
       @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'attribution_domains') List<String>? attributionDomains,
       @JsonKey(name: 'last_status_at') DateTime? lastStatusAt,
       @JsonKey(name: 'statuses_count') int? statusesCount,
       @JsonKey(name: 'followers_count') int? followersCount,
@@ -230,6 +235,7 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
     Object? suspended = freezed,
     Object? limited = freezed,
     Object? createdAt = freezed,
+    Object? attributionDomains = freezed,
     Object? lastStatusAt = freezed,
     Object? statusesCount = freezed,
     Object? followersCount = freezed,
@@ -324,6 +330,10 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      attributionDomains: freezed == attributionDomains
+          ? _value.attributionDomains
+          : attributionDomains // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       lastStatusAt: freezed == lastStatusAt
           ? _value.lastStatusAt
           : lastStatusAt // ignore: cast_nullable_to_non_nullable
@@ -431,6 +441,7 @@ abstract class _$$AccountImplCopyWith<$Res> implements $AccountCopyWith<$Res> {
       @JsonKey(name: 'suspended') bool? suspended,
       @JsonKey(name: 'limited') bool? limited,
       @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'attribution_domains') List<String>? attributionDomains,
       @JsonKey(name: 'last_status_at') DateTime? lastStatusAt,
       @JsonKey(name: 'statuses_count') int? statusesCount,
       @JsonKey(name: 'followers_count') int? followersCount,
@@ -482,6 +493,7 @@ class __$$AccountImplCopyWithImpl<$Res>
     Object? suspended = freezed,
     Object? limited = freezed,
     Object? createdAt = freezed,
+    Object? attributionDomains = freezed,
     Object? lastStatusAt = freezed,
     Object? statusesCount = freezed,
     Object? followersCount = freezed,
@@ -576,6 +588,10 @@ class __$$AccountImplCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      attributionDomains: freezed == attributionDomains
+          ? _value._attributionDomains
+          : attributionDomains // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       lastStatusAt: freezed == lastStatusAt
           ? _value.lastStatusAt
           : lastStatusAt // ignore: cast_nullable_to_non_nullable
@@ -637,6 +653,8 @@ class _$AccountImpl implements _Account {
       @JsonKey(name: 'suspended') this.suspended,
       @JsonKey(name: 'limited') this.limited,
       @JsonKey(name: 'created_at') this.createdAt,
+      @JsonKey(name: 'attribution_domains')
+      final List<String>? attributionDomains,
       @JsonKey(name: 'last_status_at') this.lastStatusAt,
       @JsonKey(name: 'statuses_count') this.statusesCount,
       @JsonKey(name: 'followers_count') this.followersCount,
@@ -647,6 +665,7 @@ class _$AccountImpl implements _Account {
       @JsonKey(name: 'mute_expires_at') this.muteExpiresAt})
       : _fields = fields,
         _emojis = emojis,
+        _attributionDomains = attributionDomains,
         _roles = roles;
 
   factory _$AccountImpl.fromJson(Map<String, dynamic> json) =>
@@ -782,6 +801,21 @@ class _$AccountImpl implements _Account {
   @JsonKey(name: 'created_at')
   final DateTime? createdAt;
 
+  /// Domains of websites allowed to credit the account.
+  final List<String>? _attributionDomains;
+
+  /// Domains of websites allowed to credit the account.
+  @override
+  @JsonKey(name: 'attribution_domains')
+  List<String>? get attributionDomains {
+    final value = _attributionDomains;
+    if (value == null) return null;
+    if (_attributionDomains is EqualUnmodifiableListView)
+      return _attributionDomains;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   /// When the most recent status was posted.
   @override
   @JsonKey(name: 'last_status_at')
@@ -834,7 +868,7 @@ class _$AccountImpl implements _Account {
 
   @override
   String toString() {
-    return 'Account(id: $id, username: $username, acct: $acct, url: $url, displayName: $displayName, note: $note, avatar: $avatar, avatarStatic: $avatarStatic, header: $header, headerStatic: $headerStatic, locked: $locked, fields: $fields, emojis: $emojis, bot: $bot, group: $group, discoverable: $discoverable, noindex: $noindex, moved: $moved, suspended: $suspended, limited: $limited, createdAt: $createdAt, lastStatusAt: $lastStatusAt, statusesCount: $statusesCount, followersCount: $followersCount, followingCount: $followingCount, source: $source, role: $role, roles: $roles, muteExpiresAt: $muteExpiresAt)';
+    return 'Account(id: $id, username: $username, acct: $acct, url: $url, displayName: $displayName, note: $note, avatar: $avatar, avatarStatic: $avatarStatic, header: $header, headerStatic: $headerStatic, locked: $locked, fields: $fields, emojis: $emojis, bot: $bot, group: $group, discoverable: $discoverable, noindex: $noindex, moved: $moved, suspended: $suspended, limited: $limited, createdAt: $createdAt, attributionDomains: $attributionDomains, lastStatusAt: $lastStatusAt, statusesCount: $statusesCount, followersCount: $followersCount, followingCount: $followingCount, source: $source, role: $role, roles: $roles, muteExpiresAt: $muteExpiresAt)';
   }
 
   @override
@@ -870,6 +904,8 @@ class _$AccountImpl implements _Account {
             (identical(other.limited, limited) || other.limited == limited) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
+            const DeepCollectionEquality()
+                .equals(other._attributionDomains, _attributionDomains) &&
             (identical(other.lastStatusAt, lastStatusAt) ||
                 other.lastStatusAt == lastStatusAt) &&
             (identical(other.statusesCount, statusesCount) ||
@@ -910,6 +946,7 @@ class _$AccountImpl implements _Account {
         suspended,
         limited,
         createdAt,
+        const DeepCollectionEquality().hash(_attributionDomains),
         lastStatusAt,
         statusesCount,
         followersCount,
@@ -959,6 +996,8 @@ abstract class _Account implements Account {
           @JsonKey(name: 'suspended') final bool? suspended,
           @JsonKey(name: 'limited') final bool? limited,
           @JsonKey(name: 'created_at') final DateTime? createdAt,
+          @JsonKey(name: 'attribution_domains')
+          final List<String>? attributionDomains,
           @JsonKey(name: 'last_status_at') final DateTime? lastStatusAt,
           @JsonKey(name: 'statuses_count') final int? statusesCount,
           @JsonKey(name: 'followers_count') final int? followersCount,
@@ -1082,6 +1121,11 @@ abstract class _Account implements Account {
   @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
+
+  /// Domains of websites allowed to credit the account.
+  @override
+  @JsonKey(name: 'attribution_domains')
+  List<String>? get attributionDomains;
 
   /// When the most recent status was posted.
   @override

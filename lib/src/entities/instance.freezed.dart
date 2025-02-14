@@ -2942,6 +2942,10 @@ mixin _$InstanceConfigurationMediaAttachments {
   @JsonKey(name: 'supported_mime_types')
   List<String>? get supportedMimeTypes => throw _privateConstructorUsedError;
 
+  /// The maximum size of a description, in characters.
+  @JsonKey(name: 'description_limit')
+  int? get descriptionLimit => throw _privateConstructorUsedError;
+
   /// The maximum size of any uploaded image, in bytes.
   @JsonKey(name: 'image_size_limit')
   int? get imageSizeLimit => throw _privateConstructorUsedError;
@@ -2983,6 +2987,7 @@ abstract class $InstanceConfigurationMediaAttachmentsCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'supported_mime_types') List<String>? supportedMimeTypes,
+      @JsonKey(name: 'description_limit') int? descriptionLimit,
       @JsonKey(name: 'image_size_limit') int? imageSizeLimit,
       @JsonKey(name: 'image_matrix_limit') int? imageMatrixLimit,
       @JsonKey(name: 'video_size_limit') int? videoSizeLimit,
@@ -3007,6 +3012,7 @@ class _$InstanceConfigurationMediaAttachmentsCopyWithImpl<$Res,
   @override
   $Res call({
     Object? supportedMimeTypes = freezed,
+    Object? descriptionLimit = freezed,
     Object? imageSizeLimit = freezed,
     Object? imageMatrixLimit = freezed,
     Object? videoSizeLimit = freezed,
@@ -3018,6 +3024,10 @@ class _$InstanceConfigurationMediaAttachmentsCopyWithImpl<$Res,
           ? _value.supportedMimeTypes
           : supportedMimeTypes // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      descriptionLimit: freezed == descriptionLimit
+          ? _value.descriptionLimit
+          : descriptionLimit // ignore: cast_nullable_to_non_nullable
+              as int?,
       imageSizeLimit: freezed == imageSizeLimit
           ? _value.imageSizeLimit
           : imageSizeLimit // ignore: cast_nullable_to_non_nullable
@@ -3053,6 +3063,7 @@ abstract class _$$InstanceConfigurationMediaAttachmentsImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'supported_mime_types') List<String>? supportedMimeTypes,
+      @JsonKey(name: 'description_limit') int? descriptionLimit,
       @JsonKey(name: 'image_size_limit') int? imageSizeLimit,
       @JsonKey(name: 'image_matrix_limit') int? imageMatrixLimit,
       @JsonKey(name: 'video_size_limit') int? videoSizeLimit,
@@ -3076,6 +3087,7 @@ class __$$InstanceConfigurationMediaAttachmentsImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? supportedMimeTypes = freezed,
+    Object? descriptionLimit = freezed,
     Object? imageSizeLimit = freezed,
     Object? imageMatrixLimit = freezed,
     Object? videoSizeLimit = freezed,
@@ -3087,6 +3099,10 @@ class __$$InstanceConfigurationMediaAttachmentsImplCopyWithImpl<$Res>
           ? _value._supportedMimeTypes
           : supportedMimeTypes // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      descriptionLimit: freezed == descriptionLimit
+          ? _value.descriptionLimit
+          : descriptionLimit // ignore: cast_nullable_to_non_nullable
+              as int?,
       imageSizeLimit: freezed == imageSizeLimit
           ? _value.imageSizeLimit
           : imageSizeLimit // ignore: cast_nullable_to_non_nullable
@@ -3118,6 +3134,7 @@ class _$InstanceConfigurationMediaAttachmentsImpl
   const _$InstanceConfigurationMediaAttachmentsImpl(
       {@JsonKey(name: 'supported_mime_types')
       final List<String>? supportedMimeTypes,
+      @JsonKey(name: 'description_limit') this.descriptionLimit,
       @JsonKey(name: 'image_size_limit') this.imageSizeLimit,
       @JsonKey(name: 'image_matrix_limit') this.imageMatrixLimit,
       @JsonKey(name: 'video_size_limit') this.videoSizeLimit,
@@ -3143,6 +3160,11 @@ class _$InstanceConfigurationMediaAttachmentsImpl
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
+
+  /// The maximum size of a description, in characters.
+  @override
+  @JsonKey(name: 'description_limit')
+  final int? descriptionLimit;
 
   /// The maximum size of any uploaded image, in bytes.
   @override
@@ -3171,7 +3193,7 @@ class _$InstanceConfigurationMediaAttachmentsImpl
 
   @override
   String toString() {
-    return 'InstanceConfigurationMediaAttachments(supportedMimeTypes: $supportedMimeTypes, imageSizeLimit: $imageSizeLimit, imageMatrixLimit: $imageMatrixLimit, videoSizeLimit: $videoSizeLimit, videoFrameRateLimit: $videoFrameRateLimit, videoMatrixLimit: $videoMatrixLimit)';
+    return 'InstanceConfigurationMediaAttachments(supportedMimeTypes: $supportedMimeTypes, descriptionLimit: $descriptionLimit, imageSizeLimit: $imageSizeLimit, imageMatrixLimit: $imageMatrixLimit, videoSizeLimit: $videoSizeLimit, videoFrameRateLimit: $videoFrameRateLimit, videoMatrixLimit: $videoMatrixLimit)';
   }
 
   @override
@@ -3181,6 +3203,8 @@ class _$InstanceConfigurationMediaAttachmentsImpl
             other is _$InstanceConfigurationMediaAttachmentsImpl &&
             const DeepCollectionEquality()
                 .equals(other._supportedMimeTypes, _supportedMimeTypes) &&
+            (identical(other.descriptionLimit, descriptionLimit) ||
+                other.descriptionLimit == descriptionLimit) &&
             (identical(other.imageSizeLimit, imageSizeLimit) ||
                 other.imageSizeLimit == imageSizeLimit) &&
             (identical(other.imageMatrixLimit, imageMatrixLimit) ||
@@ -3198,6 +3222,7 @@ class _$InstanceConfigurationMediaAttachmentsImpl
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_supportedMimeTypes),
+      descriptionLimit,
       imageSizeLimit,
       imageMatrixLimit,
       videoSizeLimit,
@@ -3227,6 +3252,7 @@ abstract class _InstanceConfigurationMediaAttachments
   const factory _InstanceConfigurationMediaAttachments(
       {@JsonKey(name: 'supported_mime_types')
       final List<String>? supportedMimeTypes,
+      @JsonKey(name: 'description_limit') final int? descriptionLimit,
       @JsonKey(name: 'image_size_limit') final int? imageSizeLimit,
       @JsonKey(name: 'image_matrix_limit') final int? imageMatrixLimit,
       @JsonKey(name: 'video_size_limit') final int? videoSizeLimit,
@@ -3243,6 +3269,11 @@ abstract class _InstanceConfigurationMediaAttachments
   @override
   @JsonKey(name: 'supported_mime_types')
   List<String>? get supportedMimeTypes;
+
+  /// The maximum size of a description, in characters.
+  @override
+  @JsonKey(name: 'description_limit')
+  int? get descriptionLimit;
 
   /// The maximum size of any uploaded image, in bytes.
   @override

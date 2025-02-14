@@ -57,4 +57,5 @@ const _$NotificationTypeEnumMap = {
   NotificationType.adminReport: 'admin.report',
   NotificationType.severedRelationships: 'severed_relationships',
   NotificationType.moderationWarning: 'moderation_warning',
+  NotificationType.annualReport: 'annual_report',
 };

@@ -37,6 +37,9 @@ _$AccountImpl _$$AccountImplFromJson(Map<String, dynamic> json) =>
       createdAt: json['created_at'] == null
           ? null
           : DateTime.parse(json['created_at'] as String),
+      attributionDomains: (json['attribution_domains'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       lastStatusAt: json['last_status_at'] == null
           ? null
           : DateTime.parse(json['last_status_at'] as String),
@@ -80,6 +83,7 @@ Map<String, dynamic> _$$AccountImplToJson(_$AccountImpl instance) =>
       'suspended': instance.suspended,
       'limited': instance.limited,
       'created_at': instance.createdAt?.toIso8601String(),
+      'attribution_domains': instance.attributionDomains,
       'last_status_at': instance.lastStatusAt?.toIso8601String(),
       'statuses_count': instance.statusesCount,
       'followers_count': instance.followersCount,

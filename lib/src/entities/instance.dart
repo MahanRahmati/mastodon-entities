@@ -229,6 +229,9 @@ class InstanceConfigurationMediaAttachments
     @JsonKey(name: 'supported_mime_types')
     final List<String>? supportedMimeTypes,
 
+    /// The maximum size of a description, in characters.
+    @JsonKey(name: 'description_limit') final int? descriptionLimit,
+
     /// The maximum size of any uploaded image, in bytes.
     @JsonKey(name: 'image_size_limit') final int? imageSizeLimit,
 

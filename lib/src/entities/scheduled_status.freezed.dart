@@ -354,10 +354,6 @@ mixin _$ScheduledStatusParams {
   @JsonKey(name: 'idempotency')
   String? get idempotency => throw _privateConstructorUsedError;
 
-  /// Whether the status should be rate limited
-  @JsonKey(name: 'with_rate_limit')
-  bool? get withRateLimit => throw _privateConstructorUsedError;
-
   /// Serializes this ScheduledStatusParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
@@ -385,8 +381,7 @@ abstract class $ScheduledStatusParamsCopyWith<$Res> {
       @JsonKey(name: 'language') String? language,
       @JsonKey(name: 'application_id') int? applicationId,
       @JsonKey(name: 'scheduled_at') DateTime? scheduledAt,
-      @JsonKey(name: 'idempotency') String? idempotency,
-      @JsonKey(name: 'with_rate_limit') bool? withRateLimit});
+      @JsonKey(name: 'idempotency') String? idempotency});
 
   $ScheduledStatusPollCopyWith<$Res>? get poll;
 }
@@ -418,7 +413,6 @@ class _$ScheduledStatusParamsCopyWithImpl<$Res,
     Object? applicationId = freezed,
     Object? scheduledAt = freezed,
     Object? idempotency = freezed,
-    Object? withRateLimit = freezed,
   }) {
     return _then(_value.copyWith(
       text: freezed == text
@@ -465,10 +459,6 @@ class _$ScheduledStatusParamsCopyWithImpl<$Res,
           ? _value.idempotency
           : idempotency // ignore: cast_nullable_to_non_nullable
               as String?,
-      withRateLimit: freezed == withRateLimit
-          ? _value.withRateLimit
-          : withRateLimit // ignore: cast_nullable_to_non_nullable
-              as bool?,
     ) as $Val);
   }
 
@@ -507,8 +497,7 @@ abstract class _$$ScheduledStatusParamsImplCopyWith<$Res>
       @JsonKey(name: 'language') String? language,
       @JsonKey(name: 'application_id') int? applicationId,
       @JsonKey(name: 'scheduled_at') DateTime? scheduledAt,
-      @JsonKey(name: 'idempotency') String? idempotency,
-      @JsonKey(name: 'with_rate_limit') bool? withRateLimit});
+      @JsonKey(name: 'idempotency') String? idempotency});
 
   @override
   $ScheduledStatusPollCopyWith<$Res>? get poll;
@@ -539,7 +528,6 @@ class __$$ScheduledStatusParamsImplCopyWithImpl<$Res>
     Object? applicationId = freezed,
     Object? scheduledAt = freezed,
     Object? idempotency = freezed,
-    Object? withRateLimit = freezed,
   }) {
     return _then(_$ScheduledStatusParamsImpl(
       text: freezed == text
@@ -586,10 +574,6 @@ class __$$ScheduledStatusParamsImplCopyWithImpl<$Res>
           ? _value.idempotency
           : idempotency // ignore: cast_nullable_to_non_nullable
               as String?,
-      withRateLimit: freezed == withRateLimit
-          ? _value.withRateLimit
-          : withRateLimit // ignore: cast_nullable_to_non_nullable
-              as bool?,
     ));
   }
 }
@@ -608,8 +592,7 @@ class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
       @JsonKey(name: 'language') this.language,
       @JsonKey(name: 'application_id') this.applicationId,
       @JsonKey(name: 'scheduled_at') this.scheduledAt,
-      @JsonKey(name: 'idempotency') this.idempotency,
-      @JsonKey(name: 'with_rate_limit') this.withRateLimit})
+      @JsonKey(name: 'idempotency') this.idempotency})
       : _mediaIds = mediaIds;
 
   factory _$ScheduledStatusParamsImpl.fromJson(Map<String, dynamic> json) =>
@@ -680,14 +663,9 @@ class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
   @JsonKey(name: 'idempotency')
   final String? idempotency;
 
-  /// Whether the status should be rate limited
-  @override
-  @JsonKey(name: 'with_rate_limit')
-  final bool? withRateLimit;
-
   @override
   String toString() {
-    return 'ScheduledStatusParams(text: $text, poll: $poll, mediaIds: $mediaIds, sensitive: $sensitive, spoilerText: $spoilerText, visibility: $visibility, inReplyToId: $inReplyToId, language: $language, applicationId: $applicationId, scheduledAt: $scheduledAt, idempotency: $idempotency, withRateLimit: $withRateLimit)';
+    return 'ScheduledStatusParams(text: $text, poll: $poll, mediaIds: $mediaIds, sensitive: $sensitive, spoilerText: $spoilerText, visibility: $visibility, inReplyToId: $inReplyToId, language: $language, applicationId: $applicationId, scheduledAt: $scheduledAt, idempotency: $idempotency)';
   }
 
   @override
@@ -713,9 +691,7 @@ class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
             (identical(other.scheduledAt, scheduledAt) ||
                 other.scheduledAt == scheduledAt) &&
             (identical(other.idempotency, idempotency) ||
-                other.idempotency == idempotency) &&
-            (identical(other.withRateLimit, withRateLimit) ||
-                other.withRateLimit == withRateLimit));
+                other.idempotency == idempotency));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -732,8 +708,7 @@ class _$ScheduledStatusParamsImpl implements _ScheduledStatusParams {
       language,
       applicationId,
       scheduledAt,
-      idempotency,
-      withRateLimit);
+      idempotency);
 
   /// Create a copy of ScheduledStatusParams
   /// with the given fields replaced by the non-null parameter values.
@@ -764,8 +739,7 @@ abstract class _ScheduledStatusParams implements ScheduledStatusParams {
           @JsonKey(name: 'language') final String? language,
           @JsonKey(name: 'application_id') final int? applicationId,
           @JsonKey(name: 'scheduled_at') final DateTime? scheduledAt,
-          @JsonKey(name: 'idempotency') final String? idempotency,
-          @JsonKey(name: 'with_rate_limit') final bool? withRateLimit}) =
+          @JsonKey(name: 'idempotency') final String? idempotency}) =
       _$ScheduledStatusParamsImpl;
 
   factory _ScheduledStatusParams.fromJson(Map<String, dynamic> json) =
@@ -826,11 +800,6 @@ abstract class _ScheduledStatusParams implements ScheduledStatusParams {
   @override
   @JsonKey(name: 'idempotency')
   String? get idempotency;
-
-  /// Whether the status should be rate limited
-  @override
-  @JsonKey(name: 'with_rate_limit')
-  bool? get withRateLimit;
 
   /// Create a copy of ScheduledStatusParams
   /// with the given fields replaced by the non-null parameter values.

@@ -81,6 +81,10 @@ class Account with _$Account {
     /// When the account was created.
     @JsonKey(name: 'created_at') final DateTime? createdAt,
 
+    /// Domains of websites allowed to credit the account.
+    @JsonKey(name: 'attribution_domains')
+    final List<String>? attributionDomains,
+
     /// When the most recent status was posted.
     @JsonKey(name: 'last_status_at') final DateTime? lastStatusAt,
 

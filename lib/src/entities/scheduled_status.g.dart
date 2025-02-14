@@ -52,7 +52,6 @@ _$ScheduledStatusParamsImpl _$$ScheduledStatusParamsImplFromJson(
           ? null
           : DateTime.parse(json['scheduled_at'] as String),
       idempotency: json['idempotency'] as String?,
-      withRateLimit: json['with_rate_limit'] as bool?,
     );
 
 Map<String, dynamic> _$$ScheduledStatusParamsImplToJson(
@@ -69,7 +68,6 @@ Map<String, dynamic> _$$ScheduledStatusParamsImplToJson(
       'application_id': instance.applicationId,
       'scheduled_at': instance.scheduledAt?.toIso8601String(),
       'idempotency': instance.idempotency,
-      'with_rate_limit': instance.withRateLimit,
     };
 
 const _$StatusVisibilityEnumMap = {

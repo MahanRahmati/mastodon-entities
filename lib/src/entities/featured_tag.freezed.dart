@@ -36,7 +36,7 @@ mixin _$FeaturedTag {
   @JsonKey(name: 'statuses_count')
   String? get statusesCount => throw _privateConstructorUsedError;
 
-  /// The timestamp of the last authored status containing this hashtag.
+  /// The date of the last authored status containing this hashtag.
   @JsonKey(name: 'last_status_at')
   DateTime? get lastStatusAt => throw _privateConstructorUsedError;
 
@@ -203,7 +203,7 @@ class _$FeaturedTagImpl implements _FeaturedTag {
   @JsonKey(name: 'statuses_count')
   final String? statusesCount;
 
-  /// The timestamp of the last authored status containing this hashtag.
+  /// The date of the last authored status containing this hashtag.
   @override
   @JsonKey(name: 'last_status_at')
   final DateTime? lastStatusAt;
@@ -280,7 +280,7 @@ abstract class _FeaturedTag implements FeaturedTag {
   @JsonKey(name: 'statuses_count')
   String? get statusesCount;
 
-  /// The timestamp of the last authored status containing this hashtag.
+  /// The date of the last authored status containing this hashtag.
   @override
   @JsonKey(name: 'last_status_at')
   DateTime? get lastStatusAt;

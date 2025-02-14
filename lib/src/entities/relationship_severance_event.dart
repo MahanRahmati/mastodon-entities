@@ -24,8 +24,8 @@ class RelationshipSeveranceEvent with _$RelationshipSeveranceEvent {
     /// domain name or a user handle, depending on the event type.
     @JsonKey(name: 'target_name') final String? targetName,
 
-    /// Number of follow relationships (in either direction) that were severed.
-    @JsonKey(name: 'relationships_count') final int? relationshipsCount,
+    /// Number of followers that were removed as result of the event.
+    @JsonKey(name: 'followers_count') final int? followersCount,
 
     /// When the event took place.
     @JsonKey(name: 'created_at') final DateTime? createdAt,

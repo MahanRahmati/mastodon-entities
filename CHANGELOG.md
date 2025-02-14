@@ -1,3 +1,13 @@
+## 1.1.15
+
+- Added attribution domains to Account.
+- Added scopes, redirect uris and client secret expires at to Application.
+- Added description limit to Instance.
+- Added PrivacyPolicy.
+- Added annual report to NotificationType.
+- Updated followers count in RelationshipSeveranceEvent.
+- Removed with rate limit from ScheduledStatus.
+
 ## 1.1.14+1
 
 - Export PreviewCardAuthor.
